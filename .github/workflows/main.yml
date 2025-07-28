@@ -1,0 +1,27 @@
+name: YesStyle Price Scraper
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 매일 한국 시간 오후 3시에 실행 (UTC 기준 6시)
+    - cron: '2 3 * * *'
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 코드 가져오기
+        uses: actions/checkout@v3
+      - name: 파이썬 설치하기
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: 필요한 부품들 설치하기
+        run: |
+          pip install -r requirements.txt
+          playwright install --with-deps
+      - name: 스크래퍼 실행하기
+        env:
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+        run: |
+          python scraper.py
