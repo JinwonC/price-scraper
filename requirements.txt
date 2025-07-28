@@ -1,0 +1,5 @@
+playwright
+gspread
+gspread-dataframe
+pandas
+oauth2client
