@@ -1,0 +1,36 @@
+name: YouTube Studio Sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 매일 한국 시간 오전 10시 (UTC 01:00). 분석 데이터 지연을 고려해 오전에 수집.
+    - cron: '0 1 * * *'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: youtube-studio-sync
+    steps:
+      - name: 코드 가져오기
+        uses: actions/checkout@v4
+
+      - name: 파이썬 설치
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 의존성 설치
+        run: pip install -r requirements.txt
+
+      - name: 유튜브 통계 수집
+        env:
+          GOOGLE_OAUTH_CLIENT_ID: ${{ secrets.GOOGLE_OAUTH_CLIENT_ID }}
+          GOOGLE_OAUTH_CLIENT_SECRET: ${{ secrets.GOOGLE_OAUTH_CLIENT_SECRET }}
+          GOOGLE_OAUTH_REFRESH_TOKEN: ${{ secrets.GOOGLE_OAUTH_REFRESH_TOKEN }}
+          # 선택값: 필요 시 Secrets/Variables 에 추가
+          SHEET_TITLE: ${{ vars.SHEET_TITLE }}
+          SHEET_ID: ${{ vars.SHEET_ID }}
+          SHARE_EMAIL: ${{ vars.SHARE_EMAIL }}
+        run: python youtube_sync.py
