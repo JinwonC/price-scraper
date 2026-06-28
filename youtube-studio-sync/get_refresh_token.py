@@ -43,7 +43,12 @@ def main():
 
     flow = InstalledAppFlow.from_client_secrets_file(client_secret_file, SCOPES)
     # 로컬 브라우저로 로그인. 포트 0 = 사용 가능한 포트 자동 선택.
-    creds = flow.run_local_server(port=0, prompt="consent", access_type="offline")
+    # prompt="select_account consent" 로 계정/채널 선택 화면을 강제로 띄운다.
+    # → 브랜드 채널(예: 와썹맨)을 고를 수 있는 "채널 선택" 화면이 나타난다.
+    print("\n브라우저가 열리면: 로그인 → '채널 선택' 화면에서 원하는 채널(브랜드 채널)을 고르세요.\n")
+    creds = flow.run_local_server(
+        port=0, prompt="select_account consent", access_type="offline"
+    )
 
     print("\n========== 아래 값을 GitHub Secret 에 등록하세요 ==========")
     print(f"GOOGLE_OAUTH_CLIENT_ID     = {creds.client_id}")
