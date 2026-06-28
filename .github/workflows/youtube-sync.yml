@@ -29,8 +29,11 @@ jobs:
           GOOGLE_OAUTH_CLIENT_ID: ${{ secrets.GOOGLE_OAUTH_CLIENT_ID }}
           GOOGLE_OAUTH_CLIENT_SECRET: ${{ secrets.GOOGLE_OAUTH_CLIENT_SECRET }}
           GOOGLE_OAUTH_REFRESH_TOKEN: ${{ secrets.GOOGLE_OAUTH_REFRESH_TOKEN }}
-          # 선택값: 필요 시 Secrets/Variables 에 추가
+          # 선택값: 필요 시 Variables 에 추가
           SHEET_TITLE: ${{ vars.SHEET_TITLE }}
           SHEET_ID: ${{ vars.SHEET_ID }}
           SHARE_EMAIL: ${{ vars.SHARE_EMAIL }}
+          # 수집 대상 채널 지정(공개 통계용). 브랜드 채널 등 인증 채널과 다를 때 사용.
+          YOUTUBE_CHANNEL_HANDLE: ${{ vars.YOUTUBE_CHANNEL_HANDLE }}
+          YOUTUBE_CHANNEL_ID: ${{ vars.YOUTUBE_CHANNEL_ID }}
         run: python youtube_sync.py
