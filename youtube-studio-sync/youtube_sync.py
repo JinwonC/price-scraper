@@ -33,6 +33,13 @@ SCOPES = [
 
 DEFAULT_SHEET_TITLE = "와썹맨 YouTube 통계"
 
+
+def _env(name, default=None):
+    """환경변수를 읽되, 비어 있으면(빈 문자열 포함) default 를 돌려준다.
+    GitHub Actions 에서 정의되지 않은 vars.* 는 빈 문자열로 주입되므로 필요."""
+    value = os.environ.get(name)
+    return value if value else default
+
 # 최근 영상 중 최대 몇 개까지 영상별 통계를 수집할지
 MAX_VIDEOS = 50
 # 분석 지표를 며칠치까지 거슬러 올라가며 백필할지 (데이터 확정에 2~3일 지연이 있어 넉넉히)
@@ -182,37 +189,13 @@ def fetch_analytics_for_day(analytics, day):
     record = {"date": day_str}
     for name, val in zip(CORE_METRICS, values):
         record[name] = val
-
-    # 노출수/CTR 은 별도 리포트라 따로 조회 (채널/지역에 따라 없을 수 있음)
-    try:
-        imp = (
-            analytics.reports()
-            .query(
-                ids="channel==MINE",
-                startDate=day_str,
-                endDate=day_str,
-                metrics="impressions,impressionsClickThroughRate",
-            )
-            .execute()
-        )
-        imp_rows = imp.get("rows")
-        if imp_rows:
-            record["impressions"] = imp_rows[0][0]
-            record["impressionsClickThroughRate"] = imp_rows[0][1]
-        else:
-            record["impressions"] = ""
-            record["impressionsClickThroughRate"] = ""
-    except Exception as e:  # noqa: BLE001
-        print(f"  ⚠️ 노출수 지표 조회 건너뜀 ({day_str}): {e}")
-        record["impressions"] = ""
-        record["impressionsClickThroughRate"] = ""
     return record
 
 
-ANALYTICS_COLUMNS = ["date"] + CORE_METRICS + [
-    "impressions",
-    "impressionsClickThroughRate",
-]
+# 참고: 노출수(impressions)·CTR 은 YouTube Analytics API(on-demand)가 제공하지 않는
+# 지표라 여기서 수집하지 않는다. 필요하면 별도의 YouTube Reporting API(벌크 CSV)로
+# 확장해야 한다.
+ANALYTICS_COLUMNS = ["date"] + CORE_METRICS
 
 
 # ---------------------------------------------------------------------------
@@ -220,16 +203,16 @@ ANALYTICS_COLUMNS = ["date"] + CORE_METRICS + [
 # ---------------------------------------------------------------------------
 def open_or_create_spreadsheet(gc):
     """SHEET_ID 가 있으면 그 시트를, 없으면 제목으로 찾고, 없으면 새로 생성."""
-    sheet_id = os.environ.get("SHEET_ID")
+    sheet_id = _env("SHEET_ID")
     if sheet_id:
         return gc.open_by_key(sheet_id), False
 
-    title = os.environ.get("SHEET_TITLE", DEFAULT_SHEET_TITLE)
+    title = _env("SHEET_TITLE", DEFAULT_SHEET_TITLE)
     try:
         return gc.open(title), False
     except gspread.SpreadsheetNotFound:
         sh = gc.create(title)
-        share_email = os.environ.get("SHARE_EMAIL")
+        share_email = _env("SHARE_EMAIL")
         if share_email:
             sh.share(share_email, perm_type="user", role="writer")
         return sh, True
