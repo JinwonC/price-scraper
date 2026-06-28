@@ -85,16 +85,42 @@ def build_credentials():
 # ---------------------------------------------------------------------------
 # YouTube Data API : 공개 통계
 # ---------------------------------------------------------------------------
-def fetch_channel_summary(youtube):
-    """내 채널의 요약 통계와 업로드 재생목록 ID를 반환."""
-    resp = (
-        youtube.channels()
-        .list(part="snippet,statistics,contentDetails", mine=True)
-        .execute()
-    )
+def get_authorized_channel_id(youtube):
+    """OAuth 토큰에 묶인(mine) 채널 ID. 분석 API 접근 가능 여부 판별에 사용."""
+    resp = youtube.channels().list(part="id", mine=True).execute()
+    items = resp.get("items", [])
+    return items[0]["id"] if items else None
+
+
+def resolve_target_channel_id(youtube):
+    """수집 대상 채널 ID를 결정한다.
+    우선순위: YOUTUBE_CHANNEL_ID > YOUTUBE_CHANNEL_HANDLE > None(=인증 채널 mine).
+    공개 통계는 어떤 채널이든 채널 ID/핸들만 있으면 가져올 수 있다."""
+    cid = _env("YOUTUBE_CHANNEL_ID")
+    if cid:
+        return cid
+    handle = _env("YOUTUBE_CHANNEL_HANDLE")
+    if handle:
+        resp = youtube.channels().list(part="id", forHandle=handle).execute()
+        items = resp.get("items", [])
+        if items:
+            return items[0]["id"]
+        print(f"  ⚠️ 핸들 '{handle}' 로 채널을 찾지 못했습니다. 인증 채널로 진행합니다.")
+    return None
+
+
+def fetch_channel_summary(youtube, channel_id=None):
+    """채널 요약 통계와 업로드 재생목록 ID를 반환.
+    channel_id 가 없으면 인증 채널(mine), 있으면 해당 채널의 공개 통계."""
+    params = {"part": "snippet,statistics,contentDetails"}
+    if channel_id:
+        params["id"] = channel_id
+    else:
+        params["mine"] = True
+    resp = youtube.channels().list(**params).execute()
     items = resp.get("items", [])
     if not items:
-        raise RuntimeError("인증된 계정에 연결된 YouTube 채널을 찾지 못했습니다.")
+        raise RuntimeError("대상 YouTube 채널을 찾지 못했습니다.")
     ch = items[0]
     stats = ch.get("statistics", {})
     summary = {
@@ -291,7 +317,9 @@ def main():
     gc = gspread.authorize(creds)
 
     print("📺 채널 공개 통계 수집 중...")
-    summary, uploads_playlist = fetch_channel_summary(youtube)
+    target_id = resolve_target_channel_id(youtube)
+    authorized_id = get_authorized_channel_id(youtube)
+    summary, uploads_playlist = fetch_channel_summary(youtube, target_id)
     print(
         f"   채널: {summary['title']} / 구독자 {summary['subscribers']:,} / "
         f"총 조회수 {summary['total_views']:,} / 영상 {summary['total_videos']:,}개"
@@ -301,7 +329,7 @@ def main():
     videos = fetch_recent_videos(youtube, uploads_playlist)
     print(f"   최근 영상 {len(videos)}개 수집")
 
-    print("📊 스튜디오 분석 지표 수집 준비...")
+    print("📊 시트 준비...")
     sh, created = open_or_create_spreadsheet(gc)
     if created:
         print(f"   🆕 새 스프레드시트 생성: {sh.title}")
@@ -309,7 +337,16 @@ def main():
 
     append_channel_summary(sh, summary)
     overwrite_videos(sh, videos)
-    append_analytics(sh, analytics)
+
+    # 스튜디오 분석(시청시간 등)은 토큰이 대상 채널 소유자로 인증된 경우에만 가능.
+    effective_target = target_id or authorized_id
+    if effective_target and effective_target == authorized_id:
+        print("📊 스튜디오 분석 지표 수집 중...")
+        append_analytics(sh, analytics)
+    else:
+        print("  ⏭️ 스튜디오분석 건너뜀: 토큰이 대상 채널 소유자로 인증돼 있지 않습니다.")
+        print(f"     (인증 채널={authorized_id}, 대상 채널={effective_target})")
+        print("     → 공개 통계만 수집했습니다. 분석 지표는 대상 채널로 토큰 재발급이 필요합니다.")
 
     print("🎉 완료!")
     print(f"👉 {sh.url}")
