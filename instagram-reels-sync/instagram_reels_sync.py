@@ -110,7 +110,7 @@ def get_or_create_worksheet(sh, title, header):
 def overwrite_worksheet(sh, title, header, rows):
     ws = get_or_create_worksheet(sh, title, header)
     ws.clear()
-    ws.update("A1", [header] + rows, value_input_option="USER_ENTERED")
+    ws.update(range_name="A1", values=[header] + rows, value_input_option="USER_ENTERED")
 
 
 # ---------------------------------------------------------------------------
