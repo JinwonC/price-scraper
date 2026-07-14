@@ -1,0 +1,40 @@
+name: Instagram Reels Sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 매일 한국 시간 오전 9시 (UTC 00:00)
+    - cron: '0 0 * * *'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: instagram-reels-sync
+    steps:
+      - name: 코드 가져오기
+        uses: actions/checkout@v4
+
+      - name: 파이썬 설치
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 의존성 설치
+        run: pip install -r requirements.txt
+
+      - name: 릴스 수집
+        env:
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+          # 선택값: 필요할 때만 리포지토리 Variables 에 추가
+          SHEET_ID: ${{ vars.IG_SHEET_ID }}
+          INPUT_TAB: ${{ vars.IG_INPUT_TAB }}
+          OUTPUT_TAB: ${{ vars.IG_OUTPUT_TAB }}
+          SUMMARY_TAB: ${{ vars.IG_SUMMARY_TAB }}
+          DAYS: ${{ vars.IG_DAYS }}
+          RESULTS_LIMIT: ${{ vars.IG_RESULTS_LIMIT }}
+          OUTPERFORM_RATIO: ${{ vars.IG_OUTPERFORM_RATIO }}
+          APIFY_ACTOR: ${{ vars.IG_APIFY_ACTOR }}
+        run: python instagram_reels_sync.py
