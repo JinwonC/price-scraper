@@ -110,7 +110,7 @@ def get_or_create_worksheet(sh, title, header):
 def overwrite_worksheet(sh, title, header, rows):
     ws = get_or_create_worksheet(sh, title, header)
     ws.clear()
-    ws.update("A1", [header] + rows, value_input_option="USER_ENTERED")
+    ws.update(range_name="A1", values=[header] + rows, value_input_option="USER_ENTERED")
 
 
 # ---------------------------------------------------------------------------
@@ -136,10 +136,35 @@ def fetch_posts(handles, days, results_limit, actor_id):
 
     print(f"🚀 Apify 액터 실행: {actor_id} / 계정 {len(urls)}개 / 최근 {days}일")
     run = client.actor(actor_id).call(run_input=run_input)
-    dataset_id = run["defaultDatasetId"]
+    dataset_id = _run_dataset_id(run)
+    if not dataset_id:
+        raise RuntimeError(f"Apify run 에서 데이터셋 ID 를 찾지 못했습니다: {run!r}")
     items = list(client.dataset(dataset_id).iterate_items())
     print(f"   데이터셋 아이템 {len(items)}개 수신")
     return items
+
+
+def _run_dataset_id(run):
+    """apify-client 버전에 따라 run 이 dict 또는 Run 객체로 반환된다.
+    두 경우 모두에서 defaultDatasetId 를 안전하게 꺼낸다."""
+    if isinstance(run, dict):
+        return run.get("defaultDatasetId") or run.get("default_dataset_id")
+    # apify-client >= 2.0 은 타입 객체를 반환 (속성 접근)
+    for attr in ("default_dataset_id", "defaultDatasetId"):
+        val = getattr(run, attr, None)
+        if val:
+            return val
+    # Pydantic 모델 폴백
+    for dumper in ("model_dump", "dict"):
+        fn = getattr(run, dumper, None)
+        if callable(fn):
+            try:
+                data = fn()
+            except TypeError:
+                continue
+            if isinstance(data, dict):
+                return data.get("defaultDatasetId") or data.get("default_dataset_id")
+    return None
 
 
 # ---------------------------------------------------------------------------
