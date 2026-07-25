@@ -113,18 +113,58 @@ def overwrite_worksheet(sh, title, header, rows):
     ws.update(range_name="A1", values=[header] + rows, value_input_option="USER_ENTERED")
 
 
+HEADER_NAMES = {"instagram handle", "handle", "핸들", "instagram"}
+
+
+def write_follower_column(sh, tab_name, followers_by_handle, header="follower"):
+    """입력 탭 A열의 핸들 순서에 맞춰 B열에 팔로워 수를 기록한다.
+    헤더 행(예: 'Instagram handle')에는 header 문자열을 넣는다."""
+    ws = sh.worksheet(tab_name)
+    col_a = ws.col_values(1)
+    if not col_a:
+        return 0
+
+    b_col = []
+    filled = 0
+    for raw in col_a:
+        handle = (raw or "").strip().lstrip("@")
+        if handle.lower() in HEADER_NAMES:
+            b_col.append([header])
+            continue
+        if not handle:
+            b_col.append([""])
+            continue
+        if "instagram.com/" in handle:
+            handle = handle.rstrip("/").split("/")[-1]
+        count = followers_by_handle.get(handle.lower())
+        if count is None:
+            b_col.append([""])
+        else:
+            b_col.append([count])
+            filled += 1
+
+    ws.update(
+        range_name=f"B1:B{len(b_col)}",
+        values=b_col,
+        value_input_option="USER_ENTERED",
+    )
+    return filled
+
+
 # ---------------------------------------------------------------------------
 # Apify
 # ---------------------------------------------------------------------------
-def fetch_posts(handles, days, results_limit, actor_id):
-    """모든 핸들을 한 번의 액터 run 으로 수집해 게시물 아이템 리스트를 반환."""
+def build_apify_client():
     token = os.environ.get("APIFY_TOKEN")
     if not token:
         raise ValueError(
             "APIFY_TOKEN 환경변수가 비어 있습니다. Apify API 토큰을 Secret 으로 주입하세요."
         )
+    return ApifyClient(token)
 
-    client = ApifyClient(token)
+
+def fetch_posts(client, handles, days, results_limit, actor_id):
+    """모든 핸들을 한 번의 액터 run 으로 수집해 게시물 아이템 리스트를 반환."""
     urls = [f"https://www.instagram.com/{h}/" for h in handles]
     run_input = {
         "directUrls": urls,
@@ -142,6 +182,34 @@ def fetch_posts(handles, days, results_limit, actor_id):
     items = list(client.dataset(dataset_id).iterate_items())
     print(f"   데이터셋 아이템 {len(items)}개 수신")
     return items
+
+
+def fetch_follower_counts(client, handles, actor_id):
+    """resultsType='details' 로 프로필 정보를 받아 {핸들(소문자): 팔로워수} 를 반환."""
+    urls = [f"https://www.instagram.com/{h}/" for h in handles]
+    run_input = {
+        "directUrls": urls,
+        "resultsType": "details",
+        "resultsLimit": 1,
+        "addParentData": False,
+    }
+    print(f"👥 팔로워 수 수집 중... (계정 {len(urls)}개, resultsType=details)")
+    run = client.actor(actor_id).call(run_input=run_input)
+    dataset_id = _run_dataset_id(run)
+    if not dataset_id:
+        print("  ⚠️ 팔로워 수집 실패: 데이터셋 ID 를 찾지 못했습니다.")
+        return {}
+
+    followers = {}
+    for item in client.dataset(dataset_id).iterate_items():
+        if item.get("error"):
+            continue
+        uname = (item.get("username") or item.get("ownerUsername") or "").strip().lower()
+        count = item.get("followersCount")
+        if uname and isinstance(count, (int, float)):
+            followers[uname] = int(count)
+    print(f"   팔로워 수 {len(followers)}개 계정 확인")
+    return followers
 
 
 def _run_dataset_id(run):
@@ -325,7 +393,8 @@ def main():
         raise RuntimeError(f"'{input_tab}' 탭 A열에서 핸들을 찾지 못했습니다.")
     print(f"👤 핸들 {len(handles)}개 로드")
 
-    items = fetch_posts(handles, days, results_limit, actor_id)
+    apify = build_apify_client()
+    items = fetch_posts(apify, handles, days, results_limit, actor_id)
     reels_by_handle = build_reels_by_handle(handles, items, days)
 
     total_reels = sum(len(v) for v in reels_by_handle.values())
@@ -359,6 +428,14 @@ def main():
     overwrite_worksheet(sh, summary_tab, summary_header, summary_rows)
     print(f"📊 '{output_tab}' 저장 중... (릴스 {len(detail_rows)}행)")
     overwrite_worksheet(sh, output_tab, detail_header, detail_rows)
+
+    # 시트1 B열(follower) 채우기. 실패해도 릴스 결과는 유지되도록 감싼다.
+    try:
+        followers = fetch_follower_counts(apify, handles, actor_id)
+        filled = write_follower_column(sh, input_tab, followers)
+        print(f"👥 '{input_tab}' B열 팔로워 수 {filled}개 기록")
+    except Exception as e:  # noqa: BLE001
+        print(f"⚠️ 팔로워 수 기록 실패(릴스 결과는 정상 저장됨): {e}")
 
     outliers = sum(1 for row in detail_rows if row[5] == "★")
     print(f"🎉 완료! 아웃라이어(≥{outperform_ratio}x) {outliers}개")
