@@ -1,11 +1,9 @@
 name: Instagram Reels Sync
 
 on:
+  # 자동 스케줄 없음: 요청 시 수동으로만 실행한다(Apify 사용량/비용 통제).
+  # Actions 탭 → Instagram Reels Sync → Run workflow 로 실행.
   workflow_dispatch:
-  schedule:
-    # 매주 월요일 한국 시간 오전 9시 (UTC 월요일 00:00)
-    # 릴스 성과 분석은 주 1회로 충분하며 Apify 사용량을 크게 아낀다.
-    - cron: '0 0 * * 1'
 
 jobs:
   sync:
