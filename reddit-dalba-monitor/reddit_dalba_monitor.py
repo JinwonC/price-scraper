@@ -27,6 +27,7 @@ ID 는 건너뛰므로 중복이 생기지 않는다. (하루 실패해도 다�
   QUERIES              : 검색어 목록(쉼표 구분)        (선택, 기본 아래 DEFAULT_QUERIES)
   TIME_FILTER          : 검색 기간 hour/day/week/month (선택, 기본 "week")
   MAX_ITEMS            : 한 번에 받을 최대 결과 수      (선택, 기본 200 — 그대로 비용 상한)
+  APIFY_PROXY_GROUPS   : Apify 프록시 그룹              (선택, 기본 RESIDENTIAL)
   INCLUDE_THREAD_COMMENTS : "1" 이면 언급 글의 반응 댓글까지 (선택, 기본 0)
   WEB_DATA_PATH        : 웹 데이터 JSON 경로          (선택, 기본 ../web/data/mentions.json)
   MAX_ROWS             : 보관할 최대 항목 수           (선택, 기본 5000)
@@ -351,7 +352,8 @@ def _run_actor(client, actor_id, run_input, label):
     return items
 
 
-def collect(client, actor_id, queries, time_filter, max_items, include_thread_comments):
+def collect(client, actor_id, queries, time_filter, max_items, include_thread_comments,
+            proxy_groups):
     """검색 한 번으로 글과 댓글을 모두 모은다.
 
     Reddit Scraper Lite 는 레딧 **전체 댓글 검색**을 지원한다. 브랜드 언급은
@@ -379,6 +381,14 @@ def collect(client, actor_id, queries, time_filter, max_items, include_thread_co
             "skipComments": not include_thread_comments,
             "skipUserPosts": True,
             "includeNSFW": True,
+            # 반드시 넣어야 한다. 레딧은 데이터센터 IP 를 403 으로 막기 때문에
+            # residential 프록시가 없으면 아무것도 못 가져온다.
+            # (액터 스키마의 기본값은 웹 폼에만 채워지는 prefill 이라
+            #  API 로 호출할 때는 이렇게 직접 넘겨야 적용된다)
+            "proxy": {
+                "useApifyProxy": True,
+                "apifyProxyGroups": proxy_groups,
+            },
         },
         f"검색: {', '.join(queries)} (최근 {time_filter}, 최대 {max_items}건)",
     )
@@ -414,6 +424,13 @@ def collect(client, actor_id, queries, time_filter, max_items, include_thread_co
 
     posts = sum(1 for i in found.values() if i["kind"] == "포스트")
     print(f"   글 {posts}건 / 댓글 {len(found) - posts}건 (무관·중복 {dropped}건 제외)")
+
+    if not raw_items:
+        print(
+            "   ⚠️ 액터가 아무것도 못 가져왔습니다. 레딧이 프록시를 막았을 가능성이 큽니다.\n"
+            "      Apify 콘솔에서 해당 run 로그에 '403' 이 있는지 확인하세요.\n"
+            f"      (현재 프록시 그룹: {proxy_groups})"
+        )
     return found, len(raw_items)
 
 
@@ -513,6 +530,8 @@ def main():
     time_filter = _env("TIME_FILTER", "week")
     max_items = _int_env("MAX_ITEMS", 200)
     include_thread_comments = _env("INCLUDE_THREAD_COMMENTS", "0") == "1"
+    # 레딧은 데이터센터 IP 를 막으므로 residential 이 기본이다.
+    proxy_groups = _list_env("APIFY_PROXY_GROUPS", ["RESIDENTIAL"])
     max_rows = _int_env("MAX_ROWS", 5000)
     only_relevant = _env("ONLY_RELEVANT", "0") == "1"
 
@@ -523,7 +542,8 @@ def main():
     print(f"🎬 액터: {actor_id}")
 
     collected, received = collect(
-        client, actor_id, queries, time_filter, max_items, include_thread_comments
+        client, actor_id, queries, time_filter, max_items, include_thread_comments,
+        proxy_groups,
     )
     items = list(collected.values())
     if only_relevant:
