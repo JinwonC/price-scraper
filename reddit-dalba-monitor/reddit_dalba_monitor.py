@@ -55,20 +55,14 @@ DEFAULT_ACTOR = "trudax/reddit-scraper-lite"
 # 결과가 0건이 된다. 그래서 넘기기 전에 반드시 검증한다.
 VALID_TIME_FILTERS = {"hour", "day", "week", "month", "year"}
 
-# 검색어. 레딧 검색은 누락이 많고 아포스트로피·띄어쓰기에 따라 결과가 달라져서,
-# 표기 변형과 대표 제품명을 여러 개 던져 서로 다른 결과를 긁어모은다.
-# (검색어를 늘려도 결과 수가 상한에 못 미치면 비용은 거의 안 는다)
+# 검색어. 레딧 검색은 아포스트로피를 잘 못 다루므로 여러 형태로 던지고,
 # 실제 판정은 아래 KEYWORD_PATTERNS 정규식으로 다시 한 번 거른다.
-DEFAULT_QUERIES = [
-    "dalba",
-    "d'alba",
-    "d alba",
-    "dalba piedmont",       # 공식 계정명
-    "dalba white truffle",  # 대표 라인
-    "dalba serum",
-    "dalba sunscreen",
-    "달바",
-]
+#
+# ⚠️ 개수를 함부로 늘리지 말 것. 검색어 하나당 글·댓글 두 개의 검색이 돌아가는데,
+#    8개로 늘렸더니(=검색 16개) 액터가 아무것도 못 돌려주고 0건으로 끝났다.
+#    아래 4개 조합은 실제로 수집이 확인된 구성이다. 늘릴 때는 하나씩 추가하고
+#    로그의 "수신 N건" 을 보며 검증할 것.
+DEFAULT_QUERIES = ["dalba", "d'alba", "dalba white truffle", "달바"]
 
 # 액터 요금 (trudax/reddit-scraper-lite, 무료 티어 기준 $3.40/1000건).
 # 유료 플랜은 이보다 싸므로 실제 청구액은 이 값보다 낮게 나온다.
