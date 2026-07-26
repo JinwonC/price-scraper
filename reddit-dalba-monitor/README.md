@@ -89,7 +89,7 @@ Apify 는 승인이 필요 없어 바로 씁니다.
 | 이름 | 기본값 | 설명 |
 | --- | --- | --- |
 | `REDDIT_QUERIES` | `dalba, d'alba, dalba white truffle, 달바` | 검색어(쉼표 구분) |
-| `REDDIT_TIME_FILTER` | `year` | 검색 기간 `hour`/`day`/`week`/`month`/`year` |
+| `REDDIT_TIME_FILTER` | `year` | 검색 기간 `hour`/`day`/`week`/`month`/`year` (그 외 값은 `year` 로 대체) |
 | `REDDIT_MAX_ITEMS` | `200` | 한 번에 받을 최대 결과 수 = **비용 상한** |
 | `REDDIT_APIFY_PROXY_GROUPS` | `RESIDENTIAL` | 프록시 그룹. 레딧이 데이터센터 IP 를 막으므로 바꾸지 마세요 |
 | `REDDIT_INCLUDE_THREAD_COMMENTS` | `0` | `1` 이면 언급 글의 반응 댓글까지 담음 |

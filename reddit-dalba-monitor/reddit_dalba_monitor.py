@@ -25,7 +25,7 @@ ID 는 건너뛰므로 중복이 생기지 않는다. (하루 실패해도 다�
   APIFY_TOKEN          : Apify API 토큰               (필수, 인스타 수집기와 같은 것)
   APIFY_ACTOR          : 사용할 액터                  (선택, 기본 trudax/reddit-scraper-lite)
   QUERIES              : 검색어 목록(쉼표 구분)        (선택, 기본 아래 DEFAULT_QUERIES)
-  TIME_FILTER          : 검색 기간 hour/day/week/month/year/all (선택, 기본 "all")
+  TIME_FILTER          : 검색 기간 hour/day/week/month/year (선택, 기본 "year")
   MAX_ITEMS            : 한 번에 받을 최대 결과 수      (선택, 기본 200 — 그대로 비용 상한)
   APIFY_PROXY_GROUPS   : Apify 프록시 그룹              (선택, 기본 RESIDENTIAL)
   INCLUDE_THREAD_COMMENTS : "1" 이면 언급 글의 반응 댓글까지 (선택, 기본 0)
@@ -50,6 +50,10 @@ from apify_client import ApifyClient
 KST = timezone(timedelta(hours=9))
 
 DEFAULT_ACTOR = "trudax/reddit-scraper-lite"
+
+# 액터가 받는 기간 값. 여기 없는 값(예: "all")을 넣으면 검색이 통째로 실패하고
+# 결과가 0건이 된다. 그래서 넘기기 전에 반드시 검증한다.
+VALID_TIME_FILTERS = {"hour", "day", "week", "month", "year"}
 
 # 검색어. 레딧 검색은 누락이 많고 아포스트로피·띄어쓰기에 따라 결과가 달라져서,
 # 표기 변형과 대표 제품명을 여러 개 던져 서로 다른 결과를 긁어모은다.
@@ -604,7 +608,13 @@ def write_to_sheet(gc, sheet_id, tab_name, items, max_rows):
 def main():
     actor_id = _env("APIFY_ACTOR", DEFAULT_ACTOR)
     queries = _list_env("QUERIES", DEFAULT_QUERIES)
-    time_filter = _env("TIME_FILTER", "all")
+    time_filter = _env("TIME_FILTER", "year")
+    if time_filter not in VALID_TIME_FILTERS:
+        print(
+            f"⚠️ TIME_FILTER='{time_filter}' 는 액터가 받지 않는 값입니다. "
+            f"(가능: {', '.join(sorted(VALID_TIME_FILTERS))}) → 'year' 로 진행합니다."
+        )
+        time_filter = "year"
     max_items = _int_env("MAX_ITEMS", 200)
     include_thread_comments = _env("INCLUDE_THREAD_COMMENTS", "0") == "1"
     # 레딧은 데이터센터 IP 를 막으므로 residential 이 기본이다.
