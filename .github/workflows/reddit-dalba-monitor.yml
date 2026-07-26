@@ -1,0 +1,57 @@
+name: Reddit Dalba Monitor
+
+on:
+  schedule:
+    # 매일 00:00 UTC = 한국시간 오전 9시
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: reddit-dalba-monitor
+    steps:
+      - name: 코드 가져오기
+        uses: actions/checkout@v4
+
+      - name: 파이썬 설치
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 의존성 설치
+        run: pip install -r requirements.txt
+
+      - name: 레딧 언급 수집
+        env:
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          REDDIT_USER_AGENT: ${{ vars.REDDIT_USER_AGENT }}
+          # 선택: 계정 인증이 필요할 때만 (2단계인증 계정은 사용 불가)
+          REDDIT_USERNAME: ${{ secrets.REDDIT_USERNAME }}
+          REDDIT_PASSWORD: ${{ secrets.REDDIT_PASSWORD }}
+          # 선택: 시트에 기록하려면 아래 두 개가 있어야 함. 없으면 CSV 만 남음
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+          SHEET_ID: ${{ vars.REDDIT_SHEET_ID }}
+          # 선택값: 필요할 때만 리포지토리 Variables 에 추가
+          OUTPUT_TAB: ${{ vars.REDDIT_OUTPUT_TAB }}
+          QUERIES: ${{ vars.REDDIT_QUERIES }}
+          TIME_FILTER: ${{ vars.REDDIT_TIME_FILTER }}
+          SCAN_SUBREDDITS: ${{ vars.REDDIT_SCAN_SUBREDDITS }}
+          MAX_SEARCH_PAGES: ${{ vars.REDDIT_MAX_SEARCH_PAGES }}
+          MAX_COMMENT_PAGES: ${{ vars.REDDIT_MAX_COMMENT_PAGES }}
+          TOP_COMMENTS_PER_POST: ${{ vars.REDDIT_TOP_COMMENTS_PER_POST }}
+          MAX_ROWS: ${{ vars.REDDIT_MAX_ROWS }}
+          ONLY_RELEVANT: ${{ vars.REDDIT_ONLY_RELEVANT }}
+        run: python reddit_dalba_monitor.py
+
+      - name: 결과 CSV 보관
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reddit-dalba-${{ github.run_id }}
+          path: reddit-dalba-monitor/output/*.csv
+          if-no-files-found: ignore
+          retention-days: 30
