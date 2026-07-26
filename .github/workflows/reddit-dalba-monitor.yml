@@ -45,6 +45,7 @@ jobs:
           QUERIES: ${{ vars.REDDIT_QUERIES }}
           TIME_FILTER: ${{ vars.REDDIT_TIME_FILTER }}
           MAX_ITEMS: ${{ vars.REDDIT_MAX_ITEMS }}
+          APIFY_PROXY_GROUPS: ${{ vars.REDDIT_APIFY_PROXY_GROUPS }}
           INCLUDE_THREAD_COMMENTS: ${{ vars.REDDIT_INCLUDE_THREAD_COMMENTS }}
           MAX_ROWS: ${{ vars.REDDIT_MAX_ROWS }}
           ONLY_RELEVANT: ${{ vars.REDDIT_ONLY_RELEVANT }}
