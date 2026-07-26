@@ -1,5 +1,5 @@
 """
-레딧 달바(d'alba / dalba) 언급 수집기 (Reddit 공식 API → 구글 시트 + CSV)
+레딧 달바(d'alba / dalba) 언급 수집기 (Reddit 공식 API → 웹사이트 데이터)
 
 레딧 전체에서 "d'alba", "dalba", "달바" 가 언급된 글과 댓글을 매일 모아
 한 곳에서 볼 수 있게 정리한다. 브랜드 언급은 대부분 "세럼 추천해줘" 같은
@@ -9,9 +9,9 @@
   2) 스레드 댓글: 1)에서 찾은 글의 댓글 (키워드 댓글 + 상위 댓글 몇 개)
   3) 댓글 스트림: 뷰티 서브레딧들의 최신 댓글을 훑어 키워드가 있는 댓글
 
-결과는 매일 같은 탭에 **최신순으로 위에 쌓이며**, 이미 수집한 글/댓글 ID 는
-건너뛰므로 중복이 생기지 않는다. (하루 실패해도 다음 날 일주일치를 다시 훑어
-메꾸는 구조)
+결과는 `web/data/mentions.json` 에 **최신순으로 누적**된다. 이미 수집한 글/댓글
+ID 는 건너뛰므로 중복이 생기지 않는다. (하루 실패해도 다음 날 일주일치를 다시
+훑어 메꾸는 구조) 이 파일이 커밋/푸시되면 Vercel 이 웹사이트를 자동 재배포한다.
 
 환경변수(GitHub Actions Secrets/Variables 로 주입):
   REDDIT_CLIENT_ID     : 레딧 앱 client id            (필수)
@@ -19,8 +19,9 @@
   REDDIT_USER_AGENT    : User-Agent 문자열            (선택, 권장)
   REDDIT_USERNAME      : 레딧 계정 ID                 (선택, 있으면 계정 인증)
   REDDIT_PASSWORD      : 레딧 계정 비밀번호            (선택, 2단계인증 계정은 사용 불가)
-  GOOGLE_CREDENTIALS   : 구글 서비스계정 JSON 문자열    (선택, 없으면 CSV 만 저장)
-  SHEET_ID             : 대상 스프레드시트 ID          (선택, 없으면 CSV 만 저장)
+  WEB_DATA_PATH        : 웹 데이터 JSON 경로          (선택, 기본 ../web/data/mentions.json)
+  SHEET_ID             : 구글 시트에도 쓸 때만 지정     (선택, 기본 사용 안 함)
+  GOOGLE_CREDENTIALS   : 구글 서비스계정 JSON 문자열    (선택, SHEET_ID 와 함께 필요)
   OUTPUT_TAB           : 결과 탭 이름                 (선택, 기본 "레딧언급")
   QUERIES              : 검색어 목록(쉼표 구분)        (선택, 기본 아래 DEFAULT_QUERIES)
   TIME_FILTER          : 검색 기간 hour/day/week/month (선택, 기본 "week")
@@ -28,7 +29,7 @@
   MAX_SEARCH_PAGES     : 검색어당 최대 페이지(100건/장) (선택, 기본 3)
   MAX_COMMENT_PAGES    : 서브레딧당 최대 댓글 페이지    (선택, 기본 20)
   TOP_COMMENTS_PER_POST: 언급 글마다 담을 상위 댓글 수  (선택, 기본 3)
-  MAX_ROWS             : 시트에 유지할 최대 행 수       (선택, 기본 5000)
+  MAX_ROWS             : 보관할 최대 항목 수           (선택, 기본 5000)
   ONLY_RELEVANT        : "1" 이면 무관해 보이는 건 제외 (선택, 기본 0 = 전부 저장)
 """
 
@@ -113,6 +114,10 @@ HEADER = [
 ID_COL = len(HEADER)  # ID 는 마지막 열
 
 BODY_LIMIT = 1500
+
+# 웹사이트(Vercel)가 읽는 데이터 파일. 리포지토리 안에 커밋되며,
+# 푸시되면 Vercel 이 자동으로 다시 배포한다.
+DEFAULT_WEB_DATA = os.path.join(os.path.dirname(__file__), "..", "web", "data", "mentions.json")
 
 
 # ---------------------------------------------------------------------------
@@ -269,53 +274,72 @@ class RedditClient:
 # ---------------------------------------------------------------------------
 # 수집
 # ---------------------------------------------------------------------------
-def _post_row(post, kinds):
-    """검색으로 찾은 글 1건을 시트 행으로 변환."""
+def _post_item(post, kinds):
+    """검색으로 찾은 글 1건을 표준 항목(dict)으로 변환."""
     subreddit = post.get("subreddit") or ""
     title = post.get("title") or ""
     body = post.get("selftext") or ""
-    created = datetime.fromtimestamp(post.get("created_utc") or 0, tz=timezone.utc)
-    return [
-        created.astimezone(KST).strftime("%Y-%m-%d %H:%M"),
-        "포스트",
-        f"r/{subreddit}",
-        clean_text(title, 300),
-        clean_text(body),
-        post.get("author") or "",
-        post.get("score") or 0,
-        post.get("num_comments") or 0,
-        judge_relevance(subreddit, title, body),
-        ", ".join(kinds),
-        f"https://www.reddit.com{post.get('permalink') or ''}",
-        post.get("name") or f"t3_{post.get('id')}",
-    ]
+    ts = int(post.get("created_utc") or 0)
+    return {
+        "id": post.get("name") or f"t3_{post.get('id')}",
+        "ts": ts,
+        "date": datetime.fromtimestamp(ts, tz=timezone.utc).astimezone(KST).strftime("%Y-%m-%d %H:%M"),
+        "kind": "포스트",
+        "subreddit": subreddit,
+        "title": clean_text(title, 300),
+        "body": clean_text(body),
+        "author": post.get("author") or "",
+        "score": post.get("score") or 0,
+        "comments": post.get("num_comments") or 0,
+        "relevance": judge_relevance(subreddit, title, body),
+        "keywords": kinds,
+        "url": f"https://www.reddit.com{post.get('permalink') or ''}",
+    }
 
 
-def _comment_row(comment, kinds, kind_label, post_title=""):
-    """댓글 1건을 시트 행으로 변환."""
+def _comment_item(comment, kinds, kind_label, post_title=""):
+    """댓글 1건을 표준 항목(dict)으로 변환."""
     subreddit = comment.get("subreddit") or ""
     body = comment.get("body") or ""
     title = post_title or comment.get("link_title") or ""
-    created = datetime.fromtimestamp(comment.get("created_utc") or 0, tz=timezone.utc)
-    permalink = comment.get("permalink") or ""
+    ts = int(comment.get("created_utc") or 0)
+    return {
+        "id": comment.get("name") or f"t1_{comment.get('id')}",
+        "ts": ts,
+        "date": datetime.fromtimestamp(ts, tz=timezone.utc).astimezone(KST).strftime("%Y-%m-%d %H:%M"),
+        "kind": kind_label,
+        "subreddit": subreddit,
+        "title": clean_text(title, 300),
+        "body": clean_text(body),
+        "author": comment.get("author") or "",
+        "score": comment.get("score") or 0,
+        "comments": "",
+        "relevance": judge_relevance(subreddit, title, body),
+        "keywords": kinds,
+        "url": f"https://www.reddit.com{comment.get('permalink') or ''}",
+    }
+
+
+def to_row(item):
+    """표준 항목을 CSV/시트 행으로 변환. (HEADER 순서와 1:1)"""
     return [
-        created.astimezone(KST).strftime("%Y-%m-%d %H:%M"),
-        kind_label,
-        f"r/{subreddit}",
-        clean_text(title, 300),
-        clean_text(body),
-        comment.get("author") or "",
-        comment.get("score") or 0,
-        "",
-        judge_relevance(subreddit, title, body),
-        ", ".join(kinds),
-        f"https://www.reddit.com{permalink}",
-        comment.get("name") or f"t1_{comment.get('id')}",
+        item["date"],
+        item["kind"],
+        f"r/{item['subreddit']}" if item["subreddit"] else "",
+        item["title"],
+        item["body"],
+        item["author"],
+        item["score"],
+        item["comments"],
+        item["relevance"],
+        ", ".join(item["keywords"]),
+        item["url"],
+        item["id"],
     ]
 
 
 def search_posts(client, queries, time_filter, max_pages):
-    """레딧 전체 검색으로 키워드가 들어간 글을 모은다. {ID: (row, post)}"""
+    """레딧 전체 검색으로 키워드가 들어간 글을 모은다. {ID: (item, post)}"""
     found = {}
     for query in queries:
         print(f"🔎 글 검색: '{query}' (최근 {time_filter})")
@@ -349,7 +373,7 @@ def search_posts(client, queries, time_filter, max_pages):
                 kinds = matched_keywords(post.get("title"), post.get("selftext"))
                 if not kinds:
                     continue
-                found[post_id] = (_post_row(post, kinds), post)
+                found[post_id] = (_post_item(post, kinds), post)
 
             after = ((data or {}).get("data") or {}).get("after")
             if not after:
@@ -363,8 +387,8 @@ def fetch_thread_comments(client, posts, top_n):
     - 키워드가 들어간 댓글은 전부
     - 나머지는 점수 높은 순 top_n 개 (반응을 같이 보기 위함)
     """
-    rows = {}
-    for post_id, (_row, post) in posts.items():
+    items = {}
+    for post_id, (_item, post) in posts.items():
         pid = post.get("id")
         if not pid:
             continue
@@ -386,17 +410,17 @@ def fetch_thread_comments(client, posts, top_n):
 
         for c, kinds in matched:
             cid = c.get("name") or f"t1_{c.get('id')}"
-            rows[cid] = _comment_row(c, kinds, "댓글(언급)", title)
+            items[cid] = _comment_item(c, kinds, "댓글(언급)", title)
 
         others.sort(key=lambda x: x[0].get("score") or 0, reverse=True)
         for c, _kinds in others[:top_n]:
             cid = c.get("name") or f"t1_{c.get('id')}"
-            if cid in rows:
+            if cid in items:
                 continue
-            rows[cid] = _comment_row(c, ["(스레드 반응)"], "댓글(반응)", title)
+            items[cid] = _comment_item(c, ["(스레드 반응)"], "댓글(반응)", title)
 
-    print(f"💬 언급 글의 댓글 {len(rows)}건 수집")
-    return rows
+    print(f"💬 언급 글의 댓글 {len(items)}건 수집")
+    return items
 
 
 def _walk_comments(children):
@@ -414,7 +438,7 @@ def _walk_comments(children):
 def scan_subreddit_comments(client, subreddits, max_pages, cutoff):
     """뷰티 서브레딧의 최신 댓글 스트림을 훑어 키워드가 있는 댓글만 남긴다.
     브랜드 언급 대부분이 남의 글 댓글에 있기 때문에 이 경로가 핵심이다."""
-    rows = {}
+    items = {}
     for sub in subreddits:
         after = None
         page = 0
@@ -441,9 +465,9 @@ def scan_subreddit_comments(client, subreddits, max_pages, cutoff):
                 if not kinds:
                     continue
                 cid = c.get("name") or f"t1_{c.get('id')}"
-                if cid in rows:
+                if cid in items:
                     continue
-                rows[cid] = _comment_row(c, kinds, "댓글(발견)")
+                items[cid] = _comment_item(c, kinds, "댓글(발견)")
                 hits += 1
 
             if reached_cutoff:
@@ -457,20 +481,57 @@ def scan_subreddit_comments(client, subreddits, max_pages, cutoff):
             age_h = (time.time() - oldest) / 3600
             span = f", 최근 {age_h:.0f}시간 훑음"
         print(f"   r/{sub}: {hits}건 (페이지 {page}{span})")
-    print(f"💬 서브레딧 댓글 스트림에서 {len(rows)}건 발견")
-    return rows
+    print(f"💬 서브레딧 댓글 스트림에서 {len(items)}건 발견")
+    return items
 
 
 # ---------------------------------------------------------------------------
 # 저장
 # ---------------------------------------------------------------------------
-def save_csv(rows, path):
+def save_csv(items, path):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8-sig", newline="") as f:
         writer = csv.writer(f)
         writer.writerow(HEADER)
-        writer.writerows(rows)
-    print(f"💾 CSV 저장: {path} ({len(rows)}행)")
+        writer.writerows(to_row(it) for it in items)
+    print(f"💾 CSV 저장: {path} ({len(items)}행)")
+
+
+def save_web_json(items, path, max_items):
+    """웹사이트가 읽는 JSON 을 갱신한다.
+
+    기존 파일과 합쳐 ID 기준으로 중복을 없애고, 최신순으로 정렬해 max_items 까지만
+    남긴다. 이 파일이 커밋/푸시되면 Vercel 이 자동으로 다시 배포한다.
+    반환값은 (신규 건수, 전체 건수).
+    """
+    path = os.path.abspath(path)
+    existing = []
+    if os.path.exists(path):
+        try:
+            with open(path, encoding="utf-8") as f:
+                existing = (json.load(f) or {}).get("items") or []
+        except (ValueError, OSError) as e:
+            print(f"   ⚠️ 기존 JSON 을 읽지 못해 새로 만듭니다: {e}")
+
+    merged = {it["id"]: it for it in existing}
+    new_count = sum(1 for it in items if it["id"] not in merged)
+    for it in items:
+        merged[it["id"]] = it  # 점수/댓글수는 최신값으로 갱신
+
+    ordered = sorted(merged.values(), key=lambda it: it.get("ts") or 0, reverse=True)
+    if max_items:
+        ordered = ordered[:max_items]
+
+    payload = {
+        "updatedAt": datetime.now(KST).isoformat(timespec="seconds"),
+        "total": len(ordered),
+        "items": ordered,
+    }
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False, indent=1)
+    print(f"🌐 웹 데이터 저장: {path} (신규 {new_count}건 / 전체 {len(ordered)}건)")
+    return new_count, len(ordered)
 
 
 def build_gspread_client():
@@ -482,7 +543,7 @@ def build_gspread_client():
     return gspread.service_account_from_dict(json.loads(creds_json))
 
 
-def write_to_sheet(gc, sheet_id, tab_name, rows, max_rows):
+def write_to_sheet(gc, sheet_id, tab_name, items, max_rows):
     """이미 있는 ID 는 건너뛰고, 새 행만 최신순으로 맨 위에 끼워 넣는다."""
     import gspread
 
@@ -496,7 +557,7 @@ def write_to_sheet(gc, sheet_id, tab_name, rows, max_rows):
         ws.update(range_name="A1", values=[HEADER], value_input_option="USER_ENTERED")
 
     existing_ids = set(ws.col_values(ID_COL)[1:])  # 헤더 제외
-    fresh = [r for r in rows if r[ID_COL - 1] not in existing_ids]
+    fresh = [to_row(it) for it in items if it["id"] not in existing_ids]
     if not fresh:
         print("   새로 추가할 항목이 없습니다(모두 이미 수집됨).")
         return 0
@@ -549,49 +610,49 @@ def main():
     print(f"📝 언급된 글 {len(posts)}건")
 
     # 2) 그 글들의 댓글
-    comment_rows = {}
+    comments = {}
     if posts:
-        comment_rows.update(fetch_thread_comments(client, posts, top_comments))
+        comments.update(fetch_thread_comments(client, posts, top_comments))
 
     # 3) 뷰티 서브레딧 최신 댓글 스트림
     if subreddits:
         window_days = {"hour": 1, "day": 2, "week": 8, "month": 31}.get(time_filter, 8)
         cutoff = time.time() - window_days * 86400
         print(f"🔎 서브레딧 댓글 스캔: {len(subreddits)}개 (최근 {window_days}일)")
-        comment_rows.update(
+        comments.update(
             scan_subreddit_comments(client, subreddits, max_comment_pages, cutoff)
         )
 
-    rows = [row for row, _post in posts.values()] + list(comment_rows.values())
+    items = [item for item, _post in posts.values()] + list(comments.values())
     if only_relevant:
-        before = len(rows)
-        rows = [r for r in rows if r[8] == "관련"]
-        print(f"🧹 관련도 필터: {before} → {len(rows)}건")
+        before = len(items)
+        items = [it for it in items if it["relevance"] == "관련"]
+        print(f"🧹 관련도 필터: {before} → {len(items)}건")
 
-    # 최신순 정렬 (시트 맨 위가 가장 최근 글이 되도록)
-    rows.sort(key=lambda r: r[0], reverse=True)
+    # 최신순 정렬
+    items.sort(key=lambda it: it.get("ts") or 0, reverse=True)
 
-    if not rows:
+    if not items:
         print("😶 이번 실행에서 새로 찾은 언급이 없습니다.")
 
     stamp = datetime.now(KST).strftime("%Y-%m-%d")
-    save_csv(rows, os.path.join("output", f"reddit_dalba_{stamp}.csv"))
+    save_csv(items, os.path.join("output", f"reddit_dalba_{stamp}.csv"))
 
+    # 웹사이트용 JSON (기본 출력). 커밋되면 Vercel 이 자동 배포한다.
+    web_path = _env("WEB_DATA_PATH", DEFAULT_WEB_DATA)
+    save_web_json(items, web_path, max_rows)
+
+    # 구글 시트는 선택 사항. SHEET_ID + GOOGLE_CREDENTIALS 가 있을 때만 기록한다.
     sheet_id = _env("SHEET_ID")
-    gc = build_gspread_client()
+    gc = build_gspread_client() if sheet_id else None
     added = None
     if sheet_id and gc:
-        print("🔐 구글 시트 기록 중...")
-        added = write_to_sheet(gc, sheet_id, _env("OUTPUT_TAB", "레딧언급"), rows, max_rows)
-    else:
-        print(
-            "ℹ️ SHEET_ID / GOOGLE_CREDENTIALS 가 없어 CSV 로만 저장했습니다. "
-            "(Actions 실행 결과의 Artifacts 에서 내려받을 수 있습니다)"
-        )
+        print("🔐 구글 시트에도 기록 중...")
+        added = write_to_sheet(gc, sheet_id, _env("OUTPUT_TAB", "레딧언급"), items, max_rows)
 
-    relevant = sum(1 for r in rows if r[8] == "관련")
+    relevant = sum(1 for it in items if it["relevance"] == "관련")
     print(
-        f"🎉 완료! 수집 {len(rows)}건 (관련 {relevant} / 확인필요 {len(rows) - relevant})"
+        f"🎉 완료! 수집 {len(items)}건 (관련 {relevant} / 확인필요 {len(items) - relevant})"
         + (f", 시트 신규 {added}건" if added is not None else "")
     )
 

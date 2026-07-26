@@ -1,7 +1,7 @@
-# 레딧 달바 언급 수집기 (Reddit API → 구글 시트)
+# 레딧 달바 언급 수집기 (Reddit API → 웹사이트)
 
 레딧에서 **d'alba / dalba / 달바** 가 언급된 글과 댓글을 매일 자동으로 모아
-한 시트에서 볼 수 있게 정리합니다.
+웹사이트에서 볼 수 있게 정리합니다. 화면은 `../web` (Vercel) 에 있습니다.
 
 ## 왜 이렇게 만들었나
 
@@ -9,7 +9,7 @@
 **"세럼 추천 좀" 같은 남의 글 댓글에** 훨씬 많이 묻혀 있습니다.
 그래서 3가지 경로를 모두 훑습니다.
 
-| 경로 | 무엇을 가져오나 | 시트의 `종류` |
+| 경로 | 무엇을 가져오나 | 화면의 `종류` |
 | --- | --- | --- |
 | 1. 글 검색 | 레딧 전체에서 제목·본문에 키워드가 있는 글 | `포스트` |
 | 2. 스레드 댓글 | 1)에서 찾은 글의 댓글 중 키워드가 있는 것 + 점수 높은 반응 몇 개 | `댓글(언급)` / `댓글(반응)` |
@@ -18,12 +18,16 @@
 3번이 사실상 핵심입니다. r/AsianBeauty, r/SkincareAddiction 등의 최신 댓글을
 시간 역순으로 훑어 키워드가 나온 댓글만 건집니다.
 
-## 결과 시트
+## 결과
 
-`레딧언급` 탭에 **최신순으로 위에 쌓입니다.** 이미 수집한 글/댓글 ID 는 건너뛰므로
-매일 돌려도 중복이 생기지 않습니다. 하루 실패해도 다음 날 일주일치를 다시 훑어 메꿉니다.
+`web/data/mentions.json` 에 **최신순으로 누적**됩니다. 이미 수집한 글/댓글 ID 는
+건너뛰므로 매일 돌려도 중복이 생기지 않습니다. 하루 실패해도 다음 날 일주일치를
+다시 훑어 메꿉니다.
 
-| 열 | 설명 |
+이 파일이 커밋·푸시되면 **Vercel 이 웹사이트를 자동으로 다시 배포**합니다.
+(배포 설정은 `web/README.md` 참고)
+
+| 항목 | 설명 |
 | --- | --- |
 | 날짜(KST) | 작성 시각 (한국시간) |
 | 종류 | 포스트 / 댓글(언급) / 댓글(반응) / 댓글(발견) |
@@ -35,6 +39,8 @@
 | 매칭키워드 | 어떤 표기로 걸렸는지 |
 | 링크 | 바로 가기 |
 | ID | 중복 방지용 (건드리지 마세요) |
+
+같은 내용을 CSV 로도 남기며, Actions 실행 결과의 **Artifacts** 에서 내려받을 수 있습니다.
 
 > **`확인필요` 는 왜 있나요?**
 > `Dalba` 는 이탈리아 성씨이기도 해서 축구·인명 글이 섞여 들어옵니다.
@@ -58,14 +64,13 @@
 
 공식 API 라 무료이고 차단당하지 않습니다. (분당 100회 제한은 코드에서 지킵니다)
 
-### 2) 구글 시트 준비
+### 2) 웹사이트 배포
 
-기존 `scraper.py` / 인스타 수집기와 **같은 서비스계정 JSON**(`GOOGLE_CREDENTIALS`)을 씁니다.
-결과를 받을 스프레드시트를 하나 만들고, **서비스계정 이메일과 편집자(Editor)로 공유**한 뒤
-주소창의 시트 ID(`/d/` 와 `/edit` 사이 문자열)를 `REDDIT_SHEET_ID` 로 등록하세요.
+`web/README.md` 를 따라 Vercel 에 한 번만 연결하면 됩니다.
+(Root Directory 를 `web` 으로 지정 + `SITE_PASSWORD` 설정)
 
-> 시트 설정을 생략해도 동작합니다. 이 경우 결과는 CSV 로만 저장되고
-> Actions 실행 결과 페이지 하단 **Artifacts** 에서 내려받을 수 있습니다.
+> 구글 시트에도 같이 남기고 싶다면 `REDDIT_SHEET_ID`(Variables)와
+> `GOOGLE_CREDENTIALS`(Secret)를 함께 설정하세요. **기본은 사용하지 않습니다.**
 
 ### 3) GitHub 에 등록
 
@@ -77,14 +82,14 @@ Secrets 탭:
 | --- | --- | --- |
 | `REDDIT_CLIENT_ID` | ✅ | 레딧 앱 client id |
 | `REDDIT_CLIENT_SECRET` | ✅ | 레딧 앱 secret |
-| `GOOGLE_CREDENTIALS` | 시트 쓸 때 | 구글 서비스계정 JSON (기존과 동일) |
+| `GOOGLE_CREDENTIALS` | ❌ | 구글 시트에도 남길 때만 (기존과 동일) |
 | `REDDIT_USERNAME` / `REDDIT_PASSWORD` | ❌ | 계정 인증이 필요할 때만. 2단계인증 계정은 사용 불가 |
 
 Variables 탭 (선택, 기본값을 바꾸고 싶을 때만):
 
 | 이름 | 기본값 | 설명 |
 | --- | --- | --- |
-| `REDDIT_SHEET_ID` | (없음) | 결과를 쓸 스프레드시트 ID |
+| `REDDIT_SHEET_ID` | (없음) | 구글 시트에도 남길 때만 지정 |
 | `REDDIT_OUTPUT_TAB` | `레딧언급` | 결과 탭 이름 |
 | `REDDIT_QUERIES` | `dalba, d'alba, dalba white truffle, 달바` | 검색어(쉼표 구분) |
 | `REDDIT_TIME_FILTER` | `week` | 검색 기간 `hour`/`day`/`week`/`month` |
@@ -92,7 +97,7 @@ Variables 탭 (선택, 기본값을 바꾸고 싶을 때만):
 | `REDDIT_MAX_SEARCH_PAGES` | `3` | 검색어당 최대 페이지 (100건/장) |
 | `REDDIT_MAX_COMMENT_PAGES` | `20` | 서브레딧당 최대 댓글 페이지 (100건/장) |
 | `REDDIT_TOP_COMMENTS_PER_POST` | `3` | 언급 글마다 같이 담을 반응 댓글 수 |
-| `REDDIT_MAX_ROWS` | `5000` | 시트에 유지할 최대 행 수 |
+| `REDDIT_MAX_ROWS` | `5000` | 보관할 최대 항목 수 (넘으면 오래된 것부터 정리) |
 | `REDDIT_ONLY_RELEVANT` | `0` | `1` 이면 `확인필요` 는 저장 안 함 |
 
 ## 실행
@@ -105,10 +110,9 @@ Variables 탭 (선택, 기본값을 바꾸고 싶을 때만):
   pip install -r requirements.txt
   export REDDIT_CLIENT_ID='...'
   export REDDIT_CLIENT_SECRET='...'
-  # 시트 없이 CSV 만 보고 싶으면 아래 두 줄 생략
-  export GOOGLE_CREDENTIALS="$(cat service_account.json)"
-  export SHEET_ID='...'
   python reddit_dalba_monitor.py
+  # 결과가 ../web/data/mentions.json 에 쌓입니다.
+  # 화면으로 확인하려면: cd ../web && npm install && npm run dev
   ```
 
 ## 참고
@@ -118,4 +122,4 @@ Variables 탭 (선택, 기본값을 바꾸고 싶을 때만):
 - 레딧 공식 API 는 **댓글 전문 검색을 지원하지 않습니다.** 그래서 3번 경로처럼
   서브레딧 최신 댓글을 훑는 방식을 씁니다. 감시할 서브레딧을 늘리고 싶으면
   `REDDIT_SCAN_SUBREDDITS` 에 추가하세요 (많아질수록 실행 시간도 늘어납니다).
-- 삭제된 글/댓글은 다시 가져오지 않지만, 이미 시트에 담긴 내용은 그대로 남습니다.
+- 삭제된 글/댓글은 다시 가져오지 않지만, 이미 담긴 내용은 그대로 남습니다.
