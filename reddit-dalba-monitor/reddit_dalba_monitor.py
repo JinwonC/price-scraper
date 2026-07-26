@@ -38,6 +38,7 @@ ID 는 건너뛰므로 중복이 생기지 않는다. (하루 실패해도 다�
 """
 
 import csv
+import html
 import json
 import os
 import re
@@ -160,8 +161,11 @@ def _list_env(name, default):
 # 키워드 판정
 # ---------------------------------------------------------------------------
 def matched_keywords(*texts):
-    """주어진 텍스트들에서 매칭된 키워드 이름 목록을 돌려준다. 없으면 빈 리스트."""
-    blob = " ".join(t for t in texts if t)
+    """주어진 텍스트들에서 매칭된 키워드 이름 목록을 돌려준다. 없으면 빈 리스트.
+
+    엔티티를 먼저 푼다. 액터가 "d&#39;Alba" 처럼 주는 경우가 있어서
+    그대로 두면 정규식이 못 잡는다."""
+    blob = html.unescape(" ".join(t for t in texts if t))
     if not blob:
         return []
     return [name for name, pattern in KEYWORD_PATTERNS if pattern.search(blob)]
@@ -177,9 +181,23 @@ def judge_relevance(subreddit, *texts):
     return "관련" if BEAUTY_TERMS.search(blob) else "확인필요"
 
 
+# 레딧 RSS 를 거쳐 온 본문에 붙는 꼬리표. 내용이 아니라 링크 안내라 지운다.
+RSS_BOILERPLATE = re.compile(
+    r"\s*submitted by\s*/?u/\S+\s*(\[link\])?\s*(\[comments\])?\s*$",
+    re.IGNORECASE,
+)
+
+
 def clean_text(text, limit=BODY_LIMIT):
-    text = (text or "").replace("\r", " ").replace("\n", " ").strip()
-    text = re.sub(r"\s{2,}", " ", text)
+    """HTML 엔티티를 풀고 공백·꼬리표를 정리한다.
+
+    엔티티 해제는 화면 가독성 문제만이 아니다. 액터가 아포스트로피를 &#39; 로
+    주기 때문에("d&#39;Alba"), 풀지 않으면 키워드 정규식이 이걸 놓친다.
+    """
+    text = html.unescape(text or "")
+    text = text.replace("\r", " ").replace("\n", " ").strip()
+    text = RSS_BOILERPLATE.sub("", text)
+    text = re.sub(r"\s{2,}", " ", text).strip()
     if len(text) > limit:
         text = text[:limit] + "…"
     return text
@@ -479,6 +497,21 @@ def save_csv(items, path):
     print(f"💾 CSV 저장: {path} ({len(items)}행)")
 
 
+def reclassify(item):
+    """이미 저장된 항목을 현재 로직으로 다시 판정한다.
+
+    제목·관련도는 저장된 값만으로 다시 계산할 수 있다. 이렇게 해두면 분류를
+    고쳤을 때 과거 데이터도 같이 고쳐진다 — 다시 긁지 않으므로 비용도 안 든다.
+    """
+    item = dict(item)
+    item["title"] = item.get("title") or _title_from_url(item.get("url", ""))
+    item["body"] = clean_text(item.get("body", ""))
+    item["relevance"] = judge_relevance(
+        item.get("subreddit", ""), item.get("title", ""), item.get("body", "")
+    )
+    return item
+
+
 def save_web_json(items, path, max_items):
     """웹사이트가 읽는 JSON 을 갱신한다.
 
@@ -495,7 +528,7 @@ def save_web_json(items, path, max_items):
         except (ValueError, OSError) as e:
             print(f"   ⚠️ 기존 JSON 을 읽지 못해 새로 만듭니다: {e}")
 
-    merged = {it["id"]: it for it in existing}
+    merged = {it["id"]: reclassify(it) for it in existing}
     new_count = sum(1 for it in items if it["id"] not in merged)
     for it in items:
         merged[it["id"]] = it  # 점수/댓글수는 최신값으로 갱신
