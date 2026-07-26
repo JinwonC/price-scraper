@@ -8,11 +8,13 @@ const TOOLTIP_HALF = 58;
 const TOOLTIP_HEIGHT = 46;
 
 export type Day = {
-  /** "YYYY-MM-DD" */
+  /** "YYYY-MM-DD" (버킷이면 시작일) */
   key: string;
   /** 축에 쓰는 짧은 표기 "M/D" */
   short: string;
   count: number;
+  /** 툴팁에 보여줄 날짜 표기. 주 단위로 묶이면 "시작 ~ 끝" */
+  tip?: string;
 };
 
 /** y축 눈금이 깔끔한 수(1/2/5의 배수)로 떨어지게 올림한다. */
@@ -32,7 +34,17 @@ function niceMax(value: number): number {
  * 계열이 하나뿐이라 범례는 두지 않는다(제목이 곧 계열 이름).
  * 값은 막대마다 적지 않고 호버·포커스 툴팁과 아래 목록이 대신한다.
  */
-export default function TrendChart({ days }: { days: Day[] }) {
+export default function TrendChart({
+  days,
+  unit = "일별",
+  rangeLabel,
+}: {
+  days: Day[];
+  /** "일별" 또는 "주별" — 막대 하나가 무엇인지 제목에서 밝힌다 */
+  unit?: string;
+  /** 실제로 그려진 구간. 조용히 잘라내지 않고 명시한다 */
+  rangeLabel?: string;
+}) {
   const [active, setActive] = useState<number | null>(null);
 
   const max = niceMax(Math.max(1, ...days.map((d) => d.count)));
@@ -45,8 +57,8 @@ export default function TrendChart({ days }: { days: Day[] }) {
   return (
     <section className="card chart-card">
       <div className="chart-head">
-        <h2>일별 언급 수</h2>
-        <span className="hint">막대에 마우스를 올리면 날짜별 건수가 보입니다</span>
+        <h2>{unit} 언급 수</h2>
+        <span className="hint">{rangeLabel}</span>
       </div>
 
       <div className="plot">
@@ -76,7 +88,7 @@ export default function TrendChart({ days }: { days: Day[] }) {
                   onMouseLeave={() => setActive(null)}
                   onFocus={() => setActive(index)}
                   onBlur={() => setActive(null)}
-                  aria-label={`${day.key} ${day.count}건`}
+                  aria-label={`${day.tip ?? day.key} ${day.count}건`}
                 >
                   <span
                     className={day.count === 0 ? "bar zero" : "bar"}
@@ -108,7 +120,7 @@ export default function TrendChart({ days }: { days: Day[] }) {
                 <span className="tip-key" aria-hidden="true" />
                 {days[active].count.toLocaleString("ko-KR")}건
               </div>
-              <div className="tip-label">{days[active].key}</div>
+              <div className="tip-label">{days[active].tip ?? days[active].key}</div>
             </div>
           )}
 

@@ -48,8 +48,16 @@ function shortLabel(dayKey: string): string {
   return `${Number(month)}/${Number(day)}`;
 }
 
+/** 두 날짜 키 사이의 일수. */
+function daysBetween(from: string, to: string): number {
+  const ms = Date.parse(`${to}T00:00:00Z`) - Date.parse(`${from}T00:00:00Z`);
+  return Math.max(0, Math.round(ms / 86_400_000));
+}
+
 export default function Dashboard({ payload }: { payload: Payload }) {
-  const [period, setPeriod] = useState<PeriodId>("30");
+  // 수집은 1년치를 훑고 언급 자체가 많지 않아, 기본은 전체를 보여준다.
+  // (기본을 30일로 두면 열자마자 대부분이 가려진다)
+  const [period, setPeriod] = useState<PeriodId>("all");
   const [kind, setKind] = useState("all");
   const [relevance, setRelevance] = useState("all");
   const [subreddit, setSubreddit] = useState("all");
@@ -102,20 +110,42 @@ export default function Dashboard({ payload }: { payload: Payload }) {
     return { total: filtered.length, related, unsure: filtered.length - related, subs: subs.size };
   }, [filtered]);
 
-  const days: Day[] = useMemo(() => {
-    const span = periodDays || 90; // "전체" 는 최근 90일을 그린다
+  const chart = useMemo(() => {
     const counts = new Map<string, number>();
     for (const m of filtered) {
       const day = m.date.slice(0, 10);
       counts.set(day, (counts.get(day) ?? 0) + 1);
     }
-    const result: Day[] = [];
-    for (let i = span - 1; i >= 0; i--) {
-      const key = shiftDay(anchorDay, -i);
-      result.push({ key, short: shortLabel(key), count: counts.get(key) ?? 0 });
+
+    // "전체" 는 데이터가 실제로 걸쳐 있는 만큼 그린다. 고정 90일로 자르면
+    // 그보다 오래된 언급이 목록에는 있는데 차트에는 없어 숫자가 어긋난다.
+    let span: number = periodDays;
+    if (!span) {
+      const oldest = items.length ? items[items.length - 1].date.slice(0, 10) : anchorDay;
+      span = Math.min(Math.max(daysBetween(oldest, anchorDay) + 1, 30), 366);
     }
-    return result;
-  }, [filtered, anchorDay, periodDays]);
+
+    // 막대가 너무 많아지면 하루씩은 못 읽는다. 넉 달이 넘어가면 주 단위로 묶는다.
+    const bucketDays = span > 120 ? 7 : 1;
+    const bucketCount = Math.ceil(span / bucketDays);
+
+    const days: Day[] = [];
+    for (let b = bucketCount - 1; b >= 0; b--) {
+      const endKey = shiftDay(anchorDay, -(b * bucketDays));
+      const startKey = shiftDay(endKey, -(bucketDays - 1));
+      let count = 0;
+      for (let d = 0; d < bucketDays; d++) {
+        count += counts.get(shiftDay(endKey, -d)) ?? 0;
+      }
+      days.push({
+        key: startKey,
+        short: shortLabel(endKey),
+        count,
+        tip: bucketDays === 1 ? endKey : `${startKey} ~ ${endKey}`,
+      });
+    }
+    return { days, bucketDays, span };
+  }, [filtered, items, anchorDay, periodDays]);
 
   const isFiltered =
     kind !== "all" || relevance !== "all" || subreddit !== "all" || query.trim() !== "";
@@ -248,7 +278,11 @@ export default function Dashboard({ payload }: { payload: Payload }) {
         <Kpi label="서브레딧" value={stats.subs} sub="언급이 나온 커뮤니티 수" />
       </div>
 
-      <TrendChart days={days} />
+      <TrendChart
+        days={chart.days}
+        unit={chart.bucketDays === 7 ? "주별" : "일별"}
+        rangeLabel={`${chart.days[0]?.key ?? ""} ~ ${anchorDay}`}
+      />
 
       <div className="list-head">
         <h2>언급 목록</h2>

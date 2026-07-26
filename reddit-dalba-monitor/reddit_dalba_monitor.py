@@ -25,7 +25,7 @@ ID 는 건너뛰므로 중복이 생기지 않는다. (하루 실패해도 다�
   APIFY_TOKEN          : Apify API 토큰               (필수, 인스타 수집기와 같은 것)
   APIFY_ACTOR          : 사용할 액터                  (선택, 기본 trudax/reddit-scraper-lite)
   QUERIES              : 검색어 목록(쉼표 구분)        (선택, 기본 아래 DEFAULT_QUERIES)
-  TIME_FILTER          : 검색 기간 hour/day/week/month/year (선택, 기본 "year")
+  TIME_FILTER          : 검색 기간 hour/day/week/month/year/all (선택, 기본 "all")
   MAX_ITEMS            : 한 번에 받을 최대 결과 수      (선택, 기본 200 — 그대로 비용 상한)
   APIFY_PROXY_GROUPS   : Apify 프록시 그룹              (선택, 기본 RESIDENTIAL)
   INCLUDE_THREAD_COMMENTS : "1" 이면 언급 글의 반응 댓글까지 (선택, 기본 0)
@@ -51,9 +51,20 @@ KST = timezone(timedelta(hours=9))
 
 DEFAULT_ACTOR = "trudax/reddit-scraper-lite"
 
-# 검색어. 레딧 검색은 아포스트로피를 잘 못 다루므로 여러 형태로 던지고,
+# 검색어. 레딧 검색은 누락이 많고 아포스트로피·띄어쓰기에 따라 결과가 달라져서,
+# 표기 변형과 대표 제품명을 여러 개 던져 서로 다른 결과를 긁어모은다.
+# (검색어를 늘려도 결과 수가 상한에 못 미치면 비용은 거의 안 는다)
 # 실제 판정은 아래 KEYWORD_PATTERNS 정규식으로 다시 한 번 거른다.
-DEFAULT_QUERIES = ["dalba", "d'alba", "dalba white truffle", "달바"]
+DEFAULT_QUERIES = [
+    "dalba",
+    "d'alba",
+    "d alba",
+    "dalba piedmont",       # 공식 계정명
+    "dalba white truffle",  # 대표 라인
+    "dalba serum",
+    "dalba sunscreen",
+    "달바",
+]
 
 # 액터 요금 (trudax/reddit-scraper-lite, 무료 티어 기준 $3.40/1000건).
 # 유료 플랜은 이보다 싸므로 실제 청구액은 이 값보다 낮게 나온다.
@@ -593,7 +604,7 @@ def write_to_sheet(gc, sheet_id, tab_name, items, max_rows):
 def main():
     actor_id = _env("APIFY_ACTOR", DEFAULT_ACTOR)
     queries = _list_env("QUERIES", DEFAULT_QUERIES)
-    time_filter = _env("TIME_FILTER", "year")
+    time_filter = _env("TIME_FILTER", "all")
     max_items = _int_env("MAX_ITEMS", 200)
     include_thread_comments = _env("INCLUDE_THREAD_COMMENTS", "0") == "1"
     # 레딧은 데이터센터 IP 를 막으므로 residential 이 기본이다.
@@ -644,6 +655,12 @@ def main():
         f"(글 {posts} / 댓글 {len(items) - posts}, "
         f"관련 {relevant} / 확인필요 {len(items) - relevant})"
         + (f", 시트 신규 {added}건" if added is not None else "")
+    )
+    print(
+        f"🔍 진단: 검색어 {len(queries)}개 / 기간 {time_filter} / 상한 {max_items}건 → "
+        f"수신 {received}건 → 키워드 확인 {len(collected)}건"
+        + ("  ⚠️ 상한에 걸렸습니다. MAX_ITEMS 를 올리면 더 잡힙니다."
+           if received >= max_items else "")
     )
     print(
         f"💰 이번 실행 예상 비용 최대 약 ${cost:.2f} (결과 {received}건 × "
