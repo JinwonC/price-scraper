@@ -25,7 +25,7 @@ ID 는 건너뛰므로 중복이 생기지 않는다. (하루 실패해도 다�
   APIFY_TOKEN          : Apify API 토큰               (필수, 인스타 수집기와 같은 것)
   APIFY_ACTOR          : 사용할 액터                  (선택, 기본 trudax/reddit-scraper-lite)
   QUERIES              : 검색어 목록(쉼표 구분)        (선택, 기본 아래 DEFAULT_QUERIES)
-  TIME_FILTER          : 검색 기간 hour/day/week/month (선택, 기본 "week")
+  TIME_FILTER          : 검색 기간 hour/day/week/month/year (선택, 기본 "year")
   MAX_ITEMS            : 한 번에 받을 최대 결과 수      (선택, 기본 200 — 그대로 비용 상한)
   APIFY_PROXY_GROUPS   : Apify 프록시 그룹              (선택, 기본 RESIDENTIAL)
   INCLUDE_THREAD_COMMENTS : "1" 이면 언급 글의 반응 댓글까지 (선택, 기본 0)
@@ -69,6 +69,14 @@ KEYWORD_PATTERNS = [
 
 # 관련도 판정용. 뷰티 맥락이면 브랜드 얘기일 확률이 높다.
 # (dalba 는 이탈리아 성씨이기도 해서 축구/인명 글이 섞여 들어온다)
+#
+# 서브레딧은 이름에 뷰티 단어가 들어가면 뷰티 커뮤니티로 본다. 고정 목록만 쓰면
+# r/30PlusKoreanSkincare 처럼 변형 이름이 계속 새기 때문이다.
+BEAUTY_SUBREDDIT_PATTERN = re.compile(
+    r"(skin ?care|beauty|makeup|cosmetic|k-?beauty|sephora|fragrance|뷰티|화장품)",
+    re.IGNORECASE,
+)
+
 BEAUTY_SUBREDDITS = {
     "asianbeauty",
     "asianbeautyadvice",
@@ -92,9 +100,11 @@ BEAUTY_SUBREDDITS = {
 }
 
 BEAUTY_TERMS = re.compile(
-    r"(skin ?care|skincare|serum|sunscreen|spf|essence|toner|moisturi[sz]er|cleanser|"
-    r"ampoule|truffle|k-?beauty|korean|retinol|niacinamide|hyaluronic|sephora|olive ?young|"
-    r"routine|pores?|acne|glow|mist|spray|세럼|스킨케어|선크림|화장품|앰플)",
+    r"(skin ?care|skincare|serum|sunscreen|sunblock|spf|essence|toner|moisturi[sz]er|"
+    r"cleanser|ampoule|truffle|k-?beauty|korean|retinol|niacinamide|hyaluronic|sephora|"
+    r"olive ?young|routine|pores?|acne|glow|mist|spray|make ?up|tone[- ]?up|cushion|"
+    r"cosmetic|primer|foundation|sunscreens?|"
+    r"세럼|스킨케어|선크림|선케어|화장품|앰플|톤업|쿠션|파데|크림|로션|메이크업)",
     re.IGNORECASE,
 )
 
@@ -160,7 +170,8 @@ def matched_keywords(*texts):
 def judge_relevance(subreddit, *texts):
     """뷰티 서브레딧이거나 뷰티 단어가 같이 나오면 '관련', 아니면 '확인필요'.
     (dalba 는 이탈리아 성씨라 무관한 글이 섞이므로 버리지 않고 표시만 한다)"""
-    if (subreddit or "").lower() in BEAUTY_SUBREDDITS:
+    name = (subreddit or "")
+    if name.lower() in BEAUTY_SUBREDDITS or BEAUTY_SUBREDDIT_PATTERN.search(name):
         return "관련"
     blob = " ".join(t for t in texts if t)
     return "관련" if BEAUTY_TERMS.search(blob) else "확인필요"
@@ -203,6 +214,23 @@ def _parse_ts(value):
         except ValueError:
             return 0
     return 0
+
+
+def _title_from_url(url):
+    """레딧 링크의 슬러그에서 원글 제목을 복원한다.
+
+    액터가 댓글에 원글 제목을 안 주는 경우가 있는데, 링크에는 들어 있다.
+    .../comments/1q5gzye/whats_the_best_sunscreen_you_ever_used/nyowbdx/
+      → "Whats the best sunscreen you ever used"
+    제목은 관련도 판정에도 쓰이므로 비워두면 오분류가 늘어난다.
+    """
+    if not url or "/comments/" not in url:
+        return ""
+    parts = url.split("/comments/", 1)[1].strip("/").split("/")
+    if len(parts) < 2 or not parts[1]:
+        return ""
+    text = parts[1].replace("_", " ").strip()
+    return text[:1].upper() + text[1:] if text else ""
 
 
 def _strip_sub(name):
@@ -255,7 +283,12 @@ def comment_to_item(comment, kinds, kind_label, post):
         _first(comment, "subreddit", "communityName", default="")
     ) or (post or {}).get("subreddit", "")
     body = _first(comment, "body", "text", "comment", default="")
-    title = _first(comment, "postTitle", "linkTitle", default="") or (post or {}).get("title", "")
+    url_for_title = _first(comment, "url", "permalink", "link", default="")
+    title = (
+        _first(comment, "postTitle", "linkTitle", default="")
+        or (post or {}).get("title", "")
+        or _title_from_url(url_for_title)
+    )
     ts = _parse_ts(_first(comment, "createdAt", "created_utc", "createdUtc", "created"))
     comment_id = _first(comment, "id", "parsedId", default="")
 
@@ -527,7 +560,7 @@ def write_to_sheet(gc, sheet_id, tab_name, items, max_rows):
 def main():
     actor_id = _env("APIFY_ACTOR", DEFAULT_ACTOR)
     queries = _list_env("QUERIES", DEFAULT_QUERIES)
-    time_filter = _env("TIME_FILTER", "week")
+    time_filter = _env("TIME_FILTER", "year")
     max_items = _int_env("MAX_ITEMS", 200)
     include_thread_comments = _env("INCLUDE_THREAD_COMMENTS", "0") == "1"
     # 레딧은 데이터센터 IP 를 막으므로 residential 이 기본이다.
