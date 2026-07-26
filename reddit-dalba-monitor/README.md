@@ -47,8 +47,8 @@ Apify 는 승인이 필요 없어 바로 씁니다.
 💰 이번 실행 예상 비용 최대 약 $0.31 (결과 92건 × $3.4/1000).
 ```
 
-- 더 줄이려면: `REDDIT_MAX_ITEMS` 를 낮추거나 `REDDIT_TIME_FILTER` 를 `day` 로
-  (`day` 는 저렴하지만 하루 실패하면 그날 것을 놓칩니다)
+- 더 줄이려면: `REDDIT_MAX_ITEMS` 를 낮추거나 `REDDIT_TIME_FILTER` 를 `month`/`week` 로
+  (실제 언급량이 많지 않아 기본값 `year` 로 둬도 상한에 잘 닿지 않습니다)
 - 더 넓게 보려면: `REDDIT_MAX_ITEMS` 를 올리세요. 언급이 상한에 걸려 잘리는지는
   로그의 수신 건수로 알 수 있습니다.
 
@@ -89,8 +89,9 @@ Apify 는 승인이 필요 없어 바로 씁니다.
 | 이름 | 기본값 | 설명 |
 | --- | --- | --- |
 | `REDDIT_QUERIES` | `dalba, d'alba, dalba white truffle, 달바` | 검색어(쉼표 구분) |
-| `REDDIT_TIME_FILTER` | `week` | 검색 기간 `hour`/`day`/`week`/`month` |
+| `REDDIT_TIME_FILTER` | `year` | 검색 기간 `hour`/`day`/`week`/`month`/`year` |
 | `REDDIT_MAX_ITEMS` | `200` | 한 번에 받을 최대 결과 수 = **비용 상한** |
+| `REDDIT_APIFY_PROXY_GROUPS` | `RESIDENTIAL` | 프록시 그룹. 레딧이 데이터센터 IP 를 막으므로 바꾸지 마세요 |
 | `REDDIT_INCLUDE_THREAD_COMMENTS` | `0` | `1` 이면 언급 글의 반응 댓글까지 담음 |
 | `REDDIT_MAX_ROWS` | `5000` | 보관할 최대 항목 수 (넘으면 오래된 것부터 정리) |
 | `REDDIT_ONLY_RELEVANT` | `0` | `1` 이면 `확인필요` 는 저장 안 함 |
@@ -121,8 +122,21 @@ Secrets 는 `APIFY_TOKEN` 하나면 되고, 이미 등록돼 있습니다.
 브랜드별로 나눠 볼 수 있습니다. 다만 결과가 늘어나는 만큼 `MAX_ITEMS` 도 올려야 하고
 비용도 비례해서 늘어납니다.
 
+## 실제 수집 예시
+
+첫 실행에서 이런 것들이 잡혔습니다. 둘 다 **글 제목에는 달바가 없어** 글 검색만으로는
+못 찾았을 언급입니다.
+
+- `r/30PlusKoreanSkincare` — *"최고의 선크림이 뭐였나요"* 스레드 댓글:
+  "달바. 마녀공장. 제품이 유명하고 보통 톤업…"
+- `r/GFRIEND` — 소원 인스타 릴스 공유 글 댓글: `#Ad @dalba_piedmont … d'Alba Tone-Up`
+
 ## 참고
 
+- **프록시는 반드시 residential 이어야 합니다.** 레딧이 데이터센터 IP 를 403 으로
+  막습니다. 액터 스키마의 기본값은 웹 폼에만 채워지는 값이라 API 호출 시에는
+  코드에서 직접 넘겨야 합니다(이미 그렇게 돼 있습니다).
+- 댓글에는 원글 제목이 안 딸려오는 경우가 있어, 링크 슬러그에서 제목을 복원합니다.
 - 액터마다 응답 필드 이름이 조금씩 다르고 버전이 오르며 바뀌기도 해서, 후보 키를
   여러 개 두고 먼저 잡히는 값을 쓰도록 짜여 있습니다(`_first`). 그래도 첫 실행에서
   값이 비어 보이면 Apify 콘솔의 데이터셋에서 실제 필드 이름을 확인하고 알려주세요.
