@@ -1,36 +1,38 @@
 """
-레딧 달바(d'alba / dalba) 언급 수집기 (Reddit 공식 API → 웹사이트 데이터)
+레딧 달바(d'alba / dalba) 언급 수집기 (Apify → 웹사이트 데이터)
 
-레딧 전체에서 "d'alba", "dalba", "달바" 가 언급된 글과 댓글을 매일 모아
-한 곳에서 볼 수 있게 정리한다. 브랜드 언급은 대부분 "세럼 추천해줘" 같은
-남의 글 **댓글**에 묻혀 있기 때문에, 아래 3가지 경로를 모두 훑는다.
+레딧에서 "d'alba", "dalba", "달바" 가 언급된 글과 그 글의 댓글을 매일 모아
+한 곳에서 볼 수 있게 정리한다.
 
-  1) 글 검색   : 레딧 전체 검색(/search)에서 키워드가 들어간 글
-  2) 스레드 댓글: 1)에서 찾은 글의 댓글 (키워드 댓글 + 상위 댓글 몇 개)
-  3) 댓글 스트림: 뷰티 서브레딧들의 최신 댓글을 훑어 키워드가 있는 댓글
+  1) 글 검색   : 검색어별로 레딧 전체에서 키워드가 들어간 글을 찾는다.
+  2) 스레드 댓글: 1)에서 실제로 키워드가 확인된 글에 대해서만 댓글을 가져온다.
+                 (키워드가 들어간 댓글 전부 + 점수 높은 반응 몇 개)
+
+댓글을 2)에서만 가져오는 건 비용 때문이다. 서브레딧 전체 댓글을 훑으면 하루
+수만 건이라 월 $100 을 넘긴다. 검색으로 걸린 글만 대상으로 하면 월 $10~20 선이다.
+
+레딧 공식 API 를 쓰지 않는 이유:
+  2026년부터 Responsible Builder Policy 로 신규 API 발급이 수동 승인제가 되었고,
+  승인까지 며칠~몇 주가 걸리며 거절되는 경우도 많다. Apify 는 승인이 필요 없다.
 
 결과는 `web/data/mentions.json` 에 **최신순으로 누적**된다. 이미 수집한 글/댓글
 ID 는 건너뛰므로 중복이 생기지 않는다. (하루 실패해도 다음 날 일주일치를 다시
 훑어 메꾸는 구조) 이 파일이 커밋/푸시되면 Vercel 이 웹사이트를 자동 재배포한다.
 
 환경변수(GitHub Actions Secrets/Variables 로 주입):
-  REDDIT_CLIENT_ID     : 레딧 앱 client id            (필수)
-  REDDIT_CLIENT_SECRET : 레딧 앱 secret               (필수)
-  REDDIT_USER_AGENT    : User-Agent 문자열            (선택, 권장)
-  REDDIT_USERNAME      : 레딧 계정 ID                 (선택, 있으면 계정 인증)
-  REDDIT_PASSWORD      : 레딧 계정 비밀번호            (선택, 2단계인증 계정은 사용 불가)
+  APIFY_TOKEN          : Apify API 토큰               (필수, 인스타 수집기와 같은 것)
+  APIFY_ACTOR          : 사용할 액터                  (선택, 기본 automation-lab/reddit-scraper)
+  QUERIES              : 검색어 목록(쉼표 구분)        (선택, 기본 아래 DEFAULT_QUERIES)
+  TIME_FILTER          : 검색 기간 hour/day/week/month (선택, 기본 "week")
+  MAX_POSTS_PER_QUERY  : 검색어당 최대 글 수           (선택, 기본 50 — 비용 상한)
+  MAX_COMMENTS_PER_POST: 글당 최대 댓글 수             (선택, 기본 30 — 비용 상한)
+  TOP_COMMENTS_PER_POST: 언급 글마다 담을 반응 댓글 수  (선택, 기본 3)
   WEB_DATA_PATH        : 웹 데이터 JSON 경로          (선택, 기본 ../web/data/mentions.json)
+  MAX_ROWS             : 보관할 최대 항목 수           (선택, 기본 5000)
+  ONLY_RELEVANT        : "1" 이면 무관해 보이는 건 제외 (선택, 기본 0 = 전부 저장)
   SHEET_ID             : 구글 시트에도 쓸 때만 지정     (선택, 기본 사용 안 함)
   GOOGLE_CREDENTIALS   : 구글 서비스계정 JSON 문자열    (선택, SHEET_ID 와 함께 필요)
   OUTPUT_TAB           : 결과 탭 이름                 (선택, 기본 "레딧언급")
-  QUERIES              : 검색어 목록(쉼표 구분)        (선택, 기본 아래 DEFAULT_QUERIES)
-  TIME_FILTER          : 검색 기간 hour/day/week/month (선택, 기본 "week")
-  SCAN_SUBREDDITS      : 댓글 스트림을 훑을 서브레딧    (선택, 기본 아래 목록, "none" 이면 끔)
-  MAX_SEARCH_PAGES     : 검색어당 최대 페이지(100건/장) (선택, 기본 3)
-  MAX_COMMENT_PAGES    : 서브레딧당 최대 댓글 페이지    (선택, 기본 20)
-  TOP_COMMENTS_PER_POST: 언급 글마다 담을 상위 댓글 수  (선택, 기본 3)
-  MAX_ROWS             : 보관할 최대 항목 수           (선택, 기본 5000)
-  ONLY_RELEVANT        : "1" 이면 무관해 보이는 건 제외 (선택, 기본 0 = 전부 저장)
 """
 
 import csv
@@ -38,32 +40,22 @@ import json
 import os
 import re
 import sys
-import time
 from datetime import datetime, timedelta, timezone
 
-import requests
-
-TOKEN_URL = "https://www.reddit.com/api/v1/access_token"
-API_BASE = "https://oauth.reddit.com"
+from apify_client import ApifyClient
 
 KST = timezone(timedelta(hours=9))
+
+DEFAULT_ACTOR = "automation-lab/reddit-scraper"
 
 # 검색어. 레딧 검색은 아포스트로피를 잘 못 다루므로 여러 형태로 던지고,
 # 실제 판정은 아래 KEYWORD_PATTERNS 정규식으로 다시 한 번 거른다.
 DEFAULT_QUERIES = ["dalba", "d'alba", "dalba white truffle", "달바"]
 
-# 댓글 스트림을 훑을 뷰티 서브레딧들
-DEFAULT_SCAN_SUBREDDITS = [
-    "AsianBeauty",
-    "AsianBeautyAdvice",
-    "SkincareAddiction",
-    "SkincareAddicts",
-    "KoreanBeauty",
-    "30PlusSkinCare",
-    "Sephora",
-    "beauty",
-    "BeautyGuruChatter",
-]
+# 액터 요금 (automation-lab/reddit-scraper 기준). 실행 후 예상 비용을 찍어주기 위한 값이라
+# 실제 청구액과는 다를 수 있다. 액터를 바꾸면 이 값도 같이 바꿔야 한다.
+COST_PER_1K_POSTS = 1.15
+COST_PER_1K_COMMENTS = 0.58
 
 # "dalba", "d'alba", "d’alba", "D Alba", "달바" 를 모두 잡는다.
 # 앞뒤를 (?<![a-z0-9]) / (?![a-z0-9]) 로 막아 "albatross", "hedalbaz" 같은 건
@@ -75,17 +67,24 @@ KEYWORD_PATTERNS = [
 
 # 관련도 판정용. 뷰티 맥락이면 브랜드 얘기일 확률이 높다.
 # (dalba 는 이탈리아 성씨이기도 해서 축구/인명 글이 섞여 들어온다)
-BEAUTY_SUBREDDITS = {s.lower() for s in DEFAULT_SCAN_SUBREDDITS} | {
-    "skincare_addiction",
+BEAUTY_SUBREDDITS = {
     "asianbeauty",
+    "asianbeautyadvice",
+    "skincareaddiction",
+    "skincareaddicts",
+    "skincare_addiction",
+    "skincareaddictionuk",
     "koreanbeauty",
     "kbeauty",
     "skincarefree",
+    "30plusskincare",
+    "sephora",
+    "beauty",
+    "beautyguruchatter",
     "tretinoin",
     "makeupaddiction",
     "indianskincareaddicts",
     "ausskincare",
-    "skincareaddictionuk",
     "beautytalkph",
     "muacjdiscussion",
 }
@@ -174,149 +173,110 @@ def clean_text(text, limit=BODY_LIMIT):
 
 
 # ---------------------------------------------------------------------------
-# 레딧 API 클라이언트
+# Apify 응답 읽기
+#
+# 액터마다 필드 이름이 조금씩 다르고 버전이 올라가며 바뀌기도 한다.
+# 그래서 후보 키를 여러 개 두고 먼저 잡히는 값을 쓴다.
+# (인스타 수집기의 get_views 와 같은 방식)
 # ---------------------------------------------------------------------------
-class RedditClient:
-    """레딧 OAuth 클라이언트. 분당 100회 제한을 넘지 않도록 호출 간격을 둔다."""
+def _first(item, *keys, default=None):
+    for key in keys:
+        value = item.get(key)
+        if value not in (None, ""):
+            return value
+    return default
 
-    MIN_INTERVAL = 1.1  # 초. 분당 100회 제한(≈0.6초)보다 넉넉하게
 
-    def __init__(self, client_id, client_secret, user_agent, username=None, password=None):
-        self.user_agent = user_agent
-        self.session = requests.Session()
-        self.session.headers["User-Agent"] = user_agent
-        self._last_call = 0.0
-
-        if username and password:
-            data = {
-                "grant_type": "password",
-                "username": username,
-                "password": password,
-            }
-            mode = f"계정 인증({username})"
-        else:
-            data = {"grant_type": "client_credentials"}
-            mode = "앱 인증(client_credentials)"
-
-        resp = requests.post(
-            TOKEN_URL,
-            auth=(client_id, client_secret),
-            data=data,
-            headers={"User-Agent": user_agent},
-            timeout=30,
-        )
-        if resp.status_code != 200:
-            raise RuntimeError(
-                f"레딧 토큰 발급 실패 ({resp.status_code}): {resp.text[:200]}\n"
-                "REDDIT_CLIENT_ID / REDDIT_CLIENT_SECRET 을 확인하세요. "
-                "(레딧 앱 타입은 'script' 여야 합니다)"
-            )
-        token = resp.json().get("access_token")
-        if not token:
-            raise RuntimeError(f"레딧 토큰 응답에 access_token 이 없습니다: {resp.text[:200]}")
-        self.session.headers["Authorization"] = f"bearer {token}"
-        print(f"🔑 레딧 인증 완료 - {mode}")
-
-    def get(self, path, params=None, tries=3):
-        """API GET. 429/5xx 는 잠깐 쉬었다가 재시도하고, 끝내 실패하면 None."""
-        params = dict(params or {})
-        params["raw_json"] = 1
-
-        for attempt in range(1, tries + 1):
-            wait = self.MIN_INTERVAL - (time.monotonic() - self._last_call)
-            if wait > 0:
-                time.sleep(wait)
-
-            try:
-                resp = self.session.get(
-                    f"{API_BASE}{path}", params=params, timeout=30
-                )
-            except requests.RequestException as e:  # 네트워크 오류
-                print(f"   ⚠️ 요청 실패({attempt}/{tries}) {path}: {e}")
-                time.sleep(2 * attempt)
-                continue
-            finally:
-                self._last_call = time.monotonic()
-
-            if resp.status_code == 200:
-                self._respect_ratelimit(resp)
-                try:
-                    return resp.json()
-                except ValueError:
-                    print(f"   ⚠️ JSON 파싱 실패: {path}")
-                    return None
-
-            if resp.status_code in (429, 500, 502, 503, 504):
-                retry_after = resp.headers.get("retry-after")
-                delay = float(retry_after) if retry_after else 5 * attempt
-                print(f"   ⏳ {resp.status_code} 응답, {delay:.0f}초 후 재시도 ({path})")
-                time.sleep(delay)
-                continue
-
-            print(f"   ⚠️ {resp.status_code} 응답으로 건너뜀: {path} {resp.text[:120]}")
-            return None
-
-        return None
-
-    @staticmethod
-    def _respect_ratelimit(resp):
-        """남은 호출 수가 얼마 없으면 리셋될 때까지 기다린다."""
+def _parse_ts(value):
+    """epoch 초 또는 ISO 문자열을 epoch 초(int)로 바꾼다. 못 읽으면 0."""
+    if isinstance(value, (int, float)):
+        # 밀리초로 오는 액터도 있다
+        return int(value / 1000) if value > 10_000_000_000 else int(value)
+    if isinstance(value, str):
+        text = value.strip()
+        if text.isdigit():
+            return _parse_ts(int(text))
         try:
-            remaining = float(resp.headers.get("x-ratelimit-remaining", "100"))
-            reset = float(resp.headers.get("x-ratelimit-reset", "0"))
+            return int(datetime.fromisoformat(text.replace("Z", "+00:00")).timestamp())
         except ValueError:
-            return
-        if remaining < 5 and reset > 0:
-            print(f"   ⏳ 레딧 호출 한도 임박, {reset:.0f}초 대기")
-            time.sleep(min(reset + 1, 90))
+            return 0
+    return 0
 
 
-# ---------------------------------------------------------------------------
-# 수집
-# ---------------------------------------------------------------------------
-def _post_item(post, kinds):
-    """검색으로 찾은 글 1건을 표준 항목(dict)으로 변환."""
-    subreddit = post.get("subreddit") or ""
-    title = post.get("title") or ""
-    body = post.get("selftext") or ""
-    ts = int(post.get("created_utc") or 0)
+def _strip_sub(name):
+    """'r/AsianBeauty' / '/r/AsianBeauty' → 'AsianBeauty'"""
+    return re.sub(r"^/?r/", "", (name or "").strip(), flags=re.IGNORECASE)
+
+
+def is_comment(item):
+    """댓글이면 True. dataType 이 있으면 그걸 믿고, 없으면 모양으로 판단한다."""
+    kind = (_first(item, "dataType", "type", default="") or "").lower()
+    if kind in {"comment", "t1"}:
+        return True
+    if kind in {"post", "submission", "t3"}:
+        return False
+    # 제목이 없고 본문 + 소속 글 ID 가 있으면 댓글로 본다
+    return not _first(item, "title") and bool(
+        _first(item, "postId", "parentId", "postTitle", "linkId")
+    )
+
+
+def post_to_item(post, kinds):
+    """Apify 글 아이템 → 표준 항목(dict)"""
+    subreddit = _strip_sub(
+        _first(post, "subreddit", "communityName", "parsedCommunityName", default="")
+    )
+    title = _first(post, "title", default="")
+    body = _first(post, "selfText", "selftext", "body", "text", default="")
+    ts = _parse_ts(_first(post, "createdAt", "created_utc", "createdUtc", "created"))
+    post_id = _first(post, "id", "parsedId", "postId", default="")
     return {
-        "id": post.get("name") or f"t3_{post.get('id')}",
+        "id": f"t3_{post_id}",
         "ts": ts,
         "date": datetime.fromtimestamp(ts, tz=timezone.utc).astimezone(KST).strftime("%Y-%m-%d %H:%M"),
         "kind": "포스트",
         "subreddit": subreddit,
         "title": clean_text(title, 300),
         "body": clean_text(body),
-        "author": post.get("author") or "",
-        "score": post.get("score") or 0,
-        "comments": post.get("num_comments") or 0,
+        "author": _first(post, "author", "username", default=""),
+        "score": _first(post, "score", "upVotes", "ups", default=0),
+        "comments": _first(post, "numComments", "numberOfComments", "commentCount", default=0),
         "relevance": judge_relevance(subreddit, title, body),
         "keywords": kinds,
-        "url": f"https://www.reddit.com{post.get('permalink') or ''}",
+        "url": _first(post, "url", "link", "permalink", default=""),
     }
 
 
-def _comment_item(comment, kinds, kind_label, post_title=""):
-    """댓글 1건을 표준 항목(dict)으로 변환."""
-    subreddit = comment.get("subreddit") or ""
-    body = comment.get("body") or ""
-    title = post_title or comment.get("link_title") or ""
-    ts = int(comment.get("created_utc") or 0)
+def comment_to_item(comment, kinds, kind_label, post):
+    """Apify 댓글 아이템 → 표준 항목(dict). post 는 댓글이 달린 글(없으면 None)."""
+    subreddit = _strip_sub(
+        _first(comment, "subreddit", "communityName", default="")
+    ) or (post or {}).get("subreddit", "")
+    body = _first(comment, "body", "text", "comment", default="")
+    title = _first(comment, "postTitle", "linkTitle", default="") or (post or {}).get("title", "")
+    ts = _parse_ts(_first(comment, "createdAt", "created_utc", "createdUtc", "created"))
+    comment_id = _first(comment, "id", "parsedId", default="")
+
+    url = _first(comment, "url", "permalink", "link", default="")
+    if not url:
+        # 액터가 댓글 링크를 안 주면 글 주소 + 댓글 ID 로 만든다
+        post_url = (post or {}).get("url", "")
+        url = f"{post_url.rstrip('/')}/{comment_id}/" if post_url else ""
+
     return {
-        "id": comment.get("name") or f"t1_{comment.get('id')}",
+        "id": f"t1_{comment_id}",
         "ts": ts,
         "date": datetime.fromtimestamp(ts, tz=timezone.utc).astimezone(KST).strftime("%Y-%m-%d %H:%M"),
         "kind": kind_label,
         "subreddit": subreddit,
         "title": clean_text(title, 300),
         "body": clean_text(body),
-        "author": comment.get("author") or "",
-        "score": comment.get("score") or 0,
+        "author": _first(comment, "author", "username", default=""),
+        "score": _first(comment, "score", "upVotes", "ups", default=0),
         "comments": "",
         "relevance": judge_relevance(subreddit, title, body),
         "keywords": kinds,
-        "url": f"https://www.reddit.com{comment.get('permalink') or ''}",
+        "url": url,
     }
 
 
@@ -338,151 +298,161 @@ def to_row(item):
     ]
 
 
-def search_posts(client, queries, time_filter, max_pages):
-    """레딧 전체 검색으로 키워드가 들어간 글을 모은다. {ID: (item, post)}"""
-    found = {}
-    for query in queries:
-        print(f"🔎 글 검색: '{query}' (최근 {time_filter})")
-        after = None
-        page = 0
-        while page < max_pages:
-            page += 1
-            data = client.get(
-                "/search",
-                {
-                    "q": query,
-                    "sort": "new",
-                    "t": time_filter,
-                    "limit": 100,
-                    "type": "link",
-                    "include_over_18": "on",
-                    "after": after,
-                },
-            )
-            children = ((data or {}).get("data") or {}).get("children") or []
-            if not children:
-                break
-
-            for child in children:
-                post = child.get("data") or {}
-                post_id = post.get("name") or f"t3_{post.get('id')}"
-                if post_id in found:
-                    continue
-                # 레딧 검색은 느슨해서 무관한 글도 섞여 온다. 제목/본문에
-                # 키워드가 실제로 있는 것만 남긴다.
-                kinds = matched_keywords(post.get("title"), post.get("selftext"))
-                if not kinds:
-                    continue
-                found[post_id] = (_post_item(post, kinds), post)
-
-            after = ((data or {}).get("data") or {}).get("after")
-            if not after:
-                break
-        print(f"   누적 {len(found)}건")
-    return found
-
-
-def fetch_thread_comments(client, posts, top_n):
-    """언급된 글의 댓글을 가져온다.
-    - 키워드가 들어간 댓글은 전부
-    - 나머지는 점수 높은 순 top_n 개 (반응을 같이 보기 위함)
-    """
-    items = {}
-    for post_id, (_item, post) in posts.items():
-        pid = post.get("id")
-        if not pid:
-            continue
-        data = client.get(
-            f"/comments/{pid}", {"limit": 100, "depth": 3, "sort": "top"}
+# ---------------------------------------------------------------------------
+# Apify 수집
+# ---------------------------------------------------------------------------
+def build_apify_client():
+    token = _env("APIFY_TOKEN")
+    if not token:
+        raise ValueError(
+            "APIFY_TOKEN 환경변수가 비어 있습니다. "
+            "인스타 수집기에 쓰는 것과 같은 Apify 토큰을 Secret 으로 주입하세요."
         )
-        if not isinstance(data, list) or len(data) < 2:
-            continue
+    return ApifyClient(token)
 
-        comments = []
-        for child in _walk_comments((data[1].get("data") or {}).get("children") or []):
-            comments.append(child)
 
-        title = post.get("title") or ""
-        matched, others = [], []
-        for c in comments:
-            kinds = matched_keywords(c.get("body"))
-            (matched if kinds else others).append((c, kinds))
-
-        for c, kinds in matched:
-            cid = c.get("name") or f"t1_{c.get('id')}"
-            items[cid] = _comment_item(c, kinds, "댓글(언급)", title)
-
-        others.sort(key=lambda x: x[0].get("score") or 0, reverse=True)
-        for c, _kinds in others[:top_n]:
-            cid = c.get("name") or f"t1_{c.get('id')}"
-            if cid in items:
+def _run_dataset_id(run):
+    """apify-client 버전에 따라 run 이 dict 또는 객체로 온다. 둘 다에서 꺼낸다."""
+    if isinstance(run, dict):
+        return run.get("defaultDatasetId") or run.get("default_dataset_id")
+    for attr in ("default_dataset_id", "defaultDatasetId"):
+        value = getattr(run, attr, None)
+        if value:
+            return value
+    for dumper in ("model_dump", "dict"):
+        fn = getattr(run, dumper, None)
+        if callable(fn):
+            try:
+                data = fn()
+            except TypeError:
                 continue
-            items[cid] = _comment_item(c, ["(스레드 반응)"], "댓글(반응)", title)
+            if isinstance(data, dict):
+                return data.get("defaultDatasetId") or data.get("default_dataset_id")
+    return None
 
-    print(f"💬 언급 글의 댓글 {len(items)}건 수집")
+
+def _run_actor(client, actor_id, run_input, label):
+    """액터를 한 번 실행하고 결과 아이템 리스트를 돌려준다. 실패해도 죽지 않는다."""
+    print(f"🚀 {label}")
+    try:
+        run = client.actor(actor_id).call(run_input=run_input)
+    except Exception as e:  # noqa: BLE001 — 액터 오류로 전체가 멈추지 않게 한다
+        print(f"   ⚠️ 액터 실행 실패: {e}")
+        return []
+
+    dataset_id = _run_dataset_id(run)
+    if not dataset_id:
+        print(f"   ⚠️ 데이터셋 ID 를 찾지 못했습니다: {run!r}")
+        return []
+
+    items = list(client.dataset(dataset_id).iterate_items())
+    print(f"   아이템 {len(items)}개 수신")
     return items
 
 
-def _walk_comments(children):
-    """댓글 트리를 평탄화한다. 'more' 자리표시자는 건너뛴다."""
-    for child in children:
-        if child.get("kind") != "t1":
-            continue
-        data = child.get("data") or {}
-        yield data
-        replies = data.get("replies")
-        if isinstance(replies, dict):
-            yield from _walk_comments((replies.get("data") or {}).get("children") or [])
+def search_posts(client, actor_id, queries, time_filter, max_posts):
+    """검색어별로 글을 모은다. 댓글은 여기서 가져오지 않는다(비용 절감).
 
+    반환: ({ID: (item, raw_post)}, 스크랩한 글 수)
+    """
+    found = {}
+    scraped = 0
 
-def scan_subreddit_comments(client, subreddits, max_pages, cutoff):
-    """뷰티 서브레딧의 최신 댓글 스트림을 훑어 키워드가 있는 댓글만 남긴다.
-    브랜드 언급 대부분이 남의 글 댓글에 있기 때문에 이 경로가 핵심이다."""
-    items = {}
-    for sub in subreddits:
-        after = None
-        page = 0
-        hits = 0
-        oldest = None
-        while page < max_pages:
-            page += 1
-            data = client.get(
-                f"/r/{sub}/comments", {"limit": 100, "after": after}
+    for query in queries:
+        items = _run_actor(
+            client,
+            actor_id,
+            {
+                "searchQuery": query,
+                "sort": "new",
+                "timeFilter": time_filter,
+                "maxPostsPerSource": max_posts,
+                "maxResults": max_posts,
+                "includeComments": False,
+            },
+            f"글 검색: '{query}' (최근 {time_filter}, 최대 {max_posts}건)",
+        )
+        scraped += len(items)
+
+        for raw in items:
+            if is_comment(raw):
+                continue
+            # 검색은 느슨해서 무관한 글도 섞여 온다. 제목/본문에 키워드가
+            # 실제로 있는 것만 남긴다.
+            kinds = matched_keywords(
+                _first(raw, "title"), _first(raw, "selfText", "selftext", "body")
             )
-            children = ((data or {}).get("data") or {}).get("children") or []
-            if not children:
-                break
+            if not kinds:
+                continue
+            item = post_to_item(raw, kinds)
+            if item["id"] == "t3_":  # ID 를 못 읽은 항목은 버린다
+                continue
+            found.setdefault(item["id"], (item, raw))
 
-            reached_cutoff = False
-            for child in children:
-                c = child.get("data") or {}
-                created = c.get("created_utc") or 0
-                oldest = created
-                if created and created < cutoff:
-                    reached_cutoff = True
-                    continue
-                kinds = matched_keywords(c.get("body"))
-                if not kinds:
-                    continue
-                cid = c.get("name") or f"t1_{c.get('id')}"
-                if cid in items:
-                    continue
-                items[cid] = _comment_item(c, kinds, "댓글(발견)")
-                hits += 1
+        print(f"   누적 {len(found)}건")
 
-            if reached_cutoff:
-                break
-            after = ((data or {}).get("data") or {}).get("after")
-            if not after:
-                break
+    return found, scraped
 
-        span = ""
-        if oldest:
-            age_h = (time.time() - oldest) / 3600
-            span = f", 최근 {age_h:.0f}시간 훑음"
-        print(f"   r/{sub}: {hits}건 (페이지 {page}{span})")
-    print(f"💬 서브레딧 댓글 스트림에서 {len(items)}건 발견")
-    return items
+
+def fetch_thread_comments(client, actor_id, posts, max_comments, top_n):
+    """언급된 글의 댓글을 가져온다. 키워드가 들어간 댓글은 전부,
+    나머지는 점수 높은 순 top_n 개(반응을 같이 보기 위함).
+
+    반환: ({ID: item}, 스크랩한 댓글 수)
+    """
+    urls = [item["url"] for item, _raw in posts.values() if item.get("url")]
+    if not urls:
+        return {}, 0
+
+    items = _run_actor(
+        client,
+        actor_id,
+        {
+            "urls": urls,
+            "postUrls": urls,
+            "includeComments": True,
+            "maxCommentsPerPost": max_comments,
+            "maxResults": len(urls) * max_comments,
+        },
+        f"댓글 수집: 글 {len(urls)}개 (글당 최대 {max_comments}건)",
+    )
+
+    # 어느 글의 댓글인지 이어붙이기 위한 조회표
+    posts_by_id = {}
+    for item, raw in posts.values():
+        posts_by_id[item["id"].removeprefix("t3_")] = item
+
+    grouped = {}
+    scraped = 0
+    for raw in items:
+        if not is_comment(raw):
+            continue
+        scraped += 1
+        post_id = str(_first(raw, "postId", "parentPostId", "linkId", default="") or "")
+        post_id = re.sub(r"^t3_", "", post_id)
+        grouped.setdefault(post_id, []).append(raw)
+
+    result = {}
+    for post_id, raws in grouped.items():
+        post = posts_by_id.get(post_id)
+        matched, others = [], []
+        for raw in raws:
+            kinds = matched_keywords(_first(raw, "body", "text", "comment"))
+            (matched if kinds else others).append((raw, kinds))
+
+        for raw, kinds in matched:
+            item = comment_to_item(raw, kinds, "댓글(언급)", post)
+            if item["id"] != "t1_":
+                result[item["id"]] = item
+
+        others.sort(key=lambda pair: _first(pair[0], "score", "upVotes", default=0) or 0, reverse=True)
+        for raw, _kinds in others[:top_n]:
+            item = comment_to_item(raw, ["(스레드 반응)"], "댓글(반응)", post)
+            if item["id"] != "t1_" and item["id"] not in result:
+                result[item["id"]] = item
+
+    print(f"💬 댓글 {len(result)}건 정리 (수신 {scraped}건)")
+    return result, scraped
 
 
 # ---------------------------------------------------------------------------
@@ -576,71 +546,48 @@ def write_to_sheet(gc, sheet_id, tab_name, items, max_rows):
 # 메인
 # ---------------------------------------------------------------------------
 def main():
-    client_id = _env("REDDIT_CLIENT_ID")
-    client_secret = _env("REDDIT_CLIENT_SECRET")
-    if not client_id or not client_secret:
-        raise ValueError(
-            "REDDIT_CLIENT_ID / REDDIT_CLIENT_SECRET 이 비어 있습니다. "
-            "https://www.reddit.com/prefs/apps 에서 'script' 앱을 만들고 "
-            "GitHub Secrets 에 등록하세요. (README 참고)"
-        )
-
-    user_agent = _env(
-        "REDDIT_USER_AGENT", "script:dalba-reddit-monitor:1.0 (by /u/dalba_monitor)"
-    )
+    actor_id = _env("APIFY_ACTOR", DEFAULT_ACTOR)
     queries = _list_env("QUERIES", DEFAULT_QUERIES)
     time_filter = _env("TIME_FILTER", "week")
-    subreddits = _list_env("SCAN_SUBREDDITS", DEFAULT_SCAN_SUBREDDITS)
-    max_search_pages = _int_env("MAX_SEARCH_PAGES", 3)
-    max_comment_pages = _int_env("MAX_COMMENT_PAGES", 20)
+    max_posts = _int_env("MAX_POSTS_PER_QUERY", 50)
+    max_comments = _int_env("MAX_COMMENTS_PER_POST", 30)
     top_comments = _int_env("TOP_COMMENTS_PER_POST", 3)
     max_rows = _int_env("MAX_ROWS", 5000)
     only_relevant = _env("ONLY_RELEVANT", "0") == "1"
 
-    client = RedditClient(
-        client_id,
-        client_secret,
-        user_agent,
-        _env("REDDIT_USERNAME"),
-        _env("REDDIT_PASSWORD"),
-    )
+    if not queries:
+        raise ValueError("QUERIES 가 비어 있습니다. 검색어를 최소 하나는 지정하세요.")
+
+    client = build_apify_client()
+    print(f"🎬 액터: {actor_id}")
 
     # 1) 글 검색
-    posts = search_posts(client, queries, time_filter, max_search_pages)
-    print(f"📝 언급된 글 {len(posts)}건")
+    posts, posts_scraped = search_posts(client, actor_id, queries, time_filter, max_posts)
+    print(f"📝 키워드가 확인된 글 {len(posts)}건")
 
-    # 2) 그 글들의 댓글
-    comments = {}
+    # 2) 그 글들의 댓글 (검색으로 걸린 글만 → 비용 통제)
+    comments, comments_scraped = ({}, 0)
     if posts:
-        comments.update(fetch_thread_comments(client, posts, top_comments))
-
-    # 3) 뷰티 서브레딧 최신 댓글 스트림
-    if subreddits:
-        window_days = {"hour": 1, "day": 2, "week": 8, "month": 31}.get(time_filter, 8)
-        cutoff = time.time() - window_days * 86400
-        print(f"🔎 서브레딧 댓글 스캔: {len(subreddits)}개 (최근 {window_days}일)")
-        comments.update(
-            scan_subreddit_comments(client, subreddits, max_comment_pages, cutoff)
+        comments, comments_scraped = fetch_thread_comments(
+            client, actor_id, posts, max_comments, top_comments
         )
 
-    items = [item for item, _post in posts.values()] + list(comments.values())
+    items = [item for item, _raw in posts.values()] + list(comments.values())
     if only_relevant:
         before = len(items)
         items = [it for it in items if it["relevance"] == "관련"]
         print(f"🧹 관련도 필터: {before} → {len(items)}건")
 
-    # 최신순 정렬
     items.sort(key=lambda it: it.get("ts") or 0, reverse=True)
 
     if not items:
-        print("😶 이번 실행에서 새로 찾은 언급이 없습니다.")
+        print("😶 이번 실행에서 찾은 언급이 없습니다.")
 
     stamp = datetime.now(KST).strftime("%Y-%m-%d")
     save_csv(items, os.path.join("output", f"reddit_dalba_{stamp}.csv"))
 
     # 웹사이트용 JSON (기본 출력). 커밋되면 Vercel 이 자동 배포한다.
-    web_path = _env("WEB_DATA_PATH", DEFAULT_WEB_DATA)
-    save_web_json(items, web_path, max_rows)
+    save_web_json(items, _env("WEB_DATA_PATH", DEFAULT_WEB_DATA), max_rows)
 
     # 구글 시트는 선택 사항. SHEET_ID + GOOGLE_CREDENTIALS 가 있을 때만 기록한다.
     sheet_id = _env("SHEET_ID")
@@ -651,9 +598,18 @@ def main():
         added = write_to_sheet(gc, sheet_id, _env("OUTPUT_TAB", "레딧언급"), items, max_rows)
 
     relevant = sum(1 for it in items if it["relevance"] == "관련")
+    cost = (
+        posts_scraped / 1000 * COST_PER_1K_POSTS
+        + comments_scraped / 1000 * COST_PER_1K_COMMENTS
+    )
     print(
         f"🎉 완료! 수집 {len(items)}건 (관련 {relevant} / 확인필요 {len(items) - relevant})"
         + (f", 시트 신규 {added}건" if added is not None else "")
+    )
+    print(
+        f"💰 이번 실행 예상 비용 약 ${cost:.2f} "
+        f"(글 {posts_scraped}건 + 댓글 {comments_scraped}건). "
+        "정확한 금액은 Apify 콘솔에서 확인하세요."
     )
 
 

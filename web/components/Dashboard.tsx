@@ -137,8 +137,8 @@ export default function Dashboard({ payload }: { payload: Payload }) {
           <p>
             GitHub 리포지토리의 <strong>Actions</strong> 탭에서{" "}
             <em>Reddit Dalba Monitor</em> 를 한 번 실행하면 이 화면이 채워집니다.
-            레딧 API 키(<code>REDDIT_CLIENT_ID</code>, <code>REDDIT_CLIENT_SECRET</code>)를
-            먼저 등록해 주세요.
+            수집에는 이미 등록돼 있는 <code>APIFY_TOKEN</code> 을 그대로 쓰므로
+            따로 준비할 키는 없습니다.
           </p>
         </div>
       </main>

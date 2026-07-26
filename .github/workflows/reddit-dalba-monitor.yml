@@ -34,22 +34,18 @@ jobs:
       - name: 레딧 언급 수집
         working-directory: reddit-dalba-monitor
         env:
-          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
-          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
-          REDDIT_USER_AGENT: ${{ vars.REDDIT_USER_AGENT }}
-          # 선택: 계정 인증이 필요할 때만 (2단계인증 계정은 사용 불가)
-          REDDIT_USERNAME: ${{ secrets.REDDIT_USERNAME }}
-          REDDIT_PASSWORD: ${{ secrets.REDDIT_PASSWORD }}
+          # 인스타 릴스 수집기와 같은 토큰을 그대로 쓴다(이미 등록돼 있음).
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
           # 선택: 구글 시트에도 같이 남기고 싶을 때만 두 개를 모두 설정
           SHEET_ID: ${{ vars.REDDIT_SHEET_ID }}
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
           # 선택값: 필요할 때만 리포지토리 Variables 에 추가
+          APIFY_ACTOR: ${{ vars.REDDIT_APIFY_ACTOR }}
           OUTPUT_TAB: ${{ vars.REDDIT_OUTPUT_TAB }}
           QUERIES: ${{ vars.REDDIT_QUERIES }}
           TIME_FILTER: ${{ vars.REDDIT_TIME_FILTER }}
-          SCAN_SUBREDDITS: ${{ vars.REDDIT_SCAN_SUBREDDITS }}
-          MAX_SEARCH_PAGES: ${{ vars.REDDIT_MAX_SEARCH_PAGES }}
-          MAX_COMMENT_PAGES: ${{ vars.REDDIT_MAX_COMMENT_PAGES }}
+          MAX_POSTS_PER_QUERY: ${{ vars.REDDIT_MAX_POSTS_PER_QUERY }}
+          MAX_COMMENTS_PER_POST: ${{ vars.REDDIT_MAX_COMMENTS_PER_POST }}
           TOP_COMMENTS_PER_POST: ${{ vars.REDDIT_TOP_COMMENTS_PER_POST }}
           MAX_ROWS: ${{ vars.REDDIT_MAX_ROWS }}
           ONLY_RELEVANT: ${{ vars.REDDIT_ONLY_RELEVANT }}
