@@ -6,7 +6,7 @@
 ## 어떻게 굴러가나
 
 ```
-GitHub Actions (매일 9시, 시간 제한 없음)
+GitHub Actions (현재 수동 실행만 — 자동 스케줄 중단됨)
    └─ Apify 로 레딧 수집 (몇 분)
         └─ web/data/mentions.json 갱신 → 커밋 → 푸시
              └─ Vercel 이 감지해서 자동 재배포

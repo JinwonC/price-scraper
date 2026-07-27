@@ -1,9 +1,15 @@
 name: Reddit Dalba Monitor
 
 on:
-  schedule:
-    # 매일 00:00 UTC = 한국시간 오전 9시
-    - cron: '0 0 * * *'
+  # 자동 스케줄 중단됨 (2026-07-27, 사용자 요청).
+  #
+  # 이유: 수집이 원인 불명으로 0건이 되는 상태라, 자동으로 계속 돌면 Apify
+  #       크레딧(특히 residential 프록시 사용량)만 소모된다. 원인을 확인하기 전까지
+  #       수동 실행만 한다.
+  #
+  # 다시 켜려면 아래 두 줄의 주석을 풀면 된다. (매일 한국시간 오전 9시)
+  #   schedule:
+  #     - cron: '0 0 * * *'
   workflow_dispatch:
 
 # 수집 결과(web/data/mentions.json)를 리포지토리에 커밋해야 하므로 쓰기 권한이 필요하다.

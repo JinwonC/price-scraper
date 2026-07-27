@@ -103,8 +103,13 @@ Secrets 는 `APIFY_TOKEN` 하나면 되고, 이미 등록돼 있습니다.
 
 ## 실행
 
-- **자동**: 매일 한국시간 **오전 9시** (`.github/workflows/reddit-dalba-monitor.yml`)
-- **수동**: Actions 탭 → *Reddit Dalba Monitor* → **Run workflow**
+> ⚠️ **자동 실행은 현재 꺼져 있습니다 (2026-07-27).**
+> 수집이 원인 불명으로 0건이 되는 상태라, 자동으로 계속 돌면 Apify 크레딧
+> (특히 residential 프록시 사용량)만 소모됩니다. 원인을 확인한 뒤 다시 켜세요.
+> 다시 켜려면 `.github/workflows/reddit-dalba-monitor.yml` 의 `schedule` 주석을
+> 풀면 됩니다.
+
+- **수동**: Actions 탭 → *Reddit Dalba Monitor* → **Run workflow** (1회당 최대 $0.68)
 - **로컬 테스트**:
   ```bash
   cd reddit-dalba-monitor
