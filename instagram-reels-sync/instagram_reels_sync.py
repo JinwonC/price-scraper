@@ -382,6 +382,8 @@ def main():
     results_limit = _int_env("RESULTS_LIMIT", 100)
     outperform_ratio = _float_env("OUTPERFORM_RATIO", 2.0)
     actor_id = _env("APIFY_ACTOR", DEFAULT_ACTOR)
+    # 기본: 결과를 날짜 붙인 새 탭에 저장(기존 탭 보존). "0"이면 고정 탭에 덮어쓰기.
+    dated_tabs = _env("DATED_TABS", "1") not in ("0", "false", "False", "no")
 
     print("🔐 구글 시트 인증 중...")
     gc = build_gspread_client()
@@ -402,7 +404,16 @@ def main():
 
     detail_rows, summary_rows = analyze(handles, reels_by_handle, outperform_ratio)
 
-    stamp = datetime.now(timezone.utc).astimezone().strftime("%Y-%m-%d %H:%M")
+    # 한국 시간 기준 날짜/시각 (GitHub Actions 러너는 UTC 이므로 +9h 보정)
+    now_kst = datetime.now(timezone.utc) + timedelta(hours=9)
+    stamp = now_kst.strftime("%Y-%m-%d %H:%M")
+    date_suffix = now_kst.strftime("%Y-%m-%d")
+
+    # 날짜 붙인 새 탭에 저장(기존 탭 보존). 같은 날 재실행 시 그 날짜 탭만 갱신.
+    if dated_tabs:
+        summary_tab = f"{summary_tab}_{date_suffix}"
+        output_tab = f"{output_tab}_{date_suffix}"
+
     detail_header = [
         f"handle (업데이트 {stamp})",
         "릴스URL",
