@@ -36,4 +36,5 @@ jobs:
           RESULTS_LIMIT: ${{ vars.IG_RESULTS_LIMIT }}
           OUTPERFORM_RATIO: ${{ vars.IG_OUTPERFORM_RATIO }}
           APIFY_ACTOR: ${{ vars.IG_APIFY_ACTOR }}
+          DATED_TABS: ${{ vars.IG_DATED_TABS }}
         run: python instagram_reels_sync.py
