@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>오늘 — 도현 PM 대장</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F0F1EC; --paper-deep:#E4E5DD; --ink:#151C19; --ink-soft:#6B756E; --line:#D6D7CB;
+    --berry:#93223F; --berry-soft:#93223F12; --sage:#3E6259; --sage-soft:#3E625912;
+    --gold:#A9791F; --gold-soft:#A9791F16; --card:#FAFAF6;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:720px;margin:0 auto;padding:30px 20px 90px;}
+
+  header{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;}
+  .brand{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--berry);}
+  header .date{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--ink-soft);margin-top:2px;}
+  .clockout{display:flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:12px;}
+  .clockout input{border:1px solid var(--line);border-radius:20px;padding:5px 10px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--berry);font-weight:700;background:var(--card);}
+  #clockoutStatus{text-align:right;font-size:11px;color:var(--ink-soft);margin-bottom:16px;}
+
+  .tab-switch{display:flex;gap:6px;margin-bottom:20px;background:var(--paper-deep);padding:4px;border-radius:10px;}
+  .tab-btn{flex:1;background:none;border:none;padding:9px 0;border-radius:7px;font-size:13.5px;font-weight:700;color:var(--ink-soft);cursor:pointer;font-family:'Inter',sans-serif;}
+  .tab-btn.active{background:var(--card);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.06);}
+
+  .save-bar{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+  .save-btn{background:var(--sage);color:#fff;border:none;border-radius:8px;padding:9px 14px;font-size:12.5px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;}
+  .save-btn:hover{opacity:.92;}
+  .save-status{font-size:11.5px;color:var(--sage);font-weight:600;flex:1;}
+
+  .focus-strip{display:flex;flex-direction:column;gap:6px;margin-bottom:18px;}
+  .focus-row{display:flex;align-items:center;gap:10px;background:var(--ink);color:var(--paper);padding:11px 14px;border-radius:8px;}
+  .focus-row .fn{font-family:'JetBrains Mono',monospace;font-size:11px;color:#E7B7C1;flex-shrink:0;}
+  .focus-row .ft{font-size:13px;font-weight:600;flex:1;background:none;border:none;color:var(--paper);font-family:'Inter',sans-serif;padding:2px 4px;border-radius:4px;}
+  .focus-row .ft:focus{outline:1px solid #E7B7C1;background:rgba(255,255,255,.08);}
+  .focus-row .fx{font-family:'JetBrains Mono',monospace;font-size:11px;color:#C8CBC1;flex-shrink:0;background:none;border:none;text-align:right;width:90px;padding:2px 4px;border-radius:4px;}
+  .focus-row .fx:focus{outline:1px solid #E7B7C1;background:rgba(255,255,255,.08);}
+
+  .stat-head{display:flex;justify-content:space-between;align-items:baseline;margin:20px 0 8px;}
+  .stat-head h2{font-family:'Fraunces',serif;font-size:16px;margin:0;}
+  .stat-head .sync{font-size:10.5px;color:var(--ink-soft);display:flex;align-items:center;gap:6px;}
+  .stat-head .sync button{background:none;border:1px solid var(--line);border-radius:20px;padding:3px 9px;font-size:10.5px;color:var(--ink-soft);cursor:pointer;}
+  .stat-head .sync button:hover{color:var(--berry);border-color:var(--berry);}
+  .stat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:8px;}
+  .stat-tile{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 10px 9px;cursor:pointer;position:relative;}
+  .stat-tile.synced{border-color:var(--sage);}
+  .stat-tile .sync-dot{position:absolute;top:8px;right:8px;width:6px;height:6px;border-radius:50%;background:var(--sage);display:none;}
+  .stat-tile.synced .sync-dot{display:block;}
+  .stat-tile .sl{font-size:10px;color:var(--ink-soft);font-weight:600;}
+  .stat-tile .sv{font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;color:var(--berry);margin-top:3px;}
+  .stat-tile .sv small{font-family:'Inter',sans-serif;font-size:9.5px;color:var(--ink-soft);font-weight:500;}
+  .stat-bar{height:4px;border-radius:3px;background:var(--paper-deep);margin-top:6px;overflow:hidden;}
+  .stat-bar-fill{height:100%;background:var(--sage);}
+  .stat-edit{display:none;margin-top:7px;gap:4px;flex-direction:column;}
+  .stat-tile.editing .stat-edit{display:flex;}
+  .stat-tile.editing .sv{display:none;}
+  .stat-edit input{width:100%;font-family:'JetBrains Mono',monospace;font-size:12px;padding:4px 6px;border:1px solid var(--line);border-radius:5px;}
+  .stat-edit-row{display:flex;gap:4px;}
+  .inv-list{display:none;margin-top:8px;border-top:1px solid var(--line);padding-top:8px;}
+  .stat-tile.editing .inv-list{display:flex;flex-direction:column;gap:4px;}
+  .inv-row{display:flex;gap:4px;align-items:center;}
+  .inv-row input[type=text]{flex:1;font-size:11px;padding:3px 5px;border:1px solid var(--line);border-radius:4px;}
+  .inv-row input[type=number]{width:60px;font-size:11px;padding:3px 5px;border:1px solid var(--line);border-radius:4px;font-family:'JetBrains Mono',monospace;}
+  .stat-note{font-size:10px;color:var(--ink-soft);margin-bottom:20px;}
+
+  /* AF table */
+  .af-head{display:flex;justify-content:space-between;align-items:baseline;margin:20px 0 8px;}
+  .af-head h2{font-family:'Fraunces',serif;font-size:16px;margin:0;}
+  .af-head .sync{font-size:10.5px;color:var(--ink-soft);}
+  .af-head .sync button{background:none;border:1px solid var(--line);border-radius:20px;padding:3px 9px;font-size:10.5px;color:var(--ink-soft);cursor:pointer;}
+  .af-head .sync button:hover{color:var(--berry);border-color:var(--berry);}
+  .af-table-wrap{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:20px;}
+  .af-table{width:100%;border-collapse:collapse;font-size:12.5px;}
+  .af-table th{font-family:'JetBrains Mono',monospace;font-size:9.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-soft);text-align:left;padding:8px 10px;background:var(--paper-deep);}
+  .af-table td{padding:8px 10px;border-top:1px solid var(--line);}
+  .af-table td.num{font-family:'JetBrains Mono',monospace;text-align:right;}
+  .af-table tr:hover{background:var(--paper-deep);}
+  .af-empty{padding:16px;text-align:center;font-size:12.5px;color:var(--ink-soft);}
+  .af-name{font-weight:600;}
+  .af-rev{color:var(--berry);font-weight:700;}
+  .af-table td .num, .af-table input[type=number]{width:64px;border:none;background:none;font-family:'JetBrains Mono',monospace;font-size:12px;text-align:right;color:var(--ink);}
+  .af-table input[type=number]:focus, .af-table input[type=text]:focus{outline:1px solid var(--berry);border-radius:3px;}
+  .af-add-row{display:flex;gap:6px;padding:8px 10px;border-top:1px solid var(--line);}
+  .af-add-row input{flex:1;font-size:12px;padding:6px 8px;border:1px solid var(--line);border-radius:5px;}
+  .af-add-row button{font-size:12px;border:1px solid var(--line);background:#fff;border-radius:5px;padding:6px 10px;cursor:pointer;color:var(--ink-soft);}
+
+  .quickadd{display:flex;gap:6px;margin-bottom:6px;}
+  .quickadd input[type=text]{flex:1;padding:12px 14px;border:1px solid var(--line);border-radius:8px;font-size:14px;background:var(--card);}
+  .quickadd input[type=text]:focus{outline:2px solid var(--berry);outline-offset:-1px;}
+  .quickadd button{background:var(--berry);color:#fff;border:none;border-radius:8px;padding:0 16px;font-size:14px;font-weight:600;cursor:pointer;}
+  .quickadd-more{display:flex;gap:6px;margin-bottom:8px;}
+  .quickadd-more select,.quickadd-more input[type=date]{font-size:11.5px;padding:5px 8px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink-soft);}
+
+
+  .today-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;}
+  .today-head h2{font-family:'Fraunces',serif;font-size:20px;margin:0;font-weight:700;}
+  .today-head .count{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-soft);}
+
+  .task-row{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:13px 14px;margin-bottom:8px;}
+  .task-row.done{opacity:.45;}
+  .task-row.overdue{border-color:var(--berry);}
+  .task-main{display:flex;align-items:flex-start;gap:12px;}
+  .task-row input[type=checkbox]{width:20px;height:20px;accent-color:var(--sage);margin-top:1px;flex-shrink:0;}
+  .t-title-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .t-title{font-size:14.5px;font-weight:600;line-height:1.4;}
+  .task-row.done .t-title{text-decoration:line-through;}
+  .t-expand{background:var(--paper-deep);border:none;border-radius:20px;padding:2px 8px;font-size:10.5px;color:var(--ink-soft);cursor:pointer;font-family:'JetBrains Mono',monospace;}
+  .t-expand:hover{color:var(--berry);}
+  .t-meta{display:flex;gap:5px;margin-top:6px;flex-wrap:wrap;}
+  .badge{font-family:'JetBrains Mono',monospace;font-size:10px;padding:2px 7px;border-radius:20px;}
+  .badge.cat{background:var(--paper-deep);color:var(--ink-soft);}
+  .badge.owner-me{background:var(--berry-soft);color:var(--berry);}
+  .badge.owner-vn{background:var(--sage-soft);color:var(--sage);}
+  .badge.owner-agency{background:var(--gold-soft);color:var(--gold);}
+  .badge.due{background:#fff;border:1px solid var(--line);color:var(--ink-soft);}
+  .badge.overdue{background:var(--berry);color:#fff;}
+  .badge.postpone{background:var(--gold);color:#fff;}
+  .t-body{flex:1;}
+  .t-x{background:none;border:none;color:var(--ink-soft);font-size:15px;cursor:pointer;padding:2px 4px;flex-shrink:0;}
+  .t-x:hover{color:var(--berry);}
+  .empty{color:var(--ink-soft);font-size:13px;padding:14px 2px;}
+
+  .sub-panel{display:none;margin:10px 0 0 32px;border-top:1px dashed var(--line);padding-top:8px;}
+  .sub-panel.open{display:block;}
+  .sub-row{display:flex;align-items:center;gap:8px;padding:4px 0;}
+  .sub-row input[type=checkbox]{width:15px;height:15px;accent-color:var(--sage);}
+  .sub-row .st-title{font-size:12.5px;}
+  .sub-row.done .st-title{text-decoration:line-through;color:var(--ink-soft);}
+  .sub-row .sub-x{margin-left:auto;background:none;border:none;color:var(--ink-soft);font-size:12px;cursor:pointer;}
+  .sub-add{display:flex;gap:6px;margin-top:6px;}
+  .sub-add input{flex:1;font-size:12px;padding:5px 8px;border:1px solid var(--line);border-radius:5px;}
+  .sub-add button{font-size:11px;border:1px solid var(--line);background:#fff;border-radius:5px;padding:5px 8px;cursor:pointer;color:var(--ink-soft);}
+
+  .routine-mini{display:flex;gap:8px;margin:0 0 22px;}
+  .routine-chip{flex:1;display:flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:12.5px;font-weight:600;}
+  .routine-chip input{width:16px;height:16px;accent-color:var(--sage);}
+  .routine-chip.checked{opacity:.5;}
+  .routine-chip.checked label{text-decoration:line-through;}
+
+  .acc{border-top:1px solid var(--line);margin-top:26px;}
+  .acc-item{border-bottom:1px solid var(--line);}
+  .acc-btn{width:100%;background:none;border:none;text-align:left;padding:14px 2px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:'Fraunces',serif;font-size:15px;font-weight:600;color:var(--ink);}
+  .acc-btn .arrow{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-soft);transition:transform .15s;}
+  .acc-item.open .arrow{transform:rotate(90deg);}
+  .acc-body{display:none;padding:0 2px 18px;}
+  .acc-item.open .acc-body{display:block;}
+
+  .tile-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+  .tile{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 12px;}
+  .tile .tn{font-size:11.5px;font-weight:600;}
+  .tile .tc{font-family:'JetBrains Mono',monospace;font-size:18px;color:var(--berry);margin-top:3px;}
+  .deleg-bar{height:4px;border-radius:3px;background:var(--paper-deep);overflow:hidden;margin-top:6px;display:flex;}
+  .deleg-bar .me{background:var(--berry);}
+  .deleg-bar .other{background:var(--sage);}
+
+  .week-table{width:100%;border-collapse:collapse;font-size:12.5px;}
+  .week-table th{font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;color:var(--ink-soft);text-align:left;padding:5px 3px;border-bottom:1px solid var(--line);}
+  .week-table td{padding:5px 3px;border-bottom:1px solid var(--line);}
+  .week-table input{width:50px;padding:4px 6px;font-size:12px;border:1px solid var(--line);border-radius:5px;font-family:'JetBrains Mono',monospace;}
+  .ratio-cell{font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--berry);}
+  .growth-line{display:flex;align-items:center;gap:8px;margin-top:12px;font-size:12px;color:var(--ink-soft);flex-wrap:wrap;}
+  .growth-line input{width:64px;font-family:'JetBrains Mono',monospace;border:1px solid var(--line);padding:4px 6px;border-radius:5px;}
+  .growth-line .gnum{font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:var(--sage);}
+
+  .budget-total{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:var(--ink-soft);margin-bottom:6px;}
+  .budget-total input{font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;color:var(--berry);border:none;border-bottom:2px solid var(--berry);background:transparent;width:110px;text-align:right;}
+  .budget-bar{height:8px;background:var(--paper-deep);border-radius:5px;overflow:hidden;margin-bottom:4px;}
+  .budget-bar-fill{height:100%;background:var(--berry);}
+  .budget-remain{font-size:11px;color:var(--ink-soft);font-family:'JetBrains Mono',monospace;margin-bottom:10px;}
+  .alloc-row{display:flex;gap:6px;align-items:center;padding:5px 0;}
+  .alloc-row input[type=text]{flex:1;border:1px solid var(--line);padding:5px 7px;border-radius:5px;font-size:12px;}
+  .alloc-row input[type=number]{width:80px;border:1px solid var(--line);padding:5px 7px;border-radius:5px;font-size:12px;font-family:'JetBrains Mono',monospace;}
+  .alloc-add{margin-top:6px;background:none;border:1px dashed var(--line);width:100%;padding:6px;border-radius:6px;color:var(--ink-soft);cursor:pointer;font-size:12px;}
+
+  footer{margin-top:34px;font-size:10.5px;color:var(--ink-soft);line-height:1.6;}
+
+  @media (max-width:600px){ .stat-grid{grid-template-columns:repeat(2,1fr);} .tile-grid{grid-template-columns:repeat(2,1fr);} .af-table{font-size:11.5px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <div class="brand">d'Alba · TikTok Shop PM</div>
+      <div class="date" id="todayDate"></div>
+    </div>
+    <div class="clockout">퇴근<input type="time" id="clockoutInput" value="20:00"></div>
+  </header>
+  <div id="clockoutStatus"></div>
+
+  <div class="save-bar">
+    <span class="save-status" id="saveStatus">불러오는 중…</span>
+    <button class="save-btn" onclick="reloadFromServer()">☁ 새로고침</button>
+  </div>
+
+  <!-- TAB SWITCHER -->
+  <div class="tab-switch">
+    <button class="tab-btn active" id="tabBtnToday" onclick="switchTab('today')">🌲 오늘</button>
+    <button class="tab-btn" id="tabBtnOverview" onclick="switchTab('overview')">🌳 현황판</button>
+  </div>
+
+  <!-- ============ TAB: 오늘 ============ -->
+  <div id="tabToday" class="tab-panel">
+
+    <div class="focus-strip" id="focusStrip"></div>
+
+    <!-- QUICK ADD -->
+    <div class="quickadd">
+      <input type="text" id="newTaskTitle" placeholder="오늘 할 일 입력하고 Enter...">
+      <button onclick="addTask()">추가</button>
+    </div>
+    <div class="quickadd-more">
+      <select id="newTaskCat"></select>
+      <select id="newTaskOwner">
+        <option value="me">직접</option><option value="vn">VN팀</option><option value="agency">에이전시</option>
+      </select>
+      <input type="date" id="newTaskDue">
+    </div>
+    <div class="routine-mini" id="routineMini"></div>
+
+    <div class="today-head"><h2>오늘</h2><span class="count" id="taskCount"></span></div>
+    <div id="taskList"></div>
+
+  </div>
+
+  <!-- ============ TAB: 현황판 ============ -->
+  <div id="tabOverview" class="tab-panel" style="display:none;">
+
+    <!-- DAILY STATS -->
+    <div class="stat-head">
+      <h2>오늘의 지표</h2>
+    </div>
+    <div class="stat-grid" id="statGrid"></div>
+    <div class="stat-note">탭해서 숫자 직접 수정 — 매일 아침 30초 정도면 채울 수 있어요.</div>
+
+    <!-- AF TABLE -->
+    <div class="af-head">
+      <h2>담당 AF 현황</h2>
+    </div>
+    <div class="af-table-wrap">
+      <table class="af-table">
+        <thead><tr><th>크리에이터</th><th style="text-align:right;">오늘 발행</th><th style="text-align:right;">누적 발행</th><th style="text-align:right;">오늘 매출</th><th style="text-align:right;">누적 매출</th><th></th></tr></thead>
+        <tbody id="afBody"></tbody>
+      </table>
+      <div class="af-add-row">
+        <input type="text" id="newAfName" placeholder="크리에이터 이름">
+        <button onclick="addCreator()">+ AF 추가</button>
+      </div>
+    </div>
+
+    <div class="acc" style="margin-top:6px;">
+      <div class="acc-item" id="accTiles">
+        <button class="acc-btn" onclick="toggleAcc('accTiles')">큰 그림 (카테고리별 현황) <span class="arrow">▸</span></button>
+        <div class="acc-body"><div class="tile-grid" id="tileGrid"></div></div>
+      </div>
+      <div class="acc-item" id="accWeek">
+        <button class="acc-btn" onclick="toggleAcc('accWeek')">주간 지표 <span class="arrow">▸</span></button>
+        <div class="acc-body">
+          <table class="week-table"><thead><tr><th>주차</th><th>발행</th><th>매출영상</th><th>비율</th></tr></thead><tbody id="weekBody"></tbody></table>
+          <div class="growth-line">전월 <input type="number" id="lastMonthRev" value="82000"> → 이번달 <input type="number" id="thisMonthRev" value="0"> <span class="gnum" id="growthNum">—</span></div>
+        </div>
+      </div>
+      <div class="acc-item" id="accBudget">
+        <button class="acc-btn" onclick="toggleAcc('accBudget')">9월 예산 세부 배분 <span class="arrow">▸</span></button>
+        <div class="acc-body">
+          <div class="budget-total">총 예산 ($)<input type="number" id="budgetTotal" value="30000"></div>
+          <div class="budget-bar"><div class="budget-bar-fill" id="budgetFill"></div></div>
+          <div class="budget-remain" id="budgetRemain"></div>
+          <div id="allocList"></div>
+          <button class="alloc-add" onclick="addAlloc()">+ 배분 항목 추가</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>입력한 값은 클라우드에 자동으로 저장돼요. 휴대폰·노트북 어디서 열어도 같은 내용이 보여요. 다른 기기에서 방금 고쳤다면 위 "☁ 새로고침"을 눌러 최신 내용을 불러오세요.</footer>
+
+</div>
+
+<script>
+/* ============= 기본값 — 저장된 데이터가 없을 때만 사용 ============= */
+const DEFAULT_DATA = {
+  focus: [
+    { title:"그라인딩 크림 히어로화 + TAP 에이전시 세팅", target:"$40K+$40K" },
+    { title:"영국 출장 준비 완료 (9/10–9/15)", target:"D-DAY" }
+  ],
+  categories: ["캐스팅","계약","리포트","광고운영","VN팀","콤퍼트","출장","가설전략","기타"],
+  tasks: [
+    {id:1, title:"TAP 에이전시 오픈 세팅 (재고/커미션 확인)", cat:"광고운영", owner:"me", due:daysFromNow(1), postpone:0, done:false,
+      subtasks:[{title:"재고 500개 이상 확보 확인", done:true},{title:"오픈 커미션 대비 +5%p 세팅 (25%)", done:false},{title:"조건 없이 오픈", done:false}]},
+    {id:2, title:"VN 인원 1 — 마이시스터즈스킨 가이드 복제 배정", cat:"VN팀", owner:"vn", due:daysFromNow(2), postpone:0, done:false, subtasks:[]},
+    {id:3, title:"VN 인원 2 — 수빈매니저 가이드 복제 배정", cat:"VN팀", owner:"vn", due:daysFromNow(2), postpone:0, done:false, subtasks:[]},
+    {id:4, title:"영국 출장 펜딩 업무 리스트업 → 리더님 공유", cat:"출장", owner:"me", due:daysFromNow(1), postpone:0, done:false, subtasks:[]},
+    {id:5, title:"화요일 그라인딩 방향성 미팅 자료 준비", cat:"리포트", owner:"me", due:nextTuesday(), postpone:0, done:false, subtasks:[]},
+    {id:6, title:"보르피린 가격 소구 테스트안 — 영업매니저 협의", cat:"가설전략", owner:"me", due:daysFromNow(5), postpone:1, done:false, subtasks:[]},
+    {id:7, title:"진영 매니저 가격 컨펌 라인 정리·이관", cat:"기타", owner:"me", due:daysFromNow(3), postpone:0, done:false, subtasks:[]},
+  ],
+  routine: [ "아침 VN팀 리뷰 (1h)", "퇴근 전 30분 점검" ],
+  weeks: [
+    {label:"1주", published:"", sold:""},{label:"2주", published:"", sold:""},
+    {label:"3주", published:"", sold:""},{label:"4주", published:"", sold:""},
+  ],
+  allocations: [
+    {name:"TAP 에이전시 샘플비", amount:4000},{name:"단품 히어로 소재", amount:9000},{name:"3종 번들 시딩", amount:6000},
+  ],
+  budgetPlan: { total: 30000 },
+  growth: { lastMonth: 82000, thisMonth: 0 },
+  daily: {
+    booking:{ current:18, target:25, synced:false },
+    budget:{ used:12500, total:30000, synced:false },
+    videos:{ today:6, cumulative:142, synced:false },
+    revenue:{ today:2100, cumulative:41500, synced:false },
+    inventory:[ {name:"그라인딩 크림", qty:480}, {name:"보르피린 앰플", qty:220}, {name:"스프레이 앰플", qty:150} ],
+    inventorySynced:false
+  },
+  creators: [
+    {name:"clarahyee", videosToday:1, videosCumulative:14, revenueToday:180, revenueCumulative:3200},
+    {name:"iamsk8bordb", videosToday:0, videosCumulative:9, revenueToday:0, revenueCumulative:1850},
+  ],
+};
+function daysFromNow(n){ const d=new Date(); d.setDate(d.getDate()+n); return d.toISOString().slice(0,10); }
+function nextTuesday(){ const d=new Date(); const diff=(9-d.getDay())%7 || 7; d.setDate(d.getDate()+diff); return d.toISOString().slice(0,10); }
+
+/* ============= 저장/불러오기 (클라우드 + 이 기기 캐시) =============
+ * - 정본은 서버(/api/data, Upstash Redis).
+ * - 저장은 값이 바뀔 때마다 자동. 잦은 입력을 묶어서 0.8초 뒤 한 번에 올린다(디바운스).
+ * - 이 기기 localStorage 에도 즉시 캐시해서, 오프라인이거나 서버가 잠깐 죽어도 화면이 유지된다.
+ */
+const STORAGE_KEY = 'pmTrackerData';
+let DATA = DEFAULT_DATA;
+let booting = true;       // 초기 로드 중에는 서버로 되쓰지 않는다(기본값 덮어쓰기 방지)
+let saveTimer = null;
+
+function setSaveStatus(text, color){
+  const el = document.getElementById('saveStatus');
+  if(!el) return;
+  el.textContent = text;
+  el.style.color = color || 'var(--sage)';
+}
+
+async function loadData(){
+  // 1) 서버(정본)
+  try{
+    const res = await fetch('/api/data', { cache:'no-store' });
+    if(res.ok){
+      const json = await res.json();
+      if(json && json.data && Array.isArray(json.data.tasks)) return { data: json.data, source:'server' };
+      if(json && json.data === null) return { data: null, source:'server-empty' };
+    }
+  }catch(e){ console.warn('서버에서 불러오기 실패, 로컬 캐시를 확인합니다', e); }
+  // 2) 이 기기 캐시
+  try{
+    const cached = localStorage.getItem(STORAGE_KEY);
+    if(cached){ const p = JSON.parse(cached); if(p && Array.isArray(p.tasks)) return { data:p, source:'cache' }; }
+  }catch(e){}
+  // 3) 기본값
+  return { data: DEFAULT_DATA, source:'default' };
+}
+
+function persist(){
+  // 이 기기에는 즉시 저장
+  try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(DATA)); }catch(e){}
+  if(booting) return;               // 초기 렌더 중에는 서버로 올리지 않는다
+  setSaveStatus('저장 중…', 'var(--ink-soft)');
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(saveToServer, 800);
+}
+
+async function saveToServer(){
+  try{
+    const res = await fetch('/api/data', {
+      method:'PUT',
+      headers:{ 'Content-Type':'application/json' },
+      body: JSON.stringify(DATA)
+    });
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    setSaveStatus('저장됨 · 클라우드', 'var(--sage)');
+  }catch(e){
+    console.warn('클라우드 저장 실패', e);
+    setSaveStatus('오프라인 — 이 기기에만 저장됨', 'var(--gold)');
+  }
+}
+
+async function reloadFromServer(){
+  setSaveStatus('불러오는 중…', 'var(--ink-soft)');
+  const { data, source } = await loadData();
+  if(source==='server' && data){
+    DATA = data;
+    try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(DATA)); }catch(e){}
+    renderAll();
+    setSaveStatus('최신 내용 불러옴', 'var(--sage)');
+  }else if(source==='server-empty'){
+    setSaveStatus('서버에 저장된 내용이 아직 없어요', 'var(--gold)');
+  }else{
+    setSaveStatus('서버에 연결하지 못했어요', 'var(--berry)');
+  }
+}
+
+let nextId = Math.max(...DATA.tasks.map(t=>t.id), 0) + 1;
+function fmtDate(str){ const d=new Date(str+"T00:00:00"); return (d.getMonth()+1)+"/"+d.getDate(); }
+function isOverdue(str){ return new Date(str+"T23:59:59") < new Date(); }
+function nowLabel(){ const d=new Date(); return String(d.getHours()).padStart(2,'0')+":"+String(d.getMinutes()).padStart(2,'0'); }
+
+function renderHeader(){
+  const t = new Date();
+  document.getElementById('todayDate').textContent =
+    t.getFullYear()+"."+String(t.getMonth()+1).padStart(2,'0')+"."+String(t.getDate()).padStart(2,'0')+
+    " · "+["일","월","화","수","목","금","토"][t.getDay()]+"요일";
+}
+document.getElementById('clockoutInput').addEventListener('input', updateClockout);
+function updateClockout(){
+  const val = document.getElementById('clockoutInput').value;
+  const now = new Date(); const [h,m]=val.split(':').map(Number);
+  const target = new Date(); target.setHours(h,m,0,0);
+  const diffMin = Math.round((target-now)/60000);
+  const el = document.getElementById('clockoutStatus');
+  if(diffMin>0){ el.textContent = `퇴근까지 ${Math.floor(diffMin/60)}시간 ${diffMin%60}분`; el.style.color='var(--ink-soft)'; }
+  else { el.textContent = `목표시간 지남 — 정리하고 갈 것`; el.style.color='var(--berry)'; }
+}
+
+function renderFocus(){
+  document.getElementById('focusStrip').innerHTML = DATA.focus.map((f,i)=>`
+    <div class="focus-row">
+      <span class="fn">0${i+1}</span>
+      <input class="ft" type="text" value="${f.title}" onchange="updateFocus(${i},'title',this.value)">
+      <input class="fx" type="text" value="${f.target}" onchange="updateFocus(${i},'target',this.value)">
+    </div>`).join('');
+}
+function updateFocus(i, key, val){ DATA.focus[i][key] = val; persist(); }
+
+/* ---------- 담당 AF 현황 (수동 입력) ---------- */
+function num(v){ const n = Number(String(v).replace(/[^0-9.\-]/g,'')); return isNaN(n)?0:n; }
+
+function renderAF(){
+  const tbody = document.getElementById('afBody');
+  if(!DATA.creators.length){ tbody.innerHTML = `<tr><td colspan="5" class="af-empty">아직 등록된 AF가 없어요. 아래에서 추가해보세요.</td></tr>`; return; }
+  const sorted = [...DATA.creators].sort((a,b)=>b.revenueCumulative-a.revenueCumulative);
+  tbody.innerHTML = sorted.map((c,i)=>`
+    <tr>
+      <td class="af-name"><input type="text" value="${c.name}" onchange="updateCreator('${c.name}','name',this.value)" style="border:none;background:none;font-weight:600;width:100%;font-family:inherit;font-size:inherit;"></td>
+      <td class="num"><input type="number" value="${c.videosToday}" onchange="updateCreator('${c.name}','videosToday',this.value)"></td>
+      <td class="num"><input type="number" value="${c.videosCumulative}" onchange="updateCreator('${c.name}','videosCumulative',this.value)"></td>
+      <td class="num"><input type="number" value="${c.revenueToday}" onchange="updateCreator('${c.name}','revenueToday',this.value)"></td>
+      <td class="num af-rev"><input type="number" value="${c.revenueCumulative}" onchange="updateCreator('${c.name}','revenueCumulative',this.value)"></td>
+      <td><button onclick="removeCreator('${c.name}')" style="border:none;background:none;color:var(--ink-soft);cursor:pointer;">✕</button></td>
+    </tr>`).join('');
+}
+function updateCreator(name, key, val){
+  const c = DATA.creators.find(c=>c.name===name);
+  if(!c) return;
+  c[key] = (key==='name') ? val : num(val);
+  persist();
+  renderAF();
+}
+function addCreator(){
+  const input = document.getElementById('newAfName');
+  const name = input.value.trim();
+  if(!name) return;
+  DATA.creators.push({name, videosToday:0, videosCumulative:0, revenueToday:0, revenueCumulative:0});
+  input.value='';
+  persist();
+  renderAF();
+}
+function removeCreator(name){
+  DATA.creators = DATA.creators.filter(c=>c.name!==name);
+  persist();
+  renderAF();
+}
+
+/* ---------- DAILY STATS ---------- */
+function renderStats(){
+  const d = DATA.daily;
+  const bookPct = Math.round((d.booking.current/d.booking.target)*100);
+  const budgetPct = Math.round((d.budget.used/d.budget.total)*100);
+  document.getElementById('statGrid').innerHTML = `
+    <div class="stat-tile ${d.booking.synced?'synced':''}" id="stat-booking" onclick="toggleStatEdit('stat-booking',event)">
+      <div class="sync-dot"></div><div class="sl">부킹 현황</div>
+      <div class="sv">${d.booking.current}<small> / ${d.booking.target}</small></div>
+      <div class="stat-bar"><div class="stat-bar-fill" style="width:${Math.min(100,bookPct)}%"></div></div>
+      <div class="stat-edit" onclick="event.stopPropagation()">
+        <div class="stat-edit-row"><input type="number" value="${d.booking.current}" onchange="updateStat('booking','current',this.value)" placeholder="현재"></div>
+        <div class="stat-edit-row"><input type="number" value="${d.booking.target}" onchange="updateStat('booking','target',this.value)" placeholder="목표"></div>
+      </div>
+    </div>
+    <div class="stat-tile ${d.budget.synced?'synced':''}" id="stat-budget" onclick="toggleStatEdit('stat-budget',event)">
+      <div class="sync-dot"></div><div class="sl">예산 소진</div>
+      <div class="sv">$${(d.budget.used/1000).toFixed(1)}k<small> / $${(d.budget.total/1000).toFixed(0)}k</small></div>
+      <div class="stat-bar"><div class="stat-bar-fill" style="width:${Math.min(100,budgetPct)}%"></div></div>
+      <div class="stat-edit" onclick="event.stopPropagation()">
+        <div class="stat-edit-row"><input type="number" value="${d.budget.used}" onchange="updateStat('budget','used',this.value)" placeholder="사용액"></div>
+        <div class="stat-edit-row"><input type="number" value="${d.budget.total}" onchange="updateStat('budget','total',this.value)" placeholder="총예산"></div>
+      </div>
+    </div>
+    <div class="stat-tile ${d.videos.synced?'synced':''}" id="stat-videos" onclick="toggleStatEdit('stat-videos',event)">
+      <div class="sync-dot"></div><div class="sl">영상 발행량</div>
+      <div class="sv">${d.videos.today}<small> 오늘 · 누적 ${d.videos.cumulative}</small></div>
+      <div class="stat-edit" onclick="event.stopPropagation()">
+        <div class="stat-edit-row"><input type="number" value="${d.videos.today}" onchange="updateStat('videos','today',this.value)" placeholder="오늘"></div>
+        <div class="stat-edit-row"><input type="number" value="${d.videos.cumulative}" onchange="updateStat('videos','cumulative',this.value)" placeholder="누적"></div>
+      </div>
+    </div>
+    <div class="stat-tile ${d.revenue.synced?'synced':''}" id="stat-revenue" onclick="toggleStatEdit('stat-revenue',event)">
+      <div class="sync-dot"></div><div class="sl">매출</div>
+      <div class="sv">$${d.revenue.today.toLocaleString()}<small> 오늘 · 누적 $${(d.revenue.cumulative/1000).toFixed(1)}k</small></div>
+      <div class="stat-edit" onclick="event.stopPropagation()">
+        <div class="stat-edit-row"><input type="number" value="${d.revenue.today}" onchange="updateStat('revenue','today',this.value)" placeholder="오늘"></div>
+        <div class="stat-edit-row"><input type="number" value="${d.revenue.cumulative}" onchange="updateStat('revenue','cumulative',this.value)" placeholder="누적"></div>
+      </div>
+    </div>
+    <div class="stat-tile ${d.inventorySynced?'synced':''}" id="stat-inventory" onclick="toggleStatEdit('stat-inventory',event)">
+      <div class="sync-dot"></div><div class="sl">재고 수량</div>
+      <div class="sv">${d.inventory.length}<small> SKU</small></div>
+      <div class="inv-list" onclick="event.stopPropagation()">
+        ${d.inventory.map((it,i)=>`
+          <div class="inv-row">
+            <input type="text" value="${it.name}" onchange="updateInv(${i},'name',this.value)">
+            <input type="number" value="${it.qty}" onchange="updateInv(${i},'qty',this.value)">
+            <button onclick="removeInv(${i})" style="border:none;background:none;color:var(--ink-soft);cursor:pointer;">✕</button>
+          </div>`).join('')}
+        <button class="alloc-add" style="margin-top:2px;" onclick="addInv(event)">+ SKU 추가</button>
+      </div>
+    </div>
+  `;
+}
+function toggleStatEdit(id,e){
+  document.querySelectorAll('.stat-tile').forEach(t=>{ if(t.id!==id) t.classList.remove('editing'); });
+  document.getElementById(id).classList.toggle('editing');
+}
+function updateStat(group,key,val){ DATA.daily[group][key]= key==='synced'?val:Number(val); DATA.daily[group].synced=false; persist(); renderStats(); reopenEditing(group); }
+function updateInv(i,key,val){ DATA.daily.inventory[i][key]= key==='qty'?Number(val):val; DATA.daily.inventorySynced=false; persist(); renderStats(); reopenEditing('inventory'); }
+function addInv(e){ e.stopPropagation(); DATA.daily.inventory.push({name:"새 SKU",qty:0}); DATA.daily.inventorySynced=false; persist(); renderStats(); reopenEditing('inventory'); }
+function removeInv(i){ DATA.daily.inventory.splice(i,1); persist(); renderStats(); reopenEditing('inventory'); }
+function reopenEditing(group){
+  const map={booking:'stat-booking',budget:'stat-budget',videos:'stat-videos',revenue:'stat-revenue',inventory:'stat-inventory'};
+  const id = map[group]; if(id) document.getElementById(id).classList.add('editing');
+}
+
+/* ---------- TASKS ---------- */
+function renderCatOptions(){
+  document.getElementById('newTaskCat').innerHTML = DATA.categories.map(c=>`<option value="${c}">${c}</option>`).join('');
+}
+function ownerBadge(o){
+  if(o==='me') return `<span class="badge owner-me">직접</span>`;
+  if(o==='vn') return `<span class="badge owner-vn">VN팀</span>`;
+  return `<span class="badge owner-agency">에이전시</span>`;
+}
+function renderTasks(){
+  const el = document.getElementById('taskList');
+  const sorted = [...DATA.tasks].sort((a,b)=> (a.done-b.done) || (a.due||'').localeCompare(b.due||''));
+  document.getElementById('taskCount').textContent = `${DATA.tasks.filter(t=>!t.done).length}건 남음`;
+  el.innerHTML = sorted.map(t=>{
+    const overdue = t.due && !t.done && isOverdue(t.due);
+    const subs = t.subtasks||[];
+    const subDone = subs.filter(s=>s.done).length;
+    return `
+    <div class="task-row ${t.done?'done':''} ${overdue?'overdue':''}">
+      <div class="task-main">
+        <input type="checkbox" ${t.done?'checked':''} onchange="toggleTask(${t.id})">
+        <div class="t-body">
+          <div class="t-title-row">
+            <span class="t-title">${t.title}</span>
+            <button class="t-expand" onclick="toggleSub(${t.id})">${subs.length? `${subDone}/${subs.length} ▸` : '+ 세부업무 ▸'}</button>
+          </div>
+          <div class="t-meta">
+            <span class="badge cat">${t.cat}</span>
+            ${ownerBadge(t.owner)}
+            ${t.due?`<span class="badge due ${overdue?'overdue':''}">${overdue?'지연 · ':''}${fmtDate(t.due)}</span>`:''}
+            ${t.postpone>0?`<span class="badge postpone">${t.postpone}회 연기</span>`:''}
+          </div>
+          <div class="sub-panel" id="sub-${t.id}">
+            ${subs.map((s,i)=>`
+              <div class="sub-row ${s.done?'done':''}">
+                <input type="checkbox" ${s.done?'checked':''} onchange="toggleSubtask(${t.id},${i})">
+                <span class="st-title">${s.title}</span>
+                <button class="sub-x" onclick="deleteSubtask(${t.id},${i})">✕</button>
+              </div>`).join('')}
+            <div class="sub-add">
+              <input type="text" id="subinput-${t.id}" placeholder="세부 할 일 추가...">
+              <button onclick="addSubtask(${t.id})">추가</button>
+            </div>
+          </div>
+        </div>
+        <button class="t-x" onclick="deleteTask(${t.id})">✕</button>
+      </div>
+    </div>`;
+  }).join('') || `<div class="empty">오늘 할 일이 없어요. 위에서 추가해보세요.</div>`;
+}
+function toggleSub(id){ document.getElementById('sub-'+id).classList.toggle('open'); }
+function addSubtask(taskId){
+  const input = document.getElementById('subinput-'+taskId);
+  const title = input.value.trim(); if(!title) return;
+  const t = DATA.tasks.find(t=>t.id===taskId);
+  if(!t.subtasks) t.subtasks=[];
+  t.subtasks.push({title, done:false});
+  persist();
+  renderTasks();
+  document.getElementById('sub-'+taskId).classList.add('open');
+}
+function toggleSubtask(taskId,i){
+  const t = DATA.tasks.find(t=>t.id===taskId); t.subtasks[i].done ^= true;
+  persist();
+  renderTasks(); document.getElementById('sub-'+taskId).classList.add('open');
+}
+function deleteSubtask(taskId,i){
+  const t = DATA.tasks.find(t=>t.id===taskId); t.subtasks.splice(i,1);
+  persist();
+  renderTasks(); document.getElementById('sub-'+taskId).classList.add('open');
+}
+
+function renderRoutine(){
+  document.getElementById('routineMini').innerHTML = DATA.routine.map((r,i)=>`
+    <label class="routine-chip" id="rc${i}"><input type="checkbox" onchange="toggleRoutine(${i})"><span>${r}</span></label>`).join('');
+}
+function toggleRoutine(i){ document.getElementById('rc'+i).classList.toggle('checked'); }
+
+function renderTiles(){
+  document.getElementById('tileGrid').innerHTML = DATA.categories.map(cat=>{
+    const items = DATA.tasks.filter(t=>t.cat===cat && !t.done);
+    const meCount = items.filter(t=>t.owner==='me').length;
+    const total = items.length || 1;
+    const mePct = Math.round((meCount/total)*100);
+    return `<div class="tile"><div class="tn">${cat}</div><div class="tc">${items.length}</div>
+      <div class="deleg-bar"><div class="me" style="width:${mePct}%"></div><div class="other" style="width:${100-mePct}%"></div></div></div>`;
+  }).join('');
+}
+
+function renderWeeks(){
+  document.getElementById('weekBody').innerHTML = DATA.weeks.map((w,i)=>`
+    <tr><td>${w.label}</td>
+      <td><input type="number" value="${w.published}" onchange="updateWeek(${i},'published',this.value)"></td>
+      <td><input type="number" value="${w.sold}" onchange="updateWeek(${i},'sold',this.value)"></td>
+      <td class="ratio-cell">${ratio(w)}</td></tr>`).join('');
+}
+function ratio(w){ if(!w.published) return '—'; return Math.round((Number(w.sold)/Number(w.published))*100)+'%'; }
+function updateWeek(i,key,val){ DATA.weeks[i][key]=val; persist(); renderWeeks(); }
+
+function renderGrowth(){
+  DATA.growth.lastMonth = Number(document.getElementById('lastMonthRev').value)||0;
+  DATA.growth.thisMonth = Number(document.getElementById('thisMonthRev').value)||0;
+  persist();
+  const last = DATA.growth.lastMonth;
+  const cur = DATA.growth.thisMonth;
+  const el = document.getElementById('growthNum');
+  if(!last){ el.textContent='—'; return; }
+  const pct = Math.round(((cur-last)/last)*100);
+  el.textContent = (pct>=0?'+':'')+pct+'%'; el.style.color = pct>=0 ? 'var(--sage)' : 'var(--berry)';
+}
+document.getElementById('lastMonthRev').addEventListener('input', renderGrowth);
+document.getElementById('thisMonthRev').addEventListener('input', renderGrowth);
+
+function renderBudget(){
+  DATA.budgetPlan.total = Number(document.getElementById('budgetTotal').value)||0;
+  persist();
+  const total = DATA.budgetPlan.total;
+  const used = DATA.allocations.reduce((s,a)=>s+Number(a.amount||0),0);
+  const pct = total? Math.min(100, Math.round((used/total)*100)) : 0;
+  document.getElementById('budgetFill').style.width = pct+'%';
+  document.getElementById('budgetRemain').textContent = `배정 $${used.toLocaleString()} / 총 $${total.toLocaleString()} · 잔여 $${(total-used).toLocaleString()}`;
+  document.getElementById('allocList').innerHTML = DATA.allocations.map((a,i)=>`
+    <div class="alloc-row">
+      <input type="text" value="${a.name}" onchange="updateAlloc(${i},'name',this.value)">
+      <input type="number" value="${a.amount}" onchange="updateAlloc(${i},'amount',this.value)">
+      <button onclick="removeAlloc(${i})" style="border:none;background:none;color:var(--ink-soft);cursor:pointer;">✕</button>
+    </div>`).join('');
+}
+function updateAlloc(i,key,val){ DATA.allocations[i][key]=val; persist(); renderBudget(); }
+function addAlloc(){ DATA.allocations.push({name:"새 항목", amount:0}); persist(); renderBudget(); }
+function removeAlloc(i){ DATA.allocations.splice(i,1); persist(); renderBudget(); }
+document.getElementById('budgetTotal').addEventListener('input', renderBudget);
+
+function toggleTask(id){ DATA.tasks.find(t=>t.id===id).done ^= true; persist(); renderTasks(); renderTiles(); }
+function deleteTask(id){ DATA.tasks = DATA.tasks.filter(t=>t.id!==id); persist(); renderTasks(); renderTiles(); }
+function addTask(){
+  const title = document.getElementById('newTaskTitle').value.trim(); if(!title) return;
+  const cat = document.getElementById('newTaskCat').value;
+  const owner = document.getElementById('newTaskOwner').value;
+  const due = document.getElementById('newTaskDue').value || null;
+  DATA.tasks.push({id: nextId++, title, cat, owner, due, postpone:0, done:false, subtasks:[]});
+  document.getElementById('newTaskTitle').value=''; document.getElementById('newTaskDue').value='';
+  persist();
+  renderTasks(); renderTiles();
+}
+document.getElementById('newTaskTitle').addEventListener('keydown', e=>{ if(e.key==='Enter') addTask(); });
+
+function toggleAcc(id){ document.getElementById(id).classList.toggle('open'); }
+
+function switchTab(name){
+  const isToday = name==='today';
+  document.getElementById('tabToday').style.display = isToday ? '' : 'none';
+  document.getElementById('tabOverview').style.display = isToday ? 'none' : '';
+  document.getElementById('tabBtnToday').classList.toggle('active', isToday);
+  document.getElementById('tabBtnOverview').classList.toggle('active', !isToday);
+}
+
+/* ---------- 전체 렌더 + 초기 부팅 ---------- */
+function renderAll(){
+  nextId = Math.max(...DATA.tasks.map(t=>t.id), 0) + 1;
+  document.getElementById('lastMonthRev').value = DATA.growth.lastMonth;
+  document.getElementById('thisMonthRev').value = DATA.growth.thisMonth;
+  document.getElementById('budgetTotal').value = DATA.budgetPlan.total;
+  renderHeader(); updateClockout(); renderFocus(); renderStats(); renderAF(); renderCatOptions();
+  renderTasks(); renderRoutine(); renderTiles(); renderWeeks(); renderGrowth(); renderBudget();
+}
+
+async function boot(){
+  const { data, source } = await loadData();
+  DATA = data || DEFAULT_DATA;
+  renderAll();               // renderGrowth/renderBudget 가 persist() 를 부르지만 booting 중이라 서버로 안 올라감
+  booting = false;
+  try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(DATA)); }catch(e){}
+
+  if(source==='server' || source==='cache'){
+    setSaveStatus('클라우드에 자동 저장', 'var(--sage)');
+  }else if(source==='server-empty'){
+    // 서버는 살아있지만 아직 비어있음 → 지금 화면(기본값)을 서버에 한 번 심어둔다
+    setSaveStatus('처음 저장 중…', 'var(--ink-soft)');
+    saveToServer();
+  }else{
+    // 서버 연결 실패 + 캐시도 없음 → 기본값 표시. 서버로 덮어쓰지 않는다.
+    setSaveStatus('서버에 연결 못함 — 이 기기에만 저장돼요', 'var(--gold)');
+  }
+}
+boot();
+
+</script>
+</body>
+</html>
