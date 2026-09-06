@@ -1,0 +1,40 @@
+name: Threads Fetch (style study)
+
+on:
+  # 수동 실행 전용. Actions 탭 → Threads Fetch → Run workflow.
+  workflow_dispatch:
+    inputs:
+      handle:
+        description: 'Threads 핸들 (@ 없이)'
+        required: false
+        default: 'usa.mminz'
+      max_posts:
+        description: '최대 수집 글 수(비용 상한)'
+        required: false
+        default: '40'
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: threads-style
+    steps:
+      - name: 코드 가져오기
+        uses: actions/checkout@v4
+
+      - name: 파이썬 설치
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 의존성 설치
+        run: pip install -r requirements.txt
+
+      - name: Threads 글 수집
+        env:
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+          THREADS_HANDLE: ${{ inputs.handle }}
+          MAX_POSTS: ${{ inputs.max_posts }}
+          THREADS_ACTOR: ${{ vars.THREADS_ACTOR }}
+        run: python fetch_threads.py
