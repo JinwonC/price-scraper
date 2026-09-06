@@ -17,7 +17,7 @@ from datetime import datetime, timezone
 
 from apify_client import ApifyClient
 
-DEFAULT_ACTOR = "automation-lab/threads-scraper"
+DEFAULT_ACTOR = "apify/threads-profile-api-scraper"
 
 
 def _env(name, default=None):
@@ -101,12 +101,16 @@ def main():
         raise ValueError("APIFY_TOKEN 환경변수가 비어 있습니다.")
 
     client = ApifyClient(token)
-    run_input = {
-        "mode": "posts",
-        "usernames": [handle],
-        "maxPosts": max_posts,
-        "includeProfile": True,
-    }
+    # 액터별 입력 스키마 분기: 공식 profile-api-scraper 는 usernames 만 받는다.
+    if "profile-api" in actor_id:
+        run_input = {"usernames": [handle]}
+    else:
+        run_input = {
+            "mode": "posts",
+            "usernames": [handle],
+            "maxPosts": max_posts,
+            "includeProfile": True,
+        }
     print(f"🚀 Threads 수집: {actor_id} / @{handle} / 최대 {max_posts}글")
     run = client.actor(actor_id).call(run_input=run_input)
     dataset_id = _run_dataset_id(run)
@@ -132,11 +136,11 @@ def main():
     if profile:
         print("\n=== PROFILE ===")
         print("username:", _first(profile, "username", "handle"))
-        print("followers:", _first(profile, "followersCount", "follower_count"))
+        print("followers:", _first(profile, "followerCount", "followersCount", "follower_count"))
         print("bio:", _first(profile, "biography", "bio"))
 
-    print(f"\n=== POSTS ({len(posts)}) ===")
-    for i, p in enumerate(posts, 1):
+    print(f"\n=== POSTS ({len(posts)}, 최대 {max_posts}개 출력) ===")
+    for i, p in enumerate(posts[:max_posts], 1):
         likes = _int_of(p, "likeCount", "like_count", "likesCount")
         replies = _int_of(p, "replyCount", "repliesCount", "text_post_app_info.direct_reply_count")
         reposts = _int_of(p, "repostCount", "reposts", "text_post_app_info.repost_count")
