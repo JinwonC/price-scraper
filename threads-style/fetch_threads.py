@@ -62,7 +62,11 @@ def _first(item, *keys):
 
 
 def _text_of(item):
-    return _first(item, "text", "caption", "post_text", "content") or ""
+    # 공식 액터는 caption 이 {"text": "..."} 객체일 수 있음
+    cap = item.get("caption")
+    if isinstance(cap, dict) and cap.get("text"):
+        return cap["text"]
+    return _first(item, "text", "caption", "post_text", "content", "caption.text") or ""
 
 
 def _int_of(item, *keys):
@@ -125,13 +129,21 @@ def main():
         print("🔎 첫 아이템 키:", sorted(items[0].keys()))
 
     # 프로필과 게시물 분리
+    # 공식 액터: 프로필 객체 하나에 글들이 latestPosts 배열로 중첩됨.
     posts = []
     profile = None
     for it in items:
-        if _text_of(it):
-            posts.append(it)
-        elif _first(it, "followersCount", "follower_count", "biography", "bio"):
+        nested = it.get("latestPosts") or it.get("posts")
+        if isinstance(nested, list) and nested:
             profile = it
+            posts.extend(nested)
+        elif _text_of(it):
+            posts.append(it)
+        elif _first(it, "followerCount", "followersCount", "follower_count", "biography", "bio"):
+            profile = it
+
+    if posts:
+        print("🔎 첫 글 키:", sorted(posts[0].keys()))
 
     if profile:
         print("\n=== PROFILE ===")
