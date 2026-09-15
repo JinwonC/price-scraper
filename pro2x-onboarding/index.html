@@ -87,6 +87,52 @@
   .help{background:var(--gold-soft);border:1px solid var(--gold);border-radius:14px;padding:18px 20px;font-size:13.5px;}
   .help b{font-size:14.5px;}
 
+  /* ===== 초대장 인트로 ===== */
+  .invite{min-height:100svh;background:radial-gradient(130% 100% at 50% 0%, #201C13 0%, #14120E 62%);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:48px 20px;text-align:center;}
+  .inv-eyebrow{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin-bottom:34px;}
+  .env-scene{position:relative;filter:drop-shadow(0 26px 40px rgba(0,0,0,.55));}
+  .envelope{width:min(330px,84vw);aspect-ratio:16/11;position:relative;perspective:1000px;}
+  .env-back{position:absolute;inset:0;background:linear-gradient(180deg,#EDE6D4,#E2D9C2);border-radius:10px;}
+  .letter{position:absolute;left:5%;right:5%;top:7%;bottom:7%;background:linear-gradient(180deg,#FDFBF4,#F6F1E3);border:1px solid #D8CDAF;border-radius:6px;z-index:2;display:flex;align-items:center;justify-content:center;transform:translateY(14%);opacity:0;transition:transform 1s cubic-bezier(.22,.9,.3,1) .5s, opacity .45s ease .6s, box-shadow .6s .8s, z-index 0s .8s;}
+  .letter-in{padding:14px;}
+  .l-brand{font-family:'Marcellus',serif;font-size:13px;letter-spacing:.14em;color:var(--gold);}
+  .l-title{font-family:'Marcellus',serif;font-size:24px;letter-spacing:.24em;line-height:1.35;margin:8px 0 6px;color:#2A2517;background:linear-gradient(100deg,#3A3117 15%,#A9884B 40%,#3A3117 65%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite;}
+  .l-rule{width:44px;height:1px;background:var(--gold);margin:8px auto;opacity:.6;}
+  .l-sub{font-size:11.5px;color:#6E6650;line-height:1.55;}
+  .l-sub b{font-family:'Marcellus',serif;font-size:14px;letter-spacing:.1em;color:#2A2517;}
+  .l-date{font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.22em;color:var(--gold);margin-top:9px;text-transform:uppercase;}
+  .env-front{position:absolute;left:0;right:0;bottom:0;height:62%;background:linear-gradient(180deg,#EAE2CE,#DDD3B8);border-radius:0 0 10px 10px;clip-path:polygon(0 0,50% 34%,100% 0,100% 100%,0 100%);z-index:3;}
+  .env-flap{position:absolute;left:0;right:0;top:0;height:56%;background:linear-gradient(180deg,#E4DBC5,#D6CBAC);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top center;z-index:4;transition:transform .7s ease, z-index 0s .7s;backface-visibility:hidden;border-radius:10px 10px 0 0;}
+  .seal{position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:47% 53% 51% 49%/52% 48% 53% 47%;background:radial-gradient(circle at 35% 28%,#D9B76F,#8F6B25 72%);z-index:5;border:none;color:#FDF8EC;font-family:'Marcellus',serif;font-size:19px;letter-spacing:.02em;cursor:pointer;box-shadow:0 5px 16px rgba(0,0,0,.45), inset 0 2px 6px rgba(255,255,255,.4), inset 0 -3px 8px rgba(0,0,0,.25);transition:transform .45s, opacity .45s;animation:sealPulse 2.4s ease-in-out infinite;}
+  @keyframes sealPulse{0%,100%{box-shadow:0 5px 16px rgba(0,0,0,.45), inset 0 2px 6px rgba(255,255,255,.4), inset 0 -3px 8px rgba(0,0,0,.25), 0 0 0 0 rgba(201,165,92,.45);}50%{box-shadow:0 5px 16px rgba(0,0,0,.45), inset 0 2px 6px rgba(255,255,255,.4), inset 0 -3px 8px rgba(0,0,0,.25), 0 0 0 14px rgba(201,165,92,0);}}
+  .invite.open .env-flap{transform:rotateX(180deg);z-index:1;}
+  .invite.open .letter{transform:translateY(-72%) scale(1.14);opacity:1;z-index:6;box-shadow:0 18px 42px rgba(0,0,0,.5);}
+  .invite.open .seal{transform:translate(-50%,-50%) scale(.15) rotate(30deg);opacity:0;pointer-events:none;animation:none;}
+  .inv-tap{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#8D8672;margin-top:88px;transition:opacity .4s;}
+  .invite.open .inv-tap{opacity:0;}
+  .inv-cta{position:absolute;left:0;right:0;bottom:26px;opacity:0;transform:translateY(8px);transition:opacity .8s .9s, transform .8s .9s;pointer-events:none;}
+  .invite.open .inv-cta{opacity:1;transform:none;pointer-events:auto;}
+  .inv-cta a{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-decoration:none;}
+  .inv-cta .arr{display:block;font-size:16px;margin-top:6px;animation:bounceArr 1.6s infinite;}
+  @keyframes bounceArr{0%,100%{transform:translateY(0);}50%{transform:translateY(6px);}}
+  .sp{position:absolute;color:#C9A55C;pointer-events:none;animation:twinkle 3.4s ease-in-out infinite;}
+  @keyframes twinkle{0%,100%{opacity:.15;transform:scale(.7) rotate(0deg);}50%{opacity:.95;transform:scale(1.15) rotate(20deg);}}
+  @keyframes shine{to{background-position:-200% center;}}
+  .hero h1{background:linear-gradient(100deg,#F5F2EA 25%,#C9A55C 42%,#F5F2EA 60%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 4.5s linear infinite;}
+
+  /* 스크롤 시 섹션 떠오르기 */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media (prefers-reduced-motion: reduce){
+    .l-title,.hero h1{animation:none;-webkit-background-clip:initial;background-clip:initial;background:none;color:inherit;}
+    .hero h1{color:#F5F2EA;}
+    .seal{animation:none;}
+    .sp{animation:none;opacity:.3;}
+    .reveal{opacity:1;transform:none;transition:none;}
+    .env-flap,.letter,.inv-cta{transition:none;}
+  }
+
   footer{margin-top:60px;text-align:center;}
   footer .fbrand{font-family:'Marcellus',serif;font-size:16px;letter-spacing:.08em;}
   footer .fsub{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);margin-top:4px;}
@@ -99,6 +145,39 @@
 </head>
 <body>
 
+<!-- ===== 초대장 인트로 ===== -->
+<div class="invite" id="invite">
+  <span class="sp" style="top:14%;left:12%;font-size:14px;animation-delay:0s;">✦</span>
+  <span class="sp" style="top:22%;right:14%;font-size:10px;animation-delay:.9s;">✦</span>
+  <span class="sp" style="top:44%;left:7%;font-size:9px;animation-delay:1.6s;">✧</span>
+  <span class="sp" style="bottom:30%;right:9%;font-size:13px;animation-delay:.4s;">✦</span>
+  <span class="sp" style="bottom:18%;left:18%;font-size:10px;animation-delay:2.1s;">✧</span>
+  <span class="sp" style="top:8%;right:34%;font-size:8px;animation-delay:2.7s;">✦</span>
+
+  <div class="inv-eyebrow">d'Alba · PRO2X Creator Program</div>
+
+  <div class="env-scene">
+    <div class="envelope">
+      <div class="env-back"></div>
+      <div class="letter">
+        <div class="letter-in">
+          <div class="l-brand">d'Alba</div>
+          <div class="l-title">YOU ARE<br>INVITED</div>
+          <div class="l-rule"></div>
+          <div class="l-sub">to the exclusive launch of<br><b>PRO2X</b></div>
+          <div class="l-date">Sep 21 · TikTok Shop US</div>
+        </div>
+      </div>
+      <div class="env-front"></div>
+      <div class="env-flap"></div>
+      <button class="seal" id="sealBtn" aria-label="Open invitation">d'A</button>
+    </div>
+  </div>
+
+  <div class="inv-tap" id="invTap">Tap the seal to open</div>
+  <div class="inv-cta"><a href="#hero">Your creator brief awaits<span class="arr">↓</span></a></div>
+</div>
+
 <div class="topbar"><div class="topbar-in">
   <div class="brand">d'Alba<small>PRO2X Creator Program</small></div>
   <a href="#kit">Content Kit ↓</a>
@@ -106,7 +185,7 @@
 
 <div class="wrap">
 
-  <div class="hero">
+  <div class="hero" id="hero">
     <div class="eyebrow">New Launch · TikTok Shop US</div>
     <h1>PRO2X</h1>
     <p class="tagline">Own your glow. The next generation of d'Alba is almost here — and you're launching it with us.</p>
@@ -256,6 +335,22 @@ document.querySelectorAll('.copy-btn').forEach(btn=>{
     setTimeout(()=>{ btn.textContent = orig; btn.classList.remove('copied'); }, 1600);
   });
 });
+
+/* ===== 초대장 오픈 ===== */
+const invite = document.getElementById('invite');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function openInvite(){ invite.classList.add('open'); }
+document.getElementById('sealBtn').addEventListener('click', openInvite);
+if(reduceMotion){ openInvite(); }
+else { setTimeout(()=>{ if(!invite.classList.contains('open')) openInvite(); }, 3200); } // 안 눌러도 3.2초 뒤 자동 오픈
+
+/* ===== 스크롤 시 섹션 떠오르기 ===== */
+if(!reduceMotion && 'IntersectionObserver' in window){
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: .12 });
+  document.querySelectorAll('section, .hero').forEach(el=>{ el.classList.add('reveal'); io.observe(el); });
+}
 </script>
 </body>
 </html>
