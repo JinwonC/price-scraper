@@ -16,6 +16,14 @@
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.6;}
+  /* 은은하게 흐르는 화이트·골드 배경 */
+  body::before{content:"";position:fixed;inset:-30%;z-index:-1;pointer-events:none;background:
+    radial-gradient(38% 30% at 18% 22%, rgba(201,165,92,.14), transparent 70%),
+    radial-gradient(32% 26% at 82% 55%, rgba(169,136,75,.11), transparent 70%),
+    radial-gradient(30% 24% at 50% 88%, rgba(216,185,120,.10), transparent 70%),
+    radial-gradient(26% 22% at 72% 14%, rgba(255,255,255,.65), transparent 70%);
+    animation:bgFloat 22s ease-in-out infinite alternate;}
+  @keyframes bgFloat{from{transform:translate3d(-2.5%,-1.5%,0) rotate(-2deg) scale(1);}to{transform:translate3d(2.5%,2%,0) rotate(2deg) scale(1.07);}}
   .wrap{max-width:560px;margin:0 auto;padding:0 20px 80px;}
 
   /* header */
@@ -58,9 +66,10 @@
   .timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:1.5px;background:var(--line);}
   .tl-item{position:relative;padding-bottom:26px;}
   .tl-item:last-child{padding-bottom:0;}
-  .tl-item::before{content:"";position:absolute;left:-24px;top:5px;width:11px;height:11px;border-radius:50%;background:var(--paper);border:2.5px solid var(--gold);}
+  .tl-item::before{content:"";position:absolute;left:-24px;top:9px;width:11px;height:11px;border-radius:50%;background:var(--paper);border:2.5px solid var(--gold);}
   .tl-item.major::before{background:var(--gold);}
-  .tl-date{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--gold);letter-spacing:.06em;}
+  .tl-date{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;color:#fff;letter-spacing:.08em;background:linear-gradient(120deg,#B8934F,#8F6B25);padding:5px 13px;border-radius:8px;box-shadow:0 2px 8px rgba(169,136,75,.35);margin-bottom:4px;}
+  .tl-item.major .tl-date{background:linear-gradient(120deg,#2A2517,#14120E);color:#D8B978;font-size:15px;}
   .tl-title{font-size:15px;font-weight:600;margin:2px 0;}
   .tl-desc{font-size:13px;color:var(--ink-soft);}
 
@@ -103,11 +112,12 @@
   .l-date{font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.22em;color:var(--gold);margin-top:9px;text-transform:uppercase;}
   .env-front{position:absolute;left:0;right:0;bottom:0;height:62%;background:linear-gradient(180deg,#EAE2CE,#DDD3B8);border-radius:0 0 10px 10px;clip-path:polygon(0 0,50% 34%,100% 0,100% 100%,0 100%);z-index:3;}
   .env-flap{position:absolute;left:0;right:0;top:0;height:56%;background:linear-gradient(180deg,#E4DBC5,#D6CBAC);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top center;z-index:4;transition:transform .7s ease, z-index 0s .7s;backface-visibility:hidden;border-radius:10px 10px 0 0;}
-  .seal{position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:47% 53% 51% 49%/52% 48% 53% 47%;background:radial-gradient(circle at 35% 28%,#D9B76F,#8F6B25 72%);z-index:5;border:none;color:#FDF8EC;font-family:'Marcellus',serif;font-size:19px;letter-spacing:.02em;cursor:pointer;box-shadow:0 5px 16px rgba(0,0,0,.45), inset 0 2px 6px rgba(255,255,255,.4), inset 0 -3px 8px rgba(0,0,0,.25);transition:transform .45s, opacity .45s;animation:sealPulse 2.4s ease-in-out infinite;}
+  .seal{position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:47% 53% 51% 49%/52% 48% 53% 47%;background:radial-gradient(circle at 35% 28%,#D9B76F,#8F6B25 72%);z-index:5;border:none;color:#FDF8EC;font-family:'Inter',sans-serif;font-size:26px;font-weight:600;cursor:pointer;box-shadow:0 5px 16px rgba(0,0,0,.45), inset 0 2px 6px rgba(255,255,255,.4), inset 0 -3px 8px rgba(0,0,0,.25);transition:transform .45s, opacity .45s;animation:sealPulse 2.4s ease-in-out infinite;}
   @keyframes sealPulse{0%,100%{box-shadow:0 5px 16px rgba(0,0,0,.45), inset 0 2px 6px rgba(255,255,255,.4), inset 0 -3px 8px rgba(0,0,0,.25), 0 0 0 0 rgba(201,165,92,.45);}50%{box-shadow:0 5px 16px rgba(0,0,0,.45), inset 0 2px 6px rgba(255,255,255,.4), inset 0 -3px 8px rgba(0,0,0,.25), 0 0 0 14px rgba(201,165,92,0);}}
   .invite.open .env-flap{transform:rotateX(180deg);z-index:1;}
   .invite.open .letter{transform:translateY(-72%) scale(1.14);opacity:1;z-index:6;box-shadow:0 18px 42px rgba(0,0,0,.5);}
   .invite.open .seal{transform:translate(-50%,-50%) scale(.15) rotate(30deg);opacity:0;pointer-events:none;animation:none;}
+  .seal-arr{display:inline-block;animation:bounceArr 1.6s infinite;}
   .inv-tap{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#8D8672;margin-top:88px;transition:opacity .4s;}
   .invite.open .inv-tap{opacity:0;}
   .inv-cta{position:absolute;left:0;right:0;bottom:26px;opacity:0;transform:translateY(8px);transition:opacity .8s .9s, transform .8s .9s;pointer-events:none;}
@@ -128,6 +138,8 @@
     .l-title,.hero h1{animation:none;-webkit-background-clip:initial;background-clip:initial;background:none;color:inherit;}
     .hero h1{color:#F5F2EA;}
     .seal{animation:none;}
+    .seal-arr{animation:none;}
+    body::before{animation:none;}
     .sp{animation:none;opacity:.3;}
     .reveal{opacity:1;transform:none;transition:none;}
     .env-flap,.letter,.inv-cta{transition:none;}
@@ -144,6 +156,14 @@
 </style>
 </head>
 <body>
+
+<!-- 전체 페이지에 떠다니는 금색 반짝임 (콘텐츠 뒤) -->
+<div aria-hidden="true" style="position:fixed;inset:0;z-index:-1;pointer-events:none;">
+  <span class="sp" style="top:16%;left:5%;font-size:13px;animation-delay:.4s;">✦</span>
+  <span class="sp" style="top:38%;right:6%;font-size:10px;animation-delay:1.3s;">✧</span>
+  <span class="sp" style="top:62%;left:8%;font-size:9px;animation-delay:2.2s;">✦</span>
+  <span class="sp" style="top:80%;right:10%;font-size:12px;animation-delay:.8s;">✧</span>
+</div>
 
 <!-- ===== 초대장 인트로 ===== -->
 <div class="invite" id="invite">
@@ -170,17 +190,16 @@
       </div>
       <div class="env-front"></div>
       <div class="env-flap"></div>
-      <button class="seal" id="sealBtn" aria-label="Open invitation">d'A</button>
+      <button class="seal" id="sealBtn" aria-label="Scroll down to open"><span class="seal-arr">↓</span></button>
     </div>
   </div>
 
-  <div class="inv-tap" id="invTap">Tap the seal to open</div>
+  <div class="inv-tap" id="invTap">Scroll down to open</div>
   <div class="inv-cta"><a href="#hero">Your creator brief awaits<span class="arr">↓</span></a></div>
 </div>
 
-<div class="topbar"><div class="topbar-in">
-  <div class="brand"><img src="dalba-logo.png" alt="d'Alba" style="height:21px;display:block;"><small>PRO2X Creator Program</small></div>
-  <a href="#kit">Content Kit ↓</a>
+<div class="topbar"><div class="topbar-in" style="justify-content:center;">
+  <div class="brand"><img src="dalba-logo.png" alt="d'Alba" style="height:21px;display:block;"></div>
 </div></div>
 
 <div class="wrap">
@@ -188,7 +207,6 @@
   <div class="hero" id="hero">
     <div class="eyebrow">New Launch · TikTok Shop US</div>
     <h1>PRO2X</h1>
-    <p class="tagline">Own your glow. The next generation of d'Alba is almost here — and you're launching it with us.</p>
     <div class="countdown" id="countdown">
       <div class="cd-box"><div class="n" id="cdD">–</div><div class="l">Days</div></div>
       <div class="cd-box"><div class="n" id="cdH">–</div><div class="l">Hours</div></div>
@@ -212,8 +230,8 @@
       <div class="timeline">
         <div class="tl-item">
           <div class="tl-date">SEP 15 – SEP 20</div>
-          <div class="tl-title">Teaser video (1 video) — must post in this window</div>
-          <div class="tl-desc">Posting within this window is <b>mandatory</b> — and the earlier you post, the more the algorithm works in your favor. <b>⚠ You must tag the product in your teaser too.</b> When PRO2X launches, your tagged teaser automatically turns into a <b>Shoppable video</b>.</div>
+          <div class="tl-title">Teaser video (1 video) — must post during this period</div>
+          <div class="tl-desc">Posting during this period is <b>mandatory</b> — and the earlier you post, the more the algorithm works in your favor. <b>⚠ You must tag the product in your teaser too.</b> When PRO2X launches, your tagged teaser automatically turns into a <b>Shoppable video</b>.</div>
         </div>
         <div class="tl-item major">
           <div class="tl-date">SEP 21</div>
@@ -222,8 +240,7 @@
         </div>
         <div class="tl-item">
           <div class="tl-date">SEP 21 – SEP 30</div>
-          <div class="tl-title">Main content window</div>
-          <div class="tl-desc">Full review / routine video with the product tagged. This is the hero content — post between 6–9 PM ET if possible.</div>
+          <div class="tl-title">Main content period</div>
         </div>
       </div>
     </div>
@@ -278,8 +295,7 @@
     <div class="card" style="margin-top:12px;">
       <div class="step"><div class="num">1</div><div><b>Add PRO2X to your Showcase</b><span>TikTok app → <span class="chip">Profile</span> → <span class="chip">TikTok Shop for Creator</span> → <span class="chip">Manage Showcase</span> → <span class="chip">Add products</span> → search <span class="chip">First Spray Serum PRO 2X</span> and add it. <b>Can't find the product?</b> If you haven't received your Target Invitation yet, it may not show up in search — if you run into this (or any other issue), message us and we'll sort it out right away.</span></div></div>
       <div class="step"><div class="num">2</div><div><b>Tag it when you post</b><span>On the video posting screen, tap <span class="chip">Add link</span> → <span class="chip">Product</span> → select <b>First Spray Serum PRO 2X</b> from your Showcase.</span></div></div>
-      <div class="step"><div class="num">3</div><div><b>Check the yellow cart</b><span>After posting, confirm the yellow shopping cart icon appears on your video. No cart = no commission, so double-check!</span></div></div>
-      <div class="step"><div class="num">4</div><div><b>Pin your video</b><span>Pin the main video to the top of your profile through launch week for maximum traffic.</span></div></div>
+      <div class="step"><div class="num">3</div><div><b>Check the orange cart</b><span>After posting, confirm the orange shopping cart icon appears on your video. No cart = no commission, so double-check!</span></div></div>
     </div>
   </section>
 
@@ -287,7 +303,7 @@
   <section>
     <div class="help">
       <b>Questions?</b><br>
-      Reach out to your d'Alba partner manager anytime — DM us on TikTok <span style="font-family:'JetBrains Mono',monospace;">@dalba.official</span> or reply in your collab thread. We'll get you sorted within 24h.
+      Reach out to your d'Alba partner manager anytime!
     </div>
   </section>
 
@@ -340,9 +356,22 @@ document.querySelectorAll('.copy-btn').forEach(btn=>{
 const invite = document.getElementById('invite');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 function openInvite(){ invite.classList.add('open'); }
-document.getElementById('sealBtn').addEventListener('click', openInvite);
+document.getElementById('sealBtn').addEventListener('click', openInvite); // 눌러도 열림(보너스)
 if(reduceMotion){ openInvite(); }
-else { setTimeout(()=>{ if(!invite.classList.contains('open')) openInvite(); }, 3200); } // 안 눌러도 3.2초 뒤 자동 오픈
+else {
+  // 스크롤을 시작하면 자연스럽게 봉투가 열린다
+  const onScrollIntent = ()=>{ openInvite(); detach(); };
+  const onScrollPos = ()=>{ if(window.scrollY > 24){ openInvite(); detach(); } };
+  function detach(){
+    window.removeEventListener('wheel', onScrollIntent);
+    window.removeEventListener('touchmove', onScrollIntent);
+    window.removeEventListener('scroll', onScrollPos);
+  }
+  window.addEventListener('wheel', onScrollIntent, {passive:true});
+  window.addEventListener('touchmove', onScrollIntent, {passive:true});
+  window.addEventListener('scroll', onScrollPos, {passive:true});
+  setTimeout(()=>{ if(!invite.classList.contains('open')) openInvite(); }, 4500); // 가만히 있어도 자동 오픈
+}
 
 /* ===== 스크롤 시 섹션 떠오르기 ===== */
 if(!reduceMotion && 'IntersectionObserver' in window){
