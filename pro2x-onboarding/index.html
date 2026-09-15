@@ -255,8 +255,8 @@
     <div class="cd-cap" id="cdCap">Until official launch</div>
   </div>
 
-  <!-- 01 -->
-  <section id="about">
+  <!-- 01 (티저 모드에서만 — 런칭 영상 단계 크리에이터는 이미 제품을 안다) -->
+  <section id="about" class="only-teaser">
     <div class="sec-num">01 · The Product</div>
     <h2>What is PRO2X?</h2>
     <img src="pro2x-product.png" alt="d'Alba White Truffle First Spray Serum Pro 2X Peptide — Peptide Exosome 10%, 15 Vegan Oils, Collagen Water 70%, Trufferol" style="width:100%;border-radius:14px;border:1px solid var(--line);display:block;">
@@ -442,6 +442,18 @@ function setMode(m){
   document.body.classList.remove('mode-teaser','mode-main');
   document.body.classList.add('mode-'+m);
   document.querySelectorAll('.mode-switch button').forEach(b=>b.classList.toggle('active', b.dataset.mode===m));
+  renumberSections();
+}
+/* 모드에 따라 보이는 섹션만 01, 02, ... 순서로 번호를 다시 매긴다 */
+function renumberSections(){
+  let n = 0;
+  document.querySelectorAll('.wrap section').forEach(sec=>{
+    const el = sec.querySelector('.sec-num');
+    if(!el) return;
+    if(getComputedStyle(sec).display === 'none') return;
+    n++;
+    el.textContent = String(n).padStart(2,'0') + ' · ' + el.textContent.split('·')[1].trim();
+  });
 }
 document.querySelectorAll('.ch-card').forEach(btn=>{
   btn.addEventListener('click', ()=>{
