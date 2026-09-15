@@ -111,6 +111,10 @@
   .step b{display:block;font-size:14.5px;margin-bottom:2px;}
   .step span{font-size:13px;color:var(--ink-soft);}
   .chip{display:inline-block;background:var(--paper-deep);border-radius:6px;padding:1px 7px;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--ink);}
+  .ht-part{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:24px 0 2px;}
+  .ht-title{font-family:'Marcellus',serif;font-size:19px;margin:0 0 2px;}
+  .ht-sub{font-size:12px;color:var(--ink-soft);margin-bottom:12px;}
+  .ht-title + .card, .ht-sub + .card{margin-top:8px;}
 
   /* help */
   .draft-btn{display:inline-block;margin-top:14px;background:linear-gradient(120deg,#B8934F,#8F6B25);color:#fff;font-size:15px;font-weight:700;letter-spacing:.03em;padding:14px 30px;border-radius:30px;text-decoration:none;box-shadow:0 6px 18px rgba(169,136,75,.4);transition:transform .15s, box-shadow .15s;}
@@ -357,15 +361,33 @@
       Tagging is required on your teaser as well, not just the main video. The moment PRO2X launches on <b>Sep 21</b>, every tagged video automatically becomes a <b>Shoppable video</b> — with GMV MAX ads pushing traffic (and commission) straight to it. No tag = no cart = no commission.
     </div>
 
+    <!-- Part 1 · Product Showcase 등록 -->
+    <div class="ht-part">Part 1 · Product Showcase</div>
+    <div class="ht-title">Register your Product Showcase</div>
+    <div class="ht-sub">For creators who received the <b>Target Invitation</b></div>
+
+    <!-- Showcase 튜토리얼 영상: 파일 받으면 여기 <video> 로 교체 -->
+    <div class="card" id="showcaseVideoSlot" style="text-align:center;padding:34px 20px;background:var(--paper-deep);">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);">▶ Step-by-step video</div>
+      <div style="font-size:13px;color:var(--ink-soft);margin-top:6px;">Tutorial video coming soon</div>
+    </div>
+
+    <div class="card" style="margin-top:12px;">
+      <div class="step"><div class="num">1</div><div><b>Add PRO2X to your Showcase</b><span>TikTok app → <span class="chip">Profile</span> → <span class="chip">TikTok Shop for Creator</span> → <span class="chip">Manage Showcase</span> → <span class="chip">Add products</span> → search <span class="chip">First Spray Serum PRO 2X</span> and add it. <b>Can't find the product?</b> If you haven't received your Target Invitation yet, it may not show up in search — if you run into this (or any other issue), message us and we'll sort it out right away.</span></div></div>
+    </div>
+
+    <!-- Part 2 · Product Tagging -->
+    <div class="ht-part">Part 2 · Product Tagging</div>
+    <div class="ht-title">Tag PRO2X in your video</div>
+
     <div class="card" style="text-align:center;padding:16px;">
       <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:10px;">▶ Watch: how to tag PRO2X</div>
       <video controls playsinline preload="metadata" src="tagging-tutorial.mp4" style="width:100%;max-width:300px;border-radius:12px;display:block;margin:0 auto;background:#000;"></video>
     </div>
 
     <div class="card" style="margin-top:12px;">
-      <div class="step"><div class="num">1</div><div><b>Add PRO2X to your Showcase</b><span>TikTok app → <span class="chip">Profile</span> → <span class="chip">TikTok Shop for Creator</span> → <span class="chip">Manage Showcase</span> → <span class="chip">Add products</span> → search <span class="chip">First Spray Serum PRO 2X</span> and add it. <b>Can't find the product?</b> If you haven't received your Target Invitation yet, it may not show up in search — if you run into this (or any other issue), message us and we'll sort it out right away.</span></div></div>
-      <div class="step"><div class="num">2</div><div><b>Tag it when you post</b><span>On the video posting screen, tap <span class="chip">Add link</span> → <span class="chip">Product</span> → select <b>First Spray Serum PRO 2X</b> from your Showcase.</span></div></div>
-      <div class="step"><div class="num">3</div><div><b>Check the orange cart</b><span>After posting, confirm the orange shopping cart icon appears on your video. No cart = no commission, so double-check!</span></div></div>
+      <div class="step"><div class="num">1</div><div><b>Tag it when you post</b><span>On the video posting screen, tap <span class="chip">Add link</span> → <span class="chip">Product</span> → select <b>First Spray Serum PRO 2X</b> from your Showcase.</span></div></div>
+      <div class="step"><div class="num">2</div><div><b>Check the orange cart</b><span>After posting, confirm the orange shopping cart icon appears on your video. No cart = no commission, so double-check!</span></div></div>
     </div>
   </section>
 
