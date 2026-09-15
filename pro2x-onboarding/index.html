@@ -26,6 +26,24 @@
   @keyframes bgFloat{from{transform:translate3d(-2.5%,-1.5%,0) rotate(-2deg) scale(1);}to{transform:translate3d(2.5%,2%,0) rotate(2deg) scale(1.07);}}
   .wrap{max-width:560px;margin:0 auto;padding:0 20px 80px;}
 
+  /* ===== 영상 종류 선택 게이트 (Act 1 티저 / Act 2 런칭) ===== */
+  .topbar,.wrap{display:none;}
+  body.has-mode .topbar{display:block;}
+  body.has-mode .wrap{display:block;}
+  body.mode-teaser .only-main{display:none!important;}
+  body.mode-main .only-teaser{display:none!important;}
+  .chooser{min-height:100svh;background:radial-gradient(130% 100% at 50% 100%, #201C13 0%, #14120E 62%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 24px;text-align:center;}
+  .ch-eyebrow{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);}
+  .chooser h2{font-family:'Marcellus',serif;color:#F5F2EA;font-size:27px;font-weight:400;margin:12px 0 28px;line-height:1.4;letter-spacing:.02em;}
+  .ch-card{display:block;width:min(340px,100%);background:linear-gradient(180deg,#FDFBF4,#F1EBDA);border:1px solid rgba(201,165,92,.65);border-radius:14px;padding:18px 22px;margin-bottom:14px;cursor:pointer;text-align:left;transition:transform .15s, box-shadow .15s;font-family:'Inter',sans-serif;}
+  .ch-card:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.4);}
+  .ch-act{display:block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);}
+  .ch-name{display:block;font-family:'Marcellus',serif;font-size:23px;color:#1A1813;margin:3px 0 2px;}
+  .ch-date{display:block;font-size:12px;color:var(--ink-soft);}
+  .mode-switch{display:flex;gap:4px;background:var(--paper-deep);padding:3px;border-radius:20px;}
+  .mode-switch button{border:none;background:none;font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);padding:5px 10px;border-radius:16px;cursor:pointer;}
+  .mode-switch button.active{background:var(--gold);color:#fff;}
+
   /* header */
   .topbar{position:sticky;top:0;z-index:10;background:rgba(251,250,246,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
   .topbar-in{max-width:560px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:13px 20px;}
@@ -197,11 +215,31 @@
   </div>
 
   <div class="inv-tap" id="invTap">Scroll down to open</div>
-  <div class="inv-cta"><a href="#hero">Your creator brief awaits<span class="arr">↓</span></a></div>
+  <div class="inv-cta"><a href="#chooser">Your creator brief awaits<span class="arr">↓</span></a></div>
 </div>
 
-<div class="topbar"><div class="topbar-in" style="justify-content:center;">
+<!-- ===== 영상 종류 선택 ===== -->
+<div class="chooser" id="chooser">
+  <div class="ch-eyebrow">Your Creator Brief</div>
+  <h2>Which video are you<br>working on?</h2>
+  <button class="ch-card" data-mode="teaser">
+    <span class="ch-act">Act 1</span>
+    <span class="ch-name">The Teaser</span>
+    <span class="ch-date">SEP 15 – 20 · build the hype before launch</span>
+  </button>
+  <button class="ch-card" data-mode="main">
+    <span class="ch-act">Act 2</span>
+    <span class="ch-name">The Launch</span>
+    <span class="ch-date">SEP 21 – 30 · main video, shop is live</span>
+  </button>
+</div>
+
+<div class="topbar"><div class="topbar-in">
   <div class="brand"><img src="dalba-logo.png" alt="d'Alba" style="height:21px;display:block;"></div>
+  <div class="mode-switch">
+    <button data-mode="teaser">Act 1 · Teaser</button>
+    <button data-mode="main">Act 2 · Launch</button>
+  </div>
 </div></div>
 
 <div class="wrap">
@@ -230,7 +268,7 @@
     <h2>Posting Schedule</h2>
     <div class="card">
       <div class="timeline">
-        <div class="tl-item">
+        <div class="tl-item only-teaser">
           <div class="tl-date">SEP 15 – SEP 20</div>
           <div class="tl-title">Teaser video (1 video) — must post during this period</div>
           <div class="tl-desc">Posting during this period is <b>mandatory</b> — and the earlier you post, the more the algorithm works in your favor. <b>⚠ You must tag the product in your teaser too.</b> When PRO2X launches, your tagged teaser automatically turns into a <b>Shoppable video</b>.</div>
@@ -240,9 +278,10 @@
           <div class="tl-title">🚀 Product launch</div>
           <div class="tl-desc">PRO2X goes live on d'Alba's TikTok Shop — and we go heavy on GMV MAX ads from day one, pushing paid traffic to your tagged videos. Every tagged video becomes shoppable.</div>
         </div>
-        <div class="tl-item">
+        <div class="tl-item only-main">
           <div class="tl-date">SEP 21 – SEP 30</div>
-          <div class="tl-title">Main content period</div>
+          <div class="tl-title">Main video (1 video) — must post during this period</div>
+          <div class="tl-desc">Your main PRO2X video, with the product tagged. The shop is live, your promo code works, and GMV MAX is pushing traffic — this is the moment.</div>
         </div>
       </div>
     </div>
@@ -265,15 +304,26 @@
     <div class="sec-num">04 · Content Kit</div>
     <h2>Caption, Tags &amp; Code</h2>
 
-    <div class="card">
+    <div class="card only-teaser">
       <div class="kit-label">Caption — must <button class="copy-btn" data-copy="captionText">Copy</button></div>
-      <p style="font-size:13px;color:var(--ink-soft);margin:0 0 10px;">Your caption <b style="color:var(--ink);">must hint at the "coming soon" product launch</b> and mention <span class="chip">@dalba_global</span>. Write it in your own voice — here's an example:</p>
+      <p style="font-size:13px;color:var(--ink-soft);margin:0 0 10px;">Your teaser caption <b style="color:var(--ink);">must hint at the "coming soon" product launch</b> and mention <span class="chip">@dalba_global</span>. Write it in your own voice — here's an example:</p>
       <div class="kit-text" id="captionText">Something new &amp; exciting is coming from @dalba_global ✨</div>
     </div>
 
-    <div class="card">
+    <div class="card only-teaser">
       <div class="kit-label">Hashtags — required <button class="copy-btn" data-copy="tagsText">Copy</button></div>
       <div class="kit-text" id="tagsText">#dalbaPRO2X #septemberstockup #comingsoon #koreanskincare #peptideExosome</div>
+    </div>
+
+    <div class="card only-main">
+      <div class="kit-label">Caption — must <button class="copy-btn" data-copy="captionMainText">Copy</button></div>
+      <p style="font-size:13px;color:var(--ink-soft);margin:0 0 10px;">Your main video caption must mention <span class="chip">@dalba_global</span> and include your promo code <span class="chip">DALBAPRO2X</span>. Honest review energy, in your own voice — here's an example:</p>
+      <div class="kit-text" id="captionMainText">The NEW @dalba_global PRO2X is finally here ✨ my honest review — and yes, the glow is real. It's live on TikTok Shop now, grab yours with my code DALBAPRO2X 💛</div>
+    </div>
+
+    <div class="card only-main">
+      <div class="kit-label">Hashtags — required <button class="copy-btn" data-copy="tagsMainText">Copy</button></div>
+      <div class="kit-text" id="tagsMainText">#dalbaPRO2X #septemberstockup #koreanskincare #peptideExosome</div>
     </div>
 
     <div class="card">
@@ -386,6 +436,23 @@ else {
   window.addEventListener('scroll', onScrollPos, {passive:true});
   setTimeout(()=>{ if(!invite.classList.contains('open')) openInvite(); }, 4500); // 가만히 있어도 자동 오픈
 }
+
+/* ===== 영상 종류 선택 (Act 1 티저 / Act 2 런칭) ===== */
+function setMode(m){
+  document.body.classList.add('has-mode');
+  document.body.classList.remove('mode-teaser','mode-main');
+  document.body.classList.add('mode-'+m);
+  document.querySelectorAll('.mode-switch button').forEach(b=>b.classList.toggle('active', b.dataset.mode===m));
+}
+document.querySelectorAll('.ch-card').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    setMode(btn.dataset.mode);
+    document.getElementById('hero').scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth'});
+  });
+});
+document.querySelectorAll('.mode-switch button').forEach(btn=>{
+  btn.addEventListener('click', ()=>setMode(btn.dataset.mode));
+});
 
 /* ===== 스크롤 시 섹션 떠오르기 ===== */
 if(!reduceMotion && 'IntersectionObserver' in window){
