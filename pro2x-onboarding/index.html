@@ -69,6 +69,15 @@
   p.lead{font-size:14.5px;color:var(--ink);margin:0 0 14px;}
   .muted{color:var(--ink-soft);}
 
+  /* 제품 정보 캐러셀 */
+  .carousel{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+  .carousel::-webkit-scrollbar{display:none;}
+  .carousel img{width:100%;flex-shrink:0;scroll-snap-align:start;border-radius:14px;border:1px solid var(--line);display:block;}
+  .car-nav{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:12px;}
+  .car-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--card);font-size:19px;color:var(--ink);cursor:pointer;line-height:1;padding:0;}
+  .car-btn:hover{border-color:var(--gold);color:var(--gold);}
+  .car-count{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--ink-soft);letter-spacing:.12em;}
+
   .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;}
   .card + .card{margin-top:12px;}
 
@@ -260,6 +269,33 @@
     </div>
     <div class="cd-cap" id="cdCap">Until official launch</div>
   </div>
+
+  <!-- 00 (런칭 모드 전용) — 제품 정보 캐러셀 -->
+  <section id="reveal" class="only-main">
+    <div class="sec-num" data-fixed>00 · Product Information</div>
+    <h2>PRO2X — Revealed</h2>
+    <div class="carousel" id="revealCar">
+      <img src="reveal/reveal-01.jpg" alt="PRO2X product information — page 1" loading="eager">
+      <img src="reveal/reveal-02.jpg" alt="PRO2X product information — page 2" loading="lazy">
+      <img src="reveal/reveal-03.jpg" alt="PRO2X product information — page 3" loading="lazy">
+      <img src="reveal/reveal-04.jpg" alt="PRO2X product information — page 4" loading="lazy">
+      <img src="reveal/reveal-05.jpg" alt="PRO2X product information — page 5" loading="lazy">
+      <img src="reveal/reveal-06.jpg" alt="PRO2X product information — page 6" loading="lazy">
+      <img src="reveal/reveal-07.jpg" alt="PRO2X product information — page 7" loading="lazy">
+      <img src="reveal/reveal-08.jpg" alt="PRO2X product information — page 8" loading="lazy">
+      <img src="reveal/reveal-09.jpg" alt="PRO2X product information — page 9" loading="lazy">
+      <img src="reveal/reveal-10.jpg" alt="PRO2X product information — page 10" loading="lazy">
+      <img src="reveal/reveal-11.jpg" alt="PRO2X product information — page 11" loading="lazy">
+      <img src="reveal/reveal-12.jpg" alt="PRO2X product information — page 12" loading="lazy">
+      <img src="reveal/reveal-13.jpg" alt="PRO2X product information — page 13" loading="lazy">
+    </div>
+    <div class="car-nav">
+      <button class="car-btn" onclick="carMove(-1)" aria-label="Previous">‹</button>
+      <span class="car-count" id="carCount">1 / 13</span>
+      <button class="car-btn" onclick="carMove(1)" aria-label="Next">›</button>
+    </div>
+    <div style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px;">Swipe to explore →</div>
+  </section>
 
   <!-- 01 (티저 모드에서만 — 런칭 영상 단계 크리에이터는 이미 제품을 안다) -->
   <section id="about" class="only-teaser">
@@ -485,6 +521,7 @@ function renumberSections(){
   document.querySelectorAll('.wrap section').forEach(sec=>{
     const el = sec.querySelector('.sec-num');
     if(!el) return;
+    if(el.hasAttribute('data-fixed')) return;   // 00 · Product Information 은 번호 고정
     if(getComputedStyle(sec).display === 'none') return;
     n++;
     el.textContent = String(n).padStart(2,'0') + ' · ' + el.textContent.split('·')[1].trim();
@@ -499,6 +536,21 @@ document.querySelectorAll('.ch-card').forEach(btn=>{
 document.querySelectorAll('.mode-switch button').forEach(btn=>{
   btn.addEventListener('click', ()=>setMode(btn.dataset.mode));
 });
+
+/* ===== 제품 정보 캐러셀 ===== */
+const car = document.getElementById('revealCar');
+function carSlideW(){ return car.children[0].offsetWidth + 10; } // 이미지 폭 + gap
+function carIndex(){ return Math.round(car.scrollLeft / carSlideW()); }
+function carMove(d){
+  const total = car.children.length;
+  const next = Math.max(0, Math.min(total-1, carIndex()+d));
+  car.scrollTo({ left: next * carSlideW(), behavior: reduceMotion ? 'auto' : 'smooth' });
+}
+if(car){
+  const countEl = document.getElementById('carCount');
+  const total = car.children.length;
+  car.addEventListener('scroll', ()=>{ countEl.textContent = Math.min(total, carIndex()+1) + ' / ' + total; }, {passive:true});
+}
 
 /* ===== 스크롤 시 섹션 떠오르기 ===== */
 if(!reduceMotion && 'IntersectionObserver' in window){
