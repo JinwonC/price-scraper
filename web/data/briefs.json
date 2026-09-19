@@ -1909,12 +1909,12 @@
   ],
   "근거수치": [
    {
-    "항목": "안면(볼) 리프팅 개선",
+    "항목": "안면(볼) 리프팅",
     "값": "17.601%",
-    "조건": "1회 사용 후 즉각적"
+    "조건": "1회 · 즉각적·일시적"
    }
   ],
-  "시험조건": "1회 사용 후 즉각적인 효과, 개인차 있음",
+  "시험조건": "피엔케이피부임상연구센타 / 20명 / 1회 사용 직후 / 개인차 있음. 이 앰플 단독 기준입니다.",
   "사용법": [
    {
     "이름": "기본",
@@ -1932,10 +1932,76 @@
    }
   ],
   "주의": [
-   "**리프팅 수치는 '즉각적인(일시적)' 효과입니다.** 지속된다는 뜻이 아닙니다.",
-   "보르피린은 원료사(세더마) 성분입니다. 달바 독자 성분이 아닙니다.",
-   "용량이 두 가지(30ml·50ml)이고 가격 차이가 큽니다."
-  ]
+   "**17.601% 는 이 앰플 하나만 쓴 결과입니다.** '바르고 나면 바로 이만큼' 으로 말하세요.",
+   "**교안의 2주 수치는 보르피린 3종을 다 쓴 결과입니다.** 이 앰플에 붙이지 마세요.",
+   "보르피린은 프랑스 원료사 성분입니다. '프랑스 특허 성분을 5% 넣었다' 로 말하면 됩니다."
+  ],
+  "en": {
+   "lead": "A dense, pale-beige ampoule built around French patented Volufiline at 50,000ppm.",
+   "who": "Anyone with dry, rough skin that has lost its bounce — or who wakes with pillow creases that won't fade",
+   "certs": [
+    "Wrinkle care (functional cosmetic)",
+    "Italian V-Label vegan certification",
+    "German Dermatest",
+    "Low-irritation test completed in Korea"
+   ],
+   "ingredients": [
+    {
+     "name": "Volufiline",
+     "amount": "50,000ppm (5%)",
+     "role": "Sederma's patented firming ingredient. The point of the product."
+    },
+    {
+     "name": "Trufferol™",
+     "role": "d'Alba's patented firming ingredient."
+    },
+    {
+     "name": "Collagen extract · vegan ceramide",
+     "role": "Nourishment and barrier."
+    },
+    {
+     "name": "Panthenol · 8 hyaluronic acids",
+     "role": "Moisture."
+    }
+   ],
+   "figures": [
+    {
+     "label": "Cheek lifting",
+     "value": "17.601%",
+     "note": "one use · immediate, temporary"
+    }
+   ],
+   "testNote": "P&K Skin Clinical Research Center / 20 people / one use, immediate and temporary / individual variation. This one is the ampoule on its own.",
+   "howto": [
+    {
+     "name": "Basic",
+     "how": "Take a suitable amount with the dropper, spread it over the face and press it in."
+    },
+    {
+     "name": "Where it goes",
+     "how": "After toner, before cream. It's dense, so a little goes a long way."
+    }
+   ],
+   "say": [
+    {
+     "line": "One use and cheek lifting improved 17.601%.",
+     "why": "This figure is for the ampoule alone. Say 'immediately after one use'."
+    },
+    {
+     "line": "French patented firming ingredient at 5%.",
+     "why": "Volufiline at 50,000ppm, patented by the supplier. Solid ground."
+    },
+    {
+     "line": "Good for pillow creases that stick around in the morning.",
+     "why": "The deck names it directly. It's the kind of specific complaint viewers recognise."
+    }
+   ],
+   "careful": [
+    "**17.601% is what this ampoule did on its own.** 'Right after you put it on' is the accurate framing.",
+    "**The deck's two-week figures come from using all three Volufiline products.** Don't attach them to this ampoule.",
+    "Volufiline is a supplier's ingredient. 'A French patented firming ingredient at 5%' is the way to put it."
+   ]
+  }
  },
  "intensive-vegan-volufiline-spray-ampoule": {
   "한줄": "보르피린 앰플의 스프레이 버전. 투명한 보르피린층과 베이지색 영양 앰플층이 나뉘어 있어 흔들어 씁니다.",
@@ -2003,7 +2069,75 @@
     "값": "6.36% 개선",
     "조건": "2주 · 3종 모두 사용"
    }
-  ]
+  ],
+  "en": {
+   "lead": "The spray version of the Volufiline ampoule. A clear Volufiline layer and a beige nourishing layer, separated until you shake it.",
+   "who": "Anyone who wants firming care without decanting serum into their hands",
+   "certs": [
+    "Wrinkle care (functional cosmetic)",
+    "This product alone — immediate (temporary) cheek lifting trial completed after one use",
+    "Italian V-Label vegan certification",
+    "German Dermatest",
+    "Low-irritation test completed in Korea"
+   ],
+   "ingredients": [
+    {
+     "name": "Volufiline",
+     "amount": "50,000ppm (5%), Sederma, France",
+     "role": "The firming and lifting active. It's the clear layer you can see."
+    },
+    {
+     "name": "Trufferol™",
+     "role": "d'Alba's own firming ingredient."
+    },
+    {
+     "name": "Collagen extract · ceramide NP",
+     "role": "Nourishment and barrier."
+    }
+   ],
+   "figures": [
+    {
+     "label": "Crow's feet",
+     "value": "4.59% improved",
+     "note": "2 weeks · all three products"
+    },
+    {
+     "label": "Eye-area firmness",
+     "value": "6.77% improved",
+     "note": "2 weeks · all three products"
+    },
+    {
+     "label": "Cheek sagging",
+     "value": "6.36% improved",
+     "note": "2 weeks · all three products"
+    }
+   ],
+   "testNote": "Those three figures come from using all three Volufiline products in order — spray ampoule → ampoule → grinding cream. Korea Institute of Dermatological Sciences / 21 people / 2 weeks / individual variation. This product's own trial covers immediate (temporary) cheek lifting after one use, with no figure attached.",
+   "howto": [
+    {
+     "name": "Basic",
+     "how": "Shake up and down 3–5 times, then mist the whole face 4–5 times from 10–20cm with your eyes closed, and press it in."
+    }
+   ],
+   "say": [
+    {
+     "line": "It's in two layers, so you shake it first. The clear one is the Volufiline.",
+     "why": "Visible in the bottle, and it ties straight into how you use it."
+    },
+    {
+     "line": "They developed the pump around Asian face shapes so the spray angle actually covers the face.",
+     "why": "A design detail from the deck, and a real difference among mists."
+    },
+    {
+     "line": "There's a trial on this product by itself for lifting, too.",
+     "why": "Easy to confuse with the three-product study. The solo one covers immediate, temporary cheek lifting after a single use — that's the one to quote."
+    }
+   ],
+   "careful": [
+    "**The 4.59%, 6.77% and 6.36% figures come from using all three Volufiline products together** — spray ampoule, ampoule and grinding cream. They are not what this product does alone.",
+    "Volufiline is a supplier's ingredient. 'A French patented firming ingredient at 5%' is the way to put it."
+   ]
+  }
  },
  "white-truffle-intensive-volufiline-grinding-cream": {
   "한줄": "다이얼을 돌려 매일 새로 갈아 쓰는 리프팅 크림. 보르피린 라인의 마지막 단계입니다.",
@@ -2064,7 +2198,73 @@
    "**리프팅 11.271%는 '즉각적인(일시적)' 효과입니다.**",
    "**3종 병행 사용 시의 시험 결과와 이 제품 단독 결과를 섞어 말하면 안 됩니다.**",
    "12만 원대 제품입니다. 가격을 정확히 확인하고 말하세요."
-  ]
+  ],
+  "en": {
+   "lead": "A concentrated lifting cream you grind fresh from a sealed container each time, then spread with the silicone brush.",
+   "who": "Anyone who finds cream jars unhygienic, and wants a dense, firming night cream",
+   "certs": [
+    "Brightening + wrinkle care (dual functional claim)",
+    "Italian V-Label vegan certification",
+    "German Dermatest",
+    "Low-irritation test completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Volufiline",
+     "amount": "50,000ppm (5%)",
+     "role": "Sederma's patented firming ingredient. The point of the product."
+    },
+    {
+     "name": "Trufferol™",
+     "role": "d'Alba's patented firming ingredient."
+    },
+    {
+     "name": "Collagen extract · vegan ceramide",
+     "role": "Nourishment and barrier."
+    },
+    {
+     "name": "8 hyaluronic acids · d'Alba-8 Blending Oil",
+     "role": "Moisture and glow."
+    }
+   ],
+   "figures": [
+    {
+     "label": "Cheek lifting",
+     "value": "11.271%",
+     "note": "one use · immediate, temporary"
+    }
+   ],
+   "testNote": "P&K Skin Clinical Research Center / 20 people / one use, immediate and temporary / individual variation. This one is the cream on its own.",
+   "howto": [
+    {
+     "name": "Basic",
+     "how": "Turn the top clockwise to grind out cream, then spread it over the face and let it absorb."
+    },
+    {
+     "name": "First use",
+     "how": "It dispenses evenly after about 3–5 turns. Keep turning until it comes through."
+    }
+   ],
+   "say": [
+    {
+     "line": "One use and cheek lifting improved 11.271%.",
+     "why": "This figure is for the cream alone, no other product involved. Say 'immediately after one use'."
+    },
+    {
+     "line": "You grind it fresh every day, so air never touches the surface.",
+     "why": "The reason for the container. Show the dial on camera."
+    },
+    {
+     "line": "French patented firming ingredient at 5%.",
+     "why": "Volufiline at 50,000ppm. A supplier ingredient with an international patent, which makes it solid ground."
+    }
+   ],
+   "careful": [
+    "**The 11.271% figure is immediate and temporary.** 'Right after you use it' is the accurate framing.",
+    "**The two-week figures in the deck come from using all three Volufiline products together.** Don't attach them to this cream alone.",
+    "It dispenses unevenly on the first few turns. Tell buyers that up front."
+   ]
+  }
  },
  "italian-white-truffle-professional-repairing-hair-perfume-serum": {
   "한줄": "향이 주인공인 헤어 세럼. 핑크 오일 30%와 보습 세럼 70%가 나뉘어 있고 로제 프리지아 향이 납니다.",

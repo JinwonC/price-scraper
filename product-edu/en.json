@@ -722,5 +722,163 @@
    "How it works",
    "The gel"
   ]
+ },
+ "intensive-vegan-volufiline-spray-ampoule": {
+  "스펙": {
+   "용량": "50ml",
+   "기능성": "Wrinkle care (functional cosmetic)",
+   "타겟": "All skin types"
+  },
+  "한줄": "The spray version of the Volufiline ampoule — a clear Volufiline layer and a beige nourishing layer you shake together.",
+  "특징": [
+   {
+    "title": "A firming and lifting double layer that cares for the skin underneath",
+    "body": [
+     "A wrinkle care ampoule layered over the base leaves dry, rough skin full and comfortable.",
+     "Smooths and softens, bringing moisture and firmness to skin that has gone coarse."
+    ]
+   },
+   {
+    "title": "Volufiline at 50,000ppm, in its own transparent layer",
+    "body": [
+     "Volufiline sits at 5% in a clear layer, undiluted and visible.",
+     "Shake it and it mixes into the nourishing cream, misting on firm and bright."
+    ]
+   },
+   {
+    "title": "A fine mist from a pump built for the job",
+    "body": [
+     "A soft, fine spray angled to suit the face.",
+     "The pump was developed specifically for d'Alba, so the mist reaches the whole face quickly and evenly."
+    ]
+   },
+   {
+    "title": "Premium lifting, firming and moisture ingredients",
+    "body": [
+     "Lifting and firming: Volufiline 50,000ppm from Sederma, France; Trufferol™ (Italian white truffle + tocopherol).",
+     "Moisture: panthenol, hyaluronic acids, d'Alba-8 Blending Oil.",
+     "Barrier: vegan ceramide NP, collagen extract.",
+     "Base: MultiEX BSASM complex."
+    ]
+   },
+   {
+    "title": "No animal-derived ingredients",
+    "body": [
+     "Italian V-Label vegan certification against the full ingredient list.",
+     "German Dermatest and a low-irritation test in Korea, both completed."
+    ]
+   }
+  ],
+  "이미지": [
+   "Product shot",
+   "Held in hand",
+   "Two-week results summary",
+   "Texture, before and after shaking",
+   "Texture"
+  ]
+ },
+ "white-truffle-intensive-volufiline-ampoule": {
+  "스펙": {
+   "용량": "30ml · 50ml",
+   "기능성": "Wrinkle care (functional cosmetic)",
+   "타겟": "All skin types"
+  },
+  "한줄": "A concentrated beige ampoule with French patented Volufiline at 50,000ppm — lifting, nourishment and moisture in one step.",
+  "특징": [
+   {
+    "title": "Immediate lifting, with firmness, glow and nourishment",
+    "body": [
+     "Collagen and Volufiline bring their firming energy to skin that has lost its hold, leaving it glossy and taut."
+    ]
+   },
+   {
+    "title": "Volufiline from Sederma, France, at 50,000ppm",
+    "body": [
+     "Sederma's firming ingredient at 50,000ppm, rich enough to help skin feel taut."
+    ]
+   },
+   {
+    "title": "A dense, pale-beige ampoule texture",
+    "body": [
+     "A concentrated emulsion that sinks in wet and finishes tight.",
+     "Full moisture for skin that has gone dry."
+    ]
+   },
+   {
+    "title": "Premium moisture and firming ingredients, with a wrinkle care claim",
+    "body": [
+     "Trufferol™, Italian white truffle and d'Alba's eight plant oils nourish and hydrate at once.",
+     "Volume and freshness: Volufiline at 50,000ppm.",
+     "Firmness: Trufferol™ (white truffle + tocopherol), Italian white truffle, collagen extract, vegan ceramide.",
+     "Moisture: panthenol, 8 hyaluronic acids, d'Alba-8 Blending Oil.",
+     "Soothing: centella extract, Total Solution Max Complex."
+    ]
+   },
+   {
+    "title": "No animal-derived ingredients",
+    "body": [
+     "Italian V-Label vegan certification against the full ingredient list.",
+     "German Dermatest and a low-irritation test in Korea, both completed."
+    ]
+   }
+  ],
+  "이미지": [
+   "Product shot",
+   "Two-week results summary",
+   "Cheek lifting improved 17.601% (after one use)",
+   "How to use the dropper",
+   "Texture"
+  ]
+ },
+ "white-truffle-intensive-volufiline-grinding-cream": {
+  "스펙": {
+   "용량": "45g",
+   "기능성": "Brightening + wrinkle care (dual functional claim)"
+  },
+  "한줄": "A concentrated lifting cream you grind fresh each day, with French patented Volufiline at 50,000ppm.",
+  "특징": [
+   {
+    "title": "Ground fresh each day, as much as you need",
+    "body": [
+     "Grind it fresh and spread it thin and even with the silicone brush.",
+     "A springy texture that grips the skin thinly and feels dense and firm going on.",
+     "An airtight container keeps the serum and its actives as fresh as the day it was made."
+    ]
+   },
+   {
+    "title": "Volufiline from Sederma, France, at 50,000ppm",
+    "body": [
+     "Sederma's firming ingredient at 50,000ppm, rich enough to help skin feel taut."
+    ]
+   },
+   {
+    "title": "Immediate lifting, with firmness, glow and nourishment together",
+    "body": [
+     "Immediate (temporary) cheek lifting improved 11.271%.",
+     "Firmness and lifting confirmed when all three Volufiline products are used together."
+    ]
+   },
+   {
+    "title": "Premium firming ingredients, with a dual functional claim",
+    "body": [
+     "Trufferol™, d'Alba's patented ingredient (white truffle + tocopherol).",
+     "Firmness: vegan collagen and Volufiline at 50,000ppm.",
+     "Glow and nourishment: collagen extract, vegan ceramide, 8 hyaluronic acids, d'Alba-8 Blending Oil."
+    ]
+   },
+   {
+    "title": "Effective, and still gentle",
+    "body": [
+     "German Dermatest, a completed low-irritation test and Italian V-Label vegan certification."
+    ]
+   }
+  ],
+  "이미지": [
+   "Texture",
+   "The container",
+   "Two-week results summary",
+   "Cheek lifting improved 11.271% (after one use)",
+   "Capsule image"
+  ]
  }
 }
