@@ -30,22 +30,18 @@ const L = {
   capacity: ["용량", "Size"],
   fn: ["기능성", "Functional claim"],
   target: ["타겟", "For"],
-  none: ["교안에 없음", "not in the deck"],
   featNote: [
-    "교안의 [제품 특징 및 베네핏] 을 그대로 옮긴 것입니다.",
-    "Taken from the deck's [features & benefits] block.",
+    "브랜드가 정리한 제품의 셀링 포인트입니다.",
+    "The brand's own selling points for this product.",
   ],
   etcNote: [
     "브리프에 다 넣기엔 긴 이야기들입니다. 성분이 무엇인지, 향이 어떻게 퍼지는지, 언제 쓰는 물건인지 — 방송 중에 질문이 들어올 만한 것들을 풀어 놓았습니다.",
     "The longer answers. What the ingredients actually are, how the scent moves, when you'd reach for it — the things that come up mid-stream.",
   ],
-  noImages: ["교안에 쓸 만한 이미지가 없습니다.", "No usable images in the deck."],
-  noFeat: ["교안에 특징 정리 내용이 없습니다.", "The deck has no features block."],
-  noEtc: ["이 제품은 아직 기타를 쓰지 않았습니다.", "Not written up yet."],
-  noBrief: [
-    "이 제품은 아직 브리프를 쓰지 않았습니다. 아래 기타 항목을 참고하세요.",
-    "No brief yet for this product. See the More section below.",
-  ],
+  noImages: ["준비 중입니다.", "Coming soon."],
+  noFeat: ["준비 중입니다.", "Coming soon."],
+  noEtc: ["준비 중입니다.", "Coming soon."],
+  noBrief: ["준비 중입니다. 아래 내용을 참고하세요.", "Coming soon — see below."],
 } as const;
 
 function BriefBlock({ brief }: { brief: Brief }) {
@@ -177,11 +173,13 @@ export default function ProductView({
   const en = p.en판 ?? {};
 
   // 가격·출시일은 사내 정보라 싣지 않는다. publish.py 에서 이미 걸러 둔다.
-  const spec: [string, string | undefined][] = [
-    [t(L.capacity[0], L.capacity[1]), t(p.스펙.용량, en.스펙?.용량)],
-    [t(L.fn[0], L.fn[1]), t(p.스펙.기능성, en.스펙?.기능성)],
-    [t(L.target[0], L.target[1]), t(p.스펙.타겟, en.스펙?.타겟)],
-  ];
+  const spec = (
+    [
+      [t(L.capacity[0], L.capacity[1]), t(p.스펙.용량, en.스펙?.용량)],
+      [t(L.fn[0], L.fn[1]), t(p.스펙.기능성, en.스펙?.기능성)],
+      [t(L.target[0], L.target[1]), t(p.스펙.타겟, en.스펙?.타겟)],
+    ] as [string, string | undefined][]
+  ).filter(([, v]) => v);
 
   const 특징 = t(
     p.특징.map((f) => ({ title: f.제목, body: f.설명 })),
@@ -205,9 +203,7 @@ export default function ProductView({
           {spec.map(([k, v]) => (
             <div key={k}>
               <dt>{k}</dt>
-              <dd className={v ? undefined : "pw-dd-none"}>
-                {v ?? t(L.none[0], L.none[1])}
-              </dd>
+              <dd>{v}</dd>
             </div>
           ))}
         </dl>

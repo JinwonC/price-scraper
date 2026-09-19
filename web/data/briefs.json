@@ -1,10 +1,12 @@
 {
  "_주": "사람이 직접 쓴 제품 브리프. build_products.py 가 덮어쓰지 않는다.",
  "_원칙": [
-  "크리에이터가 보는 화면이다. 전성분 나열, 시험성적서 번호, 보고서 코드는 넣지 않는다.",
-  "인증은 '어떤 인증이 있는지' 이름만 적는다. 인증서 내용은 교안 원문에 있다.",
+  "크리에이터가 보는 화면이다. 단정해서 쓴다.",
+  "'교안에 없다', '판독 못 했다', '확인 전에는' 은 쓰지 않는다. 애매하면 확실한 쪽만 적는다.",
+  "주의는 금지 목록이 아니다. 틀리면 문제가 되는 것만 짧게 적고, 대신 할 수 있는 말을 준다.",
   "수치는 교안에 인쇄된 그대로. 조건(1회/2주, 즉각적·일시적)을 반드시 붙인다.",
-  "교안에 없는 것은 쓰지 않는다. 대신 '주의' 에 없다고 적는다.",
+  "전성분 나열, 시험성적서 번호, 보고서 코드, 가격, 출시일은 넣지 않는다.",
+  "인증은 이름만 적는다.",
   "조향사 생년월일처럼 교안에 있는 개인정보는 옮기지 않는다."
  ],
  "vita-toning-serum-toner": {
@@ -164,10 +166,10 @@
    }
   ],
   "주의": [
-   "**피부 톤 개선 1.64% 는 아주 작은 수치입니다.** 주름 25.81% 와 나란히 말하면 오해를 삽니다.",
-   "**나이아신아마이드가 2%와 200,000ppm(=20%) 두 가지로 적혀 있습니다.**",
-   "'4만 개 캡슐'은 교안 표현입니다. 세어본 수치가 아닙니다.",
-   "나노 공법은 제조 방식입니다. 효과가 세 배라는 뜻이 아닙니다."
+   "**주름 25.81%, 기미·잡티 21.18% 두 숫자만 쓰세요.** 같은 시험의 피부톤 1.64% 를 같이 말하면 설득력이 떨어집니다.",
+   "**나이아신아마이드는 함량 없이 말하세요.** 교안 표기가 2% 와 200,000ppm 으로 엇갈립니다.",
+   "**교안의 '만족도 100%' 는 설문 결과입니다.** 측정값이 아니라 '보통 이상 긍정' 응답 비율이라 방송에서 쓰면 안 됩니다.",
+   "'4만 캡슐' 은 회사가 계산한 값입니다. '4만 개 정도' 로 말하세요."
   ],
   "근거수치": [
    {
@@ -269,10 +271,10 @@
     }
    ],
    "careful": [
-    "**Skin tone improved 1.64% — that is a very small number.** Saying it beside the 25.81% wrinkle figure invites misreading.",
-    "**Niacinamide is written as both 2% and 200,000ppm (= 20%) in the deck.** Those are ten times apart.",
-    "'40,000 capsules' is the deck's own figure, calculated internally and varying batch to batch. It is not a count anyone made.",
-    "The nano process is a manufacturing method. It does not mean the effect is three times stronger."
+    "**Use only two figures: wrinkles 25.81% and dark spots 21.18%.** Adding the same study's 1.64% on tone weakens the case.",
+    "**Mention niacinamide without a percentage.** The deck gives 2% in one place and 200,000ppm in another.",
+    "**The deck's '100% satisfaction' is a survey result** — the share who answered neutral-or-better, not a measurement. Don't use it on air.",
+    "'40,000 capsules' is a company estimate. Say 'around 40,000'."
    ]
   }
  },
@@ -457,8 +459,8 @@
    }
   ],
   "주의": [
-   "**1.71배·1.66배는 '손으로 바를 때 대비' 입니다.** 아무것도 안 했을 때와 비교한 값이 아닙니다.",
-   "갈바닉은 흡수를 돕는 기기 기능입니다. 의료기기가 아니고 치료 효과를 말할 수 없습니다."
+   "**1.71배·1.66배는 같은 크림을 손으로 바를 때와 비교한 값입니다.** '기기로 문지르면 손으로 바를 때보다 이만큼 낫다' 로 말하세요.",
+   "갈바닉은 흡수를 돕는 기능입니다. 시술이나 치료에 빗대지 마세요."
   ],
   "en": {
    "lead": "An eye cream with a galvanic vibrating tip on the end of the tube. You apply it and rub it in with the tip itself.",
@@ -517,8 +519,8 @@
     }
    ],
    "careful": [
-    "**1.71× and 1.66× are 'compared with applying by hand'.** They are not measured against doing nothing at all.",
-    "Galvanic here is a device function that helps absorption. It is not a medical device and you cannot claim a treatment effect."
+    "**1.71× and 1.66× compare the galvanic tip against applying the same cream by hand.** Say 'working it in with the tip beats using your fingers by this much'.",
+    "Galvanic here helps absorption. Don't liken it to a treatment or a procedure."
    ]
   }
  },
@@ -591,8 +593,8 @@
    }
   ],
   "주의": [
-   "**피부톤 개선 1.15%는 아주 작은 수치입니다.** 리프팅 수치와 나란히 말하면 오해를 삽니다.",
-   "**패키지가 두 가지입니다.** 구 패키지는 `AROMATIC SPRAY SERUM`, 현행은 `VITA TONING ANTI-AGING SERUM` 입니다."
+   "**리프팅 49.58%, 주름 25.81% 두 숫자만 쓰세요.** 같은 시험의 피부톤 1.15% 를 같이 말하면 전체가 의심스러워 보입니다.",
+   "**패키지가 두 가지입니다.** 구 패키지는 `AROMATIC SPRAY SERUM`, 현행은 `VITA TONING ANTI-AGING SERUM` 입니다. 같은 제품입니다."
   ],
   "en": {
    "lead": "A concentrated serum you mist on, with white truffle, collagen water and moisturising oil at 8% each.",
@@ -663,8 +665,8 @@
     }
    ],
    "careful": [
-    "**Skin tone improved 1.15% — that is a very small number.** Saying it in the same breath as the lifting figure invites misreading.",
-    "**There are two packages in circulation.** The old one reads `AROMATIC SPRAY SERUM`, the current one `VITA TONING ANTI-AGING SERUM`."
+    "**Use only the two figures: lifting 49.58% and wrinkles 25.81%.** Saying the same study's 1.15% on tone alongside them makes the whole set look shaky.",
+    "**Two packages are in circulation.** The old one reads `AROMATIC SPRAY SERUM`, the current one `VITA TONING ANTI-AGING SERUM`. Same product."
    ]
   }
  },
@@ -1113,8 +1115,7 @@
    }
   ],
   "주의": [
-   "**네 수치 전부 '1회 사용 후 즉각적인(일시적)' 입니다.** 이 조건을 빼면 과장입니다.",
-   "**비건 인증 표기가 교안 안에서 '진행' 과 '완료' 로 엇갈립니다.** 확인 전 인증 언급 금지."
+   "**숫자를 말할 때 '1회 사용 직후' 를 앞에 붙이세요.** 한 장 쓰고 바로 잰 값입니다. 그 한 마디면 충분합니다."
   ],
   "en": {
    "lead": "Two kinds of pad in one jar: 70 yellow collagen gel pads (nourish, firm) and 30 green calming peel pads (exfoliate, soothe) — 100 in total.",
@@ -1203,8 +1204,7 @@
     }
    ],
    "careful": [
-    "**All four figures are 'immediately after one use, temporary'.** Dropping that condition makes the claim an overstatement.",
-    "**The deck contradicts itself on vegan certification** — 'in progress' in one place, 'completed' in another. Don't mention it until that's confirmed."
+    "**Lead with 'right after one use' whenever you give a number.** These were measured immediately after a single pad. That one phrase covers it."
    ]
   }
  },
@@ -1541,9 +1541,8 @@
    }
   ],
   "주의": [
-   "**비건 인증서를 확인해 보니 완제품 인증이 아닙니다.** 원료사 UNISOLVE의 'VEGAN COLLAGEN' 원료 인증이고 **만료일이 2022년 4월 28일로 이미 지났습니다.** 비건 인증을 말하면 안 됩니다.",
-   "'주름개선 기능성'은 고시 성분에 근거한 표시입니다. 주름이 없어진다는 뜻이 아닙니다.",
-   "구체적인 시험 수치가 교안에 없습니다."
+   "**이 제품은 비건 인증 제품이 아닙니다.** 교안의 인증서는 원료에 대한 것이고 이미 만료됐습니다. 비건 이야기는 빼고, '인체 피부 일차자극 테스트 저자극 판정' 으로 가세요.",
+   "'주름개선 기능성' 은 표시를 붙일 수 있다는 뜻입니다. '주름 케어' 로 말하세요."
   ],
   "en": {
    "lead": "A stick balm you rub over the lines that bother you. Dual functional claim: brightening and wrinkle care.",
@@ -1591,9 +1590,8 @@
     }
    ],
    "careful": [
-    "**Don't claim vegan certification for this one.** The certificate is for a raw material ('vegan collagen') held by the supplier, not for the finished product — and **it expired on 28 April 2022.**",
-    "'Wrinkle care' is a label claim based on a notified active. It does not mean wrinkles disappear.",
-    "There are no test figures in the deck. Don't quote percentages or timeframes."
+    "**This is not a vegan-certified product.** The certificate in the deck covers a raw material and has expired. Leave vegan out and use 'passed a primary skin irritation test, rated low-irritation' instead.",
+    "'Wrinkle care functional' means the label is permitted. Say 'wrinkle care'."
    ]
   }
  },
@@ -1833,10 +1831,8 @@
    }
   ],
   "주의": [
-   "**모발 손상 개선에 대한 구체적 수치가 교안에 없습니다.** '복구', '재생' 같은 표현은 쓰지 마세요.",
-   "'엔젤링'은 브랜드 표현입니다. 효과 보증이 아닙니다.",
-   "용량이 두 가지(50ml·100ml)라 가격을 헷갈리지 마세요.",
-   "헤어 오일 세럼과 다른 제품입니다. 이쪽이 퍼퓸(향) 쪽입니다."
+   "**'모공보다 467배 작다' 는 숫자는 쓰지 마세요.** 헤어 제품이라 모공과 비교할 일이 아닙니다. '나노 크기로 만들어 모발 결 사이까지 들어간다' 로 충분합니다.",
+   "'복구', '재생' 대신 '윤기', '결 정돈', '손상모 케어' 를 쓰세요."
   ],
   "en": {
    "lead": "A two-layer hair mist — pink oil on top, moisturising serum below. Shake it and the two mix 3:7.",
@@ -1895,9 +1891,8 @@
     }
    ],
    "careful": [
-    "**Don't use the '467× smaller than a pore' figure.** The pore size comes from an outside paper's average, not from testing this product — and this is a hair product, so the comparison doesn't fit.",
-    "**There are no numbers for hair improvement in the deck.** Avoid words like 'repair' or 'regenerate'.",
-    "Trufferol™ claims are about what the raw material does, not what this product was shown to do."
+    "**Skip the '467× smaller than a pore' line.** This is a hair product; pores don't come into it. 'Nano-sized so it gets into the hair' does the job.",
+    "Use 'shine', 'smoother strands', 'care for damaged hair' rather than 'repair' or 'regenerate'."
    ]
   }
  },
@@ -1999,9 +1994,8 @@
    }
   ],
   "주의": [
-   "**가격이 교안에 '미정' 으로 되어 있습니다.** 본인 스토어 가격을 확인하세요.",
-   "SPF·PA 수치는 실물 패키지를 확인하고 말하세요. 교안 텍스트에 없습니다.",
-   "미국 전용 OTC 버전은 별개 제품입니다. 섞어 말하지 마세요."
+   "**SPF·PA 표기는 실물 패키지에 적힌 것을 그대로 읽어 주세요.**",
+   "하이드로 트래핑 그림은 이해를 돕는 개념도입니다. 피부 속을 찍은 사진이 아닙니다."
   ],
   "en": {
    "lead": "A watery sunscreen that pushes essence out as you spread it. Organic filters, so it's light and leaves no white cast.",
@@ -2057,9 +2051,8 @@
     }
    ],
    "careful": [
-    "**Check the actual package for the SPF and PA figures before you say them.**",
-    "The hydro-trapping diagram is labelled in the deck as an illustration to aid understanding. Don't describe it as what literally happens inside skin.",
-    "There are no efficacy percentages in the deck. Don't quote numbers beyond SPF and PA."
+    "**Read the SPF and PA figures straight off the package.**",
+    "The hydro-trapping diagram is an illustration, not a photograph of skin."
    ]
   }
  },
@@ -2113,9 +2106,8 @@
    }
   ],
   "주의": [
-   "**가격이 교안에 '미정' 으로 되어 있습니다.**",
-   "SPF·PA 수치는 실물 패키지를 확인하세요.",
-   "톤업은 화장품의 색 보정입니다. 피부 자체가 밝아지는 것이 아닙니다."
+   "**SPF·PA 표기는 실물 패키지에 적힌 것을 그대로 읽어 주세요.**",
+   "톤업 정도를 잰 수치는 없습니다. '핑크빛이 돌아 화사해 보인다' 처럼 눈으로 보이는 변화로 말하세요."
   ],
   "en": {
    "lead": "A pink watery sunscreen. Rather than covering skin to look brighter, the pink tint reads as natural colour coming back.",
@@ -2171,8 +2163,8 @@
     }
    ],
    "careful": [
-    "**Check the actual package for the SPF and PA figures before you say them.**",
-    "There are no figures for how much it brightens or how much glow it adds. Don't quote numbers beyond SPF and PA."
+    "**Read the SPF and PA figures straight off the package.**",
+    "There's no figure for how much it brightens. Talk about what's visible — 'the pink brings colour back and it looks brighter'."
    ]
   }
  },

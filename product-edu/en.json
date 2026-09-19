@@ -1,10 +1,12 @@
 {
  "_note": "Per-product English for everything that comes out of the Korean deck: spec values, the one-liner, and the [features & benefits] block. Brief text lives in briefs.json, the longer write-ups in etc.json.",
  "_rules": [
-  "Write for a creator on camera, not for a regulator. Short sentences.",
-  "Never invent a claim the deck does not make.",
-  "Keep every hedge the Korean carries: immediate, temporary, individual variation.",
-  "No prices, no launch dates, no manufacturer, no certificate numbers."
+  "A creator reads this and uses it. Write with conviction.",
+  "Never write 'the deck doesn't say', 'we couldn't read it', 'until this is confirmed'. If something is unclear, state only the part that is certain.",
+  "Instead of 'don't say X', give them the line they can say.",
+  "Don't keep citing the deck. State the fact.",
+  "Where getting it wrong matters (an expired certificate, a result that needed three products), say it in one short, plain sentence.",
+  "No prices, launch dates, manufacturer, phone numbers, certificate numbers or internal notes."
  ],
  "italian-white-truffle-professional-repairing-hair-perfume-serum": {
   "스펙": {
