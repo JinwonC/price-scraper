@@ -1,0 +1,351 @@
+{
+ "_주": "글자 없는 슬라이드 45장을 눈으로 읽은 결과. product 는 decks.json 의 product 와 같은 키.",
+ "_웹사이트_금지": "kind 가 '기능성보고서' 인 이미지는 신청인 성명과 주민등록번호(생년월일)가 찍혀 있다. 절대 웹에 올리지 않는다. 수치만 옮겨 쓴다.",
+ "White truffle Return Oil Cream Cleanser": {
+  "tests": [
+   {
+    "no": "TEST 01",
+    "name": "피부 요철(결) 개선",
+    "before": 7.796,
+    "after": 6.918,
+    "figure": "10.454%",
+    "unit": "개선",
+    "condition": "1회 사용 후",
+    "footnote": "피시험자 03번, 개인차 有",
+    "image": "s10_1.png"
+   },
+   {
+    "no": "TEST 02",
+    "name": "피부 속보습 개선",
+    "before": 50.889,
+    "after": 51.508,
+    "figure": "1.216%",
+    "unit": "개선",
+    "condition": "1회 사용 후",
+    "footnote": "각주 없음",
+    "image": "s10_2.png"
+   },
+   {
+    "no": "TEST 03",
+    "name": "피부 속당김 개선",
+    "before": 0.811,
+    "after": 0.843,
+    "figure": "3.946%",
+    "unit": "개선",
+    "condition": "1회 사용 후",
+    "footnote": "각주 없음",
+    "image": "s10_2.png"
+   },
+   {
+    "no": "TEST 04",
+    "name": "모공 속 노폐물 세정",
+    "before": 18755.524,
+    "after": 61.81,
+    "figure": "99.670%",
+    "unit": "세정",
+    "condition": "1회 사용 직후",
+    "footnote": "피시험자 14번, 개인차 有",
+    "image": "s11_3.png",
+    "주의": "사용 전 값은 '미세먼지 모사체 도포 후'. 자연 피지가 아니라 인위적으로 올린 분진이다.",
+    "표시전": "18,755.524",
+    "표시후": "61.810"
+   },
+   {
+    "no": "TEST 05",
+    "name": "워터프루프 선크림 세정",
+    "figure": "91.52%",
+    "unit": "세정률",
+    "condition": "1회 사용 후",
+    "footnote": "개인차 有 (피시험자 번호 없음)",
+    "image": "s11_4.png",
+    "주의": "UV 사진이 피부가 아니라 파란 인공 기재다. 시험 방법 미기재."
+   },
+   {
+    "no": "TEST 06",
+    "name": "모공 속 색조 메이크업 잔여물 세정",
+    "figure": "99.867%",
+    "표시값": "99.8%",
+    "unit": "세정",
+    "condition": "1회 사용 후",
+    "footnote": "피시험자 14번, 개인차 有",
+    "image": "s12_1.png"
+   }
+  ],
+  "notes": [
+   {
+    "kind": "용기",
+    "text": "저온 보관 또는 잔량이 적을 때 제형이 응집(겔링)될 수 있으나 품질·효능에는 영향 없음. 보조 플립캡 추가 구성, 용기 재질을 부드럽게 업그레이드.",
+    "image": "s14_1.png"
+   },
+   {
+    "kind": "플립캡 사용법",
+    "text": "펌프를 시계 반대 방향으로 분리 → 플립캡을 시계 방향으로 고정 → 용기를 거꾸로 세워 보관 → 사용 후 캡 완전히 닫기",
+    "image": "s15_1.png"
+   }
+  ]
+ },
+ "White Truffle Refresh Aqua Serum": {
+  "facts": [
+   {
+    "kind": "기능성보고서",
+    "pH": 5.5,
+    "이미심사품목": "알로퍼스트글로우안티링클안티에이징세럼",
+    "심사번호": 30,
+    "통지일": "2019-10-31",
+    "보고완료일": "2022-03-07",
+    "image": "s10_1.png"
+   }
+  ],
+  "howto": {
+   "text": "세안 직후, 제품을 상하로 3~5회 흔들어 내용물이 충분히 섞이게 한 뒤, 고개를 살짝 든 상태에서 10~20cm 떨어져 눈을 감고 얼굴 전체에 4~5회 골고루 분사한 후 가볍게 두드려 흡수시켜 줍니다.",
+   "image": "s12_1.png"
+  }
+ },
+ "Vita Toning Serum Toner": {
+  "facts": [
+   {
+    "kind": "기능성보고서",
+    "pH": 6.6,
+    "고시원료": "나이아신아마이드·아데노신 액",
+    "규격": "KFCC",
+    "보고완료일": "2024-12-04",
+    "image": "s09_2.png"
+   }
+  ]
+ },
+ "White Truffle First Spray Serum": {
+  "facts": [
+   {
+    "kind": "시험성적서",
+    "기관": "KOTITI 시험연구원",
+    "접수번호": "82231503104752-002",
+    "발급일": "2024-01-10",
+    "시료": "달바 화이트 트러플 퍼스트 스프레이 세럼 50mL",
+    "제조번호": "2C191G",
+    "항목": "설페이트계 계면활성제 (SLS, SLES, ALS, ALES)",
+    "결과": "불검출",
+    "RL": "100 µg/g",
+    "방법": "In House Method (LC-MS/MS)",
+    "image": "s09_1.png",
+    "주의": "성적서에 '참고용' 도장과 '식품·의약품분야 시험·검사 등에 관한 법률에 따른 것이 아님' 문구가 있다. 검사목적도 '연구/참고/기타'."
+   },
+   {
+    "kind": "인체적용시험",
+    "기관": "P&K 피부임상연구센타",
+    "보고서번호": "PNK-24424-A1R",
+    "일자": "2024-06-11",
+    "내용": "여드름성 피부 사용 적합(논코메도제닉) 인체적용시험",
+    "의뢰기관": "주식회사 비모뉴먼트",
+    "image": "s09_2.png"
+   }
+  ]
+ },
+ "White Truffle Vital Spray Serum": {
+  "images": [
+   {
+    "kind": "제품컷",
+    "text": "VITAL SPRAY SERUM / WHITE TRUFFLE SKIN CALMING",
+    "image": "s11_1.png"
+   }
+  ]
+ },
+ "White Truffle Double Serum All-in-one Multi Balm": {
+  "facts": [
+   {
+    "kind": "기능성보고서",
+    "pH": "해당사항없음",
+    "이미심사품목": "멀티케어에센스스틱",
+    "심사번호": 5261,
+    "통지일": "2016-10-21",
+    "보고완료일": "2021-07-14",
+    "image": "s08_2.png"
+   },
+   {
+    "kind": "기능성표시",
+    "text": "기능성화장품 · 미백/주름개선 이중 기능성",
+    "image": "s08_3.png"
+   },
+   {
+    "kind": "비건인증",
+    "text": "V-LABEL VEGAN MARK 라이선스",
+    "조회번호": "258/2021 C-KR",
+    "제품명": "VEGAN COLLAGEN",
+    "업체명": "UNISOLVE CO., LTD. (오산시)",
+    "만료일": "2022-04-28",
+    "image": "s10_1.png",
+    "주의": "완제품 인증이 아니라 '비건 콜라겐' 원료에 대한 인증이고, 권리자는 원료사 UNISOLVE 다. 게다가 만료일이 2022-04-28 로 이미 지났다."
+   }
+  ]
+ },
+ "Vita toning Capsule Serum": {
+  "facts": [
+   {
+    "kind": "기능성보고서",
+    "pH": 6.2,
+    "고시원료": "나이아신아마이드·아데노신 액",
+    "규격": "KFCC",
+    "보고완료일": "2024-12-02",
+    "image": "s09_2.png"
+   }
+  ]
+ },
+ "Vita toning Capsule Cream": {
+  "images": [
+   {
+    "kind": "제품컷",
+    "text": "VITA TONING CAPSULE CREAM / Moisturizing & Brightening / 55g",
+    "image": "s22_1.png"
+   },
+   {
+    "kind": "제품컷",
+    "text": "VITA TONING CAPSULE MOISTURIZING CREAM / Anti-Aging Cream / 55g",
+    "image": "s22_6.png",
+    "주의": "같은 슬라이드에 이름이 다른 패키지 두 개가 있다. 리뉴얼 전후로 보이나 교안에 설명이 없다."
+   },
+   {
+    "kind": "제형",
+    "text": "노란 캡슐이 박힌 크림 텍스처",
+    "image": "s22_5.gif"
+   },
+   {
+    "kind": "제외",
+    "text": "s22_2.png 는 콜마 용기에 담긴 실험실 샘플컷이라 웹에 쓰지 않는다."
+   }
+  ]
+ },
+ "Signature Vita Capsule Hydrogel Mask 8-Shape": {
+  "facts": [
+   {
+    "kind": "기능성보고서",
+    "pH": 6.2,
+    "이미심사품목": "코스맥스이중기능성하이드로겔마스크",
+    "심사번호": 5258,
+    "통지일": "2016-05-17",
+    "보고완료일": "2025-06-30",
+    "image": "s11_2.png"
+   }
+  ]
+ },
+ "Vita Toning Anti-Aging Spray Serum 8%": {
+  "facts": [
+   {
+    "kind": "더마테스트",
+    "text": "Dermatest ORIGINAL EXCELLENT 03/2022",
+    "image": "s16_1.png"
+   }
+  ],
+  "images": [
+   {
+    "kind": "제품컷(구)",
+    "text": "AROMATIC SPRAY SERUM 8% / For Extremely Dry Skin",
+    "image": "s16_4.png"
+   },
+   {
+    "kind": "제품컷(현)",
+    "text": "VITA TONING ANTI-AGING SERUM 8% / Anti-Aging Spray",
+    "image": "s16_5.png",
+    "주의": "교안 제목은 '비타 토닝 안티에이징 스프레이 세럼 8%' 인데 구 패키지는 'AROMATIC SPRAY SERUM' 이다."
+   }
+  ]
+ },
+ "Vita Toning Galvanic Wrinkle Eye Cream": {
+  "images": [
+   {
+    "kind": "모델컷",
+    "text": "갈바닉 아이크림을 눈가에 사용하는 모델 컷",
+    "image": "s16_1.png"
+   }
+  ]
+ },
+ "Intensive Vegan Volufiline Spray Ampoule": {
+  "facts": [
+   {
+    "kind": "기능성보고서",
+    "pH": 6.5,
+    "이미심사품목": "알로퍼스트글로우안티링클세럼",
+    "심사번호": 29,
+    "통지일": "2019-10-31",
+    "보고완료일": "2022-04-26",
+    "image": "s11_1.png"
+   },
+   {
+    "kind": "인체적용시험",
+    "기관": "P&K 피부임상연구센타",
+    "보고서번호": "PNK-22316-I20R4",
+    "일자": "2022-04-08",
+    "내용": "인체 피부 일차자극 시험",
+    "의뢰기관": "㈜비모뉴먼트",
+    "image": "s11_2.png"
+   }
+  ]
+ },
+ "White Truffle Intensive Volufiline Ampoule": {
+  "howto": {
+   "text": "스포이드 사용 3단계 시각 안내 (수치 없음)",
+   "image": "s13_1.png"
+  }
+ },
+ "First Oil Capsule Serum": {
+  "facts": [
+   {
+    "kind": "기능성보고서",
+    "pH": 6.1,
+    "고시원료": "나이아신아마이드·아데노신 액",
+    "규격": "KFCC",
+    "보고완료일": "2024-03-26",
+    "image": "s06_2.png"
+   }
+  ]
+ },
+ "d'Alba Signature Allthera Double Shot": {
+  "facts": [
+   {
+    "kind": "기기스펙",
+    "text": "대형 헤드 5cm × 3.8cm, 초음파 홀 1EA",
+    "image": "s48_3.png"
+   },
+   {
+    "kind": "기기스펙",
+    "text": "소형 헤드 3.5cm × 8.5cm, 초음파 홀 2EA",
+    "image": "s48_4.png"
+   }
+  ],
+  "images": [
+   {
+    "kind": "제품컷",
+    "text": "디바이스 본체 (전원/MODE/LEVEL 버튼)",
+    "image": "s48_2.png"
+   }
+  ]
+ },
+ "Pro2X": {
+  "facts": [
+   {
+    "kind": "더마테스트",
+    "text": "Dermatest ORIGINAL EXCELLENT 03/2022",
+    "image": "s23_3.png"
+   }
+  ],
+  "images": [
+   {
+    "kind": "제품컷",
+    "text": "FIRST SPRAY SERUM PRO·2X / TRUFFLE EXOSOME™ / Collagen Water 70% / 120ml",
+    "image": "s23_5.png"
+   },
+   {
+    "kind": "제품컷(다른 버전)",
+    "text": "FIRST SPRAY SERUM / Peptide Exosome 8% / White Truffles from Italy / 100ml",
+    "image": "s23_1.png",
+    "주의": "같은 교안에 120ml TRUFFLE EXOSOME 70% 와 100ml Peptide Exosome 8% 두 가지 패키지가 있다. 어느 쪽이 출시 사양인지 확인 필요."
+   }
+  ]
+ },
+ "_로고_스킵": [
+  "15Qb9E4IpKk2smmF8Al73dKC-H9ovV0UJ/s23_1.png",
+  "11DuvEMCFaoD2zwfIVJLpwYPkByjNjd6V/s22_4.png",
+  "11DuvEMCFaoD2zwfIVJLpwYPkByjNjd6V/s23_1.png",
+  "1siOv6-R41vpB7PKePhluEpVdJpreOkaP/s19_1.png",
+  "1tNNnXbo7dVnaglrl6GImSU30FrQB55Sy/s17_1.png",
+  "1OGEne2pde0KfA4EgVIkZiyo6suUcbXWP/s22_1.png"
+ ]
+}
