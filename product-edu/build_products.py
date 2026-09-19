@@ -37,11 +37,38 @@ SECTION_HINTS = [
 CLAIM = re.compile(r"\d+(?:\.\d+)?\s*%|인체적용시험|in ?vitro|임상|테스트 완료|특허\s*제?\s*[\d-]+호|ppm|PPM")
 NOISE = re.compile(r"^(본 문구는 화장품법|\*본 문구|\d+$|Before$|After$|STEP\s*$)")
 
+# 줄 앞에 붙은 글머리 기호. 화면에 그대로 내보내면 지저분하다.
+BULLET = re.compile(r"^\s*(?:[-–•*]\s*|[①②③④⑤⑥⑦⑧⑨⑩]\s*|\d+\s*[.)]\s*)+")
+
+
+def clean_line(text):
+    return BULLET.sub("", text).strip()
+
+
+def norm(text):
+    """중복 판정을 위한 정규화. 공백·기호를 털어낸 알맹이만 남긴다."""
+    return re.sub(r"[\s\-–•*()\[\]:：,·]", "", clean_line(text))
+
 
 def slug(en):
     s = unicodedata.normalize("NFKD", en).encode("ascii", "ignore").decode()
     s = re.sub(r"[^a-zA-Z0-9]+", "-", s).strip("-").lower()
     return re.sub(r"-{2,}", "-", s)
+
+
+# 교안 슬라이드 제목은 "특징_ 성분 설명 Ingredients" 처럼 분류 접두어와 영문 라벨이
+# 붙어 있다. 화면에는 알맹이만 보여 준다.
+TITLE_PREFIX = re.compile(r"^(특징|제형|사용방법|사용법|추천\s*피부|플립캡)\s*[_\-–]*\s*")
+TITLE_SUFFIX = re.compile(
+    r"\s*[_\-–]?\s*(Ingredients|Check\s*point|How\s*to\s*use|Recommend|Tested|TEXTURE|"
+    r"Technology|Fragrance)\s*$",
+    re.IGNORECASE,
+)
+
+
+def pretty_title(title, fallback):
+    t = TITLE_SUFFIX.sub("", TITLE_PREFIX.sub("", title.strip())).strip(" _-–")
+    return t if len(t) > 1 else fallback
 
 
 def real_title(slide):
@@ -89,6 +116,7 @@ def parse_spec(deck):
                     re.sub(r"^\s*\d+\s*[.)]\s*", "", l).strip()
                     for l in tail.split("\n")[1:] if l.strip()
                 )
+    니즈 = [clean_line(n) for n in dict.fromkeys(니즈)]
     니즈 = [n for n in dict.fromkeys(니즈) if len(n) > 5 and not SPEC_LINE.match(n)]
     return spec, 니즈
 
@@ -119,8 +147,8 @@ def parse_features(deck):
                 if len(p) < 6:
                     continue
                 lines = [l.strip() for l in p.split("\n") if l.strip()]
-                head = re.sub(r"^[①②③④⑤⑥⑦⑧⑨⑩]\s*", "", lines[0])
-                out.append({"제목": head, "설명": lines[1:]})
+                out.append({"제목": clean_line(lines[0]),
+                            "설명": [clean_line(l) for l in lines[1:]]})
             if out:
                 return out
 
@@ -155,24 +183,37 @@ def parse_sections(deck):
         rest = body[1:] if body and body[0][:80] == title else body
         if not rest and not s["tables"]:
             continue
-        buckets.setdefault(kind, []).append(
-            {"슬라이드": s["no"], "제목": title, "내용": rest, "표": s["tables"]}
-        )
+        buckets.setdefault(kind, []).append({
+            "슬라이드": s["no"],
+            "제목": pretty_title(title, kind),
+            "내용": [clean_line(l) for l in rest],
+            "표": s["tables"],
+        })
     return buckets
 
 
-def parse_claims(deck):
-    """수치·시험 문장. 슬라이드 번호를 같이 달아 어디서 나온 말인지 남긴다."""
+def parse_claims(deck, 이미표시):
+    """수치·시험 문장.
+
+    예전에는 % 가 들어간 줄을 전부 담았더니 '11.76% 함유', '200,000PPM' 같은
+    파편이 수십 줄 쌓이고, 그나마도 특징·성분 섹션에 이미 나온 말의 반복이었다.
+    그래서 (1) 글머리 기호를 털고 (2) 너무 짧은 조각을 버리고 (3) 다른 섹션에
+    이미 나온 문장은 제외한다. 슬라이드 번호는 출처 확인용으로 남긴다.
+    """
     seen, out = set(), []
     for s in deck["slides"]:
         for block in s["text"]:
-            for line in block.split("\n"):
-                line = line.strip()
-                if len(line) < 5 or NOISE.match(line) or not CLAIM.search(line):
+            for raw in block.split("\n"):
+                line = clean_line(raw)
+                if len(line) < 9 or NOISE.match(line) or not CLAIM.search(line):
                     continue
-                if line in seen:
+                key = norm(line)
+                if not key or key in seen:
                     continue
-                seen.add(line)
+                # 다른 섹션에 이미 통째로 나온 말이면 중복이다.
+                if any(key in t for t in 이미표시):
+                    continue
+                seen.add(key)
                 out.append({"슬라이드": s["no"], "문장": line})
     return out
 
@@ -189,6 +230,15 @@ def main():
         en = deck["product"]
         spec, 니즈 = parse_spec(deck)
         read = reads.get(en, {})
+        특징 = parse_features(deck)
+        섹션 = parse_sections(deck)
+        # 수치 문장이 위 섹션들과 겹치지 않도록, 이미 화면에 나오는 문장을 모아 둔다.
+        이미표시 = {norm(t) for t in 니즈}
+        이미표시 |= {norm(l) for f in 특징 for l in [f["제목"], *f["설명"]]}
+        이미표시 |= {norm(l) for items in 섹션.values() for it in items for l in it["내용"]}
+        # 슬라이드 제목은 섹션 머리글로 이미 보인다. 수치 문장으로 또 나오면 안 된다.
+        이미표시 |= {norm(real_title(s)) for s in deck["slides"]}
+        이미표시.discard("")
         p = {
             "slug": slug(en),
             "en": en,
@@ -197,9 +247,9 @@ def main():
             "스펙": spec,
             "니즈": 니즈,
             "포지셔닝": parse_positioning(deck),
-            "특징": parse_features(deck),
-            "섹션": parse_sections(deck),
-            "수치문장": parse_claims(deck),
+            "특징": 특징,
+            "섹션": 섹션,
+            "수치문장": parse_claims(deck, 이미표시),
             "시험": read.get("tests", []),
             "문서": read.get("facts", []),
             "이미지메모": read.get("images", []),
