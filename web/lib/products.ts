@@ -1,5 +1,6 @@
 import raw from "@/data/products.json";
 import images from "@/data/product-images.json";
+import briefs from "@/data/briefs.json";
 
 /** 교안 한 슬라이드의 원문. 분류에 안 잡힌 내용까지 확인하려고 통째로 들고 있다. */
 export type Slide = {
@@ -119,3 +120,23 @@ export const cards: ProductCard[] = all.map((p) => ({
   슬라이드수: p.슬라이드수,
   없는항목수: p.없는항목.length,
 }));
+
+/** 사람이 직접 쓴 브리프. 교안 추출 데이터와 달리 문장으로 읽히도록 쓴 것이다. */
+export type Brief = {
+  한줄: string;
+  누구에게?: string;
+  핵심성분?: { 이름: string; 함량?: string; 역할: string }[];
+  근거수치?: { 항목: string; 값: string; 조건?: string }[];
+  시험출처?: string;
+  사용법?: { 이름: string; 방법: string }[];
+  말할때?: { 문장: string; 근거: string }[];
+  주의?: string[];
+};
+
+export function getBrief(slug: string): Brief | undefined {
+  const map = briefs as unknown as Record<string, Brief | unknown>;
+  const b = map[slug];
+  return b && typeof b === "object" && "한줄" in (b as object)
+    ? (b as Brief)
+    : undefined;
+}
