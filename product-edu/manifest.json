@@ -1,0 +1,38 @@
+{
+ "_주": "제품별 '현행' 교안 1개씩. '이전'/'구 버전' 폴더 안의 파일은 제외했다.",
+ "_출처": "드라이브 교안 루트 1lsXtOMfw8IhPch5BWSTk4thwnvToVTSI 하위를 커넥터로 훑어서 만든 목록",
+ "decks": [
+  {"en": "White Truffle First Spray Serum", "id": "16HzlrzTe7u4aCTZl7ngRXm8b7nLR3ltd", "mb": 7.1},
+  {"en": "White Truffle Vital Spray Serum", "id": "1r8azxP0lSuueeI8y13V25c4_39Dpw-iD", "mb": 3.6},
+  {"en": "White Truffle Refresh Aqua Serum", "id": "1V8C42np1NEUkwQJYxcciX0Bui5zVpHEU", "mb": 7.7},
+  {"en": "White Truffle Waterfull Tone Up Sunscreen Serum", "id": "1-7FlKIymDjlDISM9HI7Euy-660YQDnmP", "mb": 15.4},
+  {"en": "Waterfull UV Essence Sunscreen", "id": "1QrfS-I_AXJ_WIbq_95qq44_LZQZ3akHr", "mb": 17.2},
+  {"en": "Air Fit Fresh Sun Stick", "id": "1nA7IQNGWRgcQK5XT7CFZ1RLm4somf7db", "mb": 8.3},
+  {"en": "White Truffle Double Serum & Cream 2-in-1", "id": "15Qb9E4IpKk2smmF8Al73dKC-H9ovV0UJ", "mb": 5.7},
+  {"en": "Double Quick Liposome Serum Mask Pad", "id": "1M0HWoarH5EOrONKalXIUho7x2XPtFdHi", "mb": 312.9},
+  {"en": "White Truffle Double Layer Revitalizing Serum", "id": "19cUpxnJz8lW4SvMCk_QpY5u7iekFrE4E", "mb": 1.6},
+  {"en": "White Truffle Double Serum All-in-one Multi Balm", "id": "1av2kKXObJFw0LDD5oKauQ9daxTlmfyXa", "mb": 8.8},
+  {"en": "Vita toning Capsule Serum", "id": "1y52Z4EOKXukVv6KfVwRaj9xVaRfZemuK", "mb": 6.2},
+  {"en": "Vita toning Capsule Cream", "id": "11DuvEMCFaoD2zwfIVJLpwYPkByjNjd6V", "mb": 23.2},
+  {"en": "Vita Toning Serum Toner", "id": "1Abm7s7bV9P4-RkmL7EeTEcy89E_P8pFU", "mb": 5.3},
+  {"en": "Signature Vita Capsule Hydrogel Mask 8-Shape", "id": "1k5h7KZ_4Ewm6jon2AxVzGK1-hysU9aWQ", "mb": 39.8},
+  {"en": "Vita Toning Anti-Aging Spray Serum 8%", "id": "1Jqc37RNOvr5B0jwrZuEoADYwu9ICSco0", "mb": 31.8},
+  {"en": "Vita Toning Galvanic Wrinkle Eye Cream", "id": "1DbHV0hjUooeclmbOu44H-FeFAmeVORiT", "mb": 68.6},
+  {"en": "Signature Vita Collagen Pore Tightening Deep Cleansing Balm", "id": "15ghRf5pmVq_DvbN5V6FyofS5A1LkcSF4", "mb": 213.9},
+  {"en": "Vita toning Capsule Cleansing Oil", "id": "1OGEne2pde0KfA4EgVIkZiyo6suUcbXWP", "mb": 89.3},
+  {"en": "White Truffle Intensive Volufiline Ampoule", "id": "1C7ELLvYJKjW5FPg96cj3L8q78r3OhyKC", "mb": 7.6},
+  {"en": "Intensive Vegan Volufiline Spray Ampoule", "id": "1ruD6N79gHiv3JETnVD6LGU9Whs5pT6Ka", "mb": 5.5},
+  {"en": "White Truffle Intensive Volufiline Grinding Cream", "id": "1hOlcprrM88MEjXrfcZJkQzY5G1CyOn89", "mb": 18.0},
+  {"en": "Professional Repairing Hair Oil Serum", "id": "1siOv6-R41vpB7PKePhluEpVdJpreOkaP", "mb": 37.7},
+  {"en": "Italian White Truffle Professional Repairing Hair Perfume Serum", "id": "1tNNnXbo7dVnaglrl6GImSU30FrQB55Sy", "mb": 19.9},
+  {"en": "White Truffle Moisturizing Serum Lotion", "id": "10jz_heJrKWiIynpxBHvx91s-Y4HsqM6w", "mb": 35.4},
+  {"en": "First Oil Capsule Serum", "id": "1nOk8DH38e-g87IXD5qZoq_omCBNMB21G", "mb": 4.2},
+  {"en": "White truffle Return Oil Cream Cleanser", "id": "1Yc0He9-J6O5R_VzBTC8PxtnAgY-TH8lp", "mb": 10.9},
+  {"en": "d'Alba Signature Allthera Double Shot", "id": "1x-i7YyYseQl5QeCTElpyMtwLoZ2uWWME", "mb": 70.4},
+  {"en": "Pro2X", "id": "1TaFaDxSiOMhWHMbmAulsWdVX59-l-HBd", "mb": 120.3}
+ ],
+ "참고": [
+  {"en": "White Truffle Vital Spray Serum", "id": "1HhvK3s80wKZRrgjrT3OiK3AY8W8aqIzu",
+   "메모": "같은 폴더의 '성분 참고자료(마케팅 활용 불가)' 파일. 마케팅 사용 금지 표기가 있어 수집 대상에서 뺐다."}
+ ]
+}
