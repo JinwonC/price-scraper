@@ -27,10 +27,10 @@
  ],
  "double-quick-liposome-serum-mask-pad": [
   {
-   "src": "/products/double-quick-liposome-serum-mask-pad/01.jpg",
-   "설명": "제품 용기",
-   "w": 901,
-   "h": 1352
+   "src": "/products/double-quick-liposome-serum-mask-pad/00.jpg",
+   "설명": "제품 컷",
+   "w": 1080,
+   "h": 1080
   },
   {
    "src": "/products/double-quick-liposome-serum-mask-pad/02.jpg",
@@ -71,6 +71,12 @@
  ],
  "first-oil-capsule-serum": [
   {
+   "src": "/products/first-oil-capsule-serum/00.jpg",
+   "설명": "제품 컷",
+   "w": 1080,
+   "h": 1080
+  },
+  {
    "src": "/products/first-oil-capsule-serum/01.jpg",
    "설명": "캡슐이 든 제형",
    "w": 525,
@@ -97,10 +103,10 @@
  ],
  "intensive-vegan-volufiline-spray-ampoule": [
   {
-   "src": "/products/intensive-vegan-volufiline-spray-ampoule/01.jpg",
+   "src": "/products/intensive-vegan-volufiline-spray-ampoule/00.jpg",
    "설명": "제품 컷",
-   "w": 1100,
-   "h": 758
+   "w": 2000,
+   "h": 2000
   },
   {
    "src": "/products/intensive-vegan-volufiline-spray-ampoule/02.jpg",
@@ -129,10 +135,10 @@
  ],
  "italian-white-truffle-professional-repairing-hair-perfume-serum": [
   {
-   "src": "/products/italian-white-truffle-professional-repairing-hair-perfume-serum/01.jpg",
+   "src": "/products/italian-white-truffle-professional-repairing-hair-perfume-serum/00.jpg",
    "설명": "제품 컷",
-   "w": 665,
-   "h": 1024
+   "w": 1080,
+   "h": 1080
   },
   {
    "src": "/products/italian-white-truffle-professional-repairing-hair-perfume-serum/02.jpg",
@@ -199,10 +205,10 @@
  ],
  "professional-repairing-hair-oil-serum": [
   {
-   "src": "/products/professional-repairing-hair-oil-serum/01.jpg",
+   "src": "/products/professional-repairing-hair-oil-serum/00.jpg",
    "설명": "제품 컷",
-   "w": 645,
-   "h": 967
+   "w": 1080,
+   "h": 1080
   },
   {
    "src": "/products/professional-repairing-hair-oil-serum/02.jpg",
@@ -231,6 +237,12 @@
  ],
  "signature-vita-capsule-hydrogel-mask-8-shape": [
   {
+   "src": "/products/signature-vita-capsule-hydrogel-mask-8-shape/00.jpg",
+   "설명": "제품 컷",
+   "w": 1200,
+   "h": 1200
+  },
+  {
    "src": "/products/signature-vita-capsule-hydrogel-mask-8-shape/01.jpg",
    "설명": "8쉐입 부착 상태",
    "w": 689,
@@ -250,6 +262,12 @@
   }
  ],
  "signature-vita-collagen-pore-tightening-deep-cleansing-balm": [
+  {
+   "src": "/products/signature-vita-collagen-pore-tightening-deep-cleansing-balm/00.jpg",
+   "설명": "제품 컷",
+   "w": 1080,
+   "h": 1080
+  },
   {
    "src": "/products/signature-vita-collagen-pore-tightening-deep-cleansing-balm/01.jpg",
    "설명": "밤 제형",
@@ -276,6 +294,12 @@
   }
  ],
  "vita-toning-anti-aging-spray-serum-8": [
+  {
+   "src": "/products/vita-toning-anti-aging-spray-serum-8/00.jpg",
+   "설명": "제품 컷",
+   "w": 1080,
+   "h": 1080
+  },
   {
    "src": "/products/vita-toning-anti-aging-spray-serum-8/01.jpg",
    "설명": "현행 패키지 (VITA TONING ANTI-AGING SERUM)",
@@ -315,6 +339,12 @@
  ],
  "vita-toning-capsule-cleansing-oil": [
   {
+   "src": "/products/vita-toning-capsule-cleansing-oil/00.jpg",
+   "설명": "제품 컷",
+   "w": 1080,
+   "h": 1080
+  },
+  {
    "src": "/products/vita-toning-capsule-cleansing-oil/01.jpg",
    "설명": "캡슐이 든 제형",
    "w": 787,
@@ -353,10 +383,10 @@
  ],
  "vita-toning-capsule-cream": [
   {
-   "src": "/products/vita-toning-capsule-cream/01.jpg",
-   "설명": "제품 컷 (CAPSULE MOISTURIZING CREAM)",
-   "w": 885,
-   "h": 615
+   "src": "/products/vita-toning-capsule-cream/00.jpg",
+   "설명": "제품 컷",
+   "w": 1080,
+   "h": 1080
   },
   {
    "src": "/products/vita-toning-capsule-cream/02.jpg",
@@ -372,6 +402,12 @@
   }
  ],
  "vita-toning-capsule-serum": [
+  {
+   "src": "/products/vita-toning-capsule-serum/00.jpg",
+   "설명": "제품 컷",
+   "w": 1080,
+   "h": 1080
+  },
   {
    "src": "/products/vita-toning-capsule-serum/01.jpg",
    "설명": "캡슐이 든 제형",
@@ -405,10 +441,10 @@
  ],
  "vita-toning-galvanic-wrinkle-eye-cream": [
   {
-   "src": "/products/vita-toning-galvanic-wrinkle-eye-cream/01.jpg",
+   "src": "/products/vita-toning-galvanic-wrinkle-eye-cream/00.jpg",
    "설명": "제품 컷",
-   "w": 326,
-   "h": 1400
+   "w": 2000,
+   "h": 2000
   },
   {
    "src": "/products/vita-toning-galvanic-wrinkle-eye-cream/02.jpg",
@@ -436,6 +472,12 @@
   }
  ],
  "vita-toning-serum-toner": [
+  {
+   "src": "/products/vita-toning-serum-toner/00.jpg",
+   "설명": "제품 컷",
+   "w": 1200,
+   "h": 1200
+  },
   {
    "src": "/products/vita-toning-serum-toner/01.jpg",
    "설명": "세 가지 사용법 (찹토·닦토·3분 스킨팩)",
@@ -469,10 +511,10 @@
  ],
  "waterfull-uv-essence-sunscreen": [
   {
-   "src": "/products/waterfull-uv-essence-sunscreen/01.jpg",
+   "src": "/products/waterfull-uv-essence-sunscreen/00.jpg",
    "설명": "제품 컷",
-   "w": 658,
-   "h": 824
+   "w": 1080,
+   "h": 1080
   },
   {
    "src": "/products/waterfull-uv-essence-sunscreen/02.jpg",
@@ -501,6 +543,12 @@
  ],
  "white-truffle-double-layer-revitalizing-serum": [
   {
+   "src": "/products/white-truffle-double-layer-revitalizing-serum/00.jpg",
+   "설명": "제품 컷",
+   "w": 1080,
+   "h": 1080
+  },
+  {
    "src": "/products/white-truffle-double-layer-revitalizing-serum/01.jpg",
    "설명": "제형",
    "w": 869,
@@ -508,6 +556,12 @@
   }
  ],
  "white-truffle-double-serum-all-in-one-multi-balm": [
+  {
+   "src": "/products/white-truffle-double-serum-all-in-one-multi-balm/00.jpg",
+   "설명": "제품 컷",
+   "w": 1080,
+   "h": 1080
+  },
   {
    "src": "/products/white-truffle-double-serum-all-in-one-multi-balm/01.jpg",
    "설명": "입술 보습 사용 컷",
@@ -541,10 +595,10 @@
  ],
  "white-truffle-double-serum-cream-2-in-1": [
   {
-   "src": "/products/white-truffle-double-serum-cream-2-in-1/01.jpg",
+   "src": "/products/white-truffle-double-serum-cream-2-in-1/00.jpg",
    "설명": "제품 컷",
-   "w": 954,
-   "h": 1400
+   "w": 1080,
+   "h": 1080
   },
   {
    "src": "/products/white-truffle-double-serum-cream-2-in-1/02.jpg",
@@ -585,10 +639,10 @@
  ],
  "white-truffle-first-spray-serum": [
   {
-   "src": "/products/white-truffle-first-spray-serum/01.jpg",
+   "src": "/products/white-truffle-first-spray-serum/00.jpg",
    "설명": "제품 컷",
-   "w": 443,
-   "h": 1400
+   "w": 1080,
+   "h": 1080
   },
   {
    "src": "/products/white-truffle-first-spray-serum/02.jpg",
@@ -655,6 +709,12 @@
  ],
  "white-truffle-intensive-volufiline-grinding-cream": [
   {
+   "src": "/products/white-truffle-intensive-volufiline-grinding-cream/00.jpg",
+   "설명": "제품 컷",
+   "w": 1080,
+   "h": 1080
+  },
+  {
    "src": "/products/white-truffle-intensive-volufiline-grinding-cream/01.jpg",
    "설명": "제형",
    "w": 546,
@@ -713,6 +773,12 @@
  ],
  "white-truffle-refresh-aqua-serum": [
   {
+   "src": "/products/white-truffle-refresh-aqua-serum/00.jpg",
+   "설명": "제품 컷",
+   "w": 1080,
+   "h": 1080
+  },
+  {
    "src": "/products/white-truffle-refresh-aqua-serum/01.jpg",
    "설명": "사용법",
    "w": 600,
@@ -739,10 +805,10 @@
  ],
  "white-truffle-return-oil-cream-cleanser": [
   {
-   "src": "/products/white-truffle-return-oil-cream-cleanser/01.jpg",
+   "src": "/products/white-truffle-return-oil-cream-cleanser/00.jpg",
    "설명": "제품 컷",
-   "w": 848,
-   "h": 1061
+   "w": 1080,
+   "h": 1080
   },
   {
    "src": "/products/white-truffle-return-oil-cream-cleanser/02.jpg",
@@ -789,6 +855,12 @@
  ],
  "white-truffle-vital-spray-serum": [
   {
+   "src": "/products/white-truffle-vital-spray-serum/00.jpg",
+   "설명": "제품 컷",
+   "w": 1080,
+   "h": 1080
+  },
+  {
    "src": "/products/white-truffle-vital-spray-serum/01.jpg",
    "설명": "제품 분사 컷",
    "w": 669,
@@ -809,10 +881,10 @@
  ],
  "white-truffle-waterfull-tone-up-sunscreen-serum": [
   {
-   "src": "/products/white-truffle-waterfull-tone-up-sunscreen-serum/01.jpg",
+   "src": "/products/white-truffle-waterfull-tone-up-sunscreen-serum/00.jpg",
    "설명": "제품 컷",
-   "w": 774,
-   "h": 961
+   "w": 1080,
+   "h": 1080
   },
   {
    "src": "/products/white-truffle-waterfull-tone-up-sunscreen-serum/02.jpg",
