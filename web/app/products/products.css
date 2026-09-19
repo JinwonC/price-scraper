@@ -248,8 +248,40 @@
   color: var(--pw-accent);
 }
 
+/* ---------- 목차 (모든 제품이 같은 항목을 갖는다) ---------- */
+.pw-toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 20px;
+  padding: 12px 0 0;
+}
+.pw-toc a {
+  font-size: 12.5px;
+  line-height: 1;
+  padding: 7px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.pw-toc a:hover,
+.pw-toc a:focus-visible {
+  border-color: var(--pw-accent-edge);
+  color: var(--text-primary);
+}
+/* 교안에 내용이 없는 항목도 목차에서 빼지 않는다 — 무엇이 없는지 보이도록 */
+.pw-toc a.off {
+  color: var(--text-muted);
+  border-style: dashed;
+  background: none;
+}
+
 .pw-sec {
   margin-top: 44px;
+  scroll-margin-top: 16px;
 }
 .pw-sec > h2 {
   margin: 0 0 14px;
@@ -258,6 +290,31 @@
   letter-spacing: -0.02em;
   padding-bottom: 8px;
   border-bottom: 1px solid var(--border);
+}
+
+/* 섹션 안의 작은 묶음 */
+.pw-sub {
+  margin-top: 22px;
+}
+.pw-subhead {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--text-muted);
+}
+
+.pw-empty {
+  margin: 0;
+  padding: 14px 16px;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  font-size: 13.5px;
+  color: var(--text-muted);
+}
+.pw-dd-none {
+  color: var(--text-muted) !important;
+  font-weight: 400 !important;
 }
 .pw-note {
   margin: -4px 0 14px;
@@ -272,6 +329,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
   gap: 14px;
+  /* 교안 이미지는 비율이 제각각이다. 늘어나서 아래가 비는 걸 막는다. */
+  align-items: start;
 }
 .pw-gallery figure {
   margin: 0;
@@ -617,9 +676,14 @@
   font-size: 11px;
   color: var(--text-muted);
 }
-.pw-raw > p,
-.pw-raw > .pw-tablewrap {
-  margin-left: 36px;
+.pw-raw-title {
+  flex: 1;
+  min-width: 0;
+}
+.pw-raw-body {
+  padding: 2px 0 12px 36px;
+}
+.pw-raw-body > .pw-block-line {
   margin-bottom: 8px;
 }
 
@@ -651,8 +715,7 @@
   .pw-doc dd {
     margin-bottom: 7px;
   }
-  .pw-raw > p,
-  .pw-raw > .pw-tablewrap {
-    margin-left: 0;
+  .pw-raw-body {
+    padding-left: 0;
   }
 }
