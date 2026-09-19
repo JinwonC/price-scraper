@@ -451,7 +451,8 @@
  },
  "vita-toning-capsule-cleansing-oil": {
   "스펙": {
-   "용량": "150ml"
+   "용량": "150ml",
+   "기능성": "Not a functional cosmetic"
   },
   "한줄": "A cleansing oil built like your own sebum — it melts blackheads out, and the powder inside lifts the debris away.",
   "특징": [
@@ -622,7 +623,8 @@
  },
  "signature-vita-collagen-pore-tightening-deep-cleansing-balm": {
   "스펙": {
-   "용량": "50ml"
+   "용량": "50ml",
+   "기능성": "Not a functional cosmetic"
   },
   "한줄": "A cleansing balm you grind fresh each time — turn the dial and take exactly as much as the day's makeup needs.",
   "특징": [
@@ -1275,6 +1277,169 @@
    "Being sprayed",
    "Model shot",
    "Floral image"
+  ]
+ },
+ "first-oil-capsule-serum": {
+  "스펙": {
+   "용량": "100ml",
+   "기능성": "Brightening + wrinkle care (dual functional claim)"
+  },
+  "한줄": "Forty thousand vitamin capsules floating in 80.34% damask rose water — a brightening serum for the first step, hydrating and never sticky.",
+  "특징": [
+   {
+    "title": "A hydrating serum and vitamin capsules, layered together",
+    "body": [
+     "A thick hydrating base at 98.5 to vitamin capsules at 1.5.",
+     "The two blend fast into a moisture film — hydrated underneath, soft on top, never sticky."
+    ]
+   },
+   {
+    "title": "80.34% damask rose water for clearer, brighter skin",
+    "body": [
+     "Damask rose water replaces purified water at 80.34%.",
+     "Skin holds enough water that makeup sits well on top.",
+     "Niacinamide at 2%, the notified brightening active."
+    ]
+   },
+   {
+    "title": "Three-stage mega nano liposome delivery",
+    "body": [
+     "Broken down in three passes into fine particles and wrapped in liposomes for stable delivery.",
+     "Nano-sized, so it absorbs quickly and densely."
+    ]
+   },
+   {
+    "title": "Premium vitamin ingredients",
+    "body": [
+     "Dual functional claim: brightening and wrinkle care.",
+     "Trufferol™, d'Alba's premium ingredient.",
+     "Brightening active: niacinamide 2%.",
+     "Freshness and vitamins: damask rose water 80.34%, vitamin C, vitamin E, vitamin K, vegan glutathione.",
+     "Firmness patent: cauliflower mushroom extract.",
+     "Moisture: Blue Complex HR, panthenol, centella extract, Calm Cell, vegan ceramide.",
+     "Glow: d'Alba-8 Blending Oil."
+    ]
+   },
+   {
+    "title": "No animal-derived ingredients",
+    "body": [
+     "Primary skin irritation test completed."
+    ]
+   }
+  ],
+  "이미지": [
+   "Texture with the capsules",
+   "The product line-up",
+   "Absorbing into skin",
+   "d'Alba-8 Blending Oil"
+  ]
+ },
+ "pro2x": {
+  "스펙": {
+   "용량": "100ml · 120ml"
+  },
+  "한줄": "The upgraded First Spray Serum — 70% collagen water, two kinds of exosome, and a finer mist.",
+  "특징": [
+   {
+    "title": "Twice the deep hydration and deep firmness — an all-in-one antioxidant solution",
+    "body": [
+     "*Compared with the First Spray Serum.",
+     "Glow alone doesn't fill the deficit underneath; this works on deep moisture and deep firmness.",
+     "A skin-ageing index that improves twice as much, for skin that holds and shines."
+    ]
+   },
+   {
+    "title": "Dual exosomes, 467× smaller than a pore, for deeper delivery",
+    "body": [
+     "Good ingredients only matter if they reach the skin. Size decides penetration."
+    ]
+   },
+   {
+    "title": "Lighter to wear, faster to absorb — an ultra-fine micro mist",
+    "body": [
+     "Active serum at 10% — twice the previous concentration.",
+     "15 plant blending oils, active serum 10%, tocopherol: an oil film that wraps the skin smooth and glossy.",
+     "70% collagen water, Italian white truffle, and d'Alba's own Peptide Exosome™ 10%, Trufferol™ and Truffle Exosome™."
+    ]
+   },
+   {
+    "title": "High-performance, and still comfortable on sensitive and acne-prone skin",
+    "body": [
+     "Active serum doubled to 10%, delivered precisely without blocking pores."
+    ]
+   },
+   {
+    "title": "Toner, essence and serum in one simple step",
+    "body": [
+     "Spray and you're done — after cleansing, at the office, in the car.",
+     "Instant hydration, makeup prep and ageing care from a single mist."
+    ]
+   }
+  ],
+  "이미지": [
+   "Product shot (120ml PRO·2X)",
+   "Product styling shot",
+   "Model spraying it",
+   "Texture",
+   "Spray particle comparison (previous)",
+   "Spray particle comparison (2X)"
+  ]
+ },
+ "vita-toning-serum-toner": {
+  "스펙": {
+   "용량": "180ml",
+   "기능성": "Brightening + wrinkle care (dual functional claim)"
+  },
+  "한줄": "A serum in toner form — concentrated going on, watery as you spread it, for the first step of a brightening routine.",
+  "특징": [
+   {
+    "title": "A fresh serum-water texture that absorbs without stickiness",
+    "body": [
+     "A concentrated serum that rolls out into a watery texture as you spread it.",
+     "It sinks in densely and finishes fresh, never heavy or tacky.",
+     "Gentle brightening and hydration from the very first step."
+    ]
+   },
+   {
+    "title": "11.76% sea buckthorn water with high-purity vitamin C and Glutathione-some",
+    "body": [
+     "Sea buckthorn water at 11.76%, full of vitamin-rich hydration.",
+     "Glutathione at 98% purity, stabilised in liposome form."
+    ]
+   },
+   {
+    "title": "Two weeks: spots faded, wrinkles softened, tone evened",
+    "body": [
+     "Brightens skin and works on dark spots.",
+     "In-vitro antioxidant testing completed."
+    ]
+   },
+   {
+    "title": "Premium vitamin ingredients",
+    "body": [
+     "Dual functional claim: brightening and wrinkle care.",
+     "Trufferol™ for firmness, Truvita™ for freshness.",
+     "Brightening active: niacinamide 2%.",
+     "Freshness: sea buckthorn water 11.76%, vitamin C, Glutathione-some.",
+     "Glow: d'Alba-8 Blending Oil, MELAWAY.",
+     "Nourishment: 13 vegan proteins, collagen extract.",
+     "Moisture: the patented Oligo-HA, vegan ceramide NP, Vegan Mucin."
+    ]
+   },
+   {
+    "title": "A brightening toner gentle enough for every day",
+    "body": [
+     "Italian V-Label vegan certification against the full ingredient list.",
+     "Primary skin irritation test completed."
+    ]
+   }
+  ],
+  "이미지": [
+   "Product shot",
+   "Texture",
+   "Model shot",
+   "Highly crosslinked technology",
+   "d'Alba-8 Blending Oil"
   ]
  }
 }

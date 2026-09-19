@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useT } from "@/components/Lang";
+import { useLang, useT } from "@/components/Lang";
 import type { Brief, Product, ProductImage } from "@/lib/products";
 
 /** **굵게** 표시만 지원하는 최소 마크업. 주의 문구에서 핵심어를 강조하려고 쓴다. */
@@ -170,14 +170,17 @@ export default function ProductView({
   imgs: ProductImage[];
 }) {
   const t = useT();
+  const { lang } = useLang();
   const en = p.en판 ?? {};
+  // 영어 화면에서는 영어로 쓴 값만 보여준다. 한국어가 섞여 남는 줄이 없도록.
+  const spv = (ko?: string, e?: string) => (lang === "en" ? e : ko);
 
   // 가격·출시일은 사내 정보라 싣지 않는다. publish.py 에서 이미 걸러 둔다.
   const spec = (
     [
-      [t(L.capacity[0], L.capacity[1]), t(p.스펙.용량, en.스펙?.용량)],
-      [t(L.fn[0], L.fn[1]), t(p.스펙.기능성, en.스펙?.기능성)],
-      [t(L.target[0], L.target[1]), t(p.스펙.타겟, en.스펙?.타겟)],
+      [t(L.capacity[0], L.capacity[1]), spv(p.스펙.용량, en.스펙?.용량)],
+      [t(L.fn[0], L.fn[1]), spv(p.스펙.기능성, en.스펙?.기능성)],
+      [t(L.target[0], L.target[1]), spv(p.스펙.타겟, en.스펙?.타겟)],
     ] as [string, string | undefined][]
   ).filter(([, v]) => v);
 
@@ -198,7 +201,8 @@ export default function ProductView({
 
       <header className="pw-head">
         <h1 className="pw-h1">{t(p.ko || p.en, p.en)}</h1>
-        <p className="pw-en-big">{t(p.en, p.ko)}</p>
+        {/* 영어 화면에서는 한국어 제품명을 띄우지 않는다. 읽을 수 없는 줄이 남는다. */}
+        {t(p.en, "") && <p className="pw-en-big">{t(p.en, "")}</p>}
         <dl className="pw-spec">
           {spec.map(([k, v]) => (
             <div key={k}>

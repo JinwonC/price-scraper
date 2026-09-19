@@ -84,7 +84,7 @@ export default function ProductPicker({ cards }: { cards: ProductCard[] }) {
                 </div>
                 <div className="pw-card-body">
                   <h2>{t(c.ko, c.en)}</h2>
-                  <p className="pw-en">{t(c.en, c.ko)}</p>
+                  {t(c.en, "") && <p className="pw-en">{t(c.en, "")}</p>}
                   {t(c.한줄, c.한줄En) && (
                     <p className="pw-line">{t(c.한줄, c.한줄En)}</p>
                   )}

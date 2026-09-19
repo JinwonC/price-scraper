@@ -96,11 +96,93 @@
    }
   ],
   "주의": [
-   "**피부 톤 개선 1.49%는 작은 수치입니다.** '톤이 확 밝아진다'로 부풀리면 과장입니다.",
-   "**설문 100%는 효과가 아닙니다.** 피시험자 기호도 설문에서 '보통 이상 긍정 응답'이 100%였다는 뜻입니다.",
-   "**나이아신아마이드 함량이 교안 안에서 어긋납니다.** 특징은 2%, 성분 슬라이드는 200,000ppm(=20%). 확인 전 함량 언급 금지.",
-   "미백은 '화사하게 가꾼다' 범위입니다. 표백·치료로 들리면 안 됩니다."
-  ]
+   "**주름 26.08%, 기미·잡티 15.5% 두 숫자만 쓰세요.** 같은 시험의 피부 톤 1.49% 를 같이 말하면 설득력이 떨어집니다.",
+   "**나이아신아마이드는 함량 없이 말하세요.** 교안 표기가 2% 와 200,000ppm 으로 엇갈립니다.",
+   "**교안의 '만족도 100%' 는 설문 결과입니다.** '보통 이상 긍정' 응답 비율이라 방송에서 쓰면 안 됩니다.",
+   "미백은 '화사하게 가꾼다' 범위입니다."
+  ],
+  "en": {
+   "lead": "A toner that behaves like a serum — thick when you pour it, watery as you spread it. The first step of a brightening routine.",
+   "who": "Anyone with dull, dry skin who wants brightening care from the toner step",
+   "certs": [
+    "Brightening + wrinkle care (dual functional claim)",
+    "Italian V-Label vegan certification",
+    "Primary skin irritation test completed",
+    "In-vitro antioxidant testing completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Sea buckthorn water",
+     "amount": "11.76%",
+     "role": "The vitamin-rich hydrating base."
+    },
+    {
+     "name": "Vitamin C · Glutathione-some",
+     "amount": "98% purity glutathione",
+     "role": "Freshness and clarity."
+    },
+    {
+     "name": "Niacinamide",
+     "role": "The notified brightening active."
+    },
+    {
+     "name": "Oligo-HA · Vegan Mucin",
+     "amount": "patented",
+     "role": "Low-molecular hyaluronic acid, plus fermented flaxseed for dense moisture."
+    },
+    {
+     "name": "13 vegan proteins · collagen extract",
+     "role": "Nourishment."
+    }
+   ],
+   "figures": [
+    {
+     "label": "Wrinkles",
+     "value": "26.08%",
+     "note": "2 weeks"
+    },
+    {
+     "label": "Blemishes and dark spots",
+     "value": "15.5%",
+     "note": "2 weeks"
+    }
+   ],
+   "testNote": "Two weeks of use / individual variation. The antioxidant work was in-vitro, meaning in a dish.",
+   "howto": [
+    {
+     "name": "Daily",
+     "how": "First step after cleansing. Take some onto a cotton pad or your hands, spread it and press it in."
+    },
+    {
+     "name": "As a wipe",
+     "how": "Soak a cotton pad and sweep it along the grain of the skin."
+    },
+    {
+     "name": "3-minute mask",
+     "how": "Soak a cotton pad well and lay it on a dry patch for 3 minutes, then press in what's left."
+    }
+   ],
+   "say": [
+    {
+     "line": "It pours thick like a serum, then turns watery as you spread it.",
+     "why": "You can show the change on camera, and it's what the name means."
+    },
+    {
+     "line": "Two weeks in, wrinkles improved 26.08% and dark spots 15.5%.",
+     "why": "Say 'over two weeks' and 'results vary' alongside it."
+    },
+    {
+     "line": "It's 180ml, so you can soak a cotton pad and use it as a three-minute mask.",
+     "why": "A large toner used generously is a real selling point."
+    }
+   ],
+   "careful": [
+    "**Use only the two figures: wrinkles 26.08% and dark spots 15.5%.** The same study put tone at 1.49%, which weakens the case if you say it.",
+    "**Mention niacinamide without a percentage.** The deck gives 2% in one place and 200,000ppm in another.",
+    "**The deck's '100% satisfaction' is a survey result** — the share who answered neutral-or-better. Don't use it on air.",
+    "Brightening here means helping skin look clearer. Don't let it sound like bleaching or treatment."
+   ]
+  }
  },
  "vita-toning-capsule-serum": {
   "한줄": "비타민나무수 81% 베이스 위에 비타민 캡슐이 떠 있는 2층 세럼. 펴 바르면 캡슐이 녹으며 섞입니다.",
@@ -471,10 +553,74 @@
    }
   ],
   "주의": [
-   "**비건 인증이 '완료(예정)' 이라는 모순된 표기로 적혀 있습니다.** 확인 전 인증 언급 금지.",
-   "**나이아신아마이드가 2%와 200,000ppm 두 가지로 적혀 있습니다.**",
-   "3단계 나노 리포좀은 제조 공법입니다. 효과가 3배라는 뜻이 아닙니다."
-  ]
+   "**나이아신아마이드는 함량 없이 말하세요.** 교안 표기가 2% 와 200,000ppm 으로 엇갈립니다.",
+   "**비건 인증이 아직 '예정' 으로 적혀 있습니다.** 비건 이야기는 빼고 '저자극 테스트 완료' 로 가세요.",
+   "'4만 캡슐' 은 회사가 계산한 값입니다. '4만 개 정도' 로 말하세요.",
+   "수치 시험이 없습니다. 다마스크장미꽃수 80.34% 와 캡슐이 녹는 장면으로 이야기를 끌고 가세요."
+  ],
+  "en": {
+   "lead": "A two-layer serum with vitamin capsules floating over a base of 80.34% damask rose water.",
+   "who": "Anyone wanting a brightening first step that hydrates without going sticky",
+   "certs": [
+    "Brightening + wrinkle care (dual functional claim)",
+    "Primary skin irritation test completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Damask rose water",
+     "amount": "80.34%",
+     "role": "Replaces purified water as the base."
+    },
+    {
+     "name": "Vitamin capsules",
+     "amount": "1.5% (around 40,000)",
+     "role": "Visible capsules carrying vitamins E and K, ceramide and blending oil."
+    },
+    {
+     "name": "Niacinamide",
+     "role": "The notified brightening active."
+    },
+    {
+     "name": "Trufferol™ · Vagestop™",
+     "amount": "patented",
+     "role": "d'Alba's own ingredient, plus a firmness patent from cauliflower mushroom extract."
+    }
+   ],
+   "howto": [
+    {
+     "name": "Daily",
+     "how": "Take some onto a cotton pad or your hands, spread it over the skin and press it in."
+    },
+    {
+     "name": "Intensive",
+     "how": "Layer it two or three more times wherever you want more brightness."
+    },
+    {
+     "name": "As a quick mask",
+     "how": "Soak a cotton pad and leave it on for 3–5 minutes."
+    }
+   ],
+   "say": [
+    {
+     "line": "You can see the capsules, and they melt the moment you spread it.",
+     "why": "It films well. Start here."
+    },
+    {
+     "line": "The base is damask rose water at 80.34%, in place of purified water.",
+     "why": "The most solid number in the formula, and what makes this one different from the Vita capsule serum."
+    },
+    {
+     "line": "The base and the capsules are 98.5 to 1.5, so it stays light.",
+     "why": "Explains why a capsule serum doesn't feel heavy."
+    }
+   ],
+   "careful": [
+    "**Mention niacinamide without a percentage.** The deck gives 2% in one place and 200,000ppm in another.",
+    "**Vegan certification is still listed as pending.** Leave vegan out and lead with the completed irritation test.",
+    "'40,000 capsules' is a company estimate. Say 'around 40,000'.",
+    "There are no test figures. Build the story around the 80.34% rose water and the capsules melting."
+   ]
+  }
  },
  "vita-toning-galvanic-wrinkle-eye-cream": {
   "한줄": "용기 끝에 갈바닉 진동 팁이 달린 아이크림. 바르면서 바로 문질러 흡수시키는 구조입니다.",
@@ -940,8 +1086,10 @@
   "한줄": "퍼스트 스프레이 세럼의 상위 버전. 정제수 대신 콜라겐수를 70% 넣고 엑소좀을 두 종류 쓴 제품입니다. 아직 출시 전입니다.",
   "누구에게": "기존 퍼스트 스프레이 세럼을 쓰다가 더 진한 것을 원하는 분",
   "인증": [
-   "인체 피부 일차자극 테스트 완료",
-   "독일 더마테스트 EXCELLENT"
+   "이탈리아 V-Label 비건 인증",
+   "민감성 피부 대상 인체 피부 일차자극 테스트 완료",
+   "여드름성 피부 사용 적합(논코메도제닉) 인체적용시험 완료",
+   "항산화 in-vitro 효능평가 완료"
   ],
   "핵심성분": [
    {
@@ -962,16 +1110,23 @@
   "근거수치": [
    {
     "항목": "피부 각질 개선",
-    "값": "94.50%",
-    "조건": "교안 표기"
+    "값": "94.50%"
    },
    {
-    "항목": "각질 개선 비교",
+    "항목": "360도 입체 속탄력",
     "값": "45.24%",
-    "조건": "퍼스트 스프레이 세럼 23.85% 대비"
+    "조건": "2주 · 퍼스트 23.85%"
+   },
+   {
+    "항목": "메이크업 들뜸 방지",
+    "값": "15.66%"
+   },
+   {
+    "항목": "흡수량",
+    "값": "59.48%"
    }
   ],
-  "시험조건": "기관·기간·인원이 교안에 없음",
+  "시험조건": "한국피부과학연구원 / 개인차 있음. '2배' 표기는 모두 기존 퍼스트 스프레이 세럼과 비교한 값입니다.",
   "사용법": [
    {
     "이름": "기본",
@@ -989,11 +1144,89 @@
    }
   ],
   "주의": [
-   "**아직 출시 전 제품입니다.** 정식 리스팅명과 가격이 확정되지 않았을 수 있습니다.",
-   "**교안에 서로 다른 패키지 두 개가 있습니다.** 120ml는 `TRUFFLE EXOSOME / Collagen Water 70%`, 100ml는 `Peptide Exosome 8%` 입니다. 핵심 성분 표기가 달라 확인이 필요합니다.",
-   "**'2배'는 전부 기존 퍼스트 스프레이 세럼 대비입니다.** 절대치가 아닙니다.",
-   "교안 파일명에 '임상완료후업데이트' 표기가 있어 수치가 바뀔 수 있습니다."
-  ]
+   "**'2배' 는 전부 기존 퍼스트 스프레이 세럼과 비교한 값입니다.** 아무것도 안 썼을 때와 비교한 것이 아닙니다.",
+   "**교안에 패키지 두 개가 있습니다.** 120ml 는 `TRUFFLE EXOSOME / Collagen Water 70%`, 100ml 는 `Peptide Exosome 8%` 로 핵심 성분 표기가 다릅니다. 실물 패키지를 확인하세요.",
+   "**아직 출시 전 제품입니다.** 수치가 바뀔 수 있습니다."
+  ],
+  "en": {
+   "lead": "The upgraded First Spray Serum. Collagen water at 70% instead of purified water, two kinds of exosome, and double the active serum.",
+   "who": "Anyone already using the First Spray Serum who wants something denser",
+   "certs": [
+    "Italian V-Label vegan certification",
+    "Primary skin irritation test completed on sensitive skin",
+    "Non-comedogenic (suitable for acne-prone skin) human trial completed",
+    "In-vitro antioxidant testing completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Collagen water",
+     "amount": "70%",
+     "role": "Replaces purified water as the base."
+    },
+    {
+     "name": "Dual exosomes",
+     "role": "White truffle nano exosome plus 99% pure Dipeptide-15."
+    },
+    {
+     "name": "Active serum",
+     "amount": "10%",
+     "role": "Double the previous concentration."
+    },
+    {
+     "name": "15 plant blending oils",
+     "role": "The oil film that leaves the skin glossy."
+    }
+   ],
+   "figures": [
+    {
+     "label": "Dead skin",
+     "value": "94.50%"
+    },
+    {
+     "label": "360° deep firmness",
+     "value": "45.24%",
+     "note": "2 weeks · First scored 23.85%"
+    },
+    {
+     "label": "Makeup lifting prevented",
+     "value": "15.66%"
+    },
+    {
+     "label": "Absorption",
+     "value": "59.48%"
+    }
+   ],
+   "testNote": "Korea Institute of Dermatological Sciences / individual variation. Every '2×' claim is measured against the existing First Spray Serum.",
+   "howto": [
+    {
+     "name": "Step 1",
+     "how": "Shake so the oil layer and the serum layer mix properly."
+    },
+    {
+     "name": "Step 2",
+     "how": "Mist evenly over the face from 15–20cm, then press it in."
+    }
+   ],
+   "say": [
+    {
+     "line": "Collagen water at 70%, in place of purified water.",
+     "why": "The clearest difference from the existing product."
+    },
+    {
+     "line": "The mist is finer. Put it next to the old one and you can see it.",
+     "why": "The deck has a side-by-side comparison. Good to put on screen."
+    },
+    {
+     "line": "It's been through a non-comedogenic trial, so it suits acne-prone skin.",
+     "why": "A high-performance mist that acne-prone skin can still use is a real selling point."
+    }
+   ],
+   "careful": [
+    "**Every '2×' claim is against the existing First Spray Serum**, not against using nothing.",
+    "**Two packages appear in the deck.** The 120ml reads `TRUFFLE EXOSOME / Collagen Water 70%`, the 100ml reads `Peptide Exosome 8%`. Check the actual package.",
+    "**This product hasn't launched yet.** The figures may change."
+   ]
+  }
  },
  "white-truffle-return-oil-cream-cleanser": {
   "한줄": "손 안에서 두 번 바뀌는 클렌저. 오일 젤 → 크림 → 폼으로 변하고, 리무버·클렌징 오일·젤·밤을 한 번에 대신합니다.",
@@ -1320,9 +1553,8 @@
    }
   ],
   "주의": [
-   "**가격이 교안에 '미정' 으로 되어 있습니다.** 본인 스토어 가격을 확인하세요.",
-   "'모공 탄력 개선'은 교안 표현입니다. 모공 크기가 영구적으로 줄어든다는 뜻이 아닙니다.",
-   "구체적인 시험 수치가 교안에 없습니다."
+   "**구매 전에 세 가지를 말해 주세요.** 처음 쓸 때는 내용물이 고르게 안 나올 수 있으니 충분히 돌릴 것, 10~30도에서 보관할 것, 갈아 쓰는 구조라 잔량을 다 비울 수는 없다는 것.",
+   "'모공 탄력' 은 모공 주변 피부가 탄탄해 보인다는 뜻입니다. 모공이 작아진다는 말은 쓰지 마세요."
   ],
   "en": {
    "lead": "A cleansing balm you grind off a fresh surface each time. No spatula, and no water ever gets in.",
@@ -1790,8 +2022,9 @@
    }
   ],
   "주의": [
-   "여러 인체적용시험이 '완료' 로만 적혀 있고 구체적 수치·기관·인원이 교안 텍스트에 없습니다. % 를 말하지 마세요.",
-   "'DIY 맞춤'은 비율 조절을 뜻합니다. 처방을 바꾸는 것이 아닙니다."
+   "**리뉴얼에서 판테놀 5% 와 나이아신아마이드 2% 가 더해졌습니다.** 나이아신아마이드 덕분에 주름 단일에서 미백·주름 2중 기능성이 됐습니다.",
+   "숫자 대신 항목으로 말하세요. 안티에이징(주름·리프팅·피부 치밀도), 속보습, 속탄력, 진정, 논코메도제닉 — 전부 인체적용시험을 마친 항목입니다.",
+   "'DIY' 는 비율을 조절한다는 뜻입니다. 처방을 바꾸는 것이 아닙니다."
   ],
   "en": {
    "lead": "One jar split between an aqua serum and an intense cream. You mix your own ratio with the spatula, to suit your skin that day.",
@@ -1999,13 +2232,6 @@
    {
     "이름": "화이트 트러플 · 콜라겐추출물",
     "역할": "보습과 탄력."
-   }
-  ],
-  "근거수치": [
-   {
-    "항목": "피부 온도 감소(쿨링)",
-    "값": "도움",
-    "조건": "1회 사용"
    }
   ],
   "사용법": [
@@ -2846,8 +3072,8 @@
    }
   ],
   "주의": [
-   "**모발 개선에 대한 구체적 수치가 교안에 없습니다.** '복구', '재생'은 쓰지 마세요.",
-   "헤어 퍼퓸 세럼과 혼동하기 쉽습니다. 이쪽이 오일 세럼(75mL)입니다."
+   "**'모공보다 467배 작다' 는 숫자는 쓰지 마세요.** 헤어 제품이라 모공과 비교할 일이 아닙니다.",
+   "'복구', '재생' 대신 '윤기', '결 정돈', '손상모 케어' 를 쓰세요. 단백질 13종과 아미노산 17종이 더 확실한 근거입니다."
   ],
   "en": {
    "lead": "Oil and serum at 4:6 in one bottle — a shine coating and a hydrating base, for hair that has gone dry and split.",
