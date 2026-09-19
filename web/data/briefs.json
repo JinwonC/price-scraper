@@ -271,10 +271,10 @@
     }
    ],
    "careful": [
-    "**Use only two figures: wrinkles 25.81% and dark spots 21.18%.** Adding the same study's 1.64% on tone weakens the case.",
-    "**Mention niacinamide without a percentage.** The deck gives 2% in one place and 200,000ppm in another.",
-    "**The deck's '100% satisfaction' is a survey result** — the share who answered neutral-or-better, not a measurement. Don't use it on air.",
-    "'40,000 capsules' is a company estimate. Say 'around 40,000'."
+    "**Skin tone improved 1.64% — that is a very small number.** Saying it beside the 25.81% wrinkle figure invites misreading.",
+    "**Niacinamide is written as both 2% and 200,000ppm (= 20%) in the deck.** Those are ten times apart.",
+    "'40,000 capsules' is the deck's own figure, calculated internally and varying batch to batch. It is not a count anyone made.",
+    "The nano process is a manufacturing method. It does not mean the effect is three times stronger."
    ]
   }
  },
@@ -350,7 +350,81 @@
    "**피부 톤 개선 1.59%는 세 수치 중 가장 작습니다.**",
    "**패키지가 두 가지입니다.** `CAPSULE CREAM`과 `CAPSULE MOISTURIZING CREAM`이 교안에 같이 있습니다. 어느 쪽이 현행인지 확인하세요.",
    "특허는 캡슐 제형에 대한 것입니다. 효능 특허가 아닙니다."
-  ]
+  ],
+  "en": {
+   "lead": "A brightening moisturiser with vitamin capsules set into it. The more you work it in, the more they melt and spread.",
+   "who": "Anyone whose skin stays dry however much water they add, but who hates a sticky finish",
+   "certs": [
+    "Brightening + wrinkle care (dual functional claim)",
+    "Italian V-Label vegan certification",
+    "Primary skin irritation test completed",
+    "In-vitro antioxidant testing completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Sea buckthorn water",
+     "amount": "53%",
+     "role": "Replaces purified water as the brightening base."
+    },
+    {
+     "name": "Membrane-free capsule",
+     "amount": "patented",
+     "role": "No shell, so it melts without residue. Carries vitamins E and K."
+    },
+    {
+     "name": "Vitamin C · liposomal glutathione",
+     "amount": "98% purity glutathione",
+     "role": "Freshness and glow."
+    },
+    {
+     "name": "Rose of Jericho · prickly pear · ceramide NP",
+     "role": "Moisture and firmness."
+    }
+   ],
+   "figures": [
+    {
+     "label": "Wrinkles",
+     "value": "25.41%",
+     "note": "2 weeks"
+    },
+    {
+     "label": "Blemishes and dark spots",
+     "value": "17.21%",
+     "note": "2 weeks"
+    },
+    {
+     "label": "Skin tone",
+     "value": "1.59%",
+     "note": "2 weeks"
+    }
+   ],
+   "testNote": "Korea Institute of Dermatological Sciences / 22 people / 2 weeks / individual variation.",
+   "howto": [
+    {
+     "name": "Morning and night",
+     "how": "Spread a suitable amount and work it in with gentle circles."
+    },
+    {
+     "name": "Massage tip",
+     "how": "Cover the whole face, then press with warm palms or massage from the centre outwards."
+    }
+   ],
+   "say": [
+    {
+     "line": "The more you work it in, the more the capsules melt. Nothing grainy is left behind.",
+     "why": "The membrane-free capsule patent. A texture claim, so it's safe — and it shows well on camera."
+    },
+    {
+     "line": "Two weeks in, wrinkles improved 25.41% and dark spots 17.21%.",
+     "why": "Measured at the Korea Institute of Dermatological Sciences with 22 people. Say the timeframe and that results vary."
+    }
+   ],
+   "careful": [
+    "**Use only the two figures: wrinkles 25.41% and dark spots 17.21%.** The same study put tone at 1.59%, which is small enough to undercut the others.",
+    "**Two packages exist** — `CAPSULE CREAM` and `CAPSULE MOISTURIZING CREAM`. Same product; check which one you're holding.",
+    "The patent covers the capsule format, not an efficacy claim."
+   ]
+  }
  },
  "first-oil-capsule-serum": {
   "한줄": "다마스크장미꽃수 80.34% 베이스에 비타민 캡슐이 떠 있는 미백 세럼. 수분 베이스와 캡슐이 98.5 대 1.5 비율입니다.",
@@ -519,8 +593,8 @@
     }
    ],
    "careful": [
-    "**1.71× and 1.66× compare the galvanic tip against applying the same cream by hand.** Say 'working it in with the tip beats using your fingers by this much'.",
-    "Galvanic here helps absorption. Don't liken it to a treatment or a procedure."
+    "**1.71× and 1.66× are 'compared with applying by hand'.** They are not measured against doing nothing at all.",
+    "Galvanic here is a device function that helps absorption. It is not a medical device and you cannot claim a treatment effect."
    ]
   }
  },
@@ -665,8 +739,8 @@
     }
    ],
    "careful": [
-    "**Use only the two figures: lifting 49.58% and wrinkles 25.81%.** Saying the same study's 1.15% on tone alongside them makes the whole set look shaky.",
-    "**Two packages are in circulation.** The old one reads `AROMATIC SPRAY SERUM`, the current one `VITA TONING ANTI-AGING SERUM`. Same product."
+    "**Skin tone improved 1.15% — that is a very small number.** Saying it in the same breath as the lifting figure invites misreading.",
+    "**There are two packages in circulation.** The old one reads `AROMATIC SPRAY SERUM`, the current one `VITA TONING ANTI-AGING SERUM`."
    ]
   }
  },
@@ -939,7 +1013,7 @@
     "역할": "세안 후 당김을 줄이는 보습 성분."
    }
   ],
-  "시험조건": "모두 '세정에 의한 즉각적인(일시적)' 효과. 개인차 있음",
+  "시험조건": "한국피부과학연구원 / 21명 / 세정에 의한 즉각적인(일시적) 효과 / 개인차 있음",
   "사용법": [
    {
     "이름": "STEP 1",
@@ -965,9 +1039,66 @@
    }
   ],
   "주의": [
-   "**모공 타이트닝·피지 감소·톤 개선 시험은 전부 '세정에 의한 즉각적인(일시적)' 효과입니다.** '일시적'을 빼고 말하면 안 됩니다.",
-   "구체적인 개선 % 가 교안 이미지 안에 있어 아직 판독하지 못했습니다. 수치를 말하지 마세요."
-  ]
+   "**모든 시험이 '씻어낸 직후' 의 변화입니다.** '세안하고 나면 바로 이렇게 됩니다' 로 말하면 정확합니다.",
+   "숫자 대신 항목으로 말하세요. 모공 타이트닝, 피지 감소, 트리플톤 개선, 블랙헤드 세정 — 전부 인체적용시험을 마친 항목입니다."
+  ],
+  "en": {
+   "lead": "A cleansing oil built like your own sebum. It melts hardened blackheads, and the powder suspended in the oil lifts debris out of pores.",
+   "who": "Anyone dealing with blackheads and clogged pores who hates that tight feeling after cleansing",
+   "certs": [
+    "Italian V-Label vegan certification",
+    "Primary skin irritation test completed",
+    "Blackhead cleansing human trial completed",
+    "Immediate pore tightening, sebum reduction and tone trials completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Jojoba oil",
+     "role": "Structured like sebum, so hardened debris dissolves into it. This is the whole logic of the product."
+    },
+    {
+     "name": "Oil in Powder Pocket",
+     "role": "Powder stabilised inside the oil. Roll it and the powder spreads, adsorbing debris."
+    },
+    {
+     "name": "Vita capsules",
+     "role": "Vitamins carried in visible capsules."
+    },
+    {
+     "name": "d'Alba-8 Blending Oil",
+     "role": "Keeps skin from feeling tight after rinsing."
+    }
+   ],
+   "testNote": "Korea Institute of Dermatological Sciences / 21 people / immediate, temporary effects from cleansing / individual variation.",
+   "howto": [
+    {
+     "name": "Step 1",
+     "how": "With dry hands, pump 2–3 times and massage over bare skin or makeup."
+    },
+    {
+     "name": "Step 2",
+     "how": "Wet your hands slightly, massage another 30 seconds, then rinse with lukewarm water."
+    }
+   ],
+   "say": [
+    {
+     "line": "The oil is built like your own sebum, so hardened blackheads dissolve into it.",
+     "why": "That's why jojoba is in there. It's a design reason, which makes it easy to explain."
+    },
+    {
+     "line": "There's powder suspended in the oil. Roll it and the powder spreads, pulling debris out.",
+     "why": "The Oil in Powder Pocket technology. It's what sets this apart from other cleansing oils."
+    },
+    {
+     "line": "It's been through a human trial for blackhead cleansing.",
+     "why": "Few cleansers have one with a named institute and a sample size."
+    }
+   ],
+   "careful": [
+    "**Every result here is what happens right after rinsing.** 'As soon as you've washed, this is what you get' is the accurate framing.",
+    "Name the measures rather than numbers: pore tightening, less sebum, clearer tone, blackhead cleansing — all of them completed human trials."
+   ]
+  }
  },
  "signature-vita-collagen-pore-tightening-deep-cleansing-balm": {
   "한줄": "다이얼을 돌려 필요한 만큼만 갈아 쓰는 클렌징 밤. 스패츌러 없이 매번 새 표면을 씁니다.",
@@ -1204,7 +1335,8 @@
     }
    ],
    "careful": [
-    "**Lead with 'right after one use' whenever you give a number.** These were measured immediately after a single pad. That one phrase covers it."
+    "**All four figures are 'immediately after one use, temporary'.** Dropping that condition makes the claim an overstatement.",
+    "**The deck contradicts itself on vegan certification** — 'in progress' in one place, 'completed' in another. Don't mention it until that's confirmed."
    ]
   }
  },
@@ -1590,8 +1722,9 @@
     }
    ],
    "careful": [
-    "**This is not a vegan-certified product.** The certificate in the deck covers a raw material and has expired. Leave vegan out and use 'passed a primary skin irritation test, rated low-irritation' instead.",
-    "'Wrinkle care functional' means the label is permitted. Say 'wrinkle care'."
+    "**Don't claim vegan certification for this one.** The certificate is for a raw material ('vegan collagen') held by the supplier, not for the finished product — and **it expired on 28 April 2022.**",
+    "'Wrinkle care' is a label claim based on a notified active. It does not mean wrinkles disappear.",
+    "There are no test figures in the deck. Don't quote percentages or timeframes."
    ]
   }
  },
@@ -2051,8 +2184,9 @@
     }
    ],
    "careful": [
-    "**Read the SPF and PA figures straight off the package.**",
-    "The hydro-trapping diagram is an illustration, not a photograph of skin."
+    "**Check the actual package for the SPF and PA figures before you say them.**",
+    "The hydro-trapping diagram is labelled in the deck as an illustration to aid understanding. Don't describe it as what literally happens inside skin.",
+    "There are no efficacy percentages in the deck. Don't quote numbers beyond SPF and PA."
    ]
   }
  },
@@ -2163,8 +2297,8 @@
     }
    ],
    "careful": [
-    "**Read the SPF and PA figures straight off the package.**",
-    "There's no figure for how much it brightens. Talk about what's visible — 'the pink brings colour back and it looks brighter'."
+    "**Check the actual package for the SPF and PA figures before you say them.**",
+    "There are no figures for how much it brightens or how much glow it adds. Don't quote numbers beyond SPF and PA."
    ]
   }
  },

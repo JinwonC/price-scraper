@@ -448,5 +448,114 @@
    "Absorbing into skin",
    "d'Alba-8 Blending Oil"
   ]
+ },
+ "vita-toning-capsule-cleansing-oil": {
+  "스펙": {
+   "용량": "150ml"
+  },
+  "한줄": "A cleansing oil built like your own sebum — it melts blackheads out, and the powder inside lifts the debris away.",
+  "특징": [
+   {
+    "title": "An oil structured like sebum — gentle, but it takes off everything from makeup to blackheads",
+    "body": [
+     "Jojoba oil shares a structure with sebum, so it lifts grime off easily.",
+     "It emulsifies the moment it meets water, dissolving debris fast."
+    ]
+   },
+   {
+    "title": "Blackheads and oil, softened away",
+    "body": [
+     "Hardened blackheads that won't shift are melted out by the oil.",
+     "A powder wash system adsorbs pore debris without scrubbing.",
+     "Human trial: blackhead cleansing."
+    ]
+   },
+   {
+    "title": "Brightening from the cleanse alone, thanks to the Vita capsules",
+    "body": [
+     "Makeup, blackheads and dead skin come away, and the complexion reads clearer.",
+     "Vita capsules bring daily vitamin care to dull skin."
+    ]
+   },
+   {
+    "title": "A thick, cushioned roll and no tightness afterwards",
+    "body": [
+     "Thick enough that you can massage without friction.",
+     "d'Alba's eight oils hold water in, so skin doesn't feel tight once it's rinsed."
+    ]
+   },
+   {
+    "title": "Italian V-Label vegan certification and a completed skin irritation test",
+    "body": []
+   }
+  ],
+  "이미지": [
+   "Texture with the capsules",
+   "Texture",
+   "Debris inside a pore",
+   "Dispensed into the hand",
+   "Model shot",
+   "Removing makeup"
+  ]
+ },
+ "vita-toning-capsule-cream": {
+  "스펙": {
+   "용량": "55g",
+   "기능성": "Brightening + wrinkle care (dual functional claim)"
+  },
+  "한줄": "A brightening moisturiser holding vitamin capsules — 53% sea buckthorn water, vitamin C and liposomal glutathione for skin that's gone dull and dry.",
+  "특징": [
+   {
+    "title": "Vita capsules that turn dull skin clear and bright, every day",
+    "body": [
+     "Vitamin-filled Vita capsules sit in a brightening cream, releasing freshness into the skin."
+    ]
+   },
+   {
+    "title": "Dark skin, uneven patches, spots and lines, handled at once",
+    "body": [
+     "Two weeks: blemishes and dark spots down 17.21%, wrinkles down 25.41%, tone up 1.59%.",
+     "Works on the dark spots behind dull-looking skin.",
+     "In-vitro antioxidant testing completed."
+    ]
+   },
+   {
+    "title": "53% sea buckthorn water with pure vitamin C and liposomal glutathione",
+    "body": [
+     "Sea buckthorn water replaces purified water at 53% as the brightening base, with vitamin C and liposomal glutathione layered on top."
+    ]
+   },
+   {
+    "title": "Two layers — vitamin capsules over a brightening cream",
+    "body": [
+     "A dense moisturising base and capsules carrying vitamins E and K, working together for clear, lit skin."
+    ]
+   },
+   {
+    "title": "A patented membrane-free capsule — nothing left behind",
+    "body": [
+     "The patented capsule melts into the skin with no residue."
+    ]
+   },
+   {
+    "title": "Freshness and moisture, alongside d'Alba's own ingredients",
+    "body": [
+     "Glow: Truvita™, sea buckthorn water, glutathione, vitamin C, vitamin E, vitamin K.",
+     "d'Alba's own: Trufferol™, Italian white truffle, d'Alba-8 Blending Oil.",
+     "Moisture and firmness: rose of Jericho, prickly pear, ceramide NP.",
+     "Three patented ingredients — a triple hyaluronic acid for moisture, sunflower extract for brightening, Trufferol™ for firmness.",
+     "Soothing: Lucky Herb 12 Complex, panthenol, centella extract, witch hazel, lotus flower extract."
+    ]
+   },
+   {
+    "title": "Italian V-Label vegan certification and a completed skin irritation test",
+    "body": []
+   }
+  ],
+  "이미지": [
+   "Product shot (Capsule Moisturizing Cream)",
+   "Capsule texture",
+   "Model shot"
+  ]
  }
 }

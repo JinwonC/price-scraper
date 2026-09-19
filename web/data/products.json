@@ -332,12 +332,12 @@
     "제목": "화이트 플라워 콤플렉스 7종",
     "본문": [
      "화이트닝 코어에 들어가는 꽃 추출물 묶음입니다. 연꽃꽃, 장미, 커먼자스민, 나팔수선화, 마돈나백합비늘줄기, 블루플래그아이리스, 프리지어 일곱 가지입니다.",
-     "이름이 예뻐서 방송에서 읽기 좋지만, 미백 기능성의 근거는 이 꽃들이 아니라 고시 성분인 알파-비사보롤입니다. 순서를 바꿔 말하지 마세요."
+     "이름이 예뻐서 방송에서 읽기 좋습니다. 다만 미백 기능성을 설명할 때는 고시 성분인 알파-비사보롤을 먼저 말하고, 꽃 이름은 거들어 주는 정도로 붙이세요."
     ],
     "title": "The seven white flowers",
     "body": [
      "A bundle of flower extracts in the brightening core: sacred lotus, rose, common jasmine, daffodil, Madonna lily bulb, blue flag iris and freesia.",
-     "The names read beautifully on camera, but the brightening claim rests on alpha-bisabolol, the notified active — not on these flowers. Don't reverse the order when you explain it."
+     "The names read beautifully on camera. When you explain the brightening claim, lead with alpha-bisabolol, the notified active, and let the flowers follow."
     ]
    },
    {
@@ -1090,27 +1090,29 @@
     "본문": [
      "교안 그래프에 탄력 개선 1.71배, 처진 각도 개선 1.66배가 나옵니다. 그런데 이건 '아무것도 안 했을 때보다' 가 아닙니다.",
      "같은 크림을 손으로 발라 흡수시킨 경우와, 이 갈바닉 팁으로 흡수시킨 경우를 비교한 값입니다. 즉 '기기를 쓰면 손으로 바를 때보다 이만큼 낫다' 는 뜻입니다.",
-     "기관과 인원이 교안에 적혀 있지 않습니다. 숫자를 말한다면 '손으로 바를 때와 비교한 값' 이라는 조건을 반드시 붙이세요."
+     "숫자를 쓸 때는 '손으로 바를 때보다' 를 앞에 붙이세요. '손으로 바르는 것보다 1.7배 잘 들어간다' 가 정확한 문장입니다."
     ],
     "title": "What the 1.71× and 1.66× actually mean",
     "body": [
      "The deck's graph shows elasticity improving 1.71× and sagging angle 1.66×. But this isn't 'compared with doing nothing'.",
      "It compares the same cream rubbed in by hand against the same cream worked in with the galvanic tip. In other words: using the device beats using your fingers by this much.",
-     "The institute and the number of participants aren't given for this comparison. If you use the figures, you must attach the condition that they're measured against hand application."
+     "Lead with 'compared to using your fingers' whenever you give the number. 'It gets in about 1.7 times better than rubbing it in by hand' is the accurate line."
     ]
    },
    {
     "제목": "어떤 항목으로 시험했나",
     "본문": [
-     "안티에이징 쪽으로 눈 밑 주름, 미간 주름, 팔자 주름, 눈꼬리 리프팅, 다크서클 부위 피부톤을 봤습니다. 한국피부과학연구원에서 21명을 대상으로 2주간 진행했습니다.",
-     "그 밖에 베개 눌림 자국 회복, 처진 눈가 끌어올림, 중력에 의한 처짐 개선, 다크서클 완화 시험을 마쳤습니다.",
-     "눈가를 끌어올리는 효과는 일시적입니다. '바르고 나면 눈가가 한결 올라가 보인다' 처럼 그 순간의 변화로 말하는 것이 정확합니다."
+     "안티에이징 쪽으로 여러 항목을 봤습니다. 눈 밑 주름, 미간 주름, 팔자 주름, 눈꼬리 리프팅, 다크서클 부위 피부톤입니다. 21명을 대상으로 2주간 진행했고 개인차가 있다는 단서가 붙어 있습니다.",
+     "그 밖에 베개 눌림 자국(탄성복원력) 개선, 처진 눈가를 일시적으로 끌어올리는 효과, 중력에 의한 처짐 개선, 다크서클 완화가 '완료' 로 적혀 있습니다.",
+     "항목별 개선율은 교안 그래프 안에 있는데, 위의 1.71배·1.66배 말고는 읽을 수 있는 숫자가 없습니다. 항목 이름만 말하고 수치는 붙이지 마세요.",
+     "'처진 눈가 일시적 끌어올림' 은 말 그대로 일시적입니다. 이 단어를 빼면 안 됩니다."
     ],
     "title": "What was tested",
     "body": [
-     "On the anti-ageing side: under-eye wrinkles, glabellar lines, nasolabial folds, outer-corner lifting and skin tone around the dark circles. Run at the Korea Institute of Dermatological Sciences with 21 people over two weeks.",
-     "Also completed: pillow-crease recovery, lifting a drooping eye area, anti-gravity sagging and dark circle reduction.",
-     "The lifting effect is temporary. 'Right after you use it your eye area looks lifted' is the accurate way to put it."
+     "The anti-ageing side covered several measures: under-eye wrinkles, glabellar lines, nasolabial folds, outer-corner lifting and skin tone in the dark circle area. It ran at the Korea Institute of Dermatological Sciences with 21 people over two weeks, with a note on individual variation.",
+     "Separately, the deck lists completed studies on pillow-crease recovery (elastic rebound), temporarily lifting a drooping eye area, anti-gravity sagging, and dark circle reduction.",
+     "Per-measure improvement rates sit inside the deck's graphs, and apart from the 1.71× and 1.66× above there are no legible numbers. Name the measures, but don't attach figures.",
+     "'Temporarily lifting a drooping eye area' means exactly that — temporary. Don't drop the word."
     ]
    },
    {
@@ -1137,14 +1139,14 @@
      "달바 제품에 반복해서 나오는 두 독자 성분입니다.",
      "트러페롤™ 은 이탈리아산 화이트 트러플과 토코페롤(비타민E)을 섞은 것으로 영양과 보습을 맡습니다.",
      "트러비타™ 는 화이트 트러플에 순도 99% 비타민C(아스코빅애씨드)와 글루타티온을 섞은 것으로, 생기와 광채 쪽입니다. 교안은 '수십 번의 배합 실험을 거쳐' 만들었다고 적고 있습니다.",
-     "미백 기능성의 근거는 이 독자 성분이 아니라 고시 성분인 나이아신아마이드 2% 입니다. 순서를 바꿔 말하지 마세요."
+     "미백 기능성 표시는 고시 성분인 나이아신아마이드 2% 때문에 붙습니다. 기능성을 설명할 때는 이쪽을 먼저 말하고, 독자 성분은 그다음에 붙이세요."
     ],
     "title": "Trufferol™ and Truvita™",
     "body": [
      "Two in-house ingredients that come up again and again across d'Alba products.",
      "Trufferol™ blends Italian white truffle with tocopherol (vitamin E), handling nourishment and moisture.",
      "Truvita™ blends white truffle with 99% pure vitamin C (ascorbic acid) and glutathione, handling brightness and glow. The deck says it was arrived at after dozens of blending trials.",
-     "The brightening claim rests on niacinamide at 2%, a notified active — not on these in-house ingredients. Don't reverse the order."
+     "The brightening claim on the label is there because of niacinamide at 2%, a notified active. Lead with that, then bring in the in-house ingredients."
     ]
    },
    {
@@ -1311,17 +1313,17 @@
     ]
    },
    {
-    "제목": "2주 수치",
+    "제목": "2주 수치를 어떻게 말해야 하나",
     "본문": [
-     "한국피부과학연구원에서 21명을 대상으로 2주간 봤습니다. 리프팅 49.58%, 주름 25.81% 입니다.",
-     "이 두 숫자를 쓰세요. '2주 사용' 과 '개인차 있음' 만 붙이면 됩니다.",
-     "같은 시험에서 피부톤은 1.15% 나왔습니다. 앞의 두 숫자와 나란히 놓으면 오히려 전체가 의심스러워 보입니다."
+     "한국피부과학연구원에서 21명을 대상으로 2주간 봤습니다. 리프팅 49.58%, 주름 25.81%, 피부톤 1.15% 개선입니다.",
+     "세 숫자의 크기가 너무 다릅니다. 리프팅과 피부톤을 나란히 말하면 '피부톤도 그 정도 좋아지나 보다' 로 들립니다. 1.15% 는 사실상 거의 변화가 없다는 뜻에 가깝습니다.",
+     "가장 큰 숫자 하나만 쓰고, 기관과 인원, 기간, 개인차를 같이 붙이는 것이 안전합니다."
     ],
-    "title": "The two-week figures",
+    "title": "How to handle the two-week figures",
     "body": [
-     "Measured at the Korea Institute of Dermatological Sciences with 21 people over two weeks: lifting improved 49.58%, wrinkles 25.81%.",
-     "Use those two. Attach 'over two weeks' and 'results vary'.",
-     "The same study put skin tone at 1.15%. Put that next to the other two and the whole set starts to look shaky."
+     "Measured at the Korea Institute of Dermatological Sciences with 21 people over two weeks: lifting improved 49.58%, wrinkles 25.81%, skin tone 1.15%.",
+     "The three numbers are wildly different in size. Saying lifting and tone in the same breath makes it sound as though tone improved comparably. 1.15% is close to no change at all.",
+     "Safer to use the single largest figure and attach the institute, the sample size, the timeframe and the note on individual variation."
     ]
    },
    {
@@ -1358,14 +1360,14 @@
      "교안이 이 제품의 안티에이징을 항목별로 쪼개 설명합니다. 방송에서 순서대로 짚기 좋습니다.",
      "다크 스팟 케어는 트러비타™ 와 미백 기능성이, 주름 케어는 주름개선 기능성이 맡습니다.",
      "탄력 케어는 특허 성분 트러페롤™, 보습·윤광은 달바-8 블렌딩 오일, 수분·생기는 비타민나무수가 맡습니다.",
-     "기능성 표시의 근거는 고시 성분인 나이아신아마이드입니다. 독자 성분이 기능성의 근거인 것처럼 말하지 마세요."
+     "기능성 표시는 고시 성분인 나이아신아마이드 때문에 붙습니다. 기능성을 설명할 때는 이쪽을 먼저 말하고, 독자 성분은 그다음에 붙이세요."
     ],
     "title": "Anti-ageing, split five ways",
     "body": [
      "The deck breaks this product's anti-ageing case into separate strands. Easy to walk through in order on camera.",
      "Dark spots are handled by Truvita™ and the brightening functional claim; lines by the wrinkle-care functional claim.",
      "Firmness is Trufferol™, the patented ingredient; moisture and glow are d'Alba-8 Blending Oil; water and freshness are sea buckthorn water.",
-     "The functional claims rest on niacinamide, a notified active. Don't present the in-house ingredients as the basis for them."
+     "The functional claim on the label is there because of niacinamide, a notified active. Lead with that, then bring in the in-house ingredients."
     ]
    },
    {
@@ -1399,17 +1401,17 @@
     ]
    },
    {
-    "제목": "인증",
+    "제목": "인증과 시험",
     "본문": [
-     "이탈리아 V-Label 비건 정식 인증을 받았습니다. 동물성 원료를 쓰지 않았습니다.",
-     "저자극 테스트에서 '비(무)자극 제품' 판정을 받았습니다. '저자극' 보다 한 단계 위라 그대로 쓸 수 있습니다.",
-     "독일 더마테스트에서 EXCELLENT 등급을 받았습니다. 항산화는 시험관 평가라 '항산화 성분이 들어 있다' 정도로 두고 위의 2주 수치로 밀고 가세요."
+     "이탈리아 V-Label 비건 정식 인증을 받았습니다. 동물성 원료를 쓰지 않았다는 뜻입니다.",
+     "저자극 테스트에서 '비(무)자극 제품' 판정을 받았습니다. '저자극' 보다 한 단계 위의 표현이라 그대로 쓸 수 있습니다.",
+     "독일 더마테스트에서 EXCELLENT 등급을 받았고, 항산화는 in-vitro 로 평가했습니다. in-vitro 는 사람 피부가 아니라 시험관에서 본 것이라, 피부에서 그대로 일어난다고 말하면 안 됩니다."
     ],
-    "title": "Certification",
+    "title": "Certification and testing",
     "body": [
      "Italian V-Label vegan certification — no animal-derived raw materials.",
-     "The irritation test returned a 'non-irritating' rating, a step above 'low-irritation'. Use that wording as is.",
-     "It holds a Dermatest EXCELLENT rating from Germany. The antioxidant work was in a dish, so keep that light and lead with the two-week figures above."
+     "The irritation test returned a 'non-irritating' rating, which is a step above 'low-irritation'. You can use that wording as is.",
+     "It holds a Dermatest EXCELLENT rating from Germany, and the antioxidant work was in-vitro. In-vitro means in a dish, not on human skin, so don't claim the same thing happens on the face."
     ]
    }
   ],
@@ -1785,8 +1787,166 @@
     "설명": []
    }
   ],
-  "기타": [],
-  "en판": {}
+  "기타": [
+   {
+    "제목": "무막 캡슐이 무엇인가",
+    "본문": [
+     "보통 캡슐은 얇은 막이 성분을 감싸고 있습니다. 이 제품의 캡슐은 그 막이 없습니다. 달바가 특허를 받은 제형입니다.",
+     "막이 없으니 문질렀을 때 알갱이가 남지 않고 그대로 녹아 사라집니다. 캡슐 제품에서 흔한 '겉돌거나 뭉치는 느낌' 이 없습니다.",
+     "캡슐 안에는 비타민E 와 비타민K 가 들어 있습니다. 노란 알갱이가 눈에 그대로 보이니 카메라 앞에서 손등에 짜서 문질러 보이면 가장 잘 전달됩니다."
+    ],
+    "title": "What a membrane-free capsule is",
+    "body": [
+     "Most capsules wrap their contents in a thin shell. These don't — it's a format d'Alba holds a patent on.",
+     "With no shell, nothing grainy is left when you rub it in; the capsule just melts away. That graininess is the usual complaint with capsule products, and it isn't here.",
+     "Inside are vitamins E and K. The yellow beads are plainly visible, so the best demonstration is squeezing some onto the back of your hand and rubbing it in on camera."
+    ]
+   },
+   {
+    "제목": "2주 수치",
+    "본문": [
+     "한국피부과학연구원에서 22명을 대상으로 2주간 봤습니다. 주름 25.41%, 잡티 및 기미 완화 17.21% 입니다.",
+     "이 두 숫자를 쓰세요. '2주 사용' 과 '개인차 있음' 만 붙이면 됩니다.",
+     "같은 시험에서 피부 톤은 1.59% 나왔습니다. 크기가 너무 달라서 같이 말하면 앞의 두 숫자까지 흐려집니다."
+    ],
+    "title": "The two-week figures",
+    "body": [
+     "Measured at the Korea Institute of Dermatological Sciences with 22 people over two weeks: wrinkles improved 25.41%, blemishes and dark spots 17.21%.",
+     "Use those two, with 'over two weeks' and 'results vary' attached.",
+     "The same study put tone at 1.59%. It's far enough off that mentioning it blurs the other two."
+    ]
+   },
+   {
+    "제목": "특허 성분 세 가지",
+    "본문": [
+     "보습은 3중 히알루론산입니다. 분자 크기가 다른 히알루론산 세 가지를 섞어 넣은 조합이고 특허를 받았습니다.",
+     "미백 쪽 특허 성분은 금화규 추출물입니다. 해바라기꽃에서 뽑은 것입니다.",
+     "탄력은 트러페롤™ 입니다. 이탈리아산 화이트 트러플과 토코페롤을 섞은 달바 고유 성분입니다.",
+     "세 가지 다 제형과 조성에 대한 특허지, '이만큼 효과가 있다' 를 인정받은 특허가 아닙니다."
+    ],
+    "title": "Three patented ingredients",
+    "body": [
+     "Moisture: a triple hyaluronic acid — three molecular sizes blended together, and patented as that blend.",
+     "Brightening: an extract of sunflower flower.",
+     "Firmness: Trufferol™, d'Alba's own blend of Italian white truffle and tocopherol.",
+     "All three are patents on the formulation, not recognition that the product works to a given degree."
+    ]
+   },
+   {
+    "제목": "진정 성분 — Lucky Herb 12 Complex",
+    "본문": [
+     "허브 열두 가지를 묶은 진정 성분입니다. 티트리잎, 라벤더꽃, 유칼립투스잎, 레몬밤잎, 오레가노잎, 센티드제라늄, 아티초크잎, 서양고추나물, 캐모마일꽃, 살비아잎, 마시멜로뿌리, 히비스커스꽃입니다.",
+     "여기에 판테놀, 병풀추출물, 버지니아풍년화(위치하젤), 연꽃꽃추출물이 더해집니다.",
+     "미백 크림은 자극 이야기가 따라붙기 마련인데, 이 조합이 그 대답입니다. 저자극 테스트도 34명을 대상으로 마쳤습니다."
+    ],
+    "title": "The soothing side — Lucky Herb 12 Complex",
+    "body": [
+     "Twelve herbs bundled together: tea tree leaf, lavender, eucalyptus leaf, lemon balm, oregano leaf, scented geranium, artichoke leaf, St John's wort, chamomile, sage leaf, marshmallow root and hibiscus.",
+     "Panthenol, centella extract, witch hazel and lotus flower extract are added alongside.",
+     "Brightening creams always invite questions about irritation, and this blend is the answer. The irritation test was run on 34 people."
+    ]
+   },
+   {
+    "제목": "보습·탄력 성분",
+    "본문": [
+     "부활초(트루 로즈 오브 예리코)는 마른 상태로 몇 년을 버티다 물을 만나면 다시 펴지는 식물입니다. 이름값을 하는 원료라 방송에서 이야기로 풀기 좋습니다.",
+     "천년초는 보검선인장에서 뽑은 것입니다. 물을 오래 머금는 성질이 있습니다.",
+     "세라마이드엔피는 비건 인증을 받은 것으로 장벽을 받칩니다. 달바-8 블렌딩 오일이 윤기를 더합니다."
+    ],
+    "title": "Moisture and firmness",
+    "body": [
+     "Rose of Jericho survives years dried out and unfurls again the moment it meets water. The name earns itself, and it tells well on camera.",
+     "Prickly pear extract holds water for a long time.",
+     "Ceramide NP, vegan certified, props up the barrier, and d'Alba-8 Blending Oil adds the shine."
+    ]
+   },
+   {
+    "제목": "바르는 법 — 마사지까지 하면 다릅니다",
+    "본문": [
+     "아침저녁으로 적당량을 펴 바른 뒤 부드럽게 문질러 흡수시킵니다.",
+     "교안이 따로 적어 둔 팁이 있습니다. 얼굴 전체에 바른 뒤 손바닥으로 지그시 눌러 체온을 전하거나, 안쪽에서 바깥쪽으로 마사지하는 것입니다.",
+     "캡슐이 녹는 제형이라 문지르는 시간이 곧 사용법입니다. 방송에서 이 동작을 보여주면 제품 설명이 절로 됩니다."
+    ],
+    "title": "How to apply it — the massage matters",
+    "body": [
+     "Morning and night, spread a suitable amount and work it in gently.",
+     "There's a tip worth using: cover the whole face, then press with warm palms, or massage from the centre outwards.",
+     "The capsules melt as you work, so the rubbing time is the instruction. Show that motion on camera and the product explains itself."
+    ]
+   },
+   {
+    "제목": "인증",
+    "본문": [
+     "이탈리아 V-Label 비건 인증을 받았고, 34명을 대상으로 인체 피부 일차자극(저자극) 시험을 마쳤습니다.",
+     "항산화는 시험관에서 평가했습니다. 사람 피부에서 확인한 것은 위의 2주 시험이니 그쪽으로 밀고 가세요."
+    ],
+    "title": "Certification",
+    "body": [
+     "Italian V-Label vegan certification, and a primary skin irritation test completed on 34 people.",
+     "The antioxidant work was done in a dish. What was measured on people is the two-week study above — lead with that."
+    ]
+   }
+  ],
+  "en판": {
+   "스펙": {
+    "용량": "55g",
+    "기능성": "Brightening + wrinkle care (dual functional claim)"
+   },
+   "한줄": "A brightening moisturiser holding vitamin capsules — 53% sea buckthorn water, vitamin C and liposomal glutathione for skin that's gone dull and dry.",
+   "특징": [
+    {
+     "title": "Vita capsules that turn dull skin clear and bright, every day",
+     "body": [
+      "Vitamin-filled Vita capsules sit in a brightening cream, releasing freshness into the skin."
+     ]
+    },
+    {
+     "title": "Dark skin, uneven patches, spots and lines, handled at once",
+     "body": [
+      "Two weeks: blemishes and dark spots down 17.21%, wrinkles down 25.41%, tone up 1.59%.",
+      "Works on the dark spots behind dull-looking skin.",
+      "In-vitro antioxidant testing completed."
+     ]
+    },
+    {
+     "title": "53% sea buckthorn water with pure vitamin C and liposomal glutathione",
+     "body": [
+      "Sea buckthorn water replaces purified water at 53% as the brightening base, with vitamin C and liposomal glutathione layered on top."
+     ]
+    },
+    {
+     "title": "Two layers — vitamin capsules over a brightening cream",
+     "body": [
+      "A dense moisturising base and capsules carrying vitamins E and K, working together for clear, lit skin."
+     ]
+    },
+    {
+     "title": "A patented membrane-free capsule — nothing left behind",
+     "body": [
+      "The patented capsule melts into the skin with no residue."
+     ]
+    },
+    {
+     "title": "Freshness and moisture, alongside d'Alba's own ingredients",
+     "body": [
+      "Glow: Truvita™, sea buckthorn water, glutathione, vitamin C, vitamin E, vitamin K.",
+      "d'Alba's own: Trufferol™, Italian white truffle, d'Alba-8 Blending Oil.",
+      "Moisture and firmness: rose of Jericho, prickly pear, ceramide NP.",
+      "Three patented ingredients — a triple hyaluronic acid for moisture, sunflower extract for brightening, Trufferol™ for firmness.",
+      "Soothing: Lucky Herb 12 Complex, panthenol, centella extract, witch hazel, lotus flower extract."
+     ]
+    },
+    {
+     "title": "Italian V-Label vegan certification and a completed skin irritation test",
+     "body": []
+    }
+   ],
+   "이미지": [
+    "Product shot (Capsule Moisturizing Cream)",
+    "Capsule texture",
+    "Model shot"
+   ]
+  }
  },
  {
   "slug": "vita-toning-capsule-cleansing-oil",
@@ -1840,8 +2000,145 @@
     "설명": []
    }
   ],
-  "기타": [],
-  "en판": {}
+  "기타": [
+   {
+    "제목": "피지와 같은 구조의 오일이라는 말",
+    "본문": [
+     "호호바오일은 화학 구조가 사람 피지와 닮아 있습니다. 그래서 굳어서 안 빠지는 블랙헤드가 이 오일에 잘 녹습니다.",
+     "'기름은 기름으로 지운다' 는 원리를 가장 잘 보여주는 성분이고, 이 제품이 왜 클렌징 오일인지에 대한 답이기도 합니다.",
+     "여기에 달바-8 블렌딩 오일이 더해져 피지와 노폐물을 함께 녹입니다. 카렌듈라꽃추출물과 카렌듈라꽃오일은 뉴질랜드산으로, 순하게 씻기도록 돕습니다."
+    ],
+    "title": "What 'structured like sebum' means",
+    "body": [
+     "Jojoba oil's chemical structure closely resembles human sebum. That's why blackheads that have hardened and won't shift dissolve into it.",
+     "It's the clearest demonstration of 'oil removes oil', and it's the answer to why this product is a cleansing oil at all.",
+     "d'Alba-8 Blending Oil works alongside it, dissolving sebum and debris together. The calendula flower extract and oil, both from New Zealand, keep the cleanse gentle."
+    ]
+   },
+   {
+    "제목": "Oil in Powder Pocket — 오일 안에 파우더가 들어 있습니다",
+    "본문": [
+     "오일 제형 안에 파우더를 안정화해 넣은 기술입니다. 평소에는 오일에 녹아 보이지 않다가, 얼굴에 올려 롤링하면 파우더가 퍼집니다.",
+     "퍼진 파우더가 모공 속 노폐물을 흡착해 끌어냅니다. 문질러서 긁어내는 것이 아니라 붙여서 떼어내는 방식이라 자극이 적습니다.",
+     "다른 클렌징 오일과 가장 뚜렷하게 구분되는 지점입니다. 방송에서 설명하기에도 그림이 그려집니다."
+    ],
+    "title": "Oil in Powder Pocket — there's powder inside the oil",
+    "body": [
+     "Powder stabilised inside an oil base. It stays dissolved and invisible until you roll it over your face, at which point the powder spreads out.",
+     "Once spread, it adsorbs debris out of pores — lifting it away rather than scrubbing it off, which is why it stays gentle.",
+     "It's the clearest point of difference from any other cleansing oil, and it's easy to picture when you describe it."
+    ]
+   },
+   {
+    "제목": "어떤 시험을 마쳤나",
+    "본문": [
+     "한국피부과학연구원에서 21명을 대상으로 다섯 가지를 봤습니다. 모공 타이트닝(수·면적·깊이), 모공 부위 피지 분비량 감소, 피부 트리플톤(투명도·노란기·갈색기) 개선, 피부 투명도 개선, 블랙헤드 피지 세정입니다.",
+     "다섯 가지 모두 씻어낸 직후의 변화입니다. '세안하고 나면 바로 이렇게 됩니다' 로 말하면 정확하고, 그게 사실 클렌저에 기대하는 바이기도 합니다.",
+     "흥미로운 결과가 하나 있습니다. 캡슐이 없는 제형과 비교했을 때 캡슐이 든 제형 쪽의 맑기 개선율이 더 높게 나왔습니다. 캡슐이 장식이 아니라는 근거입니다.",
+     "저자극 시험은 31명을 대상으로 따로 마쳤습니다."
+    ],
+    "title": "What has been tested",
+    "body": [
+     "Five things, at the Korea Institute of Dermatological Sciences with 21 people: pore tightening (count, area, depth), sebum output around the pores, triple-tone (clarity, yellowness, brownness), skin clarity, and blackhead cleansing.",
+     "All five measure what happens right after rinsing. 'As soon as you've washed, this is what you get' is both accurate and exactly what you'd want from a cleanser.",
+     "One result is worth knowing: against a version made without the capsules, the capsule formula came out better on clarity. That's the evidence the capsules aren't decoration.",
+     "The irritation test was run separately on 31 people."
+    ]
+   },
+   {
+    "제목": "모공과 피지 쪽 성분",
+    "본문": [
+     "ANTI SEBUM 은 대왕소나무잎추출물입니다. 피지 쪽을 맡습니다.",
+     "ACZERO 는 피지 특허 성분입니다. 녹차, 오카무라큰실말, 흰버드나무껍질, 병풀잎, 커피콩, 베르가모트잎, 소나무잎 추출물을 묶은 것입니다.",
+     "각질 쪽은 PHA(글루코노락톤)와 LHA(카프릴로일살리실릭애씨드)가 맡습니다. 둘 다 자극이 적은 각질 성분으로, 클렌징 오일에 들어가는 경우는 흔치 않습니다."
+    ],
+    "title": "The pore and sebum side",
+    "body": [
+     "ANTI SEBUM is an extract of Montezuma pine leaf, handling the oil side.",
+     "ACZERO is a patented sebum ingredient bundling green tea, Okamura seaweed, white willow bark, centella leaf, coffee bean, bergamot leaf and pine leaf extracts.",
+     "Dead skin is handled by PHA (gluconolactone) and LHA (capryloyl salicylic acid) — both gentle exfoliating acids, and both unusual to find in a cleansing oil."
+    ]
+   },
+   {
+    "제목": "진정과 생기 쪽 성분",
+    "본문": [
+     "자작나무수액과 Calming Complex Lipocalm(병풀추출물, 무화과추출물, 세라마이드엔피)이 진정을 맡습니다. 씻고 난 뒤 당김을 줄이는 자리입니다.",
+     "레드 플라워 블렌딩 오일은 자초오일, 로즈힙열매오일, 센티드제라늄꽃오일, 다마스크장미꽃오일 네 가지입니다. 각질 케어 쪽입니다.",
+     "생기는 글루타티온과 비타민C 가 맡고, 달바 독자 성분인 트러페롤™ 과 트러비타™ 가 함께 들어갑니다."
+    ],
+    "title": "The soothing and brightening side",
+    "body": [
+     "Birch sap and Calming Complex Lipocalm (centella extract, fig extract, ceramide NP) handle soothing — the part that keeps skin from feeling tight afterwards.",
+     "Red Flower Blending Oil is four oils: gromwell root, rosehip fruit, scented geranium flower and damask rose. It works on dead skin.",
+     "Brightness comes from glutathione and vitamin C, alongside d'Alba's own Trufferol™ and Truvita™."
+    ]
+   },
+   {
+    "제목": "두 단계로 씁니다",
+    "본문": [
+     "물기 없는 손에 2~3번 펌핑해 맨 얼굴이나 메이크업 위에 올리고 마사지합니다. 이때 파우더가 퍼지며 노폐물을 흡착합니다.",
+     "그다음 손에 물을 약간 묻혀 30초 정도 다시 마사지합니다. 여기서 유화가 일어나 오일이 하얗게 변합니다.",
+     "마지막으로 미온수로 헹굽니다. 물과 닿는 순간 빠르게 유화되는 제형이라 오래 문지를 필요가 없습니다.",
+     "제형이 도톰해서 롤링할 때 마찰 자극이 적습니다. 얇은 오일처럼 흘러내리지 않습니다."
+    ],
+    "title": "Two steps",
+    "body": [
+     "With dry hands, pump 2–3 times onto bare skin or over makeup and massage. This is where the powder spreads and picks up debris.",
+     "Then wet your hands slightly and massage another 30 seconds. This is where it emulsifies and turns milky.",
+     "Rinse with lukewarm water. It emulsifies quickly on contact, so there's no need to keep working at it.",
+     "The texture is thick enough to cushion the massage — it doesn't run off the way a thin oil does."
+    ]
+   }
+  ],
+  "en판": {
+   "스펙": {
+    "용량": "150ml"
+   },
+   "한줄": "A cleansing oil built like your own sebum — it melts blackheads out, and the powder inside lifts the debris away.",
+   "특징": [
+    {
+     "title": "An oil structured like sebum — gentle, but it takes off everything from makeup to blackheads",
+     "body": [
+      "Jojoba oil shares a structure with sebum, so it lifts grime off easily.",
+      "It emulsifies the moment it meets water, dissolving debris fast."
+     ]
+    },
+    {
+     "title": "Blackheads and oil, softened away",
+     "body": [
+      "Hardened blackheads that won't shift are melted out by the oil.",
+      "A powder wash system adsorbs pore debris without scrubbing.",
+      "Human trial: blackhead cleansing."
+     ]
+    },
+    {
+     "title": "Brightening from the cleanse alone, thanks to the Vita capsules",
+     "body": [
+      "Makeup, blackheads and dead skin come away, and the complexion reads clearer.",
+      "Vita capsules bring daily vitamin care to dull skin."
+     ]
+    },
+    {
+     "title": "A thick, cushioned roll and no tightness afterwards",
+     "body": [
+      "Thick enough that you can massage without friction.",
+      "d'Alba's eight oils hold water in, so skin doesn't feel tight once it's rinsed."
+     ]
+    },
+    {
+     "title": "Italian V-Label vegan certification and a completed skin irritation test",
+     "body": []
+    }
+   ],
+   "이미지": [
+    "Texture with the capsules",
+    "Texture",
+    "Debris inside a pore",
+    "Dispensed into the hand",
+    "Model shot",
+    "Removing makeup"
+   ]
+  }
  },
  {
   "slug": "signature-vita-capsule-hydrogel-mask-8-shape",
