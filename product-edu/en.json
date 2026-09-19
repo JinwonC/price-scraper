@@ -880,5 +880,103 @@
    "Cheek lifting improved 11.271% (after one use)",
    "Capsule image"
   ]
+ },
+ "professional-repairing-hair-oil-serum": {
+  "스펙": {
+   "용량": "75ml",
+   "타겟": "All hair types, damaged hair, dry hair"
+  },
+  "한줄": "Oil and serum at 4:6 — a hair oil that coats with shine and still disappears into the hair, leaving nothing on your hands.",
+  "특징": [
+   {
+    "title": "Oil and serum in one, built for damaged hair",
+    "body": [
+     "Deep plant oils make up the 40% shine coating; a hydrating serum makes up the 60% that rebuilds the base.",
+     "A 6:4 ratio of water to nourishment, for hair that has split and gone brittle."
+    ]
+   },
+   {
+    "title": "No droop, no clumping, nothing left behind",
+    "body": [
+     "It sinks in on contact instead of sitting heavy, so hair stays soft rather than flat.",
+     "Nothing stays on your hands — just the scent. Airy and silky."
+    ]
+   },
+   {
+    "title": "46% collagen water and 10% nano Peptide Exosome",
+    "body": [
+     "A nano exosome system from Italian white truffle, bound to 99% pure low-molecular Dipeptide-15.",
+     "It smooths roughened hair so the active works evenly along the strand."
+    ]
+   },
+   {
+    "title": "Rose Freesia — scent and shine that last",
+    "body": [
+     "A perfume-oil effect that stays soft on the hair all day.",
+     "Fresh fruit, then rose and freesia in full bloom, elegant and quiet."
+    ]
+   },
+   {
+    "title": "The most protein in the range, with premium oils",
+    "body": [
+     "Protein: 13 proteins and 17 amino acids — more than d'Alba's own shampoo or hair perfume.",
+     "Conditioning: Peptide Exosome™ (Dipeptide-15 1.2%, white truffle water and extract).",
+     "Firmness: Trufferol™ (Italian white truffle, tocopherol).",
+     "Moisture and shine: d'Alba-12 Blending Oil with Bulgarian rose oil and Moroccan argan oil."
+    ]
+   },
+   {
+    "title": "Italian V-Label vegan certified, irritation test completed",
+    "body": []
+   }
+  ],
+  "이미지": [
+   "Product shot",
+   "Product styling shot",
+   "Model shot",
+   "Hair, before and after",
+   "High-concentration essential oil 11,000ppm"
+  ]
+ },
+ "white-truffle-double-layer-revitalizing-serum": {
+  "스펙": {
+   "용량": "30ml",
+   "타겟": "All skin types"
+  },
+  "한줄": "Serum and oil held apart at 7:3 — shake it and the two mix, for firmness and glow in one step.",
+  "특징": [
+   {
+    "title": "A formula that separates on purpose",
+    "body": [
+     "Serum and oil sit in a 7:3 split and you shake before each use — they separate again over 24 hours.",
+     "The ratio balances water and moisture against nourishment and firmness."
+    ]
+   },
+   {
+    "title": "Two effects in one application",
+    "body": [
+     "The firming serum layer and the nourishing oil layer leave skin hydrated and smooth, while the wrinkle care claim covers the lines you're watching, and skin looks alive again."
+    ]
+   },
+   {
+    "title": "What's in each layer",
+    "body": [
+     "Firming serum layer: Italian white truffle and Trufferol™, d'Alba's patented ingredient, for taut, luminous skin.",
+     "Nourishing oil layer: sunflower seed, macadamia seed and avocado oils, for soft, dense, glossy skin."
+    ]
+   },
+   {
+    "title": "Serious ingredients, gentle on skin",
+    "body": [
+     "41 plant-derived ingredients in total — 10 plant oils and 31 botanical extracts — for a treatment-like finish.",
+     "Primary skin irritation human trial completed.",
+     "Human trials completed for immediate hydration and 100-hour moisture retention, deep firmness, anti-ageing (wrinkles, lifting, skin density), skin texture and inner dryness.",
+     "In-vitro antioxidant testing completed."
+    ]
+   }
+  ],
+  "이미지": [
+   "Texture"
+  ]
  }
 }

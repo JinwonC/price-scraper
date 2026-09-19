@@ -1680,9 +1680,75 @@
    }
   ],
   "주의": [
-   "교안에 한 줄 소개와 출시 정보, 기능성 표시가 없습니다.",
-   "구체적인 개선 % 가 교안 텍스트에 없습니다."
-  ]
+   "**24시간이 지나면 두 층이 다시 분리됩니다.** 쓸 때마다 흔들어야 7:3 비율대로 나옵니다. 이건 불량이 아니라 설계입니다.",
+   "여러 인체적용시험이 '완료' 로만 적혀 있고 수치가 없습니다. 항목으로 말하세요 — 즉각 보습, 100시간 보습 지속, 속탄력, 안티에이징, 피부결."
+  ],
+  "en": {
+   "lead": "Serum and oil held apart at 7:3 in one bottle. They separate again over 24 hours, so you shake it every time.",
+   "who": "Anyone wanting wrinkle care and glow together, without a sticky finish",
+   "certs": [
+    "Primary skin irritation human trial completed",
+    "Immediate hydration and 100-hour moisture retention trial completed",
+    "Anti-ageing (wrinkles, lifting, skin density), texture and inner-dryness trials completed",
+    "In-vitro antioxidant testing completed"
+   ],
+   "ingredients": [
+    {
+     "name": "White truffle + tocopherol",
+     "role": "The heart of the firming serum layer (7)."
+    },
+    {
+     "name": "Sunflower · macadamia · avocado oil",
+     "role": "The nourishing oil layer (3)."
+    },
+    {
+     "name": "OLIGO-HA",
+     "amount": "patented",
+     "role": "Low-molecular hyaluronic acid for lines, moisture and firmness."
+    },
+    {
+     "name": "Moisture Star",
+     "amount": "patented",
+     "role": "Okra fruit extract, cold-pressed so the mucilage survives."
+    }
+   ],
+   "howto": [
+    {
+     "name": "Step 1",
+     "how": "After cleansing, smooth the skin with toner."
+    },
+    {
+     "name": "Step 2",
+     "how": "Shake, take a suitable amount and work it in along the grain of the skin."
+    },
+    {
+     "name": "Mixed into cream",
+     "how": "A drop stirred into your cream makes the moisture last longer."
+    },
+    {
+     "name": "Before makeup",
+     "how": "Used before base makeup it leaves more of a lit finish."
+    }
+   ],
+   "say": [
+    {
+     "line": "It separates again after a day, so you shake it every time. That's the design, not a fault.",
+     "why": "Heads off the 'is mine broken?' question. Shaking it is the best shot you'll get."
+    },
+    {
+     "line": "One drop into your cream and the moisture lasts much longer.",
+     "why": "A tip from the deck. It turns a serum into something people use two ways."
+    },
+    {
+     "line": "100-hour moisture retention has been through a human trial.",
+     "why": "Say the measure rather than a number — the deck lists it as completed."
+    }
+   ],
+   "careful": [
+    "**The two layers separate again after 24 hours.** Shake before every use or you won't get the 7:3 ratio.",
+    "Several human trials are listed as completed without figures. Name the measures instead — immediate hydration, 100-hour retention, deep firmness, anti-ageing, texture."
+   ]
+  }
  },
  "white-truffle-refresh-aqua-serum": {
   "한줄": "캐나다산 빙하수를 80% 넣은 쿨링 스프레이 세럼. 달아오른 피부를 식히는 용도입니다.",
@@ -2434,7 +2500,68 @@
   "주의": [
    "**모발 개선에 대한 구체적 수치가 교안에 없습니다.** '복구', '재생'은 쓰지 마세요.",
    "헤어 퍼퓸 세럼과 혼동하기 쉽습니다. 이쪽이 오일 세럼(75mL)입니다."
-  ]
+  ],
+  "en": {
+   "lead": "Oil and serum at 4:6 in one bottle — a shine coating and a hydrating base, for hair that has gone dry and split.",
+   "who": "Anyone whose hair goes flat under oils, or who wants shine without residue on their hands",
+   "certs": [
+    "Italian V-Label vegan certification",
+    "Primary skin irritation test completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Collagen water",
+     "amount": "46%",
+     "role": "Replaces purified water as the base."
+    },
+    {
+     "name": "Peptide Exosome™",
+     "amount": "10%",
+     "role": "White truffle exosome bound to 99% pure Dipeptide-15."
+    },
+    {
+     "name": "Protein + amino acids",
+     "amount": "13 + 17 kinds",
+     "role": "More protein than any other d'Alba hair product."
+    },
+    {
+     "name": "Bulgarian rose oil · Moroccan argan oil",
+     "role": "The shine coating, with d'Alba-12 Blending Oil."
+    }
+   ],
+   "howto": [
+    {
+     "name": "Basic",
+     "how": "Shake 3–5 times, take an amount to suit your hair length and work it through evenly."
+    },
+    {
+     "name": "Around heat",
+     "how": "Use it before or after the dryer to limit heat damage and dryness."
+    },
+    {
+     "name": "Through the day",
+     "how": "Apply lightly whenever hair feels dry or starts to frizz."
+    }
+   ],
+   "say": [
+    {
+     "line": "It's an oil, but it doesn't leave your hands greasy — only the scent stays.",
+     "why": "The main objection to hair oils, answered directly. Demonstrate it on camera."
+    },
+    {
+     "line": "It has more protein than d'Alba's own shampoo or hair perfume.",
+     "why": "13 proteins and 17 amino acids. The deck says so itself, so it's a clean comparison."
+    },
+    {
+     "line": "Bulgarian rose oil takes 3,000 roses to make one gram.",
+     "why": "A fact worth telling, and it explains where the price comes from."
+    }
+   ],
+   "careful": [
+    "**Skip the '467× smaller than a pore' line.** This is a hair product; pores don't come into it.",
+    "Use 'shine', 'smoother strands', 'care for damaged hair' rather than 'repair' or 'regenerate'."
+   ]
+  }
  },
  "waterfull-uv-essence-sunscreen": {
   "한줄": "바르는 순간 수분 에센스가 터지는 느낌의 수분자차 선스크린. 백탁과 끼임이 없는 게 소구점입니다.",
