@@ -974,3 +974,48 @@
     gap: 2px;
   }
 }
+
+/* 인증은 이름만. 인증서 번호·성적서 내용은 교안 원문에 있다. */
+.pw-certs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 20px 0 0;
+}
+.pw-certs span {
+  font-size: 12.5px;
+  padding: 4px 11px;
+  border-radius: 999px;
+  background: var(--page);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  word-break: keep-all;
+}
+
+/* 교안 원문 묶음 접기 */
+.pw-fold {
+  border-top: 1px solid var(--border);
+}
+.pw-fold > summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 0;
+  cursor: pointer;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.pw-fold > summary:hover,
+.pw-fold[open] > summary {
+  color: var(--text-primary);
+}
+.pw-fold-n {
+  font-size: 11.5px;
+  font-weight: 400;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.pw-fold-body {
+  padding: 4px 0 20px;
+}
