@@ -201,8 +201,8 @@ export default function ProductView({
 
       <header className="pw-head">
         <h1 className="pw-h1">{t(p.ko || p.en, p.en)}</h1>
-        {/* 영어 화면에서는 한국어 제품명을 띄우지 않는다. 읽을 수 없는 줄이 남는다. */}
-        {t(p.en, "") && <p className="pw-en-big">{t(p.en, "")}</p>}
+        {/* 영어 화면에서는 제목이 이미 영어다. 같은 이름을 두 번 쓰지 않는다. */}
+        {lang === "ko" && p.en && <p className="pw-en-big">{p.en}</p>}
         <dl className="pw-spec">
           {spec.map(([k, v]) => (
             <div key={k}>

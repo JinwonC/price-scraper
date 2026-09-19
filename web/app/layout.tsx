@@ -2,8 +2,8 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "달바 레딧 모니터",
-  description: "레딧에서 오간 d'alba / dalba 언급을 매일 모아 봅니다.",
+  title: "d'Alba Product Guide",
+  description: "d'Alba product guides, compiled per product.",
   robots: { index: false, follow: false }, // 사내용 — 검색엔진 노출 방지
 };
 
@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko">
+    <html lang="en">
       <body>{children}</body>
     </html>
   );

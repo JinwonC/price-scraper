@@ -55,11 +55,6 @@
     "항목": "기미 및 잡티 완화",
     "값": "15.5%",
     "조건": "2주 사용"
-   },
-   {
-    "항목": "피부 톤 개선",
-    "값": "1.49%",
-    "조건": "2주 사용"
    }
   ],
   "시험조건": "2주 사용, 22명, 개인차 있음",
@@ -88,7 +83,7 @@
    },
    {
     "문장": "쓰는 방법이 세 가지예요. 그냥 바르거나, 닦토하거나, 3분 팩으로.",
-    "근거": "교안에 세 가지가 다 적혀 있습니다. 한 제품을 세 가지로 쓸 수 있다는 건 구매 이유가 됩니다."
+    "근거": "브랜드 자료에 세 가지가 다 적혀 있습니다. 한 제품을 세 가지로 쓸 수 있다는 건 구매 이유가 됩니다."
    },
    {
     "문장": "2주 썼을 때 주름 개선 26.08% 나왔습니다.",
@@ -97,8 +92,8 @@
   ],
   "주의": [
    "**주름 26.08%, 기미·잡티 15.5% 두 숫자만 쓰세요.** 같은 시험의 피부 톤 1.49% 를 같이 말하면 설득력이 떨어집니다.",
-   "**나이아신아마이드는 함량 없이 말하세요.** 교안 표기가 2% 와 200,000ppm 으로 엇갈립니다.",
-   "**교안의 '만족도 100%' 는 설문 결과입니다.** '보통 이상 긍정' 응답 비율이라 방송에서 쓰면 안 됩니다.",
+   "**나이아신아마이드는 함량 없이 말하세요.** 자료 표기가 2% 와 200,000ppm 으로 엇갈립니다.",
+   "**브랜드 자료의 '만족도 100%' 는 설문 결과입니다.** '보통 이상 긍정' 응답 비율이라 방송에서 쓰면 안 됩니다.",
    "미백은 '화사하게 가꾼다' 범위입니다."
   ],
   "en": {
@@ -178,8 +173,8 @@
    ],
    "careful": [
     "**Use only the two figures: wrinkles 26.08% and dark spots 15.5%.** The same study put tone at 1.49%, which weakens the case if you say it.",
-    "**Mention niacinamide without a percentage.** The deck gives 2% in one place and 200,000ppm in another.",
-    "**The deck's '100% satisfaction' is a survey result** — the share who answered neutral-or-better. Don't use it on air.",
+    "**Mention niacinamide without a percentage.** The brand gives 2% in one place and 200,000ppm in another.",
+    "**The brand's '100% satisfaction' is a survey result** — the share who answered neutral-or-better. Don't use it on air.",
     "Brightening here means helping skin look clearer. Don't let it sound like bleaching or treatment."
    ]
   }
@@ -249,8 +244,8 @@
   ],
   "주의": [
    "**주름 25.81%, 기미·잡티 21.18% 두 숫자만 쓰세요.** 같은 시험의 피부톤 1.64% 를 같이 말하면 설득력이 떨어집니다.",
-   "**나이아신아마이드는 함량 없이 말하세요.** 교안 표기가 2% 와 200,000ppm 으로 엇갈립니다.",
-   "**교안의 '만족도 100%' 는 설문 결과입니다.** 측정값이 아니라 '보통 이상 긍정' 응답 비율이라 방송에서 쓰면 안 됩니다.",
+   "**나이아신아마이드는 함량 없이 말하세요.** 자료 표기가 2% 와 200,000ppm 으로 엇갈립니다.",
+   "**브랜드 자료의 '만족도 100%' 는 설문 결과입니다.** 측정값이 아니라 '보통 이상 긍정' 응답 비율이라 방송에서 쓰면 안 됩니다.",
    "'4만 캡슐' 은 회사가 계산한 값입니다. '4만 개 정도' 로 말하세요."
   ],
   "근거수치": [
@@ -262,11 +257,6 @@
    {
     "항목": "기미 및 잡티 완화",
     "값": "21.18%",
-    "조건": "2주 사용"
-   },
-   {
-    "항목": "피부 톤 개선",
-    "값": "1.64%",
     "조건": "2주 사용"
    }
   ],
@@ -316,11 +306,6 @@
      "label": "Dark spots and blemishes",
      "value": "21.18%",
      "note": "2 weeks"
-    },
-    {
-     "label": "Skin tone",
-     "value": "1.64%",
-     "note": "2 weeks"
     }
    ],
    "testNote": "Korea Institute of Dermatological Sciences / 22 people / 2 weeks / individual variation. The antioxidant work was in-vitro, meaning in a dish.",
@@ -354,8 +339,8 @@
    ],
    "careful": [
     "**Skin tone improved 1.64% — that is a very small number.** Saying it beside the 25.81% wrinkle figure invites misreading.",
-    "**Niacinamide is written as both 2% and 200,000ppm (= 20%) in the deck.** Those are ten times apart.",
-    "'40,000 capsules' is the deck's own figure, calculated internally and varying batch to batch. It is not a count anyone made.",
+    "**Niacinamide is written as both 2% and 200,000ppm (= 20%) in the brand material.** Those are ten times apart.",
+    "'40,000 capsules' is the brand's own figure, calculated internally and varying batch to batch. It is not a count anyone made.",
     "The nano process is a manufacturing method. It does not mean the effect is three times stronger."
    ]
   }
@@ -400,11 +385,6 @@
     "항목": "잡티 및 기미 완화",
     "값": "17.21%",
     "조건": "2주 사용"
-   },
-   {
-    "항목": "피부 톤 개선",
-    "값": "1.59%",
-    "조건": "2주 사용"
    }
   ],
   "시험조건": "2주 사용, 개인차 있음",
@@ -430,7 +410,7 @@
   ],
   "주의": [
    "**피부 톤 개선 1.59%는 세 수치 중 가장 작습니다.**",
-   "**패키지가 두 가지입니다.** `CAPSULE CREAM`과 `CAPSULE MOISTURIZING CREAM`이 교안에 같이 있습니다. 어느 쪽이 현행인지 확인하세요.",
+   "**패키지가 두 가지입니다.** `CAPSULE CREAM`과 `CAPSULE MOISTURIZING CREAM`이 브랜드 자료에 같이 있습니다. 어느 쪽이 현행인지 확인하세요.",
    "특허는 캡슐 제형에 대한 것입니다. 효능 특허가 아닙니다."
   ],
   "en": {
@@ -472,11 +452,6 @@
     {
      "label": "Blemishes and dark spots",
      "value": "17.21%",
-     "note": "2 weeks"
-    },
-    {
-     "label": "Skin tone",
-     "value": "1.59%",
      "note": "2 weeks"
     }
    ],
@@ -549,11 +524,11 @@
   "말할때": [
    {
     "문장": "정제수 대신 장미꽃수를 80% 넘게 넣었습니다.",
-    "근거": "교안의 핵심 숫자이고 확인 가능한 사실입니다."
+    "근거": "브랜드 자료의 핵심 숫자이고 확인 가능한 사실입니다."
    }
   ],
   "주의": [
-   "**나이아신아마이드는 함량 없이 말하세요.** 교안 표기가 2% 와 200,000ppm 으로 엇갈립니다.",
+   "**나이아신아마이드는 함량 없이 말하세요.** 자료 표기가 2% 와 200,000ppm 으로 엇갈립니다.",
    "**비건 인증이 아직 '예정' 으로 적혀 있습니다.** 비건 이야기는 빼고 '저자극 테스트 완료' 로 가세요.",
    "'4만 캡슐' 은 회사가 계산한 값입니다. '4만 개 정도' 로 말하세요.",
    "수치 시험이 없습니다. 다마스크장미꽃수 80.34% 와 캡슐이 녹는 장면으로 이야기를 끌고 가세요."
@@ -615,7 +590,7 @@
     }
    ],
    "careful": [
-    "**Mention niacinamide without a percentage.** The deck gives 2% in one place and 200,000ppm in another.",
+    "**Mention niacinamide without a percentage.** The brand gives 2% in one place and 200,000ppm in another.",
     "**Vegan certification is still listed as pending.** Leave vegan out and lead with the completed irritation test.",
     "'40,000 capsules' is a company estimate. Say 'around 40,000'.",
     "There are no test figures. Build the story around the 80.34% rose water and the capsules melting."
@@ -675,7 +650,7 @@
    },
    {
     "문장": "쿨링팁이라 눈가에 닿으면 시원합니다.",
-    "근거": "교안에 쿨링팁 적용이 명시돼 있습니다. 사용감 이야기라 안전합니다."
+    "근거": "브랜드 자료에 쿨링팁 적용이 명시돼 있습니다. 사용감 이야기라 안전합니다."
    }
   ],
   "주의": [
@@ -735,7 +710,7 @@
     },
     {
      "line": "The tip is cooling, so it feels cold on the eye area.",
-     "why": "The deck specifies a cooling tip. A sensory claim, so it's safe ground."
+     "why": "The brand material specifies a cooling tip. A sensory claim, so it's safe ground."
     }
    ],
    "careful": [
@@ -783,11 +758,6 @@
    {
     "항목": "주름 개선",
     "값": "25.81%",
-    "조건": "2주 사용"
-   },
-   {
-    "항목": "피부톤 개선",
-    "값": "1.15%",
     "조건": "2주 사용"
    }
   ],
@@ -855,11 +825,6 @@
     {
      "label": "Wrinkles",
      "value": "25.81%",
-     "note": "2 weeks"
-    },
-    {
-     "label": "Skin tone",
-     "value": "1.15%",
      "note": "2 weeks"
     }
    ],
@@ -1140,12 +1105,12 @@
    },
    {
     "문장": "분사 입자가 더 곱습니다. 기존이랑 나란히 두면 차이가 보여요.",
-    "근거": "교안에 분사 비교 이미지가 있습니다. 화면에 띄우기 좋습니다."
+    "근거": "브랜드 자료에 분사 비교 이미지가 있습니다. 화면에 띄우기 좋습니다."
    }
   ],
   "주의": [
    "**'2배' 는 전부 기존 퍼스트 스프레이 세럼과 비교한 값입니다.** 아무것도 안 썼을 때와 비교한 것이 아닙니다.",
-   "**교안에 패키지 두 개가 있습니다.** 120ml 는 `TRUFFLE EXOSOME / Collagen Water 70%`, 100ml 는 `Peptide Exosome 8%` 로 핵심 성분 표기가 다릅니다. 실물 패키지를 확인하세요.",
+   "**브랜드 자료에 패키지 두 개가 있습니다.** 120ml 는 `TRUFFLE EXOSOME / Collagen Water 70%`, 100ml 는 `Peptide Exosome 8%` 로 핵심 성분 표기가 다릅니다. 실물 패키지를 확인하세요.",
    "**아직 출시 전 제품입니다.** 수치가 바뀔 수 있습니다."
   ],
   "en": {
@@ -1214,7 +1179,7 @@
     },
     {
      "line": "The mist is finer. Put it next to the old one and you can see it.",
-     "why": "The deck has a side-by-side comparison. Good to put on screen."
+     "why": "The brand material has a side-by-side comparison. Good to put on screen."
     },
     {
      "line": "It's been through a non-comedogenic trial, so it suits acne-prone skin.",
@@ -1223,7 +1188,7 @@
    ],
    "careful": [
     "**Every '2×' claim is against the existing First Spray Serum**, not against using nothing.",
-    "**Two packages appear in the deck.** The 120ml reads `TRUFFLE EXOSOME / Collagen Water 70%`, the 100ml reads `Peptide Exosome 8%`. Check the actual package.",
+    "**Two packages appear in the brand material.** The 120ml reads `TRUFFLE EXOSOME / Collagen Water 70%`, the 100ml reads `Peptide Exosome 8%`. Check the actual package.",
     "**This product hasn't launched yet.** The figures may change."
    ]
   }
@@ -1297,13 +1262,13 @@
    },
    {
     "문장": "겨울에 굳어도 정상이에요. 농축 제형이라 그렇고 품질에는 영향 없습니다.",
-    "근거": "교안이 직접 답해둔 내용입니다. 리뷰에서 가장 많이 나오는 컴플레인이라 미리 말해주면 좋습니다."
+    "근거": "브랜드가 직접 답해둔 내용입니다. 리뷰에서 가장 많이 나오는 컴플레인이라 미리 말해주면 좋습니다."
    }
   ],
   "주의": [
    "**세정력 수치(99.67%, 91.52%)는 쓰지 마세요.** 얼굴에 인위적으로 올린 미세먼지 모사체와 인공 기재를 씻어낸 값이라, 실제 하루치 피지나 선크림과는 다릅니다. '한 번에 다 지워진다' 는 보여주는 쪽이 낫습니다.",
    "**모공 특허의 권리자는 원료를 만든 회사입니다.** '달바가 특허를 받았다' 가 아니라 '특허받은 모공 성분이 들어 있다' 로 말하세요.",
-   "**용량은 160ml 입니다.** 교안 제품 사진의 보틀에는 150ml 로 인쇄돼 있으니 실물 패키지를 확인하세요.",
+   "**용량은 160ml 입니다.** 자료 제품 사진의 보틀에는 150ml 로 인쇄돼 있으니 실물 패키지를 확인하세요.",
    "**겨울에 제형이 굳는 것은 정상입니다.** 농축 제형이라 그렇고 품질에는 영향이 없습니다. 미리 말해 주면 리뷰 불만이 줄어듭니다."
   ],
   "en": {
@@ -1375,13 +1340,13 @@
     },
     {
      "line": "If it firms up in winter, that's normal — it's a concentrated formula and it doesn't affect quality.",
-     "why": "The deck answers this directly. It's the most common review complaint, so get ahead of it."
+     "why": "The brand material answers this directly. It's the most common review complaint, so get ahead of it."
     }
    ],
    "careful": [
     "**Don't use the cleansing percentages (99.67%, 91.52%).** They come from washing off a dust simulant painted onto skin and an artificial substrate — not a real day's sebum or sunscreen. Better to show it working.",
     "**The pore patent belongs to the company that makes the raw material.** Say 'it contains a patented pore ingredient', not 'd'Alba holds a patent'.",
-    "**The size is 160ml.** The bottle in the deck's photo is printed 150ml, so check the actual package.",
+    "**The size is 160ml.** The bottle in the brand's photo is printed 150ml, so check the actual package.",
     "**Firming up in winter is normal.** A concentrated formula, and quality isn't affected."
    ]
   }
@@ -1541,7 +1506,7 @@
   "말할때": [
    {
     "문장": "메이크업 정도에 따라 돌리는 각도가 정해져 있어요. 베이스면 90도, 풀메면 250~300도.",
-    "근거": "교안에 각도별 가이드가 있습니다. 이걸 말해주면 '얼마나 써야 하지' 고민이 사라집니다."
+    "근거": "브랜드 자료에 각도별 가이드가 있습니다. 이걸 말해주면 '얼마나 써야 하지' 고민이 사라집니다."
    },
    {
     "문장": "돌리면 딱 필요한 만큼만 갈려 나와요. 스패츌러가 필요 없습니다.",
@@ -1598,7 +1563,7 @@
    "say": [
     {
      "line": "You set the dial by how much makeup you're wearing. 90 degrees for base, 180 for light makeup, 250 to 300 for full.",
-     "why": "The deck gives exact angles. It kills the 'how much do I use?' question dead."
+     "why": "The brand gives exact angles. It kills the 'how much do I use?' question dead."
     },
     {
      "line": "You grind off exactly what you need, so you never need a spatula.",
@@ -1611,7 +1576,7 @@
    ],
    "careful": [
     "**Three things to tell buyers up front.** The first use may not dispense evenly — keep turning. Store it between 10 and 30°C. And the grinding container can't be emptied completely.",
-    "'Pore firmness' is the deck's own wording. It doesn't mean pores physically shrink."
+    "'Pore firmness' is the brand's own wording. It doesn't mean pores physically shrink."
    ]
   }
  },
@@ -1792,7 +1757,7 @@
    ],
    "careful": [
     "**All four figures are 'immediately after one use, temporary'.** Dropping that condition makes the claim an overstatement.",
-    "**The deck contradicts itself on vegan certification** — 'in progress' in one place, 'completed' in another. Don't mention it until that's confirmed."
+    "**The brand material contradicts itself on vegan certification** — 'in progress' in one place, 'completed' in another. Don't mention it until that's confirmed."
    ]
   }
  },
@@ -1843,7 +1808,7 @@
   "말할때": [
    {
     "문장": "시트가 없어요. 세럼을 그대로 굳혀서 만든 거라 붙여두면 점점 투명해지고 얇아집니다.",
-    "근거": "부착 직후와 3시간 후 비교가 교안에 있습니다. 눈으로 확인되는 변화라 방송에 좋습니다."
+    "근거": "부착 직후와 3시간 후 비교가 브랜드 자료에 있습니다. 눈으로 확인되는 변화라 방송에 좋습니다."
    },
    {
     "문장": "8조각으로 나뉘어 있어서 눈가·목·팔자까지 따로 붙일 수 있어요.",
@@ -1851,7 +1816,7 @@
    },
    {
     "문장": "물에 녹는 마스크예요. 지지체가 아예 없습니다.",
-    "근거": "100% 세럼으로 만들었다는 교안 설명입니다."
+    "근거": "100% 세럼으로 만들었다는 자료 설명입니다."
    },
    {
     "문장": "2주 썼을 때 주름 32.85%, 기미·잡티 19.82% 개선이 나왔습니다.",
@@ -1860,7 +1825,7 @@
   ],
   "주의": [
    "**V-Label 비건 인증서의 만료일이 2026년 4월 10일로 지났습니다.** 비건 이야기는 빼고, '우려 성분 17종 불검출' 과 '저자극 테스트 완료' 로 가세요.",
-   "**교안의 '만족도 100%' 는 설문 결과입니다.** 측정값이 아니라 '보통 이상 긍정' 응답 비율이라 방송에서 쓰면 안 됩니다.",
+   "**브랜드 자료의 '만족도 100%' 는 설문 결과입니다.** 측정값이 아니라 '보통 이상 긍정' 응답 비율이라 방송에서 쓰면 안 됩니다.",
    "'1,000개 캡슐' 은 회사가 계산한 값입니다. '1,000개 넘게' 로 말하세요."
   ],
   "근거수치": [
@@ -1935,7 +1900,7 @@
    "say": [
     {
      "line": "There's no sheet. It's serum set solid, so as it absorbs it turns clear and gets thinner.",
-     "why": "The deck shows it right after application and three hours later. A visible change, which is perfect on camera."
+     "why": "The brand shows it right after application and three hours later. A visible change, which is perfect on camera."
     },
     {
      "line": "Eight separate pieces, so the eyes, neck and nasolabial folds each get their own.",
@@ -1952,7 +1917,7 @@
    ],
    "careful": [
     "**The V-Label vegan certificate expired on 10 April 2026.** Leave vegan out and lead with 'free of 17 substances of concern' and 'primary skin irritation test completed'.",
-    "**The deck's '100% satisfaction' is a survey result** — the share who answered neutral-or-better, not a measurement. Don't use it on air.",
+    "**The brand's '100% satisfaction' is a survey result** — the share who answered neutral-or-better, not a measurement. Don't use it on air.",
     "'Over 1,000 capsules' is a company estimate. Say 'more than a thousand'."
    ]
   }
@@ -2006,11 +1971,11 @@
   "말할때": [
    {
     "문장": "수분크림만 바르면 부족하고 영양크림만 바르면 답답할 때, 이건 비율을 직접 정합니다.",
-    "근거": "교안이 밝힌 개발 이유 그대로입니다. 공감을 사는 문장입니다."
+    "근거": "브랜드가 밝힌 개발 이유 그대로입니다. 공감을 사는 문장입니다."
    },
    {
     "문장": "스파츌러로 볼에 직접 올려서 섞으면 됩니다.",
-    "근거": "교안의 사용 TIP. 손등에서 섞는 것보다 간편합니다."
+    "근거": "브랜드 자료의 사용 TIP. 손등에서 섞는 것보다 간편합니다."
    },
    {
     "문장": "2026년 리뉴얼에서 판테놀 5%가 추가됐습니다.",
@@ -2076,11 +2041,11 @@
    "say": [
     {
      "line": "When a water cream isn't enough and a rich cream is too much, this one lets you set the ratio yourself.",
-     "why": "Exactly the reason the deck gives for developing it. It's the line people recognise themselves in."
+     "why": "Exactly the reason the brand gives for developing it. It's the line people recognise themselves in."
     },
     {
      "line": "Put both onto your cheek with the spatula and mix them right there.",
-     "why": "A tip from the deck — easier than mixing on the back of your hand."
+     "why": "A tip from the brand — easier than mixing on the back of your hand."
     },
     {
      "line": "It's been through a non-comedogenic trial, so it's suitable for acne-prone skin.",
@@ -2142,7 +2107,7 @@
    },
    {
     "문장": "크림에 한 방울 섞어 쓰셔도 됩니다.",
-    "근거": "교안이 제안한 사용법입니다. 30ml 6만 원대를 부담스러워하는 사람에게 답이 됩니다."
+    "근거": "브랜드가 제안한 사용법입니다. 30ml 6만 원대를 부담스러워하는 사람에게 답이 됩니다."
    }
   ],
   "주의": [
@@ -2203,11 +2168,11 @@
     },
     {
      "line": "One drop into your cream and the moisture lasts much longer.",
-     "why": "A tip from the deck. It turns a serum into something people use two ways."
+     "why": "A tip from the brand. It turns a serum into something people use two ways."
     },
     {
      "line": "100-hour moisture retention has been through a human trial.",
-     "why": "Say the measure rather than a number — the deck lists it as completed."
+     "why": "Say the measure rather than a number — the brand lists it as completed."
     }
    ],
    "careful": [
@@ -2352,7 +2317,7 @@
   "말할때": [
    {
     "문장": "크림 대신 쓰는 로션이에요. 답답하지 않고 메이크업 전에 쓰기 좋습니다.",
-    "근거": "제품의 포지션 자체이고, 교안에 메이크업 베이스 사용법이 따로 적혀 있습니다."
+    "근거": "제품의 포지션 자체이고, 브랜드 자료에 메이크업 베이스 사용법이 따로 적혀 있습니다."
    }
   ],
   "주의": [
@@ -2405,7 +2370,7 @@
    "say": [
     {
      "line": "This is the base step. When ampoules and creams still leave you dry, the problem is usually the layer underneath.",
-     "why": "Exactly the reason the deck gives for developing it. It's the line people recognise."
+     "why": "Exactly the reason the brand gives for developing it. It's the line people recognise."
     },
     {
      "line": "It's milky, so it goes in fast and doesn't sit on top.",
@@ -2464,11 +2429,11 @@
    },
    {
     "문장": "메이크업 위에도 덧바를 수 있습니다.",
-    "근거": "교안의 사용 TIP. 스틱이라 가능한 사용법입니다."
+    "근거": "브랜드 자료의 사용 TIP. 스틱이라 가능한 사용법입니다."
    }
   ],
   "주의": [
-   "**이 제품은 비건 인증 제품이 아닙니다.** 교안의 인증서는 원료에 대한 것이고 이미 만료됐습니다. 비건 이야기는 빼고, '인체 피부 일차자극 테스트 저자극 판정' 으로 가세요.",
+   "**이 제품은 비건 인증 제품이 아닙니다.** 브랜드 자료의 인증서는 원료에 대한 것이고 이미 만료됐습니다. 비건 이야기는 빼고, '인체 피부 일차자극 테스트 저자극 판정' 으로 가세요.",
    "'주름개선 기능성' 은 표시를 붙일 수 있다는 뜻입니다. '주름 케어' 로 말하세요."
   ],
   "en": {
@@ -2513,13 +2478,13 @@
     },
     {
      "line": "You can layer it over makeup.",
-     "why": "A usage tip from the deck. Only possible because it's a stick."
+     "why": "A usage tip from the brand. Only possible because it's a stick."
     }
    ],
    "careful": [
     "**Don't claim vegan certification for this one.** The certificate is for a raw material ('vegan collagen') held by the supplier, not for the finished product — and **it expired on 28 April 2022.**",
     "'Wrinkle care' is a label claim based on a notified active. It does not mean wrinkles disappear.",
-    "There are no test figures in the deck. Don't quote percentages or timeframes."
+    "There are no test figures in the brand material. Don't quote percentages or timeframes."
    ]
   }
  },
@@ -2573,7 +2538,7 @@
   ],
   "주의": [
    "**17.601% 는 이 앰플 하나만 쓴 결과입니다.** '바르고 나면 바로 이만큼' 으로 말하세요.",
-   "**교안의 2주 수치는 보르피린 3종을 다 쓴 결과입니다.** 이 앰플에 붙이지 마세요.",
+   "**브랜드 자료의 2주 수치는 보르피린 3종을 다 쓴 결과입니다.** 이 앰플에 붙이지 마세요.",
    "보르피린은 프랑스 원료사 성분입니다. '프랑스 특허 성분을 5% 넣었다' 로 말하면 됩니다."
   ],
   "en": {
@@ -2633,12 +2598,12 @@
     },
     {
      "line": "Good for pillow creases that stick around in the morning.",
-     "why": "The deck names it directly. It's the kind of specific complaint viewers recognise."
+     "why": "The brand material names it directly. It's the kind of specific complaint viewers recognise."
     }
    ],
    "careful": [
     "**17.601% is what this ampoule did on its own.** 'Right after you put it on' is the accurate framing.",
-    "**The deck's two-week figures come from using all three Volufiline products.** Don't attach them to this ampoule.",
+    "**The brand's two-week figures come from using all three Volufiline products.** Don't attach them to this ampoule.",
     "Volufiline is a supplier's ingredient. 'A French patented firming ingredient at 5%' is the way to put it."
    ]
   }
@@ -2681,7 +2646,7 @@
    },
    {
     "문장": "동양인 얼굴에 맞춘 분사각으로 펌프를 따로 개발했습니다.",
-    "근거": "교안이 밝힌 설계 내용입니다. 미스트 제품의 차별점입니다."
+    "근거": "브랜드가 밝힌 설계 내용입니다. 미스트 제품의 차별점입니다."
    },
    {
     "문장": "이 제품만 단독으로 쓴 리프팅 인체적용시험도 따로 있습니다.",
@@ -2766,7 +2731,7 @@
     },
     {
      "line": "They developed the pump around Asian face shapes so the spray angle actually covers the face.",
-     "why": "A design detail from the deck, and a real difference among mists."
+     "why": "A design detail from the brand, and a real difference among mists."
     },
     {
      "line": "There's a trial on this product by itself for lifting, too.",
@@ -2831,7 +2796,7 @@
    },
    {
     "문장": "처음엔 서너 바퀴 돌려야 크림이 제대로 나옵니다.",
-    "근거": "교안에 적힌 안내입니다. 이걸 말 안 하면 '안 나온다'는 문의가 들어옵니다."
+    "근거": "브랜드 자료에 적힌 안내입니다. 이걸 말 안 하면 '안 나온다'는 문의가 들어옵니다."
    }
   ],
   "주의": [
@@ -2901,7 +2866,7 @@
    ],
    "careful": [
     "**The 11.271% figure is immediate and temporary.** 'Right after you use it' is the accurate framing.",
-    "**The two-week figures in the deck come from using all three Volufiline products together.** Don't attach them to this cream alone.",
+    "**The two-week figures in the brand material come from using all three Volufiline products together.** Don't attach them to this cream alone.",
     "It dispenses unevenly on the first few turns. Tell buyers that up front."
    ]
   }
@@ -2947,7 +2912,7 @@
   "말할때": [
    {
     "문장": "뿌릴 때마다 향이 쌓여요. 레이어링할수록 향이 디벨롭됩니다.",
-    "근거": "교안이 직접 쓴 표현이고, 향이 이 제품의 핵심입니다."
+    "근거": "브랜드가 직접 쓴 표현이고, 향이 이 제품의 핵심입니다."
    },
    {
     "문장": "미세 안개로 분사돼서 여러 번 뿌려도 떡지지 않습니다.",
@@ -3060,7 +3025,7 @@
   "말할때": [
    {
     "문장": "달바 헤어 제품 중에 단백질이 제일 많이 들어간 게 이겁니다. 13종이에요.",
-    "근거": "교안이 자사 제품끼리 비교해 명시한 사실입니다."
+    "근거": "브랜드가 자사 제품끼리 비교해 명시한 사실입니다."
    },
    {
     "문장": "오일인데 무겁지 않아요. 오일 40, 세럼 60 비율입니다.",
@@ -3068,7 +3033,7 @@
    },
    {
     "문장": "드라이기 쓰기 전에 바르면 열 손상을 줄일 수 있습니다.",
-    "근거": "교안의 사용 팁입니다. 실사용 정보라 잘 먹힙니다."
+    "근거": "브랜드 자료의 사용 팁입니다. 실사용 정보라 잘 먹힙니다."
    }
   ],
   "주의": [
@@ -3124,7 +3089,7 @@
     },
     {
      "line": "It has more protein than d'Alba's own shampoo or hair perfume.",
-     "why": "13 proteins and 17 amino acids. The deck says so itself, so it's a clean comparison."
+     "why": "13 proteins and 17 amino acids. The brand says so itself, so it's a clean comparison."
     },
     {
      "line": "Bulgarian rose oil takes 3,000 roses to make one gram.",
@@ -3175,11 +3140,11 @@
    },
    {
     "문장": "얼굴·목 기준으로 손가락 한 마디 정도는 발라야 합니다.",
-    "근거": "선크림은 양이 제일 중요합니다. 교안에 사용 가이드가 있습니다."
+    "근거": "선크림은 양이 제일 중요합니다. 브랜드 자료에 사용 가이드가 있습니다."
    },
    {
     "문장": "여러 번 덧발라도 끈적이지 않아서 메이크업 전에 쓰기 좋아요.",
-    "근거": "교안이 메이크업 부스터로 포지셔닝한 제품입니다."
+    "근거": "브랜드가 메이크업 부스터로 포지셔닝한 제품입니다."
    }
   ],
   "주의": [
@@ -3228,21 +3193,21 @@
    "say": [
     {
      "line": "Most people use far too little. Face and neck needs about a finger-joint's worth.",
-     "why": "The most useful thing you can tell a viewer about any sunscreen, and it's straight from the deck."
+     "why": "The most useful thing you can tell a viewer about any sunscreen, and it's straight from the brand."
     },
     {
      "line": "It's an organic filter sunscreen, so there's no white cast and it goes on light.",
-     "why": "Explains the texture without claiming anything the deck doesn't."
+     "why": "Explains the texture without claiming anything the brand material doesn't."
     },
     {
      "line": "You can put makeup straight over it — it's meant to stop foundation sliding.",
-     "why": "The deck positions it as a makeup booster. Easy to demonstrate on camera."
+     "why": "The brand positions it as a makeup booster. Easy to demonstrate on camera."
     }
    ],
    "careful": [
     "**Check the actual package for the SPF and PA figures before you say them.**",
-    "The hydro-trapping diagram is labelled in the deck as an illustration to aid understanding. Don't describe it as what literally happens inside skin.",
-    "There are no efficacy percentages in the deck. Don't quote numbers beyond SPF and PA."
+    "The hydro-trapping diagram is labelled in the brand material as an illustration to aid understanding. Don't describe it as what literally happens inside skin.",
+    "There are no efficacy percentages in the brand material. Don't quote numbers beyond SPF and PA."
    ]
   }
  },
@@ -3284,7 +3249,7 @@
   "말할때": [
    {
     "문장": "핑크빛이라 화사하게 톤업되는데, 과하게 하얘지지 않습니다.",
-    "근거": "교안에 피부톤 4단계별 도포 비교 이미지가 있습니다. 화면에 띄우기 좋습니다."
+    "근거": "브랜드 자료에 피부톤 4단계별 도포 비교 이미지가 있습니다. 화면에 띄우기 좋습니다."
    },
    {
     "문장": "유기자차와 무기자차를 섞은 혼합자차입니다.",
@@ -3292,7 +3257,7 @@
    },
    {
     "문장": "파운데이션 대신 이것만 발라도 톤 보정이 됩니다.",
-    "근거": "교안이 '파데 프리 선스크린'으로 포지셔닝했습니다."
+    "근거": "브랜드가 '파데 프리 선스크린'으로 포지셔닝했습니다."
    }
   ],
   "주의": [
@@ -3345,11 +3310,11 @@
     },
     {
      "line": "It mixes both filter types, so there's less white cast and less stinging around the eyes.",
-     "why": "Eye sting is a common sunscreen complaint and the deck names it directly."
+     "why": "Eye sting is a common sunscreen complaint and the brand material names it directly."
     },
     {
      "line": "Face and neck needs about a finger-joint's worth, 30 minutes before you go out.",
-     "why": "Straight from the deck's usage page. Practical and always welcome."
+     "why": "Straight from the brand's usage page. Practical and always welcome."
     }
    ],
    "careful": [
@@ -3443,12 +3408,12 @@
    },
    {
     "문장": "젤 타입 제품이랑 같이 쓰세요. 오일이 많거나 선크림은 효과가 떨어집니다.",
-    "근거": "교안 Q&A에 있는 내용입니다. 실사용에서 가장 많이 틀리는 부분입니다."
+    "근거": "자료 Q&A에 있는 내용입니다. 실사용에서 가장 많이 틀리는 부분입니다."
    }
   ],
   "주의": [
    "**모든 시험이 더블 세럼 앤 크림을 함께 바르고 진행한 것입니다.** '크림 바르고 이 기기로 밀었을 때' 가 정확한 표현입니다. 기기 단독 수치는 없습니다.",
-   "**이 기기는 피부 미용 기기이고 의료기기가 아닙니다.** 교안 모든 장에 이 문장이 붙어 있습니다. 시술이나 치료에 빗대지 마세요.",
+   "**이 기기는 피부 미용 기기이고 의료기기가 아닙니다.** 자료 모든 장에 이 문장이 붙어 있습니다. 시술이나 치료에 빗대지 마세요.",
    "**반드시 화장품과 함께 쓰세요.** 얼굴이 마르면 에너지가 전달되지 않고 따끔거립니다. 이건 사용법이자 안전 문제입니다.",
    "레벨을 올려도 도달 깊이는 같습니다. 눈가·입가·코 옆은 한 단계 낮춰 쓰세요."
   ],
@@ -3536,7 +3501,7 @@
    ],
    "careful": [
     "**Every figure comes from using the device with the Double Serum & Cream.** 'With the cream on, using this device' is the accurate framing. There are no device-only numbers.",
-    "**This is a beauty device, not a medical device.** That line appears on every page of the deck. Don't liken it to a procedure or a treatment.",
+    "**This is a beauty device, not a medical device.** That line appears on every page of the brand material. Don't liken it to a procedure or a treatment.",
     "**It must be used with skincare on the skin.** A dry face means no energy transfer and a stinging sensation.",
     "Raising the level doesn't send energy deeper. Drop a level around the eyes, mouth and sides of the nose."
    ]
