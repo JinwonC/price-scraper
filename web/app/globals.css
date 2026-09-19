@@ -79,6 +79,32 @@ a {
   padding: 32px 20px 96px;
 }
 
+/* 제품 교안 화면과 레딧 모니터를 오가는 상단 줄. 두 화면이 같은 사이트라는 걸
+   알 수 있게 폭과 여백을 .page 와 맞춘다. */
+.site-nav {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 22px 20px 18px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.site-nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+.site-nav a:hover {
+  color: var(--text-primary);
+  text-decoration: underline;
+}
+.site-nav + .page {
+  padding-top: 22px;
+}
+
 /* ---------- 헤더 ---------- */
 .masthead {
   display: flex;

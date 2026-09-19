@@ -19,7 +19,7 @@ export default function ProductsLayout({
         <Link className="pw-home" href="/products">
           달바 제품 교안
         </Link>
-        <Link className="pw-alt" href="/">
+        <Link className="pw-alt" href="/reddit">
           레딧 모니터 →
         </Link>
       </header>
