@@ -1,10 +1,10 @@
-import Dashboard from "@/components/Dashboard";
-import { data } from "@/lib/data";
+import { redirect } from "next/navigation";
 
-// 데이터는 빌드 시점에 JSON 에서 읽는다. 수집기가 JSON 을 커밋/푸시하면
-// Vercel 이 자동으로 다시 배포하면서 최신 내용이 반영된다.
-export const dynamic = "force-static";
-
-export default function Page() {
-  return <Dashboard payload={data} />;
+/**
+ * 첫 화면은 제품 교안이다.
+ * 레딧 모니터는 /reddit 으로 옮겼다 — 예전 주소로 들어오는 사람이 헤매지 않도록
+ * 양쪽 화면 상단에 서로 가는 링크를 뒀다.
+ */
+export default function Home() {
+  redirect("/products");
 }
