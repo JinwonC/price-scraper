@@ -780,10 +780,59 @@
    }
   ],
   "주의": [
-   "**설페이트 불검출 시험 성적서에 '참고용' 도장이 있습니다.** '식품·의약품분야 시험·검사 등에 관한 법률에 따른 것이 아님' 문구와 검사목적 '연구/참고/기타' 표기가 있어, 공식 시험 결과처럼 말하면 안 됩니다.",
-   "논코메도제닉은 '모공을 막지 않는다'는 시험입니다. 여드름 치료가 아닙니다.",
-   "**조향사의 생년월일이 교안에 적혀 있지만 개인정보라 옮기지 않았습니다.** 방송에서도 말하지 마세요."
-  ]
+   "**이 제품은 보습·광채 쪽입니다.** 같은 라인의 바이탈 스프레이 세럼은 진정 쪽입니다.",
+   "**'설페이트 불검출' 성적서에는 '참고용' 도장이 찍혀 있습니다.** 공식 시험 결과로 말하지 말고 '설페이트계 계면활성제를 쓰지 않았다' 로 가세요.",
+   "수치 시험이 없습니다. 항목으로 말하세요 — 각질, 깊은 속보습, 광채, 결, 수분 레이어드 인체적용시험 완료."
+  ],
+  "en": {
+   "lead": "The product that made d'Alba. One spray serum standing in for a toner, a mist, a serum and an essence.",
+   "who": "Anyone with dry skin that has lost its glow, who wants hydration they can top up anywhere",
+   "certs": [
+    "Italian V-Label vegan certification",
+    "Primary skin irritation test completed",
+    "Deep hydration, dead skin, glow, texture and moisture-layering human trials completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Trufferol™",
+     "amount": "patented",
+     "role": "Italian white truffle with tocopherol. d'Alba's own ingredient."
+    },
+    {
+     "name": "Four plant blending oils",
+     "role": "Avocado, sunflower seed, wild soybean and annatto seed oils."
+    },
+    {
+     "name": "14 botanical extracts",
+     "role": "Including white truffle — chia, basil, oat kernel, water lily, snow lotus, ginseng, lotus, mulberry bark and more."
+    }
+   ],
+   "howto": [
+    {
+     "name": "Basic",
+     "how": "Shake well, then mist the whole face from 10–20cm with your eyes closed and press it in."
+    }
+   ],
+   "say": [
+    {
+     "line": "This is the one that made the brand. It's been d'Alba's steady seller for years.",
+     "why": "It carries weight on its own, and it's true."
+    },
+    {
+     "line": "Shake it first — you can see the oil and the water separate.",
+     "why": "Visible in the bottle. Best opening shot you'll get."
+    },
+    {
+     "line": "It covers toner, mist, serum and essence, so it cuts steps out.",
+     "why": "A convenience claim, so it's safe ground."
+    }
+   ],
+   "careful": [
+    "**This one is for moisture and glow.** The Vital Spray Serum in the same line is for calming.",
+    "**The 'sulphate-free' certificate is stamped 'for reference'.** Don't present it as an official test result — say the product doesn't use sulphate surfactants.",
+    "There are no figures. Name the measures: dead skin, deep hydration, glow, texture and moisture layering."
+   ]
+  }
  },
  "white-truffle-vital-spray-serum": {
   "한줄": "퍼스트 스프레이 세럼의 진정 버전. 레드 컬러 오일이 들어갔고 자외선을 쬔 뒤 쓰는 용도입니다.",
@@ -829,10 +878,63 @@
    }
   ],
   "주의": [
-   "**같은 폴더에 '마케팅 활용 불가' 라고 적힌 성분 참고자료가 따로 있습니다.** 그 파일 내용은 쓰면 안 됩니다.",
-   "'진정'은 사용감 표현입니다. 염증 치료로 들리면 안 됩니다.",
-   "구체적인 개선 % 가 교안에 없습니다."
-  ]
+   "**이 제품은 진정 쪽입니다.** 같은 라인의 퍼스트 스프레이 세럼은 보습·광채 쪽이니 헷갈리지 마세요.",
+   "수치 시험이 없습니다. 항목으로 말하세요 — 자외선 자극 진정, 피부 결 개선 인체적용시험 완료."
+  ],
+  "en": {
+   "lead": "The calming member of the spray serum line — red plant oils with three patented soothing and hydrating ingredients.",
+   "who": "Anyone whose skin gets sensitised by sun and wind, and wants to calm it without adding a step",
+   "certs": [
+    "Italian V-Label vegan certification",
+    "Calming UV-induced irritation and texture improvement human trial completed",
+    "Primary skin irritation test completed on sensitive skin"
+   ],
+   "ingredients": [
+    {
+     "name": "Trufferol™",
+     "amount": "white truffle 14,000ppm",
+     "role": "d'Alba's patented ingredient, with tocopherol at 1,300ppm."
+    },
+    {
+     "name": "Red plant oils",
+     "role": "Gromwell root, rosehip, scented geranium and rose flower oils. The colour comes from these."
+    },
+    {
+     "name": "AQUAXYL™",
+     "amount": "patented",
+     "role": "Moisture for dry, depleted skin."
+    },
+    {
+     "name": "Beautiful Herb Story™ · Lora Anti-S™",
+     "amount": "patented",
+     "role": "Two calming patents."
+    }
+   ],
+   "howto": [
+    {
+     "name": "Basic",
+     "how": "Shake, then mist the whole face from 10–20cm with your eyes closed and press it in."
+    }
+   ],
+   "say": [
+    {
+     "line": "This is the calming one. The other spray serum is for moisture and glow.",
+     "why": "The two look alike on the shelf, so it's worth separating them early."
+    },
+    {
+     "line": "It's been through a trial for calming sun-irritated skin.",
+     "why": "A specific measure, and a common enough situation that viewers recognise it."
+    },
+    {
+     "line": "The red colour is from the plant oils — gromwell root, rosehip, geranium and rose.",
+     "why": "Visible in the bottle, and it explains itself."
+    }
+   ],
+   "careful": [
+    "**This one is for calming.** The First Spray Serum in the same line is for moisture and glow — don't mix them up.",
+    "There are no figures. Name the measures: calming UV irritation and improving skin texture, both completed human trials."
+   ]
+  }
  },
  "pro2x": {
   "한줄": "퍼스트 스프레이 세럼의 상위 버전. 정제수 대신 콜라겐수를 70% 넣고 엑소좀을 두 종류 쓴 제품입니다. 아직 출시 전입니다.",
@@ -1923,9 +2025,62 @@
    }
   ],
   "주의": [
-   "쿨링은 '1회 사용으로 피부 온도 감소에 도움' 표현입니다. 몇 도라는 수치는 교안에 없습니다.",
-   "흔들어 쓰는 제품이라 사용법을 빼먹으면 안 됩니다."
-  ]
+   "**쿨링은 '1회 사용으로 피부 온도 감소에 도움' 표현까지입니다.** 몇 도 내려간다고 말하지 말고 '뿌리면 시원하다' 로 가세요.",
+   "빙하수 80% 는 정제수를 대체했다는 뜻입니다. 나머지 20% 에 나머지 성분이 다 들어갑니다."
+  ],
+  "en": {
+   "lead": "A mist built on 80% Canadian glacier water. It stands in for a toner, a mist, a serum and an essence, and it cools the skin.",
+   "who": "Anyone whose skin runs hot, or who wants hydration without adding a step",
+   "certs": [
+    "Italian vegan certification",
+    "Primary skin irritation test completed",
+    "One-use skin temperature reduction (cooling) trial completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Canadian glacier water",
+     "amount": "80% (800,000ppm)",
+     "role": "Replaces purified water as the base."
+    },
+    {
+     "name": "Trufferol™",
+     "role": "d'Alba's patented firming ingredient."
+    },
+    {
+     "name": "Okra fruit extract",
+     "role": "Moisture."
+    },
+    {
+     "name": "Tannin Complex HR",
+     "amount": "patented",
+     "role": "Pores and sebum."
+    }
+   ],
+   "howto": [
+    {
+     "name": "Basic",
+     "how": "Right after cleansing, shake 3–5 times, tilt your head back slightly, close your eyes and mist the whole face 4–5 times from 10–20cm. Then press it in."
+    }
+   ],
+   "say": [
+    {
+     "line": "It's 80% glacier water — that's what's in place of purified water.",
+     "why": "The clearest number in the formula, and the product's identity."
+    },
+    {
+     "line": "Spray it and your skin actually cools down.",
+     "why": "A cooling trial was completed after a single use. Describe the sensation rather than a temperature."
+    },
+    {
+     "line": "It covers toner, mist, serum and essence, so it cuts steps out of your routine.",
+     "why": "A convenience claim, which is safe ground."
+    }
+   ],
+   "careful": [
+    "**The cooling claim goes as far as 'one use helps lower skin temperature'.** Don't give a number of degrees — say it feels cool.",
+    "80% glacier water means it replaced purified water. Everything else fits into the remaining 20%."
+   ]
+  }
  },
  "white-truffle-moisturizing-serum-lotion": {
   "한줄": "비타민 세럼을 담은 미백 로션. 크림보다 가볍고 흡수가 빨라 메이크업 전에 쓰기 좋다는 포지션입니다.",
@@ -1975,9 +2130,71 @@
    }
   ],
   "주의": [
-   "**교안에 비건 인증이 '진행중' 과 '완료' 로 둘 다 적혀 있습니다.** 확인 전에는 인증을 말하지 마세요.",
-   "구체적인 시험 수치가 교안에 없습니다."
-  ]
+   "**기능성 표시는 나이아신아마이드 때문에 붙습니다.** 미백·주름개선 기능성입니다.",
+   "수치 시험이 없는 제품입니다. 밀키한 흡수와 메이크업 전 단계라는 쓰임새로 이야기를 끌고 가세요."
+  ],
+  "en": {
+   "lead": "A milky brightening lotion for the base step — for skin that stays dry however much ampoule and cream you put on it.",
+   "who": "Anyone whose skin feels dry no matter what they layer, and who finds cream too heavy before makeup",
+   "certs": [
+    "Brightening + wrinkle care (functional cosmetic)"
+   ],
+   "ingredients": [
+    {
+     "name": "Niacinamide",
+     "role": "The notified brightening active."
+    },
+    {
+     "name": "Trufferol™ · collagen extract",
+     "role": "Nourishment and firmness."
+    },
+    {
+     "name": "13 vegan proteins",
+     "role": "Dense nourishment, all vegan certified."
+    },
+    {
+     "name": "10 hyaluronic acids + Oligo-HA",
+     "amount": "patented",
+     "role": "Moisture."
+    },
+    {
+     "name": "Vegan glutathione · vitamin C",
+     "role": "Brightness and glow."
+    }
+   ],
+   "howto": [
+    {
+     "name": "Daily",
+     "how": "First step after cleansing. Take some onto a cotton pad or your hands, spread it over the skin and press it in."
+    },
+    {
+     "name": "When you're dry",
+     "how": "Go over it a second time and blend — that's the intensive version."
+    },
+    {
+     "name": "Before makeup",
+     "how": "Apply it before base makeup so foundation sits more smoothly."
+    }
+   ],
+   "say": [
+    {
+     "line": "This is the base step. When ampoules and creams still leave you dry, the problem is usually the layer underneath.",
+     "why": "Exactly the reason the deck gives for developing it. It's the line people recognise."
+    },
+    {
+     "line": "It's milky, so it goes in fast and doesn't sit on top.",
+     "why": "Show it absorbing on the back of your hand."
+    },
+    {
+     "line": "Less oil than a cream, but enough moisture — so makeup doesn't slide.",
+     "why": "A texture claim, so it's safe, and it answers a real complaint."
+    }
+   ],
+   "careful": [
+    "**The functional claim comes from niacinamide** — brightening and wrinkle care.",
+    "There are no test figures for this one. Lead with how it absorbs and where it fits in the routine."
+   ]
+  }
  },
  "white-truffle-double-serum-all-in-one-multi-balm": {
   "한줄": "주름 부위에 문질러 바르는 스틱형 밤. 미백과 주름개선 2중 기능성입니다.",

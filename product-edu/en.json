@@ -1095,5 +1095,186 @@
    "How to swap the flip cap",
    "Vegan certification"
   ]
+ },
+ "white-truffle-moisturizing-serum-lotion": {
+  "스펙": {
+   "용량": "100ml",
+   "기능성": "Brightening + wrinkle care (functional cosmetic)"
+  },
+  "한줄": "A milky brightening lotion with a vitamin serum inside — the base step for skin that stays dry however much you layer on it.",
+  "특징": [
+   {
+    "title": "A brightening lotion carrying a vitamin serum, for skin that has gone dull",
+    "body": [
+     "The vitamin serum inside delivers clear, fresh energy, brightening dull skin day to day."
+    ]
+   },
+   {
+    "title": "A milky texture that sinks in fast and carries real nourishment",
+    "body": [
+     "It doesn't sit on the surface — it absorbs quickly and leaves no stickiness.",
+     "All the nourishment goes in; only the hydration is left behind."
+    ]
+   },
+   {
+    "title": "A smooth, breathable base before makeup",
+    "body": [
+     "Less unnecessary oil, enough moisture — none of the heaviness of a cream.",
+     "It leaves a smooth, comfortable base so makeup sits better."
+    ]
+   },
+   {
+    "title": "Premium firming and hydrating ingredients",
+    "body": [
+     "Nourishment and firmness: Trufferol™ (white truffle + tocopherol), collagen extract, vegan ceramide, a vegan protein complex.",
+     "Moisture and glow: 10 hyaluronic acids, the patented Oligo-HA, 8 blending oils.",
+     "Brightening and freshness: niacinamide, vegan glutathione, vitamin C (ascorbic acid)."
+    ]
+   }
+  ],
+  "이미지": [
+   "Product shot",
+   "Milky texture",
+   "Model shot",
+   "Vitamin C + glutathione + niacinamide 2%"
+  ]
+ },
+ "white-truffle-refresh-aqua-serum": {
+  "스펙": {
+   "용량": "150ml"
+  },
+  "한줄": "80% Canadian glacier water in a mist — toner, mist, serum and essence in one, and it cools the skin as it lands.",
+  "특징": [
+   {
+    "title": "80% glacier water and blue oil energy — a soothing, cooling serum",
+    "body": [
+     "Canadian glacier water at 80% in place of purified water, hydrating with every spray and cooling skin that has heated up."
+    ]
+   },
+   {
+    "title": "Toner, mist, serum and essence in one",
+    "body": []
+   },
+   {
+    "title": "d'Alba knows mists — a fine spray angled for Asian faces",
+    "body": []
+   },
+   {
+    "title": "Premium ingredients for moisture, firmness and cooling",
+    "body": [
+     "Canadian glacier water 800,000ppm.",
+     "Italian white truffle, collagen extract.",
+     "Trufferol™, d'Alba's patented ingredient (white truffle + tocopherol).",
+     "Comfort: sweet wormwood, lotus, rice extracts and yeast ferment.",
+     "Moisture: okra fruit extract.",
+     "Pores and sebum: the patented Tannin Complex HR."
+    ]
+   },
+   {
+    "title": "Primary skin irritation test completed, Italian vegan certification",
+    "body": [
+     "Italian vegan certification and a primary skin irritation trial in Korea.",
+     "One use helps lower skin temperature."
+    ]
+   },
+   {
+    "title": "An aqua floral fresh scent",
+    "body": []
+   }
+  ],
+  "이미지": [
+   "How to use it",
+   "Before spraying",
+   "Being sprayed",
+   "Italian white truffle"
+  ]
+ },
+ "white-truffle-first-spray-serum": {
+  "스펙": {
+   "용량": "100ml",
+   "타겟": "All skin types"
+  },
+  "한줄": "d'Alba's steady seller — a spray serum that does toner, mist, serum and essence in one, for dense moisture and a lit finish.",
+  "특징": [
+   {
+    "title": "Toner, mist, serum and essence in one — moisture and firmness whenever you need it",
+    "body": []
+   },
+   {
+    "title": "Premium nourishing and hydrating ingredients",
+    "body": [
+     "Four plant blending oils bringing nourishment and moisture for glossy skin.",
+     "Trufferol™, d'Alba's patented ingredient: Italian white truffle + tocopherol.",
+     "Deep hydration, absorbed fast and without stickiness.",
+     "A spray angle that covers the whole face evenly, with no pooling or beading.",
+     "Human trials for deep hydration and dead skin."
+    ]
+   },
+   {
+    "title": "Ingredients your skin is happy with",
+    "body": [
+     "Italian V-Label vegan certification against the full ingredient list.",
+     "Primary skin irritation test completed in Korea."
+    ]
+   },
+   {
+    "title": "d'Alba's signature scent",
+    "body": [
+     "Aromatic Citrus Floral, created with the Italian perfumer Giovanni Festa."
+    ]
+   }
+  ],
+  "이미지": [
+   "Product shot",
+   "Product styling shot",
+   "Premium packaging",
+   "Before and after shaking",
+   "The scent notes",
+   "Old vs reformulated"
+  ]
+ },
+ "white-truffle-vital-spray-serum": {
+  "스펙": {
+   "용량": "100ml",
+   "타겟": "All skin types"
+  },
+  "한줄": "The calming one in the spray serum line — red plant oils and three soothing patents, for skin that has been out in the sun.",
+  "특징": [
+   {
+    "title": "Red plant blending oils for moisture and calm",
+    "body": []
+   },
+   {
+    "title": "Toner, mist, serum and essence in one — moisture and calm whenever you need it",
+    "body": []
+   },
+   {
+    "title": "Premium calming ingredients",
+    "body": [
+     "Trufferol™, d'Alba's patented ingredient: Italian white truffle + tocopherol.",
+     "AQUAXYL™ (moisture patent): water and moisture for dry, depleted skin.",
+     "Beautiful Herb Story™ and Lora Anti-S™ (calming patents): nourishment for sensitised skin."
+    ]
+   },
+   {
+    "title": "Gentle enough for daily use",
+    "body": [
+     "Italian V-Label vegan certification against the full ingredient list.",
+     "Human trial completed for calming UV-induced irritation and improving skin texture.",
+     "Primary skin irritation test completed on sensitive skin."
+    ]
+   },
+   {
+    "title": "d'Alba's signature scent, with rose",
+    "body": [
+     "The signature Aromatic Citrus Floral blended with an elegant Rosy Floral."
+    ]
+   }
+  ],
+  "이미지": [
+   "Being sprayed",
+   "Model shot",
+   "Floral image"
+  ]
  }
 }
