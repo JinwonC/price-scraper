@@ -666,5 +666,61 @@
    "Model shot",
    "The container"
   ]
+ },
+ "d-alba-signature-allthera-double-shot": {
+  "스펙": {
+   "타겟": "All skin types"
+  },
+  "한줄": "One device, three modes — RF, double ultrasound and cooling — with unlimited shots and no cartridges to replace.",
+  "특징": [
+   {
+    "title": "Three modes in one device",
+    "body": [
+     "RF, double ultrasound and cooling in a single unit — pick the mode for the skin and the area.",
+     "Intensive care: collagen activation, firmness, better absorption.",
+     "Pre-shot care: firmness from face to body.",
+     "Cooling care: lowers skin temperature to calm and work on pores."
+    ]
+   },
+   {
+    "title": "Triple Synergy Shot, d'Alba's patented technology",
+    "body": [
+     "Central RF fired together with double ultrasound, so each shot delivers three energies at once, down to the dermis.",
+     "No cartridge to replace, so the shots are unlimited and there's no running cost."
+    ]
+   },
+   {
+    "title": "Human trial data for every mode",
+    "body": [
+     "Firmness, deepening lines, lost contour, slackening pores, texture, glow and absorption — all measured."
+    ]
+   },
+   {
+    "title": "A wide head electrode",
+    "body": [
+     "A broad contact surface that reaches every face shape at the right angle, and works on the body too."
+    ]
+   },
+   {
+    "title": "Simple by design",
+    "body": [
+     "Straightforward controls, LED indicators per mode and a voice guide, so care takes very little time."
+    ]
+   },
+   {
+    "title": "Built for something that touches your skin every day",
+    "body": [
+     "Certified as a unit and down to the internal components.",
+     "Designed and assembled in Korea with a manufacturer specialising in beauty and medical devices.",
+     "SUS steel, harmless in continuous skin contact."
+    ]
+   }
+  ],
+  "이미지": [
+   "The device",
+   "What's in the box",
+   "How it works",
+   "The gel"
+  ]
  }
 }

@@ -2483,17 +2483,32 @@
   ],
   "근거수치": [
    {
-    "항목": "팔자 부위 처짐 개선",
-    "값": "38.063%",
-    "조건": "인체적용시험"
+    "항목": "이마 처짐",
+    "값": "48.559%",
+    "조건": "4주 · 크림과 함께"
    },
    {
-    "항목": "팔자 부위 처짐 개선",
-    "값": "32.529%",
-    "조건": "인체적용시험"
+    "항목": "턱 라인 처짐",
+    "값": "33.412%",
+    "조건": "4주 · 크림과 함께"
+   },
+   {
+    "항목": "눈가 처짐",
+    "값": "17.511%",
+    "조건": "4주 · 크림과 함께"
+   },
+   {
+    "항목": "볼 피부 치밀도",
+    "값": "12.364%",
+    "조건": "4주 · 크림과 함께"
+   },
+   {
+    "항목": "모공 면적",
+    "값": "16.364%",
+    "조건": "1회 · 즉각적·일시적"
    }
   ],
-  "시험조건": "기관·기간·인원이 교안에 없음",
+  "시험조건": "모든 수치가 **달바 화이트 트러플 더블 세럼 앤 크림을 함께 쓴 결과**입니다. 22명 / 개인차 있음. 기기만 쓴 수치는 없습니다.",
   "사용법": [
    {
     "이름": "필수",
@@ -2531,11 +2546,99 @@
    }
   ],
   "주의": [
-   "**의료기기가 아닙니다.** 교안에도 '본 기기는 피부 미용 기기로 의료 기기에 해당되지 않습니다' 라고 반복해 적혀 있습니다. 시술·치료로 들리는 표현은 절대 쓰면 안 됩니다.",
-   "**사용 금지 부위와 주의사항을 반드시 함께 안내하세요.** 기기 제품이라 이 부분을 빼면 안 됩니다.",
-   "**레벨을 높여도 도달 깊이는 같습니다.** 심부열이 생기는 범위 크기만 달라집니다. '높을수록 효과가 좋다'고 말하면 안 됩니다.",
-   "처짐 개선 수치의 시험기관·인원이 교안에 없습니다. '임상' 대신 '브랜드 시험'으로 말하세요.",
-   "70만 원입니다. 가격을 얼버무리지 마세요."
-  ]
+   "**모든 시험이 더블 세럼 앤 크림을 함께 바르고 진행한 것입니다.** '크림 바르고 이 기기로 밀었을 때' 가 정확한 표현입니다. 기기 단독 수치는 없습니다.",
+   "**이 기기는 피부 미용 기기이고 의료기기가 아닙니다.** 교안 모든 장에 이 문장이 붙어 있습니다. 시술이나 치료에 빗대지 마세요.",
+   "**반드시 화장품과 함께 쓰세요.** 얼굴이 마르면 에너지가 전달되지 않고 따끔거립니다. 이건 사용법이자 안전 문제입니다.",
+   "레벨을 올려도 도달 깊이는 같습니다. 눈가·입가·코 옆은 한 단계 낮춰 쓰세요."
+  ],
+  "en": {
+   "lead": "A home device with three modes — RF, double ultrasound and cooling. No cartridges, so the shots don't run out.",
+   "who": "Anyone wanting firming care at home, on the face and the body, without a salon appointment",
+   "certs": [
+    "Triple Synergy Shot patent",
+    "Device and internal components certified",
+    "Designed and assembled in Korea"
+   ],
+   "ingredients": [
+    {
+     "name": "Intensive care mode",
+     "role": "RF plus double ultrasound. Firmness and absorption."
+    },
+    {
+     "name": "Pre-shot care mode",
+     "role": "Face and body firming."
+    },
+    {
+     "name": "Cooling care mode",
+     "role": "Drops skin temperature to calm and tighten the look of pores."
+    }
+   ],
+   "figures": [
+    {
+     "label": "Forehead sagging",
+     "value": "48.559%",
+     "note": "4 weeks · with the cream"
+    },
+    {
+     "label": "Jawline sagging",
+     "value": "33.412%",
+     "note": "4 weeks · with the cream"
+    },
+    {
+     "label": "Eye-area sagging",
+     "value": "17.511%",
+     "note": "4 weeks · with the cream"
+    },
+    {
+     "label": "Cheek skin density",
+     "value": "12.364%",
+     "note": "4 weeks · with the cream"
+    },
+    {
+     "label": "Pore area",
+     "value": "16.364%",
+     "note": "one use · immediate, temporary"
+    }
+   ],
+   "testNote": "Every figure comes from using the device **together with d'Alba White Truffle Double Serum & Cream**. 22 people / individual variation. There are no device-only figures.",
+   "howto": [
+    {
+     "name": "Before you start",
+     "how": "Cleanse, then apply plenty of skincare. The device needs product on the skin to work."
+    },
+    {
+     "name": "Intensive care",
+     "how": "Press the head flat to the skin and work through cheeks, forehead, contour, nasolabial folds, jaw and neck — 40 shots, then it shuts off."
+    },
+    {
+     "name": "Levels",
+     "how": "Starts at level 1, goes up to 5. Drop a level around the eyes, mouth and sides of the nose."
+    },
+    {
+     "name": "How often",
+     "how": "One to three times a day, every day. 40 shots per session."
+    }
+   ],
+   "say": [
+    {
+     "line": "You have to put skincare on first. If your face dries out, the energy doesn't get through and it stings.",
+     "why": "Both a usage instruction and a safety point. Say it early."
+    },
+    {
+     "line": "There's no cartridge, so the shots never run out and there's nothing more to buy.",
+     "why": "The main objection to home devices is running costs. This answers it."
+    },
+    {
+     "line": "It counts 40 shots and switches itself off.",
+     "why": "Removes the 'how long do I use it?' question entirely."
+    }
+   ],
+   "careful": [
+    "**Every figure comes from using the device with the Double Serum & Cream.** 'With the cream on, using this device' is the accurate framing. There are no device-only numbers.",
+    "**This is a beauty device, not a medical device.** That line appears on every page of the deck. Don't liken it to a procedure or a treatment.",
+    "**It must be used with skincare on the skin.** A dry face means no energy transfer and a stinging sensation.",
+    "Raising the level doesn't send energy deeper. Drop a level around the eyes, mouth and sides of the nose."
+   ]
+  }
  }
 }
