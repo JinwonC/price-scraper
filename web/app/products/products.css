@@ -385,30 +385,37 @@
   top: 5px;
 }
 .pw-feat h3 {
-  margin: 0 0 6px;
-  font-size: 15px;
+  margin: 0 0 8px;
+  font-size: 15.5px;
   font-weight: 700;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
+  line-height: 1.5;
+  max-width: 62ch;
   word-break: keep-all;
 }
 .pw-feat p {
-  margin: 0 0 4px;
-  font-size: 14px;
+  margin: 0 0 6px;
+  max-width: 62ch;
+  font-size: 14.5px;
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.78;
   word-break: keep-all;
 }
 
 .pw-plain {
   margin: 0;
-  padding-left: 20px;
+  padding-left: 18px;
 }
 .pw-plain li {
-  margin-bottom: 7px;
-  font-size: 14px;
+  margin-bottom: 9px;
+  max-width: 62ch;
+  font-size: 14.5px;
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.78;
   word-break: keep-all;
+}
+.pw-plain li::marker {
+  color: var(--pw-accent);
 }
 
 /* ---------- 시험 ---------- */
@@ -513,12 +520,12 @@
 }
 .pw-claims li {
   display: flex;
-  gap: 10px;
-  padding: 8px 0;
+  gap: 12px;
+  padding: 10px 0;
   border-top: 1px solid var(--border);
-  font-size: 13.5px;
+  font-size: 14px;
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.72;
   word-break: keep-all;
 }
 .pw-claims li:first-child {
@@ -569,40 +576,63 @@
   word-break: break-word;
 }
 
-/* ---------- 원문 블록 ---------- */
+/* ---------- 본문 블록 ----------
+   슬라이드 하나가 블록 하나다. 카드 안에 카드를 겹치면 답답해서, 테두리 대신
+   왼쪽 괘선과 여백으로 구분한다. 제목이 라벨뿐인 블록은 머리글 없이 본문만 나온다. */
 .pw-blocks {
   display: grid;
-  gap: 10px;
+  gap: 4px;
 }
 .pw-block {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 13px 16px;
+  position: relative;
+  padding: 14px 0 14px 18px;
+  border-left: 2px solid var(--rule-soft, var(--border));
+}
+.pw-block:hover {
+  border-left-color: var(--pw-accent-edge);
 }
 .pw-block-head {
   display: flex;
   align-items: baseline;
-  gap: 10px;
-  margin: 0 0 8px;
-  font-size: 14px;
+  gap: 12px;
+  margin: 0 0 10px;
+  font-size: 15px;
   font-weight: 700;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
+  line-height: 1.45;
   word-break: keep-all;
 }
+.pw-block-head > span:first-child {
+  flex: 1;
+  min-width: 0;
+}
 .pw-block-head .pw-slideno {
-  margin-left: auto;
+  flex: none;
+  font-weight: 400;
 }
 .pw-block-line {
-  margin: 0 0 6px;
-  font-size: 13.5px;
-  line-height: 1.65;
+  margin: 0 0 8px;
+  /* 읽으라고 만든 페이지다. 줄간을 넉넉히 두고 한 줄이 너무 길어지지 않게 막는다. */
+  max-width: 62ch;
+  font-size: 14.5px;
+  line-height: 1.78;
   color: var(--text-secondary);
   white-space: pre-line;
   word-break: keep-all;
+  /* 전성분처럼 쉼표로만 이어진 아주 긴 줄이 밖으로 삐져나가는 걸 막는다 */
+  overflow-wrap: anywhere;
 }
 .pw-block-line:last-child {
   margin-bottom: 0;
+}
+/* 머리글 없는 블록은 슬라이드 번호만 오른쪽 위에 작게 */
+.pw-block-no {
+  position: absolute;
+  top: 14px;
+  right: 0;
+  font-size: 11px;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
 }
 .pw-muted {
   color: var(--text-muted);

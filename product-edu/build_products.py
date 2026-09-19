@@ -66,9 +66,35 @@ TITLE_SUFFIX = re.compile(
 )
 
 
-def pretty_title(title, fallback):
-    t = TITLE_SUFFIX.sub("", TITLE_PREFIX.sub("", title.strip())).strip(" _-–")
-    return t if len(t) > 1 else fallback
+# 슬라이드 라벨일 뿐 정보가 없는 제목들. 섹션 이름을 그대로 반복하므로 버린다.
+# ("성분 설명" 이 27번, "사용법" 이 17번 나오는 식이었다)
+JUNK_TITLES = {
+    "성분설명", "성분설명main", "베이스성분설명", "베이스메인성분설명", "캡슐성분설명",
+    "성분urgrade", "제형", "제형설명", "향", "향설명", "향설명fragnance",
+    "사용법", "사용방법", "기술", "기술자료", "임상", "추천", "추천사용자",
+    "인체적용시험결과", "인체적용시험&invitro결과", "인체적용시험및테스트",
+}
+
+# 사내 링크·목록처럼 화면에 내보낼 것이 아닌 슬라이드
+INTERNAL = re.compile(r"단서조항|Google Sheets|인체적용시험\s*(진행\s*)?LIST", re.IGNORECASE)
+
+
+# "성분 설명 Ingredients_콜라겐 세럼 베이스" 처럼 라벨 뒤에 알맹이가 붙는 경우
+LEAD_LABEL = re.compile(
+    r"^(성분\s*설명|향\s*설명|제형\s*설명)\s*(Ingredients|Fragrance)?\s*[_\-–:]?\s*",
+    re.IGNORECASE,
+)
+
+
+def pretty_title(title, fallback=""):
+    """슬라이드 제목에서 알맹이만 남긴다. 알맹이가 없으면 빈 문자열."""
+    t = TITLE_SUFFIX.sub("", TITLE_PREFIX.sub("", title.strip())).strip(" _-–*")
+    stripped = LEAD_LABEL.sub("", t).strip(" _-–*()")
+    if len(stripped) > 1:
+        t = stripped
+    if len(t) < 2 or re.sub(r"[\s_\-–*()]", "", t).lower() in JUNK_TITLES:
+        return fallback
+    return t
 
 
 def real_title(slide):
@@ -180,13 +206,22 @@ def parse_sections(deck):
             title = title or "사용 안내"
         if not kind:
             continue
+        if INTERNAL.search(title):
+            continue
         rest = body[1:] if body and body[0][:80] == title else body
+        rest = [clean_line(l) for l in rest if not INTERNAL.search(l)]
+        # 본문 안에 섞여 있는 슬라이드 라벨("특징_ 성분 설명 Ingredients",
+        # "특징_인체적용시험")도 걷어낸다. 짧은 한 줄짜리 분류표만 지운다.
+        rest = [
+            l for l in rest
+            if "\n" in l or (len(l) > 40 or not TITLE_PREFIX.match(l))
+        ]
         if not rest and not s["tables"]:
             continue
         buckets.setdefault(kind, []).append({
             "슬라이드": s["no"],
-            "제목": pretty_title(title, kind),
-            "내용": [clean_line(l) for l in rest],
+            "제목": pretty_title(title),  # 라벨뿐이면 빈 문자열 — 화면에서 머리글을 뺀다
+            "내용": rest,
             "표": s["tables"],
         })
     return buckets

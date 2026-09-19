@@ -82,10 +82,15 @@ function Blocks({ items }: { items: Section[] }) {
     <div className="pw-blocks">
       {items.map((s) => (
         <div className="pw-block" key={`${s.슬라이드}-${s.제목}`}>
-          <p className="pw-block-head">
-            <span>{s.제목}</span>
-            <span className="pw-slideno">슬라이드 {s.슬라이드}</span>
-          </p>
+          {s.제목 ? (
+            <p className="pw-block-head">
+              <span>{s.제목}</span>
+              <span className="pw-slideno">슬라이드 {s.슬라이드}</span>
+            </p>
+          ) : (
+            // 교안 슬라이드 제목이 "성분 설명" 같은 라벨뿐이면 머리글을 만들지 않는다.
+            <span className="pw-block-no">{s.슬라이드}</span>
+          )}
           {s.내용.map((line, i) => (
             <p className="pw-block-line" key={i}>
               {line}
