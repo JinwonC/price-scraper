@@ -3,7 +3,18 @@ import images from "@/data/product-images.json";
 import briefs from "@/data/briefs.json";
 
 /** 브리프에 안 들어간 나머지를 사람이 읽고 풀어 쓴 것. 교안 원문이 아니다. */
-export type Etc = { 제목: string; 본문: string[] };
+export type Etc = { 제목: string; 본문: string[]; title?: string; body?: string[] };
+
+export type Feature = { 제목: string; 설명: string[] };
+export type FeatureEn = { title: string; body: string[] };
+
+/** 교안에서 나온 것들의 영어판. 번역이라기보다 영어로 다시 쓴 것이다. */
+export type ProductEn = {
+  스펙?: { 용량?: string; 기능성?: string; 타겟?: string };
+  한줄?: string;
+  특징?: FeatureEn[];
+  이미지?: string[];
+};
 
 export type Product = {
   slug: string;
@@ -11,13 +22,15 @@ export type Product = {
   ko: string;
   스펙: { 용량?: string; 기능성?: string; 타겟?: string };
   포지셔닝: { 문구: string; 태그: string[] } | null;
-  특징: { 제목: string; 설명: string[] }[];
+  특징: Feature[];
   기타: Etc[];
+  en판: ProductEn;
 };
 
 export type ProductImage = {
   src: string;
   설명: string;
+  설명En?: string;
   w: number;
   h: number;
 };
@@ -32,7 +45,10 @@ export function getProduct(slug: string): Product | undefined {
 }
 
 export function getImages(slug: string): ProductImage[] {
-  return imageMap[slug] ?? [];
+  const list = imageMap[slug] ?? [];
+  const en = all.find((p) => p.slug === slug)?.en판?.이미지 ?? [];
+  // 영어 설명은 이미지 순서대로 적는다. 아직 안 쓴 것은 비워 두면 한국어가 나온다.
+  return list.map((im, i) => ({ ...im, 설명En: en[i] ?? "" }));
 }
 
 /** 목록 화면이 쓰는 가벼운 색인. 카드에 필요한 것만 담는다. */
@@ -45,6 +61,10 @@ export type ProductCard = {
   한줄: string;
   태그: string[];
   대표이미지: string | null;
+  /** 영어 화면에서 쓸 값. 아직 안 쓴 제품은 비어 있고, 그때는 한국어를 보여준다. */
+  용량En: string;
+  기능성En: string;
+  한줄En: string;
 };
 
 export const cards: ProductCard[] = all.map((p) => ({
@@ -56,9 +76,24 @@ export const cards: ProductCard[] = all.map((p) => ({
   한줄: p.포지셔닝?.문구 ?? "",
   태그: p.포지셔닝?.태그 ?? [],
   대표이미지: getImages(p.slug)[0]?.src ?? null,
+  용량En: p.en판?.스펙?.용량 ?? "",
+  기능성En: p.en판?.스펙?.기능성 ?? "",
+  한줄En: p.en판?.한줄 ?? "",
 }));
 
 /** 사람이 직접 쓴 브리프. 교안 추출 데이터와 달리 문장으로 읽히도록 쓴 것이다. */
+export type BriefEn = {
+  lead: string;
+  who?: string;
+  ingredients?: { name: string; amount?: string; role: string }[];
+  figures?: { label: string; value: string; note?: string }[];
+  testNote?: string;
+  certs?: string[];
+  howto?: { name: string; how: string }[];
+  say?: { line: string; why: string }[];
+  careful?: string[];
+};
+
 export type Brief = {
   한줄: string;
   누구에게?: string;
@@ -71,6 +106,7 @@ export type Brief = {
   사용법?: { 이름: string; 방법: string }[];
   말할때?: { 문장: string; 근거: string }[];
   주의?: string[];
+  en?: BriefEn;
 };
 
 export function getBrief(slug: string): Brief | undefined {

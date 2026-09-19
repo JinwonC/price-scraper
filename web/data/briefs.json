@@ -329,7 +329,7 @@
     "조건": "손으로 흡수시킬 때 대비"
    }
   ],
-  "시험조건": "교안 그래프 이미지에서 읽은 값. 기관·인원은 교안에 없음",
+  "시험조건": "1.71배·1.66배는 같은 크림을 손으로 흡수시킨 경우와 비교한 값입니다. 별도의 안티에이징 인체적용시험은 한국피부과학연구원 / 21명 / 2주 / 개인차 있음.",
   "사용법": [
    {
     "이름": "기본",
@@ -347,7 +347,7 @@
    }
   ],
   "주의": [
-   "**1.71배·1.66배는 '손으로 바를 때 대비' 입니다.** 절대적인 개선치가 아니고, 기관·인원도 교안에 없습니다.",
+   "**1.71배·1.66배는 '손으로 바를 때 대비' 입니다.** 아무것도 안 했을 때와 비교한 값이 아닙니다.",
    "갈바닉은 흡수를 돕는 기기 기능입니다. 의료기기가 아니고 치료 효과를 말할 수 없습니다."
   ]
  },
@@ -398,7 +398,7 @@
     "조건": "2주 사용"
    }
   ],
-  "시험조건": "2주 사용. 기관·인원은 교안에 없음",
+  "시험조건": "한국피부과학연구원 / 21명 / 2주 / 개인차 있음",
   "사용법": [
    {
     "이름": "기본",
@@ -408,7 +408,7 @@
   "말할때": [
    {
     "문장": "2주 썼을 때 리프팅 49.58% 개선 나왔습니다.",
-    "근거": "세 수치 중 가장 큰 값입니다. \"브랜드 시험\", \"개인차\"를 같이 말하세요."
+    "근거": "세 수치 중 가장 큰 값입니다. 한국피부과학연구원에서 21명을 대상으로 2주간 본 결과이고, 개인차가 있습니다."
    },
    {
     "문장": "이름의 8%는 트러플·콜라겐수·보습오일을 각각 8%씩 넣었다는 뜻이에요.",
@@ -421,8 +421,7 @@
   ],
   "주의": [
    "**피부톤 개선 1.15%는 아주 작은 수치입니다.** 리프팅 수치와 나란히 말하면 오해를 삽니다.",
-   "**패키지가 두 가지입니다.** 구 패키지는 `AROMATIC SPRAY SERUM`, 현행은 `VITA TONING ANTI-AGING SERUM` 입니다.",
-   "시험 기관·인원이 교안에 없습니다. '임상' 대신 '브랜드 시험'으로 말하세요."
+   "**패키지가 두 가지입니다.** 구 패키지는 `AROMATIC SPRAY SERUM`, 현행은 `VITA TONING ANTI-AGING SERUM` 입니다."
   ]
  },
  "white-truffle-first-spray-serum": {
@@ -1452,7 +1451,69 @@
    "'엔젤링'은 브랜드 표현입니다. 효과 보증이 아닙니다.",
    "용량이 두 가지(50ml·100ml)라 가격을 헷갈리지 마세요.",
    "헤어 오일 세럼과 다른 제품입니다. 이쪽이 퍼퓸(향) 쪽입니다."
-  ]
+  ],
+  "en": {
+   "lead": "A two-layer hair mist — pink oil on top, moisturising serum below. Shake it and the two mix 3:7.",
+   "who": "Anyone with dry, flyaway hair who also wants a scent that lasts",
+   "certs": [
+    "Italian V-Label vegan certification",
+    "Primary skin irritation test completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Collagen water",
+     "amount": "55%",
+     "role": "Replaces purified water as the base."
+    },
+    {
+     "name": "Peptide Exosome™",
+     "amount": "10%",
+     "role": "White truffle exosome bound to 99% pure Dipeptide-15. d'Alba's own ingredient."
+    },
+    {
+     "name": "Protein + amino acids",
+     "amount": "3 + 17 kinds",
+     "role": "Fills in hair that has gone dry and brittle."
+    },
+    {
+     "name": "d'Alba-9 Blending Oil",
+     "role": "With baobab seed and apricot kernel oil. This is the pink layer."
+    }
+   ],
+   "howto": [
+    {
+     "name": "Every day",
+     "how": "Shake 2–3 times, then mist onto damp or dry hair whenever it feels rough."
+    },
+    {
+     "name": "For scent",
+     "how": "Keep it in your bag. Spray after the gym or a meal — layering makes the scent stronger."
+    },
+    {
+     "name": "For styling",
+     "how": "When a wave starts to drop, mist again to bring the bounce back."
+    }
+   ],
+   "say": [
+    {
+     "line": "Shake it first — the pink layer is the oil, the clear one is the serum.",
+     "why": "You can see it in the bottle. It's the easiest opening shot."
+    },
+    {
+     "line": "The mist is so fine it doesn't clump, so you can keep reapplying.",
+     "why": "The fine spray is a design choice, not a coincidence. Good answer to 'won't it get greasy?'"
+    },
+    {
+     "line": "It starts fresh and citrusy, then settles into something soft and powdery.",
+     "why": "Top is bergamot, lemon, orange, pear; heart is freesia, rose, jasmine, iris; base is white musk. Scent talk is safe ground."
+    }
+   ],
+   "careful": [
+    "**Don't use the '467× smaller than a pore' figure.** The pore size comes from an outside paper's average, not from testing this product — and this is a hair product, so the comparison doesn't fit.",
+    "**There are no numbers for hair improvement in the deck.** Avoid words like 'repair' or 'regenerate'.",
+    "Trufferol™ claims are about what the raw material does, not what this product was shown to do."
+   ]
+  }
  },
  "professional-repairing-hair-oil-serum": {
   "한줄": "헤어 퍼퓸 세럼의 케어 중심 버전. 오일 40%와 보습 세럼 60%가 나뉘어 있고 단백질을 가장 많이 넣은 제품입니다.",

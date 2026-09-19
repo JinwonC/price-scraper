@@ -1,12 +1,14 @@
 {
- "_주": "브리프에 안 들어간 나머지를 사람이 읽고 풀어 쓴 것. 교안 문장을 그대로 옮기지 않는다.",
+ "_주": "브리프에 안 들어간 나머지를 사람이 읽고 풀어 쓴 것. 한국어와 영어를 같이 쓴다.",
  "_원칙": [
   "문장으로 쓴다. 교안의 토막 문구를 나열하지 않는다.",
-  "가격, 원가, 출시·리뉴얼 예정일, 제조사, 연락처는 쓰지 않는다.",
+  "가격, 원가, 출시·리뉴얼일, 제조사, 연락처는 쓰지 않는다.",
   "인증서 번호, 시험성적서 번호, 심사번호, 보고번호는 쓰지 않는다.",
-  "'광고 자문 후 수정 예정' 같은 사내 메모는 옮기지 않는다.",
+  "사내 메모('광고 자문 후 수정 예정' 등)와 사내 문서 링크는 옮기지 않는다.",
   "전성분을 통째로 나열하지 않는다. 역할이 있는 성분만 설명한다.",
-  "교안에 없는 것은 지어내지 않는다."
+  "교안에 없는 것은 지어내지 않는다.",
+  "조향사 생년월일처럼 교안에 있는 개인정보는 옮기지 않는다.",
+  "항목마다 제목/본문(한국어)과 title/body(영어)를 같이 둔다. 번역이 아니라 같은 내용을 영어로 다시 쓴다."
  ],
  "italian-white-truffle-professional-repairing-hair-perfume-serum": {
   "항목": [
@@ -15,6 +17,11 @@
     "본문": [
      "통 안이 핑크색 오일층과 투명한 보습 세럼층으로 나뉘어 있습니다. 비율은 3:7 이고, 오일이 윤기 코팅을, 세럼이 수분과 보습을 맡습니다. 쓰기 전에 위아래로 2~3번 흔들어 섞어야 이 비율대로 나옵니다.",
      "분사가 아주 곱게 되도록 설계돼 있습니다. 교안이 '깃털처럼 내려앉는 미세 안개 분사' 라고 표현하는 부분인데, 실제로 이게 이 제품의 사용 조건입니다. 입자가 굵으면 한 곳에 뭉쳐 떡지는데 그걸 피하려고 미세 분사로 만든 것이라, 수시로 덧뿌려도 무거워지지 않습니다."
+    ],
+    "title": "A bottle split 30 oil : 70 serum",
+    "body": [
+     "Inside the bottle there's a pink oil layer and a clear moisturising serum layer, at a 3:7 ratio. The oil does the shine coating, the serum does the water and softness. Shake it up and down two or three times before use or you won't get that ratio.",
+     "The spray is built to come out very fine — the deck calls it a mist that lands like a feather. That's actually the usage condition for this product. A coarse spray pools in one spot and makes hair stringy; the fine mist is how they avoided that, which is why you can keep reapplying without it getting heavy."
     ]
    },
    {
@@ -23,6 +30,12 @@
      "향이 세 단계로 나뉩니다. 처음에는 베르가못·레몬·오렌지·배 같은 상큼한 과일 향이 올라오고, 중간에 프리지아·로즈·자스민·아이리스 꽃향이 자리를 잡습니다. 마지막에 화이트 머스크·앰버·패츌리의 포근한 파우더리 향이 남습니다.",
      "뿌리자마자 나는 향과 한참 뒤에 남는 향이 다르다는 뜻입니다. 방송에서 '처음엔 상큼한데 시간 지나면 포근해져요' 라고 말할 수 있는 근거가 여기 있습니다.",
      "겹쳐 뿌릴수록 향이 진해지도록 만들어져 있습니다. 교안에는 '레이어링 할수록 향기는 디벨롭 된다' 고 적혀 있습니다. 원료를 강화한 리뉴얼 버전에서 향료가 이전보다 늘어서, 예전 제품을 쓰던 분은 향이 더 진하다고 느낄 수 있습니다."
+    ],
+    "title": "How the Rose Freesia scent moves",
+    "body": [
+     "The scent runs in three stages. Bergamot, lemon, orange and pear open it bright and fruity. Freesia, rose, jasmine and iris settle in through the middle. White musk, amber and patchouli close it out soft and powdery.",
+     "Which means what you smell on the first spray isn't what's left hours later. That's your basis for saying 'it starts fresh and turns cosy' on camera.",
+     "It's built so the scent deepens as you layer it — the deck says the fragrance develops with each application. The reformulated version carries more fragrance than before, so anyone coming from the old bottle will notice it's stronger."
     ]
    },
    {
@@ -31,6 +44,12 @@
      "달바가 자체 개발했다고 밝힌 성분입니다. 이탈리아산 화이트 트러플에서 뽑은 엑소좀에, 순도 99% 저분자 다이펩타이드-15 를 결합한 것입니다. 이 제품에는 10% 들어 있습니다.",
      "엑소좀은 성분을 실어 나르는 껍질 역할을 합니다. 달바 설명으로는 이 조합의 입자 크기가 106nm 라서, 거칠어진 모발 결을 따라 성분이 고르게 퍼진다는 것입니다.",
      "교안에 '모공보다 467배 작다' 는 비교가 나오는데, 이건 조심해야 합니다. 모공 크기는 외부 논문에 실린 평균값이고 이 제품을 가지고 잰 숫자가 아닙니다. 교안에도 개인차가 있다는 단서가 붙어 있습니다. 게다가 이건 헤어 제품이라 모공 비교 자체가 잘 안 맞습니다. 이 숫자는 쓰지 않는 편이 낫습니다."
+    ],
+    "title": "What Peptide Exosome™ actually is",
+    "body": [
+     "An ingredient d'Alba says it developed itself. An exosome drawn from Italian white truffle, bound to 99% pure low-molecular Dipeptide-15. This product contains 10%.",
+     "An exosome works as a shell that carries other ingredients. d'Alba puts the particle size at 106nm, which is how the active is said to spread evenly along roughened hair.",
+     "The deck also claims it's 467× smaller than a pore — be careful with that one. The pore figure is an average from an outside paper, not something measured on this product, and the deck itself notes individual variation. On top of that, this is a hair product, so a pore comparison doesn't really apply. Better to leave the number out."
     ]
    },
    {
@@ -39,6 +58,12 @@
      "달바 제품 대부분에 들어가는 브랜드 고유 성분입니다. 이탈리아산 화이트 트러플(흰서양송로추출물)과 토코페롤(비타민E)을 섞어 만들었습니다.",
      "화이트 트러플은 달바가 브랜드 정체성으로 내세우는 원료이고, 토코페롤은 보습을 맡습니다. 달바 제품을 여러 개 다룰 때 매번 똑같이 나오는 이름이라 한 번 이해해 두면 계속 씁니다.",
      "교안에는 '상기 사항은 원료적 특성에 한함' 이라는 단서가 붙어 있습니다. 원료 자체의 성질을 말한 것이지, 이 제품을 써서 그 효과가 확인됐다는 뜻이 아닙니다."
+    ],
+    "title": "What Trufferol™ actually is",
+    "body": [
+     "A brand ingredient that turns up in most d'Alba products. Italian white truffle (Tuber magnatum extract) blended with tocopherol (vitamin E).",
+     "White truffle is what d'Alba builds its brand identity on; tocopherol handles moisture. You'll see this name again and again across the range, so it's worth understanding once.",
+     "The deck attaches a note that these claims apply to the raw material's properties. It describes what the ingredient does, not what this product was tested and shown to do."
     ]
    },
    {
@@ -48,6 +73,13 @@
      "영양 쪽은 단백질 3종과 아미노산 17종이 맡습니다. 푸석해진 모발에 채워 넣는 역할입니다.",
      "윤기와 보습은 달바-9 블렌딩 오일에 바오밥나무씨오일과 살구씨오일을 더해 만듭니다. 핑크색 오일층이 이것입니다.",
      "설페이트계 계면활성제는 쓰지 않았습니다."
+    ],
+    "title": "The rest of what's in it",
+    "body": [
+     "The base is 55% collagen water, standing in for purified water.",
+     "Nutrition comes from 3 proteins and 17 amino acids — the part that fills hair back in when it's gone dry.",
+     "Shine and moisture come from d'Alba-9 Blending Oil plus baobab seed oil and apricot kernel oil. That's the pink layer you can see.",
+     "No sulphate surfactants."
     ]
    },
    {
@@ -58,6 +90,14 @@
      "둘째, 가방에 넣고 다니다가 외부 활동 중 향이 필요할 때.",
      "셋째, 운동 전후나 식사 후. 냄새가 밸 만한 상황을 향으로 덮는 용도입니다.",
      "넷째, 스타일링한 웨이브가 처질 때. 다시 뿌리면 탄력이 살아납니다."
+    ],
+    "title": "When to reach for it",
+    "body": [
+     "The deck lists four moments. Each one works as its own on-camera scene.",
+     "One — whenever hair feels frizzy or dry. Works on wet hair and dry hair alike.",
+     "Two — keep it in a bag and spray when you want the scent during the day.",
+     "Three — before or after the gym, or after a meal. It covers smells you'd rather not carry around.",
+     "Four — when a styled wave starts to drop. Mist it again and the bounce comes back."
     ]
    },
    {
@@ -65,6 +105,11 @@
     "본문": [
      "이탈리아 V-Label 비건 인증을 받았고, 국내에서 인체 피부 일차자극 테스트를 마쳤습니다.",
      "모발이 얼마나 개선됐는지에 대한 수치 시험은 교안에 없습니다. '복구', '재생' 같은 표현은 쓰지 마세요."
+    ],
+    "title": "Certification and testing",
+    "body": [
+     "Italian V-Label vegan certification, and a primary skin irritation test completed in Korea.",
+     "There are no figures in the deck for how much hair improved. Don't use words like 'repair' or 'regenerate'."
     ]
    },
    {
@@ -72,6 +117,11 @@
     "본문": [
      "기능성 화장품 고시 사항이 없습니다. 헤어 세럼이라 해당 사항이 아닙니다.",
      "추천 대상을 따로 정리한 장이 없습니다. 타겟은 '모든 모발, 손상 모발, 건조한 모발' 로만 적혀 있습니다."
+    ],
+    "title": "What the deck doesn't say",
+    "body": [
+     "Nothing on functional cosmetic claims — it's a hair serum, so that category doesn't apply.",
+     "There's no section setting out who it's for. The target line only says all hair types, damaged hair and dry hair."
     ]
    }
   ]

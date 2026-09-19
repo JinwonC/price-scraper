@@ -1049,3 +1049,47 @@
 .pw-etc p:last-child {
   margin-bottom: 0;
 }
+
+/* 언어 전환 */
+.pw-top-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.pw-lang {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.pw-lang button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 5px 11px;
+  font: inherit;
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+.pw-lang button + button {
+  border-left: 1px solid var(--border);
+}
+.pw-lang button[aria-pressed="true"] {
+  background: var(--pw-accent-wash);
+  color: var(--pw-accent);
+  font-weight: 650;
+}
+.pw-lang button:hover:not([aria-pressed="true"]) {
+  color: var(--text-primary);
+}
+@media (max-width: 520px) {
+  .pw-top {
+    flex-wrap: wrap;
+  }
+  .pw-top-right {
+    gap: 10px;
+  }
+}

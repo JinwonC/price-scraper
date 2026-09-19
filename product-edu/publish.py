@@ -65,8 +65,9 @@ def capacity_only(값):
 def main():
     src = json.load(open(os.path.join(HERE, "products.json"), encoding="utf-8"))
     etc = json.load(open(os.path.join(HERE, "etc.json"), encoding="utf-8"))
+    en = json.load(open(os.path.join(HERE, "en.json"), encoding="utf-8"))
 
-    out, leaks, 기타없음 = [], [], []
+    out, leaks, 기타없음, 영어없음 = [], [], [], []
     for p in src:
         slug = p["slug"]
         pub = {
@@ -85,9 +86,15 @@ def main():
             "포지셔닝": p["포지셔닝"],
             "특징": p["특징"],
             "기타": etc.get(slug, {}).get("항목", []),
+            "en판": en.get(slug, {}),
         }
         if not pub["기타"]:
             기타없음.append(slug)
+        # 영어 화면이 빌 자리를 미리 알려준다.
+        if not pub["en판"].get("특징") or not any(
+            i.get("title") for i in pub["기타"]
+        ):
+            영어없음.append(slug)
         hits = LEAK.findall(json.dumps(pub, ensure_ascii=False))
         if hits:
             leaks.append((slug, sorted(set(hits))[:6]))
@@ -104,6 +111,10 @@ def main():
         print(f"\n기타를 아직 안 쓴 제품 {len(기타없음)}개:")
         for s in 기타없음:
             print("  -", s)
+    if 영어없음:
+        print(f"\n영어를 아직 안 쓴 제품 {len(영어없음)}개:")
+        for s2 in 영어없음:
+            print("  -", s2)
     if leaks:
         print("\n!! 내보내면 안 될 내용이 남아 있다:")
         for slug, hits in leaks:

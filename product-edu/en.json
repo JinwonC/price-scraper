@@ -1,0 +1,68 @@
+{
+ "_note": "Per-product English for everything that comes out of the Korean deck: spec values, the one-liner, and the [features & benefits] block. Brief text lives in briefs.json, the longer write-ups in etc.json.",
+ "_rules": [
+  "Write for a creator on camera, not for a regulator. Short sentences.",
+  "Never invent a claim the deck does not make.",
+  "Keep every hedge the Korean carries: immediate, temporary, individual variation.",
+  "No prices, no launch dates, no manufacturer, no certificate numbers."
+ ],
+ "italian-white-truffle-professional-repairing-hair-perfume-serum": {
+  "스펙": {
+   "용량": "50ml · 100ml",
+   "타겟": "All hair types, damaged hair, dry hair"
+  },
+  "한줄": "A hair perfume serum that layers shine and moisture at once — an angel-ring finish with a scent that builds as you spray.",
+  "특징": [
+   {
+    "title": "Oil and serum blended 3:7 for shine and moisture",
+    "body": [
+     "Pink oil 30% for the angel-ring shine, moisturising serum 70% for softness and water.",
+     "The oil coats and the serum hydrates, layered together in that ratio, for hair that stays glossy without feeling heavy."
+    ]
+   },
+   {
+    "title": "A fine mist that lands like a feather — no clumping, no greasy strands",
+    "body": [
+     "The mist is fine enough to settle evenly, so you can reuse it through the day without weighing hair down.",
+     "The more you layer it, the more the scent develops."
+    ]
+   },
+   {
+    "title": "55% collagen water and 10% Peptide Exosome for conditioning",
+    "body": [
+     "A nano exosome system drawn from Italian white truffle, bound to 99% pure low-molecular Dipeptide-15.",
+     "d'Alba describes the particle as 467× smaller than a pore — a comparison drawn from an outside paper's average, not a measurement of this product.",
+     "It smooths roughened hair so the active spreads evenly along the strand."
+    ]
+   },
+   {
+    "title": "Rose Freesia — the scent that sets the mood",
+    "body": [
+     "Fresh fruit opens, then rose and freesia bloom through the middle.",
+     "A soft musk closes it, drifting whenever your hair moves."
+    ]
+   },
+   {
+    "title": "Protein and oil for hair that has gone dry and brittle",
+    "body": [
+     "Protein: 3 proteins plus 17 amino acids.",
+     "d'Alba proprietary ingredients — Peptide Exosome™ (Dipeptide-15 1.2%, white truffle water and extract) for conditioning, Trufferol™ (Italian white truffle and tocopherol) for bounce.",
+     "Moisture and shine: d'Alba-9 Blending Oil with baobab seed oil and apricot kernel oil."
+    ]
+   },
+   {
+    "title": "Italian V-Label vegan certified · primary skin irritation test completed in Korea",
+    "body": [
+     "Raw materials chosen carefully, no sulphate surfactants — gentle enough for frequent use."
+    ]
+   }
+  ],
+  "이미지": [
+   "Product shot",
+   "Sprayed onto hair",
+   "Hair",
+   "High-concentration essential oil 11,000ppm",
+   "Product shot"
+  ]
+ }
+}
