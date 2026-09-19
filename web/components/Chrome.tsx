@@ -10,27 +10,22 @@ export default function Chrome({ children }: { children: React.ReactNode }) {
     <div className="pw">
       <header className="pw-top">
         <Link className="pw-home" href="/products">
-          {t("달바 제품 교안", "d'Alba Product Guide")}
+          {t("달바 제품 가이드", "d'Alba Product Guide")}
         </Link>
-        <div className="pw-top-right">
-          <LangSwitch />
-          <Link className="pw-alt" href="/reddit">
-            {t("레딧 모니터 →", "Reddit monitor →")}
-          </Link>
-        </div>
+        <LangSwitch />
       </header>
       {children}
       <footer className="pw-foot">
         <p>
           {t(
-            "사내 제품 교안에서 뽑아 정리한 내용입니다. 수치는 교안에 적힌 그대로 옮겼고, 교안에 없는 항목은 채우지 않고 비워 두었습니다.",
-            "Compiled from d'Alba's internal product decks. Figures are copied exactly as printed; where the deck says nothing, the field is left empty rather than filled in.",
+            "제품별 정보를 한곳에 모았습니다. 수치는 브랜드 자료에 적힌 그대로이고, 확인되지 않은 항목은 비워 두었습니다.",
+            "Product information, gathered in one place. Figures are reproduced exactly as the brand states them, and anything unconfirmed is left blank.",
           )}
         </p>
         <p>
           {t(
-            "교안 문구에는 “본 문구는 화장품법에 의거하여 검토한 내용이 아닙니다” 각주가 붙어 있습니다. 사내 교육용이며, 어느 시장에서도 심의를 거친 광고 문구가 아닙니다.",
-            "The decks carry a footnote stating the copy has not been reviewed under Korean cosmetics law. This is internal training material, not cleared advertising copy in any market.",
+            "여기 적힌 문구는 어느 시장에서도 심의를 거친 광고 문구가 아닙니다. 방송에 쓰기 전에 해당 시장의 표시·광고 기준을 확인하세요.",
+            "Nothing here is cleared advertising copy in any market. Check your own market's labelling and advertising rules before you use it on air.",
           )}
         </p>
       </footer>

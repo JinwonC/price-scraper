@@ -12,8 +12,10 @@ import {
 export type Lang = "ko" | "en";
 
 const KEY = "dalba-pw-lang";
+/** 기본은 영어. 한국어는 고른 사람에게만 보인다. */
+const DEFAULT: Lang = "en";
 const Ctx = createContext<{ lang: Lang; setLang: (l: Lang) => void }>({
-  lang: "ko",
+  lang: DEFAULT,
   setLang: () => {},
 });
 
@@ -22,7 +24,7 @@ const Ctx = createContext<{ lang: Lang; setLang: (l: Lang) => void }>({
  * 고른 언어는 브라우저에 남겨 두어 다음에 들어와도 같은 언어로 열린다.
  */
 export function LangProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>("ko");
+  const [lang, setLangState] = useState<Lang>(DEFAULT);
 
   useEffect(() => {
     try {
