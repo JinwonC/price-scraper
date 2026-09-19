@@ -1157,7 +1157,65 @@
    "**가격이 교안에 '미정' 으로 되어 있습니다.** 본인 스토어 가격을 확인하세요.",
    "'모공 탄력 개선'은 교안 표현입니다. 모공 크기가 영구적으로 줄어든다는 뜻이 아닙니다.",
    "구체적인 시험 수치가 교안에 없습니다."
-  ]
+  ],
+  "en": {
+   "lead": "A cleansing balm you grind off a fresh surface each time. No spatula, and no water ever gets in.",
+   "who": "Anyone who finds balm jars unhygienic, or who wants one product for both light and full makeup",
+   "certs": [
+    "Italian V-Label vegan certification",
+    "Primary skin irritation test completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Lemon Vitamin-some",
+     "role": "Sicilian lemon with 99% pure vitamin C, wrapped in liposomes."
+    },
+    {
+     "name": "Collagen extract",
+     "role": "The firmness side."
+    },
+    {
+     "name": "Truffle Tension Complex™",
+     "role": "White truffle, vitamin C, glutathione, 12 vegan proteins, 10 hyaluronic acids."
+    },
+    {
+     "name": "3D Network soft melting",
+     "role": "A cushioned texture that melts on contact and grips the skin."
+    }
+   ],
+   "howto": [
+    {
+     "name": "Step 1",
+     "how": "Turn the dial in the direction of the arrow to grind out what you need."
+    },
+    {
+     "name": "Step 2",
+     "how": "With dry hands, massage it over bare skin or makeup."
+    },
+    {
+     "name": "Step 3",
+     "how": "Wet your hands and roll it over the face, then rinse with lukewarm water."
+    }
+   ],
+   "say": [
+    {
+     "line": "You set the dial by how much makeup you're wearing. 90 degrees for base, 180 for light makeup, 250 to 300 for full.",
+     "why": "The deck gives exact angles. It kills the 'how much do I use?' question dead."
+    },
+    {
+     "line": "You grind off exactly what you need, so you never need a spatula.",
+     "why": "It's the product's identity. Show the dial on camera."
+    },
+    {
+     "line": "Not one drop of water gets inside the package.",
+     "why": "That's the packaging rationale — vitamins don't oxidise."
+    }
+   ],
+   "careful": [
+    "**Three things to tell buyers up front.** The first use may not dispense evenly — keep turning. Store it between 10 and 30°C. And the grinding container can't be emptied completely.",
+    "'Pore firmness' is the deck's own wording. It doesn't mean pores physically shrink."
+   ]
+  }
  },
  "double-quick-liposome-serum-mask-pad": {
   "한줄": "한 통에 패드가 두 종류 들어 있습니다. 노란 콜라겐 겔 패드 70매(영양·탄력)와 초록 카밍 필링 패드 30매(각질·진정), 합쳐서 100매입니다.",
@@ -1396,13 +1454,110 @@
    {
     "문장": "물에 녹는 마스크예요. 지지체가 아예 없습니다.",
     "근거": "100% 세럼으로 만들었다는 교안 설명입니다."
+   },
+   {
+    "문장": "2주 썼을 때 주름 32.85%, 기미·잡티 19.82% 개선이 나왔습니다.",
+    "근거": "한국피부과학연구원에서 21명을 대상으로 본 결과입니다. '2주 사용' 과 '개인차 있음' 을 붙이세요."
    }
   ],
   "주의": [
-   "**V-Label 비건 인증서의 만료일이 2026년 4월 10일로 이미 지났습니다.** 갱신 여부를 확인하기 전에는 비건 인증을 말하지 마세요.",
-   "'우려 성분 17종 불검출'은 특정 목록에 대한 시험입니다. 모든 유해 성분이 없다는 뜻이 아닙니다.",
-   "2주 개선 수치가 교안 텍스트에 없습니다. % 를 말하지 마세요."
-  ]
+   "**V-Label 비건 인증서의 만료일이 2026년 4월 10일로 지났습니다.** 비건 이야기는 빼고, '우려 성분 17종 불검출' 과 '저자극 테스트 완료' 로 가세요.",
+   "**교안의 '만족도 100%' 는 설문 결과입니다.** 측정값이 아니라 '보통 이상 긍정' 응답 비율이라 방송에서 쓰면 안 됩니다.",
+   "'1,000개 캡슐' 은 회사가 계산한 값입니다. '1,000개 넘게' 로 말하세요."
+  ],
+  "근거수치": [
+   {
+    "항목": "주름 개선",
+    "값": "32.85%",
+    "조건": "2주 사용"
+   },
+   {
+    "항목": "기미 및 잡티 완화",
+    "값": "19.82%",
+    "조건": "2주 사용"
+   }
+  ],
+  "시험조건": "한국피부과학연구원 / 21명 / 2주 / 개인차 있음. 안면(볼) 리프팅과 피부톤도 같은 시험에서 함께 봤습니다.",
+  "en": {
+   "lead": "44g of serum set solid into a mask. There's no sheet underneath — it comes in eight pieces that cover the face and the neck.",
+   "who": "Anyone whose sheet masks slide off, and who wants the eyes, neck and nasolabial folds covered too",
+   "certs": [
+    "Brightening + wrinkle care (dual functional claim)",
+    "Primary skin irritation test completed",
+    "Free of 17 substances of concern"
+   ],
+   "ingredients": [
+    {
+     "name": "Fermented collagen water",
+     "amount": "70%",
+     "role": "The serum base. This is what gets set into a mask."
+    },
+    {
+     "name": "Vitamin C capsules",
+     "amount": "over 1,000",
+     "role": "Studded through the mask, and visible."
+    },
+    {
+     "name": "Truffle Tension Complex™",
+     "role": "White truffle, vitamin C, glutathione, 12 vegan proteins, 10 hyaluronic acids."
+    },
+    {
+     "name": "Niacinamide",
+     "amount": "20,000ppm (2%)",
+     "role": "The notified brightening active."
+    },
+    {
+     "name": "Rice PDRN · retinol · panthenol",
+     "role": "Firmness and moisture."
+    }
+   ],
+   "figures": [
+    {
+     "label": "Wrinkles",
+     "value": "32.85%",
+     "note": "2 weeks"
+    },
+    {
+     "label": "Blemishes and dark spots",
+     "value": "19.82%",
+     "note": "2 weeks"
+    }
+   ],
+   "testNote": "Korea Institute of Dermatological Sciences / 21 people / 2 weeks / individual variation. Cheek lifting and skin tone were measured in the same study.",
+   "howto": [
+    {
+     "name": "Basic",
+     "how": "Tone first, then open the pouch, unfold the mask and peel off its film. Eye patches, then neck, then the rest."
+    },
+    {
+     "name": "As a sleeping mask",
+     "how": "The serum doesn't run, so you can leave it as the last step of your night routine."
+    }
+   ],
+   "say": [
+    {
+     "line": "There's no sheet. It's serum set solid, so as it absorbs it turns clear and gets thinner.",
+     "why": "The deck shows it right after application and three hours later. A visible change, which is perfect on camera."
+    },
+    {
+     "line": "Eight separate pieces, so the eyes, neck and nasolabial folds each get their own.",
+     "why": "That's what separates it from an ordinary sheet mask."
+    },
+    {
+     "line": "It dissolves in water. There's no backing material at all.",
+     "why": "It's made entirely of serum."
+    },
+    {
+     "line": "Two weeks in, wrinkles improved 32.85% and dark spots 19.82%.",
+     "why": "Measured at the Korea Institute of Dermatological Sciences with 21 people. Attach 'over two weeks' and 'results vary'."
+    }
+   ],
+   "careful": [
+    "**The V-Label vegan certificate expired on 10 April 2026.** Leave vegan out and lead with 'free of 17 substances of concern' and 'primary skin irritation test completed'.",
+    "**The deck's '100% satisfaction' is a survey result** — the share who answered neutral-or-better, not a measurement. Don't use it on air.",
+    "'Over 1,000 capsules' is a company estimate. Say 'more than a thousand'."
+   ]
+  }
  },
  "white-truffle-double-serum-cream-2-in-1": {
   "한줄": "한 통에 아쿠아 세럼과 인텐스 크림이 나뉘어 담겨 있고, 스파츌러로 그날 피부에 맞게 비율을 섞어 쓰는 크림입니다.",
