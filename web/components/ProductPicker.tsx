@@ -7,7 +7,7 @@ import type { ProductCard } from "@/lib/products";
 /** 검색어를 제품명·영문명·태그·한 줄 소개에 두루 맞춰 본다. */
 function matches(card: ProductCard, q: string): boolean {
   if (!q) return true;
-  const hay = [card.ko, card.en, card.한줄, card.태그.join(" "), card.용량가격]
+  const hay = [card.ko, card.en, card.한줄, card.태그.join(" "), card.용량]
     .join(" ")
     .toLowerCase();
   // 띄어쓰기를 무시하고도 걸리게 한다("리턴오일" 로도 찾아지도록)
@@ -60,7 +60,7 @@ export default function ProductPicker({ cards }: { cards: ProductCard[] }) {
                   <p className="pw-en">{c.en}</p>
                   {c.한줄 && <p className="pw-line">{c.한줄}</p>}
                   <p className="pw-meta">
-                    {c.용량가격 || "용량·가격 교안에 없음"}
+                    {c.용량 || "용량 교안에 없음"}
                     {c.기능성 ? ` · ${c.기능성}` : ""}
                   </p>
                 </div>

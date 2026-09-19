@@ -1019,3 +1019,33 @@
 .pw-fold-body {
   padding: 4px 0 20px;
 }
+
+/* 기타 — 교안 원문 대신 사람이 풀어 쓴 글. 읽히라고 만든 블록이다. */
+.pw-etc {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin-top: 18px;
+}
+.pw-etc article {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+.pw-etc h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+.pw-etc p {
+  margin: 0 0 9px;
+  font-size: 14.5px;
+  line-height: 1.78;
+  color: var(--text-secondary);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+.pw-etc p:last-child {
+  margin-bottom: 0;
+}

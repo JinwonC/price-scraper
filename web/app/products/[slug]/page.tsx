@@ -1,14 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import {
-  getBrief,
-  getImages,
-  getProduct,
-  products,
-  type Brief,
-  type Doc,
-  type Section,
-} from "@/lib/products";
+import { getBrief, getImages, getProduct, products, type Brief } from "@/lib/products";
 
 /** **굵게** 표시만 지원하는 최소 마크업. 주의 문구에서 핵심어를 강조하려고 쓴다. */
 function Bold({ text }: { text: string }) {
@@ -133,70 +125,6 @@ function Empty({ what }: { what: string }) {
   return <p className="pw-empty">교안에 {what} 내용이 없습니다.</p>;
 }
 
-function Blocks({ items }: { items: Section[] }) {
-  return (
-    <div className="pw-blocks">
-      {items.map((s) => (
-        <div className="pw-block" key={`${s.슬라이드}-${s.제목}`}>
-          {s.제목 ? (
-            <p className="pw-block-head">
-              <span>{s.제목}</span>
-              <span className="pw-slideno">슬라이드 {s.슬라이드}</span>
-            </p>
-          ) : (
-            // 교안 슬라이드 제목이 "성분 설명" 같은 라벨뿐이면 머리글을 만들지 않는다.
-            <span className="pw-block-no">{s.슬라이드}</span>
-          )}
-          {s.내용.map((line, i) => (
-            <p className="pw-block-line" key={i}>
-              {line}
-            </p>
-          ))}
-          {s.표.map((table, ti) => (
-            <div className="pw-tablewrap" key={ti}>
-              <table>
-                <tbody>
-                  {table.map((row, ri) => (
-                    <tr key={ri}>
-                      {row.map((cell, ci) =>
-                        ri === 0 ? <th key={ci}>{cell}</th> : <td key={ci}>{cell}</td>,
-                      )}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          ))}
-        </div>
-      ))}
-    </div>
-  );
-}
-
-/** 인증서·보고서에서 옮겨 적은 항목. 원본 이미지는 싣지 않는다(개인정보). */
-function DocCard({ doc }: { doc: Doc }) {
-  const { kind, 주의, ...rest } = doc;
-  const rows = Object.entries(rest).filter(
-    ([k, v]) => v !== undefined && v !== "" && k !== "image",
-  );
-  return (
-    <div className="pw-doc">
-      {kind && <p className="pw-doc-kind">{String(kind)}</p>}
-      {rows.length > 0 && (
-        <dl>
-          {rows.map(([k, v]) => (
-            <div key={k}>
-              <dt>{k}</dt>
-              <dd>{String(v)}</dd>
-            </div>
-          ))}
-        </dl>
-      )}
-      {주의 && <p className="pw-warn">{String(주의)}</p>}
-    </div>
-  );
-}
-
 export default async function ProductPage({
   params,
 }: {
@@ -209,22 +137,11 @@ export default async function ProductPage({
   const imgs = getImages(slug);
   const brief = getBrief(slug);
 
+  // 가격·출시일은 사내 정보라 싣지 않는다. publish.py 에서 이미 걸러 둔다.
   const spec: [string, string | undefined][] = [
-    ["용량 · 가격", p.스펙.용량가격],
-    ["출시", p.스펙.출시],
-    ["리뉴얼", p.스펙.리뉴얼],
+    ["용량", p.스펙.용량],
     ["기능성", p.스펙.기능성],
     ["타겟", p.스펙.타겟],
-  ];
-
-  // 브리프에 안 들어간 나머지는 '기타' 한 곳에 모아 접어 둔다. 전성분 나열처럼
-  // 크리에이터가 볼 일 없는 내용이라, 근거를 확인할 사람만 펼쳐 보게 한다.
-  const 원문섹션: [string, Section[]][] = [
-    ["성분", p.섹션.성분 ?? []],
-    ["제형 · 기술 · 향", ["제형", "기술", "향"].flatMap((k) => p.섹션[k] ?? [])],
-    ["시험", p.섹션.시험 ?? []],
-    ["사용법", p.섹션.사용법 ?? []],
-    ["추천 대상", p.섹션.추천 ?? []],
   ];
 
   return (
@@ -304,79 +221,24 @@ export default async function ProductPage({
       <section className="pw-sec" id="etc">
         <h2>기타</h2>
         <p className="pw-note">
-          브리프에 넣지 않은 나머지입니다. 담당자가 근거를 확인할 때 쓰는 자료라
-          전성분 나열처럼 방송에서 쓸 일 없는 내용도 그대로 들어 있습니다.
+          브리프에 다 넣기엔 긴 이야기들입니다. 성분이 무엇인지, 향이 어떻게
+          퍼지는지, 언제 쓰는 물건인지 — 방송 중에 질문이 들어올 만한 것들을
+          풀어 놓았습니다.
         </p>
-
-        {원문섹션
-          .filter(([, items]) => items.length)
-          .map(([label, items]) => (
-            <details className="pw-fold" key={label}>
-              <summary>
-                {label}
-                <span className="pw-fold-n">{items.length}</span>
-              </summary>
-              <div className="pw-fold-body">
-                <Blocks items={items} />
-              </div>
-            </details>
-          ))}
-
-        {!!p.수치문장.length && (
-          <details className="pw-fold">
-            <summary>
-              수치가 들어간 문장
-              <span className="pw-fold-n">{p.수치문장.length}</span>
-            </summary>
-            <div className="pw-fold-body">
-              <ul className="pw-claims">
-                {p.수치문장.map((c, i) => (
-                  <li key={i}>
-                    <span className="pw-slideno">{c.슬라이드}</span>
-                    {c.문장}
-                  </li>
+        {p.기타.length ? (
+          <div className="pw-etc">
+            {p.기타.map((e) => (
+              <article key={e.제목}>
+                <h3>{e.제목}</h3>
+                {e.본문.map((para, i) => (
+                  <p key={i}>{para}</p>
                 ))}
-              </ul>
-            </div>
-          </details>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <p className="pw-empty">이 제품은 아직 기타를 쓰지 않았습니다.</p>
         )}
-
-        {!!p.문서.length && (
-          <details className="pw-fold">
-            <summary>
-              인증서 · 시험성적서
-              <span className="pw-fold-n">{p.문서.length}</span>
-            </summary>
-            <div className="pw-fold-body">
-              <p className="pw-note">
-                일부 문서에는 신청인의 성명과 생년월일이 찍혀 있어{" "}
-                <b>원본 이미지는 싣지 않았습니다.</b>
-              </p>
-              <div className="pw-docs">
-                {p.문서.map((d, i) => (
-                  <DocCard doc={d} key={i} />
-                ))}
-              </div>
-            </div>
-          </details>
-        )}
-
-        {!!p.없는항목.length && (
-          <details className="pw-fold">
-            <summary>
-              교안에 없는 항목
-              <span className="pw-fold-n">{p.없는항목.length}</span>
-            </summary>
-            <div className="pw-fold-body">
-              <ul className="pw-gaps">
-                {p.없는항목.map((g) => (
-                  <li key={g}>{g}</li>
-                ))}
-              </ul>
-            </div>
-          </details>
-        )}
-
       </section>
     </main>
   );
