@@ -1,0 +1,1445 @@
+{
+ "_note": "Per-product English for everything that comes out of the Korean deck: spec values, the one-liner, and the [features & benefits] block. Brief text lives in briefs.json, the longer write-ups in etc.json.",
+ "_rules": [
+  "A creator reads this and uses it. Write with conviction.",
+  "Never write 'the deck doesn't say', 'we couldn't read it', 'until this is confirmed'. If something is unclear, state only the part that is certain.",
+  "Instead of 'don't say X', give them the line they can say.",
+  "Don't keep citing the deck. State the fact.",
+  "Where getting it wrong matters (an expired certificate, a result that needed three products), say it in one short, plain sentence.",
+  "No prices, launch dates, manufacturer, phone numbers, certificate numbers or internal notes."
+ ],
+ "italian-white-truffle-professional-repairing-hair-perfume-serum": {
+  "스펙": {
+   "용량": "50ml · 100ml",
+   "타겟": "All hair types, damaged hair, dry hair"
+  },
+  "한줄": "A hair perfume serum that layers shine and moisture at once — an angel-ring finish with a scent that builds as you spray.",
+  "특징": [
+   {
+    "title": "Oil and serum blended 3:7 for shine and moisture",
+    "body": [
+     "Pink oil 30% for the angel-ring shine, moisturising serum 70% for softness and water.",
+     "The oil coats and the serum hydrates, layered together in that ratio, for hair that stays glossy without feeling heavy."
+    ]
+   },
+   {
+    "title": "A fine mist that lands like a feather — no clumping, no greasy strands",
+    "body": [
+     "The mist is fine enough to settle evenly, so you can reuse it through the day without weighing hair down.",
+     "The more you layer it, the more the scent develops."
+    ]
+   },
+   {
+    "title": "55% collagen water and 10% Peptide Exosome for conditioning",
+    "body": [
+     "A nano exosome system drawn from Italian white truffle, bound to 99% pure low-molecular Dipeptide-15.",
+     "d'Alba describes the particle as 467× smaller than a pore — a comparison drawn from an outside paper's average, not a measurement of this product.",
+     "It smooths roughened hair so the active spreads evenly along the strand."
+    ]
+   },
+   {
+    "title": "Rose Freesia — the scent that sets the mood",
+    "body": [
+     "Fresh fruit opens, then rose and freesia bloom through the middle.",
+     "A soft musk closes it, drifting whenever your hair moves."
+    ]
+   },
+   {
+    "title": "Protein and oil for hair that has gone dry and brittle",
+    "body": [
+     "Protein: 3 proteins plus 17 amino acids.",
+     "d'Alba proprietary ingredients — Peptide Exosome™ (Dipeptide-15 1.2%, white truffle water and extract) for conditioning, Trufferol™ (Italian white truffle and tocopherol) for bounce.",
+     "Moisture and shine: d'Alba-9 Blending Oil with baobab seed oil and apricot kernel oil."
+    ]
+   },
+   {
+    "title": "Italian V-Label vegan certified · primary skin irritation test completed in Korea",
+    "body": [
+     "Raw materials chosen carefully, no sulphate surfactants — gentle enough for frequent use."
+    ]
+   }
+  ],
+  "이미지": [
+   "Product shot",
+   "Sprayed onto hair",
+   "Hair",
+   "High-concentration essential oil 11,000ppm",
+   "Product shot"
+  ]
+ },
+ "double-quick-liposome-serum-mask-pad": {
+  "스펙": {
+   "기능성": "Brightening + wrinkle care (dual functional claim)"
+  },
+  "한줄": "Wipe, then stick. Two pads in one jar — an all-in-one toner pad that does the wiping and the masking.",
+  "특징": [
+   {
+    "title": "Two pads in one jar — collagen gel (nourish/firm) and calming peel (soothe/smooth)",
+    "body": []
+   },
+   {
+    "title": "Quick and easy: wipe it off, then lift it up",
+    "body": [
+     "One product from cleansing to makeup, morning or night, however you want it.",
+     "Collagen gel pad — nourishment, glow and bounce. A quick mask for whichever area needs it.",
+     "Calming peel pad — smooths texture and dead skin, adds water, cools and calms. The prep step before everything else."
+    ]
+   },
+   {
+    "title": "A month's routine in a split jar — the first of its kind in Korea",
+    "body": [
+     "The split-storage design keeps the two pad types fresh and apart, in a jar that's compact and easy to read.",
+     "70 yellow to 30 green, for three pads a day. The green side is double-sided, so it stretches well past 100 uses."
+    ]
+   },
+   {
+    "title": "d'Alba's own ingredients meeting a quick liposome process",
+    "body": [
+     "Vita Toning Collagen Gel Pad (firm/nourish): Vita-Collagen Some — 10 proteins, 10 hyaluronic acids and 1,000ppm collagen water in one.",
+     "d'Alba's Trufferol™ + Truvita™ complex (Italian white truffle, tocopherol, glutathione, vitamin C).",
+     "Plus vegan ceramide, sea buckthorn water, d'Alba-8 Blending Oil and vegan PDRN.",
+     "Calming pad (soothe/smooth): Peeling-Teatree Some — the gentle acids PHA and LHA with tea tree extract.",
+     "d'Alba's Trupair™ (Italian white truffle, four-part centella complex).",
+     "PHA 10,000ppm, 10 hyaluronic acids, panthenol, centella leaf water and a botanical peeling complex (shine muscat, green apple, green plum, green papaya)."
+    ]
+   },
+   {
+    "title": "Italian V-Label vegan certification",
+    "body": [
+     "Full-ingredient review against V-Label's standards.",
+     "Primary skin irritation test completed on sensitive skin."
+    ]
+   }
+  ],
+  "이미지": [
+   "The jar",
+   "Two compartments (yellow pad, green pad)",
+   "Pad",
+   "Skin's 30th layer, water content +147% (immediately after one use, temporary)",
+   "Pore-area texture −6.21% (after one use)",
+   "Skin soothing −23.1% (after one use)",
+   "Facial (cheek) puffiness −15.2% (after one use)"
+  ]
+ },
+ "vita-toning-galvanic-wrinkle-eye-cream": {
+  "스펙": {
+   "용량": "15ml",
+   "타겟": "All skin types"
+  },
+  "한줄": "An eye cream with a galvanic vibrating tip built into the tube — you apply and massage it in with the same hand.",
+  "특징": [
+   {
+    "title": "White truffle and collagen liposomes for skin that holds its shape",
+    "body": [
+     "Liposome delivery raises absorption, so dry skin takes in richer nourishment.",
+     "Leaves skin firmer and glossier."
+    ]
+   },
+   {
+    "title": "58.9%… sorry, 30% sea buckthorn water with 99% vitamin C and 98% glutathione",
+    "body": [
+     "Sea buckthorn water at 30% stands in for purified water as a brightening base.",
+     "High-purity vitamin C and glutathione brighten dull spots."
+    ]
+   },
+   {
+    "title": "13,000 micro-vibrations a minute push the actives in",
+    "body": [
+     "The galvanic applicator vibrates 13,000 times a minute, driving vitamin and firming actives into the eye and mouth area.",
+     "A cooling tip lets you massage precisely where skin has lost its bounce."
+    ]
+   },
+   {
+    "title": "d'Alba's own ingredients alongside nourishing and brightening actives",
+    "body": [
+     "Trufferol™ — Italian white truffle plus tocopherol.",
+     "Truvita™ — glutathione and vitamin C (ascorbic acid).",
+     "Nourish and firm: white truffle water and liposome, collagen water and liposome, PDRN, 13 vegan proteins, d'Alba-8 Blending Oil.",
+     "Brighten: sea buckthorn water 30%, retinol liposome, glutathione-some, niacinamide.",
+     "Moisture: 8 hyaluronic acids.",
+     "Patented ingredients: okra fruit extract and cauliflower mushroom extract."
+    ]
+   },
+   {
+    "title": "A vegan eye cream gentle enough for daily use",
+    "body": [
+     "Italian V-Label vegan certification, reviewed against the full ingredient list.",
+     "Primary skin irritation test completed in Korea."
+    ]
+   }
+  ],
+  "이미지": [
+   "Product shot",
+   "Product styling shot",
+   "Model applying it",
+   "How the galvanic tip works",
+   "About PDRN"
+  ]
+ },
+ "waterfull-uv-essence-sunscreen": {
+  "스펙": {
+   "용량": "50ml",
+   "타겟": "All skin types"
+  },
+  "한줄": "A watery organic-filter sunscreen that floods the skin with essence as it goes on — light, clear, no white cast.",
+  "특징": [
+   {
+    "title": "A waterfull formula that bursts with essence as you apply it",
+    "body": [
+     "Hydro-tapping technology: moisture floods out the moment you spread it.",
+     "Water on the skin, strong protection against UV."
+    ]
+   },
+   {
+    "title": "Reapply as often as you like without stickiness",
+    "body": [
+     "It sinks in fast, so repeat layers still disappear naturally.",
+     "Light but with real grip — it finishes like you're barely wearing anything."
+    ]
+   },
+   {
+    "title": "Clear radiance with no white cast and no settling",
+    "body": [
+     "No catching in pores or fine lines, no chalky lift — it sits flush and reads as clear, damp light."
+    ]
+   },
+   {
+    "title": "A smooth base that keeps makeup from sliding or flaking",
+    "body": [
+     "Watery essence fills the skin so the surface is even.",
+     "Makeup goes on without sliding or lifting — it works as a makeup booster."
+    ]
+   },
+   {
+    "title": "Strong protection, comfortable skin, every day",
+    "body": [
+     "Italian V-Label vegan certification — no animal-derived ingredients.",
+     "Primary irritation test completed on sensitive skin."
+    ]
+   }
+  ],
+  "이미지": [
+   "Product shot",
+   "Applied on the back of the hand",
+   "Hydro-trapping technology",
+   "How UVA and UVB are blocked",
+   "How to apply sunscreen properly"
+  ]
+ },
+ "white-truffle-double-serum-all-in-one-multi-balm": {
+  "스펙": {
+   "용량": "10g"
+  },
+  "한줄": "A stick balm with two serum cores — wrinkle care and brightening in one pass.",
+  "특징": [
+   {
+    "title": "Double-core all-in-one balm — one touch on the spots that bother you",
+    "body": [
+     "Wrinkle and brightening care, plus moisture, nourishment and bounce, all in one."
+    ]
+   },
+   {
+    "title": "Swipe it over a wrinkle and you get brightening at the same time",
+    "body": [
+     "A stick, so you never touch it with your hands — just the spots you want.",
+     "Fine enough for crow's feet, the neck, nasolabial folds and between the brows."
+    ]
+   },
+   {
+    "title": "Premium actives for wrinkles, nourishment and brightening",
+    "body": [
+     "Dual functional claim — brightening (alpha-bisabolol) and wrinkle care (tocopheryl acetate).",
+     "Trufferol™, d'Alba's patented ingredient (white truffle extract + tocopherol).",
+     "Vegan collagen for firmer-looking skin, and Anemarrhena root extract for bounce.",
+     "d'Alba-8 Blending Oil and ceramide for moisture; pure vitamin C (ascorbic acid) and glutathione for clarity."
+    ]
+   },
+   {
+    "title": "Gentle enough to reapply through the day",
+    "body": [
+     "Italian V-Label vegan certification.",
+     "Primary skin irritation test completed."
+    ]
+   },
+   {
+    "title": "Small enough to carry anywhere",
+    "body": [
+     "Works over base skincare and over makeup, wherever you want wrinkle care or a bit of glow."
+    ]
+   }
+  ],
+  "이미지": [
+   "Used on lips",
+   "Night-time moisture",
+   "Carried in hand",
+   "Before / after",
+   "Before / after"
+  ]
+ },
+ "white-truffle-waterfull-tone-up-sunscreen-serum": {
+  "스펙": {
+   "용량": "50ml",
+   "타겟": "All skin types"
+  },
+  "한줄": "A pink, watery tone-up sunscreen — sun care, tone correction and a dewy finish in one step, no foundation needed.",
+  "특징": [
+   {
+    "title": "Pink, glowing, alive — a dewy pink tone-up",
+    "body": [
+     "A pink watery sunscreen that reads as your own skin, just brighter and more alive.",
+     "A soft pink light that leaves skin looking lit from within."
+    ]
+   },
+   {
+    "title": "A waterfull formula that bursts with essence as you apply it",
+    "body": [
+     "Hydro-tapping technology: moisture floods out the moment you spread it.",
+     "Water on the skin, strong protection against UV."
+    ]
+   },
+   {
+    "title": "A hybrid filter that takes the best of both",
+    "body": [
+     "Organic and inorganic filters combined — soft to spread, gentle on the skin."
+    ]
+   },
+   {
+    "title": "Sun care, tone-up, correction and a dewy finish at once — no foundation needed",
+    "body": [
+     "Instead of thick, heavy foundation: pink freshness and a damp glow.",
+     "Any skin reads clear, bright and evened out, still like your own."
+    ]
+   },
+   {
+    "title": "Strong protection, comfortable skin, every day",
+    "body": [
+     "Italian V-Label vegan certification — no animal-derived ingredients.",
+     "Primary irritation test completed on sensitive skin."
+    ]
+   }
+  ],
+  "이미지": [
+   "Product shot",
+   "Swatched across skin tones",
+   "Texture",
+   "How to apply sunscreen properly",
+   "Texture"
+  ]
+ },
+ "vita-toning-anti-aging-spray-serum-8": {
+  "스펙": {
+   "용량": "70ml",
+   "타겟": "All skin types"
+  },
+  "한줄": "A firming, brightening serum you mist on — white truffle, collagen water and moisturising oil at 8% each.",
+  "특징": [
+   {
+    "title": "White truffle 8%, collagen water 8%, moisturising oil 8% — a concentrate for skin that holds",
+    "body": [
+     "Rich nourishment and bounce, for skin that looks firm and glossy."
+    ]
+   },
+   {
+    "title": "58.9% sea buckthorn water with 99% vitamin C and 98% glutathione",
+    "body": [
+     "Sea buckthorn water stands in for purified water at 58.9%, as a brightening base.",
+     "High-purity vitamin C and glutathione brighten skin that has gone dull."
+    ]
+   },
+   {
+    "title": "Two weeks: wrinkles 25.81%, lifting 49.58%, tone 1.15% improved",
+    "body": [
+     "Anti-ageing study (wrinkles, lifting, tone) completed.",
+     "Skin that was dull and slack is lifted and brightened.",
+     "In-vitro antioxidant testing completed."
+    ]
+   },
+   {
+    "title": "A fine mist that settles evenly — no clumping, just a dewy hold",
+    "body": [
+     "Fine droplets land softly, so you can mist as often as you like.",
+     "The spray angle covers the whole face and follows its contours."
+    ]
+   },
+   {
+    "title": "d'Alba's own ingredients alongside nourishing and brightening actives",
+    "body": [
+     "Trufferol™ — Italian white truffle plus tocopherol, for bounce.",
+     "Truvita™ — glutathione and vitamin C (ascorbic acid), for glow.",
+     "Nourish and firm: white truffle water, collagen water, 8 vegan proteins, d'Alba-8 Blending Oil.",
+     "Brighten: sea buckthorn water 58.9%, niacinamide.",
+     "Moisture: 8 hyaluronic acids."
+    ]
+   },
+   {
+    "title": "A vegan serum gentle enough for daily use",
+    "body": [
+     "Italian V-Label vegan certification, reviewed against the full ingredient list.",
+     "Anti-ageing and primary skin irritation studies completed."
+    ]
+   }
+  ],
+  "이미지": [
+   "Current package (VITA TONING ANTI-AGING SERUM)",
+   "Product styling shot",
+   "Being sprayed",
+   "Texture",
+   "Product shot",
+   "Before / after shaking"
+  ]
+ },
+ "vita-toning-capsule-serum": {
+  "스펙": {
+   "용량": "100ml · 50ml",
+   "기능성": "Brightening + wrinkle care (dual functional claim)"
+  },
+  "한줄": "Forty thousand vitamin capsules floating in 81% sea buckthorn water — a brightening anti-ageing serum that turns the lights on in dull skin.",
+  "특징": [
+   {
+    "title": "A brightening serum and 40,000 vitamin capsules, layered in one bottle",
+    "body": [
+     "Forty thousand vitamin capsules suspended in a brightening serum, for two kinds of freshness at once.",
+     "The two textures blend fast into a light water film — hydrating, never sticky.",
+     "Skin holds enough water that makeup sits well on top.",
+     "Counted for the 100ml size (internal estimate; varies batch to batch). The 50ml size is counted separately."
+    ]
+   },
+   {
+    "title": "81% sea buckthorn water, plus the vitamins that brighten",
+    "body": [
+     "Sea buckthorn water replaces purified water at 81%.",
+     "Glutathione at 98% purity, stabilised in liposome form as Glutathione-some.",
+     "Vitamin C (ascorbic acid) at 99% purity.",
+     "Niacinamide 2%, the notified brightening active."
+    ]
+   },
+   {
+    "title": "Two weeks: dark spots faded, wrinkles softened, tone evened",
+    "body": [
+     "Brightens skin and works on dark spots for a smoother, clearer finish.",
+     "In-vitro antioxidant testing completed."
+    ]
+   },
+   {
+    "title": "Premium ingredients for vitamin freshness",
+    "body": [
+     "Dual functional claim: brightening and wrinkle care.",
+     "Trufferol™ — Italian white truffle plus tocopherol, d'Alba's firming ingredient.",
+     "Truvita™ — glutathione and vitamin C, d'Alba's glow ingredient.",
+     "Brightening active: niacinamide 2%.",
+     "Freshness and vitamins: sea buckthorn water 81%, vitamin C, Glutathione-some, vitamin E (tocopherol), vitamin K (menadione).",
+     "Firmness patent: cauliflower mushroom extract.",
+     "Moisture: Blue Complex HR (a moisture patent drawn from six herbs), panthenol, centella extract, vegan ceramide NP, Calm Cell.",
+     "Glow: d'Alba-8 Blending Oil."
+    ]
+   },
+   {
+    "title": "A brightening serum gentle enough for every day",
+    "body": [
+     "Italian V-Label vegan certification, reviewed against the full ingredient list.",
+     "Primary skin irritation test completed."
+    ]
+   }
+  ],
+  "이미지": [
+   "Texture with the capsules",
+   "Before / after two weeks",
+   "Before / after two weeks",
+   "Absorbing into skin",
+   "d'Alba-8 Blending Oil"
+  ]
+ },
+ "vita-toning-capsule-cleansing-oil": {
+  "스펙": {
+   "용량": "150ml",
+   "기능성": "Not a functional cosmetic"
+  },
+  "한줄": "A cleansing oil built like your own sebum — it melts blackheads out, and the powder inside lifts the debris away.",
+  "특징": [
+   {
+    "title": "An oil structured like sebum — gentle, but it takes off everything from makeup to blackheads",
+    "body": [
+     "Jojoba oil shares a structure with sebum, so it lifts grime off easily.",
+     "It emulsifies the moment it meets water, dissolving debris fast."
+    ]
+   },
+   {
+    "title": "Blackheads and oil, softened away",
+    "body": [
+     "Hardened blackheads that won't shift are melted out by the oil.",
+     "A powder wash system adsorbs pore debris without scrubbing.",
+     "Human trial: blackhead cleansing."
+    ]
+   },
+   {
+    "title": "Brightening from the cleanse alone, thanks to the Vita capsules",
+    "body": [
+     "Makeup, blackheads and dead skin come away, and the complexion reads clearer.",
+     "Vita capsules bring daily vitamin care to dull skin."
+    ]
+   },
+   {
+    "title": "A thick, cushioned roll and no tightness afterwards",
+    "body": [
+     "Thick enough that you can massage without friction.",
+     "d'Alba's eight oils hold water in, so skin doesn't feel tight once it's rinsed."
+    ]
+   },
+   {
+    "title": "Italian V-Label vegan certification and a completed skin irritation test",
+    "body": []
+   }
+  ],
+  "이미지": [
+   "Texture with the capsules",
+   "Texture",
+   "Debris inside a pore",
+   "Dispensed into the hand",
+   "Model shot",
+   "Removing makeup"
+  ]
+ },
+ "vita-toning-capsule-cream": {
+  "스펙": {
+   "용량": "55g",
+   "기능성": "Brightening + wrinkle care (dual functional claim)"
+  },
+  "한줄": "A brightening moisturiser holding vitamin capsules — 53% sea buckthorn water, vitamin C and liposomal glutathione for skin that's gone dull and dry.",
+  "특징": [
+   {
+    "title": "Vita capsules that turn dull skin clear and bright, every day",
+    "body": [
+     "Vitamin-filled Vita capsules sit in a brightening cream, releasing freshness into the skin."
+    ]
+   },
+   {
+    "title": "Dark skin, uneven patches, spots and lines, handled at once",
+    "body": [
+     "Two weeks: blemishes and dark spots down 17.21%, wrinkles down 25.41%, tone up 1.59%.",
+     "Works on the dark spots behind dull-looking skin.",
+     "In-vitro antioxidant testing completed."
+    ]
+   },
+   {
+    "title": "53% sea buckthorn water with pure vitamin C and liposomal glutathione",
+    "body": [
+     "Sea buckthorn water replaces purified water at 53% as the brightening base, with vitamin C and liposomal glutathione layered on top."
+    ]
+   },
+   {
+    "title": "Two layers — vitamin capsules over a brightening cream",
+    "body": [
+     "A dense moisturising base and capsules carrying vitamins E and K, working together for clear, lit skin."
+    ]
+   },
+   {
+    "title": "A patented membrane-free capsule — nothing left behind",
+    "body": [
+     "The patented capsule melts into the skin with no residue."
+    ]
+   },
+   {
+    "title": "Freshness and moisture, alongside d'Alba's own ingredients",
+    "body": [
+     "Glow: Truvita™, sea buckthorn water, glutathione, vitamin C, vitamin E, vitamin K.",
+     "d'Alba's own: Trufferol™, Italian white truffle, d'Alba-8 Blending Oil.",
+     "Moisture and firmness: rose of Jericho, prickly pear, ceramide NP.",
+     "Three patented ingredients — a triple hyaluronic acid for moisture, sunflower extract for brightening, Trufferol™ for firmness.",
+     "Soothing: Lucky Herb 12 Complex, panthenol, centella extract, witch hazel, lotus flower extract."
+    ]
+   },
+   {
+    "title": "Italian V-Label vegan certification and a completed skin irritation test",
+    "body": []
+   }
+  ],
+  "이미지": [
+   "Product shot (Capsule Moisturizing Cream)",
+   "Capsule texture",
+   "Model shot"
+  ]
+ },
+ "signature-vita-capsule-hydrogel-mask-8-shape": {
+  "스펙": {
+   "용량": "44g",
+   "기능성": "Brightening + wrinkle care (dual functional claim)"
+  },
+  "한줄": "44g of serum set solid into a mask. No sheet at all — it comes in eight pieces for the face and neck.",
+  "특징": [
+   {
+    "title": "Over a thousand vitamin C capsules and 70% fermented collagen water serum, set solid",
+    "body": [
+     "Vitamin C capsules studded through the mask deliver freshness where it lands.",
+     "The hydrogel wraps the face like a thin film of collagen, cool and completely flush.",
+     "As the actives absorb, the mask turns clear — you can watch it happen."
+    ]
+   },
+   {
+    "title": "Two weeks: spots faded, cheeks lifted, lines softened, tone evened",
+    "body": [
+     "Anti-ageing from several angles at once.",
+     "Skin that had slackened is firmed; dullness and dark spots are brightened.",
+     "Contains Truffle Tension Complex™, d'Alba's high-end firming ingredient."
+    ]
+   },
+   {
+    "title": "Eyes, neck, nasolabial folds and brow get a second pass — an 8-shape design",
+    "body": [
+     "Split into eight shapes, so the places that line and dull fastest get covered twice.",
+     "A premium mask design you won't find elsewhere."
+    ]
+   },
+   {
+    "title": "All-night care — use it as a sleeping mask",
+    "body": [
+     "The serum is concentrated enough that it doesn't run, so it works as the last step before bed.",
+     "The night before something that matters, this is the intensive option."
+    ]
+   },
+   {
+    "title": "Premium ingredients for firmness and freshness",
+    "body": [
+     "Vitamin C capsules: ascorbic acid, a vitamin C derivative, astaxanthin.",
+     "Collagen serum base: Trufferol™ and Truffle Tension Complex™ (Italian white truffle, 99% vitamin C, 98% glutathione, 12 vegan proteins, 10 hyaluronic acids, collagen extract).",
+     "Nourish and firm: 70% fermented collagen water, rice PDRN, retinol.",
+     "Brighten: sea buckthorn water 12,000ppm, vitamin C, Glutathione-some, niacinamide 20,000ppm.",
+     "Pores: a patented plant-based tannin complex.",
+     "Moisture: vegan ceramide, panthenol."
+    ]
+   },
+   {
+    "title": "Gentle enough despite the concentration",
+    "body": [
+     "Primary skin irritation test completed.",
+     "Tested free of 17 substances of concern."
+    ]
+   }
+  ],
+  "이미지": [
+   "The eight shapes in place",
+   "Peeling it off",
+   "The order to apply the eight shapes"
+  ]
+ },
+ "signature-vita-collagen-pore-tightening-deep-cleansing-balm": {
+  "스펙": {
+   "용량": "50ml",
+   "기능성": "Not a functional cosmetic"
+  },
+  "한줄": "A cleansing balm you grind fresh each time — turn the dial and take exactly as much as the day's makeup needs.",
+  "특징": [
+   {
+    "title": "One step from makeup to grime — an all-in-one deep cleanse",
+    "body": [
+     "Balm, oil and milk in one, cleaning thoroughly and finishing without tightness.",
+     "More than a cleanse: it works on pore firmness and on tone and texture too.",
+     "Makeup, debris and blackheads come off, and pores look firmer and smaller."
+    ]
+   },
+   {
+    "title": "Lemon Vitamin-some — Sicilian lemon and 99% vitamin C, liposomised",
+    "body": [
+     "Italian Sicilian lemon and 99% pure vitamin C, wrapped in liposomes to keep them stable and deliver the vitamin freshness intact."
+    ]
+   },
+   {
+    "title": "No spatula, and fresh every single day",
+    "body": [
+     "A sealed package no water ever reaches, so the vitamins don't oxidise and the collagen stays intact.",
+     "Every use starts from a fresh surface."
+    ]
+   },
+   {
+    "title": "A 3D Network soft-melting balm",
+    "body": [
+     "A cushioned, soft-melting texture built on 3D Network technology that grips the skin and lifts debris cleanly."
+    ]
+   },
+   {
+    "title": "Italian V-Label vegan certified, and gentle enough for daily use",
+    "body": [
+     "Vegan certification and a completed irritation test."
+    ]
+   }
+  ],
+  "이미지": [
+   "The balm",
+   "Demonstrated on the inner arm",
+   "Model shot",
+   "The container"
+  ]
+ },
+ "d-alba-signature-allthera-double-shot": {
+  "스펙": {
+   "타겟": "All skin types"
+  },
+  "한줄": "One device, three modes — RF, double ultrasound and cooling — with unlimited shots and no cartridges to replace.",
+  "특징": [
+   {
+    "title": "Three modes in one device",
+    "body": [
+     "RF, double ultrasound and cooling in a single unit — pick the mode for the skin and the area.",
+     "Intensive care: collagen activation, firmness, better absorption.",
+     "Pre-shot care: firmness from face to body.",
+     "Cooling care: lowers skin temperature to calm and work on pores."
+    ]
+   },
+   {
+    "title": "Triple Synergy Shot, d'Alba's patented technology",
+    "body": [
+     "Central RF fired together with double ultrasound, so each shot delivers three energies at once, down to the dermis.",
+     "No cartridge to replace, so the shots are unlimited and there's no running cost."
+    ]
+   },
+   {
+    "title": "Human trial data for every mode",
+    "body": [
+     "Firmness, deepening lines, lost contour, slackening pores, texture, glow and absorption — all measured."
+    ]
+   },
+   {
+    "title": "A wide head electrode",
+    "body": [
+     "A broad contact surface that reaches every face shape at the right angle, and works on the body too."
+    ]
+   },
+   {
+    "title": "Simple by design",
+    "body": [
+     "Straightforward controls, LED indicators per mode and a voice guide, so care takes very little time."
+    ]
+   },
+   {
+    "title": "Built for something that touches your skin every day",
+    "body": [
+     "Certified as a unit and down to the internal components.",
+     "Designed and assembled in Korea with a manufacturer specialising in beauty and medical devices.",
+     "SUS steel, harmless in continuous skin contact."
+    ]
+   }
+  ],
+  "이미지": [
+   "The device",
+   "What's in the box",
+   "How it works",
+   "The gel"
+  ]
+ },
+ "intensive-vegan-volufiline-spray-ampoule": {
+  "스펙": {
+   "용량": "50ml",
+   "기능성": "Wrinkle care (functional cosmetic)",
+   "타겟": "All skin types"
+  },
+  "한줄": "The spray version of the Volufiline ampoule — a clear Volufiline layer and a beige nourishing layer you shake together.",
+  "특징": [
+   {
+    "title": "A firming and lifting double layer that cares for the skin underneath",
+    "body": [
+     "A wrinkle care ampoule layered over the base leaves dry, rough skin full and comfortable.",
+     "Smooths and softens, bringing moisture and firmness to skin that has gone coarse."
+    ]
+   },
+   {
+    "title": "Volufiline at 50,000ppm, in its own transparent layer",
+    "body": [
+     "Volufiline sits at 5% in a clear layer, undiluted and visible.",
+     "Shake it and it mixes into the nourishing cream, misting on firm and bright."
+    ]
+   },
+   {
+    "title": "A fine mist from a pump built for the job",
+    "body": [
+     "A soft, fine spray angled to suit the face.",
+     "The pump was developed specifically for d'Alba, so the mist reaches the whole face quickly and evenly."
+    ]
+   },
+   {
+    "title": "Premium lifting, firming and moisture ingredients",
+    "body": [
+     "Lifting and firming: Volufiline 50,000ppm from Sederma, France; Trufferol™ (Italian white truffle + tocopherol).",
+     "Moisture: panthenol, hyaluronic acids, d'Alba-8 Blending Oil.",
+     "Barrier: vegan ceramide NP, collagen extract.",
+     "Base: MultiEX BSASM complex."
+    ]
+   },
+   {
+    "title": "No animal-derived ingredients",
+    "body": [
+     "Italian V-Label vegan certification against the full ingredient list.",
+     "German Dermatest and a low-irritation test in Korea, both completed."
+    ]
+   }
+  ],
+  "이미지": [
+   "Product shot",
+   "Held in hand",
+   "Two-week results summary",
+   "Texture, before and after shaking",
+   "Texture"
+  ]
+ },
+ "white-truffle-intensive-volufiline-ampoule": {
+  "스펙": {
+   "용량": "30ml · 50ml",
+   "기능성": "Wrinkle care (functional cosmetic)",
+   "타겟": "All skin types"
+  },
+  "한줄": "A concentrated beige ampoule with French patented Volufiline at 50,000ppm — lifting, nourishment and moisture in one step.",
+  "특징": [
+   {
+    "title": "Immediate lifting, with firmness, glow and nourishment",
+    "body": [
+     "Collagen and Volufiline bring their firming energy to skin that has lost its hold, leaving it glossy and taut."
+    ]
+   },
+   {
+    "title": "Volufiline from Sederma, France, at 50,000ppm",
+    "body": [
+     "Sederma's firming ingredient at 50,000ppm, rich enough to help skin feel taut."
+    ]
+   },
+   {
+    "title": "A dense, pale-beige ampoule texture",
+    "body": [
+     "A concentrated emulsion that sinks in wet and finishes tight.",
+     "Full moisture for skin that has gone dry."
+    ]
+   },
+   {
+    "title": "Premium moisture and firming ingredients, with a wrinkle care claim",
+    "body": [
+     "Trufferol™, Italian white truffle and d'Alba's eight plant oils nourish and hydrate at once.",
+     "Volume and freshness: Volufiline at 50,000ppm.",
+     "Firmness: Trufferol™ (white truffle + tocopherol), Italian white truffle, collagen extract, vegan ceramide.",
+     "Moisture: panthenol, 8 hyaluronic acids, d'Alba-8 Blending Oil.",
+     "Soothing: centella extract, Total Solution Max Complex."
+    ]
+   },
+   {
+    "title": "No animal-derived ingredients",
+    "body": [
+     "Italian V-Label vegan certification against the full ingredient list.",
+     "German Dermatest and a low-irritation test in Korea, both completed."
+    ]
+   }
+  ],
+  "이미지": [
+   "Product shot",
+   "Two-week results summary",
+   "Cheek lifting improved 17.601% (after one use)",
+   "How to use the dropper",
+   "Texture"
+  ]
+ },
+ "white-truffle-intensive-volufiline-grinding-cream": {
+  "스펙": {
+   "용량": "45g",
+   "기능성": "Brightening + wrinkle care (dual functional claim)"
+  },
+  "한줄": "A concentrated lifting cream you grind fresh each day, with French patented Volufiline at 50,000ppm.",
+  "특징": [
+   {
+    "title": "Ground fresh each day, as much as you need",
+    "body": [
+     "Grind it fresh and spread it thin and even with the silicone brush.",
+     "A springy texture that grips the skin thinly and feels dense and firm going on.",
+     "An airtight container keeps the serum and its actives as fresh as the day it was made."
+    ]
+   },
+   {
+    "title": "Volufiline from Sederma, France, at 50,000ppm",
+    "body": [
+     "Sederma's firming ingredient at 50,000ppm, rich enough to help skin feel taut."
+    ]
+   },
+   {
+    "title": "Immediate lifting, with firmness, glow and nourishment together",
+    "body": [
+     "Immediate (temporary) cheek lifting improved 11.271%.",
+     "Firmness and lifting confirmed when all three Volufiline products are used together."
+    ]
+   },
+   {
+    "title": "Premium firming ingredients, with a dual functional claim",
+    "body": [
+     "Trufferol™, d'Alba's patented ingredient (white truffle + tocopherol).",
+     "Firmness: vegan collagen and Volufiline at 50,000ppm.",
+     "Glow and nourishment: collagen extract, vegan ceramide, 8 hyaluronic acids, d'Alba-8 Blending Oil."
+    ]
+   },
+   {
+    "title": "Effective, and still gentle",
+    "body": [
+     "German Dermatest, a completed low-irritation test and Italian V-Label vegan certification."
+    ]
+   }
+  ],
+  "이미지": [
+   "Texture",
+   "The container",
+   "Two-week results summary",
+   "Cheek lifting improved 11.271% (after one use)",
+   "Capsule image"
+  ]
+ },
+ "professional-repairing-hair-oil-serum": {
+  "스펙": {
+   "용량": "75ml",
+   "타겟": "All hair types, damaged hair, dry hair"
+  },
+  "한줄": "Oil and serum at 4:6 — a hair oil that coats with shine and still disappears into the hair, leaving nothing on your hands.",
+  "특징": [
+   {
+    "title": "Oil and serum in one, built for damaged hair",
+    "body": [
+     "Deep plant oils make up the 40% shine coating; a hydrating serum makes up the 60% that rebuilds the base.",
+     "A 6:4 ratio of water to nourishment, for hair that has split and gone brittle."
+    ]
+   },
+   {
+    "title": "No droop, no clumping, nothing left behind",
+    "body": [
+     "It sinks in on contact instead of sitting heavy, so hair stays soft rather than flat.",
+     "Nothing stays on your hands — just the scent. Airy and silky."
+    ]
+   },
+   {
+    "title": "46% collagen water and 10% nano Peptide Exosome",
+    "body": [
+     "A nano exosome system from Italian white truffle, bound to 99% pure low-molecular Dipeptide-15.",
+     "It smooths roughened hair so the active works evenly along the strand."
+    ]
+   },
+   {
+    "title": "Rose Freesia — scent and shine that last",
+    "body": [
+     "A perfume-oil effect that stays soft on the hair all day.",
+     "Fresh fruit, then rose and freesia in full bloom, elegant and quiet."
+    ]
+   },
+   {
+    "title": "The most protein in the range, with premium oils",
+    "body": [
+     "Protein: 13 proteins and 17 amino acids — more than d'Alba's own shampoo or hair perfume.",
+     "Conditioning: Peptide Exosome™ (Dipeptide-15 1.2%, white truffle water and extract).",
+     "Firmness: Trufferol™ (Italian white truffle, tocopherol).",
+     "Moisture and shine: d'Alba-12 Blending Oil with Bulgarian rose oil and Moroccan argan oil."
+    ]
+   },
+   {
+    "title": "Italian V-Label vegan certified, irritation test completed",
+    "body": []
+   }
+  ],
+  "이미지": [
+   "Product shot",
+   "Product styling shot",
+   "Model shot",
+   "Hair, before and after",
+   "High-concentration essential oil 11,000ppm"
+  ]
+ },
+ "white-truffle-double-layer-revitalizing-serum": {
+  "스펙": {
+   "용량": "30ml",
+   "타겟": "All skin types"
+  },
+  "한줄": "Serum and oil held apart at 7:3 — shake it and the two mix, for firmness and glow in one step.",
+  "특징": [
+   {
+    "title": "A formula that separates on purpose",
+    "body": [
+     "Serum and oil sit in a 7:3 split and you shake before each use — they separate again over 24 hours.",
+     "The ratio balances water and moisture against nourishment and firmness."
+    ]
+   },
+   {
+    "title": "Two effects in one application",
+    "body": [
+     "The firming serum layer and the nourishing oil layer leave skin hydrated and smooth, while the wrinkle care claim covers the lines you're watching, and skin looks alive again."
+    ]
+   },
+   {
+    "title": "What's in each layer",
+    "body": [
+     "Firming serum layer: Italian white truffle and Trufferol™, d'Alba's patented ingredient, for taut, luminous skin.",
+     "Nourishing oil layer: sunflower seed, macadamia seed and avocado oils, for soft, dense, glossy skin."
+    ]
+   },
+   {
+    "title": "Serious ingredients, gentle on skin",
+    "body": [
+     "41 plant-derived ingredients in total — 10 plant oils and 31 botanical extracts — for a treatment-like finish.",
+     "Primary skin irritation human trial completed.",
+     "Human trials completed for immediate hydration and 100-hour moisture retention, deep firmness, anti-ageing (wrinkles, lifting, skin density), skin texture and inner dryness.",
+     "In-vitro antioxidant testing completed."
+    ]
+   }
+  ],
+  "이미지": [
+   "Texture"
+  ]
+ },
+ "white-truffle-double-serum-cream-2-in-1": {
+  "스펙": {
+   "용량": "70g"
+  },
+  "한줄": "Aqua serum and intense cream in one jar — you mix your own ratio each day with the spatula.",
+  "특징": [
+   {
+    "title": "Aqua serum (water, soothing) and intense cream (nourishment, firmness) in one jar",
+    "body": []
+   },
+   {
+    "title": "DIY care that changes with the season and your skin",
+    "body": [
+     "Adjust the ratio yourself to match how your skin is that day.",
+     "Whatever the weather, whatever the condition: water, moisture, nourishment, firmness and soothing in one."
+    ]
+   },
+   {
+    "title": "Stronger on the barrier, and on the ageing signs that show by area",
+    "body": [
+     "Anti-ageing human trial (wrinkles, lifting, skin density) and in-vitro antioxidant testing completed.",
+     "Crow's feet, slackening cheeks, antioxidant protection, skin density and the moisture barrier."
+    ]
+   },
+   {
+    "title": "Deep hydration, deep firmness and soothing",
+    "body": [
+     "Human trials completed for inner dryness and inner firmness.",
+     "Human trial completed for soothing skin damaged by physical stress.",
+     "It sinks in deep and settles irritated skin on contact."
+    ]
+   },
+   {
+    "title": "Panthenol 5% and nano Peptide Exosome 30%",
+    "body": [
+     "A nano exosome system from Italian white truffle bound to 99% pure low-molecular Dipeptide-15.",
+     "It steadies a base that gives way easily and leaves skin looking densely filled."
+    ]
+   },
+   {
+    "title": "Premium ingredients meeting d'Alba's own",
+    "body": [
+     "d'Alba's own: Peptide Exosome™ (Dipeptide-15 1.2%, white truffle water and extract) for vitality; Trufferol™ (Italian white truffle, tocopherol) for firmness.",
+     "Aqua serum (water, soothing): panthenol 5%, hyaluronic acid, ceramide, centella extract.",
+     "Intense cream (nourishment, firmness): Peptide Exosome 30%, d'Alba-8 Blending Oil, collagen extract, Anemarrhena root extract."
+    ]
+   },
+   {
+    "title": "Comfortable on any skin type",
+    "body": [
+     "Italian V-Label vegan certification against the full ingredient list.",
+     "Non-comedogenic human trial completed, and a primary irritation test on sensitive skin."
+    ]
+   }
+  ],
+  "이미지": [
+   "Product shot",
+   "Held in hand",
+   "Product styling shot",
+   "Model shot",
+   "The two textures",
+   "About white truffle exosome",
+   "Being applied"
+  ]
+ },
+ "white-truffle-return-oil-cream-cleanser": {
+  "스펙": {
+   "용량": "160ml",
+   "타겟": "All skin types"
+  },
+  "한줄": "An oil gel that turns to cream and then to foam in your hands — one product in place of four cleansing steps.",
+  "특징": [
+   {
+    "title": "One step, no fuss",
+    "body": [
+     "The oil cream grips and dissolves, then a rich foam wipes it away — makeup and sunscreen in one go.",
+     "It replaces a point remover, a cleansing oil, a cleansing gel and a cleansing balm with a single product."
+    ]
+   },
+   {
+    "title": "14% Belgian spa water",
+    "body": [
+     "Hydrating ingredients including Belgian spa water at 14%, so skin doesn't feel tight afterwards — more like you've just come back from a spa."
+    ]
+   },
+   {
+    "title": "Vegan plant surfactants and gold clay",
+    "body": [
+     "Plant-derived vegan surfactants with French gold clay clean thoroughly and stay gentle."
+    ]
+   },
+   {
+    "title": "A nourishing serum cleanser",
+    "body": [
+     "Italian white truffle and vegan collagen leave skin smooth, as though you'd already done your skincare.",
+     "Nourishment: Trufferol™ (white truffle + tocopherol), vegan collagen.",
+     "Moisture: Belgian spa water, birch sap, New Zealand calendula extract, d'Alba-8 Blending Oil.",
+     "Soothing: Calming Complex Lipocalm (centella extract, fig extract, ceramide NP).",
+     "Cleansing: French gold clay (illite), Anti-Pore (Montezuma pine leaf, evening primrose, kudzu root, elm root extracts)."
+    ]
+   },
+   {
+    "title": "Italian V-Label vegan certified, irritation test completed",
+    "body": []
+   }
+  ],
+  "이미지": [
+   "Product shot",
+   "Model using it",
+   "The golden gel texture",
+   "The three steps",
+   "Skin texture improved 10.454% (after one use)",
+   "French gold clay (illite)",
+   "How to swap the flip cap",
+   "Vegan certification"
+  ]
+ },
+ "white-truffle-moisturizing-serum-lotion": {
+  "스펙": {
+   "용량": "100ml",
+   "기능성": "Brightening + wrinkle care (functional cosmetic)"
+  },
+  "한줄": "A milky brightening lotion with a vitamin serum inside — the base step for skin that stays dry however much you layer on it.",
+  "특징": [
+   {
+    "title": "A brightening lotion carrying a vitamin serum, for skin that has gone dull",
+    "body": [
+     "The vitamin serum inside delivers clear, fresh energy, brightening dull skin day to day."
+    ]
+   },
+   {
+    "title": "A milky texture that sinks in fast and carries real nourishment",
+    "body": [
+     "It doesn't sit on the surface — it absorbs quickly and leaves no stickiness.",
+     "All the nourishment goes in; only the hydration is left behind."
+    ]
+   },
+   {
+    "title": "A smooth, breathable base before makeup",
+    "body": [
+     "Less unnecessary oil, enough moisture — none of the heaviness of a cream.",
+     "It leaves a smooth, comfortable base so makeup sits better."
+    ]
+   },
+   {
+    "title": "Premium firming and hydrating ingredients",
+    "body": [
+     "Nourishment and firmness: Trufferol™ (white truffle + tocopherol), collagen extract, vegan ceramide, a vegan protein complex.",
+     "Moisture and glow: 10 hyaluronic acids, the patented Oligo-HA, 8 blending oils.",
+     "Brightening and freshness: niacinamide, vegan glutathione, vitamin C (ascorbic acid)."
+    ]
+   }
+  ],
+  "이미지": [
+   "Product shot",
+   "Milky texture",
+   "Model shot",
+   "Vitamin C + glutathione + niacinamide 2%"
+  ]
+ },
+ "white-truffle-refresh-aqua-serum": {
+  "스펙": {
+   "용량": "150ml"
+  },
+  "한줄": "80% Canadian glacier water in a mist — toner, mist, serum and essence in one, and it cools the skin as it lands.",
+  "특징": [
+   {
+    "title": "80% glacier water and blue oil energy — a soothing, cooling serum",
+    "body": [
+     "Canadian glacier water at 80% in place of purified water, hydrating with every spray and cooling skin that has heated up."
+    ]
+   },
+   {
+    "title": "Toner, mist, serum and essence in one",
+    "body": []
+   },
+   {
+    "title": "d'Alba knows mists — a fine spray angled for Asian faces",
+    "body": []
+   },
+   {
+    "title": "Premium ingredients for moisture, firmness and cooling",
+    "body": [
+     "Canadian glacier water 800,000ppm.",
+     "Italian white truffle, collagen extract.",
+     "Trufferol™, d'Alba's patented ingredient (white truffle + tocopherol).",
+     "Comfort: sweet wormwood, lotus, rice extracts and yeast ferment.",
+     "Moisture: okra fruit extract.",
+     "Pores and sebum: the patented Tannin Complex HR."
+    ]
+   },
+   {
+    "title": "Primary skin irritation test completed, Italian vegan certification",
+    "body": [
+     "Italian vegan certification and a primary skin irritation trial in Korea.",
+     "One use helps lower skin temperature."
+    ]
+   },
+   {
+    "title": "An aqua floral fresh scent",
+    "body": []
+   }
+  ],
+  "이미지": [
+   "How to use it",
+   "Before spraying",
+   "Being sprayed",
+   "Italian white truffle"
+  ]
+ },
+ "white-truffle-first-spray-serum": {
+  "스펙": {
+   "용량": "100ml",
+   "타겟": "All skin types"
+  },
+  "한줄": "d'Alba's steady seller — a spray serum that does toner, mist, serum and essence in one, for dense moisture and a lit finish.",
+  "특징": [
+   {
+    "title": "Toner, mist, serum and essence in one — moisture and firmness whenever you need it",
+    "body": []
+   },
+   {
+    "title": "Premium nourishing and hydrating ingredients",
+    "body": [
+     "Four plant blending oils bringing nourishment and moisture for glossy skin.",
+     "Trufferol™, d'Alba's patented ingredient: Italian white truffle + tocopherol.",
+     "Deep hydration, absorbed fast and without stickiness.",
+     "A spray angle that covers the whole face evenly, with no pooling or beading.",
+     "Human trials for deep hydration and dead skin."
+    ]
+   },
+   {
+    "title": "Ingredients your skin is happy with",
+    "body": [
+     "Italian V-Label vegan certification against the full ingredient list.",
+     "Primary skin irritation test completed in Korea."
+    ]
+   },
+   {
+    "title": "d'Alba's signature scent",
+    "body": [
+     "Aromatic Citrus Floral, created with the Italian perfumer Giovanni Festa."
+    ]
+   }
+  ],
+  "이미지": [
+   "Product shot",
+   "Product styling shot",
+   "Premium packaging",
+   "Before and after shaking",
+   "The scent notes",
+   "Old vs reformulated"
+  ]
+ },
+ "white-truffle-vital-spray-serum": {
+  "스펙": {
+   "용량": "100ml",
+   "타겟": "All skin types"
+  },
+  "한줄": "The calming one in the spray serum line — red plant oils and three soothing patents, for skin that has been out in the sun.",
+  "특징": [
+   {
+    "title": "Red plant blending oils for moisture and calm",
+    "body": []
+   },
+   {
+    "title": "Toner, mist, serum and essence in one — moisture and calm whenever you need it",
+    "body": []
+   },
+   {
+    "title": "Premium calming ingredients",
+    "body": [
+     "Trufferol™, d'Alba's patented ingredient: Italian white truffle + tocopherol.",
+     "AQUAXYL™ (moisture patent): water and moisture for dry, depleted skin.",
+     "Beautiful Herb Story™ and Lora Anti-S™ (calming patents): nourishment for sensitised skin."
+    ]
+   },
+   {
+    "title": "Gentle enough for daily use",
+    "body": [
+     "Italian V-Label vegan certification against the full ingredient list.",
+     "Human trial completed for calming UV-induced irritation and improving skin texture.",
+     "Primary skin irritation test completed on sensitive skin."
+    ]
+   },
+   {
+    "title": "d'Alba's signature scent, with rose",
+    "body": [
+     "The signature Aromatic Citrus Floral blended with an elegant Rosy Floral."
+    ]
+   }
+  ],
+  "이미지": [
+   "Being sprayed",
+   "Model shot",
+   "Floral image"
+  ]
+ },
+ "first-oil-capsule-serum": {
+  "스펙": {
+   "용량": "100ml",
+   "기능성": "Brightening + wrinkle care (dual functional claim)"
+  },
+  "한줄": "Forty thousand vitamin capsules floating in 80.34% damask rose water — a brightening serum for the first step, hydrating and never sticky.",
+  "특징": [
+   {
+    "title": "A hydrating serum and vitamin capsules, layered together",
+    "body": [
+     "A thick hydrating base at 98.5 to vitamin capsules at 1.5.",
+     "The two blend fast into a moisture film — hydrated underneath, soft on top, never sticky."
+    ]
+   },
+   {
+    "title": "80.34% damask rose water for clearer, brighter skin",
+    "body": [
+     "Damask rose water replaces purified water at 80.34%.",
+     "Skin holds enough water that makeup sits well on top.",
+     "Niacinamide at 2%, the notified brightening active."
+    ]
+   },
+   {
+    "title": "Three-stage mega nano liposome delivery",
+    "body": [
+     "Broken down in three passes into fine particles and wrapped in liposomes for stable delivery.",
+     "Nano-sized, so it absorbs quickly and densely."
+    ]
+   },
+   {
+    "title": "Premium vitamin ingredients",
+    "body": [
+     "Dual functional claim: brightening and wrinkle care.",
+     "Trufferol™, d'Alba's premium ingredient.",
+     "Brightening active: niacinamide 2%.",
+     "Freshness and vitamins: damask rose water 80.34%, vitamin C, vitamin E, vitamin K, vegan glutathione.",
+     "Firmness patent: cauliflower mushroom extract.",
+     "Moisture: Blue Complex HR, panthenol, centella extract, Calm Cell, vegan ceramide.",
+     "Glow: d'Alba-8 Blending Oil."
+    ]
+   },
+   {
+    "title": "No animal-derived ingredients",
+    "body": [
+     "Primary skin irritation test completed."
+    ]
+   }
+  ],
+  "이미지": [
+   "Texture with the capsules",
+   "The product line-up",
+   "Absorbing into skin",
+   "d'Alba-8 Blending Oil"
+  ]
+ },
+ "pro2x": {
+  "스펙": {
+   "용량": "100ml · 120ml"
+  },
+  "한줄": "The upgraded First Spray Serum — 70% collagen water, two kinds of exosome, and a finer mist.",
+  "특징": [
+   {
+    "title": "Twice the deep hydration and deep firmness — an all-in-one antioxidant solution",
+    "body": [
+     "*Compared with the First Spray Serum.",
+     "Glow alone doesn't fill the deficit underneath; this works on deep moisture and deep firmness.",
+     "A skin-ageing index that improves twice as much, for skin that holds and shines."
+    ]
+   },
+   {
+    "title": "Dual exosomes, 467× smaller than a pore, for deeper delivery",
+    "body": [
+     "Good ingredients only matter if they reach the skin. Size decides penetration."
+    ]
+   },
+   {
+    "title": "Lighter to wear, faster to absorb — an ultra-fine micro mist",
+    "body": [
+     "Active serum at 10% — twice the previous concentration.",
+     "15 plant blending oils, active serum 10%, tocopherol: an oil film that wraps the skin smooth and glossy.",
+     "70% collagen water, Italian white truffle, and d'Alba's own Peptide Exosome™ 10%, Trufferol™ and Truffle Exosome™."
+    ]
+   },
+   {
+    "title": "High-performance, and still comfortable on sensitive and acne-prone skin",
+    "body": [
+     "Active serum doubled to 10%, delivered precisely without blocking pores."
+    ]
+   },
+   {
+    "title": "Toner, essence and serum in one simple step",
+    "body": [
+     "Spray and you're done — after cleansing, at the office, in the car.",
+     "Instant hydration, makeup prep and ageing care from a single mist."
+    ]
+   }
+  ],
+  "이미지": [
+   "Product shot (120ml PRO·2X)",
+   "Product styling shot",
+   "Model spraying it",
+   "Texture",
+   "Spray particle comparison (previous)",
+   "Spray particle comparison (2X)"
+  ]
+ },
+ "vita-toning-serum-toner": {
+  "스펙": {
+   "용량": "180ml",
+   "기능성": "Brightening + wrinkle care (dual functional claim)"
+  },
+  "한줄": "A serum in toner form — concentrated going on, watery as you spread it, for the first step of a brightening routine.",
+  "특징": [
+   {
+    "title": "A fresh serum-water texture that absorbs without stickiness",
+    "body": [
+     "A concentrated serum that rolls out into a watery texture as you spread it.",
+     "It sinks in densely and finishes fresh, never heavy or tacky.",
+     "Gentle brightening and hydration from the very first step."
+    ]
+   },
+   {
+    "title": "11.76% sea buckthorn water with high-purity vitamin C and Glutathione-some",
+    "body": [
+     "Sea buckthorn water at 11.76%, full of vitamin-rich hydration.",
+     "Glutathione at 98% purity, stabilised in liposome form."
+    ]
+   },
+   {
+    "title": "Two weeks: spots faded, wrinkles softened, tone evened",
+    "body": [
+     "Brightens skin and works on dark spots.",
+     "In-vitro antioxidant testing completed."
+    ]
+   },
+   {
+    "title": "Premium vitamin ingredients",
+    "body": [
+     "Dual functional claim: brightening and wrinkle care.",
+     "Trufferol™ for firmness, Truvita™ for freshness.",
+     "Brightening active: niacinamide 2%.",
+     "Freshness: sea buckthorn water 11.76%, vitamin C, Glutathione-some.",
+     "Glow: d'Alba-8 Blending Oil, MELAWAY.",
+     "Nourishment: 13 vegan proteins, collagen extract.",
+     "Moisture: the patented Oligo-HA, vegan ceramide NP, Vegan Mucin."
+    ]
+   },
+   {
+    "title": "A brightening toner gentle enough for every day",
+    "body": [
+     "Italian V-Label vegan certification against the full ingredient list.",
+     "Primary skin irritation test completed."
+    ]
+   }
+  ],
+  "이미지": [
+   "Product shot",
+   "Texture",
+   "Model shot",
+   "Highly crosslinked technology",
+   "d'Alba-8 Blending Oil"
+  ]
+ }
+}

@@ -1,74 +1,18 @@
-[
- {
-  "slug": "italian-white-truffle-professional-repairing-hair-perfume-serum",
-  "en": "Italian White Truffle Professional Repairing Hair Perfume Serum",
-  "ko": "달바  프로페셔널 리페어링 헤어 퍼퓸 세럼(로제 프리지아)",
-  "스펙": {
-   "용량": "50ml · 100ml",
-   "타겟": "모든 모발, 손상 모발, 건조한 모발"
-  },
-  "포지셔닝": {
-   "문구": "윤기와 탄력으로 빛나는 엔젤링 케어 그윽한 무드와 스타일링을 동시에 완성 시켜주는 헤어 퍼퓸 세럼",
-   "태그": [
-    "#더블레이어링",
-    "#손상모케어",
-    "#엔젤링헤어",
-    "#모발윤기탄력",
-    "#로제프리지아향",
-    "#비건헤어세럼"
-   ]
-  },
-  "특징": [
-   {
-    "제목": "오일과 세럼의 3:7 황금비율로 배합된 모발 윤기 보습 레이어링",
-    "설명": [
-     "엔젤링과 모발 윤기를 선사하는 핑크 오일 30% & 수분감과 보습감으로 모발 영양을 더해주는 보습 세럼 70%",
-     "OIL - SERUM 더블 레이어링으로 윤기 코팅층과 보습 세럼층이 황금 비율로 믹스되어",
-     "촉촉하고 윤기나는 머릿결을 선사합니다."
-    ]
-   },
-   {
-    "제목": "깃털처럼 내려앉는 미세 안개 분사로 뭉침,떡짐 현상 없이 섬세한 케어",
-    "설명": [
-     "미세하게 분사되는 세럼이 가볍게 밀착되어 수시로 사용해도 떡짐없이 윤기나는 머릿결을 만들어 주며",
-     "레이어링 할수록 향기는 디벨롭 됩니다."
-    ]
-   },
-   {
-    "제목": "콜라겐수 55%와 독자 성분 나노 펩타이드 엑소좀 10% 함유로 모발 컨디셔닝 케어",
-    "설명": [
-     "이탈리아산 화이트 트러플에서 추출한 나노 엑소좀 시스템과99% 고순도 저분자 다이펩타이드-15의 결합",
-     "모공보다 467배 작은 사이즈로 빠르고 강력하게 전달되는 펩타이드 엑소좀",
-     "거칠어진 모발을 정돈하고 결을 따라 유효 성분이 고르게 작용하여부드럽고 윤기나는 머릿결을 선사"
-    ]
-   },
-   {
-    "제목": "그윽한 향기로 무드를 완성하는 로제 프리지아 향",
-    "설명": [
-     "찰랑이는 머릿결과 함께 싱그러운 과일향에 활짝 핀 장미와 프리지아의 우아한 향이 어우러져",
-     "사랑스러운 느낌을 더해주고 포근한 머스크향이 조화를 이뤄 바람에 흩날릴 때 마다 은은하게 퍼지는",
-     "매력적인 향기를 선사합니다."
-    ]
-   },
-   {
-    "제목": "푸석한 모발 고민을 빈틈없이 채워주는 영양 충전, 윤광 오일 코팅",
-    "설명": [
-     "단백질 충전: 단백질 3종 + 아미노산 17종",
-     "달바 독자 성분",
-     "[컨디셔닝] 펩타이드 엑소좀™(다이펩타이드-15 1.2%, 흰서양송로수, 흰서양송로추출물)",
-     "[탄력] 트러페롤™(이탈리아산 화이트 트러플(흰서양송로추출물),토코페롤)",
-     "보습/윤기: 달바 -9블렌딩 오일 + 바오밥나무씨오일 + 살구씨오일"
-    ]
-   },
-   {
-    "제목": "이탈리아 비건 V-라벨 인증 / 국내 인체피부 일차자극 테스트 완료",
-    "설명": [
-     "프리미엄 비건 헤어 세럼의 세심한 원료 선택과 설페이트계 계면활성제 미사용으로",
-     "모발에도 순하고 편한 사용감"
-    ]
-   }
-  ],
-  "기타": [
+{
+ "_주": "브리프에 안 들어간 나머지를 사람이 읽고 풀어 쓴 것. 한국어와 영어를 같이 쓴다.",
+ "_원칙": [
+  "크리에이터가 읽고 바로 쓰는 글이다. 단정해서 쓴다.",
+  "'교안에 없다', '판독하지 못했다', '확인 전에는' 같은 말은 쓰지 않는다. 애매하면 확실한 쪽만 적는다.",
+  "'말하지 마세요' 대신 '이렇게 말하면 됩니다' 로 적는다. 할 수 있는 말을 준다.",
+  "'교안에 따르면' 같은 출처 언급을 반복하지 않는다. 그냥 사실로 쓴다.",
+  "틀리면 문제가 되는 것(만료된 인증, 3종 함께 쓴 시험 등)은 짧고 분명한 한 문장으로 적는다.",
+  "가격, 원가, 출시·리뉴얼일, 제조사, 연락처, 인증서·시험 번호, 사내 메모는 쓰지 않는다.",
+  "전성분을 통째로 나열하지 않는다. 역할이 있는 성분만 설명한다.",
+  "조향사 생년월일처럼 교안에 있는 개인정보는 옮기지 않는다.",
+  "항목마다 제목/본문(한국어)과 title/body(영어)를 같이 둔다."
+ ],
+ "italian-white-truffle-professional-repairing-hair-perfume-serum": {
+  "항목": [
    {
     "제목": "오일 30 : 세럼 70 으로 나뉜 2층 구조",
     "본문": [
@@ -171,310 +115,10 @@
      "There's no study measuring damage repair. Build the story around shine, scent and how it feels."
     ]
    }
-  ],
-  "en판": {
-   "스펙": {
-    "용량": "50ml · 100ml",
-    "타겟": "All hair types, damaged hair, dry hair"
-   },
-   "한줄": "A hair perfume serum that layers shine and moisture at once — an angel-ring finish with a scent that builds as you spray.",
-   "특징": [
-    {
-     "title": "Oil and serum blended 3:7 for shine and moisture",
-     "body": [
-      "Pink oil 30% for the angel-ring shine, moisturising serum 70% for softness and water.",
-      "The oil coats and the serum hydrates, layered together in that ratio, for hair that stays glossy without feeling heavy."
-     ]
-    },
-    {
-     "title": "A fine mist that lands like a feather — no clumping, no greasy strands",
-     "body": [
-      "The mist is fine enough to settle evenly, so you can reuse it through the day without weighing hair down.",
-      "The more you layer it, the more the scent develops."
-     ]
-    },
-    {
-     "title": "55% collagen water and 10% Peptide Exosome for conditioning",
-     "body": [
-      "A nano exosome system drawn from Italian white truffle, bound to 99% pure low-molecular Dipeptide-15.",
-      "d'Alba describes the particle as 467× smaller than a pore — a comparison drawn from an outside paper's average, not a measurement of this product.",
-      "It smooths roughened hair so the active spreads evenly along the strand."
-     ]
-    },
-    {
-     "title": "Rose Freesia — the scent that sets the mood",
-     "body": [
-      "Fresh fruit opens, then rose and freesia bloom through the middle.",
-      "A soft musk closes it, drifting whenever your hair moves."
-     ]
-    },
-    {
-     "title": "Protein and oil for hair that has gone dry and brittle",
-     "body": [
-      "Protein: 3 proteins plus 17 amino acids.",
-      "d'Alba proprietary ingredients — Peptide Exosome™ (Dipeptide-15 1.2%, white truffle water and extract) for conditioning, Trufferol™ (Italian white truffle and tocopherol) for bounce.",
-      "Moisture and shine: d'Alba-9 Blending Oil with baobab seed oil and apricot kernel oil."
-     ]
-    },
-    {
-     "title": "Italian V-Label vegan certified · primary skin irritation test completed in Korea",
-     "body": [
-      "Raw materials chosen carefully, no sulphate surfactants — gentle enough for frequent use."
-     ]
-    }
-   ],
-   "이미지": [
-    "Product shot",
-    "Sprayed onto hair",
-    "Hair",
-    "High-concentration essential oil 11,000ppm",
-    "Product shot"
-   ]
-  }
+  ]
  },
- {
-  "slug": "white-truffle-double-serum-all-in-one-multi-balm",
-  "en": "White Truffle Double Serum All-in-one Multi Balm",
-  "ko": "달바 더블 세럼 올인원 멀티밤",
-  "스펙": {
-   "용량": "10g"
-  },
-  "포지셔닝": {
-   "문구": "보습, 탄력 세럼 + 화이트닝 세럼 이중 코어 포뮬러로 한번의 터치로 주름개선과 미백관리가 동시에 되는",
-   "태그": [
-    "#특별한"
-   ]
-  },
-  "특징": [
-   {
-    "제목": "더블 코어 올인원 멀티밤! 한 번의 터치로 피부 고민 집중 케어!",
-    "설명": [
-     "링클 & 화이트닝 집중 케어와 동시에 보습, 영양, 탄력까지 올인원 케어!"
-    ]
-   },
-   {
-    "제목": "주름 고민 부위에 쓰윽 바르면- 주름 케어와 동시에 화이트닝 케어까지!",
-    "설명": [
-     "스틱 타입으로 손 대지 않고 주름 부위에만 간편하게 바르면 주름고민 끝!  화사함까지 케어!",
-     "눈가 잔주름, 목, 팔자, 미간 등 신경 쓰이는 미세한 주름 부위도 섬세하게 케어"
-    ]
-   },
-   {
-    "제목": "스페셜  프리미엄 성분(주름, 영양 및 미백 케어)",
-    "설명": [
-     "미백, 주름 개선 2중 기능성( 알파-비사보롤, 토코페릴아세테이트)",
-     "달바 독자적인 특허성분 트러페롤™(흰서양송로추출물+토코페롤)로 이중 탄력 케어",
-     "비건 인증 받은 비건 콜라겐이 탄탄하고 건강한 피부를 선사",
-     "지모뿌리추출물 함유로 피부 탄력 케어에 도움",
-     "달바 -8 블렌딩 오일, 세라마이드 함유로 촉촉한 보습 효과 선사",
-     "순수 비타민C(아스코빅애씨드), 글루타티온이 칙칙한 피부를 맑고 투명하게"
-    ]
-   },
-   {
-    "제목": "매일 수시로 덧 발라 사용해도 순한 비건 멀티밤",
-    "설명": [
-     "이탈리아 브이라벨 비건 인증 완료",
-     "인체피부 일차자극 테스트 완료"
-    ]
-   },
-   {
-    "제목": "컴팩트한 사이즈로 필요한 순간 언제든 사용 가능!",
-    "설명": [
-     "기초 케어는 물론 메이크업 전, 후에도 주름 케어가 필요한 곳 어디든!",
-     "실내외 수분 부족, 광채가 필요한 특별한 날에도 원래 내피부인듯 예쁜 피부 표현"
-    ]
-   }
-  ],
-  "기타": [
-   {
-    "제목": "밤 하나에 세럼 두 개가 들어 있는 구조",
-    "본문": [
-     "겉으로는 그냥 스틱 밤인데, 안은 두 층으로 나뉘어 있습니다. 바깥이 보습·탄력을 맡는 세럼 밤이고, 가운데 심처럼 박힌 것이 화이트닝 세럼 코어입니다.",
-     "바깥층에는 트러페롤™, 달바-8 블렌딩 오일, 비건 세라마이드엔피, 비건 콜라겐추출물, 지모뿌리추출물, 시어버터가 들어갑니다. 안쪽 코어에는 순수 비타민C(아스코빅애씨드), 글루타티온, 화이트 플라워 콤플렉스가 들어갑니다.",
-     "바르면 두 층이 같이 묻어나면서 주름 케어와 미백 케어가 한 번에 된다는 것이 이 제품의 설계입니다. '한 번의 터치로' 라는 교안 표현이 여기서 나옵니다."
-    ],
-    "title": "Two serums inside one balm",
-    "body": [
-     "From the outside it's just a stick balm, but inside it's built in two parts. The outer layer is a moisturising, firming serum balm; the core running through the middle is a brightening serum.",
-     "The outer layer carries Trufferol™, d'Alba-8 Blending Oil, vegan ceramide NP, vegan collagen extract, Anemarrhena root extract and shea butter. The inner core carries pure vitamin C (ascorbic acid), glutathione and a white flower complex.",
-     "Swipe it on and both come off together, so wrinkle care and brightening happen in one pass. That's where the deck's 'one touch' line comes from."
-    ]
-   },
-   {
-    "제목": "왜 스틱으로 만들었나",
-    "본문": [
-     "교안이 개발 배경을 밝혀 놓았습니다. 주름 스틱 제품을 찾는 수요가 늘어서 만들었는데, 그냥 주름 스틱으로 내지 않고 달바답게 미백 기능을 하나 더 붙였다는 것입니다.",
-     "그래서 손에 안 묻히고 눈가·목·팔자·미간처럼 좁고 신경 쓰이는 부위만 골라 바를 수 있습니다. 10g 짜리라 가방이나 주머니에 넣고 다니면서 필요할 때 꺼내 덧바르는 용도로 잡혀 있습니다.",
-     "기초 단계뿐 아니라 메이크업을 한 위에도 덧바를 수 있습니다. 스틱이라 가능한 사용법이고, 교안이 TIP 으로 따로 적어 둔 내용입니다."
-    ],
-    "title": "Why they made it a stick",
-    "body": [
-     "The deck spells out the reasoning. Demand for wrinkle sticks was growing, so they built one — but rather than a plain wrinkle stick, they added a brightening function on top, which is the d'Alba way of doing it.",
-     "The result is that you never touch it with your hands, and you can target narrow, awkward spots: crow's feet, the neck, nasolabial folds, between the brows.",
-     "At 10g it's meant to live in a bag or a pocket and come out whenever you want to reapply. It also works over makeup, not just at the skincare stage — a tip the deck calls out separately."
-    ]
-   },
-   {
-    "제목": "트러페롤™ 과 달바-8 블렌딩 오일",
-    "본문": [
-     "트러페롤™ 은 달바가 특허를 받은 독자 성분입니다. 이탈리아산 화이트 트러플(흰서양송로추출물)과 토코페롤(비타민E)을 섞어 만들었고, 이 제품에는 화이트 트러플 14,000ppm, 토코페롤 1,300ppm 으로 들어갑니다.",
-     "달바-8 블렌딩 오일은 이름 그대로 오일 여덟 가지를 섞은 것입니다. 달맞이꽃오일, 들콩오일, 동백나무씨오일, 마카다미아씨오일, 비타민나무열매오일, 아보카도오일, 올리브오일, 해바라기씨오일입니다. 밤 제형의 광채와 보습을 이 조합이 맡습니다.",
-     "교안에 '상기 사항은 원료적 특성에 한함' 이라는 단서가 붙어 있습니다. 원료가 가진 성질을 말한 것이지 이 제품으로 확인한 효과가 아닙니다."
-    ],
-    "title": "Trufferol™ and d'Alba-8 Blending Oil",
-    "body": [
-     "Trufferol™ is d'Alba's patented in-house ingredient: Italian white truffle (Tuber magnatum extract) blended with tocopherol (vitamin E). This product carries white truffle at 14,000ppm and tocopherol at 1,300ppm.",
-     "d'Alba-8 Blending Oil is exactly what it sounds like — eight oils blended together: evening primrose, wild soybean, camellia seed, macadamia seed, sea buckthorn fruit, avocado, olive and sunflower seed. They're what gives the balm its glow and slip.",
-     "The deck attaches a note that these claims describe the raw materials' properties, not effects confirmed with this product."
-    ]
-   },
-   {
-    "제목": "화이트 플라워 콤플렉스 7종",
-    "본문": [
-     "화이트닝 코어에 들어가는 꽃 추출물 묶음입니다. 연꽃꽃, 장미, 커먼자스민, 나팔수선화, 마돈나백합비늘줄기, 블루플래그아이리스, 프리지어 일곱 가지입니다.",
-     "이름이 예뻐서 방송에서 읽기 좋습니다. 다만 미백 기능성을 설명할 때는 고시 성분인 알파-비사보롤을 먼저 말하고, 꽃 이름은 거들어 주는 정도로 붙이세요."
-    ],
-    "title": "The seven white flowers",
-    "body": [
-     "A bundle of flower extracts in the brightening core: sacred lotus, rose, common jasmine, daffodil, Madonna lily bulb, blue flag iris and freesia.",
-     "The names read beautifully on camera. When you explain the brightening claim, lead with alpha-bisabolol, the notified active, and let the flowers follow."
-    ]
-   },
-   {
-    "제목": "기능성은 무엇에 근거하나",
-    "본문": [
-     "미백은 알파-비사보롤, 주름개선은 토코페릴아세테이트 — 둘 다 식약처 고시 성분입니다. 2중 기능성 표시는 이 두 성분이 들어 있어서 붙는 것입니다.",
-     "'주름개선 기능성 화장품' 은 이 표시를 붙일 수 있다는 뜻입니다. 주름이 없어진다는 뜻이 아니니 '주름 케어' 정도로 말하면 됩니다."
-    ],
-    "title": "What the functional claim rests on",
-    "body": [
-     "Brightening comes from alpha-bisabolol, wrinkle care from tocopheryl acetate. Both are actives notified to the Korean regulator, and that's why the dual claim is on the label.",
-     "A 'wrinkle care functional cosmetic' means the label is permitted. It doesn't mean lines disappear — 'wrinkle care' is the right way to say it."
-    ]
-   },
-   {
-    "제목": "비건 인증은 이 제품에 해당하지 않습니다",
-    "본문": [
-     "교안에 비건 인증서가 붙어 있지만, 이 제품에 대한 인증이 아닙니다. 인증 대상은 '비건 콜라겐' 이라는 원료이고 권리자도 그 원료를 만든 회사입니다. 게다가 2022년 4월에 만료됐습니다.",
-     "그러니 이 제품은 비건 인증 제품이 아닙니다. 비건 이야기는 빼고 가세요.",
-     "대신 인체 피부 일차자극 테스트에서 '저자극 제품' 판정을 받았습니다. 이건 확실하게 말할 수 있습니다."
-    ],
-    "title": "The vegan certificate does not cover this product",
-    "body": [
-     "The deck includes a vegan certificate, but it isn't for this product. What's certified is a raw material called 'vegan collagen', held by the supplier that makes it — and it expired in April 2022.",
-     "So this is not a vegan-certified product. Leave vegan out of the script.",
-     "What you can say: it passed a primary skin irritation test with a low-irritation rating."
-    ]
-   }
-  ],
-  "en판": {
-   "스펙": {
-    "용량": "10g"
-   },
-   "한줄": "A stick balm with two serum cores — wrinkle care and brightening in one pass.",
-   "특징": [
-    {
-     "title": "Double-core all-in-one balm — one touch on the spots that bother you",
-     "body": [
-      "Wrinkle and brightening care, plus moisture, nourishment and bounce, all in one."
-     ]
-    },
-    {
-     "title": "Swipe it over a wrinkle and you get brightening at the same time",
-     "body": [
-      "A stick, so you never touch it with your hands — just the spots you want.",
-      "Fine enough for crow's feet, the neck, nasolabial folds and between the brows."
-     ]
-    },
-    {
-     "title": "Premium actives for wrinkles, nourishment and brightening",
-     "body": [
-      "Dual functional claim — brightening (alpha-bisabolol) and wrinkle care (tocopheryl acetate).",
-      "Trufferol™, d'Alba's patented ingredient (white truffle extract + tocopherol).",
-      "Vegan collagen for firmer-looking skin, and Anemarrhena root extract for bounce.",
-      "d'Alba-8 Blending Oil and ceramide for moisture; pure vitamin C (ascorbic acid) and glutathione for clarity."
-     ]
-    },
-    {
-     "title": "Gentle enough to reapply through the day",
-     "body": [
-      "Italian V-Label vegan certification.",
-      "Primary skin irritation test completed."
-     ]
-    },
-    {
-     "title": "Small enough to carry anywhere",
-     "body": [
-      "Works over base skincare and over makeup, wherever you want wrinkle care or a bit of glow."
-     ]
-    }
-   ],
-   "이미지": [
-    "Used on lips",
-    "Night-time moisture",
-    "Carried in hand",
-    "Before / after",
-    "Before / after"
-   ]
-  }
- },
- {
-  "slug": "double-quick-liposome-serum-mask-pad",
-  "en": "Double Quick Liposome Serum Mask Pad",
-  "ko": "달바 더블 퀵 리포좀 세럼 마스크 패드",
-  "스펙": {
-   "기능성": "미백, 주름개선 2중 기능성 화장품"
-  },
-  "포지셔닝": {
-   "문구": "닦고 붙이면 끝! 고민 없는 Quick & Easy 올인원 루틴 패드와 팩을 한번에 담아낸 스마트 2 in 1 토너 패드",
-   "태그": [
-    "#피부타입맞춤",
-    "#올인원패드",
-    "#퀵앤이지",
-    "#반반패드",
-    "#영양광채탄력",
-    "#진정결정돈"
-   ]
-  },
-  "특징": [
-   {
-    "제목": "콜라겐 겔 패드 (탄력/영양) & 필링 패드(진정/결정돈) 2가지 패드가 한 통에 담긴 올인원 토너 패드",
-    "설명": []
-   },
-   {
-    "제목": "퀵 앤 이지! 간편하게 닦아 내고 , 끌어 올리는 투웨이 루틴 완성",
-    "설명": [
-     "제품 하나로 아침,밤 상관없이 세안 후부터 메이크업 전까지 내 맘대로 맞춤 케어",
-     "[콜라겐 겔 패드] 로 영양 보습 + 광채 탄력 + 피부 컨디션 업 →  초간편 팩패드로 피부 컨디션을 끌어 올려 주는 부위별 간편 마스크",
-     "[카밍 필링 패드] 로 각질,피부 결 정돈 + 수분 보습 + 쿨링 진정 케어 → 기초 루틴 전 피부를 깨끗하게 정돈하는 프렙 스킨 역할"
-    ]
-   },
-   {
-    "제목": "한 달 루틴을 위한 최적 구성, 국내 최초 ‘분리 저장’ 구조의 반반 용기",
-    "설명": [
-     "달바의 아이텐티티를 담은 반반 용기 설계로  두가지 기능의 패드를 신선하게 분리 보관 하여 직관적이고 컴팩트한 사용",
-     "옐로우 70 매 : 그린 30매 구성으로 1일 3매 데일리 케어 , 그린은 활용도 높은 양면 사용 원단으로 100매 그 이상의 효과"
-    ]
-   },
-   {
-    "제목": "올인원 토탈 케어를 위한 달바 독자 성분 & 퀵 리포좀 공법의 시너지 도달 효과",
-    "설명": [
-     "비타 토닝 콜라겐 겔 패드 ( 탄력/영양 )  : 10종 단백질,  10종 히알루론산,  콜라겐수 1,000ppm 을 한번에 담은 비타-콜라겐좀 (Vita-Collagen Some)",
-     "달바 독자 성분 Trufferol™ + Truvita™ 복합체  (이탈리아산 화이트 트러플,  토코페롤,  글루타티온,  비타민C )",
-     "비건 세라마이드, + 비타민나무수  + 달바 – 8 블렌딩 오일  + 비건 PDRN",
-     "카밍 패드 (진정/결정돈) : 저자극 필링 성분 PHA , LHA , 티트리추출물을 한번에 담은 필링-티트리좀 (Peeling-Teatree Some)",
-     "달바 독자 성분 Trupair™ (이탈리아산 화이트 트러플, 4가지 병풀 콤플렉스)",
-     "PHA 10,000ppm ,10종 히알루론산, 판테놀, 병풀잎수 ,식물성 필링 콤플렉스 (샤인머스캣,청사과,청매실,그린파파야추출물)"
-    ]
-   },
-   {
-    "제목": "이탈리아 비건 V-라벨 인증 진행",
-    "설명": [
-     "전성분 까다로운 기준의 이탈리아 V-Label 비건 정식 인증 완료 / -  민감성 피부 대상 인체피부 일차자극(저자극) 인체적용시험 완료"
-    ]
-   }
-  ],
-  "기타": [
+ "double-quick-liposome-serum-mask-pad": {
+  "항목": [
    {
     "제목": "왜 반반 용기인가",
     "본문": [
@@ -573,116 +217,10 @@
      "It also passed a primary skin irritation test run on sensitive skin. That matters here — this is something you wipe over your whole face every day."
     ]
    }
-  ],
-  "en판": {
-   "스펙": {
-    "기능성": "Brightening + wrinkle care (dual functional claim)"
-   },
-   "한줄": "Wipe, then stick. Two pads in one jar — an all-in-one toner pad that does the wiping and the masking.",
-   "특징": [
-    {
-     "title": "Two pads in one jar — collagen gel (nourish/firm) and calming peel (soothe/smooth)",
-     "body": []
-    },
-    {
-     "title": "Quick and easy: wipe it off, then lift it up",
-     "body": [
-      "One product from cleansing to makeup, morning or night, however you want it.",
-      "Collagen gel pad — nourishment, glow and bounce. A quick mask for whichever area needs it.",
-      "Calming peel pad — smooths texture and dead skin, adds water, cools and calms. The prep step before everything else."
-     ]
-    },
-    {
-     "title": "A month's routine in a split jar — the first of its kind in Korea",
-     "body": [
-      "The split-storage design keeps the two pad types fresh and apart, in a jar that's compact and easy to read.",
-      "70 yellow to 30 green, for three pads a day. The green side is double-sided, so it stretches well past 100 uses."
-     ]
-    },
-    {
-     "title": "d'Alba's own ingredients meeting a quick liposome process",
-     "body": [
-      "Vita Toning Collagen Gel Pad (firm/nourish): Vita-Collagen Some — 10 proteins, 10 hyaluronic acids and 1,000ppm collagen water in one.",
-      "d'Alba's Trufferol™ + Truvita™ complex (Italian white truffle, tocopherol, glutathione, vitamin C).",
-      "Plus vegan ceramide, sea buckthorn water, d'Alba-8 Blending Oil and vegan PDRN.",
-      "Calming pad (soothe/smooth): Peeling-Teatree Some — the gentle acids PHA and LHA with tea tree extract.",
-      "d'Alba's Trupair™ (Italian white truffle, four-part centella complex).",
-      "PHA 10,000ppm, 10 hyaluronic acids, panthenol, centella leaf water and a botanical peeling complex (shine muscat, green apple, green plum, green papaya)."
-     ]
-    },
-    {
-     "title": "Italian V-Label vegan certification",
-     "body": [
-      "Full-ingredient review against V-Label's standards.",
-      "Primary skin irritation test completed on sensitive skin."
-     ]
-    }
-   ],
-   "이미지": [
-    "The jar",
-    "Two compartments (yellow pad, green pad)",
-    "Pad",
-    "Skin's 30th layer, water content +147% (immediately after one use, temporary)",
-    "Pore-area texture −6.21% (after one use)",
-    "Skin soothing −23.1% (after one use)",
-    "Facial (cheek) puffiness −15.2% (after one use)"
-   ]
-  }
+  ]
  },
- {
-  "slug": "waterfull-uv-essence-sunscreen",
-  "en": "Waterfull UV Essence Sunscreen",
-  "ko": "달바 비건 에센스 선스크린",
-  "스펙": {
-   "용량": "50ml",
-   "타겟": "모든 피부"
-  },
-  "포지셔닝": {
-   "문구": "수분 에센스의 촉촉한 수분 충전과 바른 듯 안 바른 듯 가볍고 산뜻한 수분자차 선스크린",
-   "태그": [
-    "#수분자차",
-    "#촉촉산뜻",
-    "#메이크업부스팅",
-    "#비건선케어"
-   ]
-  },
-  "특징": [
-   {
-    "제목": "바르는 순간 풍부한 수분 에센스가 터져 나오는 워터풀 포뮬라",
-    "설명": [
-     "하이드로 탭핑 기술을 적용한 포뮬러로 바르는 순간 촉촉한 수분감이 터져나와",
-     "피부엔 촉촉하게, 자외선으로부터는 강력하게 차단해주는 수분자차"
-    ]
-   },
-   {
-    "제목": "여러 번 덧 발라도 끈적임 없는 깔끔한 사용감",
-    "설명": [
-     "빠른 흡수력으로 여러 번 덧 발라도 자연스레 스며들며,",
-     "가벼우면서 우수한 밀착력으로  바른 듯 바르지 않은 듯 가볍고 촉촉한 마무리감"
-    ]
-   },
-   {
-    "제목": "백탁과 끼임 현상 없는 투명한 광채감",
-    "설명": [
-     "모공, 주름 끼임 현상과 들뜨는 백탁 현상 없이 자연스레 밀착되어 맑고 투명하게 올라오는 보습 광채"
-    ]
-   },
-   {
-    "제목": "메이크업 전 밀림, 들뜸 없이 매끄럽게 완성하는 피부 바탕",
-    "설명": [
-     "촉촉한 수분 에센스가 피부에 수분을 충전하여 매끄러운 피부 바탕을 만들어",
-     "밀림과 들뜸 없이  메이크업의 완성도를 높여주는 메이크업 부스터"
-    ]
-   },
-   {
-    "제목": "자외선차단은 강력하게, 피부는 편안하게 데일리 비건 선스크린",
-    "설명": [
-     "이탈리아 비건 ‘브이라벨’ 인증 완료! 동물성 성분 무첨가 & 피부에 편안한 자외선차단제",
-     "민감성 일차자극 테스트를 완료해 피부에 편안한 선스크린"
-    ]
-   }
-  ],
-  "기타": [
+ "waterfull-uv-essence-sunscreen": {
+  "항목": [
    {
     "제목": "선크림을 제대로 바르는 법 — 이 제품에서 가장 쓸모 있는 부분",
     "본문": [
@@ -767,112 +305,94 @@
      "Read the SPF and PA figures straight off the package."
     ]
    }
-  ],
-  "en판": {
-   "스펙": {
-    "용량": "50ml",
-    "타겟": "All skin types"
-   },
-   "한줄": "A watery organic-filter sunscreen that floods the skin with essence as it goes on — light, clear, no white cast.",
-   "특징": [
-    {
-     "title": "A waterfull formula that bursts with essence as you apply it",
-     "body": [
-      "Hydro-tapping technology: moisture floods out the moment you spread it.",
-      "Water on the skin, strong protection against UV."
-     ]
-    },
-    {
-     "title": "Reapply as often as you like without stickiness",
-     "body": [
-      "It sinks in fast, so repeat layers still disappear naturally.",
-      "Light but with real grip — it finishes like you're barely wearing anything."
-     ]
-    },
-    {
-     "title": "Clear radiance with no white cast and no settling",
-     "body": [
-      "No catching in pores or fine lines, no chalky lift — it sits flush and reads as clear, damp light."
-     ]
-    },
-    {
-     "title": "A smooth base that keeps makeup from sliding or flaking",
-     "body": [
-      "Watery essence fills the skin so the surface is even.",
-      "Makeup goes on without sliding or lifting — it works as a makeup booster."
-     ]
-    },
-    {
-     "title": "Strong protection, comfortable skin, every day",
-     "body": [
-      "Italian V-Label vegan certification — no animal-derived ingredients.",
-      "Primary irritation test completed on sensitive skin."
-     ]
-    }
-   ],
-   "이미지": [
-    "Product shot",
-    "Applied on the back of the hand",
-    "Hydro-trapping technology",
-    "How UVA and UVB are blocked",
-    "How to apply sunscreen properly"
-   ]
-  }
+  ]
  },
- {
-  "slug": "white-truffle-waterfull-tone-up-sunscreen-serum",
-  "en": "White Truffle Waterfull Tone Up Sunscreen Serum",
-  "ko": "달바 비건 톤업 선스크린",
-  "스펙": {
-   "용량": "50ml",
-   "타겟": "모든 피부"
-  },
-  "포지셔닝": {
-   "문구": "바르는 순간 촉촉함이 터져 나와 핑크빛 물광으로 생기 가득한 톤업자차 선스크린",
-   "태그": [
-    "#핑크물광톤업",
-    "#촉촉광채",
-    "#워터리선",
-    "#비건선케어"
-   ]
-  },
-  "특징": [
+ "white-truffle-double-serum-all-in-one-multi-balm": {
+  "항목": [
    {
-    "제목": "핑크빛 광채 생기 가득! 촉촉한 핑크 물광 톤업!",
-    "설명": [
-     "핑크빛 워터리한 선스크린이 내 피부인 듯 자연스럽고 생기 있는 화사한 피부로 연출해 주며,",
-     "은은한 핑크빛 광채로 윤기나는 피부로 가꾸어 주는 핑크 톤업 선스크린"
+    "제목": "밤 하나에 세럼 두 개가 들어 있는 구조",
+    "본문": [
+     "겉으로는 그냥 스틱 밤인데, 안은 두 층으로 나뉘어 있습니다. 바깥이 보습·탄력을 맡는 세럼 밤이고, 가운데 심처럼 박힌 것이 화이트닝 세럼 코어입니다.",
+     "바깥층에는 트러페롤™, 달바-8 블렌딩 오일, 비건 세라마이드엔피, 비건 콜라겐추출물, 지모뿌리추출물, 시어버터가 들어갑니다. 안쪽 코어에는 순수 비타민C(아스코빅애씨드), 글루타티온, 화이트 플라워 콤플렉스가 들어갑니다.",
+     "바르면 두 층이 같이 묻어나면서 주름 케어와 미백 케어가 한 번에 된다는 것이 이 제품의 설계입니다. '한 번의 터치로' 라는 교안 표현이 여기서 나옵니다."
+    ],
+    "title": "Two serums inside one balm",
+    "body": [
+     "From the outside it's just a stick balm, but inside it's built in two parts. The outer layer is a moisturising, firming serum balm; the core running through the middle is a brightening serum.",
+     "The outer layer carries Trufferol™, d'Alba-8 Blending Oil, vegan ceramide NP, vegan collagen extract, Anemarrhena root extract and shea butter. The inner core carries pure vitamin C (ascorbic acid), glutathione and a white flower complex.",
+     "Swipe it on and both come off together, so wrinkle care and brightening happen in one pass. That's where the deck's 'one touch' line comes from."
     ]
    },
    {
-    "제목": "바르는 순간 풍부한 수분 에센스가 터져 나오는 워터풀 포뮬라",
-    "설명": [
-     "하이드로 탭핑 기술을 적용한 포뮬러로 바르는 순간 촉촉한 수분감이 터져나와",
-     "피부엔 촉촉하게, 자외선으로부터는 강력하게 차단해주는 핑크물광자차"
+    "제목": "왜 스틱으로 만들었나",
+    "본문": [
+     "교안이 개발 배경을 밝혀 놓았습니다. 주름 스틱 제품을 찾는 수요가 늘어서 만들었는데, 그냥 주름 스틱으로 내지 않고 달바답게 미백 기능을 하나 더 붙였다는 것입니다.",
+     "그래서 손에 안 묻히고 눈가·목·팔자·미간처럼 좁고 신경 쓰이는 부위만 골라 바를 수 있습니다. 10g 짜리라 가방이나 주머니에 넣고 다니면서 필요할 때 꺼내 덧바르는 용도로 잡혀 있습니다.",
+     "기초 단계뿐 아니라 메이크업을 한 위에도 덧바를 수 있습니다. 스틱이라 가능한 사용법이고, 교안이 TIP 으로 따로 적어 둔 내용입니다."
+    ],
+    "title": "Why they made it a stick",
+    "body": [
+     "The deck spells out the reasoning. Demand for wrinkle sticks was growing, so they built one — but rather than a plain wrinkle stick, they added a brightening function on top, which is the d'Alba way of doing it.",
+     "The result is that you never touch it with your hands, and you can target narrow, awkward spots: crow's feet, the neck, nasolabial folds, between the brows.",
+     "At 10g it's meant to live in a bag or a pocket and come out whenever you want to reapply. It also works over makeup, not just at the skincare stage — a tip the deck calls out separately."
     ]
    },
    {
-    "제목": "유기, 무기의 장점을 담은 혼합자차 선스크린",
-    "설명": [
-     "유기자차와 무기자차의 장점만을 살려 부드러운 발림성과 저자극으로 피부에 편안함 선사"
+    "제목": "트러페롤™ 과 달바-8 블렌딩 오일",
+    "본문": [
+     "트러페롤™ 은 달바가 특허를 받은 독자 성분입니다. 이탈리아산 화이트 트러플(흰서양송로추출물)과 토코페롤(비타민E)을 섞어 만들었고, 이 제품에는 화이트 트러플 14,000ppm, 토코페롤 1,300ppm 으로 들어갑니다.",
+     "달바-8 블렌딩 오일은 이름 그대로 오일 여덟 가지를 섞은 것입니다. 달맞이꽃오일, 들콩오일, 동백나무씨오일, 마카다미아씨오일, 비타민나무열매오일, 아보카도오일, 올리브오일, 해바라기씨오일입니다. 밤 제형의 광채와 보습을 이 조합이 맡습니다.",
+     "교안에 '상기 사항은 원료적 특성에 한함' 이라는 단서가 붙어 있습니다. 원료가 가진 성질을 말한 것이지 이 제품으로 확인한 효과가 아닙니다."
+    ],
+    "title": "Trufferol™ and d'Alba-8 Blending Oil",
+    "body": [
+     "Trufferol™ is d'Alba's patented in-house ingredient: Italian white truffle (Tuber magnatum extract) blended with tocopherol (vitamin E). This product carries white truffle at 14,000ppm and tocopherol at 1,300ppm.",
+     "d'Alba-8 Blending Oil is exactly what it sounds like — eight oils blended together: evening primrose, wild soybean, camellia seed, macadamia seed, sea buckthorn fruit, avocado, olive and sunflower seed. They're what gives the balm its glow and slip.",
+     "The deck attaches a note that these claims describe the raw materials' properties, not effects confirmed with this product."
     ]
    },
    {
-    "제목": "선케어+톤업+보정+물광크림 한 번에! 파데 프리 선스크린",
-    "설명": [
-     "두껍고 답답한 파운데이션 대신 핑크빛 생기 가득 내추럴 톤업과  촉촉한 광채로",
-     "어떤 피부도 내 피부 인 듯 투명하게, 맑게, 화사한 톤보정"
+    "제목": "화이트 플라워 콤플렉스 7종",
+    "본문": [
+     "화이트닝 코어에 들어가는 꽃 추출물 묶음입니다. 연꽃꽃, 장미, 커먼자스민, 나팔수선화, 마돈나백합비늘줄기, 블루플래그아이리스, 프리지어 일곱 가지입니다.",
+     "이름이 예뻐서 방송에서 읽기 좋습니다. 다만 미백 기능성을 설명할 때는 고시 성분인 알파-비사보롤을 먼저 말하고, 꽃 이름은 거들어 주는 정도로 붙이세요."
+    ],
+    "title": "The seven white flowers",
+    "body": [
+     "A bundle of flower extracts in the brightening core: sacred lotus, rose, common jasmine, daffodil, Madonna lily bulb, blue flag iris and freesia.",
+     "The names read beautifully on camera. When you explain the brightening claim, lead with alpha-bisabolol, the notified active, and let the flowers follow."
     ]
    },
    {
-    "제목": "자외선차단은 강력하게, 피부는 편안하게 데일리 비건 선스크린",
-    "설명": [
-     "이탈리아 비건 ‘브이라벨’ 인증 완료! 동물성 성분 무첨가 & 피부에 편안한 자외선차단제",
-     "민감성 일차자극 테스트를 완료해 피부에 편안한 선스크린"
+    "제목": "기능성은 무엇에 근거하나",
+    "본문": [
+     "미백은 알파-비사보롤, 주름개선은 토코페릴아세테이트 — 둘 다 식약처 고시 성분입니다. 2중 기능성 표시는 이 두 성분이 들어 있어서 붙는 것입니다.",
+     "'주름개선 기능성 화장품' 은 이 표시를 붙일 수 있다는 뜻입니다. 주름이 없어진다는 뜻이 아니니 '주름 케어' 정도로 말하면 됩니다."
+    ],
+    "title": "What the functional claim rests on",
+    "body": [
+     "Brightening comes from alpha-bisabolol, wrinkle care from tocopheryl acetate. Both are actives notified to the Korean regulator, and that's why the dual claim is on the label.",
+     "A 'wrinkle care functional cosmetic' means the label is permitted. It doesn't mean lines disappear — 'wrinkle care' is the right way to say it."
+    ]
+   },
+   {
+    "제목": "비건 인증은 이 제품에 해당하지 않습니다",
+    "본문": [
+     "교안에 비건 인증서가 붙어 있지만, 이 제품에 대한 인증이 아닙니다. 인증 대상은 '비건 콜라겐' 이라는 원료이고 권리자도 그 원료를 만든 회사입니다. 게다가 2022년 4월에 만료됐습니다.",
+     "그러니 이 제품은 비건 인증 제품이 아닙니다. 비건 이야기는 빼고 가세요.",
+     "대신 인체 피부 일차자극 테스트에서 '저자극 제품' 판정을 받았습니다. 이건 확실하게 말할 수 있습니다."
+    ],
+    "title": "The vegan certificate does not cover this product",
+    "body": [
+     "The deck includes a vegan certificate, but it isn't for this product. What's certified is a raw material called 'vegan collagen', held by the supplier that makes it — and it expired in April 2022.",
+     "So this is not a vegan-certified product. Leave vegan out of the script.",
+     "What you can say: it passed a primary skin irritation test with a low-irritation rating."
     ]
    }
-  ],
-  "기타": [
+  ]
+ },
+ "white-truffle-waterfull-tone-up-sunscreen-serum": {
+  "항목": [
    {
     "제목": "핑크 톤업이 어떻게 되는 건가",
     "본문": [
@@ -957,118 +477,10 @@
      "Read the SPF and PA figures straight off the package."
     ]
    }
-  ],
-  "en판": {
-   "스펙": {
-    "용량": "50ml",
-    "타겟": "All skin types"
-   },
-   "한줄": "A pink, watery tone-up sunscreen — sun care, tone correction and a dewy finish in one step, no foundation needed.",
-   "특징": [
-    {
-     "title": "Pink, glowing, alive — a dewy pink tone-up",
-     "body": [
-      "A pink watery sunscreen that reads as your own skin, just brighter and more alive.",
-      "A soft pink light that leaves skin looking lit from within."
-     ]
-    },
-    {
-     "title": "A waterfull formula that bursts with essence as you apply it",
-     "body": [
-      "Hydro-tapping technology: moisture floods out the moment you spread it.",
-      "Water on the skin, strong protection against UV."
-     ]
-    },
-    {
-     "title": "A hybrid filter that takes the best of both",
-     "body": [
-      "Organic and inorganic filters combined — soft to spread, gentle on the skin."
-     ]
-    },
-    {
-     "title": "Sun care, tone-up, correction and a dewy finish at once — no foundation needed",
-     "body": [
-      "Instead of thick, heavy foundation: pink freshness and a damp glow.",
-      "Any skin reads clear, bright and evened out, still like your own."
-     ]
-    },
-    {
-     "title": "Strong protection, comfortable skin, every day",
-     "body": [
-      "Italian V-Label vegan certification — no animal-derived ingredients.",
-      "Primary irritation test completed on sensitive skin."
-     ]
-    }
-   ],
-   "이미지": [
-    "Product shot",
-    "Swatched across skin tones",
-    "Texture",
-    "How to apply sunscreen properly",
-    "Texture"
-   ]
-  }
+  ]
  },
- {
-  "slug": "vita-toning-galvanic-wrinkle-eye-cream",
-  "en": "Vita Toning Galvanic Wrinkle Eye Cream",
-  "ko": "달바 비타 토닝 갈바닉 링클 아이 크림",
-  "스펙": {
-   "용량": "15ml",
-   "타겟": "모든 피부"
-  },
-  "포지셔닝": {
-   "문구": "13,000회 미세 진동 갈바닉과 농축 아이크림의 시너지로 피부 다크 스팟 케어와 주름 케어를 한번에!!",
-   "태그": [
-    "#비타토닝",
-    "#주름크림",
-    "#미세진동",
-    "#갈바닉아이크림"
-   ]
-  },
-  "특징": [
-   {
-    "제목": "화이트트러플 리포좀*, 콜라겐 리포좀이 선사하는 탄탄하고 견고한 피부 탄력",
-    "설명": [
-     "리포좀 기술로 흡수율을 높인 성분이 건조한 피부에 진한 영양 탄력감을 선사해주며",
-     "탄력있고 윤기나는 피부로 케어"
-    ]
-   },
-   {
-    "제목": "비타민나무수 30%·순도 99% 비타민C·순도 98% 글루타티온의 시너지로 생기 더하기",
-    "설명": [
-     "정제수 대신 비타민나무수 베이스로 30%가 함유된 미백 기능성 베이스에",
-     "순도 높은 비타민C + 글루타티온을 더해 생기 잃은 칙칙한 다크 스팟을 밝게 화이트닝"
-    ]
-   },
-   {
-    "제목": "1분에 13,000회 마이크로음파 갈바닉의 미세 진동으로 흡수력 UP!",
-    "설명": [
-     "갈바닉 케어 어플리케이터가 분당 13,000회 미세 진동으로 눈가, 입가 등 고민되는 부위에 더",
-     "효과적으로 비타&탄력 영양성분을 흡수시켜 주름 개선 시너지 선사",
-     "피부 탄력이 무너지고 주름이 고민되는 부위에 섬세한 마사지가 가능한 쿨링팁 적용"
-    ]
-   },
-   {
-    "제목": "달바 독자 성분과 영양/생기 성분 시너지로 프리미엄 케어",
-    "설명": [
-     "달바 독자 성분 : 트러페롤™ : 달바 독자 성분 (이탈리아산 화이트 트러플*+토코페롤)",
-     "트러비타™ : 달바 독자 생기케어 성분(글루타티온, 비타민C(아스코빅애씨드))",
-     "영양/탄력: 흰서양송로수&리포좀, 콜라겐수&리포좀, PDRN, 비건 단백질 13종, 달바–8 블렌딩 오일",
-     "생기/광채: 비타민나무수 30%, 레티놀리포좀, 글루타티온좀, 나이아신아마이드",
-     "수분/보습: 히알루론산 8종",
-     "특허성분 : 오크라열매추출물, 꽃송이버섯추출물"
-    ]
-   },
-   {
-    "제목": "매일 사용하는, 피부가 편안한 비건 비타 토닝 아이 크림",
-    "설명": [
-     "전성분 까다로운 기준의 이탈리아 V-Label 비건 정식 인증 완료",
-     "국내 인체피부 일차자극(저자극) 인체적용시험 완료"
-    ]
-   }
-  ],
-  "기타": [
+ "vita-toning-galvanic-wrinkle-eye-cream": {
+  "항목": [
    {
     "제목": "크림과 기기가 한 통에 붙어 있는 제품",
     "본문": [
@@ -1175,129 +587,10 @@
      "The deck names: people caring for the delicate eye area and its lines; people who want to pair an eye cream with a vibrating device; people whose skin has lost bounce and looks tired; people who want firming care without effort; and people looking for a low-irritation galvanic eye cream they can use often."
     ]
    }
-  ],
-  "en판": {
-   "스펙": {
-    "용량": "15ml",
-    "타겟": "All skin types"
-   },
-   "한줄": "An eye cream with a galvanic vibrating tip built into the tube — you apply and massage it in with the same hand.",
-   "특징": [
-    {
-     "title": "White truffle and collagen liposomes for skin that holds its shape",
-     "body": [
-      "Liposome delivery raises absorption, so dry skin takes in richer nourishment.",
-      "Leaves skin firmer and glossier."
-     ]
-    },
-    {
-     "title": "58.9%… sorry, 30% sea buckthorn water with 99% vitamin C and 98% glutathione",
-     "body": [
-      "Sea buckthorn water at 30% stands in for purified water as a brightening base.",
-      "High-purity vitamin C and glutathione brighten dull spots."
-     ]
-    },
-    {
-     "title": "13,000 micro-vibrations a minute push the actives in",
-     "body": [
-      "The galvanic applicator vibrates 13,000 times a minute, driving vitamin and firming actives into the eye and mouth area.",
-      "A cooling tip lets you massage precisely where skin has lost its bounce."
-     ]
-    },
-    {
-     "title": "d'Alba's own ingredients alongside nourishing and brightening actives",
-     "body": [
-      "Trufferol™ — Italian white truffle plus tocopherol.",
-      "Truvita™ — glutathione and vitamin C (ascorbic acid).",
-      "Nourish and firm: white truffle water and liposome, collagen water and liposome, PDRN, 13 vegan proteins, d'Alba-8 Blending Oil.",
-      "Brighten: sea buckthorn water 30%, retinol liposome, glutathione-some, niacinamide.",
-      "Moisture: 8 hyaluronic acids.",
-      "Patented ingredients: okra fruit extract and cauliflower mushroom extract."
-     ]
-    },
-    {
-     "title": "A vegan eye cream gentle enough for daily use",
-     "body": [
-      "Italian V-Label vegan certification, reviewed against the full ingredient list.",
-      "Primary skin irritation test completed in Korea."
-     ]
-    }
-   ],
-   "이미지": [
-    "Product shot",
-    "Product styling shot",
-    "Model applying it",
-    "How the galvanic tip works",
-    "About PDRN"
-   ]
-  }
+  ]
  },
- {
-  "slug": "vita-toning-anti-aging-spray-serum-8",
-  "en": "Vita Toning Anti-Aging Spray Serum 8%",
-  "ko": "달바 비타 토닝 안티에이징 스프레이 세럼 8퍼센트",
-  "스펙": {
-   "용량": "70ml",
-   "타겟": "모든 피부"
-  },
-  "포지셔닝": {
-   "문구": "복합적인 피부 고민 해결을 위한 생기&탄력 멀티 케어 스프레이 세럼",
-   "태그": [
-    "#올인원케어",
-    "#농축탄력세럼",
-    "#비타민세럼",
-    "#뿌리는8퍼센트세럼",
-    "#항산화세럼"
-   ]
-  },
-  "특징": [
-   {
-    "제목": "화이트 트러플*8%, 콜라겐수8%, 보습오일8% 농축 세럼으로 흔들림 없는 피부 탄력",
-    "설명": [
-     "피부에 진한 영양 탄력감을 선사해주어 탄력있고 윤기나는 피부로 케어"
-    ]
-   },
-   {
-    "제목": "비타민나무수 58.9%·순도 99% 비타민C·순도 98% 글루타티온의 시너지로 생기 더하기",
-    "설명": [
-     "정제수 대신 비타민나무수 베이스로 58.9%가 함유된 미백 기능성 베이스에",
-     "순도 높은 비타민C + 글루타티온을 더해 생기 잃은 칙칙한 피부를 밝게 브라이트닝"
-    ]
-   },
-   {
-    "제목": "단 2주, 주름 25.81%, 리프팅 49.58%, 피부톤 1.15% 개선으로 얼리 안티에이징 케어",
-    "설명": [
-     "안티에이징(주름, 리프팅, 피부톤) 인체적용시험 완료",
-     "칙칙하고 늘어져 있던 피부를 끌어올려 화사하게 밝혀주어 빛나는 텐션 피부로 개선",
-     "피부 노화 케어를 위한 항산화 in vitro 테스트 완료"
-    ]
-   },
-   {
-    "제목": "가볍게 내려앉는 미세 안개분사로 뭉침없이 탄력&생기 밀착광 선사",
-    "설명": [
-     "미세한 입자의 안개분사 세럼이 얼굴에 포근하게 내려앉아 수시로 뿌려도 부담 없는 편안함",
-     "얼굴 전체 고르게 감싸주는 분사각으로 피부 굴곡마다 섬세하게 올인원 케어"
-    ]
-   },
-   {
-    "제목": "달바 독자 성분과 영양/생기 성분 시너지로 프리미엄 케어",
-    "설명": [
-     "달바 독자 성분 : 트러페롤™ : 달바 독자 탄력 성분 (이탈리아산 화이트 트러플*+토코페롤)",
-     "트러비타™ : 달바 독자 생기케어 성분(글루타티온, 비타민C(아스코빅애씨드))",
-     "영양/탄력: 흰서양송로수, 콜라겐수, 비건 단백질 8종, 달바–8 블렌딩 오일",
-     "생기/광채: 비타민나무수 58.9%, 나이아신아마이드",
-     "수분/보습: 히알루론산 8종"
-    ]
-   },
-   {
-    "제목": "매일 사용하는, 피부가 편안한 비건 세럼",
-    "설명": [
-     "전성분 까다로운 기준의 이탈리아 V-Label 비건 정식 인증 완료",
-     "안티에이징(주름, 리프팅, 피부톤), 인체피부 일차자극(저자극) 인체적용시험 완료"
-    ]
-   }
-  ],
-  "기타": [
+ "vita-toning-anti-aging-spray-serum-8": {
+  "항목": [
    {
     "제목": "제품 이름의 8% 가 무엇인가",
     "본문": [
@@ -1414,136 +707,10 @@
      "It holds a Dermatest EXCELLENT rating from Germany, and the antioxidant work was in-vitro. In-vitro means in a dish, not on human skin, so don't claim the same thing happens on the face."
     ]
    }
-  ],
-  "en판": {
-   "스펙": {
-    "용량": "70ml",
-    "타겟": "All skin types"
-   },
-   "한줄": "A firming, brightening serum you mist on — white truffle, collagen water and moisturising oil at 8% each.",
-   "특징": [
-    {
-     "title": "White truffle 8%, collagen water 8%, moisturising oil 8% — a concentrate for skin that holds",
-     "body": [
-      "Rich nourishment and bounce, for skin that looks firm and glossy."
-     ]
-    },
-    {
-     "title": "58.9% sea buckthorn water with 99% vitamin C and 98% glutathione",
-     "body": [
-      "Sea buckthorn water stands in for purified water at 58.9%, as a brightening base.",
-      "High-purity vitamin C and glutathione brighten skin that has gone dull."
-     ]
-    },
-    {
-     "title": "Two weeks: wrinkles 25.81%, lifting 49.58%, tone 1.15% improved",
-     "body": [
-      "Anti-ageing study (wrinkles, lifting, tone) completed.",
-      "Skin that was dull and slack is lifted and brightened.",
-      "In-vitro antioxidant testing completed."
-     ]
-    },
-    {
-     "title": "A fine mist that settles evenly — no clumping, just a dewy hold",
-     "body": [
-      "Fine droplets land softly, so you can mist as often as you like.",
-      "The spray angle covers the whole face and follows its contours."
-     ]
-    },
-    {
-     "title": "d'Alba's own ingredients alongside nourishing and brightening actives",
-     "body": [
-      "Trufferol™ — Italian white truffle plus tocopherol, for bounce.",
-      "Truvita™ — glutathione and vitamin C (ascorbic acid), for glow.",
-      "Nourish and firm: white truffle water, collagen water, 8 vegan proteins, d'Alba-8 Blending Oil.",
-      "Brighten: sea buckthorn water 58.9%, niacinamide.",
-      "Moisture: 8 hyaluronic acids."
-     ]
-    },
-    {
-     "title": "A vegan serum gentle enough for daily use",
-     "body": [
-      "Italian V-Label vegan certification, reviewed against the full ingredient list.",
-      "Anti-ageing and primary skin irritation studies completed."
-     ]
-    }
-   ],
-   "이미지": [
-    "Current package (VITA TONING ANTI-AGING SERUM)",
-    "Product styling shot",
-    "Being sprayed",
-    "Texture",
-    "Product shot",
-    "Before / after shaking"
-   ]
-  }
+  ]
  },
- {
-  "slug": "vita-toning-capsule-serum",
-  "en": "Vita toning Capsule Serum",
-  "ko": "달바 비타 토닝 캡슐 세럼",
-  "스펙": {
-   "용량": "100ml · 50ml",
-   "기능성": "미백, 주름개선 2중 기능성 화장품"
-  },
-  "포지셔닝": {
-   "문구": "비타민나무수 81%에 가득 담긴 4만 비타민 캡슐로 피부에 형광등 ON 칙칙한 피부를 백옥같이 화사하게, 미백 안티에이징 케어 세럼",
-   "태그": [
-    "#4만캡슐(2만캡슐)",
-    "#항산화세럼",
-    "#얼리안티에이징",
-    "#기미잡티",
-    "#저자극"
-   ]
-  },
-  "특징": [
-   {
-    "제목": "미백 세럼과 4만* 비타민 캡슐 이중 포뮬러로 데일리 미백 안티에이징 케어",
-    "설명": [
-     "4만*개의 비타민 캡슐을 담은 미백 세럼으로 칙칙한 피부를 화사하게, 더블 생기 케어",
-     "두 제형이 빠르게 블렌딩되며 산뜻 수분막을 형성해 끈적임 없이 촉촉한 마무리",
-     "촘촘하게 머금은 수분빛 피부로 메이크업도 잘 먹는 화잘먹 피부 완성",
-     "본품 용량 100ml 기준(제조 편차 있음, 내부 산출 기준) / *본품 용량 50ml 기준(제조 편차 있음, 내부 산출 기준)"
-    ]
-   },
-   {
-    "제목": "비타민나무수 81% 함유 & 화사한 피부를 위한 생기 케어 비타민 성분",
-    "설명": [
-     "정제수 대체! 생기 가득 비타민 수분을 담은 비타민나무수 81% 함유",
-     "순도 98% 글루타티온을 안정적으로 리포좀화한 글루타티온좀 함유",
-     "순도 99% 비타민C(아스코빅애씨드) 함유",
-     "미백 기능성 성분 나이아신아마이드 2% 함유"
-    ]
-   },
-   {
-    "제목": "단 2주 사용으로 잡티&기미 완화+주름 개선+피부 톤 개선 효과 선사, 얼리 안티에이징 케어",
-    "설명": [
-     "피부의 빛을 밝히고 다크 스팟을 케어해 화사하게 빛나는 매끈 피부로 개선",
-     "피부 노화 케어를 위한 항산화 in vitro 테스트 완료"
-    ]
-   },
-   {
-    "제목": "비타 생기 케어 프리미엄 성분",
-    "설명": [
-     "미백&주름개선 2중 기능성",
-     "달바 독자 성분 : 트러페롤™ : 달바 독자 탄력 성분 (이탈리아산 화이트 트러플*+토코페롤)",
-     "트러비타™ : 달바 독자 생기케어 성분(글루타티온, 비타민C(아스코빅애씨드))",
-     "미백 기능성 성분: 나이아신아마이드 2%",
-     "생기 & 비타민: 비타민나무수81%, 비타민C(아스코빅애씨드), 글루타티온좀, 비타민E(토코페롤), 비타민K(메나다이온)",
-     "탄력 특허: 꽃송이버섯추출물",
-     "수분/보습: Blue Complex HR(보습 특허/수레국화꽃추출물, 보리지추출물, 라벤더꽃추출물, 마트리카리아꽃추출물, 클레리추출물, 히아신스전초추출물), 판테놀, 병풀추출물, 비건 세라마이드NP, CALM CELL(쑥잎추출물,감추출물, 쌀추출물, 하이드로제네이티드레시틴, 피토스테롤, 세라마이드엔피, 정제수, 글리세린, 다이프로필렌글라이콜, 1,2-헥산다이올)",
-     "광채: 달바-8 블렌딩 오일(해바라기씨오일, 마카다미아씨오일, 올리브오일, 동백나무씨오일, 아보카도오일, 돌콩오일, 달맞이꽃오일, 비타민나무열매오일)"
-    ]
-   },
-   {
-    "제목": "매일 써도 편안한 미백 세럼, 이탈리아 비건 V-라벨 인증 & 저자극 테스트 완료",
-    "설명": [
-     "까다로운 기준의 이탈리아V -Label 비건 정식 인증 완료",
-     "인체피부 일차자극(저자극) 테스트 완료"
-    ]
-   }
-  ],
-  "기타": [
+ "vita-toning-capsule-serum": {
+  "항목": [
    {
     "제목": "4만 개 캡슐이라는 숫자",
     "본문": [
@@ -1658,136 +825,102 @@
      "The antioxidant work was done in a dish. What was measured on people is the two-week study above — so keep antioxidant light ('it contains antioxidant ingredients') and lead with those figures."
     ]
    }
-  ],
-  "en판": {
-   "스펙": {
-    "용량": "100ml · 50ml",
-    "기능성": "Brightening + wrinkle care (dual functional claim)"
-   },
-   "한줄": "Forty thousand vitamin capsules floating in 81% sea buckthorn water — a brightening anti-ageing serum that turns the lights on in dull skin.",
-   "특징": [
-    {
-     "title": "A brightening serum and 40,000 vitamin capsules, layered in one bottle",
-     "body": [
-      "Forty thousand vitamin capsules suspended in a brightening serum, for two kinds of freshness at once.",
-      "The two textures blend fast into a light water film — hydrating, never sticky.",
-      "Skin holds enough water that makeup sits well on top.",
-      "Counted for the 100ml size (internal estimate; varies batch to batch). The 50ml size is counted separately."
-     ]
-    },
-    {
-     "title": "81% sea buckthorn water, plus the vitamins that brighten",
-     "body": [
-      "Sea buckthorn water replaces purified water at 81%.",
-      "Glutathione at 98% purity, stabilised in liposome form as Glutathione-some.",
-      "Vitamin C (ascorbic acid) at 99% purity.",
-      "Niacinamide 2%, the notified brightening active."
-     ]
-    },
-    {
-     "title": "Two weeks: dark spots faded, wrinkles softened, tone evened",
-     "body": [
-      "Brightens skin and works on dark spots for a smoother, clearer finish.",
-      "In-vitro antioxidant testing completed."
-     ]
-    },
-    {
-     "title": "Premium ingredients for vitamin freshness",
-     "body": [
-      "Dual functional claim: brightening and wrinkle care.",
-      "Trufferol™ — Italian white truffle plus tocopherol, d'Alba's firming ingredient.",
-      "Truvita™ — glutathione and vitamin C, d'Alba's glow ingredient.",
-      "Brightening active: niacinamide 2%.",
-      "Freshness and vitamins: sea buckthorn water 81%, vitamin C, Glutathione-some, vitamin E (tocopherol), vitamin K (menadione).",
-      "Firmness patent: cauliflower mushroom extract.",
-      "Moisture: Blue Complex HR (a moisture patent drawn from six herbs), panthenol, centella extract, vegan ceramide NP, Calm Cell.",
-      "Glow: d'Alba-8 Blending Oil."
-     ]
-    },
-    {
-     "title": "A brightening serum gentle enough for every day",
-     "body": [
-      "Italian V-Label vegan certification, reviewed against the full ingredient list.",
-      "Primary skin irritation test completed."
-     ]
-    }
-   ],
-   "이미지": [
-    "Texture with the capsules",
-    "Before / after two weeks",
-    "Before / after two weeks",
-    "Absorbing into skin",
-    "d'Alba-8 Blending Oil"
-   ]
-  }
+  ]
  },
- {
-  "slug": "vita-toning-capsule-cream",
-  "en": "Vita toning Capsule Cream",
-  "ko": "달바 비타 토닝 캡슐 크림",
-  "스펙": {
-   "용량": "55g (NET WT. 1.94 OZ.)",
-   "기능성": "미백, 주름개선 2중 기능성 화장품"
-  },
-  "포지셔닝": {
-   "문구": "비타민나무수 53% · 비타민C · 글루타티온 리포좀을 담은 미백 보습 크림이 “푸석한 피부를 생기 있게 빛나는 윤기 피부로 비타 케어”",
-   "태그": [
-    "#미백보습크림",
-    "#비타캡슐크림",
-    "#기미잡티케어",
-    "#얼리안티에이징",
-    "#항산화크림"
-   ]
-  },
-  "특징": [
+ "vita-toning-capsule-cleansing-oil": {
+  "항목": [
    {
-    "제목": "칙칙한 피부를 맑고 화사하게, Vita 캡슐로 데일리 비타 케어",
-    "설명": [
-     "비타민을 담은 Vita 캡슐이 담긴 미백 크림이 피부를 밝히는 맑은 생기 에너지 전달"
+    "제목": "피지와 같은 구조의 오일이라는 말",
+    "본문": [
+     "호호바오일은 화학 구조가 사람 피지와 닮아 있습니다. 그래서 굳어서 안 빠지는 블랙헤드가 이 오일에 잘 녹습니다.",
+     "'기름은 기름으로 지운다' 는 원리를 가장 잘 보여주는 성분이고, 이 제품이 왜 클렌징 오일인지에 대한 답이기도 합니다.",
+     "여기에 달바-8 블렌딩 오일이 더해져 피지와 노폐물을 함께 녹입니다. 카렌듈라꽃추출물과 카렌듈라꽃오일은 뉴질랜드산으로, 순하게 씻기도록 돕습니다."
+    ],
+    "title": "What 'structured like sebum' means",
+    "body": [
+     "Jojoba oil's chemical structure closely resembles human sebum. That's why blackheads that have hardened and won't shift dissolve into it.",
+     "It's the clearest demonstration of 'oil removes oil', and it's the answer to why this product is a cleansing oil at all.",
+     "d'Alba-8 Blending Oil works alongside it, dissolving sebum and debris together. The calendula flower extract and oil, both from New Zealand, keep the cleanse gentle."
     ]
    },
    {
-    "제목": "어두운 피부 · 톤 잡티 · 기미 · 주름을 한 번에 케어해 주는 얼리 안티에이징 크림",
-    "설명": [
-     "2주만에 잡티 및 기미 17.21% 완화주름 25.41%, 피부 톤 1.59% 개선",
-     "다크 스팟을 케어해 칙칙한 피부의 원인인 어두운 피부 · 톤 잡티 · 기미 · 주름을 한 번에 케어하는 얼리 안티에이징 크림",
-     "피부 노화 케어를 위한 항산화 in vitro 테스트 완료"
+    "제목": "Oil in Powder Pocket — 오일 안에 파우더가 들어 있습니다",
+    "본문": [
+     "오일 제형 안에 파우더를 안정화해 넣은 기술입니다. 평소에는 오일에 녹아 보이지 않다가, 얼굴에 올려 롤링하면 파우더가 퍼집니다.",
+     "퍼진 파우더가 모공 속 노폐물을 흡착해 끌어냅니다. 문질러서 긁어내는 것이 아니라 붙여서 떼어내는 방식이라 자극이 적습니다.",
+     "다른 클렌징 오일과 가장 뚜렷하게 구분되는 지점입니다. 방송에서 설명하기에도 그림이 그려집니다."
+    ],
+    "title": "Oil in Powder Pocket — there's powder inside the oil",
+    "body": [
+     "Powder stabilised inside an oil base. It stays dissolved and invisible until you roll it over your face, at which point the powder spreads out.",
+     "Once spread, it adsorbs debris out of pores — lifting it away rather than scrubbing it off, which is why it stays gentle.",
+     "It's the clearest point of difference from any other cleansing oil, and it's easy to picture when you describe it."
     ]
    },
    {
-    "제목": "비타민나무수 53% · 순수비타민C · 글루타티온 리포좀의 시너지로 생기 더하기",
-    "설명": [
-     "정제수 대신 비타민나무수 베이스로 53%가 함유된 미백 기능성 베이스에                                      비타민C + 글루타티온 리포좀을 더해 생기 잃은 칙칙한 피부를 밝게 화이트닝"
+    "제목": "어떤 시험을 마쳤나",
+    "본문": [
+     "한국피부과학연구원에서 21명을 대상으로 다섯 가지를 봤습니다. 모공 타이트닝(수·면적·깊이), 모공 부위 피지 분비량 감소, 피부 트리플톤(투명도·노란기·갈색기) 개선, 피부 투명도 개선, 블랙헤드 피지 세정입니다.",
+     "다섯 가지 모두 씻어낸 직후의 변화입니다. '세안하고 나면 바로 이렇게 됩니다' 로 말하면 정확하고, 그게 사실 클렌저에 기대하는 바이기도 합니다.",
+     "흥미로운 결과가 하나 있습니다. 캡슐이 없는 제형과 비교했을 때 캡슐이 든 제형 쪽의 맑기 개선율이 더 높게 나왔습니다. 캡슐이 장식이 아니라는 근거입니다.",
+     "저자극 시험은 31명을 대상으로 따로 마쳤습니다."
+    ],
+    "title": "What has been tested",
+    "body": [
+     "Five things, at the Korea Institute of Dermatological Sciences with 21 people: pore tightening (count, area, depth), sebum output around the pores, triple-tone (clarity, yellowness, brownness), skin clarity, and blackhead cleansing.",
+     "All five measure what happens right after rinsing. 'As soon as you've washed, this is what you get' is both accurate and exactly what you'd want from a cleanser.",
+     "One result is worth knowing: against a version made without the capsules, the capsule formula came out better on clarity. That's the evidence the capsules aren't decoration.",
+     "The irritation test was run separately on 31 people."
     ]
    },
    {
-    "제목": "비타민 캡슐 & 미백 크림 체계적인 비타 더블 레이어링으로 맑고 생기 있는 피부 선사",
-    "설명": [
-     "밀도 있는 보습 크림 베이스와 비타민 E, K를 담은 Vita 캡슐이 이중 레이어링으로 생기 에너지 전달하여 맑고 투명하게 빛나는 피부 선사"
+    "제목": "모공과 피지 쪽 성분",
+    "본문": [
+     "ANTI SEBUM 은 대왕소나무잎추출물입니다. 피지 쪽을 맡습니다.",
+     "ACZERO 는 피지 특허 성분입니다. 녹차, 오카무라큰실말, 흰버드나무껍질, 병풀잎, 커피콩, 베르가모트잎, 소나무잎 추출물을 묶은 것입니다.",
+     "각질 쪽은 PHA(글루코노락톤)와 LHA(카프릴로일살리실릭애씨드)가 맡습니다. 둘 다 자극이 적은 각질 성분으로, 클렌징 오일에 들어가는 경우는 흔치 않습니다."
+    ],
+    "title": "The pore and sebum side",
+    "body": [
+     "ANTI SEBUM is an extract of Montezuma pine leaf, handling the oil side.",
+     "ACZERO is a patented sebum ingredient bundling green tea, Okamura seaweed, white willow bark, centella leaf, coffee bean, bergamot leaf and pine leaf extracts.",
+     "Dead skin is handled by PHA (gluconolactone) and LHA (capryloyl salicylic acid) — both gentle exfoliating acids, and both unusual to find in a cleansing oil."
     ]
    },
    {
-    "제목": "특허 받은 무막(無幕) 캡슐로 잔여감 ZERO, 순하게 생기 공급",
-    "설명": [
-     "특허받은 무막 캡슐이 피부에 편안하게 녹아들어 순하게 생기 공급"
+    "제목": "진정과 생기 쪽 성분",
+    "본문": [
+     "자작나무수액과 Calming Complex Lipocalm(병풀추출물, 무화과추출물, 세라마이드엔피)이 진정을 맡습니다. 씻고 난 뒤 당김을 줄이는 자리입니다.",
+     "레드 플라워 블렌딩 오일은 자초오일, 로즈힙열매오일, 센티드제라늄꽃오일, 다마스크장미꽃오일 네 가지입니다. 각질 케어 쪽입니다.",
+     "생기는 글루타티온과 비타민C 가 맡고, 달바 독자 성분인 트러페롤™ 과 트러비타™ 가 함께 들어갑니다."
+    ],
+    "title": "The soothing and brightening side",
+    "body": [
+     "Birch sap and Calming Complex Lipocalm (centella extract, fig extract, ceramide NP) handle soothing — the part that keeps skin from feeling tight afterwards.",
+     "Red Flower Blending Oil is four oils: gromwell root, rosehip fruit, scented geranium flower and damask rose. It works on dead skin.",
+     "Brightness comes from glutathione and vitamin C, alongside d'Alba's own Trufferol™ and Truvita™."
     ]
    },
    {
-    "제목": "피부에 활력을 불어넣어주는 생기/보습 성분 & 달바 독자 성분의 시너지",
-    "설명": [
-     "생기 광채 성분: Truvita™, 비타민나무수, 글루타티온, 비타민C(아스코빅애씨드), 비타민E(토코페롤),비타민K(메나다이온)",
-     "달바 독자 성분: Trufferol™, 이탈리아산 화이트 트러플, 달바8가지 블렌딩 오일",
-     "보습 탄력 성분: 부활초(트루오브예리코추출물), 천년초(보검선인장추출물), 세라마이드엔피",
-     "3종 특허 성분: [보습]3종 히알루론산, [미백]금화규 추출물, [탄력]Trufferol™(화이트트러플+토코페롤)",
-     "진정 성분: Lucky Herb 12 Complex, 판테놀, 병풀추출물, 버지니아풍년화추출물, 연꽃꽃추출물"
+    "제목": "두 단계로 씁니다",
+    "본문": [
+     "물기 없는 손에 2~3번 펌핑해 맨 얼굴이나 메이크업 위에 올리고 마사지합니다. 이때 파우더가 퍼지며 노폐물을 흡착합니다.",
+     "그다음 손에 물을 약간 묻혀 30초 정도 다시 마사지합니다. 여기서 유화가 일어나 오일이 하얗게 변합니다.",
+     "마지막으로 미온수로 헹굽니다. 물과 닿는 순간 빠르게 유화되는 제형이라 오래 문지를 필요가 없습니다.",
+     "제형이 도톰해서 롤링할 때 마찰 자극이 적습니다. 얇은 오일처럼 흘러내리지 않습니다."
+    ],
+    "title": "Two steps",
+    "body": [
+     "With dry hands, pump 2–3 times onto bare skin or over makeup and massage. This is where the powder spreads and picks up debris.",
+     "Then wet your hands slightly and massage another 30 seconds. This is where it emulsifies and turns milky.",
+     "Rinse with lukewarm water. It emulsifies quickly on contact, so there's no need to keep working at it.",
+     "The texture is thick enough to cushion the massage — it doesn't run off the way a thin oil does."
     ]
-   },
-   {
-    "제목": "이탈리아 비건 V-라벨 인증 & 인체피부 일차자극 테스트(저자극 테스트) 완료",
-    "설명": []
    }
-  ],
-  "기타": [
+  ]
+ },
+ "vita-toning-capsule-cream": {
+  "항목": [
    {
     "제목": "무막 캡슐이 무엇인가",
     "본문": [
@@ -1886,334 +1019,10 @@
      "The antioxidant work was done in a dish. What was measured on people is the two-week study above — lead with that."
     ]
    }
-  ],
-  "en판": {
-   "스펙": {
-    "용량": "55g",
-    "기능성": "Brightening + wrinkle care (dual functional claim)"
-   },
-   "한줄": "A brightening moisturiser holding vitamin capsules — 53% sea buckthorn water, vitamin C and liposomal glutathione for skin that's gone dull and dry.",
-   "특징": [
-    {
-     "title": "Vita capsules that turn dull skin clear and bright, every day",
-     "body": [
-      "Vitamin-filled Vita capsules sit in a brightening cream, releasing freshness into the skin."
-     ]
-    },
-    {
-     "title": "Dark skin, uneven patches, spots and lines, handled at once",
-     "body": [
-      "Two weeks: blemishes and dark spots down 17.21%, wrinkles down 25.41%, tone up 1.59%.",
-      "Works on the dark spots behind dull-looking skin.",
-      "In-vitro antioxidant testing completed."
-     ]
-    },
-    {
-     "title": "53% sea buckthorn water with pure vitamin C and liposomal glutathione",
-     "body": [
-      "Sea buckthorn water replaces purified water at 53% as the brightening base, with vitamin C and liposomal glutathione layered on top."
-     ]
-    },
-    {
-     "title": "Two layers — vitamin capsules over a brightening cream",
-     "body": [
-      "A dense moisturising base and capsules carrying vitamins E and K, working together for clear, lit skin."
-     ]
-    },
-    {
-     "title": "A patented membrane-free capsule — nothing left behind",
-     "body": [
-      "The patented capsule melts into the skin with no residue."
-     ]
-    },
-    {
-     "title": "Freshness and moisture, alongside d'Alba's own ingredients",
-     "body": [
-      "Glow: Truvita™, sea buckthorn water, glutathione, vitamin C, vitamin E, vitamin K.",
-      "d'Alba's own: Trufferol™, Italian white truffle, d'Alba-8 Blending Oil.",
-      "Moisture and firmness: rose of Jericho, prickly pear, ceramide NP.",
-      "Three patented ingredients — a triple hyaluronic acid for moisture, sunflower extract for brightening, Trufferol™ for firmness.",
-      "Soothing: Lucky Herb 12 Complex, panthenol, centella extract, witch hazel, lotus flower extract."
-     ]
-    },
-    {
-     "title": "Italian V-Label vegan certification and a completed skin irritation test",
-     "body": []
-    }
-   ],
-   "이미지": [
-    "Product shot (Capsule Moisturizing Cream)",
-    "Capsule texture",
-    "Model shot"
-   ]
-  }
+  ]
  },
- {
-  "slug": "vita-toning-capsule-cleansing-oil",
-  "en": "Vita toning Capsule Cleansing Oil",
-  "ko": "달바 비타 토닝 캡슐 클렌징 오일",
-  "스펙": {
-   "용량": "150ml",
-   "기능성": "비기능성"
-  },
-  "포지셔닝": {
-   "문구": "피지 유사구조 오일로 진한 메이크업부터 블랙헤드까지 확실하게 클렌징! “맑고 깨끗하게 피부 본연의 빛을 북돋아주는 비타 클렌징”",
-   "태그": [
-    "#비타캡슐",
-    "#비타민클렌저",
-    "#촉촉클렌저",
-    "#생기클렌저"
-   ]
-  },
-  "특징": [
-   {
-    "제목": "피지 유사 구조 오일로 순하지만 확실하게 메이크업부터 블랙헤드까지 말끔 세정력",
-    "설명": [
-     "피지와 유사한 구조를 가진 호호바오일이 함유되어 깔끔하게 이지-클렌징",
-     "물과 닿는 순간 빠른 유화 과정으로 부드럽게 노폐물을 녹여 퀵-클렌징"
-    ]
-   },
-   {
-    "제목": "블랙헤드와 피지는 오일 성분으로 부드럽게, 순삭 피지 케어",
-    "설명": [
-     "굳어서 배출이 안 되는 블랙헤드를 오일로 부드럽게 녹여 보들보들한 피부",
-     "파우더 워시 시스템의 흡착 작용으로 자극 없이 부드럽게 모공 노폐물을 싹- 쾌적한 클렌징",
-     "인체적용시험: 블랙헤드 세정"
-    ]
-   },
-   {
-    "제목": "Vita 캡슐 클렌징만으로도 깨끗하고 투명한 피부로 브라이트닝",
-    "설명": [
-     "메이크업은 물론 블랙헤드, 각질 등 노폐물을 잘 지워내 맑고 깨끗해지는 안색",
-     "칙칙한 피부를 맑고 화사하게, Vita 캡슐로 본연의 빛을 붇돋아주는 데일리 비타 케어"
-    ]
-   },
-   {
-    "제목": "부드럽고 도톰한 롤링감과 세안 후에도 당김 없는 촉촉함",
-    "설명": [
-     "부드러운 롤링감으로 클렌징 시 마찰 자극 걱정 없이 편안하고 순하게!",
-     "달바 8가지 오일 등 보습 성분이 수분을 지켜줘 말끔하게 지우고도 당김 없이 촉촉한 마무리"
-    ]
-   },
-   {
-    "제목": "이탈리아 비건 V-라벨 인증 & 인체피부 일차자극 테스트(저자극 테스트) 완료",
-    "설명": []
-   }
-  ],
-  "기타": [
-   {
-    "제목": "피지와 같은 구조의 오일이라는 말",
-    "본문": [
-     "호호바오일은 화학 구조가 사람 피지와 닮아 있습니다. 그래서 굳어서 안 빠지는 블랙헤드가 이 오일에 잘 녹습니다.",
-     "'기름은 기름으로 지운다' 는 원리를 가장 잘 보여주는 성분이고, 이 제품이 왜 클렌징 오일인지에 대한 답이기도 합니다.",
-     "여기에 달바-8 블렌딩 오일이 더해져 피지와 노폐물을 함께 녹입니다. 카렌듈라꽃추출물과 카렌듈라꽃오일은 뉴질랜드산으로, 순하게 씻기도록 돕습니다."
-    ],
-    "title": "What 'structured like sebum' means",
-    "body": [
-     "Jojoba oil's chemical structure closely resembles human sebum. That's why blackheads that have hardened and won't shift dissolve into it.",
-     "It's the clearest demonstration of 'oil removes oil', and it's the answer to why this product is a cleansing oil at all.",
-     "d'Alba-8 Blending Oil works alongside it, dissolving sebum and debris together. The calendula flower extract and oil, both from New Zealand, keep the cleanse gentle."
-    ]
-   },
-   {
-    "제목": "Oil in Powder Pocket — 오일 안에 파우더가 들어 있습니다",
-    "본문": [
-     "오일 제형 안에 파우더를 안정화해 넣은 기술입니다. 평소에는 오일에 녹아 보이지 않다가, 얼굴에 올려 롤링하면 파우더가 퍼집니다.",
-     "퍼진 파우더가 모공 속 노폐물을 흡착해 끌어냅니다. 문질러서 긁어내는 것이 아니라 붙여서 떼어내는 방식이라 자극이 적습니다.",
-     "다른 클렌징 오일과 가장 뚜렷하게 구분되는 지점입니다. 방송에서 설명하기에도 그림이 그려집니다."
-    ],
-    "title": "Oil in Powder Pocket — there's powder inside the oil",
-    "body": [
-     "Powder stabilised inside an oil base. It stays dissolved and invisible until you roll it over your face, at which point the powder spreads out.",
-     "Once spread, it adsorbs debris out of pores — lifting it away rather than scrubbing it off, which is why it stays gentle.",
-     "It's the clearest point of difference from any other cleansing oil, and it's easy to picture when you describe it."
-    ]
-   },
-   {
-    "제목": "어떤 시험을 마쳤나",
-    "본문": [
-     "한국피부과학연구원에서 21명을 대상으로 다섯 가지를 봤습니다. 모공 타이트닝(수·면적·깊이), 모공 부위 피지 분비량 감소, 피부 트리플톤(투명도·노란기·갈색기) 개선, 피부 투명도 개선, 블랙헤드 피지 세정입니다.",
-     "다섯 가지 모두 씻어낸 직후의 변화입니다. '세안하고 나면 바로 이렇게 됩니다' 로 말하면 정확하고, 그게 사실 클렌저에 기대하는 바이기도 합니다.",
-     "흥미로운 결과가 하나 있습니다. 캡슐이 없는 제형과 비교했을 때 캡슐이 든 제형 쪽의 맑기 개선율이 더 높게 나왔습니다. 캡슐이 장식이 아니라는 근거입니다.",
-     "저자극 시험은 31명을 대상으로 따로 마쳤습니다."
-    ],
-    "title": "What has been tested",
-    "body": [
-     "Five things, at the Korea Institute of Dermatological Sciences with 21 people: pore tightening (count, area, depth), sebum output around the pores, triple-tone (clarity, yellowness, brownness), skin clarity, and blackhead cleansing.",
-     "All five measure what happens right after rinsing. 'As soon as you've washed, this is what you get' is both accurate and exactly what you'd want from a cleanser.",
-     "One result is worth knowing: against a version made without the capsules, the capsule formula came out better on clarity. That's the evidence the capsules aren't decoration.",
-     "The irritation test was run separately on 31 people."
-    ]
-   },
-   {
-    "제목": "모공과 피지 쪽 성분",
-    "본문": [
-     "ANTI SEBUM 은 대왕소나무잎추출물입니다. 피지 쪽을 맡습니다.",
-     "ACZERO 는 피지 특허 성분입니다. 녹차, 오카무라큰실말, 흰버드나무껍질, 병풀잎, 커피콩, 베르가모트잎, 소나무잎 추출물을 묶은 것입니다.",
-     "각질 쪽은 PHA(글루코노락톤)와 LHA(카프릴로일살리실릭애씨드)가 맡습니다. 둘 다 자극이 적은 각질 성분으로, 클렌징 오일에 들어가는 경우는 흔치 않습니다."
-    ],
-    "title": "The pore and sebum side",
-    "body": [
-     "ANTI SEBUM is an extract of Montezuma pine leaf, handling the oil side.",
-     "ACZERO is a patented sebum ingredient bundling green tea, Okamura seaweed, white willow bark, centella leaf, coffee bean, bergamot leaf and pine leaf extracts.",
-     "Dead skin is handled by PHA (gluconolactone) and LHA (capryloyl salicylic acid) — both gentle exfoliating acids, and both unusual to find in a cleansing oil."
-    ]
-   },
-   {
-    "제목": "진정과 생기 쪽 성분",
-    "본문": [
-     "자작나무수액과 Calming Complex Lipocalm(병풀추출물, 무화과추출물, 세라마이드엔피)이 진정을 맡습니다. 씻고 난 뒤 당김을 줄이는 자리입니다.",
-     "레드 플라워 블렌딩 오일은 자초오일, 로즈힙열매오일, 센티드제라늄꽃오일, 다마스크장미꽃오일 네 가지입니다. 각질 케어 쪽입니다.",
-     "생기는 글루타티온과 비타민C 가 맡고, 달바 독자 성분인 트러페롤™ 과 트러비타™ 가 함께 들어갑니다."
-    ],
-    "title": "The soothing and brightening side",
-    "body": [
-     "Birch sap and Calming Complex Lipocalm (centella extract, fig extract, ceramide NP) handle soothing — the part that keeps skin from feeling tight afterwards.",
-     "Red Flower Blending Oil is four oils: gromwell root, rosehip fruit, scented geranium flower and damask rose. It works on dead skin.",
-     "Brightness comes from glutathione and vitamin C, alongside d'Alba's own Trufferol™ and Truvita™."
-    ]
-   },
-   {
-    "제목": "두 단계로 씁니다",
-    "본문": [
-     "물기 없는 손에 2~3번 펌핑해 맨 얼굴이나 메이크업 위에 올리고 마사지합니다. 이때 파우더가 퍼지며 노폐물을 흡착합니다.",
-     "그다음 손에 물을 약간 묻혀 30초 정도 다시 마사지합니다. 여기서 유화가 일어나 오일이 하얗게 변합니다.",
-     "마지막으로 미온수로 헹굽니다. 물과 닿는 순간 빠르게 유화되는 제형이라 오래 문지를 필요가 없습니다.",
-     "제형이 도톰해서 롤링할 때 마찰 자극이 적습니다. 얇은 오일처럼 흘러내리지 않습니다."
-    ],
-    "title": "Two steps",
-    "body": [
-     "With dry hands, pump 2–3 times onto bare skin or over makeup and massage. This is where the powder spreads and picks up debris.",
-     "Then wet your hands slightly and massage another 30 seconds. This is where it emulsifies and turns milky.",
-     "Rinse with lukewarm water. It emulsifies quickly on contact, so there's no need to keep working at it.",
-     "The texture is thick enough to cushion the massage — it doesn't run off the way a thin oil does."
-    ]
-   }
-  ],
-  "en판": {
-   "스펙": {
-    "용량": "150ml",
-    "기능성": "Not a functional cosmetic"
-   },
-   "한줄": "A cleansing oil built like your own sebum — it melts blackheads out, and the powder inside lifts the debris away.",
-   "특징": [
-    {
-     "title": "An oil structured like sebum — gentle, but it takes off everything from makeup to blackheads",
-     "body": [
-      "Jojoba oil shares a structure with sebum, so it lifts grime off easily.",
-      "It emulsifies the moment it meets water, dissolving debris fast."
-     ]
-    },
-    {
-     "title": "Blackheads and oil, softened away",
-     "body": [
-      "Hardened blackheads that won't shift are melted out by the oil.",
-      "A powder wash system adsorbs pore debris without scrubbing.",
-      "Human trial: blackhead cleansing."
-     ]
-    },
-    {
-     "title": "Brightening from the cleanse alone, thanks to the Vita capsules",
-     "body": [
-      "Makeup, blackheads and dead skin come away, and the complexion reads clearer.",
-      "Vita capsules bring daily vitamin care to dull skin."
-     ]
-    },
-    {
-     "title": "A thick, cushioned roll and no tightness afterwards",
-     "body": [
-      "Thick enough that you can massage without friction.",
-      "d'Alba's eight oils hold water in, so skin doesn't feel tight once it's rinsed."
-     ]
-    },
-    {
-     "title": "Italian V-Label vegan certification and a completed skin irritation test",
-     "body": []
-    }
-   ],
-   "이미지": [
-    "Texture with the capsules",
-    "Texture",
-    "Debris inside a pore",
-    "Dispensed into the hand",
-    "Model shot",
-    "Removing makeup"
-   ]
-  }
- },
- {
-  "slug": "signature-vita-capsule-hydrogel-mask-8-shape",
-  "en": "Signature Vita Capsule Hydrogel Mask 8-Shape",
-  "ko": "달바 시그니처 비타 캡슐 안티에이징 콜라겐 하이드로겔 마스크 8 쉐입 d'Alba Signature Vita Capsule Anti-Aging Collagen Hydrogel Mask 8 Shape",
-  "스펙": {
-   "용량": "1매 · 44g · 44g*4ea",
-   "기능성": "미백, 주름개선 2중 기능성 화장품"
-  },
-  "포지셔닝": {
-   "문구": "1,000개 이상의 비타민C 캡슐이 가득 담긴 발효 콜라겐수 70% 세럼을 그대로 굳혀 만든 기능성* 하이드로겔 마스크로 잡티 · 기미 · 피부톤 · 리프팅 · 주름을 한 번에! 8가지 쉐입 마스크로 빈틈없이 밀착 풀페이스&넥 안티에이징 케어",
-   "태그": [
-    "#1,000비타캡슐",
-    "#콜라겐수70%",
-    "#8쉐입케어",
-    "#비타안티에이징",
-    "#프리미엄홈케어"
-   ]
-  },
-  "특징": [
-   {
-    "제목": "1,000개 이상의 비타민C 캡슐과  콜라겐수 70% 세럼을 그대로 굳혀 만든  기능성 하이드로겔 마스크",
-    "설명": [
-     "생기를 가득 담은 비타민C(아스코빅애씨드) 캡슐이 마스크팩에 콕콕 박혀 집중 생기 케어",
-     "하이드로겔 시트가 마치 콜라겐을 피부에 얇게 랩핑한 듯 빈틈 없이 밀착되어 남다른 수분 쿨링감 선사",
-     "영양 성분이 피부에 흡수되며 투명하게 변하는 반전 제형"
-    ]
-   },
-   {
-    "제목": "단 2주 사용으로 잡티 · 기미 완화는 물론 안면(볼) 리프팅 개선, 주름 개선, 피부톤 개선까지",
-    "설명": [
-     "다각도 안티에이징 케어 솔루션",
-     "힘 없이 느슨해지고 주름진 피부를 탱탱하게, 칙칙한 피부, 다크 스팟을을 환하게 올인원 케어",
-     "시그니처 스킨케어를 위한 피부 텐션&생기 하이엔드 독자 성분 Truffle Tension Complex™ 함유"
-    ]
-   },
-   {
-    "제목": "아이 · 넥 · 팔자 · 미간은 한 번 더, 8 쉐입 마스크로 더블 링클 케어 디자인 적용",
-    "설명": [
-     "피부 고민 부위를 8-Shape으로 나누어 쉽게 주름지고 칙칙해져 고민이 집중되는 부위는 한 번 더 밀착 케어",
-     "오직 달바에서 만날 수 있는 빈틈 없는 프리미엄 디자인 마스크"
-    ]
-   },
-   {
-    "제목": "All-Night-Care 수면팩으로 프리미엄 집중 관리",
-    "설명": [
-     "농축된 세럼이 흐르지 않아 깔끔하고 간편하게, 스킨케어 마지막 단계에서 수면팩으로 사용 가능",
-     "중요한 약속 전 날, 인텐시브 케어로 자신감 있는 화잘먹 피부 완성"
-    ]
-   },
-   {
-    "제목": "탄력&생기 특화 프리미엄 성분 *미백, 주름개선 2중 기능성 화장품*",
-    "설명": [
-     "(비타민C 캡슐)",
-     "비타 케어: 비타민C(아스코빅애씨드), 비타민C유도체(아스코빌테트라이소팔미테이트), 아스타잔틴",
-     "(콜라겐 세럼 베이스)",
-     "달바의 독자 프리미엄 성분 트러페롤™",
-     "달바의 독자 하이엔드 케어 성분 트러플 텐션 콤플렉스™(이탈리아산 화이트 트러플, 순도 99% 비타민C(아스코빅애씨드), 순도 98% 글루타티온, 비건 단백질 12종, 히알루론산 10종, 콜라겐 추출물)",
-     "영양 · 탄력  케어 : 발효 콜라겐수 70%,, 쌀PDRN(소듐디엔에이),, 레티놀",
-     "생기  케어 :  비타민나무수 12,000ppm, 비타민C(아스코빅애씨드,) 글루타티온좀(글루타티온 ), 나이아신아마이드 20,000ppm,",
-     "모공 케어: 특허 탄닌 콤플렉스(식물성)",
-     "수분&보습 : 비건 세라마이드, 판테놀"
-    ]
-   },
-   {
-    "제목": "저자극 테스트& 비건 인증으로 편안하지만 농축된 집중 케어",
-    "설명": [
-     "까다로운 기준의 이탈리아V -Label 비건 정식 인증 완료",
-     "인체피부 일차자극(저자극) 테스트 완료",
-     "우려 성분 17종 불검출 테스트 완료"
-    ]
-   }
-  ],
-  "기타": [
+ "signature-vita-capsule-hydrogel-mask-8-shape": {
+  "항목": [
    {
     "제목": "시트가 없는 마스크",
     "본문": [
@@ -2334,127 +1143,10 @@
      "One: it passed a primary skin irritation test. Two: it tested free of 17 substances of concern. That second one is against a specific list, so 'none of those 17 were detected' is the accurate phrasing."
     ]
    }
-  ],
-  "en판": {
-   "스펙": {
-    "용량": "44g",
-    "기능성": "Brightening + wrinkle care (dual functional claim)"
-   },
-   "한줄": "44g of serum set solid into a mask. No sheet at all — it comes in eight pieces for the face and neck.",
-   "특징": [
-    {
-     "title": "Over a thousand vitamin C capsules and 70% fermented collagen water serum, set solid",
-     "body": [
-      "Vitamin C capsules studded through the mask deliver freshness where it lands.",
-      "The hydrogel wraps the face like a thin film of collagen, cool and completely flush.",
-      "As the actives absorb, the mask turns clear — you can watch it happen."
-     ]
-    },
-    {
-     "title": "Two weeks: spots faded, cheeks lifted, lines softened, tone evened",
-     "body": [
-      "Anti-ageing from several angles at once.",
-      "Skin that had slackened is firmed; dullness and dark spots are brightened.",
-      "Contains Truffle Tension Complex™, d'Alba's high-end firming ingredient."
-     ]
-    },
-    {
-     "title": "Eyes, neck, nasolabial folds and brow get a second pass — an 8-shape design",
-     "body": [
-      "Split into eight shapes, so the places that line and dull fastest get covered twice.",
-      "A premium mask design you won't find elsewhere."
-     ]
-    },
-    {
-     "title": "All-night care — use it as a sleeping mask",
-     "body": [
-      "The serum is concentrated enough that it doesn't run, so it works as the last step before bed.",
-      "The night before something that matters, this is the intensive option."
-     ]
-    },
-    {
-     "title": "Premium ingredients for firmness and freshness",
-     "body": [
-      "Vitamin C capsules: ascorbic acid, a vitamin C derivative, astaxanthin.",
-      "Collagen serum base: Trufferol™ and Truffle Tension Complex™ (Italian white truffle, 99% vitamin C, 98% glutathione, 12 vegan proteins, 10 hyaluronic acids, collagen extract).",
-      "Nourish and firm: 70% fermented collagen water, rice PDRN, retinol.",
-      "Brighten: sea buckthorn water 12,000ppm, vitamin C, Glutathione-some, niacinamide 20,000ppm.",
-      "Pores: a patented plant-based tannin complex.",
-      "Moisture: vegan ceramide, panthenol."
-     ]
-    },
-    {
-     "title": "Gentle enough despite the concentration",
-     "body": [
-      "Primary skin irritation test completed.",
-      "Tested free of 17 substances of concern."
-     ]
-    }
-   ],
-   "이미지": [
-    "The eight shapes in place",
-    "Peeling it off",
-    "The order to apply the eight shapes"
-   ]
-  }
+  ]
  },
- {
-  "slug": "signature-vita-collagen-pore-tightening-deep-cleansing-balm",
-  "en": "Signature Vita Collagen Pore Tightening Deep Cleansing Balm",
-  "ko": "달바 시그니처 비타 콜라겐 모공 탄력 딥 클렌징 밤",
-  "스펙": {
-   "용량": "50ML",
-   "기능성": "비기능성"
-  },
-  "포지셔닝": {
-   "문구": "강력한 클렌징부터 모공 탄력 개선까지 매일 새것처럼 갈아쓰는 그라인딩 클렌징 밤",
-   "태그": [
-    "#딥클렌징밤",
-    "#올인원클렌저",
-    "#신선하게갈아쓰는클렌저",
-    "#비타콜라겐"
-   ]
-  },
-  "특징": [
-   {
-    "제목": "강력한 세정으로 메이크업부터 노폐물까지 한 스텝으로 끝내는 올인원 딥 클렌징",
-    "설명": [
-     "밤, 오일, 밀크 3in1 효과를 한 번에 선사하는 말끔한 세정력을 선사하며,",
-     "당기지 않는 탄력있고 촉촉한 마무리감을 선사하는 올인원 소프트 딥 클렌징 밤",
-     "단순한 클렌징 효과뿐 아니라, 모공 탄력 & 피부톤/결 케어 효과 선사",
-     "메이크업과 노폐물과 블랙헤드 세정은 물론, 모공 탄력 / 모공 크기 축소 케어 효과를 선사하며",
-     "피부톤/결 케어까지 가능한 탄력&맑은 피부 연출 클렌저"
-    ]
-   },
-   {
-    "제목": "이탈리아산 레몬즙+순도 99% 비타민C를 리포좀화한 ‘레몬비타민좀’ 함유",
-    "설명": [
-     "이탈리아 시칠리아산 레몬과 순도 99% 비타민C를 리포좀화하여 유효 성분의 안정성을 높여,",
-     "비타민의 생기 에너지를 피부에 그대로 전달"
-    ]
-   },
-   {
-    "제목": "스패츌러 없이 간편하게, 매일 깨끗하고 신선한 클렌징 루틴",
-    "설명": [
-     "물 한 방울 닿지 않는 밀폐형 패키지 설계로 비타민의 산패 없이, 콜라겐의 탄탄함 그대로",
-     "매일 신선한 컨디션으로 사용 가능"
-    ]
-   },
-   {
-    "제목": "피부에 샤르르 녹는 3D Network 소프트 멜팅 클렌징 밤",
-    "설명": [
-     "3D Network 기술이 적용된 쿠션감 있는 소프트 멜팅 텍스처로 피부에 부드럽고 쫀쫀하게 밀착되어",
-     "노폐물과 클렌징을 깨끗이 세정"
-    ]
-   },
-   {
-    "제목": "피부가 편안한 이탈리아 비건 브이라벨 인증 & 저자극 데일리 케어",
-    "설명": [
-     "이탈리아 비건 브이라벨 인증과 저자극 테스트 완료로 피부에 편안하고 순한 사용감"
-    ]
-   }
-  ],
-  "기타": [
+ "signature-vita-collagen-pore-tightening-deep-cleansing-balm": {
+  "항목": [
    {
     "제목": "다이얼을 몇 도 돌려야 하나",
     "본문": [
@@ -2545,123 +1237,10 @@
      "'Pore firmness' is the deck's wording. It means the skin around the pores looks tighter, not that the pores themselves shrink."
     ]
    }
-  ],
-  "en판": {
-   "스펙": {
-    "용량": "50ml",
-    "기능성": "Not a functional cosmetic"
-   },
-   "한줄": "A cleansing balm you grind fresh each time — turn the dial and take exactly as much as the day's makeup needs.",
-   "특징": [
-    {
-     "title": "One step from makeup to grime — an all-in-one deep cleanse",
-     "body": [
-      "Balm, oil and milk in one, cleaning thoroughly and finishing without tightness.",
-      "More than a cleanse: it works on pore firmness and on tone and texture too.",
-      "Makeup, debris and blackheads come off, and pores look firmer and smaller."
-     ]
-    },
-    {
-     "title": "Lemon Vitamin-some — Sicilian lemon and 99% vitamin C, liposomised",
-     "body": [
-      "Italian Sicilian lemon and 99% pure vitamin C, wrapped in liposomes to keep them stable and deliver the vitamin freshness intact."
-     ]
-    },
-    {
-     "title": "No spatula, and fresh every single day",
-     "body": [
-      "A sealed package no water ever reaches, so the vitamins don't oxidise and the collagen stays intact.",
-      "Every use starts from a fresh surface."
-     ]
-    },
-    {
-     "title": "A 3D Network soft-melting balm",
-     "body": [
-      "A cushioned, soft-melting texture built on 3D Network technology that grips the skin and lifts debris cleanly."
-     ]
-    },
-    {
-     "title": "Italian V-Label vegan certified, and gentle enough for daily use",
-     "body": [
-      "Vegan certification and a completed irritation test."
-     ]
-    }
-   ],
-   "이미지": [
-    "The balm",
-    "Demonstrated on the inner arm",
-    "Model shot",
-    "The container"
-   ]
-  }
+  ]
  },
- {
-  "slug": "d-alba-signature-allthera-double-shot",
-  "en": "d'Alba Signature Allthera Double Shot",
-  "ko": "달바 시그니처 올쎄라 더블 샷",
-  "스펙": {
-   "타겟": "모든 피부"
-  },
-  "포지셔닝": {
-   "문구": "단 하나의 기기로 복합적인 피부 고민을 케어하는 무제한 샷 올인원 토탈 케어 디바이스",
-   "태그": [
-    "#콜라겐생성",
-    "#피부탄력",
-    "#흡수촉진",
-    "#쿨링진정",
-    "#모공케어",
-    "#올인원디바이스"
-   ]
-  },
-  "특징": [
-   {
-    "제목": "단 하나의 기기에 3가지 모드 탑재, 간편하게 끝내는 올인원 디바이스",
-    "설명": [
-     "고주파 (RF), 더블 초음파, 쿨링이 결합된 복합 디바이스로  피부 컨디션 / 고민 부위에 따라 골라쓰는 맞춤 케어",
-     "인텐시브 케어 모드 :  콜라겐 활성화 및 탄력 증진, 흡수 촉진",
-     "프리샷 케어 모드 :  얼굴부터 바디까지 매끈한 탄력 증진",
-     "쿨링 케어 모드 :  피부 온도 저하로 진정과 모공 케어"
-    ]
-   },
-   {
-    "제목": "올쎄라 더블샷 특허 기술 , TRIPLE SYNERGY SHOT  [특허 제  10-2700736]",
-    "설명": [
-     "피부 탄력의 핵심인 콜라겐과 엘라스틴 생성에 도움을 주는 전문적 케어 방법으로 중앙 고주파와 더블 초음파를 복합 조사하여",
-     "1샷 당 3개의 에너지가 동시 출력 되어 피부 진피층까지 1샷 당 정확하고 빠른 효과를 전달하는 달바의 특허 기술 개발",
-     "카트리지 교체가 필요 없어 유지 비용 없이 샷을 무제한으로 사용 가능"
-    ]
-   },
-   {
-    "제목": "각 모드별 정확하고 강력한 효능을 위해 인체적용시험 데이터 확보",
-    "설명": [
-     "올인원 디바이스인 만큼 누구나  집에서 정확한 고민을 케어 할 수 있도록 인체적용시험을 진행하여",
-     "탱탱한 피부  ·  깊어진 라인  ·  무너진 윤곽  ·  늘어진 모공  ·  피부 결광  ·  흡수력 증진 모두 올쎄라 더블샷으로 확실하게 케어"
-    ]
-   },
-   {
-    "제목": "더욱 사용하기 간편하게 설계된 넓은 헤드 전극",
-    "설명": [
-     "넓은 접촉면으로 빠르고, 정확하고, 강력하게 조사되도록 달바만의 아이덴티티를 더한 헤드 디자인으로",
-     "어느 얼굴형이던 최적의 각도로 맞춤 케어가 가능하며 얼굴은 물론 바디까지 빠르고 간편하게 케어"
-    ]
-   },
-   {
-    "제목": "빠르고 쉽지만 정확하게 ! 모든게 응집된 달바의 설계 방식",
-    "설명": [
-     "간편하고 직관적인 조작 방법과  모드별 LED 케어, 친절한 음성 가이드로 번잡스럽고 어려운 기기 사용이 아닌 핵심만 집어주어",
-     "하루에 큰 시간 투자 없이 원하는 고민을 간편하게 케어"
-    ]
-   },
-   {
-    "제목": "매일 피부에 닿는 디바이스니까, 안전한 사용을 위한 품질 보증",
-    "설명": [
-     "기계 자체의  인증은 물론 내부 부품까지 인증 완료",
-     "미용, 의료기기 전문 업체와 함께 설계부터 조립까지 국내 제조로 진행",
-     "피부에 지속적으로 닿아도 무해한 SUS소재로 데일리 안심 사용"
-    ]
-   }
-  ],
-  "기타": [
+ "d-alba-signature-allthera-double-shot": {
+  "항목": [
    {
     "제목": "수치를 말할 때 반드시 붙여야 하는 한 마디",
     "본문": [
@@ -2854,335 +1433,10 @@
      "What was measured on people is the four-week sagging and density data above. So describe the collagen side as the mechanism and use the four-week numbers for the figures."
     ]
    }
-  ],
-  "en판": {
-   "스펙": {
-    "타겟": "All skin types"
-   },
-   "한줄": "One device, three modes — RF, double ultrasound and cooling — with unlimited shots and no cartridges to replace.",
-   "특징": [
-    {
-     "title": "Three modes in one device",
-     "body": [
-      "RF, double ultrasound and cooling in a single unit — pick the mode for the skin and the area.",
-      "Intensive care: collagen activation, firmness, better absorption.",
-      "Pre-shot care: firmness from face to body.",
-      "Cooling care: lowers skin temperature to calm and work on pores."
-     ]
-    },
-    {
-     "title": "Triple Synergy Shot, d'Alba's patented technology",
-     "body": [
-      "Central RF fired together with double ultrasound, so each shot delivers three energies at once, down to the dermis.",
-      "No cartridge to replace, so the shots are unlimited and there's no running cost."
-     ]
-    },
-    {
-     "title": "Human trial data for every mode",
-     "body": [
-      "Firmness, deepening lines, lost contour, slackening pores, texture, glow and absorption — all measured."
-     ]
-    },
-    {
-     "title": "A wide head electrode",
-     "body": [
-      "A broad contact surface that reaches every face shape at the right angle, and works on the body too."
-     ]
-    },
-    {
-     "title": "Simple by design",
-     "body": [
-      "Straightforward controls, LED indicators per mode and a voice guide, so care takes very little time."
-     ]
-    },
-    {
-     "title": "Built for something that touches your skin every day",
-     "body": [
-      "Certified as a unit and down to the internal components.",
-      "Designed and assembled in Korea with a manufacturer specialising in beauty and medical devices.",
-      "SUS steel, harmless in continuous skin contact."
-     ]
-    }
-   ],
-   "이미지": [
-    "The device",
-    "What's in the box",
-    "How it works",
-    "The gel"
-   ]
-  }
+  ]
  },
- {
-  "slug": "white-truffle-intensive-volufiline-grinding-cream",
-  "en": "White Truffle Intensive Volufiline Grinding Cream",
-  "ko": "달바 인텐시브 보르피린 그라인딩 크림",
-  "스펙": {
-   "용량": "45g"
-  },
-  "포지셔닝": {
-   "문구": "프랑스산 특허 성분 보르피린을 농축해 매일 신선하게 갈아쓰는 영양 가득 리프팅 크림",
-   "태그": [
-    "#집중리프팅",
-    "#탄력케어",
-    "#보르피린크림",
-    "#갈아쓰는크림"
-   ]
-  },
-  "특징": [
-   {
-    "제목": "매일 새것처럼, 필요한 만큼 갈아쓰는 스페셜 홈케어 크림",
-    "설명": [
-     "매일 신선하게 갈아내어 전용 실리콘 브러시로 얇고 고르게 펴 발라 프리미엄 홈케어 선사",
-     "피부에 바르는 순간 탱글한 텍스처가 피부에 얇게 밀착되어 탄탄한 사용감을 선사해 피부로 느껴지는 진한 농축&탄력감",
-     "공기 차단 밀폐 용기로 세럼과 유효 성분을 처음 그대로 신선하게 사용 가능"
-    ]
-   },
-   {
-    "제목": "프랑스 세더마사의 보르피린 50,000ppm 함유",
-    "설명": [
-     "프랑스 세더마사의 탄력 성분인 보르피린 50,000ppm의 풍부한 영양이 피부를 탱탱하게 가꾸어 주는데 도움"
-    ]
-   },
-   {
-    "제목": "즉각적인 리프팅 효과로 느슨해진 피부에 탄력, 윤기, 영양 토탈 케어",
-    "설명": [
-     "즉각적인(일시적) 안면(볼) 리프팅 11.271% 개선 확인 완료",
-     "보르피린 라인 3종(스프레이 앰플, 앰플, 크림) 병행 사용 시 탄력&리프팅 효과 확인 완료"
-    ]
-   },
-   {
-    "제목": "프리미엄 탄력 케어 성분 & 주름·미백 이중 기능성",
-    "설명": [
-     "달바 독자 특허 성분 Trufferol™ (화이트 트러플(흰서양송로추출물)+ 토코페롤)",
-     "탄력 성분: 비건 콜라겐 보르피린 50,000ppm",
-     "윤기, 영양 성분: 콜라겐추출물, 비건 세라마이드, 히알루론산 8종, 달바-8 블렌딩 오일"
-    ]
-   },
-   {
-    "제목": "효과는 확실하고 피부는 편안한 저자극 크림",
-    "설명": [
-     "독일 더마 테스트 완료, 피부 저자극 테스트 완료, 이탈리아 비건 ‘브이라벨’ 인증 완료되어 피부가 편안한 리프팅 크림"
-    ]
-   }
-  ],
-  "기타": [
-   {
-    "제목": "갈아 쓰는 크림 — 왜 이렇게 만들었나",
-    "본문": [
-     "크림을 손가락이나 스패츌러로 퍼내면 공기와 손이 닿습니다. 표면이 지저분해지고 유효 성분도 시간이 갈수록 힘을 잃습니다.",
-     "이 제품은 용기 상단을 시계 방향으로 돌려 그때그때 갈아냅니다. 매번 새 면이 나오니 늘 깨끗합니다.",
-     "공기를 차단하는 밀폐 구조라 세럼과 유효 성분이 처음 상태 그대로 유지됩니다.",
-     "전용 실리콘 브러시가 들어 있어 얇고 고르게 펴 바를 수 있습니다. 손으로 바를 때보다 양을 적게 쓰게 됩니다.",
-     "처음 쓸 때는 3~5바퀴 정도 돌려야 크림이 고르게 나옵니다. 미리 말해 주면 '불량인가' 하는 문의가 줄어듭니다."
-    ],
-    "title": "A cream you grind — and why",
-    "body": [
-     "Scooping cream out with a finger or a spatula lets in air and hands. The surface gets grubby and the actives lose strength over time.",
-     "Here you turn the top clockwise and grind off what you need. Every use starts from a fresh surface.",
-     "The airtight structure keeps the serum and its actives in the state they were made.",
-     "A silicone brush is included, so you can spread it thin and even — and you end up using less than you would by hand.",
-     "The first time, it takes three to five turns before the cream comes out evenly. Saying so up front heads off 'is mine faulty?' messages."
-    ]
-   },
-   {
-    "제목": "보르피린이 무엇인가",
-    "본문": [
-     "프랑스 세더마사가 만든 탄력 원료이고 국제 특허를 가지고 있습니다. 달바가 개발한 성분이 아니라 사 오는 원료입니다.",
-     "백합과 식물인 지모에서 뽑은 지모뿌리추출물에 하이드로제네이티드폴리아이소부텐을 결합한 복합물입니다.",
-     "달바 보르피린 라인 세 제품에 모두 50,000ppm, 즉 5% 씩 들어갑니다. 원료사가 권장하는 농도 그대로 넣었다는 뜻입니다.",
-     "'프랑스 원료사가 특허를 가진 탄력 성분을 5% 넣었다' 가 가장 정확하고 힘 있는 문장입니다."
-    ],
-    "title": "What Volufiline is",
-    "body": [
-     "A firming raw material made by Sederma in France, and it holds an international patent. d'Alba buys it in — it isn't something they developed.",
-     "It combines Anemarrhena root extract, from a plant in the lily family, with hydrogenated polyisobutene.",
-     "All three products in d'Alba's Volufiline line carry it at 50,000ppm — 5%. That's the concentration the supplier recommends, used in full.",
-     "'A firming ingredient patented by a French supplier, at 5%' is the most accurate and the strongest way to say it."
-    ]
-   },
-   {
-    "제목": "이 크림 단독으로 잰 수치",
-    "본문": [
-     "피엔케이피부임상연구센타에서 20명을 대상으로 봤습니다. 이 크림만 한 번 발랐을 때 안면(볼) 리프팅이 11.271% 개선됐습니다.",
-     "1회 사용 직후의 즉각적이고 일시적인 변화입니다. '바르고 나면 바로 이만큼' 이 정확한 표현이고, 라이브에서 바로 보여줄 수 있는 종류의 숫자입니다.",
-     "라인의 다른 두 제품과 헷갈리기 쉽습니다. 2주 수치는 세 가지를 다 썼을 때의 결과이고, 이 11.271% 는 이 크림 하나로만 잰 값입니다."
-    ],
-    "title": "The figure for this cream on its own",
-    "body": [
-     "Measured at P&K Skin Clinical Research Center with 20 people. One application of this cream alone improved cheek lifting by 11.271%.",
-     "It's an immediate, temporary change measured right after a single use. 'Put it on and this is what you get straight away' is the accurate line — and it's the kind of number you can demonstrate live.",
-     "It's easy to confuse with the rest of the line. The two-week figures come from using all three products; this 11.271% is this cream, by itself."
-    ]
-   },
-   {
-    "제목": "보르피린 3종을 같이 쓴 시험",
-    "본문": [
-     "교안에 2주 시험 수치가 나오는데, 이건 보르피린 라인 세 제품을 순서대로 다 쓴 결과입니다. 스프레이 앰플 → 앰플 → 그라인딩 크림 순서입니다.",
-     "한국피부과학연구원에서 21명을 대상으로 2주간 봤습니다. 눈가 주름 4.59%, 눈가 탄력 6.77%, 볼 처짐 6.36% 개선이고, 턱 부위 리프팅과 베개자국 완화도 함께 확인했습니다.",
-     "그래서 이 숫자들을 말할 때는 '세 가지를 같이 썼을 때' 를 붙여야 합니다. 라인 전체를 소개하는 자리에서 쓰기 좋은 수치이고, 실제로 세트 판매의 근거이기도 합니다.",
-     "베개자국 완화는 무도포군, 그러니까 아무것도 안 바른 경우와 비교한 것입니다."
-    ],
-    "title": "The study that used all three Volufiline products",
-    "body": [
-     "The deck's two-week figures come from using all three products in the Volufiline line, in order: spray ampoule → ampoule → grinding cream.",
-     "Run at the Korea Institute of Dermatological Sciences with 21 people over two weeks. Crow's feet improved 4.59%, eye-area firmness 6.77%, cheek sagging 6.36%, with jawline lifting and pillow-crease recovery also confirmed.",
-     "So attach 'when all three are used together' whenever you give those numbers. They work well when you're introducing the whole line — and they're the reason the set exists.",
-     "The pillow-crease result was measured against using nothing at all."
-    ]
-   },
-   {
-    "제목": "Micro Active Technology — 입자를 더 작게",
-    "본문": [
-     "유화 방식에 관한 이야기입니다. 보통은 물에 기름을 넣는데, 이 크림은 반대로 기름 쪽에 물을 천천히 넣어 입자를 더 잘게 만듭니다.",
-     "콜라겐추출물과 흰서양송로추출물 같은 영양 성분을 미세하고 밀도 높은 유화 입자 안에 가둬 두는 방식입니다. 성분이 덜 망가지고 피부에 더 잘 전달됩니다.",
-     "제형이 탱글하고 얇게 밀착되는 느낌도 여기서 나옵니다."
-    ],
-    "title": "Micro Active Technology — smaller particles",
-    "body": [
-     "This is about how the emulsion is made. Normally oil goes into water; here water is added slowly into the oil, which breaks the particles down finer.",
-     "Nutrients like collagen extract and white truffle extract end up held inside dense, fine emulsion droplets. Less of the active degrades, and more of it reaches the skin.",
-     "It's also where the springy texture and the thin, close finish come from."
-    ]
-   },
-   {
-    "제목": "나머지 성분",
-    "본문": [
-     "트러페롤™ 은 달바 독자 특허 성분으로 이탈리아산 화이트 트러플과 토코페롤을 섞은 것입니다. 탄력과 보습을 맡습니다.",
-     "콜라겐추출물과 비건 세라마이드엔피가 영양과 장벽을 받칩니다.",
-     "히알루론산 8종이 수분을 잡고, 달바-8 블렌딩 오일이 광채를 더합니다.",
-     "미백과 주름개선 2중 기능성 화장품입니다."
-    ],
-    "title": "The rest of the formula",
-    "body": [
-     "Trufferol™ is d'Alba's own patented ingredient — Italian white truffle blended with tocopherol — handling firmness and moisture.",
-     "Collagen extract and vegan ceramide NP support nourishment and the barrier.",
-     "Eight hyaluronic acids hold water, and d'Alba-8 Blending Oil adds the glow.",
-     "It carries a dual functional claim: brightening and wrinkle care."
-    ]
-   },
-   {
-    "제목": "인증",
-    "본문": [
-     "이탈리아 V-Label 비건 인증을 받았고, 독일 더마테스트를 마쳤습니다.",
-     "국내 저자극 인체적용시험은 34명을 대상으로 진행했습니다."
-    ],
-    "title": "Certification",
-    "body": [
-     "Italian V-Label vegan certification, and German Dermatest completed.",
-     "The low-irritation human trial in Korea was run on 34 people."
-    ]
-   }
-  ],
-  "en판": {
-   "스펙": {
-    "용량": "45g",
-    "기능성": "Brightening + wrinkle care (dual functional claim)"
-   },
-   "한줄": "A concentrated lifting cream you grind fresh each day, with French patented Volufiline at 50,000ppm.",
-   "특징": [
-    {
-     "title": "Ground fresh each day, as much as you need",
-     "body": [
-      "Grind it fresh and spread it thin and even with the silicone brush.",
-      "A springy texture that grips the skin thinly and feels dense and firm going on.",
-      "An airtight container keeps the serum and its actives as fresh as the day it was made."
-     ]
-    },
-    {
-     "title": "Volufiline from Sederma, France, at 50,000ppm",
-     "body": [
-      "Sederma's firming ingredient at 50,000ppm, rich enough to help skin feel taut."
-     ]
-    },
-    {
-     "title": "Immediate lifting, with firmness, glow and nourishment together",
-     "body": [
-      "Immediate (temporary) cheek lifting improved 11.271%.",
-      "Firmness and lifting confirmed when all three Volufiline products are used together."
-     ]
-    },
-    {
-     "title": "Premium firming ingredients, with a dual functional claim",
-     "body": [
-      "Trufferol™, d'Alba's patented ingredient (white truffle + tocopherol).",
-      "Firmness: vegan collagen and Volufiline at 50,000ppm.",
-      "Glow and nourishment: collagen extract, vegan ceramide, 8 hyaluronic acids, d'Alba-8 Blending Oil."
-     ]
-    },
-    {
-     "title": "Effective, and still gentle",
-     "body": [
-      "German Dermatest, a completed low-irritation test and Italian V-Label vegan certification."
-     ]
-    }
-   ],
-   "이미지": [
-    "Texture",
-    "The container",
-    "Two-week results summary",
-    "Cheek lifting improved 11.271% (after one use)",
-    "Capsule image"
-   ]
-  }
- },
- {
-  "slug": "intensive-vegan-volufiline-spray-ampoule",
-  "en": "Intensive Vegan Volufiline Spray Ampoule",
-  "ko": "달바 인텐시브 보르피린 스프레이 앰플",
-  "스펙": {
-   "용량": "50ml",
-   "기능성": "주름개선 기능성 화장품",
-   "타겟": "모든 피부"
-  },
-  "포지셔닝": {
-   "문구": "투명 보르피린과  화이트 트러플의 더블 탄력 에너지 탄력&리프팅 더블 레이어 스프레이 앰플",
-   "태그": [
-    "#수분탄력",
-    "#보르피린미스트",
-    "#비건스프레이앰플"
-   ]
-  },
-  "특징": [
-   {
-    "제목": "피부를 탄탄하게 케어하는 탄력&리프팅 더블 레이어",
-    "설명": [
-     "쉐이킹 하여 사용하는 이층상의  두름 기능성 앰플이 건조하고 거친 피부에 풍부한 영양과 보습을 촘촘하게 공급해 거친",
-     "피부를 매끄럽게 가꿔주고  흐트러진 피부에 컨디셔닝을 부여하여 탄력 집중 케어"
-    ]
-   },
-   {
-    "제목": "50,000PPM 보르피린 성분이 레이어링 된 농축 크레마 탄력 앰플",
-    "설명": [
-     "원료 본연의 투명함을 띄는 보르피린 5%와  연한 베이지 빛의  영양 앰플이 부드럽게 믹스된 농축 크레마 포뮬라가",
-     "피부에 쫀쫀하게 스며들어 탄탄하게 빛나는 탄력 광채 피부 선사"
-    ]
-   },
-   {
-    "제목": "미세한 안개분사로 펌프로 간편하고 우아하게 뿌리는 앰플",
-    "설명": [
-     "부드러운 펌핑력과 동양인 얼굴 맞춤 분사각으로 개발된 달바의  독자적인  안개분사 펌프로 미세한 입자를 피부에 전달",
-     "하여 여러 번 뿌려도 맺힘이나 흘러내림 없이 얼굴에  빠르게 스며드는 착붙 스프레이 앰플"
-    ]
-   },
-   {
-    "제목": "프리미엄 리프팅&생기 & 탄력/보습 케어 성분",
-    "설명": [
-     "리프팅&생기 성분: 프랑스 세더마사의 보르피린 50,000ppm,",
-     "탄력  성분 : 달바 독자 성분 Trufferol™ (화이트 트러플(흰서양송로추출물)+ 토코페롤)",
-     "이탈리아산 화이트 트러플, 콜라겐추출물, 세라마이드엔피",
-     "보습 성분: 판테놀, 히알루론산 8종, 달바 8가지 블렌딩 오일",
-     "수분 성분: MultiEx BSASM 콤플렉스 성분"
-    ]
-   },
-   {
-    "제목": "동물성 원료 NO! 피부가 편안한, 비건 라이프",
-    "설명": [
-     "전성분 까다로운 기준의 이탈리아 V-Label 비건 정식 인증 완료로 안전하고 건강한 세럼",
-     "독일 더마테스트 완료 / 국내 저자극 테스트 완료"
-    ]
-   }
-  ],
-  "기타": [
+ "intensive-vegan-volufiline-spray-ampoule": {
+  "항목": [
    {
     "제목": "두 층으로 나뉜 이유",
     "본문": [
@@ -3291,124 +1545,10 @@
      "Both German Dermatest and a low-irritation test in Korea completed."
     ]
    }
-  ],
-  "en판": {
-   "스펙": {
-    "용량": "50ml",
-    "기능성": "Wrinkle care (functional cosmetic)",
-    "타겟": "All skin types"
-   },
-   "한줄": "The spray version of the Volufiline ampoule — a clear Volufiline layer and a beige nourishing layer you shake together.",
-   "특징": [
-    {
-     "title": "A firming and lifting double layer that cares for the skin underneath",
-     "body": [
-      "A wrinkle care ampoule layered over the base leaves dry, rough skin full and comfortable.",
-      "Smooths and softens, bringing moisture and firmness to skin that has gone coarse."
-     ]
-    },
-    {
-     "title": "Volufiline at 50,000ppm, in its own transparent layer",
-     "body": [
-      "Volufiline sits at 5% in a clear layer, undiluted and visible.",
-      "Shake it and it mixes into the nourishing cream, misting on firm and bright."
-     ]
-    },
-    {
-     "title": "A fine mist from a pump built for the job",
-     "body": [
-      "A soft, fine spray angled to suit the face.",
-      "The pump was developed specifically for d'Alba, so the mist reaches the whole face quickly and evenly."
-     ]
-    },
-    {
-     "title": "Premium lifting, firming and moisture ingredients",
-     "body": [
-      "Lifting and firming: Volufiline 50,000ppm from Sederma, France; Trufferol™ (Italian white truffle + tocopherol).",
-      "Moisture: panthenol, hyaluronic acids, d'Alba-8 Blending Oil.",
-      "Barrier: vegan ceramide NP, collagen extract.",
-      "Base: MultiEX BSASM complex."
-     ]
-    },
-    {
-     "title": "No animal-derived ingredients",
-     "body": [
-      "Italian V-Label vegan certification against the full ingredient list.",
-      "German Dermatest and a low-irritation test in Korea, both completed."
-     ]
-    }
-   ],
-   "이미지": [
-    "Product shot",
-    "Held in hand",
-    "Two-week results summary",
-    "Texture, before and after shaking",
-    "Texture"
-   ]
-  }
+  ]
  },
- {
-  "slug": "white-truffle-intensive-volufiline-ampoule",
-  "en": "White Truffle Intensive Volufiline Ampoule",
-  "ko": "달바 인텐시브 보르피린 앰플",
-  "스펙": {
-   "용량": "30ml · 50 ml",
-   "기능성": "주름개선 기능성 화장품",
-   "타겟": "모든 피부"
-  },
-  "포지셔닝": {
-   "문구": "보습·영양·탄력으로 탄탄한 피부 바탕! 리프팅 집중케어 솔루션 보르피린 앰플",
-   "태그": [
-    "#리프팅",
-    "#보습영양",
-    "#탄력케어",
-    "#농축앰플",
-    "#보르피린앰플",
-    "#비건앰플"
-   ]
-  },
-  "특징": [
-   {
-    "제목": "즉각적인 리프팅 효과로 느슨해진 피부에 탄력/윤기/영양 토탈 케어",
-    "설명": [
-     "프리미엄 영양 성분 콜라겐과 보르피린의 영양&탄력 에너지로",
-     "무너진 피부를 윤기 있고 탄탄하게 토탈 케어"
-    ]
-   },
-   {
-    "제목": "프랑스 세더마사의 보르피린 50,000ppm함유로 탄탄한 피부 케어",
-    "설명": [
-     "프랑스 세더마사의 탄력 성분인 보르피린 50,000ppm의 풍부한 영양이 피부를 탱탱하게 가꾸어 주는데 도움"
-    ]
-   },
-   {
-    "제목": "연한 베이지 빛의 쫀쫀하고 농축된 보습 앰플 텍스처",
-    "설명": [
-     "농축된 유화 제형 앰플이 피부에 촉촉하게 흡수되어 보습감은 충만하게, 마무리감은 쫀쫀하게!",
-     "건조한 피부에 풍부한 보습과 촉촉함 선사"
-    ]
-   },
-   {
-    "제목": "프리미엄 보습·탄력 케어 성분 & 주름개선 기능성",
-    "설명": [
-     "달바 독자 탄력 성분 트러페롤™, 이탈리아산 화이트 트러플, 달바 8가지 블렌딩 식물성 오일,이",
-     "영양과 보습을 동시에 케어해  윤기나는 피부로 가꾸어줌",
-     "볼륨, 생기 성분: 프랑스 세더마사의 보르피린 50,000ppm",
-     "탄력  성분 :  달바 독자 탄력 성분 Trufferol™ (화이트 트러플(흰서양송로추출물)+ 토코페롤)",
-     "이탈리아산 화이트 트러플 ,  콜라겐추출물, 비건 세라마이드",
-     "보습 성분: 판테놀, 히알루론산 8종, 달바-8 블렌딩 오일",
-     "진정 성분: 병풀추출물, Total Solution Max Complex"
-    ]
-   },
-   {
-    "제목": "동물성 원료 NO! 피부가 편안한, 비건 라이프",
-    "설명": [
-     "전성분 까다로운 기준의 이탈리아 V-Label 비건 정식 인증 완료로 안전하고 건강한 세럼",
-     "독일 더마테스트 완료 / 국내 저자극 테스트 완료"
-    ]
-   }
-  ],
-  "기타": [
+ "white-truffle-intensive-volufiline-ampoule": {
+  "항목": [
    {
     "제목": "이 앰플 단독으로 잰 수치",
     "본문": [
@@ -3515,128 +1655,120 @@
      "Both German Dermatest and a low-irritation test in Korea completed."
     ]
    }
-  ],
-  "en판": {
-   "스펙": {
-    "용량": "30ml · 50ml",
-    "기능성": "Wrinkle care (functional cosmetic)",
-    "타겟": "All skin types"
-   },
-   "한줄": "A concentrated beige ampoule with French patented Volufiline at 50,000ppm — lifting, nourishment and moisture in one step.",
-   "특징": [
-    {
-     "title": "Immediate lifting, with firmness, glow and nourishment",
-     "body": [
-      "Collagen and Volufiline bring their firming energy to skin that has lost its hold, leaving it glossy and taut."
-     ]
-    },
-    {
-     "title": "Volufiline from Sederma, France, at 50,000ppm",
-     "body": [
-      "Sederma's firming ingredient at 50,000ppm, rich enough to help skin feel taut."
-     ]
-    },
-    {
-     "title": "A dense, pale-beige ampoule texture",
-     "body": [
-      "A concentrated emulsion that sinks in wet and finishes tight.",
-      "Full moisture for skin that has gone dry."
-     ]
-    },
-    {
-     "title": "Premium moisture and firming ingredients, with a wrinkle care claim",
-     "body": [
-      "Trufferol™, Italian white truffle and d'Alba's eight plant oils nourish and hydrate at once.",
-      "Volume and freshness: Volufiline at 50,000ppm.",
-      "Firmness: Trufferol™ (white truffle + tocopherol), Italian white truffle, collagen extract, vegan ceramide.",
-      "Moisture: panthenol, 8 hyaluronic acids, d'Alba-8 Blending Oil.",
-      "Soothing: centella extract, Total Solution Max Complex."
-     ]
-    },
-    {
-     "title": "No animal-derived ingredients",
-     "body": [
-      "Italian V-Label vegan certification against the full ingredient list.",
-      "German Dermatest and a low-irritation test in Korea, both completed."
-     ]
-    }
-   ],
-   "이미지": [
-    "Product shot",
-    "Two-week results summary",
-    "Cheek lifting improved 17.601% (after one use)",
-    "How to use the dropper",
-    "Texture"
-   ]
-  }
+  ]
  },
- {
-  "slug": "professional-repairing-hair-oil-serum",
-  "en": "Professional Repairing Hair Oil Serum",
-  "ko": "달바 프로페셔널 리페어링 헤어 오일 세럼(로제 프리지아)",
-  "스펙": {
-   "용량": "75mL",
-   "타겟": "모든 모발, 손상 모발, 건조한 모발"
-  },
-  "포지셔닝": {
-   "문구": "스타일의 완성을 위해 모발 컨디션 부터 강화 시켜주는 끈적임 없이 부드러운 Airy & Silky 헤어 오일 세럼",
-   "태그": [
-    "#더블레이어링",
-    "#산뜻오일에센스",
-    "#부드러운",
-    "#손상모케어",
-    "#빛나는엔젤링",
-    "#퍼퓸스타일링"
-   ]
-  },
-  "특징": [
+ "white-truffle-intensive-volufiline-grinding-cream": {
+  "항목": [
    {
-    "제목": "오일과 세럼의 장점만 담아 손상 모발에 최적화된 2in1 헤어 오일 세럼",
-    "설명": [
-     "깊고 진한 식물성 프리미엄 오일 블렌딩이 담긴 광채 코팅 오일 40% & 모발 기초를 바로 세워주는 수분 보습 세럼 60%",
-     "모발에 꼭 필요한 수분과 영양을 위해 6:4의 황금 비율 포뮬레이션으로 손상되어 갈라진 머릿겨을 탄탄한 모발로 가꾸어 줍니다."
+    "제목": "갈아 쓰는 크림 — 왜 이렇게 만들었나",
+    "본문": [
+     "크림을 손가락이나 스패츌러로 퍼내면 공기와 손이 닿습니다. 표면이 지저분해지고 유효 성분도 시간이 갈수록 힘을 잃습니다.",
+     "이 제품은 용기 상단을 시계 방향으로 돌려 그때그때 갈아냅니다. 매번 새 면이 나오니 늘 깨끗합니다.",
+     "공기를 차단하는 밀폐 구조라 세럼과 유효 성분이 처음 상태 그대로 유지됩니다.",
+     "전용 실리콘 브러시가 들어 있어 얇고 고르게 펴 바를 수 있습니다. 손으로 바를 때보다 양을 적게 쓰게 됩니다.",
+     "처음 쓸 때는 3~5바퀴 정도 돌려야 크림이 고르게 나옵니다. 미리 말해 주면 '불량인가' 하는 문의가 줄어듭니다."
+    ],
+    "title": "A cream you grind — and why",
+    "body": [
+     "Scooping cream out with a finger or a spatula lets in air and hands. The surface gets grubby and the actives lose strength over time.",
+     "Here you turn the top clockwise and grind off what you need. Every use starts from a fresh surface.",
+     "The airtight structure keeps the serum and its actives in the state they were made.",
+     "A silicone brush is included, so you can spread it thin and even — and you end up using less than you would by hand.",
+     "The first time, it takes three to five turns before the cream comes out evenly. Saying so up front heads off 'is mine faulty?' messages."
     ]
    },
    {
-    "제목": "모발 처짐 · 떡짐 · 잔여감 Zero ! 끈적임 없이 실크처럼 가볍고 부드럽게",
-    "설명": [
-     "모발에 무겁게 발려 떡지고 처지는 오일이 아닌 바르는 순간 모발에 쏙 흡수되어 부드러운 머릿결로 가꾸어주며",
-     "손에 남는 잔여감 없이 향기만 남아는 Airy & Silky  터치 를 선사합니다."
+    "제목": "보르피린이 무엇인가",
+    "본문": [
+     "프랑스 세더마사가 만든 탄력 원료이고 국제 특허를 가지고 있습니다. 달바가 개발한 성분이 아니라 사 오는 원료입니다.",
+     "백합과 식물인 지모에서 뽑은 지모뿌리추출물에 하이드로제네이티드폴리아이소부텐을 결합한 복합물입니다.",
+     "달바 보르피린 라인 세 제품에 모두 50,000ppm, 즉 5% 씩 들어갑니다. 원료사가 권장하는 농도 그대로 넣었다는 뜻입니다.",
+     "'프랑스 원료사가 특허를 가진 탄력 성분을 5% 넣었다' 가 가장 정확하고 힘 있는 문장입니다."
+    ],
+    "title": "What Volufiline is",
+    "body": [
+     "A firming raw material made by Sederma in France, and it holds an international patent. d'Alba buys it in — it isn't something they developed.",
+     "It combines Anemarrhena root extract, from a plant in the lily family, with hydrogenated polyisobutene.",
+     "All three products in d'Alba's Volufiline line carry it at 50,000ppm — 5%. That's the concentration the supplier recommends, used in full.",
+     "'A firming ingredient patented by a French supplier, at 5%' is the most accurate and the strongest way to say it."
     ]
    },
    {
-    "제목": "콜라겐수 46%와 독자 성분 나노 펩타이드 엑소좀 10% 함유로 모발 컨디셔닝 케어",
-    "설명": [
-     "이탈리아산 화이트 트러플에서 추출한 나노 엑소좀 시스템과99% 고순도 저분자 다이펩타이드-15의 결합",
-     "모공보다 467배 작은 사이즈로 빠르고 강력하게 전달되는 펩타이드 엑소좀",
-     "거칠어진 모발을 정돈하고 결을 따라 유효 성분이 고르게 작용하여부드럽고 윤기나는 머릿결을 선사"
+    "제목": "이 크림 단독으로 잰 수치",
+    "본문": [
+     "피엔케이피부임상연구센타에서 20명을 대상으로 봤습니다. 이 크림만 한 번 발랐을 때 안면(볼) 리프팅이 11.271% 개선됐습니다.",
+     "1회 사용 직후의 즉각적이고 일시적인 변화입니다. '바르고 나면 바로 이만큼' 이 정확한 표현이고, 라이브에서 바로 보여줄 수 있는 종류의 숫자입니다.",
+     "라인의 다른 두 제품과 헷갈리기 쉽습니다. 2주 수치는 세 가지를 다 썼을 때의 결과이고, 이 11.271% 는 이 크림 하나로만 잰 값입니다."
+    ],
+    "title": "The figure for this cream on its own",
+    "body": [
+     "Measured at P&K Skin Clinical Research Center with 20 people. One application of this cream alone improved cheek lifting by 11.271%.",
+     "It's an immediate, temporary change measured right after a single use. 'Put it on and this is what you get straight away' is the accurate line — and it's the kind of number you can demonstrate live.",
+     "It's easy to confuse with the rest of the line. The two-week figures come from using all three products; this 11.271% is this cream, by itself."
     ]
    },
    {
-    "제목": "감각적인 로제프리지아 향으로 오랜 시간 지속되는 향기와 윤기",
-    "설명": [
-     "찰랑이는 머릿결과 함께 오랜시간 은은하게 지속되는 퍼퓸 오일 효과로",
-     "싱그러운 과일향에 활짝 핀 장미와 프리지아의 우아한 향이 하루종일 은은하게 머물러 그윽한 나만의 감각적인 무드를 완성해줍니다."
+    "제목": "보르피린 3종을 같이 쓴 시험",
+    "본문": [
+     "교안에 2주 시험 수치가 나오는데, 이건 보르피린 라인 세 제품을 순서대로 다 쓴 결과입니다. 스프레이 앰플 → 앰플 → 그라인딩 크림 순서입니다.",
+     "한국피부과학연구원에서 21명을 대상으로 2주간 봤습니다. 눈가 주름 4.59%, 눈가 탄력 6.77%, 볼 처짐 6.36% 개선이고, 턱 부위 리프팅과 베개자국 완화도 함께 확인했습니다.",
+     "그래서 이 숫자들을 말할 때는 '세 가지를 같이 썼을 때' 를 붙여야 합니다. 라인 전체를 소개하는 자리에서 쓰기 좋은 수치이고, 실제로 세트 판매의 근거이기도 합니다.",
+     "베개자국 완화는 무도포군, 그러니까 아무것도 안 바른 경우와 비교한 것입니다."
+    ],
+    "title": "The study that used all three Volufiline products",
+    "body": [
+     "The deck's two-week figures come from using all three products in the Volufiline line, in order: spray ampoule → ampoule → grinding cream.",
+     "Run at the Korea Institute of Dermatological Sciences with 21 people over two weeks. Crow's feet improved 4.59%, eye-area firmness 6.77%, cheek sagging 6.36%, with jawline lifting and pillow-crease recovery also confirmed.",
+     "So attach 'when all three are used together' whenever you give those numbers. They work well when you're introducing the whole line — and they're the reason the set exists.",
+     "The pillow-crease result was measured against using nothing at all."
     ]
    },
    {
-    "제목": "모발 영양을 위한 단백질 *최다 배합 & 위한 프리미엄 오일 블렌딩으로 손상 루틴 탈출",
-    "설명": [
-     "단백질 충전: 단백질 13종 + 아미노산 17종 (자사 샴푸, 헤어 퍼퓸 대비 최다 함유)",
-     "달바 독자 성분",
-     "[컨디셔닝] 펩타이드 엑소좀™(다이펩타이드-15 1.2%, 흰서양송로수, 흰서양송로추출물)",
-     "[탄력] 트러페롤™(이탈리아산 화이트 트러플(흰서양송로추출물),토코페롤)",
-     "보습/윤기: 달바 -12블렌딩 오일 + 불가리아산 로즈오일 + 모로코산 아르간 오일"
+    "제목": "Micro Active Technology — 입자를 더 작게",
+    "본문": [
+     "유화 방식에 관한 이야기입니다. 보통은 물에 기름을 넣는데, 이 크림은 반대로 기름 쪽에 물을 천천히 넣어 입자를 더 잘게 만듭니다.",
+     "콜라겐추출물과 흰서양송로추출물 같은 영양 성분을 미세하고 밀도 높은 유화 입자 안에 가둬 두는 방식입니다. 성분이 덜 망가지고 피부에 더 잘 전달됩니다.",
+     "제형이 탱글하고 얇게 밀착되는 느낌도 여기서 나옵니다."
+    ],
+    "title": "Micro Active Technology — smaller particles",
+    "body": [
+     "This is about how the emulsion is made. Normally oil goes into water; here water is added slowly into the oil, which breaks the particles down finer.",
+     "Nutrients like collagen extract and white truffle extract end up held inside dense, fine emulsion droplets. Less of the active degrades, and more of it reaches the skin.",
+     "It's also where the springy texture and the thin, close finish come from."
     ]
    },
    {
-    "제목": "이탈리아 비건 V-라벨 인증 / 국내 인체피부 일차자극 테스트 완료",
-    "설명": [
-     "인체 피부 일차 자극 (저자극) 테스트 완료, 프리미엄 비건 성분을 담아 어떤 모발이던 편안한 사용 을 도와줍니다."
+    "제목": "나머지 성분",
+    "본문": [
+     "트러페롤™ 은 달바 독자 특허 성분으로 이탈리아산 화이트 트러플과 토코페롤을 섞은 것입니다. 탄력과 보습을 맡습니다.",
+     "콜라겐추출물과 비건 세라마이드엔피가 영양과 장벽을 받칩니다.",
+     "히알루론산 8종이 수분을 잡고, 달바-8 블렌딩 오일이 광채를 더합니다.",
+     "미백과 주름개선 2중 기능성 화장품입니다."
+    ],
+    "title": "The rest of the formula",
+    "body": [
+     "Trufferol™ is d'Alba's own patented ingredient — Italian white truffle blended with tocopherol — handling firmness and moisture.",
+     "Collagen extract and vegan ceramide NP support nourishment and the barrier.",
+     "Eight hyaluronic acids hold water, and d'Alba-8 Blending Oil adds the glow.",
+     "It carries a dual functional claim: brightening and wrinkle care."
+    ]
+   },
+   {
+    "제목": "인증",
+    "본문": [
+     "이탈리아 V-Label 비건 인증을 받았고, 독일 더마테스트를 마쳤습니다.",
+     "국내 저자극 인체적용시험은 34명을 대상으로 진행했습니다."
+    ],
+    "title": "Certification",
+    "body": [
+     "Italian V-Label vegan certification, and German Dermatest completed.",
+     "The low-irritation human trial in Korea was run on 34 people."
     ]
    }
-  ],
-  "기타": [
+  ]
+ },
+ "professional-repairing-hair-oil-serum": {
+  "항목": [
    {
     "제목": "오일 40 : 세럼 60 — 퍼퓸 세럼과 무엇이 다른가",
     "본문": [
@@ -3739,115 +1871,10 @@
      "There's no study measuring damage repair. Build the story around shine, scent, feel — and the protein content."
     ]
    }
-  ],
-  "en판": {
-   "스펙": {
-    "용량": "75ml",
-    "타겟": "All hair types, damaged hair, dry hair"
-   },
-   "한줄": "Oil and serum at 4:6 — a hair oil that coats with shine and still disappears into the hair, leaving nothing on your hands.",
-   "특징": [
-    {
-     "title": "Oil and serum in one, built for damaged hair",
-     "body": [
-      "Deep plant oils make up the 40% shine coating; a hydrating serum makes up the 60% that rebuilds the base.",
-      "A 6:4 ratio of water to nourishment, for hair that has split and gone brittle."
-     ]
-    },
-    {
-     "title": "No droop, no clumping, nothing left behind",
-     "body": [
-      "It sinks in on contact instead of sitting heavy, so hair stays soft rather than flat.",
-      "Nothing stays on your hands — just the scent. Airy and silky."
-     ]
-    },
-    {
-     "title": "46% collagen water and 10% nano Peptide Exosome",
-     "body": [
-      "A nano exosome system from Italian white truffle, bound to 99% pure low-molecular Dipeptide-15.",
-      "It smooths roughened hair so the active works evenly along the strand."
-     ]
-    },
-    {
-     "title": "Rose Freesia — scent and shine that last",
-     "body": [
-      "A perfume-oil effect that stays soft on the hair all day.",
-      "Fresh fruit, then rose and freesia in full bloom, elegant and quiet."
-     ]
-    },
-    {
-     "title": "The most protein in the range, with premium oils",
-     "body": [
-      "Protein: 13 proteins and 17 amino acids — more than d'Alba's own shampoo or hair perfume.",
-      "Conditioning: Peptide Exosome™ (Dipeptide-15 1.2%, white truffle water and extract).",
-      "Firmness: Trufferol™ (Italian white truffle, tocopherol).",
-      "Moisture and shine: d'Alba-12 Blending Oil with Bulgarian rose oil and Moroccan argan oil."
-     ]
-    },
-    {
-     "title": "Italian V-Label vegan certified, irritation test completed",
-     "body": []
-    }
-   ],
-   "이미지": [
-    "Product shot",
-    "Product styling shot",
-    "Model shot",
-    "Hair, before and after",
-    "High-concentration essential oil 11,000ppm"
-   ]
-  }
+  ]
  },
- {
-  "slug": "white-truffle-double-layer-revitalizing-serum",
-  "en": "White Truffle Double Layer Revitalizing Serum",
-  "ko": "달바 화이트 트러플 더블 레이어 리바이탈라이징 세럼",
-  "스펙": {
-   "용량": "30ml",
-   "타겟": "모든 피부"
-  },
-  "포지셔닝": {
-   "문구": "",
-   "태그": [
-    "#더블세럼",
-    "#광채세럼",
-    "#탄력세럼",
-    "#보습세럼",
-    "#생기세럼"
-   ]
-  },
-  "특징": [
-   {
-    "제목": "더블 세럼만의 혁신적인 포뮬러",
-    "설명": [
-     "세럼과 오일 두가지 텍스처가 7:3의 비율로 나뉘어 담겨있어 사용 직전 흔들어서 사용 (24시간에 걸쳐서 분리)",
-     "수분 보습과 영양 탄력을 위한 더블 세럼의 황금 비율"
-    ]
-   },
-   {
-    "제목": "더플 포뮬라로 한번에 느끼는 더블 효과",
-    "설명": [
-     "황금 비율로 이루어진 탄력 세럼층과 영양 보습 오일층이 피부를 촉촉하면서 매끈하게 가꾸어주고 주름개선 기능성 제품으로 동시에 신경쓰이는 주름을 케어하고 피부 활력과 에너지 부여로 생기있는 피부 완성"
-    ]
-   },
-   {
-    "제목": "더블 세럼의 핵심성분",
-    "설명": [
-     "탄력 세럼층 : 이탈리아산 화이트 트러플(흰서양송로추출물), 달바 독자적인 특허성분 토코페롤TM이 함유되어 쫀쫀하고 탄력있는 광채 피부로 케어",
-     "영양 보습 오일 층: 해바라기씨 오일, 마카다미아씨 오일, 아보카도 오일등이 부드럽고 촘촘한 피부로 가꾸어 촉촉하고 윤기 있는 피부 관리에 도움을 줌"
-    ]
-   },
-   {
-    "제목": "성분은 탄탄하게, 피부에는 순하게",
-    "설명": [
-     "피부에 부담을 주지 않는 10가지 식물 유래 오일, 31가지 식물 유래 성분 총 41가지로 윤기나는 피부 트리트먼트 효과",
-     "인체피부 일차자극 인체적용시험 완료",
-     "즉각적 보습력 개선 및 100시간 보습 지속, 즉각적인 피부 깊은 속 탄력 개선, 안티에이징(주름, 리프팅, 피부치밀도), 피부결, 피부 속보습(속건조) 개선 인체적용시험 완료",
-     "항산화 효능에 대한 in-vitro 효능평가시험 완료"
-    ]
-   }
-  ],
-  "기타": [
+ "white-truffle-double-layer-revitalizing-serum": {
+  "항목": [
    {
     "제목": "왜 두 층으로 나뉘어 있나",
     "본문": [
@@ -3938,119 +1965,10 @@
      "The selling point is that it contains oil and still doesn't feel sticky — which is exactly why the oil layer stops at 3."
     ]
    }
-  ],
-  "en판": {
-   "스펙": {
-    "용량": "30ml",
-    "타겟": "All skin types"
-   },
-   "한줄": "Serum and oil held apart at 7:3 — shake it and the two mix, for firmness and glow in one step.",
-   "특징": [
-    {
-     "title": "A formula that separates on purpose",
-     "body": [
-      "Serum and oil sit in a 7:3 split and you shake before each use — they separate again over 24 hours.",
-      "The ratio balances water and moisture against nourishment and firmness."
-     ]
-    },
-    {
-     "title": "Two effects in one application",
-     "body": [
-      "The firming serum layer and the nourishing oil layer leave skin hydrated and smooth, while the wrinkle care claim covers the lines you're watching, and skin looks alive again."
-     ]
-    },
-    {
-     "title": "What's in each layer",
-     "body": [
-      "Firming serum layer: Italian white truffle and Trufferol™, d'Alba's patented ingredient, for taut, luminous skin.",
-      "Nourishing oil layer: sunflower seed, macadamia seed and avocado oils, for soft, dense, glossy skin."
-     ]
-    },
-    {
-     "title": "Serious ingredients, gentle on skin",
-     "body": [
-      "41 plant-derived ingredients in total — 10 plant oils and 31 botanical extracts — for a treatment-like finish.",
-      "Primary skin irritation human trial completed.",
-      "Human trials completed for immediate hydration and 100-hour moisture retention, deep firmness, anti-ageing (wrinkles, lifting, skin density), skin texture and inner dryness.",
-      "In-vitro antioxidant testing completed."
-     ]
-    }
-   ],
-   "이미지": [
-    "Texture"
-   ]
-  }
+  ]
  },
- {
-  "slug": "white-truffle-double-serum-cream-2-in-1",
-  "en": "White Truffle Double Serum & Cream 2-in-1",
-  "ko": "달바 화이트 트러플 더블 세럼 앤 크림",
-  "스펙": {
-   "용량": "70g (NET WT.2.46 OZ)"
-  },
-  "포지셔닝": {
-   "문구": "수분진정 특화 판테놀 5% + 펩타이드 엑소좀30% 함유로 더 정교해진 DIY 케어 어떤 피부 타입도 편안하게, 피부 컨디션에 따라 부위별 에이징 시그널 맞춤 피부 장벽까지 강화하는 올인원 안티에이징 크림",
-   "태그": [
-    "#올인원안티에이징",
-    "#DIY스킨케어",
-    "#맞춤형스킨케어",
-    "#반반크림",
-    "#사계절커스터마이징크림"
-   ]
-  },
-  "특징": [
-   {
-    "제목": "아쿠아 세럼(수분/진정) & 인텐스 크림(영양/ 탄력) 2가지 제형이 한 통에 담긴 올인원 프리미엄 크림",
-    "설명": []
-   },
-   {
-    "제목": "피부 컨디션에 맞게 내 맘대로 DIY 사계절 맞춤 케어",
-    "설명": [
-     "매일 달라지는 내 피부 상태에 맞게 비율을 직접 조절해서  사용하는 커스터마이징 크림으로",
-     "어떤 날씨에도, 어떤 피부 상태에도 수분,보습,영양,탄력,진정까지 올인원 케어"
-    ]
-   },
-   {
-    "제목": "근본부터 바로 잡아주는 부위별 에이징 시그널에 더 강력해진 수분 장벽 강화 까지",
-    "설명": [
-     "안티에이징 ( 주름,  리프팅, 피부 치밀도) 인체 적용 시험 완료, 항산화 in-Vitro 효능 평가 시험 완료",
-     "눈가 주름과 늘어진 앞볼은 물론 강력한 항산화 효과와 피부 치밀도, 수분 장벽까지 개선"
-    ]
-   },
-   {
-    "제목": "깊은 속보습(속건조) & 속탄력 & 진정까지 도움을 주어 탄탄한 피부 바탕 완성",
-    "설명": [
-     "피부 깊은 속보습(속건조) , 속탄력 개선 인체 적용 시험 완료",
-     "외부 자극  (물리적)에 의해 손상된 피부 진정 개선 인체 적용 시험 완료",
-     "피부 깊숙히 스며들어 건조함 없이 속부터 탄탄하게 보습감을 선사하며 자극 받은 피부에 즉각적인 진정 효과를 선사"
-    ]
-   },
-   {
-    "제목": "판테놀 5% & 독자 성분 나노 펩타이드 엑소좀 30% 함유로 코어 에너지 케어",
-    "설명": [
-     "이탈리아산 화이트 트러플에서 추출한 나노 엑소좀 시스템과99% 고순도 저분자 다이펩타이드-15의 결합",
-     "모공보다 467배 작은 사이즈로 빠르고 강력하게 전달되는 펩타이드 엑소좀",
-     "무너지기 쉬운 피부 바탕을 안정적으로 잡아주고 조밀하게 채워진 듯 탄탄한 피부 바탕을 선사"
-    ]
-   },
-   {
-    "제목": "올인원 안티에이징 케어를 위한 프리미엄 성분과 달바 독자 성분 시너지",
-    "설명": [
-     "달바 독자 성분 : [활력] 펩타이드 엑소좀™(다이펩타이드-15 1.2%, 흰서양송로수, 흰서양송로추출물)",
-     "[탄력]트러페롤™(이탈리아산 화이트 트러플(흰서양송로추출물),토코페롤)",
-     "아쿠아 세럼: (수분/진정) :  판테놀 5% 히알루론산, 세라마이드, 병풀추출물",
-     "0 인텐스 크림 (영양/탄력) :  펩타이드엑소좀 30%, 달바-8블렌딩오일,콜라겐추출물, 지모뿌리추출"
-    ]
-   },
-   {
-    "제목": "이탈리아 비건 V-라벨 인증 진행 / 모공을 막지 않는 제형으로 어떤 피부 타입도 편안한 사용",
-    "설명": [
-     "전성분 까다로운 기준의 이탈리아 V-Label 비건 정식 인증 완료 -",
-     "여드름성 피부 사용 적합(논코메도제닉) 인체 적용 시험 완료  & 민감성 피부 대상 인체 피부 일차 자극 테스트 완료"
-    ]
-   }
-  ],
-  "기타": [
+ "white-truffle-double-serum-cream-2-in-1": {
+  "항목": [
    {
     "제목": "왜 한 통에 두 가지를 담았나",
     "본문": [
@@ -4161,130 +2079,10 @@
      "A primary skin irritation test was completed on sensitive skin, and the texture doesn't block pores, so it suits any skin type."
     ]
    }
-  ],
-  "en판": {
-   "스펙": {
-    "용량": "70g"
-   },
-   "한줄": "Aqua serum and intense cream in one jar — you mix your own ratio each day with the spatula.",
-   "특징": [
-    {
-     "title": "Aqua serum (water, soothing) and intense cream (nourishment, firmness) in one jar",
-     "body": []
-    },
-    {
-     "title": "DIY care that changes with the season and your skin",
-     "body": [
-      "Adjust the ratio yourself to match how your skin is that day.",
-      "Whatever the weather, whatever the condition: water, moisture, nourishment, firmness and soothing in one."
-     ]
-    },
-    {
-     "title": "Stronger on the barrier, and on the ageing signs that show by area",
-     "body": [
-      "Anti-ageing human trial (wrinkles, lifting, skin density) and in-vitro antioxidant testing completed.",
-      "Crow's feet, slackening cheeks, antioxidant protection, skin density and the moisture barrier."
-     ]
-    },
-    {
-     "title": "Deep hydration, deep firmness and soothing",
-     "body": [
-      "Human trials completed for inner dryness and inner firmness.",
-      "Human trial completed for soothing skin damaged by physical stress.",
-      "It sinks in deep and settles irritated skin on contact."
-     ]
-    },
-    {
-     "title": "Panthenol 5% and nano Peptide Exosome 30%",
-     "body": [
-      "A nano exosome system from Italian white truffle bound to 99% pure low-molecular Dipeptide-15.",
-      "It steadies a base that gives way easily and leaves skin looking densely filled."
-     ]
-    },
-    {
-     "title": "Premium ingredients meeting d'Alba's own",
-     "body": [
-      "d'Alba's own: Peptide Exosome™ (Dipeptide-15 1.2%, white truffle water and extract) for vitality; Trufferol™ (Italian white truffle, tocopherol) for firmness.",
-      "Aqua serum (water, soothing): panthenol 5%, hyaluronic acid, ceramide, centella extract.",
-      "Intense cream (nourishment, firmness): Peptide Exosome 30%, d'Alba-8 Blending Oil, collagen extract, Anemarrhena root extract."
-     ]
-    },
-    {
-     "title": "Comfortable on any skin type",
-     "body": [
-      "Italian V-Label vegan certification against the full ingredient list.",
-      "Non-comedogenic human trial completed, and a primary irritation test on sensitive skin."
-     ]
-    }
-   ],
-   "이미지": [
-    "Product shot",
-    "Held in hand",
-    "Product styling shot",
-    "Model shot",
-    "The two textures",
-    "About white truffle exosome",
-    "Being applied"
-   ]
-  }
+  ]
  },
- {
-  "slug": "white-truffle-return-oil-cream-cleanser",
-  "en": "White truffle Return Oil Cream Cleanser",
-  "ko": "달바 화이트 트러플 리턴 오일 크림 클렌저",
-  "스펙": {
-   "용량": "160ml",
-   "타겟": "모든 피부"
-  },
-  "포지셔닝": {
-   "문구": "부드러운 오일 젤 제형이 쫀득한 크림 제형으로 트랜스포밍되어 풍성한 폼으로 세안해 주는 오일 크림 폼 클렌저",
-   "태그": [
-    "#오일크림클렌저",
-    "#스파워터클렌저",
-    "#보습영양",
-    "#비건저자극"
-   ]
-  },
-  "특징": [
-   {
-    "제목": "번거로운 단계 없이 한 번에! 원스텝 딥 클렌징",
-    "설명": [
-     "오일 크림으로 밀착시켜 녹여내고, 풍성한 버블로 닦아내어",
-     "메이크업부터 선크림까지 하나로! 간편한 클렌징",
-     "“포인트 메이크업 리무버 + 클렌징 오일 + 클렌징 젤 + 클렌징 밤의 단계를 원스텝으로  올인원 클렌저”"
-    ]
-   },
-   {
-    "제목": "벨기에 스파 워터(온천수) 14% 함유",
-    "설명": [
-     "벨기에산 스파 워터 포함 보습 성분 14% 함유로, 세안 후 당김 없이 방금 스파 다녀온 듯",
-     "매끄럽고 촉촉한 피부 보습 광채를 선사해 줍니다."
-    ]
-   },
-   {
-    "제목": "비건 인증 받은 식물성 계면활성제와 골드 클레이의 저자극 딥 클렌저",
-    "설명": [
-     "식물성 비건 계면활성제와 말끔한 클렌징을 도와주는 프랑스산 골드 클레이가",
-     "피부를 순하고 말끔하게 클렌징 하는데 도움을 줍니다."
-    ]
-   },
-   {
-    "제목": "프리미엄 성분 가득! 영양 세럼 클렌저",
-    "설명": [
-     "이탈리아산 화이트 트러플(흰서양송로추출물)과 비건 콜라겐 성분의 풍부한 영양감이 세안 후,",
-     "기초 케어 한 듯 매끄럽고 영양감 있는 피부로 가꾸어 줍니다.",
-     "영양 성분 : 달바 독자 탄력 성분 트러페롤™(화이트 트러플 (흰서양송로추출물)+토코페롤), 비건콜라겐",
-     "보습 성분 : 벨기에 온천수, 자작나무 수액, 뉴질랜드산 포트마리꽃추출물, 달바 8가지 블렌딩 오일",
-     "진정 성분 : Calming Complxe Lipoclam(병풀추출물, 무화과추출물, 세라마이드엔피)",
-     "세정 성분 : 프랑스산 골드 클레이(일라이트), Anti Pore(대왕소나무잎추출물,, 달맞이꽃추출물, 칡뿌리추출물, 당느릅나무뿌리추출물 )"
-    ]
-   },
-   {
-    "제목": "이탈리아 비건-V라벨 인증 &  인체 피부 일차자극(저자극) 테스트 완료",
-    "설명": []
-   }
-  ],
-  "기타": [
+ "white-truffle-return-oil-cream-cleanser": {
+  "항목": [
    {
     "제목": "손 안에서 두 번 바뀝니다",
     "본문": [
@@ -4413,109 +2211,90 @@
      "'Gentle but it actually removes everything' is the position it's going for. Usually you give up one for the other, and the two-stage structure — oil to dissolve, foam to wash — is the answer to that."
     ]
    }
-  ],
-  "en판": {
-   "스펙": {
-    "용량": "160ml",
-    "타겟": "All skin types"
-   },
-   "한줄": "An oil gel that turns to cream and then to foam in your hands — one product in place of four cleansing steps.",
-   "특징": [
-    {
-     "title": "One step, no fuss",
-     "body": [
-      "The oil cream grips and dissolves, then a rich foam wipes it away — makeup and sunscreen in one go.",
-      "It replaces a point remover, a cleansing oil, a cleansing gel and a cleansing balm with a single product."
-     ]
-    },
-    {
-     "title": "14% Belgian spa water",
-     "body": [
-      "Hydrating ingredients including Belgian spa water at 14%, so skin doesn't feel tight afterwards — more like you've just come back from a spa."
-     ]
-    },
-    {
-     "title": "Vegan plant surfactants and gold clay",
-     "body": [
-      "Plant-derived vegan surfactants with French gold clay clean thoroughly and stay gentle."
-     ]
-    },
-    {
-     "title": "A nourishing serum cleanser",
-     "body": [
-      "Italian white truffle and vegan collagen leave skin smooth, as though you'd already done your skincare.",
-      "Nourishment: Trufferol™ (white truffle + tocopherol), vegan collagen.",
-      "Moisture: Belgian spa water, birch sap, New Zealand calendula extract, d'Alba-8 Blending Oil.",
-      "Soothing: Calming Complex Lipocalm (centella extract, fig extract, ceramide NP).",
-      "Cleansing: French gold clay (illite), Anti-Pore (Montezuma pine leaf, evening primrose, kudzu root, elm root extracts)."
-     ]
-    },
-    {
-     "title": "Italian V-Label vegan certified, irritation test completed",
-     "body": []
-    }
-   ],
-   "이미지": [
-    "Product shot",
-    "Model using it",
-    "The golden gel texture",
-    "The three steps",
-    "Skin texture improved 10.454% (after one use)",
-    "French gold clay (illite)",
-    "How to swap the flip cap",
-    "Vegan certification"
-   ]
-  }
+  ]
  },
- {
-  "slug": "white-truffle-refresh-aqua-serum",
-  "en": "White Truffle Refresh Aqua Serum",
-  "ko": "달바 화이트 트러플 리프레쉬 아쿠아 세럼",
-  "스펙": {
-   "용량": "150ml"
-  },
-  "포지셔닝": null,
-  "특징": [
+ "white-truffle-moisturizing-serum-lotion": {
+  "항목": [
    {
-    "제목": "빙하수 80%와 블루 오일 에너지의 진정&쿨링세럼",
-    "설명": [
-     "정제수 대신 캐나다산 빙하수 80%를 함유해 풍부한 수분감으로 분사할 때마다 촉촉하게 가꿔주고 달아오른 피부를 시원하게 해주는 빙하수 쿨링 세럼"
+    "제목": "로션인데 왜 '세럼 로션' 인가",
+    "본문": [
+     "비타민 활력 세럼을 로션 안에 담았다는 뜻입니다. 로션의 제형에 세럼의 성분 구성을 넣은 것입니다.",
+     "개발 이유가 명확합니다. 앰플과 크림을 아무리 발라도 건조할 때가 있는데, 그건 기본 바탕이 약해서라는 것입니다. 그 바탕을 탄탄하게 하려고 만든 데일리 제품입니다.",
+     "이 설명이 방송에서 가장 잘 먹힙니다. 좋은 걸 계속 얹어도 건조한 경험은 누구나 있습니다."
+    ],
+    "title": "Why a 'serum lotion' rather than a lotion",
+    "body": [
+     "It means a vitamin serum built into a lotion — the texture of a lotion with the composition of a serum.",
+     "The reasoning is clear. Sometimes no amount of ampoule and cream fixes dryness, because the base layer underneath is weak. This was made as the daily product that fixes that base.",
+     "That explanation lands well on camera. Everyone has layered good products and still felt dry."
     ]
    },
    {
-    "제목": "토너 + 미스트 + 세럼 + 에센스를 한 번에! 간편한  올인원 세럼",
-    "설명": []
-   },
-   {
-    "제목": "미스트 장인 달바의 안개분사 및 동양인 얼굴 맞춤 분사각",
-    "설명": []
-   },
-   {
-    "제목": "프리미엄 성분으로 촉촉한 보습탄력과 쿨링 진정까지",
-    "설명": [
-     "캐나다산 빙하수 800,000ppm",
-     "이탈리아산 화이트 트러플(흰서양송로추출물)",
-     "콜라겐추출물",
-     "Trufferol™ 달바 독자 특허성분  [특허 제10-2332666호]  * 화이트트러플+토코페롤",
-     "편안한 피부  (개똥쑥추출물, 연꽃추출물, 쌀추출물, 효모발효물)",
-     "보습 성분: 오크라열매추출물",
-     "모공, 피지케어 특허 성분 Tannin Complex HR\u000b (1,2-헥산다이올, 부틸렌글라이콜, 녹차추출물, 잇꽃꽃추출물, 커피콩추출물, 밤껍질추출물,  감나무잎추출물,",
-     "에틸헥실글리세린, 호장근뿌리추출물, 포도추출물, 정제수, 초피나무열매추출물"
+    "제목": "밀키한 텍스처와 메이크업 전 단계",
+    "본문": [
+     "밀키한 제형이라 피부에 겉돌지 않고 빠르게 흡수됩니다. 끈적임이 남지 않는 것이 이 제형의 목적입니다.",
+     "불필요한 유분은 줄이고 보습은 충분히 넣어서, 크림 같은 답답함과 묵직함이 없습니다.",
+     "그래서 메이크업 전에 쓰기 좋습니다. 매끄러운 바탕이 만들어지면 파운데이션이 밀리지 않고 잘 먹습니다.",
+     "카메라 앞에서 손등에 발라 흡수되는 속도를 보여주는 것이 가장 확실한 설명입니다."
+    ],
+    "title": "The milky texture, and using it before makeup",
+    "body": [
+     "Being milky, it absorbs quickly rather than sitting on the surface. Leaving no stickiness is the point of the texture.",
+     "Less unnecessary oil, plenty of moisture — so none of the heavy, stifling feel of a cream.",
+     "Which makes it good before makeup. A smooth base means foundation doesn't slide and sits properly.",
+     "The clearest way to explain it is to apply it on the back of your hand on camera and let people watch how fast it goes in."
     ]
    },
    {
-    "제목": "인체 피부 일차 자극 테스트 완료/이탈리아 비건인증 완료",
-    "설명": [
-     "이탈리아 비건 인증 // 국내 인체 피부 일차 자극 시험 완료",
-     "1회 사용으로 피부 온도 감소(쿨링)효과에 도움"
+    "제목": "비건 단백질 13종",
+    "본문": [
+     "단백질이 열세 가지 들어갑니다. 글라이코프로테인과 루핀, 쌀, 귀리, 콩, 감자, 완두콩, 옥수수, 밀, 보리, 식물성, 스위트아몬드, 호호바 단백질입니다. 모두 가수분해한 형태이고 비건 인증을 받았습니다.",
+     "여기에 콜라겐추출물과 비건 세라마이드엔피가 더해져 영양과 장벽을 맡습니다.",
+     "달바 제품 중에서도 단백질 종류가 많은 편입니다."
+    ],
+    "title": "Thirteen vegan proteins",
+    "body": [
+     "Thirteen proteins go in: glycoprotein plus lupin, rice, oat, soy, potato, pea, corn, wheat, barley, mixed vegetable, sweet almond and jojoba. All hydrolysed, all vegan certified.",
+     "Collagen extract and vegan ceramide NP join them for nourishment and barrier support.",
+     "That's a lot of proteins, even by d'Alba's standards."
     ]
    },
    {
-    "제목": "아쿠아 플로럴 프레쉬향으로 뿌릴때마다 상쾌하게",
-    "설명": []
+    "제목": "보습과 미백 쪽 성분",
+    "본문": [
+     "히알루론산이 10종 들어갑니다. 분자 크기와 형태가 다른 것을 모아 층을 나눠 수분을 잡는 방식입니다. 여기에 보습 특허 성분 Oligo-HA 와 판테놀이 더해집니다.",
+     "미백과 생기는 나이아신아마이드, 비건 글루타티온, 순수 비타민C(아스코빅애씨드)가 맡습니다. 기능성 표시의 근거는 나이아신아마이드입니다.",
+     "광채는 달바-8 블렌딩 오일입니다. 해바라기씨, 마카다미아씨, 올리브, 동백나무씨, 아보카도, 돌콩, 달맞이꽃, 비타민나무열매 오일 여덟 가지입니다.",
+     "병풀추출물이 편안함을 맡습니다."
+    ],
+    "title": "The moisture and brightening side",
+    "body": [
+     "Ten hyaluronic acids, differing in molecular size and form so they hold water at different depths, joined by the patented Oligo-HA and panthenol.",
+     "Brightness comes from niacinamide, vegan glutathione and pure vitamin C (ascorbic acid). The functional claim rests on the niacinamide.",
+     "Glow comes from d'Alba-8 Blending Oil: sunflower seed, macadamia seed, olive, camellia seed, avocado, wild soybean, evening primrose and sea buckthorn fruit.",
+     "Centella extract keeps it comfortable."
+    ]
+   },
+   {
+    "제목": "두 가지로 씁니다",
+    "본문": [
+     "데일리는 세안 후 기초 케어 첫 단계에서 화장솜이나 손에 덜어 펴 바르고 두드려 흡수시키는 것입니다.",
+     "건조할 때는 한 번 더 펴 발라 블렌딩합니다. 같은 제품으로 영양과 보습을 집중하는 방법입니다.",
+     "메이크업 전에 발라 바탕을 잡는 것도 교안이 따로 적어 둔 사용법입니다.",
+     "첫 단계에 쓰는 제품이라 뒤에 오는 세럼이나 크림과 부딪히지 않습니다."
+    ],
+    "title": "Two ways to use it",
+    "body": [
+     "Daily: first step after cleansing. Take some onto a cotton pad or your hands, spread it over the skin and press it in.",
+     "When you're dry: go over it a second time and blend. Same product, concentrated.",
+     "Before makeup: the deck lists this separately as a way to set the base.",
+     "It sits at the first step, so it doesn't clash with whatever serum or cream comes after."
+    ]
    }
-  ],
-  "기타": [
+  ]
+ },
+ "white-truffle-refresh-aqua-serum": {
+  "항목": [
    {
     "제목": "빙하수 80% 가 무슨 뜻인가",
     "본문": [
@@ -4620,282 +2399,102 @@
      "The functional filing lists pH 5.5 — mildly acidic, close to skin's own."
     ]
    }
-  ],
-  "en판": {
-   "스펙": {
-    "용량": "150ml"
-   },
-   "한줄": "80% Canadian glacier water in a mist — toner, mist, serum and essence in one, and it cools the skin as it lands.",
-   "특징": [
-    {
-     "title": "80% glacier water and blue oil energy — a soothing, cooling serum",
-     "body": [
-      "Canadian glacier water at 80% in place of purified water, hydrating with every spray and cooling skin that has heated up."
-     ]
-    },
-    {
-     "title": "Toner, mist, serum and essence in one",
-     "body": []
-    },
-    {
-     "title": "d'Alba knows mists — a fine spray angled for Asian faces",
-     "body": []
-    },
-    {
-     "title": "Premium ingredients for moisture, firmness and cooling",
-     "body": [
-      "Canadian glacier water 800,000ppm.",
-      "Italian white truffle, collagen extract.",
-      "Trufferol™, d'Alba's patented ingredient (white truffle + tocopherol).",
-      "Comfort: sweet wormwood, lotus, rice extracts and yeast ferment.",
-      "Moisture: okra fruit extract.",
-      "Pores and sebum: the patented Tannin Complex HR."
-     ]
-    },
-    {
-     "title": "Primary skin irritation test completed, Italian vegan certification",
-     "body": [
-      "Italian vegan certification and a primary skin irritation trial in Korea.",
-      "One use helps lower skin temperature."
-     ]
-    },
-    {
-     "title": "An aqua floral fresh scent",
-     "body": []
-    }
-   ],
-   "이미지": [
-    "How to use it",
-    "Before spraying",
-    "Being sprayed",
-    "Italian white truffle"
-   ]
-  }
+  ]
  },
- {
-  "slug": "white-truffle-moisturizing-serum-lotion",
-  "en": "White Truffle Moisturizing Serum Lotion",
-  "ko": "달바 화이트 트러플 모이스처라이징 세럼 로션",
-  "스펙": {
-   "용량": "100 ml",
-   "기능성": "미백, 주름개선 기능성"
-  },
-  "포지셔닝": {
-   "문구": "비타 생기 에너지를 가득 담아 칙칙한 피부를 매끄럽고 화사하게! 비타 케어 로션",
-   "태그": [
-    "#비타토닝",
-    "#수분광채",
-    "#화잘먹피부",
-    "#비타체력로션",
-    "#비건로션"
-   ]
-  },
-  "특징": [
+ "white-truffle-first-spray-serum": {
+  "항목": [
    {
-    "제목": "비타민 활력 세럼을 담은 미백 로션이 칙칙한 피부를 맑고 화사하게, 데일리 비타 케어",
-    "설명": [
-     "비타민 활력 세럼이 담긴 미백 로션이  맑은 생기 에너지를 피부에 전달하여",
-     "칙칙한 피부를 맑고 화사하게 데일리 비타 케어"
+    "제목": "달바를 만든 제품",
+    "본문": [
+     "달바의 스테디셀러입니다. 브랜드를 알린 제품이고, 지금도 라인의 중심입니다.",
+     "이 사실 자체가 방송에서 힘이 있습니다. 새로 나온 제품이 아니라 오래 팔려 온 제품이라는 점이 신뢰로 작동합니다.",
+     "교안에 기존과 리뉴얼을 비교한 장이 따로 있습니다. 오래 이어져 온 제품이라 버전이 여럿입니다."
+    ],
+    "title": "The product that made d'Alba",
+    "body": [
+     "This is d'Alba's steady seller — the product that built the brand, and still the centre of the line.",
+     "That fact carries weight on camera. It isn't a new launch; it has sold for years, and longevity reads as trust.",
+     "The deck includes a page comparing the old version with the reformulated one. A product this long-lived has been through several."
     ]
    },
    {
-    "제목": "풍부한 영양이 촉촉하게 스며들고 빠르게 흡수되는 밀키 텍스처",
-    "설명": [
-     "밀키한 텍스처로  피부에 겉돌지 않고 빠르게 흡수되며고 끈적임 없으며,",
-     "풍부한 영양은 그대로 전달되어 촉촉함만 남겨줍니다."
+    "제목": "흔들어서 쓰는 이유",
+    "본문": [
+     "오일층과 수분층이 나뉘어 있습니다. 쓰기 전에 흔들어야 섞입니다.",
+     "흔들기 전과 후의 모습이 확연히 달라서 카메라에 잘 잡힙니다. 분리된 상태를 보여주고 흔들어 섞는 장면이 이 제품의 가장 좋은 첫 컷입니다.",
+     "쓰는 법은 10~20cm 떨어져 눈을 감고 얼굴 전체에 분사한 뒤 손으로 두드려 흡수시키는 것입니다.",
+     "얼굴 전체에 고르게 분사되는 각도로 설계돼서 한 곳에 뭉치거나 맺히지 않습니다."
+    ],
+    "title": "Why you shake it",
+    "body": [
+     "There's an oil layer and a water layer, and shaking is what mixes them.",
+     "Before and after look completely different, which films well. Showing it separated and then shaking it is the best opening shot this product has.",
+     "Use it from 10–20cm away, eyes closed, misting the whole face, then press it in.",
+     "The spray angle is designed to cover the face evenly, so it doesn't pool or bead in one spot."
     ]
    },
    {
-    "제목": "메이크업 전, 숨쉬 듯 편안하고 매끄럽게 완성하는 피부 바탕",
-    "설명": [
-     "불필요한 유분은 줄이고 보습은 충분하게 공급해 주어 크림처럼 답답함과 묵직함 없이",
-     "숨 쉬 듯 편안하게 매끄러운 피부 바탕을 만들어 메이크업이 잘 먹을 수 있도록 도와줍니다."
+    "제목": "식물성 오일 4가지와 추출물 14가지",
+    "본문": [
+     "오일은 아보카도오일, 해바라기씨오일, 돌콩오일, 아나토씨오일 네 가지입니다. 영양과 보습, 그리고 윤기를 맡습니다.",
+     "아나토씨오일은 흔치 않은 원료입니다. 붉은 빛을 띠는 씨앗에서 뽑은 오일입니다.",
+     "식물성 추출물은 흰서양송로추출물을 포함해 열네 가지입니다. 멕시칸치아씨, 바질, 귀리커넬, 알바수련꽃, 스노우로투스, 인삼, 연꽃꽃, 뽕나무껍질, 마돈나백합꽃, 에델바이스, 약모밀, 프리지어, 데이지꽃 추출물입니다.",
+     "이름이 예쁜 원료가 많아 방송에서 읽기 좋습니다."
+    ],
+    "title": "Four plant oils and fourteen extracts",
+    "body": [
+     "The oils are avocado, sunflower seed, wild soybean and annatto seed — handling nourishment, moisture and shine.",
+     "Annatto seed oil is an unusual one, pressed from a reddish seed.",
+     "There are fourteen botanical extracts including white truffle: chia, basil, oat kernel, white water lily, snow lotus, ginseng, lotus flower, mulberry bark, Madonna lily, edelweiss, houttuynia, freesia and daisy.",
+     "A lot of those read beautifully out loud, which is useful on camera."
     ]
    },
    {
-    "제목": "프리미엄 탄력 · 보습 케어 성분",
-    "설명": [
-     "영양/탄력   : 달바 독자 특허 성분 Trufferol™ (화이트 트러플(흰서양송로추출물)+ 토코페롤)",
-     "콜라겐추출물, 비건 세라마이드, 비건 단백질 Complex",
-     "보습/광채: 히알루론산 10종, 보습특허 Oligo-Ha(하이알루로닉애씨드), 8가지 블렌딩 오일",
-     "미백/생기: 나이아신아마이드, 비건 글루타티온, 비타민C(아스코빅애씨드)",
-     "편안함: 병풀추출물, 판테놀"
+    "제목": "어떤 시험을 마쳤나",
+    "본문": [
+     "피부 각질과 피부 깊은 속 보습에 대한 인체적용시험을 마쳤습니다.",
+     "피부 광채(윤기), 결(매끄러움), 수분 레이어드에 대한 인체적용시험도 마쳤습니다.",
+     "항목이 다섯 가지로 미스트 제품치고는 많은 편입니다. 개선율 대신 항목 이름으로 말하면 됩니다.",
+     "설페이트계 계면활성제(SLS, SLES, ALS, ALES) 불검출 시험도 있습니다. 다만 그 성적서에는 '참고용' 도장이 찍혀 있어서, 공식 시험 결과로 내세우기보다 '설페이트계 계면활성제를 쓰지 않았다' 로 말하는 편이 맞습니다."
+    ],
+    "title": "What has been tested",
+    "body": [
+     "Human trials completed for dead skin and deep hydration.",
+     "Human trials also completed for glow, texture and moisture layering.",
+     "Five measures is a lot for a mist. Name them rather than quoting improvement rates.",
+     "There's also a test showing sulphate surfactants (SLS, SLES, ALS, ALES) were not detected. That certificate is stamped 'for reference', though, so rather than presenting it as an official result, say the product doesn't use sulphate surfactants."
     ]
    },
    {
-    "제목": "매일 사용하는, 피부가 편안한 비건 라이프",
-    "설명": [
-     "이탈리아 비건 V-라벨 인증(진행중) & 저자극 테스트 완료(진행중)",
-     "까다로운 기준의 이탈리아V -Label 비건 정식 인증 완료된 세럼 로션",
-     "인체 피부 일차자극(저자극) 테스트 완료"
+    "제목": "향 — 아로마틱 시트러스 플로럴",
+    "본문": [
+     "달바 시그니처 향입니다. 이탈리아 조향사 Giovanni Festa 와 협업해 만들었고, 교안은 경력 30년의 조향사라고 소개합니다.",
+     "시트러스와 허브로 시작해 로즈·은방울꽃·배를 지나 머스크로 끝납니다.",
+     "달바의 여러 제품에 같은 향이 들어가서, 라인을 같이 쓰면 향이 이어집니다. 세트로 권할 때 쓸 수 있는 이야기입니다."
+    ],
+    "title": "The scent — Aromatic Citrus Floral",
+    "body": [
+     "d'Alba's signature scent, created with the Italian perfumer Giovanni Festa, whom the deck introduces as having thirty years in the trade.",
+     "Citrus and herbs open it, rose, lily of the valley and pear carry the middle, and musk closes it.",
+     "The same scent runs through several d'Alba products, so using the line together keeps it consistent — useful when you're recommending a set."
+    ]
+   },
+   {
+    "제목": "인증",
+    "본문": [
+     "전성분 기준이 까다로운 이탈리아 V-Label 비건 정식 인증을 받았습니다.",
+     "국내에서 인체 피부 일차자극 테스트를 마쳤습니다."
+    ],
+    "title": "Certification",
+    "body": [
+     "Italian V-Label vegan certification, reviewed against the full ingredient list.",
+     "A primary skin irritation test completed in Korea."
     ]
    }
-  ],
-  "기타": [
-   {
-    "제목": "로션인데 왜 '세럼 로션' 인가",
-    "본문": [
-     "비타민 활력 세럼을 로션 안에 담았다는 뜻입니다. 로션의 제형에 세럼의 성분 구성을 넣은 것입니다.",
-     "개발 이유가 명확합니다. 앰플과 크림을 아무리 발라도 건조할 때가 있는데, 그건 기본 바탕이 약해서라는 것입니다. 그 바탕을 탄탄하게 하려고 만든 데일리 제품입니다.",
-     "이 설명이 방송에서 가장 잘 먹힙니다. 좋은 걸 계속 얹어도 건조한 경험은 누구나 있습니다."
-    ],
-    "title": "Why a 'serum lotion' rather than a lotion",
-    "body": [
-     "It means a vitamin serum built into a lotion — the texture of a lotion with the composition of a serum.",
-     "The reasoning is clear. Sometimes no amount of ampoule and cream fixes dryness, because the base layer underneath is weak. This was made as the daily product that fixes that base.",
-     "That explanation lands well on camera. Everyone has layered good products and still felt dry."
-    ]
-   },
-   {
-    "제목": "밀키한 텍스처와 메이크업 전 단계",
-    "본문": [
-     "밀키한 제형이라 피부에 겉돌지 않고 빠르게 흡수됩니다. 끈적임이 남지 않는 것이 이 제형의 목적입니다.",
-     "불필요한 유분은 줄이고 보습은 충분히 넣어서, 크림 같은 답답함과 묵직함이 없습니다.",
-     "그래서 메이크업 전에 쓰기 좋습니다. 매끄러운 바탕이 만들어지면 파운데이션이 밀리지 않고 잘 먹습니다.",
-     "카메라 앞에서 손등에 발라 흡수되는 속도를 보여주는 것이 가장 확실한 설명입니다."
-    ],
-    "title": "The milky texture, and using it before makeup",
-    "body": [
-     "Being milky, it absorbs quickly rather than sitting on the surface. Leaving no stickiness is the point of the texture.",
-     "Less unnecessary oil, plenty of moisture — so none of the heavy, stifling feel of a cream.",
-     "Which makes it good before makeup. A smooth base means foundation doesn't slide and sits properly.",
-     "The clearest way to explain it is to apply it on the back of your hand on camera and let people watch how fast it goes in."
-    ]
-   },
-   {
-    "제목": "비건 단백질 13종",
-    "본문": [
-     "단백질이 열세 가지 들어갑니다. 글라이코프로테인과 루핀, 쌀, 귀리, 콩, 감자, 완두콩, 옥수수, 밀, 보리, 식물성, 스위트아몬드, 호호바 단백질입니다. 모두 가수분해한 형태이고 비건 인증을 받았습니다.",
-     "여기에 콜라겐추출물과 비건 세라마이드엔피가 더해져 영양과 장벽을 맡습니다.",
-     "달바 제품 중에서도 단백질 종류가 많은 편입니다."
-    ],
-    "title": "Thirteen vegan proteins",
-    "body": [
-     "Thirteen proteins go in: glycoprotein plus lupin, rice, oat, soy, potato, pea, corn, wheat, barley, mixed vegetable, sweet almond and jojoba. All hydrolysed, all vegan certified.",
-     "Collagen extract and vegan ceramide NP join them for nourishment and barrier support.",
-     "That's a lot of proteins, even by d'Alba's standards."
-    ]
-   },
-   {
-    "제목": "보습과 미백 쪽 성분",
-    "본문": [
-     "히알루론산이 10종 들어갑니다. 분자 크기와 형태가 다른 것을 모아 층을 나눠 수분을 잡는 방식입니다. 여기에 보습 특허 성분 Oligo-HA 와 판테놀이 더해집니다.",
-     "미백과 생기는 나이아신아마이드, 비건 글루타티온, 순수 비타민C(아스코빅애씨드)가 맡습니다. 기능성 표시의 근거는 나이아신아마이드입니다.",
-     "광채는 달바-8 블렌딩 오일입니다. 해바라기씨, 마카다미아씨, 올리브, 동백나무씨, 아보카도, 돌콩, 달맞이꽃, 비타민나무열매 오일 여덟 가지입니다.",
-     "병풀추출물이 편안함을 맡습니다."
-    ],
-    "title": "The moisture and brightening side",
-    "body": [
-     "Ten hyaluronic acids, differing in molecular size and form so they hold water at different depths, joined by the patented Oligo-HA and panthenol.",
-     "Brightness comes from niacinamide, vegan glutathione and pure vitamin C (ascorbic acid). The functional claim rests on the niacinamide.",
-     "Glow comes from d'Alba-8 Blending Oil: sunflower seed, macadamia seed, olive, camellia seed, avocado, wild soybean, evening primrose and sea buckthorn fruit.",
-     "Centella extract keeps it comfortable."
-    ]
-   },
-   {
-    "제목": "두 가지로 씁니다",
-    "본문": [
-     "데일리는 세안 후 기초 케어 첫 단계에서 화장솜이나 손에 덜어 펴 바르고 두드려 흡수시키는 것입니다.",
-     "건조할 때는 한 번 더 펴 발라 블렌딩합니다. 같은 제품으로 영양과 보습을 집중하는 방법입니다.",
-     "메이크업 전에 발라 바탕을 잡는 것도 교안이 따로 적어 둔 사용법입니다.",
-     "첫 단계에 쓰는 제품이라 뒤에 오는 세럼이나 크림과 부딪히지 않습니다."
-    ],
-    "title": "Two ways to use it",
-    "body": [
-     "Daily: first step after cleansing. Take some onto a cotton pad or your hands, spread it over the skin and press it in.",
-     "When you're dry: go over it a second time and blend. Same product, concentrated.",
-     "Before makeup: the deck lists this separately as a way to set the base.",
-     "It sits at the first step, so it doesn't clash with whatever serum or cream comes after."
-    ]
-   }
-  ],
-  "en판": {
-   "스펙": {
-    "용량": "100ml",
-    "기능성": "Brightening + wrinkle care (functional cosmetic)"
-   },
-   "한줄": "A milky brightening lotion with a vitamin serum inside — the base step for skin that stays dry however much you layer on it.",
-   "특징": [
-    {
-     "title": "A brightening lotion carrying a vitamin serum, for skin that has gone dull",
-     "body": [
-      "The vitamin serum inside delivers clear, fresh energy, brightening dull skin day to day."
-     ]
-    },
-    {
-     "title": "A milky texture that sinks in fast and carries real nourishment",
-     "body": [
-      "It doesn't sit on the surface — it absorbs quickly and leaves no stickiness.",
-      "All the nourishment goes in; only the hydration is left behind."
-     ]
-    },
-    {
-     "title": "A smooth, breathable base before makeup",
-     "body": [
-      "Less unnecessary oil, enough moisture — none of the heaviness of a cream.",
-      "It leaves a smooth, comfortable base so makeup sits better."
-     ]
-    },
-    {
-     "title": "Premium firming and hydrating ingredients",
-     "body": [
-      "Nourishment and firmness: Trufferol™ (white truffle + tocopherol), collagen extract, vegan ceramide, a vegan protein complex.",
-      "Moisture and glow: 10 hyaluronic acids, the patented Oligo-HA, 8 blending oils.",
-      "Brightening and freshness: niacinamide, vegan glutathione, vitamin C (ascorbic acid)."
-     ]
-    }
-   ],
-   "이미지": [
-    "Product shot",
-    "Milky texture",
-    "Model shot",
-    "Vitamin C + glutathione + niacinamide 2%"
-   ]
-  }
+  ]
  },
- {
-  "slug": "white-truffle-vital-spray-serum",
-  "en": "White Truffle Vital Spray Serum",
-  "ko": "달바 화이트 트러플 바이탈 스프레이 세럼",
-  "스펙": {
-   "용량": "100ml",
-   "타겟": "모든 피부"
-  },
-  "포지셔닝": null,
-  "특징": [
-   {
-    "제목": "레드 컬러 식물 유래 블랜딩 오일의 보습 및 피부 진정 효과!",
-    "설명": []
-   },
-   {
-    "제목": "토너+미스트+세럼+에센스를 한 번에! 수시로 보습+진정 케어",
-    "설명": []
-   },
-   {
-    "제목": "프리미엄 보습 진정 성분",
-    "설명": [
-     "트러페롤™: 달바의 독자적인 특허성분",
-     "이탈리아산 화이트 트러플(흰서양송로추출물)+토코페롤",
-     "AQUAXYL™(보습특허) : 건조하고 메마른 피부에 촉촉한 수분, 보습 공급",
-     "Beautiful Herb Story™, Lora Anti –S ™(진정특허) : 민감해진 피부에 영양 보습 공급으로 편안한 진정"
-    ]
-   },
-   {
-    "제목": "매일 사용해도 피부에 편안한 성분, 비건 라이프",
-    "설명": [
-     "전성분 까다로운 기준의 이탈리아 V-Label 비건 정식 인증 완료",
-     "외부자극(자외선)에 의한 피부 자극 진정& 피부 결(거칠기) 개선 인체적용시험 완료",
-     "민감성 피부 대상 인체피부 일차자극 테스트 완료"
-    ]
-   },
-   {
-    "제목": "달바의 시그니처&로즈향",
-    "설명": [
-     "시그니처 ‘아로마틱 시트러스 플로럴’ 향과 고급스러운 ‘로지 플로럴’ 향의 조화로 뿌릴 때마다 편안해지는 향"
-    ]
-   }
-  ],
-  "기타": [
+ "white-truffle-vital-spray-serum": {
+  "항목": [
    {
     "제목": "같은 라인의 두 스프레이 세럼, 무엇이 다른가",
     "본문": [
@@ -4990,290 +2589,110 @@
      "Human trials completed for calming UV-induced irritation and improving skin texture."
     ]
    }
-  ],
-  "en판": {
-   "스펙": {
-    "용량": "100ml",
-    "타겟": "All skin types"
-   },
-   "한줄": "The calming one in the spray serum line — red plant oils and three soothing patents, for skin that has been out in the sun.",
-   "특징": [
-    {
-     "title": "Red plant blending oils for moisture and calm",
-     "body": []
-    },
-    {
-     "title": "Toner, mist, serum and essence in one — moisture and calm whenever you need it",
-     "body": []
-    },
-    {
-     "title": "Premium calming ingredients",
-     "body": [
-      "Trufferol™, d'Alba's patented ingredient: Italian white truffle + tocopherol.",
-      "AQUAXYL™ (moisture patent): water and moisture for dry, depleted skin.",
-      "Beautiful Herb Story™ and Lora Anti-S™ (calming patents): nourishment for sensitised skin."
-     ]
-    },
-    {
-     "title": "Gentle enough for daily use",
-     "body": [
-      "Italian V-Label vegan certification against the full ingredient list.",
-      "Human trial completed for calming UV-induced irritation and improving skin texture.",
-      "Primary skin irritation test completed on sensitive skin."
-     ]
-    },
-    {
-     "title": "d'Alba's signature scent, with rose",
-     "body": [
-      "The signature Aromatic Citrus Floral blended with an elegant Rosy Floral."
-     ]
-    }
-   ],
-   "이미지": [
-    "Being sprayed",
-    "Model shot",
-    "Floral image"
-   ]
-  }
+  ]
  },
- {
-  "slug": "white-truffle-first-spray-serum",
-  "en": "White Truffle First Spray Serum",
-  "ko": "달바 화이트 트러플 퍼스트 스프레이 세럼",
-  "스펙": {
-   "용량": "100ml",
-   "타겟": "모든 피부"
-  },
-  "포지셔닝": {
-   "문구": "촘촘한 보습으로 빛나는 탄력 광채 피부",
-   "태그": [
-    "#스테디셀러",
-    "#뿌리는"
-   ]
-  },
-  "특징": [
+ "first-oil-capsule-serum": {
+  "항목": [
    {
-    "제목": "토너+미스트+세럼+에센스를 한 번에! 수시로 보습+탄력 케어",
-    "설명": []
-   },
-   {
-    "제목": "프리미엄 영양 보습 성분",
-    "설명": [
-     "4가지 식물성 블렌딩 오일 : 풍부한 영양과 보습 공급으로 윤기나는 피부 케어",
-     "트러페롤™: 달바 독자적인 특허성분",
-     "이탈리아산 화이트 트러플(흰서양송로추출물)+토코페롤",
-     "깊은 속 보습 & 끈적임 없는 빠른 흡수",
-     "얼굴 전체 고르게 분사되는 각도로 뭉치거나 맺힘없이 부드럽게",
-     "깊은 속 보습 & 각질개선 인체적용시험"
-    ]
-   },
-   {
-    "제목": "피부에 건강한 성분, 비건 라이프",
-    "설명": [
-     "전성분 까다로운 기준의 이탈리아 V-Label 비건 정식 인증 완료로 안전하고 건강한 세럼",
-     "국내 인체적용 일차자극 테스트 완료"
-    ]
-   },
-   {
-    "제목": "달바의 시그니처 향으로",
-    "설명": [
-     "이탈리아 조향사 ‘Giovanni festa’와 콜라보로 탄생한 ‘아로마틱 시트러스 플로럴’",
-     "향으로 뿌릴 때마다 편안해지는 세럼 미스트"
-    ]
-   }
-  ],
-  "기타": [
-   {
-    "제목": "달바를 만든 제품",
+    "제목": "비타 토닝 캡슐 세럼과 무엇이 다른가",
     "본문": [
-     "달바의 스테디셀러입니다. 브랜드를 알린 제품이고, 지금도 라인의 중심입니다.",
-     "이 사실 자체가 방송에서 힘이 있습니다. 새로 나온 제품이 아니라 오래 팔려 온 제품이라는 점이 신뢰로 작동합니다.",
-     "교안에 기존과 리뉴얼을 비교한 장이 따로 있습니다. 오래 이어져 온 제품이라 버전이 여럿입니다."
+     "달바에는 캡슐 세럼이 두 가지 있습니다. 비타 토닝 캡슐 세럼과 이 퍼스트 오일 캡슐 세럼입니다. 겉모습이 비슷해서 헷갈리기 쉽습니다.",
+     "가장 큰 차이는 베이스입니다. 비타 토닝 쪽은 비타민나무수 81%, 이 제품은 다마스크장미꽃수 80.34% 입니다.",
+     "이름의 '퍼스트' 가 말해 주듯 이 제품은 기초의 첫 단계에 쓰는 것입니다. 세안 후 가장 먼저 올립니다.",
+     "장미수 베이스라 향과 인상이 다릅니다. 핑크빛 장미의 맑은 수분이라는 것이 이 제품의 정체성입니다."
     ],
-    "title": "The product that made d'Alba",
+    "title": "How it differs from the Vita Toning Capsule Serum",
     "body": [
-     "This is d'Alba's steady seller — the product that built the brand, and still the centre of the line.",
-     "That fact carries weight on camera. It isn't a new launch; it has sold for years, and longevity reads as trust.",
-     "The deck includes a page comparing the old version with the reformulated one. A product this long-lived has been through several."
+     "d'Alba makes two capsule serums: the Vita Toning Capsule Serum and this First Oil Capsule Serum. They look alike enough to confuse.",
+     "The base is the biggest difference. The Vita Toning one uses sea buckthorn water at 81%; this one uses damask rose water at 80.34%.",
+     "As the name says, this is the first step — it goes on straight after cleansing.",
+     "A rose water base gives it a different scent and a different character. Clear, pink-rose hydration is this product's identity."
     ]
    },
    {
-    "제목": "흔들어서 쓰는 이유",
+    "제목": "98.5 대 1.5 — 캡슐 비율",
     "본문": [
-     "오일층과 수분층이 나뉘어 있습니다. 쓰기 전에 흔들어야 섞입니다.",
-     "흔들기 전과 후의 모습이 확연히 달라서 카메라에 잘 잡힙니다. 분리된 상태를 보여주고 흔들어 섞는 장면이 이 제품의 가장 좋은 첫 컷입니다.",
-     "쓰는 법은 10~20cm 떨어져 눈을 감고 얼굴 전체에 분사한 뒤 손으로 두드려 흡수시키는 것입니다.",
-     "얼굴 전체에 고르게 분사되는 각도로 설계돼서 한 곳에 뭉치거나 맺히지 않습니다."
+     "수분 세럼 베이스가 98.5, 비타민 캡슐이 1.5 입니다. 캡슐이 많아 보이지만 실제 비중은 작습니다.",
+     "그래서 무겁지 않습니다. 캡슐 제품이 흔히 무겁고 겉도는 것과 달리, 이 제품은 끈적임 없이 부들부들하게 마무리됩니다.",
+     "캡슐 안에는 비타민E(토코페롤), 비타민K(메나다이온), 비건 세라마이드, 달바-8 블렌딩 오일이 들어 있습니다.",
+     "문지르면 이물감 없이 사르르 녹습니다. 손등에서 보여주기 좋은 장면입니다.",
+     "'4만 개' 는 회사가 계산한 값이니 '4만 개 정도' 라고 말하는 편이 정확합니다."
     ],
-    "title": "Why you shake it",
+    "title": "98.5 to 1.5 — the capsule ratio",
     "body": [
-     "There's an oil layer and a water layer, and shaking is what mixes them.",
-     "Before and after look completely different, which films well. Showing it separated and then shaking it is the best opening shot this product has.",
-     "Use it from 10–20cm away, eyes closed, misting the whole face, then press it in.",
-     "The spray angle is designed to cover the face evenly, so it doesn't pool or bead in one spot."
+     "The hydrating serum base is 98.5, the vitamin capsules 1.5. They look plentiful, but they're a small share of the formula.",
+     "Which is why it isn't heavy. Capsule products often sit on the surface and feel weighty; this one finishes soft with no tackiness.",
+     "Inside the capsules: vitamin E (tocopherol), vitamin K (menadione), vegan ceramide and d'Alba-8 Blending Oil.",
+     "Rub them and they melt away with nothing grainy left. Good to show on the back of your hand.",
+     "'40,000' is a company estimate, so 'around 40,000' is the accurate way to say it."
     ]
    },
    {
-    "제목": "식물성 오일 4가지와 추출물 14가지",
+    "제목": "MEGA NANOSOME 공법 — 3단계로 쪼갠다",
     "본문": [
-     "오일은 아보카도오일, 해바라기씨오일, 돌콩오일, 아나토씨오일 네 가지입니다. 영양과 보습, 그리고 윤기를 맡습니다.",
-     "아나토씨오일은 흔치 않은 원료입니다. 붉은 빛을 띠는 씨앗에서 뽑은 오일입니다.",
-     "식물성 추출물은 흰서양송로추출물을 포함해 열네 가지입니다. 멕시칸치아씨, 바질, 귀리커넬, 알바수련꽃, 스노우로투스, 인삼, 연꽃꽃, 뽕나무껍질, 마돈나백합꽃, 에델바이스, 약모밀, 프리지어, 데이지꽃 추출물입니다.",
-     "이름이 예쁜 원료가 많아 방송에서 읽기 좋습니다."
+     "영양 성분을 세 번에 걸쳐 잘게 쪼개면서 동시에 리포좀으로 감싸는 제조 방식입니다.",
+     "1차는 대기압의 약 1,300배 압력으로 마이크로 크기까지 쪼갭니다.",
+     "2차는 다이아몬드 미세관을 두 번 통과시켜 서브 마이크로 크기로 더 나눕니다.",
+     "3차는 시속 450km 이상으로 분출시켜 나노 크기로 만듭니다.",
+     "설명하면 '왜 이 가격인가' 가 자연스럽게 전달됩니다. 다만 만드는 방법이지 효과가 세 배라는 뜻은 아닙니다."
     ],
-    "title": "Four plant oils and fourteen extracts",
+    "title": "The MEGA NANOSOME process — three stages",
     "body": [
-     "The oils are avocado, sunflower seed, wild soybean and annatto seed — handling nourishment, moisture and shine.",
-     "Annatto seed oil is an unusual one, pressed from a reddish seed.",
-     "There are fourteen botanical extracts including white truffle: chia, basil, oat kernel, white water lily, snow lotus, ginseng, lotus flower, mulberry bark, Madonna lily, edelweiss, houttuynia, freesia and daisy.",
-     "A lot of those read beautifully out loud, which is useful on camera."
+     "A method that breaks the actives down in three passes while wrapping them in liposomes.",
+     "Stage one: pressure around 1,300 times atmospheric, down to micro size.",
+     "Stage two: twice through a diamond micro-channel, down to sub-micron.",
+     "Stage three: ejected at over 450km/h, down to nano.",
+     "Walking through this explains the price. But it's a manufacturing method — it doesn't mean the effect is three times stronger."
     ]
    },
    {
-    "제목": "어떤 시험을 마쳤나",
+    "제목": "특허 성분 세 가지",
     "본문": [
-     "피부 각질과 피부 깊은 속 보습에 대한 인체적용시험을 마쳤습니다.",
-     "피부 광채(윤기), 결(매끄러움), 수분 레이어드에 대한 인체적용시험도 마쳤습니다.",
-     "항목이 다섯 가지로 미스트 제품치고는 많은 편입니다. 개선율 대신 항목 이름으로 말하면 됩니다.",
-     "설페이트계 계면활성제(SLS, SLES, ALS, ALES) 불검출 시험도 있습니다. 다만 그 성적서에는 '참고용' 도장이 찍혀 있어서, 공식 시험 결과로 내세우기보다 '설페이트계 계면활성제를 쓰지 않았다' 로 말하는 편이 맞습니다."
+     "트러페롤™ 은 달바 독자 특허 성분으로 이탈리아산 화이트 트러플과 토코페롤을 섞은 것입니다.",
+     "Vagestop™ 은 탄력 특허 성분인 꽃송이버섯추출물입니다. 거칠어진 피부에 수분과 탄력을 준다고 적혀 있습니다.",
+     "Blue Complex HR 은 보습 특허 성분입니다. 수레국화꽃, 보리지, 라벤더꽃, 마트리카리아꽃, 클레리, 히아신스 여섯 가지 허브에서 뽑았고, 건조함으로부터 피부를 지킵니다.",
+     "Calm Cell 은 쑥잎·감·쌀 세 가지 추출물을 리포좀으로 감싼 수분 성분입니다."
     ],
-    "title": "What has been tested",
+    "title": "Three patented ingredients",
     "body": [
-     "Human trials completed for dead skin and deep hydration.",
-     "Human trials also completed for glow, texture and moisture layering.",
-     "Five measures is a lot for a mist. Name them rather than quoting improvement rates.",
-     "There's also a test showing sulphate surfactants (SLS, SLES, ALS, ALES) were not detected. That certificate is stamped 'for reference', though, so rather than presenting it as an official result, say the product doesn't use sulphate surfactants."
+     "Trufferol™ is d'Alba's own patent — Italian white truffle blended with tocopherol.",
+     "Vagestop™ is a firmness patent: cauliflower mushroom extract, described as bringing water and bounce back to roughened skin.",
+     "Blue Complex HR is a moisture patent drawn from six herbs — cornflower, borage, lavender, matricaria, clary and hyacinth — protecting skin from drying out.",
+     "Calm Cell wraps three extracts — mugwort leaf, persimmon and rice — in liposomes for hydration."
     ]
    },
    {
-    "제목": "향 — 아로마틱 시트러스 플로럴",
+    "제목": "세 가지로 쓸 수 있습니다",
     "본문": [
-     "달바 시그니처 향입니다. 이탈리아 조향사 Giovanni Festa 와 협업해 만들었고, 교안은 경력 30년의 조향사라고 소개합니다.",
-     "시트러스와 허브로 시작해 로즈·은방울꽃·배를 지나 머스크로 끝납니다.",
-     "달바의 여러 제품에 같은 향이 들어가서, 라인을 같이 쓰면 향이 이어집니다. 세트로 권할 때 쓸 수 있는 이야기입니다."
+     "데일리 케어는 적당량을 손이나 화장솜에 덜어 얼굴에 펴 바르고 두드려 흡수시키는 것입니다.",
+     "인텐시브 케어는 화사함이 필요한 부위에 2~3번 더 겹쳐 바릅니다.",
+     "비타 토닝 팩은 화장솜에 적셔 3~5분 올려 두는 방법입니다. 같은 제품으로 팩까지 한다는 점이 방송에서 쓸 만한 장면입니다."
     ],
-    "title": "The scent — Aromatic Citrus Floral",
+    "title": "Three ways to use it",
     "body": [
-     "d'Alba's signature scent, created with the Italian perfumer Giovanni Festa, whom the deck introduces as having thirty years in the trade.",
-     "Citrus and herbs open it, rose, lily of the valley and pear carry the middle, and musk closes it.",
-     "The same scent runs through several d'Alba products, so using the line together keeps it consistent — useful when you're recommending a set."
+     "Daily: take some onto your hands or a cotton pad, spread it over the face and press it in.",
+     "Intensive: layer it two or three more times wherever you want more brightness.",
+     "As a mask: soak a cotton pad and leave it on for 3–5 minutes. Getting a mask out of the same bottle is a good on-camera moment."
     ]
    },
    {
     "제목": "인증",
     "본문": [
-     "전성분 기준이 까다로운 이탈리아 V-Label 비건 정식 인증을 받았습니다.",
-     "국내에서 인체 피부 일차자극 테스트를 마쳤습니다."
+     "인체 피부 일차자극(저자극) 테스트를 마쳤습니다.",
+     "비건 인증은 교안에 '정식 인증 완료(예정)' 으로 적혀 있습니다. 아직 확정된 상태가 아니니 비건 이야기는 빼고 가세요.",
+     "기능성 보고 자료에 pH 6.1, 고시 원료는 나이아신아마이드와 아데노신 액으로 적혀 있습니다."
     ],
     "title": "Certification",
     "body": [
-     "Italian V-Label vegan certification, reviewed against the full ingredient list.",
-     "A primary skin irritation test completed in Korea."
+     "A primary skin irritation test has been completed.",
+     "Vegan certification is written in the deck as 'completed (pending)'. It isn't settled, so leave vegan out.",
+     "The functional filing lists pH 6.1, with niacinamide and adenosine solution as the notified actives."
     ]
    }
-  ],
-  "en판": {
-   "스펙": {
-    "용량": "100ml",
-    "타겟": "All skin types"
-   },
-   "한줄": "d'Alba's steady seller — a spray serum that does toner, mist, serum and essence in one, for dense moisture and a lit finish.",
-   "특징": [
-    {
-     "title": "Toner, mist, serum and essence in one — moisture and firmness whenever you need it",
-     "body": []
-    },
-    {
-     "title": "Premium nourishing and hydrating ingredients",
-     "body": [
-      "Four plant blending oils bringing nourishment and moisture for glossy skin.",
-      "Trufferol™, d'Alba's patented ingredient: Italian white truffle + tocopherol.",
-      "Deep hydration, absorbed fast and without stickiness.",
-      "A spray angle that covers the whole face evenly, with no pooling or beading.",
-      "Human trials for deep hydration and dead skin."
-     ]
-    },
-    {
-     "title": "Ingredients your skin is happy with",
-     "body": [
-      "Italian V-Label vegan certification against the full ingredient list.",
-      "Primary skin irritation test completed in Korea."
-     ]
-    },
-    {
-     "title": "d'Alba's signature scent",
-     "body": [
-      "Aromatic Citrus Floral, created with the Italian perfumer Giovanni Festa."
-     ]
-    }
-   ],
-   "이미지": [
-    "Product shot",
-    "Product styling shot",
-    "Premium packaging",
-    "Before and after shaking",
-    "The scent notes",
-    "Old vs reformulated"
-   ]
-  }
+  ]
  },
- {
-  "slug": "pro2x",
-  "en": "Pro2X",
-  "ko": "달바 화이트 트러플 퍼스트 스프레이 세럼 프로 투엑스 펩타이드",
-  "스펙": {
-   "용량": "100 ml · 120ml"
-  },
-  "포지셔닝": {
-   "문구": "한층 더 미세해진 정밀 안개분사+보습/탄력 효과로 2X 업그레이드 수분 광채만으로는 닿지 않는 피부 속 결핍\u000b속보습X속광탄력까지 2X Pro로 빈틈없이 채우다",
-   "태그": [
-    "#속광탄력",
-    "#2배속보습",
-    "#고기능미스트"
-   ]
-  },
-  "특징": [
-   {
-    "제목": "속보습 & 속탄력 2배* 개선 올인원 항산화 솔루션",
-    "설명": [
-     "*퍼스트 스프레이 세럼 대비",
-     "보습 광채만으로 채워지지 않는 속보습/속탄력\n피부노화지수 2배 개선으로 더욱 탄탄하게 빛나는 피부",
-     "강력한 PRO 세럼, \n뿌리기만 하면 속보습 & 속탄력 2배* 개선\n피부 속부터 겉까지 케어하는 \n올인원 에이징케어 솔루션"
-    ]
-   },
-   {
-    "제목": "모공보다 467배 작은 듀얼 엑소좀으로 더욱 깊어진 침투력",
-    "설명": [
-     "좋은 성분, 과연 피부 속까지 전달되고 있을까요?\n성분의 크기가 침투력을 결정합니다"
-    ]
-   },
-   {
-    "제목": "사용감은 더 가볍고, 흡수는  더 빠르게 – 초미세 마이크로 분사",
-    "설명": [
-     "함량 2X UP*\n보습 광채 액티브 세럼 10%",
-     "영양 밀도/탄력 세럼",
-     "탄력\n세럼",
-     "액티브세럼",
-     "15가지 식물성 블렌딩 오일, 액티브 세럼 10%, 토코페롤\n부드럽게 감싸주는 오일 보습막으로\n매끈하고 촉촉한 피부 윤기 광채 케어",
-     "콜라겐수70%, 이탈리아산 화이트 트러플(흰서양송로수)과 \n달바의 독자 성분 펩타이드 엑소좀TM10%,  트러페롤™, 트러플엑소좀™ 함유로 탄탄한 피부 바탕 완성"
-    ]
-   },
-   {
-    "제목": "민감성 피부도, 여드름성 피부도 편안한 고기능 세럼",
-    "설명": [
-     "2배로 강화된 액티브 세럼 10%\n모공을 막을 걱정 없는 침투력으로 \n효능 성분만 정확하게 전달해 \n민감성/여드름성 피부도 편안하게-",
-     "진해진 액티브 오일 세럼,\n민감/여드름성 피부에도 좋을까요?"
-    ]
-   },
-   {
-    "제목": "토너·에센스·세럼을 하나로 담은 간결한 스킨 케어",
-    "설명": [
-     "손대지 않아도 간편하게, \n뿌리면 완성되는 퀵 & 이지 스킨케어\n세안 후, 사무실, 차 안, 일상 속 어디서든\n필요할 때마다 빠르게 2X 케어",
-     "미스트 하나로 즉각보습/메이크업프렙/에이징케어 까지 \nQuick & Easy 뿌리는 프로 세럼"
-    ]
-   }
-  ],
-  "기타": [
+ "pro2x": {
+  "항목": [
    {
     "제목": "'2배' 가 무엇과 비교한 것인가",
     "본문": [
@@ -5382,339 +2801,10 @@
      "It's the same scent as the original First Spray Serum, so anyone switching over won't notice a change."
     ]
    }
-  ],
-  "en판": {
-   "스펙": {
-    "용량": "100ml · 120ml"
-   },
-   "한줄": "The upgraded First Spray Serum — 70% collagen water, two kinds of exosome, and a finer mist.",
-   "특징": [
-    {
-     "title": "Twice the deep hydration and deep firmness — an all-in-one antioxidant solution",
-     "body": [
-      "*Compared with the First Spray Serum.",
-      "Glow alone doesn't fill the deficit underneath; this works on deep moisture and deep firmness.",
-      "A skin-ageing index that improves twice as much, for skin that holds and shines."
-     ]
-    },
-    {
-     "title": "Dual exosomes, 467× smaller than a pore, for deeper delivery",
-     "body": [
-      "Good ingredients only matter if they reach the skin. Size decides penetration."
-     ]
-    },
-    {
-     "title": "Lighter to wear, faster to absorb — an ultra-fine micro mist",
-     "body": [
-      "Active serum at 10% — twice the previous concentration.",
-      "15 plant blending oils, active serum 10%, tocopherol: an oil film that wraps the skin smooth and glossy.",
-      "70% collagen water, Italian white truffle, and d'Alba's own Peptide Exosome™ 10%, Trufferol™ and Truffle Exosome™."
-     ]
-    },
-    {
-     "title": "High-performance, and still comfortable on sensitive and acne-prone skin",
-     "body": [
-      "Active serum doubled to 10%, delivered precisely without blocking pores."
-     ]
-    },
-    {
-     "title": "Toner, essence and serum in one simple step",
-     "body": [
-      "Spray and you're done — after cleansing, at the office, in the car.",
-      "Instant hydration, makeup prep and ageing care from a single mist."
-     ]
-    }
-   ],
-   "이미지": [
-    "Product shot (120ml PRO·2X)",
-    "Product styling shot",
-    "Model spraying it",
-    "Texture",
-    "Spray particle comparison (previous)",
-    "Spray particle comparison (2X)"
-   ]
-  }
+  ]
  },
- {
-  "slug": "first-oil-capsule-serum",
-  "en": "First Oil Capsule Serum",
-  "ko": "달바 화이트 트러플 퍼스트 오일 캡슐 세럼",
-  "스펙": {
-   "용량": "100ml",
-   "기능성": "미백, 주름개선 2중 기능성 화장품"
-  },
-  "포지셔닝": {
-   "문구": "다마스크장미꽃수 80.34%에 담긴 4만 비타민 캡슐로 끈적임 없이 피부가 편안한, 촉촉 부들부들 미백 세럼 퍼스트 비타 토닝 캡슐 세럼“",
-   "태그": [
-    "#비타토닝",
-    "#비타민세럼",
-    "#수분빛",
-    "#비타캡슐"
-   ]
-  },
-  "특징": [
-   {
-    "제목": "수분 세럼 + 비타민 캡슐 이중 포뮬러의 더블 케어 토닝 세럼!",
-    "설명": [
-     "도톰한 수분 베이스(98.5): 비타민 캡슐(1.5)의 황금 비율",
-     "두 제형이 빠르게 블렌딩되며 수분막을 형성해 속은 촉촉하고 겉은 부들부들 끈적임 없는 마무리"
-    ]
-   },
-   {
-    "제목": "다마스크장미꽃수 80.34% 함유! 생기UP 맑게 빛나는 피부",
-    "설명": [
-     "정제수 대체! 핑크빛 장미의 맑은 수분을 담은 다마스크장미꽃수 80.34% 함유",
-     "촘촘하게 머금은 수분빛 피부로 메이크업도 잘 먹는 화잘먹 피부 완성",
-     "촉촉함은 물론, 화사하게 빛나도록 미백 집중 케어! 나이아신아마이드 2% 함유 미백 기능성 세럼"
-    ]
-   },
-   {
-    "제목": "3단계 메가 나노 리포좀 기술로 피부에 촘촘히 전달되는 수분 토닝 성분",
-    "설명": [
-     "3차에 걸쳐 미세 입자로 작게 쪼개며 영양 성분을 리포좀화하여 피부에 안정적으로 전달",
-     "나노 입자로 피부에 촘촘하고 빠르게 흡수되어 집중 수분 케어"
-    ]
-   },
-   {
-    "제목": "비타 시너지 프리미엄 성분",
-    "설명": [
-     "미백&주름개선 2중 기능성",
-     "달바 프리미엄 성분 트러페롤™",
-     "미백 기능성 성분: 나이아신아마이드 2%",
-     "생기 토닝 & 비타민: 다마스크장미꽃수 80.34%, 비타민C, 비타민E, 비타민K, 비건 글루타티온",
-     "탄력 특허: 꽃송이버섯추출물",
-     "수분/보습: Blue Complex HR(보습 특허), 판테놀, 병풀추출물, CALM CELL, 비건 세라마이드",
-     "광채: 달바-8 블렌딩 오일"
-    ]
-   },
-   {
-    "제목": "NO 동물성 원료! 피부가 편안한, 비건 라이프",
-    "설명": [
-     "이탈리아 비건 V-라벨 인증(예정) & 저자극 테스트 완료",
-     "까다로운 기준의 이탈리아V -Label 비건 정식 인증 완료(예정)",
-     "인체피부 일차자극(저자극) 테스트 완료"
-    ]
-   }
-  ],
-  "기타": [
-   {
-    "제목": "비타 토닝 캡슐 세럼과 무엇이 다른가",
-    "본문": [
-     "달바에는 캡슐 세럼이 두 가지 있습니다. 비타 토닝 캡슐 세럼과 이 퍼스트 오일 캡슐 세럼입니다. 겉모습이 비슷해서 헷갈리기 쉽습니다.",
-     "가장 큰 차이는 베이스입니다. 비타 토닝 쪽은 비타민나무수 81%, 이 제품은 다마스크장미꽃수 80.34% 입니다.",
-     "이름의 '퍼스트' 가 말해 주듯 이 제품은 기초의 첫 단계에 쓰는 것입니다. 세안 후 가장 먼저 올립니다.",
-     "장미수 베이스라 향과 인상이 다릅니다. 핑크빛 장미의 맑은 수분이라는 것이 이 제품의 정체성입니다."
-    ],
-    "title": "How it differs from the Vita Toning Capsule Serum",
-    "body": [
-     "d'Alba makes two capsule serums: the Vita Toning Capsule Serum and this First Oil Capsule Serum. They look alike enough to confuse.",
-     "The base is the biggest difference. The Vita Toning one uses sea buckthorn water at 81%; this one uses damask rose water at 80.34%.",
-     "As the name says, this is the first step — it goes on straight after cleansing.",
-     "A rose water base gives it a different scent and a different character. Clear, pink-rose hydration is this product's identity."
-    ]
-   },
-   {
-    "제목": "98.5 대 1.5 — 캡슐 비율",
-    "본문": [
-     "수분 세럼 베이스가 98.5, 비타민 캡슐이 1.5 입니다. 캡슐이 많아 보이지만 실제 비중은 작습니다.",
-     "그래서 무겁지 않습니다. 캡슐 제품이 흔히 무겁고 겉도는 것과 달리, 이 제품은 끈적임 없이 부들부들하게 마무리됩니다.",
-     "캡슐 안에는 비타민E(토코페롤), 비타민K(메나다이온), 비건 세라마이드, 달바-8 블렌딩 오일이 들어 있습니다.",
-     "문지르면 이물감 없이 사르르 녹습니다. 손등에서 보여주기 좋은 장면입니다.",
-     "'4만 개' 는 회사가 계산한 값이니 '4만 개 정도' 라고 말하는 편이 정확합니다."
-    ],
-    "title": "98.5 to 1.5 — the capsule ratio",
-    "body": [
-     "The hydrating serum base is 98.5, the vitamin capsules 1.5. They look plentiful, but they're a small share of the formula.",
-     "Which is why it isn't heavy. Capsule products often sit on the surface and feel weighty; this one finishes soft with no tackiness.",
-     "Inside the capsules: vitamin E (tocopherol), vitamin K (menadione), vegan ceramide and d'Alba-8 Blending Oil.",
-     "Rub them and they melt away with nothing grainy left. Good to show on the back of your hand.",
-     "'40,000' is a company estimate, so 'around 40,000' is the accurate way to say it."
-    ]
-   },
-   {
-    "제목": "MEGA NANOSOME 공법 — 3단계로 쪼갠다",
-    "본문": [
-     "영양 성분을 세 번에 걸쳐 잘게 쪼개면서 동시에 리포좀으로 감싸는 제조 방식입니다.",
-     "1차는 대기압의 약 1,300배 압력으로 마이크로 크기까지 쪼갭니다.",
-     "2차는 다이아몬드 미세관을 두 번 통과시켜 서브 마이크로 크기로 더 나눕니다.",
-     "3차는 시속 450km 이상으로 분출시켜 나노 크기로 만듭니다.",
-     "설명하면 '왜 이 가격인가' 가 자연스럽게 전달됩니다. 다만 만드는 방법이지 효과가 세 배라는 뜻은 아닙니다."
-    ],
-    "title": "The MEGA NANOSOME process — three stages",
-    "body": [
-     "A method that breaks the actives down in three passes while wrapping them in liposomes.",
-     "Stage one: pressure around 1,300 times atmospheric, down to micro size.",
-     "Stage two: twice through a diamond micro-channel, down to sub-micron.",
-     "Stage three: ejected at over 450km/h, down to nano.",
-     "Walking through this explains the price. But it's a manufacturing method — it doesn't mean the effect is three times stronger."
-    ]
-   },
-   {
-    "제목": "특허 성분 세 가지",
-    "본문": [
-     "트러페롤™ 은 달바 독자 특허 성분으로 이탈리아산 화이트 트러플과 토코페롤을 섞은 것입니다.",
-     "Vagestop™ 은 탄력 특허 성분인 꽃송이버섯추출물입니다. 거칠어진 피부에 수분과 탄력을 준다고 적혀 있습니다.",
-     "Blue Complex HR 은 보습 특허 성분입니다. 수레국화꽃, 보리지, 라벤더꽃, 마트리카리아꽃, 클레리, 히아신스 여섯 가지 허브에서 뽑았고, 건조함으로부터 피부를 지킵니다.",
-     "Calm Cell 은 쑥잎·감·쌀 세 가지 추출물을 리포좀으로 감싼 수분 성분입니다."
-    ],
-    "title": "Three patented ingredients",
-    "body": [
-     "Trufferol™ is d'Alba's own patent — Italian white truffle blended with tocopherol.",
-     "Vagestop™ is a firmness patent: cauliflower mushroom extract, described as bringing water and bounce back to roughened skin.",
-     "Blue Complex HR is a moisture patent drawn from six herbs — cornflower, borage, lavender, matricaria, clary and hyacinth — protecting skin from drying out.",
-     "Calm Cell wraps three extracts — mugwort leaf, persimmon and rice — in liposomes for hydration."
-    ]
-   },
-   {
-    "제목": "세 가지로 쓸 수 있습니다",
-    "본문": [
-     "데일리 케어는 적당량을 손이나 화장솜에 덜어 얼굴에 펴 바르고 두드려 흡수시키는 것입니다.",
-     "인텐시브 케어는 화사함이 필요한 부위에 2~3번 더 겹쳐 바릅니다.",
-     "비타 토닝 팩은 화장솜에 적셔 3~5분 올려 두는 방법입니다. 같은 제품으로 팩까지 한다는 점이 방송에서 쓸 만한 장면입니다."
-    ],
-    "title": "Three ways to use it",
-    "body": [
-     "Daily: take some onto your hands or a cotton pad, spread it over the face and press it in.",
-     "Intensive: layer it two or three more times wherever you want more brightness.",
-     "As a mask: soak a cotton pad and leave it on for 3–5 minutes. Getting a mask out of the same bottle is a good on-camera moment."
-    ]
-   },
-   {
-    "제목": "인증",
-    "본문": [
-     "인체 피부 일차자극(저자극) 테스트를 마쳤습니다.",
-     "비건 인증은 교안에 '정식 인증 완료(예정)' 으로 적혀 있습니다. 아직 확정된 상태가 아니니 비건 이야기는 빼고 가세요.",
-     "기능성 보고 자료에 pH 6.1, 고시 원료는 나이아신아마이드와 아데노신 액으로 적혀 있습니다."
-    ],
-    "title": "Certification",
-    "body": [
-     "A primary skin irritation test has been completed.",
-     "Vegan certification is written in the deck as 'completed (pending)'. It isn't settled, so leave vegan out.",
-     "The functional filing lists pH 6.1, with niacinamide and adenosine solution as the notified actives."
-    ]
-   }
-  ],
-  "en판": {
-   "스펙": {
-    "용량": "100ml",
-    "기능성": "Brightening + wrinkle care (dual functional claim)"
-   },
-   "한줄": "Forty thousand vitamin capsules floating in 80.34% damask rose water — a brightening serum for the first step, hydrating and never sticky.",
-   "특징": [
-    {
-     "title": "A hydrating serum and vitamin capsules, layered together",
-     "body": [
-      "A thick hydrating base at 98.5 to vitamin capsules at 1.5.",
-      "The two blend fast into a moisture film — hydrated underneath, soft on top, never sticky."
-     ]
-    },
-    {
-     "title": "80.34% damask rose water for clearer, brighter skin",
-     "body": [
-      "Damask rose water replaces purified water at 80.34%.",
-      "Skin holds enough water that makeup sits well on top.",
-      "Niacinamide at 2%, the notified brightening active."
-     ]
-    },
-    {
-     "title": "Three-stage mega nano liposome delivery",
-     "body": [
-      "Broken down in three passes into fine particles and wrapped in liposomes for stable delivery.",
-      "Nano-sized, so it absorbs quickly and densely."
-     ]
-    },
-    {
-     "title": "Premium vitamin ingredients",
-     "body": [
-      "Dual functional claim: brightening and wrinkle care.",
-      "Trufferol™, d'Alba's premium ingredient.",
-      "Brightening active: niacinamide 2%.",
-      "Freshness and vitamins: damask rose water 80.34%, vitamin C, vitamin E, vitamin K, vegan glutathione.",
-      "Firmness patent: cauliflower mushroom extract.",
-      "Moisture: Blue Complex HR, panthenol, centella extract, Calm Cell, vegan ceramide.",
-      "Glow: d'Alba-8 Blending Oil."
-     ]
-    },
-    {
-     "title": "No animal-derived ingredients",
-     "body": [
-      "Primary skin irritation test completed."
-     ]
-    }
-   ],
-   "이미지": [
-    "Texture with the capsules",
-    "The product line-up",
-    "Absorbing into skin",
-    "d'Alba-8 Blending Oil"
-   ]
-  }
- },
- {
-  "slug": "vita-toning-serum-toner",
-  "en": "Vita Toning Serum Toner",
-  "ko": "비타 토닝 세럼 토너",
-  "스펙": {
-   "용량": "180ml",
-   "기능성": "미백, 주름개선 2중 기능성 화장품"
-  },
-  "포지셔닝": {
-   "문구": "비타민나무수 11.76%와 순수 비타민C, 글루타티온좀의 트리플 생기를 담아 칙칙한 피부를 백옥같이 화사하게, 토너 하나로 가능한 미백 안티에이징 케어",
-   "태그": [
-    "#비타세럼토너",
-    "#항산화토너",
-    "#얼리안티에이징",
-    "#기미잡티",
-    "#저자극"
-   ]
-  },
-  "특징": [
-   {
-    "제목": "끈적임 없이 흡수되는 산뜻 촉촉 세럼 워터 제형으로 데일리 미백 안티에이징 케어",
-    "설명": [
-     "농축된 세럼 제형이 부드럽게 롤링되며 워터 제형으로 변화",
-     "촘촘히 흡수되어 답답함과 끈적임 없이 촉촉 산뜻 마무리",
-     "첫 단계부터 순한 미백 수분 집중 케어, 칙칙하고 건조한 피부를 화사하고 촉촉하게"
-    ]
-   },
-   {
-    "제목": "비타민나무수 11.76% 와 순도 높은 비타민C & 글루타티온좀으로 트리플 생기 더하기",
-    "설명": [
-     "생기 가득 비타민 수분을 담은 비타민나무수 11.76% 함유",
-     "순도 98% 글루타티온을 안정적으로 리포좀화한 글루타티온좀 함유",
-     "순도 99% 비타민C(아스코빅애씨드) 함유",
-     "미백 기능성 성분 나이아신아마이드 2% 함유"
-    ]
-   },
-   {
-    "제목": "단 2주 사용으로 잡티&기미 완화+주름 개선+피부 톤 개선 효과 선사, 얼리 안티에이징 케어",
-    "설명": [
-     "피부의 빛을 밝히고 다크 스팟을 케어해 화사하게 빛나는 매끈 피부로 개선",
-     "피부 노화 케어를 위한 항산화 in vitro 테스트 완료"
-    ]
-   },
-   {
-    "제목": "비타 생기 케어 프리미엄 성분",
-    "설명": [
-     "미백&주름개선 2중 기능성",
-     "달바 독자 성분 : 트러페롤™ : 달바 독자 탄력 성분 (이탈리아산 화이트 트러플*+토코페롤)",
-     "트러비타™ : 달바 독자 생기케어 성분(글루타티온, 비타민C(아스코빅애씨드))",
-     "미백 기능성 성분: 나이아신아마이드 2%",
-     "생기 & 비타민 : 비타민나무수11.76%, 비타민C(아스코빅애씨드), 글루타티온좀",
-     "광채 케어: 달바-8 블렌딩 오일, MELAWAY",
-     "영양 케어: 비건 단백질 13종, 콜라겐추출물",
-     "수분&보습 : 특허 Oligo-HA, 비건 세라마이드NP, Vegan Mucin(UP)"
-    ]
-   },
-   {
-    "제목": "매일 써도 편안한 미백 토너, 이탈리아 비건 V-라벨 인증 & 저자극 테스트 완료",
-    "설명": [
-     "까다로운 기준의 이탈리아V –Label 비건 정식 인증 완료",
-     "인체피부 일차자극(저자극) 테스트 완료"
-    ]
-   }
-  ],
-  "기타": [
+ "vita-toning-serum-toner": {
+  "항목": [
    {
     "제목": "토너인데 왜 '세럼 토너' 인가",
     "본문": [
@@ -5823,63 +2913,6 @@
      "The antioxidant work was done in a dish. What was measured on people is the two-week study above — lead with that."
     ]
    }
-  ],
-  "en판": {
-   "스펙": {
-    "용량": "180ml",
-    "기능성": "Brightening + wrinkle care (dual functional claim)"
-   },
-   "한줄": "A serum in toner form — concentrated going on, watery as you spread it, for the first step of a brightening routine.",
-   "특징": [
-    {
-     "title": "A fresh serum-water texture that absorbs without stickiness",
-     "body": [
-      "A concentrated serum that rolls out into a watery texture as you spread it.",
-      "It sinks in densely and finishes fresh, never heavy or tacky.",
-      "Gentle brightening and hydration from the very first step."
-     ]
-    },
-    {
-     "title": "11.76% sea buckthorn water with high-purity vitamin C and Glutathione-some",
-     "body": [
-      "Sea buckthorn water at 11.76%, full of vitamin-rich hydration.",
-      "Glutathione at 98% purity, stabilised in liposome form."
-     ]
-    },
-    {
-     "title": "Two weeks: spots faded, wrinkles softened, tone evened",
-     "body": [
-      "Brightens skin and works on dark spots.",
-      "In-vitro antioxidant testing completed."
-     ]
-    },
-    {
-     "title": "Premium vitamin ingredients",
-     "body": [
-      "Dual functional claim: brightening and wrinkle care.",
-      "Trufferol™ for firmness, Truvita™ for freshness.",
-      "Brightening active: niacinamide 2%.",
-      "Freshness: sea buckthorn water 11.76%, vitamin C, Glutathione-some.",
-      "Glow: d'Alba-8 Blending Oil, MELAWAY.",
-      "Nourishment: 13 vegan proteins, collagen extract.",
-      "Moisture: the patented Oligo-HA, vegan ceramide NP, Vegan Mucin."
-     ]
-    },
-    {
-     "title": "A brightening toner gentle enough for every day",
-     "body": [
-      "Italian V-Label vegan certification against the full ingredient list.",
-      "Primary skin irritation test completed."
-     ]
-    }
-   ],
-   "이미지": [
-    "Product shot",
-    "Texture",
-    "Model shot",
-    "Highly crosslinked technology",
-    "d'Alba-8 Blending Oil"
-   ]
-  }
+  ]
  }
-]
+}

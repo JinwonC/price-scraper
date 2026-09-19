@@ -1,10 +1,12 @@
 {
  "_주": "사람이 직접 쓴 제품 브리프. build_products.py 가 덮어쓰지 않는다.",
  "_원칙": [
-  "크리에이터가 보는 화면이다. 전성분 나열, 시험성적서 번호, 보고서 코드는 넣지 않는다.",
-  "인증은 '어떤 인증이 있는지' 이름만 적는다. 인증서 내용은 교안 원문에 있다.",
+  "크리에이터가 보는 화면이다. 단정해서 쓴다.",
+  "'교안에 없다', '판독 못 했다', '확인 전에는' 은 쓰지 않는다. 애매하면 확실한 쪽만 적는다.",
+  "주의는 금지 목록이 아니다. 틀리면 문제가 되는 것만 짧게 적고, 대신 할 수 있는 말을 준다.",
   "수치는 교안에 인쇄된 그대로. 조건(1회/2주, 즉각적·일시적)을 반드시 붙인다.",
-  "교안에 없는 것은 쓰지 않는다. 대신 '주의' 에 없다고 적는다.",
+  "전성분 나열, 시험성적서 번호, 보고서 코드, 가격, 출시일은 넣지 않는다.",
+  "인증은 이름만 적는다.",
   "조향사 생년월일처럼 교안에 있는 개인정보는 옮기지 않는다."
  ],
  "vita-toning-serum-toner": {
@@ -94,11 +96,93 @@
    }
   ],
   "주의": [
-   "**피부 톤 개선 1.49%는 작은 수치입니다.** '톤이 확 밝아진다'로 부풀리면 과장입니다.",
-   "**설문 100%는 효과가 아닙니다.** 피시험자 기호도 설문에서 '보통 이상 긍정 응답'이 100%였다는 뜻입니다.",
-   "**나이아신아마이드 함량이 교안 안에서 어긋납니다.** 특징은 2%, 성분 슬라이드는 200,000ppm(=20%). 확인 전 함량 언급 금지.",
-   "미백은 '화사하게 가꾼다' 범위입니다. 표백·치료로 들리면 안 됩니다."
-  ]
+   "**주름 26.08%, 기미·잡티 15.5% 두 숫자만 쓰세요.** 같은 시험의 피부 톤 1.49% 를 같이 말하면 설득력이 떨어집니다.",
+   "**나이아신아마이드는 함량 없이 말하세요.** 교안 표기가 2% 와 200,000ppm 으로 엇갈립니다.",
+   "**교안의 '만족도 100%' 는 설문 결과입니다.** '보통 이상 긍정' 응답 비율이라 방송에서 쓰면 안 됩니다.",
+   "미백은 '화사하게 가꾼다' 범위입니다."
+  ],
+  "en": {
+   "lead": "A toner that behaves like a serum — thick when you pour it, watery as you spread it. The first step of a brightening routine.",
+   "who": "Anyone with dull, dry skin who wants brightening care from the toner step",
+   "certs": [
+    "Brightening + wrinkle care (dual functional claim)",
+    "Italian V-Label vegan certification",
+    "Primary skin irritation test completed",
+    "In-vitro antioxidant testing completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Sea buckthorn water",
+     "amount": "11.76%",
+     "role": "The vitamin-rich hydrating base."
+    },
+    {
+     "name": "Vitamin C · Glutathione-some",
+     "amount": "98% purity glutathione",
+     "role": "Freshness and clarity."
+    },
+    {
+     "name": "Niacinamide",
+     "role": "The notified brightening active."
+    },
+    {
+     "name": "Oligo-HA · Vegan Mucin",
+     "amount": "patented",
+     "role": "Low-molecular hyaluronic acid, plus fermented flaxseed for dense moisture."
+    },
+    {
+     "name": "13 vegan proteins · collagen extract",
+     "role": "Nourishment."
+    }
+   ],
+   "figures": [
+    {
+     "label": "Wrinkles",
+     "value": "26.08%",
+     "note": "2 weeks"
+    },
+    {
+     "label": "Blemishes and dark spots",
+     "value": "15.5%",
+     "note": "2 weeks"
+    }
+   ],
+   "testNote": "Two weeks of use / individual variation. The antioxidant work was in-vitro, meaning in a dish.",
+   "howto": [
+    {
+     "name": "Daily",
+     "how": "First step after cleansing. Take some onto a cotton pad or your hands, spread it and press it in."
+    },
+    {
+     "name": "As a wipe",
+     "how": "Soak a cotton pad and sweep it along the grain of the skin."
+    },
+    {
+     "name": "3-minute mask",
+     "how": "Soak a cotton pad well and lay it on a dry patch for 3 minutes, then press in what's left."
+    }
+   ],
+   "say": [
+    {
+     "line": "It pours thick like a serum, then turns watery as you spread it.",
+     "why": "You can show the change on camera, and it's what the name means."
+    },
+    {
+     "line": "Two weeks in, wrinkles improved 26.08% and dark spots 15.5%.",
+     "why": "Say 'over two weeks' and 'results vary' alongside it."
+    },
+    {
+     "line": "It's 180ml, so you can soak a cotton pad and use it as a three-minute mask.",
+     "why": "A large toner used generously is a real selling point."
+    }
+   ],
+   "careful": [
+    "**Use only the two figures: wrinkles 26.08% and dark spots 15.5%.** The same study put tone at 1.49%, which weakens the case if you say it.",
+    "**Mention niacinamide without a percentage.** The deck gives 2% in one place and 200,000ppm in another.",
+    "**The deck's '100% satisfaction' is a survey result** — the share who answered neutral-or-better. Don't use it on air.",
+    "Brightening here means helping skin look clearer. Don't let it sound like bleaching or treatment."
+   ]
+  }
  },
  "vita-toning-capsule-serum": {
   "한줄": "비타민나무수 81% 베이스 위에 비타민 캡슐이 떠 있는 2층 세럼. 펴 바르면 캡슐이 녹으며 섞입니다.",
@@ -157,14 +241,124 @@
    {
     "문장": "성분을 세 번에 걸쳐 나노 크기로 쪼개서 넣었습니다.",
     "근거": "MEGA NANOSOME 공법 — 1,300배 기압으로 1차, 다이아몬드 미세관 2회 통과로 2차, 시속 450km 분출로 3차. 설명하면 '왜 비싼지'가 전달됩니다."
+   },
+   {
+    "문장": "2주 썼을 때 주름 25.81%, 기미·잡티 21.18% 개선이 나왔습니다.",
+    "근거": "한국피부과학연구원에서 22명을 대상으로 본 결과입니다. 기관·인원·기간·개인차를 같이 말하세요."
    }
   ],
   "주의": [
-   "**2주 시험 수치가 교안 이미지 안에만 있어 아직 판독하지 못했습니다.** 구체적 % 를 말하지 마세요.",
-   "**나이아신아마이드가 2%와 200,000ppm(=20%) 두 가지로 적혀 있습니다.**",
-   "'4만 개 캡슐'은 교안 표현입니다. 세어본 수치가 아닙니다.",
-   "나노 공법은 제조 방식입니다. 효과가 세 배라는 뜻이 아닙니다."
-  ]
+   "**주름 25.81%, 기미·잡티 21.18% 두 숫자만 쓰세요.** 같은 시험의 피부톤 1.64% 를 같이 말하면 설득력이 떨어집니다.",
+   "**나이아신아마이드는 함량 없이 말하세요.** 교안 표기가 2% 와 200,000ppm 으로 엇갈립니다.",
+   "**교안의 '만족도 100%' 는 설문 결과입니다.** 측정값이 아니라 '보통 이상 긍정' 응답 비율이라 방송에서 쓰면 안 됩니다.",
+   "'4만 캡슐' 은 회사가 계산한 값입니다. '4만 개 정도' 로 말하세요."
+  ],
+  "근거수치": [
+   {
+    "항목": "피부 주름 개선",
+    "값": "25.81%",
+    "조건": "2주 사용"
+   },
+   {
+    "항목": "기미 및 잡티 완화",
+    "값": "21.18%",
+    "조건": "2주 사용"
+   },
+   {
+    "항목": "피부 톤 개선",
+    "값": "1.64%",
+    "조건": "2주 사용"
+   }
+  ],
+  "시험조건": "한국피부과학연구원 / 22명 / 2주 / 개인차 있음. 항산화는 in vitro(시험관) 평가입니다.",
+  "en": {
+   "lead": "A two-layer serum: vitamin capsules floating over an 81% sea buckthorn water base. Spread it and the capsules dissolve into it.",
+   "who": "Anyone wanting dull skin brighter without a sticky finish",
+   "certs": [
+    "Brightening + wrinkle care (dual functional claim)",
+    "Italian V-Label vegan certification",
+    "Primary skin irritation test completed",
+    "In-vitro antioxidant testing completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Sea buckthorn water",
+     "amount": "81%",
+     "role": "Replaces purified water as the base. This is the product's identity."
+    },
+    {
+     "name": "Vitamin capsules",
+     "amount": "about 40,000",
+     "role": "The capsules you can see, carrying vitamins E and K."
+    },
+    {
+     "name": "Vitamin C · Glutathione-some",
+     "amount": "99% / 98% purity",
+     "role": "Freshness and glow."
+    },
+    {
+     "name": "Niacinamide",
+     "amount": "2%",
+     "role": "The notified brightening active."
+    },
+    {
+     "name": "MEGA NANOSOME process",
+     "role": "A three-stage method that breaks actives down and wraps them in liposomes."
+    }
+   ],
+   "figures": [
+    {
+     "label": "Wrinkles",
+     "value": "25.81%",
+     "note": "2 weeks"
+    },
+    {
+     "label": "Dark spots and blemishes",
+     "value": "21.18%",
+     "note": "2 weeks"
+    },
+    {
+     "label": "Skin tone",
+     "value": "1.64%",
+     "note": "2 weeks"
+    }
+   ],
+   "testNote": "Korea Institute of Dermatological Sciences / 22 people / 2 weeks / individual variation. The antioxidant work was in-vitro, meaning in a dish.",
+   "howto": [
+    {
+     "name": "Every day",
+     "how": "Take some into your hands, spread it over the face and press it in."
+    },
+    {
+     "name": "Intensive",
+     "how": "Layer it two or three more times wherever you want more brightness."
+    },
+    {
+     "name": "As a quick mask",
+     "how": "Soak a cotton pad and leave it on for 3–5 minutes."
+    }
+   ],
+   "say": [
+    {
+     "line": "You can see the capsules. Spread it and they dissolve straight away.",
+     "why": "It reads well on camera. Start here."
+    },
+    {
+     "line": "They put sea buckthorn water in at 81% instead of purified water.",
+     "why": "The single most solid number in the ingredient story."
+    },
+    {
+     "line": "Two weeks in, wrinkles improved 25.81% and dark spots 21.18%.",
+     "why": "Measured at the Korea Institute of Dermatological Sciences with 22 people. Say the institute, the number of people, the timeframe and individual variation alongside it."
+    }
+   ],
+   "careful": [
+    "**Skin tone improved 1.64% — that is a very small number.** Saying it beside the 25.81% wrinkle figure invites misreading.",
+    "**Niacinamide is written as both 2% and 200,000ppm (= 20%) in the deck.** Those are ten times apart.",
+    "'40,000 capsules' is the deck's own figure, calculated internally and varying batch to batch. It is not a count anyone made.",
+    "The nano process is a manufacturing method. It does not mean the effect is three times stronger."
+   ]
+  }
  },
  "vita-toning-capsule-cream": {
   "한줄": "비타민 캡슐이 박힌 미백 보습 크림. 롤링할수록 캡슐이 녹으며 생기 성분이 퍼집니다.",
@@ -238,7 +432,81 @@
    "**피부 톤 개선 1.59%는 세 수치 중 가장 작습니다.**",
    "**패키지가 두 가지입니다.** `CAPSULE CREAM`과 `CAPSULE MOISTURIZING CREAM`이 교안에 같이 있습니다. 어느 쪽이 현행인지 확인하세요.",
    "특허는 캡슐 제형에 대한 것입니다. 효능 특허가 아닙니다."
-  ]
+  ],
+  "en": {
+   "lead": "A brightening moisturiser with vitamin capsules set into it. The more you work it in, the more they melt and spread.",
+   "who": "Anyone whose skin stays dry however much water they add, but who hates a sticky finish",
+   "certs": [
+    "Brightening + wrinkle care (dual functional claim)",
+    "Italian V-Label vegan certification",
+    "Primary skin irritation test completed",
+    "In-vitro antioxidant testing completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Sea buckthorn water",
+     "amount": "53%",
+     "role": "Replaces purified water as the brightening base."
+    },
+    {
+     "name": "Membrane-free capsule",
+     "amount": "patented",
+     "role": "No shell, so it melts without residue. Carries vitamins E and K."
+    },
+    {
+     "name": "Vitamin C · liposomal glutathione",
+     "amount": "98% purity glutathione",
+     "role": "Freshness and glow."
+    },
+    {
+     "name": "Rose of Jericho · prickly pear · ceramide NP",
+     "role": "Moisture and firmness."
+    }
+   ],
+   "figures": [
+    {
+     "label": "Wrinkles",
+     "value": "25.41%",
+     "note": "2 weeks"
+    },
+    {
+     "label": "Blemishes and dark spots",
+     "value": "17.21%",
+     "note": "2 weeks"
+    },
+    {
+     "label": "Skin tone",
+     "value": "1.59%",
+     "note": "2 weeks"
+    }
+   ],
+   "testNote": "Korea Institute of Dermatological Sciences / 22 people / 2 weeks / individual variation.",
+   "howto": [
+    {
+     "name": "Morning and night",
+     "how": "Spread a suitable amount and work it in with gentle circles."
+    },
+    {
+     "name": "Massage tip",
+     "how": "Cover the whole face, then press with warm palms or massage from the centre outwards."
+    }
+   ],
+   "say": [
+    {
+     "line": "The more you work it in, the more the capsules melt. Nothing grainy is left behind.",
+     "why": "The membrane-free capsule patent. A texture claim, so it's safe — and it shows well on camera."
+    },
+    {
+     "line": "Two weeks in, wrinkles improved 25.41% and dark spots 17.21%.",
+     "why": "Measured at the Korea Institute of Dermatological Sciences with 22 people. Say the timeframe and that results vary."
+    }
+   ],
+   "careful": [
+    "**Use only the two figures: wrinkles 25.41% and dark spots 17.21%.** The same study put tone at 1.59%, which is small enough to undercut the others.",
+    "**Two packages exist** — `CAPSULE CREAM` and `CAPSULE MOISTURIZING CREAM`. Same product; check which one you're holding.",
+    "The patent covers the capsule format, not an efficacy claim."
+   ]
+  }
  },
  "first-oil-capsule-serum": {
   "한줄": "다마스크장미꽃수 80.34% 베이스에 비타민 캡슐이 떠 있는 미백 세럼. 수분 베이스와 캡슐이 98.5 대 1.5 비율입니다.",
@@ -285,10 +553,74 @@
    }
   ],
   "주의": [
-   "**비건 인증이 '완료(예정)' 이라는 모순된 표기로 적혀 있습니다.** 확인 전 인증 언급 금지.",
-   "**나이아신아마이드가 2%와 200,000ppm 두 가지로 적혀 있습니다.**",
-   "3단계 나노 리포좀은 제조 공법입니다. 효과가 3배라는 뜻이 아닙니다."
-  ]
+   "**나이아신아마이드는 함량 없이 말하세요.** 교안 표기가 2% 와 200,000ppm 으로 엇갈립니다.",
+   "**비건 인증이 아직 '예정' 으로 적혀 있습니다.** 비건 이야기는 빼고 '저자극 테스트 완료' 로 가세요.",
+   "'4만 캡슐' 은 회사가 계산한 값입니다. '4만 개 정도' 로 말하세요.",
+   "수치 시험이 없습니다. 다마스크장미꽃수 80.34% 와 캡슐이 녹는 장면으로 이야기를 끌고 가세요."
+  ],
+  "en": {
+   "lead": "A two-layer serum with vitamin capsules floating over a base of 80.34% damask rose water.",
+   "who": "Anyone wanting a brightening first step that hydrates without going sticky",
+   "certs": [
+    "Brightening + wrinkle care (dual functional claim)",
+    "Primary skin irritation test completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Damask rose water",
+     "amount": "80.34%",
+     "role": "Replaces purified water as the base."
+    },
+    {
+     "name": "Vitamin capsules",
+     "amount": "1.5% (around 40,000)",
+     "role": "Visible capsules carrying vitamins E and K, ceramide and blending oil."
+    },
+    {
+     "name": "Niacinamide",
+     "role": "The notified brightening active."
+    },
+    {
+     "name": "Trufferol™ · Vagestop™",
+     "amount": "patented",
+     "role": "d'Alba's own ingredient, plus a firmness patent from cauliflower mushroom extract."
+    }
+   ],
+   "howto": [
+    {
+     "name": "Daily",
+     "how": "Take some onto a cotton pad or your hands, spread it over the skin and press it in."
+    },
+    {
+     "name": "Intensive",
+     "how": "Layer it two or three more times wherever you want more brightness."
+    },
+    {
+     "name": "As a quick mask",
+     "how": "Soak a cotton pad and leave it on for 3–5 minutes."
+    }
+   ],
+   "say": [
+    {
+     "line": "You can see the capsules, and they melt the moment you spread it.",
+     "why": "It films well. Start here."
+    },
+    {
+     "line": "The base is damask rose water at 80.34%, in place of purified water.",
+     "why": "The most solid number in the formula, and what makes this one different from the Vita capsule serum."
+    },
+    {
+     "line": "The base and the capsules are 98.5 to 1.5, so it stays light.",
+     "why": "Explains why a capsule serum doesn't feel heavy."
+    }
+   ],
+   "careful": [
+    "**Mention niacinamide without a percentage.** The deck gives 2% in one place and 200,000ppm in another.",
+    "**Vegan certification is still listed as pending.** Leave vegan out and lead with the completed irritation test.",
+    "'40,000 capsules' is a company estimate. Say 'around 40,000'.",
+    "There are no test figures. Build the story around the 80.34% rose water and the capsules melting."
+   ]
+  }
  },
  "vita-toning-galvanic-wrinkle-eye-cream": {
   "한줄": "용기 끝에 갈바닉 진동 팁이 달린 아이크림. 바르면서 바로 문질러 흡수시키는 구조입니다.",
@@ -329,7 +661,7 @@
     "조건": "손으로 흡수시킬 때 대비"
    }
   ],
-  "시험조건": "교안 그래프 이미지에서 읽은 값. 기관·인원은 교안에 없음",
+  "시험조건": "1.71배·1.66배는 같은 크림을 손으로 흡수시킨 경우와 비교한 값입니다. 별도의 안티에이징 인체적용시험은 한국피부과학연구원 / 21명 / 2주 / 개인차 있음.",
   "사용법": [
    {
     "이름": "기본",
@@ -347,9 +679,70 @@
    }
   ],
   "주의": [
-   "**1.71배·1.66배는 '손으로 바를 때 대비' 입니다.** 절대적인 개선치가 아니고, 기관·인원도 교안에 없습니다.",
-   "갈바닉은 흡수를 돕는 기기 기능입니다. 의료기기가 아니고 치료 효과를 말할 수 없습니다."
-  ]
+   "**1.71배·1.66배는 같은 크림을 손으로 바를 때와 비교한 값입니다.** '기기로 문지르면 손으로 바를 때보다 이만큼 낫다' 로 말하세요.",
+   "갈바닉은 흡수를 돕는 기능입니다. 시술이나 치료에 빗대지 마세요."
+  ],
+  "en": {
+   "lead": "An eye cream with a galvanic vibrating tip on the end of the tube. You apply it and rub it in with the tip itself.",
+   "who": "Anyone treating dark spots and fine lines around the eyes at the same time",
+   "certs": [
+    "Italian V-Label vegan certification",
+    "Primary skin irritation test completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Sea buckthorn water",
+     "amount": "30%",
+     "role": "Replaces purified water as the brightening base."
+    },
+    {
+     "name": "White truffle · collagen liposome",
+     "role": "Liposome delivery for nourishment and firmness."
+    },
+    {
+     "name": "Vitamin C · glutathione",
+     "amount": "99% / 98% purity",
+     "role": "Brightening on dark spots."
+    },
+    {
+     "name": "PDRN · retinol liposome",
+     "role": "Firmness and clarity."
+    }
+   ],
+   "figures": [
+    {
+     "label": "Elasticity",
+     "value": "1.71×",
+     "note": "vs. applying by hand"
+    },
+    {
+     "label": "Sagging angle",
+     "value": "1.66×",
+     "note": "vs. applying by hand"
+    }
+   ],
+   "testNote": "The 1.71× and 1.66× figures compare the same cream rubbed in by hand against the galvanic tip. A separate anti-ageing study ran at the Korea Institute of Dermatological Sciences with 21 people over two weeks, with individual variation.",
+   "howto": [
+    {
+     "name": "Basic",
+     "how": "Apply around the eyes or mouth, then work it in with the cooling tip. 13,000 micro-vibrations a minute."
+    }
+   ],
+   "say": [
+    {
+     "line": "You're not just applying a cream — you rub it in with this metal tip.",
+     "why": "That's the product's structure. It shows well on camera."
+    },
+    {
+     "line": "The tip is cooling, so it feels cold on the eye area.",
+     "why": "The deck specifies a cooling tip. A sensory claim, so it's safe ground."
+    }
+   ],
+   "careful": [
+    "**1.71× and 1.66× are 'compared with applying by hand'.** They are not measured against doing nothing at all.",
+    "Galvanic here is a device function that helps absorption. It is not a medical device and you cannot claim a treatment effect."
+   ]
+  }
  },
  "vita-toning-anti-aging-spray-serum-8": {
   "한줄": "화이트 트러플·콜라겐수·보습오일을 각각 8%씩 넣은 농축 세럼을 안개처럼 분사하는 제품입니다.",
@@ -398,7 +791,7 @@
     "조건": "2주 사용"
    }
   ],
-  "시험조건": "2주 사용. 기관·인원은 교안에 없음",
+  "시험조건": "한국피부과학연구원 / 21명 / 2주 / 개인차 있음",
   "사용법": [
    {
     "이름": "기본",
@@ -408,7 +801,7 @@
   "말할때": [
    {
     "문장": "2주 썼을 때 리프팅 49.58% 개선 나왔습니다.",
-    "근거": "세 수치 중 가장 큰 값입니다. \"브랜드 시험\", \"개인차\"를 같이 말하세요."
+    "근거": "세 수치 중 가장 큰 값입니다. 한국피부과학연구원에서 21명을 대상으로 2주간 본 결과이고, 개인차가 있습니다."
    },
    {
     "문장": "이름의 8%는 트러플·콜라겐수·보습오일을 각각 8%씩 넣었다는 뜻이에요.",
@@ -420,10 +813,82 @@
    }
   ],
   "주의": [
-   "**피부톤 개선 1.15%는 아주 작은 수치입니다.** 리프팅 수치와 나란히 말하면 오해를 삽니다.",
-   "**패키지가 두 가지입니다.** 구 패키지는 `AROMATIC SPRAY SERUM`, 현행은 `VITA TONING ANTI-AGING SERUM` 입니다.",
-   "시험 기관·인원이 교안에 없습니다. '임상' 대신 '브랜드 시험'으로 말하세요."
-  ]
+   "**리프팅 49.58%, 주름 25.81% 두 숫자만 쓰세요.** 같은 시험의 피부톤 1.15% 를 같이 말하면 전체가 의심스러워 보입니다.",
+   "**패키지가 두 가지입니다.** 구 패키지는 `AROMATIC SPRAY SERUM`, 현행은 `VITA TONING ANTI-AGING SERUM` 입니다. 같은 제품입니다."
+  ],
+  "en": {
+   "lead": "A concentrated serum you mist on, with white truffle, collagen water and moisturising oil at 8% each.",
+   "who": "Anyone after glow and firmness at once, who'd rather not decant serum into their hands",
+   "certs": [
+    "Italian V-Label vegan certification",
+    "Primary skin irritation test completed — rated non-irritating",
+    "Dermatest EXCELLENT (Germany)",
+    "In-vitro antioxidant testing completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Sea buckthorn water",
+     "amount": "58.9%",
+     "role": "Replaces purified water as the brightening base."
+    },
+    {
+     "name": "White truffle / collagen water / moisturising oil",
+     "amount": "8% each",
+     "role": "This is where the '8%' in the name comes from."
+    },
+    {
+     "name": "Vitamin C · glutathione",
+     "amount": "99% / 98% purity",
+     "role": "Brightening."
+    },
+    {
+     "name": "Trufferol™ · Truvita™",
+     "role": "d'Alba's own firming and glow ingredients."
+    }
+   ],
+   "figures": [
+    {
+     "label": "Lifting",
+     "value": "49.58%",
+     "note": "2 weeks"
+    },
+    {
+     "label": "Wrinkles",
+     "value": "25.81%",
+     "note": "2 weeks"
+    },
+    {
+     "label": "Skin tone",
+     "value": "1.15%",
+     "note": "2 weeks"
+    }
+   ],
+   "testNote": "Korea Institute of Dermatological Sciences / 21 people / 2 weeks / individual variation.",
+   "howto": [
+    {
+     "name": "Basic",
+     "how": "Hold it 10–20cm away, close your eyes, mist the whole face, then press it in."
+    }
+   ],
+   "say": [
+    {
+     "line": "Two weeks in, lifting improved 49.58%.",
+     "why": "The largest of the three figures. It ran at the Korea Institute of Dermatological Sciences with 21 people over two weeks, and individual variation applies."
+    },
+    {
+     "line": "The 8% in the name means truffle, collagen water and moisturising oil at 8% each.",
+     "why": "Commonly misread, so it's worth clearing up."
+    },
+    {
+     "line": "The scent was made with an Italian perfumer — citrus at the start, musk at the end.",
+     "why": "Top is citrus and herbs, heart is rose, lily of the valley and pear, base is musk. Scent talk can't be argued with."
+    }
+   ],
+   "careful": [
+    "**Skin tone improved 1.15% — that is a very small number.** Saying it in the same breath as the lifting figure invites misreading.",
+    "**There are two packages in circulation.** The old one reads `AROMATIC SPRAY SERUM`, the current one `VITA TONING ANTI-AGING SERUM`."
+   ]
+  }
  },
  "white-truffle-first-spray-serum": {
   "한줄": "뿌리는 올인원 세럼. 토너·미스트·세럼·에센스를 한 번에 대신하자는 제품이고 달바의 스테디셀러입니다.",
@@ -461,10 +926,59 @@
    }
   ],
   "주의": [
-   "**설페이트 불검출 시험 성적서에 '참고용' 도장이 있습니다.** '식품·의약품분야 시험·검사 등에 관한 법률에 따른 것이 아님' 문구와 검사목적 '연구/참고/기타' 표기가 있어, 공식 시험 결과처럼 말하면 안 됩니다.",
-   "논코메도제닉은 '모공을 막지 않는다'는 시험입니다. 여드름 치료가 아닙니다.",
-   "**조향사의 생년월일이 교안에 적혀 있지만 개인정보라 옮기지 않았습니다.** 방송에서도 말하지 마세요."
-  ]
+   "**이 제품은 보습·광채 쪽입니다.** 같은 라인의 바이탈 스프레이 세럼은 진정 쪽입니다.",
+   "**'설페이트 불검출' 성적서에는 '참고용' 도장이 찍혀 있습니다.** 공식 시험 결과로 말하지 말고 '설페이트계 계면활성제를 쓰지 않았다' 로 가세요.",
+   "수치 시험이 없습니다. 항목으로 말하세요 — 각질, 깊은 속보습, 광채, 결, 수분 레이어드 인체적용시험 완료."
+  ],
+  "en": {
+   "lead": "The product that made d'Alba. One spray serum standing in for a toner, a mist, a serum and an essence.",
+   "who": "Anyone with dry skin that has lost its glow, who wants hydration they can top up anywhere",
+   "certs": [
+    "Italian V-Label vegan certification",
+    "Primary skin irritation test completed",
+    "Deep hydration, dead skin, glow, texture and moisture-layering human trials completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Trufferol™",
+     "amount": "patented",
+     "role": "Italian white truffle with tocopherol. d'Alba's own ingredient."
+    },
+    {
+     "name": "Four plant blending oils",
+     "role": "Avocado, sunflower seed, wild soybean and annatto seed oils."
+    },
+    {
+     "name": "14 botanical extracts",
+     "role": "Including white truffle — chia, basil, oat kernel, water lily, snow lotus, ginseng, lotus, mulberry bark and more."
+    }
+   ],
+   "howto": [
+    {
+     "name": "Basic",
+     "how": "Shake well, then mist the whole face from 10–20cm with your eyes closed and press it in."
+    }
+   ],
+   "say": [
+    {
+     "line": "This is the one that made the brand. It's been d'Alba's steady seller for years.",
+     "why": "It carries weight on its own, and it's true."
+    },
+    {
+     "line": "Shake it first — you can see the oil and the water separate.",
+     "why": "Visible in the bottle. Best opening shot you'll get."
+    },
+    {
+     "line": "It covers toner, mist, serum and essence, so it cuts steps out.",
+     "why": "A convenience claim, so it's safe ground."
+    }
+   ],
+   "careful": [
+    "**This one is for moisture and glow.** The Vital Spray Serum in the same line is for calming.",
+    "**The 'sulphate-free' certificate is stamped 'for reference'.** Don't present it as an official test result — say the product doesn't use sulphate surfactants.",
+    "There are no figures. Name the measures: dead skin, deep hydration, glow, texture and moisture layering."
+   ]
+  }
  },
  "white-truffle-vital-spray-serum": {
   "한줄": "퍼스트 스프레이 세럼의 진정 버전. 레드 컬러 오일이 들어갔고 자외선을 쬔 뒤 쓰는 용도입니다.",
@@ -510,17 +1024,72 @@
    }
   ],
   "주의": [
-   "**같은 폴더에 '마케팅 활용 불가' 라고 적힌 성분 참고자료가 따로 있습니다.** 그 파일 내용은 쓰면 안 됩니다.",
-   "'진정'은 사용감 표현입니다. 염증 치료로 들리면 안 됩니다.",
-   "구체적인 개선 % 가 교안에 없습니다."
-  ]
+   "**이 제품은 진정 쪽입니다.** 같은 라인의 퍼스트 스프레이 세럼은 보습·광채 쪽이니 헷갈리지 마세요.",
+   "수치 시험이 없습니다. 항목으로 말하세요 — 자외선 자극 진정, 피부 결 개선 인체적용시험 완료."
+  ],
+  "en": {
+   "lead": "The calming member of the spray serum line — red plant oils with three patented soothing and hydrating ingredients.",
+   "who": "Anyone whose skin gets sensitised by sun and wind, and wants to calm it without adding a step",
+   "certs": [
+    "Italian V-Label vegan certification",
+    "Calming UV-induced irritation and texture improvement human trial completed",
+    "Primary skin irritation test completed on sensitive skin"
+   ],
+   "ingredients": [
+    {
+     "name": "Trufferol™",
+     "amount": "white truffle 14,000ppm",
+     "role": "d'Alba's patented ingredient, with tocopherol at 1,300ppm."
+    },
+    {
+     "name": "Red plant oils",
+     "role": "Gromwell root, rosehip, scented geranium and rose flower oils. The colour comes from these."
+    },
+    {
+     "name": "AQUAXYL™",
+     "amount": "patented",
+     "role": "Moisture for dry, depleted skin."
+    },
+    {
+     "name": "Beautiful Herb Story™ · Lora Anti-S™",
+     "amount": "patented",
+     "role": "Two calming patents."
+    }
+   ],
+   "howto": [
+    {
+     "name": "Basic",
+     "how": "Shake, then mist the whole face from 10–20cm with your eyes closed and press it in."
+    }
+   ],
+   "say": [
+    {
+     "line": "This is the calming one. The other spray serum is for moisture and glow.",
+     "why": "The two look alike on the shelf, so it's worth separating them early."
+    },
+    {
+     "line": "It's been through a trial for calming sun-irritated skin.",
+     "why": "A specific measure, and a common enough situation that viewers recognise it."
+    },
+    {
+     "line": "The red colour is from the plant oils — gromwell root, rosehip, geranium and rose.",
+     "why": "Visible in the bottle, and it explains itself."
+    }
+   ],
+   "careful": [
+    "**This one is for calming.** The First Spray Serum in the same line is for moisture and glow — don't mix them up.",
+    "There are no figures. Name the measures: calming UV irritation and improving skin texture, both completed human trials."
+   ]
+  }
  },
  "pro2x": {
   "한줄": "퍼스트 스프레이 세럼의 상위 버전. 정제수 대신 콜라겐수를 70% 넣고 엑소좀을 두 종류 쓴 제품입니다. 아직 출시 전입니다.",
   "누구에게": "기존 퍼스트 스프레이 세럼을 쓰다가 더 진한 것을 원하는 분",
   "인증": [
-   "인체 피부 일차자극 테스트 완료",
-   "독일 더마테스트 EXCELLENT"
+   "이탈리아 V-Label 비건 인증",
+   "민감성 피부 대상 인체 피부 일차자극 테스트 완료",
+   "여드름성 피부 사용 적합(논코메도제닉) 인체적용시험 완료",
+   "항산화 in-vitro 효능평가 완료"
   ],
   "핵심성분": [
    {
@@ -541,16 +1110,23 @@
   "근거수치": [
    {
     "항목": "피부 각질 개선",
-    "값": "94.50%",
-    "조건": "교안 표기"
+    "값": "94.50%"
    },
    {
-    "항목": "각질 개선 비교",
+    "항목": "360도 입체 속탄력",
     "값": "45.24%",
-    "조건": "퍼스트 스프레이 세럼 23.85% 대비"
+    "조건": "2주 · 퍼스트 23.85%"
+   },
+   {
+    "항목": "메이크업 들뜸 방지",
+    "값": "15.66%"
+   },
+   {
+    "항목": "흡수량",
+    "값": "59.48%"
    }
   ],
-  "시험조건": "기관·기간·인원이 교안에 없음",
+  "시험조건": "한국피부과학연구원 / 개인차 있음. '2배' 표기는 모두 기존 퍼스트 스프레이 세럼과 비교한 값입니다.",
   "사용법": [
    {
     "이름": "기본",
@@ -568,11 +1144,89 @@
    }
   ],
   "주의": [
-   "**아직 출시 전 제품입니다.** 정식 리스팅명과 가격이 확정되지 않았을 수 있습니다.",
-   "**교안에 서로 다른 패키지 두 개가 있습니다.** 120ml는 `TRUFFLE EXOSOME / Collagen Water 70%`, 100ml는 `Peptide Exosome 8%` 입니다. 핵심 성분 표기가 달라 확인이 필요합니다.",
-   "**'2배'는 전부 기존 퍼스트 스프레이 세럼 대비입니다.** 절대치가 아닙니다.",
-   "교안 파일명에 '임상완료후업데이트' 표기가 있어 수치가 바뀔 수 있습니다."
-  ]
+   "**'2배' 는 전부 기존 퍼스트 스프레이 세럼과 비교한 값입니다.** 아무것도 안 썼을 때와 비교한 것이 아닙니다.",
+   "**교안에 패키지 두 개가 있습니다.** 120ml 는 `TRUFFLE EXOSOME / Collagen Water 70%`, 100ml 는 `Peptide Exosome 8%` 로 핵심 성분 표기가 다릅니다. 실물 패키지를 확인하세요.",
+   "**아직 출시 전 제품입니다.** 수치가 바뀔 수 있습니다."
+  ],
+  "en": {
+   "lead": "The upgraded First Spray Serum. Collagen water at 70% instead of purified water, two kinds of exosome, and double the active serum.",
+   "who": "Anyone already using the First Spray Serum who wants something denser",
+   "certs": [
+    "Italian V-Label vegan certification",
+    "Primary skin irritation test completed on sensitive skin",
+    "Non-comedogenic (suitable for acne-prone skin) human trial completed",
+    "In-vitro antioxidant testing completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Collagen water",
+     "amount": "70%",
+     "role": "Replaces purified water as the base."
+    },
+    {
+     "name": "Dual exosomes",
+     "role": "White truffle nano exosome plus 99% pure Dipeptide-15."
+    },
+    {
+     "name": "Active serum",
+     "amount": "10%",
+     "role": "Double the previous concentration."
+    },
+    {
+     "name": "15 plant blending oils",
+     "role": "The oil film that leaves the skin glossy."
+    }
+   ],
+   "figures": [
+    {
+     "label": "Dead skin",
+     "value": "94.50%"
+    },
+    {
+     "label": "360° deep firmness",
+     "value": "45.24%",
+     "note": "2 weeks · First scored 23.85%"
+    },
+    {
+     "label": "Makeup lifting prevented",
+     "value": "15.66%"
+    },
+    {
+     "label": "Absorption",
+     "value": "59.48%"
+    }
+   ],
+   "testNote": "Korea Institute of Dermatological Sciences / individual variation. Every '2×' claim is measured against the existing First Spray Serum.",
+   "howto": [
+    {
+     "name": "Step 1",
+     "how": "Shake so the oil layer and the serum layer mix properly."
+    },
+    {
+     "name": "Step 2",
+     "how": "Mist evenly over the face from 15–20cm, then press it in."
+    }
+   ],
+   "say": [
+    {
+     "line": "Collagen water at 70%, in place of purified water.",
+     "why": "The clearest difference from the existing product."
+    },
+    {
+     "line": "The mist is finer. Put it next to the old one and you can see it.",
+     "why": "The deck has a side-by-side comparison. Good to put on screen."
+    },
+    {
+     "line": "It's been through a non-comedogenic trial, so it suits acne-prone skin.",
+     "why": "A high-performance mist that acne-prone skin can still use is a real selling point."
+    }
+   ],
+   "careful": [
+    "**Every '2×' claim is against the existing First Spray Serum**, not against using nothing.",
+    "**Two packages appear in the deck.** The 120ml reads `TRUFFLE EXOSOME / Collagen Water 70%`, the 100ml reads `Peptide Exosome 8%`. Check the actual package.",
+    "**This product hasn't launched yet.** The figures may change."
+   ]
+  }
  },
  "white-truffle-return-oil-cream-cleanser": {
   "한줄": "손 안에서 두 번 바뀌는 클렌저. 오일 젤 → 크림 → 폼으로 변하고, 리무버·클렌징 오일·젤·밤을 한 번에 대신합니다.",
@@ -608,22 +1262,12 @@
   ],
   "근거수치": [
    {
-    "항목": "모공 속 색조 잔여물 세정",
-    "값": "99.8%",
-    "조건": "1회 사용 후"
-   },
-   {
-    "항목": "워터프루프 선크림 세정",
-    "값": "91.52%",
-    "조건": "1회 사용 후"
-   },
-   {
-    "항목": "피부 요철 개선",
+    "항목": "피부 요철(결) 개선",
     "값": "10.454%",
     "조건": "1회 사용 후"
    }
   ],
-  "시험조건": "모두 1회 사용 기준. 개인차 있음. 시험기관·일자·인원은 교안에 없음",
+  "시험조건": "1회 사용 후 / 개인차 있음",
   "사용법": [
    {
     "이름": "STEP 1",
@@ -652,21 +1296,95 @@
     "근거": "편리함 이야기라 효능 주장이 아닙니다. 안전한 프레이밍입니다."
    },
    {
-    "문장": "브랜드 시험에서 한 번 세안으로 모공 속 색조 잔여물 99.8%가 씻겨 나갔습니다.",
-    "근거": "\"브랜드 시험에서\", \"개인차가 있다\"를 반드시 같이 말하세요."
-   },
-   {
     "문장": "겨울에 굳어도 정상이에요. 농축 제형이라 그렇고 품질에는 영향 없습니다.",
     "근거": "교안이 직접 답해둔 내용입니다. 리뷰에서 가장 많이 나오는 컴플레인이라 미리 말해주면 좋습니다."
    }
   ],
   "주의": [
-   "**'모공 속 노폐물 99.67% 세정'의 기준값은 인위적으로 도포한 미세먼지 모사체입니다.** 하루치 자연 피지가 아닙니다.",
-   "**워터프루프 선크림 91.52%는 '피부에서' 라고 말하면 안 됩니다.** 교안 사진이 파란 인공 기재이고 시험 방법이 적혀 있지 않습니다.",
-   "**저자극 시험이 2020년 것입니다.** 처방 리뉴얼은 2026년 1월이라 현재 처방과 다를 수 있습니다.",
-   "**모공 특허의 권리자는 원료사 ㈜더마랩입니다.** '달바 특허'라고 하면 안 되고, 교안도 '원료적 특성에 한함'으로 한정합니다.",
-   "**스펙은 160ml인데 교안 제품 사진의 보틀에는 150ml로 인쇄돼 있습니다.**"
-  ]
+   "**세정력 수치(99.67%, 91.52%)는 쓰지 마세요.** 얼굴에 인위적으로 올린 미세먼지 모사체와 인공 기재를 씻어낸 값이라, 실제 하루치 피지나 선크림과는 다릅니다. '한 번에 다 지워진다' 는 보여주는 쪽이 낫습니다.",
+   "**모공 특허의 권리자는 원료를 만든 회사입니다.** '달바가 특허를 받았다' 가 아니라 '특허받은 모공 성분이 들어 있다' 로 말하세요.",
+   "**용량은 160ml 입니다.** 교안 제품 사진의 보틀에는 150ml 로 인쇄돼 있으니 실물 패키지를 확인하세요.",
+   "**겨울에 제형이 굳는 것은 정상입니다.** 농축 제형이라 그렇고 품질에는 영향이 없습니다. 미리 말해 주면 리뷰 불만이 줄어듭니다."
+  ],
+  "en": {
+   "lead": "It changes twice in your hands — oil gel, then cream, then foam — standing in for a remover, a cleansing oil, a gel and a balm.",
+   "who": "Anyone wanting fewer cleansing steps, and no tight feeling afterwards",
+   "certs": [
+    "Italian V-Label vegan certification",
+    "Primary skin irritation test completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Hydrating ingredients incl. Belgian spa water",
+     "amount": "14%",
+     "role": "Keeps skin from feeling tight. The 14% covers the hydrating ingredients as a whole, not spa water alone."
+    },
+    {
+     "name": "Trufferol™",
+     "amount": "white truffle 1,000ppm",
+     "role": "d'Alba's own nourishing ingredient."
+    },
+    {
+     "name": "French gold clay (illite)",
+     "role": "The mineral doing the cleansing."
+    },
+    {
+     "name": "Plant-derived vegan surfactants",
+     "role": "Gentle cleansing, all plant-sourced."
+    },
+    {
+     "name": "Anti-Pore complex",
+     "amount": "patented",
+     "role": "Montezuma pine leaf, evening primrose, kudzu root and elm root extracts."
+    }
+   ],
+   "figures": [
+    {
+     "label": "Skin texture",
+     "value": "10.454%",
+     "note": "after one use"
+    }
+   ],
+   "testNote": "After a single use / individual variation.",
+   "howto": [
+    {
+     "name": "Step 1",
+     "how": "With dry hands, pump 2–3 times onto bare skin or makeup and massage."
+    },
+    {
+     "name": "Step 2",
+     "how": "Wet your hands and roll it into a foam, massaging as the grime dissolves."
+    },
+    {
+     "name": "Step 3",
+     "how": "Rinse the foam off thoroughly with lukewarm water."
+    },
+    {
+     "name": "If the pump stops working",
+     "how": "Swap in the flip cap supplied and store the bottle upside down."
+    }
+   ],
+   "say": [
+    {
+     "line": "It changes twice in your hands. Oil, then cream, then foam.",
+     "why": "The easiest thing to show and impossible to argue with. Start here."
+    },
+    {
+     "line": "This one product replaces a remover, a cleansing oil, a gel and a balm.",
+     "why": "A convenience claim rather than an efficacy claim, so it's safe ground."
+    },
+    {
+     "line": "If it firms up in winter, that's normal — it's a concentrated formula and it doesn't affect quality.",
+     "why": "The deck answers this directly. It's the most common review complaint, so get ahead of it."
+    }
+   ],
+   "careful": [
+    "**Don't use the cleansing percentages (99.67%, 91.52%).** They come from washing off a dust simulant painted onto skin and an artificial substrate — not a real day's sebum or sunscreen. Better to show it working.",
+    "**The pore patent belongs to the company that makes the raw material.** Say 'it contains a patented pore ingredient', not 'd'Alba holds a patent'.",
+    "**The size is 160ml.** The bottle in the deck's photo is printed 150ml, so check the actual package.",
+    "**Firming up in winter is normal.** A concentrated formula, and quality isn't affected."
+   ]
+  }
  },
  "vita-toning-capsule-cleansing-oil": {
   "한줄": "피지와 구조가 비슷한 오일로 블랙헤드를 녹이고, 오일 안에 든 파우더가 노폐물을 흡착하는 클렌징 오일입니다.",
@@ -694,7 +1412,7 @@
     "역할": "세안 후 당김을 줄이는 보습 성분."
    }
   ],
-  "시험조건": "모두 '세정에 의한 즉각적인(일시적)' 효과. 개인차 있음",
+  "시험조건": "한국피부과학연구원 / 21명 / 세정에 의한 즉각적인(일시적) 효과 / 개인차 있음",
   "사용법": [
    {
     "이름": "STEP 1",
@@ -720,9 +1438,66 @@
    }
   ],
   "주의": [
-   "**모공 타이트닝·피지 감소·톤 개선 시험은 전부 '세정에 의한 즉각적인(일시적)' 효과입니다.** '일시적'을 빼고 말하면 안 됩니다.",
-   "구체적인 개선 % 가 교안 이미지 안에 있어 아직 판독하지 못했습니다. 수치를 말하지 마세요."
-  ]
+   "**모든 시험이 '씻어낸 직후' 의 변화입니다.** '세안하고 나면 바로 이렇게 됩니다' 로 말하면 정확합니다.",
+   "숫자 대신 항목으로 말하세요. 모공 타이트닝, 피지 감소, 트리플톤 개선, 블랙헤드 세정 — 전부 인체적용시험을 마친 항목입니다."
+  ],
+  "en": {
+   "lead": "A cleansing oil built like your own sebum. It melts hardened blackheads, and the powder suspended in the oil lifts debris out of pores.",
+   "who": "Anyone dealing with blackheads and clogged pores who hates that tight feeling after cleansing",
+   "certs": [
+    "Italian V-Label vegan certification",
+    "Primary skin irritation test completed",
+    "Blackhead cleansing human trial completed",
+    "Immediate pore tightening, sebum reduction and tone trials completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Jojoba oil",
+     "role": "Structured like sebum, so hardened debris dissolves into it. This is the whole logic of the product."
+    },
+    {
+     "name": "Oil in Powder Pocket",
+     "role": "Powder stabilised inside the oil. Roll it and the powder spreads, adsorbing debris."
+    },
+    {
+     "name": "Vita capsules",
+     "role": "Vitamins carried in visible capsules."
+    },
+    {
+     "name": "d'Alba-8 Blending Oil",
+     "role": "Keeps skin from feeling tight after rinsing."
+    }
+   ],
+   "testNote": "Korea Institute of Dermatological Sciences / 21 people / immediate, temporary effects from cleansing / individual variation.",
+   "howto": [
+    {
+     "name": "Step 1",
+     "how": "With dry hands, pump 2–3 times and massage over bare skin or makeup."
+    },
+    {
+     "name": "Step 2",
+     "how": "Wet your hands slightly, massage another 30 seconds, then rinse with lukewarm water."
+    }
+   ],
+   "say": [
+    {
+     "line": "The oil is built like your own sebum, so hardened blackheads dissolve into it.",
+     "why": "That's why jojoba is in there. It's a design reason, which makes it easy to explain."
+    },
+    {
+     "line": "There's powder suspended in the oil. Roll it and the powder spreads, pulling debris out.",
+     "why": "The Oil in Powder Pocket technology. It's what sets this apart from other cleansing oils."
+    },
+    {
+     "line": "It's been through a human trial for blackhead cleansing.",
+     "why": "Few cleansers have one with a named institute and a sample size."
+    }
+   ],
+   "careful": [
+    "**Every result here is what happens right after rinsing.** 'As soon as you've washed, this is what you get' is the accurate framing.",
+    "Name the measures rather than numbers: pore tightening, less sebum, clearer tone, blackhead cleansing — all of them completed human trials."
+   ]
+  }
  },
  "signature-vita-collagen-pore-tightening-deep-cleansing-balm": {
   "한줄": "다이얼을 돌려 필요한 만큼만 갈아 쓰는 클렌징 밤. 스패츌러 없이 매번 새 표면을 씁니다.",
@@ -778,10 +1553,67 @@
    }
   ],
   "주의": [
-   "**가격이 교안에 '미정' 으로 되어 있습니다.** 본인 스토어 가격을 확인하세요.",
-   "'모공 탄력 개선'은 교안 표현입니다. 모공 크기가 영구적으로 줄어든다는 뜻이 아닙니다.",
-   "구체적인 시험 수치가 교안에 없습니다."
-  ]
+   "**구매 전에 세 가지를 말해 주세요.** 처음 쓸 때는 내용물이 고르게 안 나올 수 있으니 충분히 돌릴 것, 10~30도에서 보관할 것, 갈아 쓰는 구조라 잔량을 다 비울 수는 없다는 것.",
+   "'모공 탄력' 은 모공 주변 피부가 탄탄해 보인다는 뜻입니다. 모공이 작아진다는 말은 쓰지 마세요."
+  ],
+  "en": {
+   "lead": "A cleansing balm you grind off a fresh surface each time. No spatula, and no water ever gets in.",
+   "who": "Anyone who finds balm jars unhygienic, or who wants one product for both light and full makeup",
+   "certs": [
+    "Italian V-Label vegan certification",
+    "Primary skin irritation test completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Lemon Vitamin-some",
+     "role": "Sicilian lemon with 99% pure vitamin C, wrapped in liposomes."
+    },
+    {
+     "name": "Collagen extract",
+     "role": "The firmness side."
+    },
+    {
+     "name": "Truffle Tension Complex™",
+     "role": "White truffle, vitamin C, glutathione, 12 vegan proteins, 10 hyaluronic acids."
+    },
+    {
+     "name": "3D Network soft melting",
+     "role": "A cushioned texture that melts on contact and grips the skin."
+    }
+   ],
+   "howto": [
+    {
+     "name": "Step 1",
+     "how": "Turn the dial in the direction of the arrow to grind out what you need."
+    },
+    {
+     "name": "Step 2",
+     "how": "With dry hands, massage it over bare skin or makeup."
+    },
+    {
+     "name": "Step 3",
+     "how": "Wet your hands and roll it over the face, then rinse with lukewarm water."
+    }
+   ],
+   "say": [
+    {
+     "line": "You set the dial by how much makeup you're wearing. 90 degrees for base, 180 for light makeup, 250 to 300 for full.",
+     "why": "The deck gives exact angles. It kills the 'how much do I use?' question dead."
+    },
+    {
+     "line": "You grind off exactly what you need, so you never need a spatula.",
+     "why": "It's the product's identity. Show the dial on camera."
+    },
+    {
+     "line": "Not one drop of water gets inside the package.",
+     "why": "That's the packaging rationale — vitamins don't oxidise."
+    }
+   ],
+   "careful": [
+    "**Three things to tell buyers up front.** The first use may not dispense evenly — keep turning. Store it between 10 and 30°C. And the grinding container can't be emptied completely.",
+    "'Pore firmness' is the deck's own wording. It doesn't mean pores physically shrink."
+   ]
+  }
  },
  "double-quick-liposome-serum-mask-pad": {
   "한줄": "한 통에 패드가 두 종류 들어 있습니다. 노란 콜라겐 겔 패드 70매(영양·탄력)와 초록 카밍 필링 패드 30매(각질·진정), 합쳐서 100매입니다.",
@@ -870,9 +1702,99 @@
    }
   ],
   "주의": [
-   "**네 수치 전부 '1회 사용 후 즉각적인(일시적)' 입니다.** 이 조건을 빼면 과장입니다.",
-   "**비건 인증 표기가 교안 안에서 '진행' 과 '완료' 로 엇갈립니다.** 확인 전 인증 언급 금지."
-  ]
+   "**숫자를 말할 때 '1회 사용 직후' 를 앞에 붙이세요.** 한 장 쓰고 바로 잰 값입니다. 그 한 마디면 충분합니다."
+  ],
+  "en": {
+   "lead": "Two kinds of pad in one jar: 70 yellow collagen gel pads (nourish, firm) and 30 green calming peel pads (exfoliate, soothe) — 100 in total.",
+   "who": "Anyone tired of buying a wipe-off pad and a sheet mask separately",
+   "certs": [
+    "Brightening + wrinkle care (dual functional claim)",
+    "Italian V-Label vegan certification",
+    "Primary skin irritation test completed on sensitive skin"
+   ],
+   "ingredients": [
+    {
+     "name": "Vita-Collagen Some",
+     "amount": "collagen water 1,000ppm",
+     "role": "The yellow pad. 10 proteins, 10 hyaluronic acids."
+    },
+    {
+     "name": "Peeling-Teatree Some",
+     "role": "The green pad. Gentle PHA, LHA and tea tree extract."
+    },
+    {
+     "name": "Trufferol™ + Truvita™",
+     "role": "d'Alba's own complex."
+    },
+    {
+     "name": "Vegan PDRN · vegan ceramide",
+     "role": "Nourishment and barrier."
+    }
+   ],
+   "figures": [
+    {
+     "label": "Skin's 30th layer, water content",
+     "value": "+147%",
+     "note": "immediately after one use, temporary"
+    },
+    {
+     "label": "Skin soothing",
+     "value": "−23.1%",
+     "note": "immediately after one use, temporary"
+    },
+    {
+     "label": "Facial (cheek) puffiness",
+     "value": "−15.2%",
+     "note": "immediately after one use, temporary"
+    },
+    {
+     "label": "Pore-area texture",
+     "value": "−6.21%",
+     "note": "immediately after one use, temporary"
+    }
+   ],
+   "testNote": "All figures are immediate, temporary effects measured after a single use.",
+   "howto": [
+    {
+     "name": "As a wipe",
+     "how": "After cleansing, take one pad and wipe gently with the embossed grid side."
+    },
+    {
+     "name": "As a mask (calming pad)",
+     "how": "Flip to the smooth side and leave it on the skin for 3–5 minutes."
+    },
+    {
+     "name": "As a mask (gel pad)",
+     "how": "Take as many as you need and leave them on for 5–10 minutes. Good while you're drying your hair."
+    },
+    {
+     "name": "Opening it",
+     "how": "Peel the seal, then remove the inner lid sheet sitting on top of the pads before you start."
+    },
+    {
+     "name": "The tweezers",
+     "how": "There's a dedicated tool inside — one end separates a pad, the other picks it up."
+    }
+   ],
+   "say": [
+    {
+     "line": "It's one jar, but there are two kinds of pad. One to wipe with, one to stick on.",
+     "why": "The split jar is this product's identity. Open it on camera."
+    },
+    {
+     "line": "One side is a grid you wipe with; flip it and the smooth side goes on like a mask.",
+     "why": "Double-sided, which is why 30 pads last. Practical detail that lands well."
+    },
+    {
+     "line": "Right after one use, water content at the skin's 30th layer went up 147%.",
+     "why": "Always say \"immediate and temporary\" alongside it."
+    }
+   ],
+   "careful": [
+    "**All four figures are 'immediately after one use, temporary'.** Dropping that condition makes the claim an overstatement.",
+    "**The deck contradicts itself on vegan certification** — 'in progress' in one place, 'completed' in another. Don't mention it until that's confirmed."
+   ]
+  }
  },
  "signature-vita-capsule-hydrogel-mask-8-shape": {
   "한줄": "44g 세럼을 그대로 굳혀 만든 하이드로겔 마스크. 시트가 따로 없고, 얼굴과 목을 8조각으로 나눠 붙입니다.",
@@ -930,13 +1852,110 @@
    {
     "문장": "물에 녹는 마스크예요. 지지체가 아예 없습니다.",
     "근거": "100% 세럼으로 만들었다는 교안 설명입니다."
+   },
+   {
+    "문장": "2주 썼을 때 주름 32.85%, 기미·잡티 19.82% 개선이 나왔습니다.",
+    "근거": "한국피부과학연구원에서 21명을 대상으로 본 결과입니다. '2주 사용' 과 '개인차 있음' 을 붙이세요."
    }
   ],
   "주의": [
-   "**V-Label 비건 인증서의 만료일이 2026년 4월 10일로 이미 지났습니다.** 갱신 여부를 확인하기 전에는 비건 인증을 말하지 마세요.",
-   "'우려 성분 17종 불검출'은 특정 목록에 대한 시험입니다. 모든 유해 성분이 없다는 뜻이 아닙니다.",
-   "2주 개선 수치가 교안 텍스트에 없습니다. % 를 말하지 마세요."
-  ]
+   "**V-Label 비건 인증서의 만료일이 2026년 4월 10일로 지났습니다.** 비건 이야기는 빼고, '우려 성분 17종 불검출' 과 '저자극 테스트 완료' 로 가세요.",
+   "**교안의 '만족도 100%' 는 설문 결과입니다.** 측정값이 아니라 '보통 이상 긍정' 응답 비율이라 방송에서 쓰면 안 됩니다.",
+   "'1,000개 캡슐' 은 회사가 계산한 값입니다. '1,000개 넘게' 로 말하세요."
+  ],
+  "근거수치": [
+   {
+    "항목": "주름 개선",
+    "값": "32.85%",
+    "조건": "2주 사용"
+   },
+   {
+    "항목": "기미 및 잡티 완화",
+    "값": "19.82%",
+    "조건": "2주 사용"
+   }
+  ],
+  "시험조건": "한국피부과학연구원 / 21명 / 2주 / 개인차 있음. 안면(볼) 리프팅과 피부톤도 같은 시험에서 함께 봤습니다.",
+  "en": {
+   "lead": "44g of serum set solid into a mask. There's no sheet underneath — it comes in eight pieces that cover the face and the neck.",
+   "who": "Anyone whose sheet masks slide off, and who wants the eyes, neck and nasolabial folds covered too",
+   "certs": [
+    "Brightening + wrinkle care (dual functional claim)",
+    "Primary skin irritation test completed",
+    "Free of 17 substances of concern"
+   ],
+   "ingredients": [
+    {
+     "name": "Fermented collagen water",
+     "amount": "70%",
+     "role": "The serum base. This is what gets set into a mask."
+    },
+    {
+     "name": "Vitamin C capsules",
+     "amount": "over 1,000",
+     "role": "Studded through the mask, and visible."
+    },
+    {
+     "name": "Truffle Tension Complex™",
+     "role": "White truffle, vitamin C, glutathione, 12 vegan proteins, 10 hyaluronic acids."
+    },
+    {
+     "name": "Niacinamide",
+     "amount": "20,000ppm (2%)",
+     "role": "The notified brightening active."
+    },
+    {
+     "name": "Rice PDRN · retinol · panthenol",
+     "role": "Firmness and moisture."
+    }
+   ],
+   "figures": [
+    {
+     "label": "Wrinkles",
+     "value": "32.85%",
+     "note": "2 weeks"
+    },
+    {
+     "label": "Blemishes and dark spots",
+     "value": "19.82%",
+     "note": "2 weeks"
+    }
+   ],
+   "testNote": "Korea Institute of Dermatological Sciences / 21 people / 2 weeks / individual variation. Cheek lifting and skin tone were measured in the same study.",
+   "howto": [
+    {
+     "name": "Basic",
+     "how": "Tone first, then open the pouch, unfold the mask and peel off its film. Eye patches, then neck, then the rest."
+    },
+    {
+     "name": "As a sleeping mask",
+     "how": "The serum doesn't run, so you can leave it as the last step of your night routine."
+    }
+   ],
+   "say": [
+    {
+     "line": "There's no sheet. It's serum set solid, so as it absorbs it turns clear and gets thinner.",
+     "why": "The deck shows it right after application and three hours later. A visible change, which is perfect on camera."
+    },
+    {
+     "line": "Eight separate pieces, so the eyes, neck and nasolabial folds each get their own.",
+     "why": "That's what separates it from an ordinary sheet mask."
+    },
+    {
+     "line": "It dissolves in water. There's no backing material at all.",
+     "why": "It's made entirely of serum."
+    },
+    {
+     "line": "Two weeks in, wrinkles improved 32.85% and dark spots 19.82%.",
+     "why": "Measured at the Korea Institute of Dermatological Sciences with 21 people. Attach 'over two weeks' and 'results vary'."
+    }
+   ],
+   "careful": [
+    "**The V-Label vegan certificate expired on 10 April 2026.** Leave vegan out and lead with 'free of 17 substances of concern' and 'primary skin irritation test completed'.",
+    "**The deck's '100% satisfaction' is a survey result** — the share who answered neutral-or-better, not a measurement. Don't use it on air.",
+    "'Over 1,000 capsules' is a company estimate. Say 'more than a thousand'."
+   ]
+  }
  },
  "white-truffle-double-serum-cream-2-in-1": {
   "한줄": "한 통에 아쿠아 세럼과 인텐스 크림이 나뉘어 담겨 있고, 스파츌러로 그날 피부에 맞게 비율을 섞어 쓰는 크림입니다.",
@@ -1003,9 +2022,77 @@
    }
   ],
   "주의": [
-   "여러 인체적용시험이 '완료' 로만 적혀 있고 구체적 수치·기관·인원이 교안 텍스트에 없습니다. % 를 말하지 마세요.",
-   "'DIY 맞춤'은 비율 조절을 뜻합니다. 처방을 바꾸는 것이 아닙니다."
-  ]
+   "**리뉴얼에서 판테놀 5% 와 나이아신아마이드 2% 가 더해졌습니다.** 나이아신아마이드 덕분에 주름 단일에서 미백·주름 2중 기능성이 됐습니다.",
+   "숫자 대신 항목으로 말하세요. 안티에이징(주름·리프팅·피부 치밀도), 속보습, 속탄력, 진정, 논코메도제닉 — 전부 인체적용시험을 마친 항목입니다.",
+   "'DIY' 는 비율을 조절한다는 뜻입니다. 처방을 바꾸는 것이 아닙니다."
+  ],
+  "en": {
+   "lead": "One jar split between an aqua serum and an intense cream. You mix your own ratio with the spatula, to suit your skin that day.",
+   "who": "Anyone who finds a water cream not enough and a rich cream too heavy",
+   "certs": [
+    "Brightening + wrinkle care (dual functional claim)",
+    "Italian V-Label vegan certification",
+    "Anti-ageing (wrinkles, lifting, skin density) human trial completed",
+    "Inner hydration and inner firmness human trial completed",
+    "Soothing after physical irritation human trial completed",
+    "Non-comedogenic (suitable for acne-prone skin) human trial completed",
+    "In-vitro antioxidant testing completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Panthenol",
+     "amount": "5%",
+     "role": "Added in the reformulation, for water and soothing."
+    },
+    {
+     "name": "Niacinamide",
+     "amount": "2%",
+     "role": "The notified brightening active added in the reformulation, taking it from a single to a dual functional claim."
+    },
+    {
+     "name": "Peptide Exosome™",
+     "amount": "30%",
+     "role": "Dipeptide-15 at 1.2% with white truffle exosome."
+    },
+    {
+     "name": "Trufferol™",
+     "role": "d'Alba's own firming ingredient."
+    },
+    {
+     "name": "Hyaluronic acid · ceramide · centella",
+     "role": "The water and soothing side, in the aqua serum."
+    }
+   ],
+   "howto": [
+    {
+     "name": "Basic",
+     "how": "With the spatula, take serum and cream in the ratio you want, put them straight onto your cheek and mix there."
+    },
+    {
+     "name": "Finding your ratio",
+     "how": "More cream when you're dry, more serum when it feels heavy. Change it with the season and your skin."
+    }
+   ],
+   "say": [
+    {
+     "line": "When a water cream isn't enough and a rich cream is too much, this one lets you set the ratio yourself.",
+     "why": "Exactly the reason the deck gives for developing it. It's the line people recognise themselves in."
+    },
+    {
+     "line": "Put both onto your cheek with the spatula and mix them right there.",
+     "why": "A tip from the deck — easier than mixing on the back of your hand."
+    },
+    {
+     "line": "It's been through a non-comedogenic trial, so it's suitable for acne-prone skin.",
+     "why": "The direct answer for viewers who avoid rich creams for fear of breakouts."
+    }
+   ],
+   "careful": [
+    "**The reformulation added panthenol 5% and niacinamide 2%.** The niacinamide is what took it from wrinkle care alone to a dual claim with brightening.",
+    "Several human trials are listed as completed without figures. Name the measures instead.",
+    "'DIY' here means adjusting the ratio. It doesn't mean changing the formulation."
+   ]
+  }
  },
  "white-truffle-double-layer-revitalizing-serum": {
   "한줄": "세럼과 오일이 7대 3으로 분리돼 담긴 2층 세럼. 24시간에 걸쳐 다시 분리되니 쓸 때마다 흔들어야 합니다.",
@@ -1059,9 +2146,75 @@
    }
   ],
   "주의": [
-   "교안에 한 줄 소개와 출시 정보, 기능성 표시가 없습니다.",
-   "구체적인 개선 % 가 교안 텍스트에 없습니다."
-  ]
+   "**24시간이 지나면 두 층이 다시 분리됩니다.** 쓸 때마다 흔들어야 7:3 비율대로 나옵니다. 이건 불량이 아니라 설계입니다.",
+   "여러 인체적용시험이 '완료' 로만 적혀 있고 수치가 없습니다. 항목으로 말하세요 — 즉각 보습, 100시간 보습 지속, 속탄력, 안티에이징, 피부결."
+  ],
+  "en": {
+   "lead": "Serum and oil held apart at 7:3 in one bottle. They separate again over 24 hours, so you shake it every time.",
+   "who": "Anyone wanting wrinkle care and glow together, without a sticky finish",
+   "certs": [
+    "Primary skin irritation human trial completed",
+    "Immediate hydration and 100-hour moisture retention trial completed",
+    "Anti-ageing (wrinkles, lifting, skin density), texture and inner-dryness trials completed",
+    "In-vitro antioxidant testing completed"
+   ],
+   "ingredients": [
+    {
+     "name": "White truffle + tocopherol",
+     "role": "The heart of the firming serum layer (7)."
+    },
+    {
+     "name": "Sunflower · macadamia · avocado oil",
+     "role": "The nourishing oil layer (3)."
+    },
+    {
+     "name": "OLIGO-HA",
+     "amount": "patented",
+     "role": "Low-molecular hyaluronic acid for lines, moisture and firmness."
+    },
+    {
+     "name": "Moisture Star",
+     "amount": "patented",
+     "role": "Okra fruit extract, cold-pressed so the mucilage survives."
+    }
+   ],
+   "howto": [
+    {
+     "name": "Step 1",
+     "how": "After cleansing, smooth the skin with toner."
+    },
+    {
+     "name": "Step 2",
+     "how": "Shake, take a suitable amount and work it in along the grain of the skin."
+    },
+    {
+     "name": "Mixed into cream",
+     "how": "A drop stirred into your cream makes the moisture last longer."
+    },
+    {
+     "name": "Before makeup",
+     "how": "Used before base makeup it leaves more of a lit finish."
+    }
+   ],
+   "say": [
+    {
+     "line": "It separates again after a day, so you shake it every time. That's the design, not a fault.",
+     "why": "Heads off the 'is mine broken?' question. Shaking it is the best shot you'll get."
+    },
+    {
+     "line": "One drop into your cream and the moisture lasts much longer.",
+     "why": "A tip from the deck. It turns a serum into something people use two ways."
+    },
+    {
+     "line": "100-hour moisture retention has been through a human trial.",
+     "why": "Say the measure rather than a number — the deck lists it as completed."
+    }
+   ],
+   "careful": [
+    "**The two layers separate again after 24 hours.** Shake before every use or you won't get the 7:3 ratio.",
+    "Several human trials are listed as completed without figures. Name the measures instead — immediate hydration, 100-hour retention, deep firmness, anti-ageing, texture."
+   ]
+  }
  },
  "white-truffle-refresh-aqua-serum": {
   "한줄": "캐나다산 빙하수를 80% 넣은 쿨링 스프레이 세럼. 달아오른 피부를 식히는 용도입니다.",
@@ -1081,13 +2234,6 @@
     "역할": "보습과 탄력."
    }
   ],
-  "근거수치": [
-   {
-    "항목": "피부 온도 감소(쿨링)",
-    "값": "도움",
-    "조건": "1회 사용"
-   }
-  ],
   "사용법": [
    {
     "이름": "기본",
@@ -1105,9 +2251,62 @@
    }
   ],
   "주의": [
-   "쿨링은 '1회 사용으로 피부 온도 감소에 도움' 표현입니다. 몇 도라는 수치는 교안에 없습니다.",
-   "흔들어 쓰는 제품이라 사용법을 빼먹으면 안 됩니다."
-  ]
+   "**쿨링은 '1회 사용으로 피부 온도 감소에 도움' 표현까지입니다.** 몇 도 내려간다고 말하지 말고 '뿌리면 시원하다' 로 가세요.",
+   "빙하수 80% 는 정제수를 대체했다는 뜻입니다. 나머지 20% 에 나머지 성분이 다 들어갑니다."
+  ],
+  "en": {
+   "lead": "A mist built on 80% Canadian glacier water. It stands in for a toner, a mist, a serum and an essence, and it cools the skin.",
+   "who": "Anyone whose skin runs hot, or who wants hydration without adding a step",
+   "certs": [
+    "Italian vegan certification",
+    "Primary skin irritation test completed",
+    "One-use skin temperature reduction (cooling) trial completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Canadian glacier water",
+     "amount": "80% (800,000ppm)",
+     "role": "Replaces purified water as the base."
+    },
+    {
+     "name": "Trufferol™",
+     "role": "d'Alba's patented firming ingredient."
+    },
+    {
+     "name": "Okra fruit extract",
+     "role": "Moisture."
+    },
+    {
+     "name": "Tannin Complex HR",
+     "amount": "patented",
+     "role": "Pores and sebum."
+    }
+   ],
+   "howto": [
+    {
+     "name": "Basic",
+     "how": "Right after cleansing, shake 3–5 times, tilt your head back slightly, close your eyes and mist the whole face 4–5 times from 10–20cm. Then press it in."
+    }
+   ],
+   "say": [
+    {
+     "line": "It's 80% glacier water — that's what's in place of purified water.",
+     "why": "The clearest number in the formula, and the product's identity."
+    },
+    {
+     "line": "Spray it and your skin actually cools down.",
+     "why": "A cooling trial was completed after a single use. Describe the sensation rather than a temperature."
+    },
+    {
+     "line": "It covers toner, mist, serum and essence, so it cuts steps out of your routine.",
+     "why": "A convenience claim, which is safe ground."
+    }
+   ],
+   "careful": [
+    "**The cooling claim goes as far as 'one use helps lower skin temperature'.** Don't give a number of degrees — say it feels cool.",
+    "80% glacier water means it replaced purified water. Everything else fits into the remaining 20%."
+   ]
+  }
  },
  "white-truffle-moisturizing-serum-lotion": {
   "한줄": "비타민 세럼을 담은 미백 로션. 크림보다 가볍고 흡수가 빨라 메이크업 전에 쓰기 좋다는 포지션입니다.",
@@ -1157,9 +2356,71 @@
    }
   ],
   "주의": [
-   "**교안에 비건 인증이 '진행중' 과 '완료' 로 둘 다 적혀 있습니다.** 확인 전에는 인증을 말하지 마세요.",
-   "구체적인 시험 수치가 교안에 없습니다."
-  ]
+   "**기능성 표시는 나이아신아마이드 때문에 붙습니다.** 미백·주름개선 기능성입니다.",
+   "수치 시험이 없는 제품입니다. 밀키한 흡수와 메이크업 전 단계라는 쓰임새로 이야기를 끌고 가세요."
+  ],
+  "en": {
+   "lead": "A milky brightening lotion for the base step — for skin that stays dry however much ampoule and cream you put on it.",
+   "who": "Anyone whose skin feels dry no matter what they layer, and who finds cream too heavy before makeup",
+   "certs": [
+    "Brightening + wrinkle care (functional cosmetic)"
+   ],
+   "ingredients": [
+    {
+     "name": "Niacinamide",
+     "role": "The notified brightening active."
+    },
+    {
+     "name": "Trufferol™ · collagen extract",
+     "role": "Nourishment and firmness."
+    },
+    {
+     "name": "13 vegan proteins",
+     "role": "Dense nourishment, all vegan certified."
+    },
+    {
+     "name": "10 hyaluronic acids + Oligo-HA",
+     "amount": "patented",
+     "role": "Moisture."
+    },
+    {
+     "name": "Vegan glutathione · vitamin C",
+     "role": "Brightness and glow."
+    }
+   ],
+   "howto": [
+    {
+     "name": "Daily",
+     "how": "First step after cleansing. Take some onto a cotton pad or your hands, spread it over the skin and press it in."
+    },
+    {
+     "name": "When you're dry",
+     "how": "Go over it a second time and blend — that's the intensive version."
+    },
+    {
+     "name": "Before makeup",
+     "how": "Apply it before base makeup so foundation sits more smoothly."
+    }
+   ],
+   "say": [
+    {
+     "line": "This is the base step. When ampoules and creams still leave you dry, the problem is usually the layer underneath.",
+     "why": "Exactly the reason the deck gives for developing it. It's the line people recognise."
+    },
+    {
+     "line": "It's milky, so it goes in fast and doesn't sit on top.",
+     "why": "Show it absorbing on the back of your hand."
+    },
+    {
+     "line": "Less oil than a cream, but enough moisture — so makeup doesn't slide.",
+     "why": "A texture claim, so it's safe, and it answers a real complaint."
+    }
+   ],
+   "careful": [
+    "**The functional claim comes from niacinamide** — brightening and wrinkle care.",
+    "There are no test figures for this one. Lead with how it absorbs and where it fits in the routine."
+   ]
+  }
  },
  "white-truffle-double-serum-all-in-one-multi-balm": {
   "한줄": "주름 부위에 문질러 바르는 스틱형 밤. 미백과 주름개선 2중 기능성입니다.",
@@ -1207,10 +2468,60 @@
    }
   ],
   "주의": [
-   "**비건 인증서를 확인해 보니 완제품 인증이 아닙니다.** 원료사 UNISOLVE의 'VEGAN COLLAGEN' 원료 인증이고 **만료일이 2022년 4월 28일로 이미 지났습니다.** 비건 인증을 말하면 안 됩니다.",
-   "'주름개선 기능성'은 고시 성분에 근거한 표시입니다. 주름이 없어진다는 뜻이 아닙니다.",
-   "구체적인 시험 수치가 교안에 없습니다."
-  ]
+   "**이 제품은 비건 인증 제품이 아닙니다.** 교안의 인증서는 원료에 대한 것이고 이미 만료됐습니다. 비건 이야기는 빼고, '인체 피부 일차자극 테스트 저자극 판정' 으로 가세요.",
+   "'주름개선 기능성' 은 표시를 붙일 수 있다는 뜻입니다. '주름 케어' 로 말하세요."
+  ],
+  "en": {
+   "lead": "A stick balm you rub over the lines that bother you. Dual functional claim: brightening and wrinkle care.",
+   "who": "Anyone treating crow's feet, the neck or nasolabial folds on their own — and wanting to reapply on the go",
+   "certs": [
+    "Brightening + wrinkle care (dual functional claim)",
+    "Primary skin irritation test completed — rated low-irritation"
+   ],
+   "ingredients": [
+    {
+     "name": "Alpha-bisabolol / tocopheryl acetate",
+     "role": "The notified actives behind the dual functional claim."
+    },
+    {
+     "name": "Trufferol™",
+     "role": "d'Alba's patented ingredient."
+    },
+    {
+     "name": "Vegan collagen",
+     "role": "For firmer-looking skin."
+    },
+    {
+     "name": "Anemarrhena root extract",
+     "role": "Supports bounce."
+    }
+   ],
+   "howto": [
+    {
+     "name": "Basic",
+     "how": "Open the cap, twist the base to push out some product, then glide it over crow's feet, neck or nasolabial folds."
+    },
+    {
+     "name": "Over makeup",
+     "how": "Works at the skincare stage and over makeup alike."
+    }
+   ],
+   "say": [
+    {
+     "line": "No hands — you just swipe it right where the line is. It's 10g, so it goes in a pocket.",
+     "why": "The stick format and the size are the whole point of this product."
+    },
+    {
+     "line": "You can layer it over makeup.",
+     "why": "A usage tip from the deck. Only possible because it's a stick."
+    }
+   ],
+   "careful": [
+    "**Don't claim vegan certification for this one.** The certificate is for a raw material ('vegan collagen') held by the supplier, not for the finished product — and **it expired on 28 April 2022.**",
+    "'Wrinkle care' is a label claim based on a notified active. It does not mean wrinkles disappear.",
+    "There are no test figures in the deck. Don't quote percentages or timeframes."
+   ]
+  }
  },
  "white-truffle-intensive-volufiline-ampoule": {
   "한줄": "프랑스 세더마사의 보르피린을 50,000ppm 넣은 주름개선 기능성 앰플. 리프팅에 초점이 맞춰져 있습니다.",
@@ -1238,12 +2549,12 @@
   ],
   "근거수치": [
    {
-    "항목": "안면(볼) 리프팅 개선",
+    "항목": "안면(볼) 리프팅",
     "값": "17.601%",
-    "조건": "1회 사용 후 즉각적"
+    "조건": "1회 · 즉각적·일시적"
    }
   ],
-  "시험조건": "1회 사용 후 즉각적인 효과, 개인차 있음",
+  "시험조건": "피엔케이피부임상연구센타 / 20명 / 1회 사용 직후 / 개인차 있음. 이 앰플 단독 기준입니다.",
   "사용법": [
    {
     "이름": "기본",
@@ -1261,10 +2572,76 @@
    }
   ],
   "주의": [
-   "**리프팅 수치는 '즉각적인(일시적)' 효과입니다.** 지속된다는 뜻이 아닙니다.",
-   "보르피린은 원료사(세더마) 성분입니다. 달바 독자 성분이 아닙니다.",
-   "용량이 두 가지(30ml·50ml)이고 가격 차이가 큽니다."
-  ]
+   "**17.601% 는 이 앰플 하나만 쓴 결과입니다.** '바르고 나면 바로 이만큼' 으로 말하세요.",
+   "**교안의 2주 수치는 보르피린 3종을 다 쓴 결과입니다.** 이 앰플에 붙이지 마세요.",
+   "보르피린은 프랑스 원료사 성분입니다. '프랑스 특허 성분을 5% 넣었다' 로 말하면 됩니다."
+  ],
+  "en": {
+   "lead": "A dense, pale-beige ampoule built around French patented Volufiline at 50,000ppm.",
+   "who": "Anyone with dry, rough skin that has lost its bounce — or who wakes with pillow creases that won't fade",
+   "certs": [
+    "Wrinkle care (functional cosmetic)",
+    "Italian V-Label vegan certification",
+    "German Dermatest",
+    "Low-irritation test completed in Korea"
+   ],
+   "ingredients": [
+    {
+     "name": "Volufiline",
+     "amount": "50,000ppm (5%)",
+     "role": "Sederma's patented firming ingredient. The point of the product."
+    },
+    {
+     "name": "Trufferol™",
+     "role": "d'Alba's patented firming ingredient."
+    },
+    {
+     "name": "Collagen extract · vegan ceramide",
+     "role": "Nourishment and barrier."
+    },
+    {
+     "name": "Panthenol · 8 hyaluronic acids",
+     "role": "Moisture."
+    }
+   ],
+   "figures": [
+    {
+     "label": "Cheek lifting",
+     "value": "17.601%",
+     "note": "one use · immediate, temporary"
+    }
+   ],
+   "testNote": "P&K Skin Clinical Research Center / 20 people / one use, immediate and temporary / individual variation. This one is the ampoule on its own.",
+   "howto": [
+    {
+     "name": "Basic",
+     "how": "Take a suitable amount with the dropper, spread it over the face and press it in."
+    },
+    {
+     "name": "Where it goes",
+     "how": "After toner, before cream. It's dense, so a little goes a long way."
+    }
+   ],
+   "say": [
+    {
+     "line": "One use and cheek lifting improved 17.601%.",
+     "why": "This figure is for the ampoule alone. Say 'immediately after one use'."
+    },
+    {
+     "line": "French patented firming ingredient at 5%.",
+     "why": "Volufiline at 50,000ppm, patented by the supplier. Solid ground."
+    },
+    {
+     "line": "Good for pillow creases that stick around in the morning.",
+     "why": "The deck names it directly. It's the kind of specific complaint viewers recognise."
+    }
+   ],
+   "careful": [
+    "**17.601% is what this ampoule did on its own.** 'Right after you put it on' is the accurate framing.",
+    "**The deck's two-week figures come from using all three Volufiline products.** Don't attach them to this ampoule.",
+    "Volufiline is a supplier's ingredient. 'A French patented firming ingredient at 5%' is the way to put it."
+   ]
+  }
  },
  "intensive-vegan-volufiline-spray-ampoule": {
   "한줄": "보르피린 앰플의 스프레이 버전. 투명한 보르피린층과 베이지색 영양 앰플층이 나뉘어 있어 흔들어 씁니다.",
@@ -1332,7 +2709,75 @@
     "값": "6.36% 개선",
     "조건": "2주 · 3종 모두 사용"
    }
-  ]
+  ],
+  "en": {
+   "lead": "The spray version of the Volufiline ampoule. A clear Volufiline layer and a beige nourishing layer, separated until you shake it.",
+   "who": "Anyone who wants firming care without decanting serum into their hands",
+   "certs": [
+    "Wrinkle care (functional cosmetic)",
+    "This product alone — immediate (temporary) cheek lifting trial completed after one use",
+    "Italian V-Label vegan certification",
+    "German Dermatest",
+    "Low-irritation test completed in Korea"
+   ],
+   "ingredients": [
+    {
+     "name": "Volufiline",
+     "amount": "50,000ppm (5%), Sederma, France",
+     "role": "The firming and lifting active. It's the clear layer you can see."
+    },
+    {
+     "name": "Trufferol™",
+     "role": "d'Alba's own firming ingredient."
+    },
+    {
+     "name": "Collagen extract · ceramide NP",
+     "role": "Nourishment and barrier."
+    }
+   ],
+   "figures": [
+    {
+     "label": "Crow's feet",
+     "value": "4.59% improved",
+     "note": "2 weeks · all three products"
+    },
+    {
+     "label": "Eye-area firmness",
+     "value": "6.77% improved",
+     "note": "2 weeks · all three products"
+    },
+    {
+     "label": "Cheek sagging",
+     "value": "6.36% improved",
+     "note": "2 weeks · all three products"
+    }
+   ],
+   "testNote": "Those three figures come from using all three Volufiline products in order — spray ampoule → ampoule → grinding cream. Korea Institute of Dermatological Sciences / 21 people / 2 weeks / individual variation. This product's own trial covers immediate (temporary) cheek lifting after one use, with no figure attached.",
+   "howto": [
+    {
+     "name": "Basic",
+     "how": "Shake up and down 3–5 times, then mist the whole face 4–5 times from 10–20cm with your eyes closed, and press it in."
+    }
+   ],
+   "say": [
+    {
+     "line": "It's in two layers, so you shake it first. The clear one is the Volufiline.",
+     "why": "Visible in the bottle, and it ties straight into how you use it."
+    },
+    {
+     "line": "They developed the pump around Asian face shapes so the spray angle actually covers the face.",
+     "why": "A design detail from the deck, and a real difference among mists."
+    },
+    {
+     "line": "There's a trial on this product by itself for lifting, too.",
+     "why": "Easy to confuse with the three-product study. The solo one covers immediate, temporary cheek lifting after a single use — that's the one to quote."
+    }
+   ],
+   "careful": [
+    "**The 4.59%, 6.77% and 6.36% figures come from using all three Volufiline products together** — spray ampoule, ampoule and grinding cream. They are not what this product does alone.",
+    "Volufiline is a supplier's ingredient. 'A French patented firming ingredient at 5%' is the way to put it."
+   ]
+  }
  },
  "white-truffle-intensive-volufiline-grinding-cream": {
   "한줄": "다이얼을 돌려 매일 새로 갈아 쓰는 리프팅 크림. 보르피린 라인의 마지막 단계입니다.",
@@ -1393,7 +2838,73 @@
    "**리프팅 11.271%는 '즉각적인(일시적)' 효과입니다.**",
    "**3종 병행 사용 시의 시험 결과와 이 제품 단독 결과를 섞어 말하면 안 됩니다.**",
    "12만 원대 제품입니다. 가격을 정확히 확인하고 말하세요."
-  ]
+  ],
+  "en": {
+   "lead": "A concentrated lifting cream you grind fresh from a sealed container each time, then spread with the silicone brush.",
+   "who": "Anyone who finds cream jars unhygienic, and wants a dense, firming night cream",
+   "certs": [
+    "Brightening + wrinkle care (dual functional claim)",
+    "Italian V-Label vegan certification",
+    "German Dermatest",
+    "Low-irritation test completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Volufiline",
+     "amount": "50,000ppm (5%)",
+     "role": "Sederma's patented firming ingredient. The point of the product."
+    },
+    {
+     "name": "Trufferol™",
+     "role": "d'Alba's patented firming ingredient."
+    },
+    {
+     "name": "Collagen extract · vegan ceramide",
+     "role": "Nourishment and barrier."
+    },
+    {
+     "name": "8 hyaluronic acids · d'Alba-8 Blending Oil",
+     "role": "Moisture and glow."
+    }
+   ],
+   "figures": [
+    {
+     "label": "Cheek lifting",
+     "value": "11.271%",
+     "note": "one use · immediate, temporary"
+    }
+   ],
+   "testNote": "P&K Skin Clinical Research Center / 20 people / one use, immediate and temporary / individual variation. This one is the cream on its own.",
+   "howto": [
+    {
+     "name": "Basic",
+     "how": "Turn the top clockwise to grind out cream, then spread it over the face and let it absorb."
+    },
+    {
+     "name": "First use",
+     "how": "It dispenses evenly after about 3–5 turns. Keep turning until it comes through."
+    }
+   ],
+   "say": [
+    {
+     "line": "One use and cheek lifting improved 11.271%.",
+     "why": "This figure is for the cream alone, no other product involved. Say 'immediately after one use'."
+    },
+    {
+     "line": "You grind it fresh every day, so air never touches the surface.",
+     "why": "The reason for the container. Show the dial on camera."
+    },
+    {
+     "line": "French patented firming ingredient at 5%.",
+     "why": "Volufiline at 50,000ppm. A supplier ingredient with an international patent, which makes it solid ground."
+    }
+   ],
+   "careful": [
+    "**The 11.271% figure is immediate and temporary.** 'Right after you use it' is the accurate framing.",
+    "**The two-week figures in the deck come from using all three Volufiline products together.** Don't attach them to this cream alone.",
+    "It dispenses unevenly on the first few turns. Tell buyers that up front."
+   ]
+  }
  },
  "italian-white-truffle-professional-repairing-hair-perfume-serum": {
   "한줄": "향이 주인공인 헤어 세럼. 핑크 오일 30%와 보습 세럼 70%가 나뉘어 있고 로제 프리지아 향이 납니다.",
@@ -1448,11 +2959,70 @@
    }
   ],
   "주의": [
-   "**모발 손상 개선에 대한 구체적 수치가 교안에 없습니다.** '복구', '재생' 같은 표현은 쓰지 마세요.",
-   "'엔젤링'은 브랜드 표현입니다. 효과 보증이 아닙니다.",
-   "용량이 두 가지(50ml·100ml)라 가격을 헷갈리지 마세요.",
-   "헤어 오일 세럼과 다른 제품입니다. 이쪽이 퍼퓸(향) 쪽입니다."
-  ]
+   "**'모공보다 467배 작다' 는 숫자는 쓰지 마세요.** 헤어 제품이라 모공과 비교할 일이 아닙니다. '나노 크기로 만들어 모발 결 사이까지 들어간다' 로 충분합니다.",
+   "'복구', '재생' 대신 '윤기', '결 정돈', '손상모 케어' 를 쓰세요."
+  ],
+  "en": {
+   "lead": "A two-layer hair mist — pink oil on top, moisturising serum below. Shake it and the two mix 3:7.",
+   "who": "Anyone with dry, flyaway hair who also wants a scent that lasts",
+   "certs": [
+    "Italian V-Label vegan certification",
+    "Primary skin irritation test completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Collagen water",
+     "amount": "55%",
+     "role": "Replaces purified water as the base."
+    },
+    {
+     "name": "Peptide Exosome™",
+     "amount": "10%",
+     "role": "White truffle exosome bound to 99% pure Dipeptide-15. d'Alba's own ingredient."
+    },
+    {
+     "name": "Protein + amino acids",
+     "amount": "3 + 17 kinds",
+     "role": "Fills in hair that has gone dry and brittle."
+    },
+    {
+     "name": "d'Alba-9 Blending Oil",
+     "role": "With baobab seed and apricot kernel oil. This is the pink layer."
+    }
+   ],
+   "howto": [
+    {
+     "name": "Every day",
+     "how": "Shake 2–3 times, then mist onto damp or dry hair whenever it feels rough."
+    },
+    {
+     "name": "For scent",
+     "how": "Keep it in your bag. Spray after the gym or a meal — layering makes the scent stronger."
+    },
+    {
+     "name": "For styling",
+     "how": "When a wave starts to drop, mist again to bring the bounce back."
+    }
+   ],
+   "say": [
+    {
+     "line": "Shake it first — the pink layer is the oil, the clear one is the serum.",
+     "why": "You can see it in the bottle. It's the easiest opening shot."
+    },
+    {
+     "line": "The mist is so fine it doesn't clump, so you can keep reapplying.",
+     "why": "The fine spray is a design choice, not a coincidence. Good answer to 'won't it get greasy?'"
+    },
+    {
+     "line": "It starts fresh and citrusy, then settles into something soft and powdery.",
+     "why": "Top is bergamot, lemon, orange, pear; heart is freesia, rose, jasmine, iris; base is white musk. Scent talk is safe ground."
+    }
+   ],
+   "careful": [
+    "**Skip the '467× smaller than a pore' line.** This is a hair product; pores don't come into it. 'Nano-sized so it gets into the hair' does the job.",
+    "Use 'shine', 'smoother strands', 'care for damaged hair' rather than 'repair' or 'regenerate'."
+   ]
+  }
  },
  "professional-repairing-hair-oil-serum": {
   "한줄": "헤어 퍼퓸 세럼의 케어 중심 버전. 오일 40%와 보습 세럼 60%가 나뉘어 있고 단백질을 가장 많이 넣은 제품입니다.",
@@ -1502,9 +3072,70 @@
    }
   ],
   "주의": [
-   "**모발 개선에 대한 구체적 수치가 교안에 없습니다.** '복구', '재생'은 쓰지 마세요.",
-   "헤어 퍼퓸 세럼과 혼동하기 쉽습니다. 이쪽이 오일 세럼(75mL)입니다."
-  ]
+   "**'모공보다 467배 작다' 는 숫자는 쓰지 마세요.** 헤어 제품이라 모공과 비교할 일이 아닙니다.",
+   "'복구', '재생' 대신 '윤기', '결 정돈', '손상모 케어' 를 쓰세요. 단백질 13종과 아미노산 17종이 더 확실한 근거입니다."
+  ],
+  "en": {
+   "lead": "Oil and serum at 4:6 in one bottle — a shine coating and a hydrating base, for hair that has gone dry and split.",
+   "who": "Anyone whose hair goes flat under oils, or who wants shine without residue on their hands",
+   "certs": [
+    "Italian V-Label vegan certification",
+    "Primary skin irritation test completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Collagen water",
+     "amount": "46%",
+     "role": "Replaces purified water as the base."
+    },
+    {
+     "name": "Peptide Exosome™",
+     "amount": "10%",
+     "role": "White truffle exosome bound to 99% pure Dipeptide-15."
+    },
+    {
+     "name": "Protein + amino acids",
+     "amount": "13 + 17 kinds",
+     "role": "More protein than any other d'Alba hair product."
+    },
+    {
+     "name": "Bulgarian rose oil · Moroccan argan oil",
+     "role": "The shine coating, with d'Alba-12 Blending Oil."
+    }
+   ],
+   "howto": [
+    {
+     "name": "Basic",
+     "how": "Shake 3–5 times, take an amount to suit your hair length and work it through evenly."
+    },
+    {
+     "name": "Around heat",
+     "how": "Use it before or after the dryer to limit heat damage and dryness."
+    },
+    {
+     "name": "Through the day",
+     "how": "Apply lightly whenever hair feels dry or starts to frizz."
+    }
+   ],
+   "say": [
+    {
+     "line": "It's an oil, but it doesn't leave your hands greasy — only the scent stays.",
+     "why": "The main objection to hair oils, answered directly. Demonstrate it on camera."
+    },
+    {
+     "line": "It has more protein than d'Alba's own shampoo or hair perfume.",
+     "why": "13 proteins and 17 amino acids. The deck says so itself, so it's a clean comparison."
+    },
+    {
+     "line": "Bulgarian rose oil takes 3,000 roses to make one gram.",
+     "why": "A fact worth telling, and it explains where the price comes from."
+    }
+   ],
+   "careful": [
+    "**Skip the '467× smaller than a pore' line.** This is a hair product; pores don't come into it.",
+    "Use 'shine', 'smoother strands', 'care for damaged hair' rather than 'repair' or 'regenerate'."
+   ]
+  }
  },
  "waterfull-uv-essence-sunscreen": {
   "한줄": "바르는 순간 수분 에센스가 터지는 느낌의 수분자차 선스크린. 백탁과 끼임이 없는 게 소구점입니다.",
@@ -1552,10 +3183,68 @@
    }
   ],
   "주의": [
-   "**가격이 교안에 '미정' 으로 되어 있습니다.** 본인 스토어 가격을 확인하세요.",
-   "SPF·PA 수치는 실물 패키지를 확인하고 말하세요. 교안 텍스트에 없습니다.",
-   "미국 전용 OTC 버전은 별개 제품입니다. 섞어 말하지 마세요."
-  ]
+   "**SPF·PA 표기는 실물 패키지에 적힌 것을 그대로 읽어 주세요.**",
+   "하이드로 트래핑 그림은 이해를 돕는 개념도입니다. 피부 속을 찍은 사진이 아닙니다."
+  ],
+  "en": {
+   "lead": "A watery sunscreen that pushes essence out as you spread it. Organic filters, so it's light and leaves no white cast.",
+   "who": "Anyone who finds sunscreen drying, chalky or hard to wear under makeup",
+   "certs": [
+    "Italian V-Label vegan certification",
+    "Primary irritation test completed on sensitive skin"
+   ],
+   "ingredients": [
+    {
+     "name": "Hyaluronic acids + ceramide NP + panthenol",
+     "role": "Fills water in and props up the barrier."
+    },
+    {
+     "name": "Centella extract · centella leaf extract · tea tree leaf water",
+     "role": "Keeps the skin comfortable."
+    },
+    {
+     "name": "Organic UV filters",
+     "role": "Absorb UV and release it as heat. This is why there's no white cast."
+    }
+   ],
+   "howto": [
+    {
+     "name": "How much",
+     "how": "About 1ml for face and neck — roughly your index finger's first joint. Thin coats, twice, rather than one thick one."
+    },
+    {
+     "name": "When",
+     "how": "30 minutes before you go out, so it has time to absorb and settle."
+    },
+    {
+     "name": "Reapplying",
+     "how": "Every 2–3 hours, more often if you're outdoors."
+    },
+    {
+     "name": "Where in the routine",
+     "how": "Last step of basic skincare. Face, neck, arms, legs — anywhere the sun reaches."
+    }
+   ],
+   "say": [
+    {
+     "line": "Most people use far too little. Face and neck needs about a finger-joint's worth.",
+     "why": "The most useful thing you can tell a viewer about any sunscreen, and it's straight from the deck."
+    },
+    {
+     "line": "It's an organic filter sunscreen, so there's no white cast and it goes on light.",
+     "why": "Explains the texture without claiming anything the deck doesn't."
+    },
+    {
+     "line": "You can put makeup straight over it — it's meant to stop foundation sliding.",
+     "why": "The deck positions it as a makeup booster. Easy to demonstrate on camera."
+    }
+   ],
+   "careful": [
+    "**Check the actual package for the SPF and PA figures before you say them.**",
+    "The hydro-trapping diagram is labelled in the deck as an illustration to aid understanding. Don't describe it as what literally happens inside skin.",
+    "There are no efficacy percentages in the deck. Don't quote numbers beyond SPF and PA."
+   ]
+  }
  },
  "white-truffle-waterfull-tone-up-sunscreen-serum": {
   "한줄": "핑크빛으로 톤업되는 수분자차 선스크린. 유기·무기를 섞은 혼합자차입니다.",
@@ -1607,10 +3296,67 @@
    }
   ],
   "주의": [
-   "**가격이 교안에 '미정' 으로 되어 있습니다.**",
-   "SPF·PA 수치는 실물 패키지를 확인하세요.",
-   "톤업은 화장품의 색 보정입니다. 피부 자체가 밝아지는 것이 아닙니다."
-  ]
+   "**SPF·PA 표기는 실물 패키지에 적힌 것을 그대로 읽어 주세요.**",
+   "톤업 정도를 잰 수치는 없습니다. '핑크빛이 돌아 화사해 보인다' 처럼 눈으로 보이는 변화로 말하세요."
+  ],
+  "en": {
+   "lead": "A pink watery sunscreen. Rather than covering skin to look brighter, the pink tint reads as natural colour coming back.",
+   "who": "Anyone who wants to skip foundation and still look evened out",
+   "certs": [
+    "Italian V-Label vegan certification",
+    "Primary irritation test completed on sensitive skin"
+   ],
+   "ingredients": [
+    {
+     "name": "Hybrid UV filters",
+     "role": "Organic plus inorganic — less white cast, less sting, softer to spread."
+    },
+    {
+     "name": "Hyaluronic acids + ceramide NP + panthenol",
+     "role": "Water and barrier."
+    },
+    {
+     "name": "Centella extract · centella leaf extract · tea tree leaf water",
+     "role": "Keeps the skin comfortable."
+    }
+   ],
+   "howto": [
+    {
+     "name": "How much",
+     "how": "About 1ml for face and neck — roughly your index finger's first joint."
+    },
+    {
+     "name": "When",
+     "how": "30 minutes before you go out."
+    },
+    {
+     "name": "Reapplying",
+     "how": "Every 2–3 hours, more often outdoors."
+    },
+    {
+     "name": "Where in the routine",
+     "how": "Last step of basic skincare, in place of foundation if you want."
+    }
+   ],
+   "say": [
+    {
+     "line": "It's pink, not white — so it doesn't look like you've painted your face, it looks like colour came back.",
+     "why": "The clearest difference from a white-cast tone-up. Swatch it on the back of your hand."
+    },
+    {
+     "line": "It mixes both filter types, so there's less white cast and less stinging around the eyes.",
+     "why": "Eye sting is a common sunscreen complaint and the deck names it directly."
+    },
+    {
+     "line": "Face and neck needs about a finger-joint's worth, 30 minutes before you go out.",
+     "why": "Straight from the deck's usage page. Practical and always welcome."
+    }
+   ],
+   "careful": [
+    "**Check the actual package for the SPF and PA figures before you say them.**",
+    "There are no figures for how much it brightens or how much glow it adds. Don't quote numbers beyond SPF and PA."
+   ]
+  }
  },
  "d-alba-signature-allthera-double-shot": {
   "한줄": "고주파·더블 초음파·쿨링을 한 기기에 넣은 홈케어 디바이스. 카트리지 교체가 없어 샷을 무제한으로 씁니다.",
@@ -1638,17 +3384,32 @@
   ],
   "근거수치": [
    {
-    "항목": "팔자 부위 처짐 개선",
-    "값": "38.063%",
-    "조건": "인체적용시험"
+    "항목": "이마 처짐",
+    "값": "48.559%",
+    "조건": "4주 · 크림과 함께"
    },
    {
-    "항목": "팔자 부위 처짐 개선",
-    "값": "32.529%",
-    "조건": "인체적용시험"
+    "항목": "턱 라인 처짐",
+    "값": "33.412%",
+    "조건": "4주 · 크림과 함께"
+   },
+   {
+    "항목": "눈가 처짐",
+    "값": "17.511%",
+    "조건": "4주 · 크림과 함께"
+   },
+   {
+    "항목": "볼 피부 치밀도",
+    "값": "12.364%",
+    "조건": "4주 · 크림과 함께"
+   },
+   {
+    "항목": "모공 면적",
+    "값": "16.364%",
+    "조건": "1회 · 즉각적·일시적"
    }
   ],
-  "시험조건": "기관·기간·인원이 교안에 없음",
+  "시험조건": "모든 수치가 **달바 화이트 트러플 더블 세럼 앤 크림을 함께 쓴 결과**입니다. 22명 / 개인차 있음. 기기만 쓴 수치는 없습니다.",
   "사용법": [
    {
     "이름": "필수",
@@ -1686,11 +3447,99 @@
    }
   ],
   "주의": [
-   "**의료기기가 아닙니다.** 교안에도 '본 기기는 피부 미용 기기로 의료 기기에 해당되지 않습니다' 라고 반복해 적혀 있습니다. 시술·치료로 들리는 표현은 절대 쓰면 안 됩니다.",
-   "**사용 금지 부위와 주의사항을 반드시 함께 안내하세요.** 기기 제품이라 이 부분을 빼면 안 됩니다.",
-   "**레벨을 높여도 도달 깊이는 같습니다.** 심부열이 생기는 범위 크기만 달라집니다. '높을수록 효과가 좋다'고 말하면 안 됩니다.",
-   "처짐 개선 수치의 시험기관·인원이 교안에 없습니다. '임상' 대신 '브랜드 시험'으로 말하세요.",
-   "70만 원입니다. 가격을 얼버무리지 마세요."
-  ]
+   "**모든 시험이 더블 세럼 앤 크림을 함께 바르고 진행한 것입니다.** '크림 바르고 이 기기로 밀었을 때' 가 정확한 표현입니다. 기기 단독 수치는 없습니다.",
+   "**이 기기는 피부 미용 기기이고 의료기기가 아닙니다.** 교안 모든 장에 이 문장이 붙어 있습니다. 시술이나 치료에 빗대지 마세요.",
+   "**반드시 화장품과 함께 쓰세요.** 얼굴이 마르면 에너지가 전달되지 않고 따끔거립니다. 이건 사용법이자 안전 문제입니다.",
+   "레벨을 올려도 도달 깊이는 같습니다. 눈가·입가·코 옆은 한 단계 낮춰 쓰세요."
+  ],
+  "en": {
+   "lead": "A home device with three modes — RF, double ultrasound and cooling. No cartridges, so the shots don't run out.",
+   "who": "Anyone wanting firming care at home, on the face and the body, without a salon appointment",
+   "certs": [
+    "Triple Synergy Shot patent",
+    "Device and internal components certified",
+    "Designed and assembled in Korea"
+   ],
+   "ingredients": [
+    {
+     "name": "Intensive care mode",
+     "role": "RF plus double ultrasound. Firmness and absorption."
+    },
+    {
+     "name": "Pre-shot care mode",
+     "role": "Face and body firming."
+    },
+    {
+     "name": "Cooling care mode",
+     "role": "Drops skin temperature to calm and tighten the look of pores."
+    }
+   ],
+   "figures": [
+    {
+     "label": "Forehead sagging",
+     "value": "48.559%",
+     "note": "4 weeks · with the cream"
+    },
+    {
+     "label": "Jawline sagging",
+     "value": "33.412%",
+     "note": "4 weeks · with the cream"
+    },
+    {
+     "label": "Eye-area sagging",
+     "value": "17.511%",
+     "note": "4 weeks · with the cream"
+    },
+    {
+     "label": "Cheek skin density",
+     "value": "12.364%",
+     "note": "4 weeks · with the cream"
+    },
+    {
+     "label": "Pore area",
+     "value": "16.364%",
+     "note": "one use · immediate, temporary"
+    }
+   ],
+   "testNote": "Every figure comes from using the device **together with d'Alba White Truffle Double Serum & Cream**. 22 people / individual variation. There are no device-only figures.",
+   "howto": [
+    {
+     "name": "Before you start",
+     "how": "Cleanse, then apply plenty of skincare. The device needs product on the skin to work."
+    },
+    {
+     "name": "Intensive care",
+     "how": "Press the head flat to the skin and work through cheeks, forehead, contour, nasolabial folds, jaw and neck — 40 shots, then it shuts off."
+    },
+    {
+     "name": "Levels",
+     "how": "Starts at level 1, goes up to 5. Drop a level around the eyes, mouth and sides of the nose."
+    },
+    {
+     "name": "How often",
+     "how": "One to three times a day, every day. 40 shots per session."
+    }
+   ],
+   "say": [
+    {
+     "line": "You have to put skincare on first. If your face dries out, the energy doesn't get through and it stings.",
+     "why": "Both a usage instruction and a safety point. Say it early."
+    },
+    {
+     "line": "There's no cartridge, so the shots never run out and there's nothing more to buy.",
+     "why": "The main objection to home devices is running costs. This answers it."
+    },
+    {
+     "line": "It counts 40 shots and switches itself off.",
+     "why": "Removes the 'how long do I use it?' question entirely."
+    }
+   ],
+   "careful": [
+    "**Every figure comes from using the device with the Double Serum & Cream.** 'With the cream on, using this device' is the accurate framing. There are no device-only numbers.",
+    "**This is a beauty device, not a medical device.** That line appears on every page of the deck. Don't liken it to a procedure or a treatment.",
+    "**It must be used with skincare on the skin.** A dry face means no energy transfer and a stinging sensation.",
+    "Raising the level doesn't send energy deeper. Drop a level around the eyes, mouth and sides of the nose."
+   ]
+  }
  }
 }
