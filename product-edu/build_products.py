@@ -80,6 +80,11 @@ JUNK_TITLES = {
 # 사내 링크·목록처럼 화면에 내보낼 것이 아닌 슬라이드
 INTERNAL = re.compile(r"단서조항|Google Sheets|인체적용시험\s*(진행\s*)?LIST", re.IGNORECASE)
 
+# 사이트에 싣지 않는 제품.
+# 선케어는 OTC 라인(Broad Spectrum SPF 50+)만 다룬다. 에어 핏 프레쉬 선 스틱은
+# 국내 기능성 보고(SPF50+/PA++++) 제품이라 교안의 'OTC 선케어 5종' 에도 없다.
+EXCLUDE = {"air-fit-fresh-sun-stick"}
+
 
 # "성분 설명 Ingredients_콜라겐 세럼 베이스" 처럼 라벨 뒤에 알맹이가 붙는 경우
 LEAD_LABEL = re.compile(
@@ -265,6 +270,8 @@ def main():
     products = []
     for deck in decks:
         en = deck["product"]
+        if slug(en) in EXCLUDE:
+            continue
         spec, 니즈 = parse_spec(deck)
         read = reads.get(en, {})
         특징 = parse_features(deck)

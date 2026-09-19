@@ -217,8 +217,8 @@ export default async function ProductPage({
     ["타겟", p.스펙.타겟],
   ];
 
-  // 교안 원문은 한 곳에 모아 접어 둔다. 전성분 나열처럼 크리에이터가 볼 일 없는
-  // 내용이 많아서, 근거를 확인할 사람만 펼쳐 보게 한다.
+  // 브리프에 안 들어간 나머지는 '기타' 한 곳에 모아 접어 둔다. 전성분 나열처럼
+  // 크리에이터가 볼 일 없는 내용이라, 근거를 확인할 사람만 펼쳐 보게 한다.
   const 원문섹션: [string, Section[]][] = [
     ["성분", p.섹션.성분 ?? []],
     ["제형 · 기술 · 향", ["제형", "기술", "향"].flatMap((k) => p.섹션[k] ?? [])],
@@ -250,7 +250,7 @@ export default async function ProductPage({
         <BriefBlock brief={brief} />
       ) : (
         <p className="pw-empty" style={{ marginTop: 26 }}>
-          이 제품은 아직 브리프를 쓰지 않았습니다. 아래 교안 원문을 참고하세요.
+          이 제품은 아직 브리프를 쓰지 않았습니다. 아래 기타 항목을 참고하세요.
         </p>
       )}
 
@@ -262,7 +262,7 @@ export default async function ProductPage({
         <a href="#features" className={p.특징.length ? undefined : "off"}>
           제품 특징
         </a>
-        <a href="#source">교안 원문</a>
+        <a href="#etc">기타</a>
       </nav>
 
       <section className="pw-sec" id="images">
@@ -301,18 +301,11 @@ export default async function ProductPage({
         )}
       </section>
 
-      <section className="pw-sec" id="source">
-        <h2>교안 원문</h2>
+      <section className="pw-sec" id="etc">
+        <h2>기타</h2>
         <p className="pw-note">
-          담당자가 근거를 확인할 때 쓰는 자료입니다. 전성분 나열처럼 방송에서 쓸 일 없는
-          내용도 그대로 들어 있습니다. 슬라이드 {p.슬라이드수}장 전체.
-          {!!p.판독대상슬라이드.length && (
-            <>
-              {" "}
-              글자가 거의 없는 슬라이드({p.판독대상슬라이드.join(", ")}번)는 내용이 이미지
-              안에 있습니다.
-            </>
-          )}
+          브리프에 넣지 않은 나머지입니다. 담당자가 근거를 확인할 때 쓰는 자료라
+          전성분 나열처럼 방송에서 쓸 일 없는 내용도 그대로 들어 있습니다.
         </p>
 
         {원문섹션
@@ -384,56 +377,6 @@ export default async function ProductPage({
           </details>
         )}
 
-        <details className="pw-fold">
-          <summary>
-            슬라이드별 원문
-            <span className="pw-fold-n">{p.원문.length}</span>
-          </summary>
-          <div className="pw-fold-body">
-            {p.원문.map((s) => (
-              <details className="pw-raw" key={s.no}>
-                <summary>
-                  <span className="pw-slideno">{s.no}</span>
-                  <span className="pw-raw-title">{s.제목 || "(제목 없음)"}</span>
-                  {s.이미지수 > 0 && (
-                    <span className="pw-imgcount">이미지 {s.이미지수}</span>
-                  )}
-                </summary>
-                <div className="pw-raw-body">
-                  {s.내용.map((line, i) => (
-                    <p className="pw-block-line" key={i}>
-                      {line}
-                    </p>
-                  ))}
-                  {s.표.map((table, ti) => (
-                    <div className="pw-tablewrap" key={ti}>
-                      <table>
-                        <tbody>
-                          {table.map((row, ri) => (
-                            <tr key={ri}>
-                              {row.map((cell, ci) =>
-                                ri === 0 ? (
-                                  <th key={ci}>{cell}</th>
-                                ) : (
-                                  <td key={ci}>{cell}</td>
-                                ),
-                              )}
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  ))}
-                  {!s.내용.length && !s.표.length && (
-                    <p className="pw-block-line pw-muted">
-                      이 슬라이드에는 글자가 없습니다.
-                    </p>
-                  )}
-                </div>
-              </details>
-            ))}
-          </div>
-        </details>
       </section>
     </main>
   );
