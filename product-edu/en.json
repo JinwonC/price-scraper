@@ -978,5 +978,122 @@
   "이미지": [
    "Texture"
   ]
+ },
+ "white-truffle-double-serum-cream-2-in-1": {
+  "스펙": {
+   "용량": "70g"
+  },
+  "한줄": "Aqua serum and intense cream in one jar — you mix your own ratio each day with the spatula.",
+  "특징": [
+   {
+    "title": "Aqua serum (water, soothing) and intense cream (nourishment, firmness) in one jar",
+    "body": []
+   },
+   {
+    "title": "DIY care that changes with the season and your skin",
+    "body": [
+     "Adjust the ratio yourself to match how your skin is that day.",
+     "Whatever the weather, whatever the condition: water, moisture, nourishment, firmness and soothing in one."
+    ]
+   },
+   {
+    "title": "Stronger on the barrier, and on the ageing signs that show by area",
+    "body": [
+     "Anti-ageing human trial (wrinkles, lifting, skin density) and in-vitro antioxidant testing completed.",
+     "Crow's feet, slackening cheeks, antioxidant protection, skin density and the moisture barrier."
+    ]
+   },
+   {
+    "title": "Deep hydration, deep firmness and soothing",
+    "body": [
+     "Human trials completed for inner dryness and inner firmness.",
+     "Human trial completed for soothing skin damaged by physical stress.",
+     "It sinks in deep and settles irritated skin on contact."
+    ]
+   },
+   {
+    "title": "Panthenol 5% and nano Peptide Exosome 30%",
+    "body": [
+     "A nano exosome system from Italian white truffle bound to 99% pure low-molecular Dipeptide-15.",
+     "It steadies a base that gives way easily and leaves skin looking densely filled."
+    ]
+   },
+   {
+    "title": "Premium ingredients meeting d'Alba's own",
+    "body": [
+     "d'Alba's own: Peptide Exosome™ (Dipeptide-15 1.2%, white truffle water and extract) for vitality; Trufferol™ (Italian white truffle, tocopherol) for firmness.",
+     "Aqua serum (water, soothing): panthenol 5%, hyaluronic acid, ceramide, centella extract.",
+     "Intense cream (nourishment, firmness): Peptide Exosome 30%, d'Alba-8 Blending Oil, collagen extract, Anemarrhena root extract."
+    ]
+   },
+   {
+    "title": "Comfortable on any skin type",
+    "body": [
+     "Italian V-Label vegan certification against the full ingredient list.",
+     "Non-comedogenic human trial completed, and a primary irritation test on sensitive skin."
+    ]
+   }
+  ],
+  "이미지": [
+   "Product shot",
+   "Held in hand",
+   "Product styling shot",
+   "Model shot",
+   "The two textures",
+   "About white truffle exosome",
+   "Being applied"
+  ]
+ },
+ "white-truffle-return-oil-cream-cleanser": {
+  "스펙": {
+   "용량": "160ml",
+   "타겟": "All skin types"
+  },
+  "한줄": "An oil gel that turns to cream and then to foam in your hands — one product in place of four cleansing steps.",
+  "특징": [
+   {
+    "title": "One step, no fuss",
+    "body": [
+     "The oil cream grips and dissolves, then a rich foam wipes it away — makeup and sunscreen in one go.",
+     "It replaces a point remover, a cleansing oil, a cleansing gel and a cleansing balm with a single product."
+    ]
+   },
+   {
+    "title": "14% Belgian spa water",
+    "body": [
+     "Hydrating ingredients including Belgian spa water at 14%, so skin doesn't feel tight afterwards — more like you've just come back from a spa."
+    ]
+   },
+   {
+    "title": "Vegan plant surfactants and gold clay",
+    "body": [
+     "Plant-derived vegan surfactants with French gold clay clean thoroughly and stay gentle."
+    ]
+   },
+   {
+    "title": "A nourishing serum cleanser",
+    "body": [
+     "Italian white truffle and vegan collagen leave skin smooth, as though you'd already done your skincare.",
+     "Nourishment: Trufferol™ (white truffle + tocopherol), vegan collagen.",
+     "Moisture: Belgian spa water, birch sap, New Zealand calendula extract, d'Alba-8 Blending Oil.",
+     "Soothing: Calming Complex Lipocalm (centella extract, fig extract, ceramide NP).",
+     "Cleansing: French gold clay (illite), Anti-Pore (Montezuma pine leaf, evening primrose, kudzu root, elm root extracts)."
+    ]
+   },
+   {
+    "title": "Italian V-Label vegan certified, irritation test completed",
+    "body": []
+   }
+  ],
+  "이미지": [
+   "Product shot",
+   "Model using it",
+   "The golden gel texture",
+   "The three steps",
+   "Skin texture improved 10.454% (after one use)",
+   "French gold clay (illite)",
+   "How to swap the flip cap",
+   "Vegan certification"
+  ]
  }
 }

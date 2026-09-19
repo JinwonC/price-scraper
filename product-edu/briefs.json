@@ -927,22 +927,12 @@
   ],
   "근거수치": [
    {
-    "항목": "모공 속 색조 잔여물 세정",
-    "값": "99.8%",
-    "조건": "1회 사용 후"
-   },
-   {
-    "항목": "워터프루프 선크림 세정",
-    "값": "91.52%",
-    "조건": "1회 사용 후"
-   },
-   {
-    "항목": "피부 요철 개선",
+    "항목": "피부 요철(결) 개선",
     "값": "10.454%",
     "조건": "1회 사용 후"
    }
   ],
-  "시험조건": "모두 1회 사용 기준. 개인차 있음. 시험기관·일자·인원은 교안에 없음",
+  "시험조건": "1회 사용 후 / 개인차 있음",
   "사용법": [
    {
     "이름": "STEP 1",
@@ -971,21 +961,95 @@
     "근거": "편리함 이야기라 효능 주장이 아닙니다. 안전한 프레이밍입니다."
    },
    {
-    "문장": "브랜드 시험에서 한 번 세안으로 모공 속 색조 잔여물 99.8%가 씻겨 나갔습니다.",
-    "근거": "\"브랜드 시험에서\", \"개인차가 있다\"를 반드시 같이 말하세요."
-   },
-   {
     "문장": "겨울에 굳어도 정상이에요. 농축 제형이라 그렇고 품질에는 영향 없습니다.",
     "근거": "교안이 직접 답해둔 내용입니다. 리뷰에서 가장 많이 나오는 컴플레인이라 미리 말해주면 좋습니다."
    }
   ],
   "주의": [
-   "**'모공 속 노폐물 99.67% 세정'의 기준값은 인위적으로 도포한 미세먼지 모사체입니다.** 하루치 자연 피지가 아닙니다.",
-   "**워터프루프 선크림 91.52%는 '피부에서' 라고 말하면 안 됩니다.** 교안 사진이 파란 인공 기재이고 시험 방법이 적혀 있지 않습니다.",
-   "**저자극 시험이 2020년 것입니다.** 처방 리뉴얼은 2026년 1월이라 현재 처방과 다를 수 있습니다.",
-   "**모공 특허의 권리자는 원료사 ㈜더마랩입니다.** '달바 특허'라고 하면 안 되고, 교안도 '원료적 특성에 한함'으로 한정합니다.",
-   "**스펙은 160ml인데 교안 제품 사진의 보틀에는 150ml로 인쇄돼 있습니다.**"
-  ]
+   "**세정력 수치(99.67%, 91.52%)는 쓰지 마세요.** 얼굴에 인위적으로 올린 미세먼지 모사체와 인공 기재를 씻어낸 값이라, 실제 하루치 피지나 선크림과는 다릅니다. '한 번에 다 지워진다' 는 보여주는 쪽이 낫습니다.",
+   "**모공 특허의 권리자는 원료를 만든 회사입니다.** '달바가 특허를 받았다' 가 아니라 '특허받은 모공 성분이 들어 있다' 로 말하세요.",
+   "**용량은 160ml 입니다.** 교안 제품 사진의 보틀에는 150ml 로 인쇄돼 있으니 실물 패키지를 확인하세요.",
+   "**겨울에 제형이 굳는 것은 정상입니다.** 농축 제형이라 그렇고 품질에는 영향이 없습니다. 미리 말해 주면 리뷰 불만이 줄어듭니다."
+  ],
+  "en": {
+   "lead": "It changes twice in your hands — oil gel, then cream, then foam — standing in for a remover, a cleansing oil, a gel and a balm.",
+   "who": "Anyone wanting fewer cleansing steps, and no tight feeling afterwards",
+   "certs": [
+    "Italian V-Label vegan certification",
+    "Primary skin irritation test completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Hydrating ingredients incl. Belgian spa water",
+     "amount": "14%",
+     "role": "Keeps skin from feeling tight. The 14% covers the hydrating ingredients as a whole, not spa water alone."
+    },
+    {
+     "name": "Trufferol™",
+     "amount": "white truffle 1,000ppm",
+     "role": "d'Alba's own nourishing ingredient."
+    },
+    {
+     "name": "French gold clay (illite)",
+     "role": "The mineral doing the cleansing."
+    },
+    {
+     "name": "Plant-derived vegan surfactants",
+     "role": "Gentle cleansing, all plant-sourced."
+    },
+    {
+     "name": "Anti-Pore complex",
+     "amount": "patented",
+     "role": "Montezuma pine leaf, evening primrose, kudzu root and elm root extracts."
+    }
+   ],
+   "figures": [
+    {
+     "label": "Skin texture",
+     "value": "10.454%",
+     "note": "after one use"
+    }
+   ],
+   "testNote": "After a single use / individual variation.",
+   "howto": [
+    {
+     "name": "Step 1",
+     "how": "With dry hands, pump 2–3 times onto bare skin or makeup and massage."
+    },
+    {
+     "name": "Step 2",
+     "how": "Wet your hands and roll it into a foam, massaging as the grime dissolves."
+    },
+    {
+     "name": "Step 3",
+     "how": "Rinse the foam off thoroughly with lukewarm water."
+    },
+    {
+     "name": "If the pump stops working",
+     "how": "Swap in the flip cap supplied and store the bottle upside down."
+    }
+   ],
+   "say": [
+    {
+     "line": "It changes twice in your hands. Oil, then cream, then foam.",
+     "why": "The easiest thing to show and impossible to argue with. Start here."
+    },
+    {
+     "line": "This one product replaces a remover, a cleansing oil, a gel and a balm.",
+     "why": "A convenience claim rather than an efficacy claim, so it's safe ground."
+    },
+    {
+     "line": "If it firms up in winter, that's normal — it's a concentrated formula and it doesn't affect quality.",
+     "why": "The deck answers this directly. It's the most common review complaint, so get ahead of it."
+    }
+   ],
+   "careful": [
+    "**Don't use the cleansing percentages (99.67%, 91.52%).** They come from washing off a dust simulant painted onto skin and an artificial substrate — not a real day's sebum or sunscreen. Better to show it working.",
+    "**The pore patent belongs to the company that makes the raw material.** Say 'it contains a patented pore ingredient', not 'd'Alba holds a patent'.",
+    "**The size is 160ml.** The bottle in the deck's photo is printed 150ml, so check the actual package.",
+    "**Firming up in winter is normal.** A concentrated formula, and quality isn't affected."
+   ]
+  }
  },
  "vita-toning-capsule-cleansing-oil": {
   "한줄": "피지와 구조가 비슷한 오일로 블랙헤드를 녹이고, 오일 안에 든 파우더가 노폐물을 흡착하는 클렌징 오일입니다.",
@@ -1626,7 +1690,74 @@
   "주의": [
    "여러 인체적용시험이 '완료' 로만 적혀 있고 구체적 수치·기관·인원이 교안 텍스트에 없습니다. % 를 말하지 마세요.",
    "'DIY 맞춤'은 비율 조절을 뜻합니다. 처방을 바꾸는 것이 아닙니다."
-  ]
+  ],
+  "en": {
+   "lead": "One jar split between an aqua serum and an intense cream. You mix your own ratio with the spatula, to suit your skin that day.",
+   "who": "Anyone who finds a water cream not enough and a rich cream too heavy",
+   "certs": [
+    "Brightening + wrinkle care (dual functional claim)",
+    "Italian V-Label vegan certification",
+    "Anti-ageing (wrinkles, lifting, skin density) human trial completed",
+    "Inner hydration and inner firmness human trial completed",
+    "Soothing after physical irritation human trial completed",
+    "Non-comedogenic (suitable for acne-prone skin) human trial completed",
+    "In-vitro antioxidant testing completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Panthenol",
+     "amount": "5%",
+     "role": "Added in the reformulation, for water and soothing."
+    },
+    {
+     "name": "Niacinamide",
+     "amount": "2%",
+     "role": "The notified brightening active added in the reformulation, taking it from a single to a dual functional claim."
+    },
+    {
+     "name": "Peptide Exosome™",
+     "amount": "30%",
+     "role": "Dipeptide-15 at 1.2% with white truffle exosome."
+    },
+    {
+     "name": "Trufferol™",
+     "role": "d'Alba's own firming ingredient."
+    },
+    {
+     "name": "Hyaluronic acid · ceramide · centella",
+     "role": "The water and soothing side, in the aqua serum."
+    }
+   ],
+   "howto": [
+    {
+     "name": "Basic",
+     "how": "With the spatula, take serum and cream in the ratio you want, put them straight onto your cheek and mix there."
+    },
+    {
+     "name": "Finding your ratio",
+     "how": "More cream when you're dry, more serum when it feels heavy. Change it with the season and your skin."
+    }
+   ],
+   "say": [
+    {
+     "line": "When a water cream isn't enough and a rich cream is too much, this one lets you set the ratio yourself.",
+     "why": "Exactly the reason the deck gives for developing it. It's the line people recognise themselves in."
+    },
+    {
+     "line": "Put both onto your cheek with the spatula and mix them right there.",
+     "why": "A tip from the deck — easier than mixing on the back of your hand."
+    },
+    {
+     "line": "It's been through a non-comedogenic trial, so it's suitable for acne-prone skin.",
+     "why": "The direct answer for viewers who avoid rich creams for fear of breakouts."
+    }
+   ],
+   "careful": [
+    "**The reformulation added panthenol 5% and niacinamide 2%.** The niacinamide is what took it from wrinkle care alone to a dual claim with brightening.",
+    "Several human trials are listed as completed without figures. Name the measures instead.",
+    "'DIY' here means adjusting the ratio. It doesn't mean changing the formulation."
+   ]
+  }
  },
  "white-truffle-double-layer-revitalizing-serum": {
   "한줄": "세럼과 오일이 7대 3으로 분리돼 담긴 2층 세럼. 24시간에 걸쳐 다시 분리되니 쓸 때마다 흔들어야 합니다.",
