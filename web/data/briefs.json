@@ -349,7 +349,68 @@
   "주의": [
    "**1.71배·1.66배는 '손으로 바를 때 대비' 입니다.** 아무것도 안 했을 때와 비교한 값이 아닙니다.",
    "갈바닉은 흡수를 돕는 기기 기능입니다. 의료기기가 아니고 치료 효과를 말할 수 없습니다."
-  ]
+  ],
+  "en": {
+   "lead": "An eye cream with a galvanic vibrating tip on the end of the tube. You apply it and rub it in with the tip itself.",
+   "who": "Anyone treating dark spots and fine lines around the eyes at the same time",
+   "certs": [
+    "Italian V-Label vegan certification",
+    "Primary skin irritation test completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Sea buckthorn water",
+     "amount": "30%",
+     "role": "Replaces purified water as the brightening base."
+    },
+    {
+     "name": "White truffle · collagen liposome",
+     "role": "Liposome delivery for nourishment and firmness."
+    },
+    {
+     "name": "Vitamin C · glutathione",
+     "amount": "99% / 98% purity",
+     "role": "Brightening on dark spots."
+    },
+    {
+     "name": "PDRN · retinol liposome",
+     "role": "Firmness and clarity."
+    }
+   ],
+   "figures": [
+    {
+     "label": "Elasticity",
+     "value": "1.71×",
+     "note": "vs. applying by hand"
+    },
+    {
+     "label": "Sagging angle",
+     "value": "1.66×",
+     "note": "vs. applying by hand"
+    }
+   ],
+   "testNote": "The 1.71× and 1.66× figures compare the same cream rubbed in by hand against the galvanic tip. A separate anti-ageing study ran at the Korea Institute of Dermatological Sciences with 21 people over two weeks, with individual variation.",
+   "howto": [
+    {
+     "name": "Basic",
+     "how": "Apply around the eyes or mouth, then work it in with the cooling tip. 13,000 micro-vibrations a minute."
+    }
+   ],
+   "say": [
+    {
+     "line": "You're not just applying a cream — you rub it in with this metal tip.",
+     "why": "That's the product's structure. It shows well on camera."
+    },
+    {
+     "line": "The tip is cooling, so it feels cold on the eye area.",
+     "why": "The deck specifies a cooling tip. A sensory claim, so it's safe ground."
+    }
+   ],
+   "careful": [
+    "**1.71× and 1.66× are 'compared with applying by hand'.** They are not measured against doing nothing at all.",
+    "Galvanic here is a device function that helps absorption. It is not a medical device and you cannot claim a treatment effect."
+   ]
+  }
  },
  "vita-toning-anti-aging-spray-serum-8": {
   "한줄": "화이트 트러플·콜라겐수·보습오일을 각각 8%씩 넣은 농축 세럼을 안개처럼 분사하는 제품입니다.",
@@ -871,7 +932,98 @@
   "주의": [
    "**네 수치 전부 '1회 사용 후 즉각적인(일시적)' 입니다.** 이 조건을 빼면 과장입니다.",
    "**비건 인증 표기가 교안 안에서 '진행' 과 '완료' 로 엇갈립니다.** 확인 전 인증 언급 금지."
-  ]
+  ],
+  "en": {
+   "lead": "Two kinds of pad in one jar: 70 yellow collagen gel pads (nourish, firm) and 30 green calming peel pads (exfoliate, soothe) — 100 in total.",
+   "who": "Anyone tired of buying a wipe-off pad and a sheet mask separately",
+   "certs": [
+    "Brightening + wrinkle care (dual functional claim)",
+    "Italian V-Label vegan certification",
+    "Primary skin irritation test completed on sensitive skin"
+   ],
+   "ingredients": [
+    {
+     "name": "Vita-Collagen Some",
+     "amount": "collagen water 1,000ppm",
+     "role": "The yellow pad. 10 proteins, 10 hyaluronic acids."
+    },
+    {
+     "name": "Peeling-Teatree Some",
+     "role": "The green pad. Gentle PHA, LHA and tea tree extract."
+    },
+    {
+     "name": "Trufferol™ + Truvita™",
+     "role": "d'Alba's own complex."
+    },
+    {
+     "name": "Vegan PDRN · vegan ceramide",
+     "role": "Nourishment and barrier."
+    }
+   ],
+   "figures": [
+    {
+     "label": "Skin's 30th layer, water content",
+     "value": "+147%",
+     "note": "immediately after one use, temporary"
+    },
+    {
+     "label": "Skin soothing",
+     "value": "−23.1%",
+     "note": "immediately after one use, temporary"
+    },
+    {
+     "label": "Facial (cheek) puffiness",
+     "value": "−15.2%",
+     "note": "immediately after one use, temporary"
+    },
+    {
+     "label": "Pore-area texture",
+     "value": "−6.21%",
+     "note": "immediately after one use, temporary"
+    }
+   ],
+   "testNote": "All figures are immediate, temporary effects measured after a single use.",
+   "howto": [
+    {
+     "name": "As a wipe",
+     "how": "After cleansing, take one pad and wipe gently with the embossed grid side."
+    },
+    {
+     "name": "As a mask (calming pad)",
+     "how": "Flip to the smooth side and leave it on the skin for 3–5 minutes."
+    },
+    {
+     "name": "As a mask (gel pad)",
+     "how": "Take as many as you need and leave them on for 5–10 minutes. Good while you're drying your hair."
+    },
+    {
+     "name": "Opening it",
+     "how": "Peel the seal, then remove the inner lid sheet sitting on top of the pads before you start."
+    },
+    {
+     "name": "The tweezers",
+     "how": "There's a dedicated tool inside — one end separates a pad, the other picks it up."
+    }
+   ],
+   "say": [
+    {
+     "line": "It's one jar, but there are two kinds of pad. One to wipe with, one to stick on.",
+     "why": "The split jar is this product's identity. Open it on camera."
+    },
+    {
+     "line": "One side is a grid you wipe with; flip it and the smooth side goes on like a mask.",
+     "why": "Double-sided, which is why 30 pads last. Practical detail that lands well."
+    },
+    {
+     "line": "Right after one use, water content at the skin's 30th layer went up 147%.",
+     "why": "Always say \"immediate and temporary\" alongside it."
+    }
+   ],
+   "careful": [
+    "**All four figures are 'immediately after one use, temporary'.** Dropping that condition makes the claim an overstatement.",
+    "**The deck contradicts itself on vegan certification** — 'in progress' in one place, 'completed' in another. Don't mention it until that's confirmed."
+   ]
+  }
  },
  "signature-vita-capsule-hydrogel-mask-8-shape": {
   "한줄": "44g 세럼을 그대로 굳혀 만든 하이드로겔 마스크. 시트가 따로 없고, 얼굴과 목을 8조각으로 나눠 붙입니다.",
@@ -1209,7 +1361,58 @@
    "**비건 인증서를 확인해 보니 완제품 인증이 아닙니다.** 원료사 UNISOLVE의 'VEGAN COLLAGEN' 원료 인증이고 **만료일이 2022년 4월 28일로 이미 지났습니다.** 비건 인증을 말하면 안 됩니다.",
    "'주름개선 기능성'은 고시 성분에 근거한 표시입니다. 주름이 없어진다는 뜻이 아닙니다.",
    "구체적인 시험 수치가 교안에 없습니다."
-  ]
+  ],
+  "en": {
+   "lead": "A stick balm you rub over the lines that bother you. Dual functional claim: brightening and wrinkle care.",
+   "who": "Anyone treating crow's feet, the neck or nasolabial folds on their own — and wanting to reapply on the go",
+   "certs": [
+    "Brightening + wrinkle care (dual functional claim)",
+    "Primary skin irritation test completed — rated low-irritation"
+   ],
+   "ingredients": [
+    {
+     "name": "Alpha-bisabolol / tocopheryl acetate",
+     "role": "The notified actives behind the dual functional claim."
+    },
+    {
+     "name": "Trufferol™",
+     "role": "d'Alba's patented ingredient."
+    },
+    {
+     "name": "Vegan collagen",
+     "role": "For firmer-looking skin."
+    },
+    {
+     "name": "Anemarrhena root extract",
+     "role": "Supports bounce."
+    }
+   ],
+   "howto": [
+    {
+     "name": "Basic",
+     "how": "Open the cap, twist the base to push out some product, then glide it over crow's feet, neck or nasolabial folds."
+    },
+    {
+     "name": "Over makeup",
+     "how": "Works at the skincare stage and over makeup alike."
+    }
+   ],
+   "say": [
+    {
+     "line": "No hands — you just swipe it right where the line is. It's 10g, so it goes in a pocket.",
+     "why": "The stick format and the size are the whole point of this product."
+    },
+    {
+     "line": "You can layer it over makeup.",
+     "why": "A usage tip from the deck. Only possible because it's a stick."
+    }
+   ],
+   "careful": [
+    "**Don't claim vegan certification for this one.** The certificate is for a raw material ('vegan collagen') held by the supplier, not for the finished product — and **it expired on 28 April 2022.**",
+    "'Wrinkle care' is a label claim based on a notified active. It does not mean wrinkles disappear.",
+    "There are no test figures in the deck. Don't quote percentages or timeframes."
+   ]
+  }
  },
  "white-truffle-intensive-volufiline-ampoule": {
   "한줄": "프랑스 세더마사의 보르피린을 50,000ppm 넣은 주름개선 기능성 앰플. 리프팅에 초점이 맞춰져 있습니다.",
@@ -1616,7 +1819,66 @@
    "**가격이 교안에 '미정' 으로 되어 있습니다.** 본인 스토어 가격을 확인하세요.",
    "SPF·PA 수치는 실물 패키지를 확인하고 말하세요. 교안 텍스트에 없습니다.",
    "미국 전용 OTC 버전은 별개 제품입니다. 섞어 말하지 마세요."
-  ]
+  ],
+  "en": {
+   "lead": "A watery sunscreen that pushes essence out as you spread it. Organic filters, so it's light and leaves no white cast.",
+   "who": "Anyone who finds sunscreen drying, chalky or hard to wear under makeup",
+   "certs": [
+    "Italian V-Label vegan certification",
+    "Primary irritation test completed on sensitive skin"
+   ],
+   "ingredients": [
+    {
+     "name": "Hyaluronic acids + ceramide NP + panthenol",
+     "role": "Fills water in and props up the barrier."
+    },
+    {
+     "name": "Centella extract · centella leaf extract · tea tree leaf water",
+     "role": "Keeps the skin comfortable."
+    },
+    {
+     "name": "Organic UV filters",
+     "role": "Absorb UV and release it as heat. This is why there's no white cast."
+    }
+   ],
+   "howto": [
+    {
+     "name": "How much",
+     "how": "About 1ml for face and neck — roughly your index finger's first joint. Thin coats, twice, rather than one thick one."
+    },
+    {
+     "name": "When",
+     "how": "30 minutes before you go out, so it has time to absorb and settle."
+    },
+    {
+     "name": "Reapplying",
+     "how": "Every 2–3 hours, more often if you're outdoors."
+    },
+    {
+     "name": "Where in the routine",
+     "how": "Last step of basic skincare. Face, neck, arms, legs — anywhere the sun reaches."
+    }
+   ],
+   "say": [
+    {
+     "line": "Most people use far too little. Face and neck needs about a finger-joint's worth.",
+     "why": "The most useful thing you can tell a viewer about any sunscreen, and it's straight from the deck."
+    },
+    {
+     "line": "It's an organic filter sunscreen, so there's no white cast and it goes on light.",
+     "why": "Explains the texture without claiming anything the deck doesn't."
+    },
+    {
+     "line": "You can put makeup straight over it — it's meant to stop foundation sliding.",
+     "why": "The deck positions it as a makeup booster. Easy to demonstrate on camera."
+    }
+   ],
+   "careful": [
+    "**Check the actual package for the SPF and PA figures before you say them.**",
+    "The hydro-trapping diagram is labelled in the deck as an illustration to aid understanding. Don't describe it as what literally happens inside skin.",
+    "There are no efficacy percentages in the deck. Don't quote numbers beyond SPF and PA."
+   ]
+  }
  },
  "white-truffle-waterfull-tone-up-sunscreen-serum": {
   "한줄": "핑크빛으로 톤업되는 수분자차 선스크린. 유기·무기를 섞은 혼합자차입니다.",
@@ -1671,7 +1933,65 @@
    "**가격이 교안에 '미정' 으로 되어 있습니다.**",
    "SPF·PA 수치는 실물 패키지를 확인하세요.",
    "톤업은 화장품의 색 보정입니다. 피부 자체가 밝아지는 것이 아닙니다."
-  ]
+  ],
+  "en": {
+   "lead": "A pink watery sunscreen. Rather than covering skin to look brighter, the pink tint reads as natural colour coming back.",
+   "who": "Anyone who wants to skip foundation and still look evened out",
+   "certs": [
+    "Italian V-Label vegan certification",
+    "Primary irritation test completed on sensitive skin"
+   ],
+   "ingredients": [
+    {
+     "name": "Hybrid UV filters",
+     "role": "Organic plus inorganic — less white cast, less sting, softer to spread."
+    },
+    {
+     "name": "Hyaluronic acids + ceramide NP + panthenol",
+     "role": "Water and barrier."
+    },
+    {
+     "name": "Centella extract · centella leaf extract · tea tree leaf water",
+     "role": "Keeps the skin comfortable."
+    }
+   ],
+   "howto": [
+    {
+     "name": "How much",
+     "how": "About 1ml for face and neck — roughly your index finger's first joint."
+    },
+    {
+     "name": "When",
+     "how": "30 minutes before you go out."
+    },
+    {
+     "name": "Reapplying",
+     "how": "Every 2–3 hours, more often outdoors."
+    },
+    {
+     "name": "Where in the routine",
+     "how": "Last step of basic skincare, in place of foundation if you want."
+    }
+   ],
+   "say": [
+    {
+     "line": "It's pink, not white — so it doesn't look like you've painted your face, it looks like colour came back.",
+     "why": "The clearest difference from a white-cast tone-up. Swatch it on the back of your hand."
+    },
+    {
+     "line": "It mixes both filter types, so there's less white cast and less stinging around the eyes.",
+     "why": "Eye sting is a common sunscreen complaint and the deck names it directly."
+    },
+    {
+     "line": "Face and neck needs about a finger-joint's worth, 30 minutes before you go out.",
+     "why": "Straight from the deck's usage page. Practical and always welcome."
+    }
+   ],
+   "careful": [
+    "**Check the actual package for the SPF and PA figures before you say them.**",
+    "There are no figures for how much it brightens or how much glow it adds. Don't quote numbers beyond SPF and PA."
+   ]
+  }
  },
  "d-alba-signature-allthera-double-shot": {
   "한줄": "고주파·더블 초음파·쿨링을 한 기기에 넣은 홈케어 디바이스. 카트리지 교체가 없어 샷을 무제한으로 씁니다.",
