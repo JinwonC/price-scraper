@@ -157,14 +157,124 @@
    {
     "문장": "성분을 세 번에 걸쳐 나노 크기로 쪼개서 넣었습니다.",
     "근거": "MEGA NANOSOME 공법 — 1,300배 기압으로 1차, 다이아몬드 미세관 2회 통과로 2차, 시속 450km 분출로 3차. 설명하면 '왜 비싼지'가 전달됩니다."
+   },
+   {
+    "문장": "2주 썼을 때 주름 25.81%, 기미·잡티 21.18% 개선이 나왔습니다.",
+    "근거": "한국피부과학연구원에서 22명을 대상으로 본 결과입니다. 기관·인원·기간·개인차를 같이 말하세요."
    }
   ],
   "주의": [
-   "**2주 시험 수치가 교안 이미지 안에만 있어 아직 판독하지 못했습니다.** 구체적 % 를 말하지 마세요.",
+   "**피부 톤 개선 1.64% 는 아주 작은 수치입니다.** 주름 25.81% 와 나란히 말하면 오해를 삽니다.",
    "**나이아신아마이드가 2%와 200,000ppm(=20%) 두 가지로 적혀 있습니다.**",
    "'4만 개 캡슐'은 교안 표현입니다. 세어본 수치가 아닙니다.",
    "나노 공법은 제조 방식입니다. 효과가 세 배라는 뜻이 아닙니다."
-  ]
+  ],
+  "근거수치": [
+   {
+    "항목": "피부 주름 개선",
+    "값": "25.81%",
+    "조건": "2주 사용"
+   },
+   {
+    "항목": "기미 및 잡티 완화",
+    "값": "21.18%",
+    "조건": "2주 사용"
+   },
+   {
+    "항목": "피부 톤 개선",
+    "값": "1.64%",
+    "조건": "2주 사용"
+   }
+  ],
+  "시험조건": "한국피부과학연구원 / 22명 / 2주 / 개인차 있음. 항산화는 in vitro(시험관) 평가입니다.",
+  "en": {
+   "lead": "A two-layer serum: vitamin capsules floating over an 81% sea buckthorn water base. Spread it and the capsules dissolve into it.",
+   "who": "Anyone wanting dull skin brighter without a sticky finish",
+   "certs": [
+    "Brightening + wrinkle care (dual functional claim)",
+    "Italian V-Label vegan certification",
+    "Primary skin irritation test completed",
+    "In-vitro antioxidant testing completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Sea buckthorn water",
+     "amount": "81%",
+     "role": "Replaces purified water as the base. This is the product's identity."
+    },
+    {
+     "name": "Vitamin capsules",
+     "amount": "about 40,000",
+     "role": "The capsules you can see, carrying vitamins E and K."
+    },
+    {
+     "name": "Vitamin C · Glutathione-some",
+     "amount": "99% / 98% purity",
+     "role": "Freshness and glow."
+    },
+    {
+     "name": "Niacinamide",
+     "amount": "2%",
+     "role": "The notified brightening active."
+    },
+    {
+     "name": "MEGA NANOSOME process",
+     "role": "A three-stage method that breaks actives down and wraps them in liposomes."
+    }
+   ],
+   "figures": [
+    {
+     "label": "Wrinkles",
+     "value": "25.81%",
+     "note": "2 weeks"
+    },
+    {
+     "label": "Dark spots and blemishes",
+     "value": "21.18%",
+     "note": "2 weeks"
+    },
+    {
+     "label": "Skin tone",
+     "value": "1.64%",
+     "note": "2 weeks"
+    }
+   ],
+   "testNote": "Korea Institute of Dermatological Sciences / 22 people / 2 weeks / individual variation. The antioxidant work was in-vitro, meaning in a dish.",
+   "howto": [
+    {
+     "name": "Every day",
+     "how": "Take some into your hands, spread it over the face and press it in."
+    },
+    {
+     "name": "Intensive",
+     "how": "Layer it two or three more times wherever you want more brightness."
+    },
+    {
+     "name": "As a quick mask",
+     "how": "Soak a cotton pad and leave it on for 3–5 minutes."
+    }
+   ],
+   "say": [
+    {
+     "line": "You can see the capsules. Spread it and they dissolve straight away.",
+     "why": "It reads well on camera. Start here."
+    },
+    {
+     "line": "They put sea buckthorn water in at 81% instead of purified water.",
+     "why": "The single most solid number in the ingredient story."
+    },
+    {
+     "line": "Two weeks in, wrinkles improved 25.81% and dark spots 21.18%.",
+     "why": "Measured at the Korea Institute of Dermatological Sciences with 22 people. Say the institute, the number of people, the timeframe and individual variation alongside it."
+    }
+   ],
+   "careful": [
+    "**Skin tone improved 1.64% — that is a very small number.** Saying it beside the 25.81% wrinkle figure invites misreading.",
+    "**Niacinamide is written as both 2% and 200,000ppm (= 20%) in the deck.** Those are ten times apart.",
+    "'40,000 capsules' is the deck's own figure, calculated internally and varying batch to batch. It is not a count anyone made.",
+    "The nano process is a manufacturing method. It does not mean the effect is three times stronger."
+   ]
+  }
  },
  "vita-toning-capsule-cream": {
   "한줄": "비타민 캡슐이 박힌 미백 보습 크림. 롤링할수록 캡슐이 녹으며 생기 성분이 퍼집니다.",
@@ -483,7 +593,80 @@
   "주의": [
    "**피부톤 개선 1.15%는 아주 작은 수치입니다.** 리프팅 수치와 나란히 말하면 오해를 삽니다.",
    "**패키지가 두 가지입니다.** 구 패키지는 `AROMATIC SPRAY SERUM`, 현행은 `VITA TONING ANTI-AGING SERUM` 입니다."
-  ]
+  ],
+  "en": {
+   "lead": "A concentrated serum you mist on, with white truffle, collagen water and moisturising oil at 8% each.",
+   "who": "Anyone after glow and firmness at once, who'd rather not decant serum into their hands",
+   "certs": [
+    "Italian V-Label vegan certification",
+    "Primary skin irritation test completed — rated non-irritating",
+    "Dermatest EXCELLENT (Germany)",
+    "In-vitro antioxidant testing completed"
+   ],
+   "ingredients": [
+    {
+     "name": "Sea buckthorn water",
+     "amount": "58.9%",
+     "role": "Replaces purified water as the brightening base."
+    },
+    {
+     "name": "White truffle / collagen water / moisturising oil",
+     "amount": "8% each",
+     "role": "This is where the '8%' in the name comes from."
+    },
+    {
+     "name": "Vitamin C · glutathione",
+     "amount": "99% / 98% purity",
+     "role": "Brightening."
+    },
+    {
+     "name": "Trufferol™ · Truvita™",
+     "role": "d'Alba's own firming and glow ingredients."
+    }
+   ],
+   "figures": [
+    {
+     "label": "Lifting",
+     "value": "49.58%",
+     "note": "2 weeks"
+    },
+    {
+     "label": "Wrinkles",
+     "value": "25.81%",
+     "note": "2 weeks"
+    },
+    {
+     "label": "Skin tone",
+     "value": "1.15%",
+     "note": "2 weeks"
+    }
+   ],
+   "testNote": "Korea Institute of Dermatological Sciences / 21 people / 2 weeks / individual variation.",
+   "howto": [
+    {
+     "name": "Basic",
+     "how": "Hold it 10–20cm away, close your eyes, mist the whole face, then press it in."
+    }
+   ],
+   "say": [
+    {
+     "line": "Two weeks in, lifting improved 49.58%.",
+     "why": "The largest of the three figures. It ran at the Korea Institute of Dermatological Sciences with 21 people over two weeks, and individual variation applies."
+    },
+    {
+     "line": "The 8% in the name means truffle, collagen water and moisturising oil at 8% each.",
+     "why": "Commonly misread, so it's worth clearing up."
+    },
+    {
+     "line": "The scent was made with an Italian perfumer — citrus at the start, musk at the end.",
+     "why": "Top is citrus and herbs, heart is rose, lily of the valley and pear, base is musk. Scent talk can't be argued with."
+    }
+   ],
+   "careful": [
+    "**Skin tone improved 1.15% — that is a very small number.** Saying it in the same breath as the lifting figure invites misreading.",
+    "**There are two packages in circulation.** The old one reads `AROMATIC SPRAY SERUM`, the current one `VITA TONING ANTI-AGING SERUM`."
+   ]
+  }
  },
  "white-truffle-first-spray-serum": {
   "한줄": "뿌리는 올인원 세럼. 토너·미스트·세럼·에센스를 한 번에 대신하자는 제품이고 달바의 스테디셀러입니다.",
