@@ -7,7 +7,6 @@ import {
   products,
   type Brief,
   type Doc,
-  type Product,
   type Section,
 } from "@/lib/products";
 
@@ -43,8 +42,18 @@ function BriefBlock({ brief }: { brief: Brief }) {
               {f.조건 && <span className="pw-fig-cond">{f.조건}</span>}
             </div>
           ))}
-          {brief.시험출처 && <p className="pw-fig-src">{brief.시험출처}</p>}
         </div>
+      )}
+
+      {/* 수치가 없어도 시험 조건은 알려야 한다. 수치 타일 안에만 두면 조용히 사라진다. */}
+      {brief.시험조건 && <p className="pw-fig-src">{brief.시험조건}</p>}
+
+      {!!brief.인증?.length && (
+        <p className="pw-certs">
+          {brief.인증.map((c) => (
+            <span key={c}>{c}</span>
+          ))}
+        </p>
       )}
 
       {!!brief.핵심성분?.length && (
@@ -118,54 +127,6 @@ export async function generateMetadata({
   const { slug } = await params;
   const p = getProduct(slug);
   return { title: p ? `${p.ko} — 달바 제품 교안` : "달바 제품 교안" };
-}
-
-/**
- * 모든 제품이 같은 목차를 갖는다.
- * 교안에 내용이 없어도 항목을 빼지 않고 "교안에 없습니다" 로 남긴다 —
- * 제품마다 페이지 구성이 달라지면 무엇이 빠졌는지 알 수가 없기 때문이다.
- */
-const SECTIONS = [
-  { id: "images", label: "이미지" },
-  { id: "features", label: "제품 특징" },
-  { id: "ingredients", label: "성분" },
-  { id: "texture", label: "제형 · 기술 · 향" },
-  { id: "tests", label: "시험 · 인증" },
-  { id: "howto", label: "사용법" },
-  { id: "who", label: "이런 분께" },
-  { id: "gaps", label: "확인 필요" },
-  { id: "raw", label: "교안 원문" },
-] as const;
-
-type SectionId = (typeof SECTIONS)[number]["id"];
-
-/** 목차를 흐리게 표시할지 정하려고, 섹션별로 내용이 있는지 미리 센다. */
-function hasContent(p: Product, id: SectionId, imageCount: number): boolean {
-  switch (id) {
-    case "images":
-      return imageCount > 0;
-    case "features":
-      return p.특징.length > 0;
-    case "ingredients":
-      return (p.섹션.성분?.length ?? 0) > 0;
-    case "texture":
-      return ["제형", "기술", "향"].some((k) => p.섹션[k]?.length);
-    case "tests":
-      return (
-        p.시험.length > 0 ||
-        p.문서.length > 0 ||
-        p.수치문장.length > 0 ||
-        (p.섹션.시험?.length ?? 0) > 0
-      );
-    case "howto":
-      return (p.섹션.사용법?.length ?? 0) > 0 || p.용기메모.length > 0 || !!p.사용법이미지;
-    case "who":
-      return p.니즈.length > 0 || (p.섹션.추천?.length ?? 0) > 0;
-    case "gaps":
-      return true; // 없는 항목이 없으면 "없음" 이라고 적어 준다
-    case "raw":
-      return p.원문.length > 0;
-  }
 }
 
 function Empty({ what }: { what: string }) {
@@ -247,9 +208,6 @@ export default async function ProductPage({
 
   const imgs = getImages(slug);
   const brief = getBrief(slug);
-  const filled = new Set(
-    SECTIONS.filter((s) => hasContent(p, s.id, imgs.length)).map((s) => s.id),
-  );
 
   const spec: [string, string | undefined][] = [
     ["용량 · 가격", p.스펙.용량가격],
@@ -258,8 +216,16 @@ export default async function ProductPage({
     ["기능성", p.스펙.기능성],
     ["타겟", p.스펙.타겟],
   ];
-  const 제형기술향 = ["제형", "기술", "향"].flatMap((k) => p.섹션[k] ?? []);
-  const 주의메모 = p.이미지메모.filter((m) => m.주의);
+
+  // 교안 원문은 한 곳에 모아 접어 둔다. 전성분 나열처럼 크리에이터가 볼 일 없는
+  // 내용이 많아서, 근거를 확인할 사람만 펼쳐 보게 한다.
+  const 원문섹션: [string, Section[]][] = [
+    ["성분", p.섹션.성분 ?? []],
+    ["제형 · 기술 · 향", ["제형", "기술", "향"].flatMap((k) => p.섹션[k] ?? [])],
+    ["시험", p.섹션.시험 ?? []],
+    ["사용법", p.섹션.사용법 ?? []],
+    ["추천 대상", p.섹션.추천 ?? []],
+  ];
 
   return (
     <main className="pw-main">
@@ -278,28 +244,27 @@ export default async function ProductPage({
             </div>
           ))}
         </dl>
-        {p.포지셔닝?.문구 && <p className="pw-hook">{p.포지셔닝.문구}</p>}
-        {!!p.포지셔닝?.태그.length && (
-          <p className="pw-tags">
-            {p.포지셔닝.태그.map((t) => (
-              <span key={t}>{t}</span>
-            ))}
-          </p>
-        )}
       </header>
 
-      {brief && <BriefBlock brief={brief} />}
+      {brief ? (
+        <BriefBlock brief={brief} />
+      ) : (
+        <p className="pw-empty" style={{ marginTop: 26 }}>
+          이 제품은 아직 브리프를 쓰지 않았습니다. 아래 교안 원문을 참고하세요.
+        </p>
+      )}
 
       <nav className="pw-toc" aria-label="목차">
         {brief && <a href="#brief">브리프</a>}
-        {SECTIONS.map((s) => (
-          <a key={s.id} href={`#${s.id}`} className={filled.has(s.id) ? undefined : "off"}>
-            {s.label}
-          </a>
-        ))}
+        <a href="#images" className={imgs.length ? undefined : "off"}>
+          이미지
+        </a>
+        <a href="#features" className={p.특징.length ? undefined : "off"}>
+          제품 특징
+        </a>
+        <a href="#source">교안 원문</a>
       </nav>
 
-      {/* 01 이미지 */}
       <section className="pw-sec" id="images">
         <h2>이미지</h2>
         {imgs.length ? (
@@ -317,9 +282,9 @@ export default async function ProductPage({
         )}
       </section>
 
-      {/* 02 제품 특징 */}
       <section className="pw-sec" id="features">
         <h2>제품 특징</h2>
+        <p className="pw-note">교안의 [제품 특징 및 베네핏] 을 그대로 옮긴 것입니다.</p>
         {p.특징.length ? (
           <ol className="pw-feat">
             {p.특징.map((f, i) => (
@@ -336,200 +301,11 @@ export default async function ProductPage({
         )}
       </section>
 
-      {/* 03 성분 */}
-      <section className="pw-sec" id="ingredients">
-        <h2>성분</h2>
-        {p.섹션.성분?.length ? <Blocks items={p.섹션.성분} /> : <Empty what="성분 설명" />}
-      </section>
-
-      {/* 04 제형 · 기술 · 향 */}
-      <section className="pw-sec" id="texture">
-        <h2>제형 · 기술 · 향</h2>
-        {제형기술향.length ? <Blocks items={제형기술향} /> : <Empty what="제형·기술·향" />}
-      </section>
-
-      {/* 05 시험 · 인증 */}
-      <section className="pw-sec" id="tests">
-        <h2>시험 · 인증</h2>
-        {filled.has("tests") ? (
-          <>
-            {!!p.시험.length && (
-              <>
-                <p className="pw-note">
-                  아래 값은 교안의 그래프 <b>이미지 안에서 직접 읽은 것</b>입니다. 교안
-                  텍스트에는 없습니다.
-                </p>
-                <div className="pw-tests">
-                  {p.시험.map((t) => (
-                    <div className="pw-test" key={t.no + t.name}>
-                      <div className="pw-test-top">
-                        <span className="pw-test-no">{t.no}</span>
-                        <span className="pw-test-name">{t.name}</span>
-                        <span className="pw-test-fig">{t.표시값 ?? t.figure}</span>
-                      </div>
-                      {t.before !== undefined && t.after !== undefined && (
-                        <p className="pw-readout">
-                          <span>사용 전</span>
-                          <b>{t.표시전 ?? t.before.toLocaleString()}</b>
-                          <span className="pw-arrow">→</span>
-                          <span>{t.condition ?? "사용 후"}</span>
-                          <b>{t.표시후 ?? t.after.toLocaleString()}</b>
-                        </p>
-                      )}
-                      <dl className="pw-mini">
-                        {t.condition && (
-                          <div>
-                            <dt>조건</dt>
-                            <dd>{t.condition}</dd>
-                          </div>
-                        )}
-                        {t.footnote && (
-                          <div>
-                            <dt>각주</dt>
-                            <dd>{t.footnote}</dd>
-                          </div>
-                        )}
-                      </dl>
-                      {t.주의 && <p className="pw-warn">{t.주의}</p>}
-                    </div>
-                  ))}
-                </div>
-              </>
-            )}
-
-            {!!p.섹션.시험?.length && (
-              <div className="pw-sub">
-                <h3 className="pw-subhead">교안의 시험 슬라이드</h3>
-                <Blocks items={p.섹션.시험} />
-              </div>
-            )}
-
-            {!!p.수치문장.length && (
-              <div className="pw-sub">
-                <h3 className="pw-subhead">그 밖에 수치가 들어간 문장</h3>
-                <ul className="pw-claims">
-                  {p.수치문장.map((c, i) => (
-                    <li key={i}>
-                      <span className="pw-slideno">{c.슬라이드}</span>
-                      {c.문장}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            {!!p.문서.length && (
-              <div className="pw-sub">
-                <h3 className="pw-subhead">인증서 · 시험성적서</h3>
-                <p className="pw-note">
-                  일부 문서에는 신청인의 성명과 생년월일이 찍혀 있어{" "}
-                  <b>원본 이미지는 싣지 않았습니다.</b> 내용만 옮겨 적었습니다.
-                </p>
-                <div className="pw-docs">
-                  {p.문서.map((d, i) => (
-                    <DocCard doc={d} key={i} />
-                  ))}
-                </div>
-              </div>
-            )}
-          </>
-        ) : (
-          <Empty what="시험·인증" />
-        )}
-      </section>
-
-      {/* 06 사용법 */}
-      <section className="pw-sec" id="howto">
-        <h2>사용법</h2>
-        {filled.has("howto") ? (
-          <>
-            {p.사용법이미지 && <p className="pw-block-line">{p.사용법이미지.text}</p>}
-            {!!p.섹션.사용법?.length && <Blocks items={p.섹션.사용법} />}
-            {!!p.용기메모.length && (
-              <div className="pw-sub">
-                <h3 className="pw-subhead">용기 · 보관</h3>
-                <div className="pw-blocks">
-                  {p.용기메모.map((n, i) => (
-                    <div className="pw-block" key={i}>
-                      <p className="pw-block-head">
-                        <span>{n.kind}</span>
-                      </p>
-                      <p className="pw-block-line">{n.text}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-          </>
-        ) : (
-          <Empty what="사용법" />
-        )}
-      </section>
-
-      {/* 07 이런 분께 */}
-      <section className="pw-sec" id="who">
-        <h2>이런 분께</h2>
-        {filled.has("who") ? (
-          <>
-            {!!p.니즈.length && (
-              <ul className="pw-plain">
-                {p.니즈.map((n, i) => (
-                  <li key={i}>{n}</li>
-                ))}
-              </ul>
-            )}
-            {!!p.섹션.추천?.length && (
-              <div className="pw-sub">
-                <h3 className="pw-subhead">교안의 추천 대상</h3>
-                <Blocks items={p.섹션.추천} />
-              </div>
-            )}
-          </>
-        ) : (
-          <Empty what="대상 고객" />
-        )}
-      </section>
-
-      {/* 08 확인 필요 */}
-      <section className="pw-sec" id="gaps">
-        <h2>확인 필요</h2>
-        {p.없는항목.length || 주의메모.length ? (
-          <>
-            {!!p.없는항목.length && (
-              <>
-                <p className="pw-note">
-                  교안에 없는 항목입니다. 추측으로 채우지 않았으니 필요하면 상품기획팀에
-                  확인해야 합니다.
-                </p>
-                <ul className="pw-gaps">
-                  {p.없는항목.map((g) => (
-                    <li key={g}>{g}</li>
-                  ))}
-                </ul>
-              </>
-            )}
-            {!!주의메모.length && (
-              <div className="pw-sub">
-                <h3 className="pw-subhead">교안 안에서 서로 어긋나는 것</h3>
-                <div className="pw-docs">
-                  {주의메모.map((d, i) => (
-                    <DocCard doc={d} key={i} />
-                  ))}
-                </div>
-              </div>
-            )}
-          </>
-        ) : (
-          <p className="pw-empty">확인이 필요한 항목이 없습니다.</p>
-        )}
-      </section>
-
-      {/* 09 교안 원문 */}
-      <section className="pw-sec" id="raw">
+      <section className="pw-sec" id="source">
         <h2>교안 원문</h2>
         <p className="pw-note">
-          슬라이드 {p.슬라이드수}장 전체입니다. 위에서 분류되지 않은 내용도 여기에는 남아
-          있습니다.
+          담당자가 근거를 확인할 때 쓰는 자료입니다. 전성분 나열처럼 방송에서 쓸 일 없는
+          내용도 그대로 들어 있습니다. 슬라이드 {p.슬라이드수}장 전체.
           {!!p.판독대상슬라이드.length && (
             <>
               {" "}
@@ -538,40 +314,126 @@ export default async function ProductPage({
             </>
           )}
         </p>
-        {p.원문.map((s) => (
-          <details className="pw-raw" key={s.no}>
+
+        {원문섹션
+          .filter(([, items]) => items.length)
+          .map(([label, items]) => (
+            <details className="pw-fold" key={label}>
+              <summary>
+                {label}
+                <span className="pw-fold-n">{items.length}</span>
+              </summary>
+              <div className="pw-fold-body">
+                <Blocks items={items} />
+              </div>
+            </details>
+          ))}
+
+        {!!p.수치문장.length && (
+          <details className="pw-fold">
             <summary>
-              <span className="pw-slideno">{s.no}</span>
-              <span className="pw-raw-title">{s.제목 || "(제목 없음)"}</span>
-              {s.이미지수 > 0 && <span className="pw-imgcount">이미지 {s.이미지수}</span>}
+              수치가 들어간 문장
+              <span className="pw-fold-n">{p.수치문장.length}</span>
             </summary>
-            <div className="pw-raw-body">
-              {s.내용.map((line, i) => (
-                <p className="pw-block-line" key={i}>
-                  {line}
-                </p>
-              ))}
-              {s.표.map((table, ti) => (
-                <div className="pw-tablewrap" key={ti}>
-                  <table>
-                    <tbody>
-                      {table.map((row, ri) => (
-                        <tr key={ri}>
-                          {row.map((cell, ci) =>
-                            ri === 0 ? <th key={ci}>{cell}</th> : <td key={ci}>{cell}</td>,
-                          )}
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              ))}
-              {!s.내용.length && !s.표.length && (
-                <p className="pw-block-line pw-muted">이 슬라이드에는 글자가 없습니다.</p>
-              )}
+            <div className="pw-fold-body">
+              <ul className="pw-claims">
+                {p.수치문장.map((c, i) => (
+                  <li key={i}>
+                    <span className="pw-slideno">{c.슬라이드}</span>
+                    {c.문장}
+                  </li>
+                ))}
+              </ul>
             </div>
           </details>
-        ))}
+        )}
+
+        {!!p.문서.length && (
+          <details className="pw-fold">
+            <summary>
+              인증서 · 시험성적서
+              <span className="pw-fold-n">{p.문서.length}</span>
+            </summary>
+            <div className="pw-fold-body">
+              <p className="pw-note">
+                일부 문서에는 신청인의 성명과 생년월일이 찍혀 있어{" "}
+                <b>원본 이미지는 싣지 않았습니다.</b>
+              </p>
+              <div className="pw-docs">
+                {p.문서.map((d, i) => (
+                  <DocCard doc={d} key={i} />
+                ))}
+              </div>
+            </div>
+          </details>
+        )}
+
+        {!!p.없는항목.length && (
+          <details className="pw-fold">
+            <summary>
+              교안에 없는 항목
+              <span className="pw-fold-n">{p.없는항목.length}</span>
+            </summary>
+            <div className="pw-fold-body">
+              <ul className="pw-gaps">
+                {p.없는항목.map((g) => (
+                  <li key={g}>{g}</li>
+                ))}
+              </ul>
+            </div>
+          </details>
+        )}
+
+        <details className="pw-fold">
+          <summary>
+            슬라이드별 원문
+            <span className="pw-fold-n">{p.원문.length}</span>
+          </summary>
+          <div className="pw-fold-body">
+            {p.원문.map((s) => (
+              <details className="pw-raw" key={s.no}>
+                <summary>
+                  <span className="pw-slideno">{s.no}</span>
+                  <span className="pw-raw-title">{s.제목 || "(제목 없음)"}</span>
+                  {s.이미지수 > 0 && (
+                    <span className="pw-imgcount">이미지 {s.이미지수}</span>
+                  )}
+                </summary>
+                <div className="pw-raw-body">
+                  {s.내용.map((line, i) => (
+                    <p className="pw-block-line" key={i}>
+                      {line}
+                    </p>
+                  ))}
+                  {s.표.map((table, ti) => (
+                    <div className="pw-tablewrap" key={ti}>
+                      <table>
+                        <tbody>
+                          {table.map((row, ri) => (
+                            <tr key={ri}>
+                              {row.map((cell, ci) =>
+                                ri === 0 ? (
+                                  <th key={ci}>{cell}</th>
+                                ) : (
+                                  <td key={ci}>{cell}</td>
+                                ),
+                              )}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  ))}
+                  {!s.내용.length && !s.표.length && (
+                    <p className="pw-block-line pw-muted">
+                      이 슬라이드에는 글자가 없습니다.
+                    </p>
+                  )}
+                </div>
+              </details>
+            ))}
+          </div>
+        </details>
       </section>
     </main>
   );

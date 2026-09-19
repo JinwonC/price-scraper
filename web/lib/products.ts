@@ -127,7 +127,10 @@ export type Brief = {
   누구에게?: string;
   핵심성분?: { 이름: string; 함량?: string; 역할: string }[];
   근거수치?: { 항목: string; 값: string; 조건?: string }[];
-  시험출처?: string;
+  /** 수치의 시험 조건 한 줄. 보고서 번호·기관 주소 같은 건 넣지 않는다. */
+  시험조건?: string;
+  /** 어떤 인증이 있는지 이름만. 인증서 번호나 성적서 내용은 교안 원문에 있다. */
+  인증?: string[];
   사용법?: { 이름: string; 방법: string }[];
   말할때?: { 문장: string; 근거: string }[];
   주의?: string[];
