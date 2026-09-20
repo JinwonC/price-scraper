@@ -1,13 +1,13 @@
 {
  "_주": "사람이 직접 쓴 제품 브리프. build_products.py 가 덮어쓰지 않는다.",
  "_원칙": [
-  "크리에이터가 보는 화면이다. 단정해서 쓴다.",
-  "'교안에 없다', '판독 못 했다', '확인 전에는' 은 쓰지 않는다. 애매하면 확실한 쪽만 적는다.",
-  "주의는 금지 목록이 아니다. 틀리면 문제가 되는 것만 짧게 적고, 대신 할 수 있는 말을 준다.",
-  "수치는 교안에 인쇄된 그대로. 조건(1회/2주, 즉각적·일시적)을 반드시 붙인다.",
+  "크리에이터가 읽고 바로 쓰는 글이다. 단정해서 쓴다.",
+  "'이건 말하지 마세요' 식의 경고는 쓰지 않는다. 대신 말할 수 있는 것만 싣는다.",
+  "근거가 약하거나 조건이 복잡해 오해를 부를 내용은 아예 싣지 않는다. 경고를 달아 남겨 두지 않는다.",
+  "수치는 브랜드 자료에 인쇄된 그대로 쓰고, 조건(1회/2주, 즉각적·일시적, 함께 쓴 제품)은 수치 옆에 붙인다.",
   "전성분 나열, 시험성적서 번호, 보고서 코드, 가격, 출시일은 넣지 않는다.",
-  "인증은 이름만 적는다.",
-  "조향사 생년월일처럼 교안에 있는 개인정보는 옮기지 않는다."
+  "인증은 현재 유효한 것만 이름으로 적는다.",
+  "조향사 생년월일처럼 자료에 있는 개인정보는 옮기지 않는다."
  ],
  "vita-toning-serum-toner": {
   "한줄": "농축된 세럼이 손에서 굴리면 물처럼 풀리는 토너. 기초 첫 단계에서 미백·주름 케어를 같이 하려는 제품입니다.",
@@ -90,12 +90,6 @@
     "근거": "22명 대상 인체적용시험. \"브랜드 시험에서\", \"개인차가 있다\"를 꼭 같이 말하세요."
    }
   ],
-  "주의": [
-   "**주름 26.08%, 기미·잡티 15.5% 두 숫자만 쓰세요.** 같은 시험의 피부 톤 1.49% 를 같이 말하면 설득력이 떨어집니다.",
-   "**나이아신아마이드는 함량 없이 말하세요.** 자료 표기가 2% 와 200,000ppm 으로 엇갈립니다.",
-   "**브랜드 자료의 '만족도 100%' 는 설문 결과입니다.** '보통 이상 긍정' 응답 비율이라 방송에서 쓰면 안 됩니다.",
-   "미백은 '화사하게 가꾼다' 범위입니다."
-  ],
   "en": {
    "lead": "A toner that behaves like a serum — thick when you pour it, watery as you spread it. The first step of a brightening routine.",
    "who": "Anyone with dull, dry skin who wants brightening care from the toner step",
@@ -170,12 +164,6 @@
      "line": "It's 180ml, so you can soak a cotton pad and use it as a three-minute mask.",
      "why": "A large toner used generously is a real selling point."
     }
-   ],
-   "careful": [
-    "**Use only the two figures: wrinkles 26.08% and dark spots 15.5%.** The same study put tone at 1.49%, which weakens the case if you say it.",
-    "**Mention niacinamide without a percentage.** The brand gives 2% in one place and 200,000ppm in another.",
-    "**The brand's '100% satisfaction' is a survey result** — the share who answered neutral-or-better. Don't use it on air.",
-    "Brightening here means helping skin look clearer. Don't let it sound like bleaching or treatment."
    ]
   }
  },
@@ -241,12 +229,6 @@
     "문장": "2주 썼을 때 주름 25.81%, 기미·잡티 21.18% 개선이 나왔습니다.",
     "근거": "한국피부과학연구원에서 22명을 대상으로 본 결과입니다. 기관·인원·기간·개인차를 같이 말하세요."
    }
-  ],
-  "주의": [
-   "**주름 25.81%, 기미·잡티 21.18% 두 숫자만 쓰세요.** 같은 시험의 피부톤 1.64% 를 같이 말하면 설득력이 떨어집니다.",
-   "**나이아신아마이드는 함량 없이 말하세요.** 자료 표기가 2% 와 200,000ppm 으로 엇갈립니다.",
-   "**브랜드 자료의 '만족도 100%' 는 설문 결과입니다.** 측정값이 아니라 '보통 이상 긍정' 응답 비율이라 방송에서 쓰면 안 됩니다.",
-   "'4만 캡슐' 은 회사가 계산한 값입니다. '4만 개 정도' 로 말하세요."
   ],
   "근거수치": [
    {
@@ -336,12 +318,6 @@
      "line": "Two weeks in, wrinkles improved 25.81% and dark spots 21.18%.",
      "why": "Measured at the Korea Institute of Dermatological Sciences with 22 people. Say the institute, the number of people, the timeframe and individual variation alongside it."
     }
-   ],
-   "careful": [
-    "**Skin tone improved 1.64% — that is a very small number.** Saying it beside the 25.81% wrinkle figure invites misreading.",
-    "**Niacinamide is written as both 2% and 200,000ppm (= 20%) in the brand material.** Those are ten times apart.",
-    "'40,000 capsules' is the brand's own figure, calculated internally and varying batch to batch. It is not a count anyone made.",
-    "The nano process is a manufacturing method. It does not mean the effect is three times stronger."
    ]
   }
  },
@@ -408,11 +384,6 @@
     "근거": "인체적용시험. \"브랜드 시험\", \"개인차\"를 같이 말하세요."
    }
   ],
-  "주의": [
-   "**피부 톤 개선 1.59%는 세 수치 중 가장 작습니다.**",
-   "**패키지가 두 가지입니다.** `CAPSULE CREAM`과 `CAPSULE MOISTURIZING CREAM`이 브랜드 자료에 같이 있습니다. 어느 쪽이 현행인지 확인하세요.",
-   "특허는 캡슐 제형에 대한 것입니다. 효능 특허가 아닙니다."
-  ],
   "en": {
    "lead": "A brightening moisturiser with vitamin capsules set into it. The more you work it in, the more they melt and spread.",
    "who": "Anyone whose skin stays dry however much water they add, but who hates a sticky finish",
@@ -475,11 +446,6 @@
      "line": "Two weeks in, wrinkles improved 25.41% and dark spots 17.21%.",
      "why": "Measured at the Korea Institute of Dermatological Sciences with 22 people. Say the timeframe and that results vary."
     }
-   ],
-   "careful": [
-    "**Use only the two figures: wrinkles 25.41% and dark spots 17.21%.** The same study put tone at 1.59%, which is small enough to undercut the others.",
-    "**Two packages exist** — `CAPSULE CREAM` and `CAPSULE MOISTURIZING CREAM`. Same product; check which one you're holding.",
-    "The patent covers the capsule format, not an efficacy claim."
    ]
   }
  },
@@ -526,12 +492,6 @@
     "문장": "정제수 대신 장미꽃수를 80% 넘게 넣었습니다.",
     "근거": "브랜드 자료의 핵심 숫자이고 확인 가능한 사실입니다."
    }
-  ],
-  "주의": [
-   "**나이아신아마이드는 함량 없이 말하세요.** 자료 표기가 2% 와 200,000ppm 으로 엇갈립니다.",
-   "**비건 인증이 아직 '예정' 으로 적혀 있습니다.** 비건 이야기는 빼고 '저자극 테스트 완료' 로 가세요.",
-   "'4만 캡슐' 은 회사가 계산한 값입니다. '4만 개 정도' 로 말하세요.",
-   "수치 시험이 없습니다. 다마스크장미꽃수 80.34% 와 캡슐이 녹는 장면으로 이야기를 끌고 가세요."
   ],
   "en": {
    "lead": "A two-layer serum with vitamin capsules floating over a base of 80.34% damask rose water.",
@@ -588,12 +548,6 @@
      "line": "The base and the capsules are 98.5 to 1.5, so it stays light.",
      "why": "Explains why a capsule serum doesn't feel heavy."
     }
-   ],
-   "careful": [
-    "**Mention niacinamide without a percentage.** The brand gives 2% in one place and 200,000ppm in another.",
-    "**Vegan certification is still listed as pending.** Leave vegan out and lead with the completed irritation test.",
-    "'40,000 capsules' is a company estimate. Say 'around 40,000'.",
-    "There are no test figures. Build the story around the 80.34% rose water and the capsules melting."
    ]
   }
  },
@@ -653,10 +607,6 @@
     "근거": "브랜드 자료에 쿨링팁 적용이 명시돼 있습니다. 사용감 이야기라 안전합니다."
    }
   ],
-  "주의": [
-   "**1.71배·1.66배는 같은 크림을 손으로 바를 때와 비교한 값입니다.** '기기로 문지르면 손으로 바를 때보다 이만큼 낫다' 로 말하세요.",
-   "갈바닉은 흡수를 돕는 기능입니다. 시술이나 치료에 빗대지 마세요."
-  ],
   "en": {
    "lead": "An eye cream with a galvanic vibrating tip on the end of the tube. You apply it and rub it in with the tip itself.",
    "who": "Anyone treating dark spots and fine lines around the eyes at the same time",
@@ -712,10 +662,6 @@
      "line": "The tip is cooling, so it feels cold on the eye area.",
      "why": "The brand material specifies a cooling tip. A sensory claim, so it's safe ground."
     }
-   ],
-   "careful": [
-    "**1.71× and 1.66× are 'compared with applying by hand'.** They are not measured against doing nothing at all.",
-    "Galvanic here is a device function that helps absorption. It is not a medical device and you cannot claim a treatment effect."
    ]
   }
  },
@@ -775,16 +721,12 @@
    },
    {
     "문장": "이름의 8%는 트러플·콜라겐수·보습오일을 각각 8%씩 넣었다는 뜻이에요.",
-    "근거": "자주 오해받는 부분이라 짚어주면 좋습니다."
+    "근거": "세 성분을 각각 8% 씩 넣었다는 뜻입니다. 한 번 짚어 주면 이름이 바로 이해됩니다."
    },
    {
     "문장": "향은 이탈리아 조향사와 협업한 아로마틱 시트러스 플로럴이에요. 시트러스로 시작해서 머스크로 끝납니다.",
     "근거": "TOP 시트러스·허브 / MIDDLE 로즈·은방울꽃·배 / BASE 머스크. 향 이야기는 반박당할 일이 없습니다."
    }
-  ],
-  "주의": [
-   "**리프팅 49.58%, 주름 25.81% 두 숫자만 쓰세요.** 같은 시험의 피부톤 1.15% 를 같이 말하면 전체가 의심스러워 보입니다.",
-   "**패키지가 두 가지입니다.** 구 패키지는 `AROMATIC SPRAY SERUM`, 현행은 `VITA TONING ANTI-AGING SERUM` 입니다. 같은 제품입니다."
   ],
   "en": {
    "lead": "A concentrated serum you mist on, with white truffle, collagen water and moisturising oil at 8% each.",
@@ -842,16 +784,12 @@
     },
     {
      "line": "The 8% in the name means truffle, collagen water and moisturising oil at 8% each.",
-     "why": "Commonly misread, so it's worth clearing up."
+     "why": "It means three ingredients at 8% each. Spell it out once and the name makes sense."
     },
     {
      "line": "The scent was made with an Italian perfumer — citrus at the start, musk at the end.",
      "why": "Top is citrus and herbs, heart is rose, lily of the valley and pear, base is musk. Scent talk can't be argued with."
     }
-   ],
-   "careful": [
-    "**Skin tone improved 1.15% — that is a very small number.** Saying it in the same breath as the lifting figure invites misreading.",
-    "**There are two packages in circulation.** The old one reads `AROMATIC SPRAY SERUM`, the current one `VITA TONING ANTI-AGING SERUM`."
    ]
   }
  },
@@ -889,11 +827,6 @@
     "문장": "향은 이탈리아 조향사와 협업한 겁니다. 경력 30년이에요.",
     "근거": "아로마틱 시트러스 플로럴. 스테디셀러가 된 이유 중 하나가 향입니다."
    }
-  ],
-  "주의": [
-   "**이 제품은 보습·광채 쪽입니다.** 같은 라인의 바이탈 스프레이 세럼은 진정 쪽입니다.",
-   "**'설페이트 불검출' 성적서에는 '참고용' 도장이 찍혀 있습니다.** 공식 시험 결과로 말하지 말고 '설페이트계 계면활성제를 쓰지 않았다' 로 가세요.",
-   "수치 시험이 없습니다. 항목으로 말하세요 — 각질, 깊은 속보습, 광채, 결, 수분 레이어드 인체적용시험 완료."
   ],
   "en": {
    "lead": "The product that made d'Alba. One spray serum standing in for a toner, a mist, a serum and an essence.",
@@ -937,11 +870,6 @@
      "line": "It covers toner, mist, serum and essence, so it cuts steps out.",
      "why": "A convenience claim, so it's safe ground."
     }
-   ],
-   "careful": [
-    "**This one is for moisture and glow.** The Vital Spray Serum in the same line is for calming.",
-    "**The 'sulphate-free' certificate is stamped 'for reference'.** Don't present it as an official test result — say the product doesn't use sulphate surfactants.",
-    "There are no figures. Name the measures: dead skin, deep hydration, glow, texture and moisture layering."
    ]
   }
  },
@@ -987,10 +915,6 @@
     "문장": "향은 시그니처 아로마틱 시트러스 플로럴에 로지 플로럴을 섞었습니다.",
     "근거": "퍼스트 스프레이 세럼과 향이 다릅니다. 구분해서 말해주면 좋습니다."
    }
-  ],
-  "주의": [
-   "**이 제품은 진정 쪽입니다.** 같은 라인의 퍼스트 스프레이 세럼은 보습·광채 쪽이니 헷갈리지 마세요.",
-   "수치 시험이 없습니다. 항목으로 말하세요 — 자외선 자극 진정, 피부 결 개선 인체적용시험 완료."
   ],
   "en": {
    "lead": "The calming member of the spray serum line — red plant oils with three patented soothing and hydrating ingredients.",
@@ -1040,10 +964,6 @@
      "line": "The red colour is from the plant oils — gromwell root, rosehip, geranium and rose.",
      "why": "Visible in the bottle, and it explains itself."
     }
-   ],
-   "careful": [
-    "**This one is for calming.** The First Spray Serum in the same line is for moisture and glow — don't mix them up.",
-    "There are no figures. Name the measures: calming UV irritation and improving skin texture, both completed human trials."
    ]
   }
  },
@@ -1107,11 +1027,6 @@
     "문장": "분사 입자가 더 곱습니다. 기존이랑 나란히 두면 차이가 보여요.",
     "근거": "브랜드 자료에 분사 비교 이미지가 있습니다. 화면에 띄우기 좋습니다."
    }
-  ],
-  "주의": [
-   "**'2배' 는 전부 기존 퍼스트 스프레이 세럼과 비교한 값입니다.** 아무것도 안 썼을 때와 비교한 것이 아닙니다.",
-   "**브랜드 자료에 패키지 두 개가 있습니다.** 120ml 는 `TRUFFLE EXOSOME / Collagen Water 70%`, 100ml 는 `Peptide Exosome 8%` 로 핵심 성분 표기가 다릅니다. 실물 패키지를 확인하세요.",
-   "**아직 출시 전 제품입니다.** 수치가 바뀔 수 있습니다."
   ],
   "en": {
    "lead": "The upgraded First Spray Serum. Collagen water at 70% instead of purified water, two kinds of exosome, and double the active serum.",
@@ -1185,11 +1100,6 @@
      "line": "It's been through a non-comedogenic trial, so it suits acne-prone skin.",
      "why": "A high-performance mist that acne-prone skin can still use is a real selling point."
     }
-   ],
-   "careful": [
-    "**Every '2×' claim is against the existing First Spray Serum**, not against using nothing.",
-    "**Two packages appear in the brand material.** The 120ml reads `TRUFFLE EXOSOME / Collagen Water 70%`, the 100ml reads `Peptide Exosome 8%`. Check the actual package.",
-    "**This product hasn't launched yet.** The figures may change."
    ]
   }
  },
@@ -1265,12 +1175,6 @@
     "근거": "브랜드가 직접 답해둔 내용입니다. 리뷰에서 가장 많이 나오는 컴플레인이라 미리 말해주면 좋습니다."
    }
   ],
-  "주의": [
-   "**세정력 수치(99.67%, 91.52%)는 쓰지 마세요.** 얼굴에 인위적으로 올린 미세먼지 모사체와 인공 기재를 씻어낸 값이라, 실제 하루치 피지나 선크림과는 다릅니다. '한 번에 다 지워진다' 는 보여주는 쪽이 낫습니다.",
-   "**모공 특허의 권리자는 원료를 만든 회사입니다.** '달바가 특허를 받았다' 가 아니라 '특허받은 모공 성분이 들어 있다' 로 말하세요.",
-   "**용량은 160ml 입니다.** 자료 제품 사진의 보틀에는 150ml 로 인쇄돼 있으니 실물 패키지를 확인하세요.",
-   "**겨울에 제형이 굳는 것은 정상입니다.** 농축 제형이라 그렇고 품질에는 영향이 없습니다. 미리 말해 주면 리뷰 불만이 줄어듭니다."
-  ],
   "en": {
    "lead": "It changes twice in your hands — oil gel, then cream, then foam — standing in for a remover, a cleansing oil, a gel and a balm.",
    "who": "Anyone wanting fewer cleansing steps, and no tight feeling afterwards",
@@ -1342,12 +1246,6 @@
      "line": "If it firms up in winter, that's normal — it's a concentrated formula and it doesn't affect quality.",
      "why": "The brand material answers this directly. It's the most common review complaint, so get ahead of it."
     }
-   ],
-   "careful": [
-    "**Don't use the cleansing percentages (99.67%, 91.52%).** They come from washing off a dust simulant painted onto skin and an artificial substrate — not a real day's sebum or sunscreen. Better to show it working.",
-    "**The pore patent belongs to the company that makes the raw material.** Say 'it contains a patented pore ingredient', not 'd'Alba holds a patent'.",
-    "**The size is 160ml.** The bottle in the brand's photo is printed 150ml, so check the actual package.",
-    "**Firming up in winter is normal.** A concentrated formula, and quality isn't affected."
    ]
   }
  },
@@ -1402,10 +1300,6 @@
     "근거": "기관과 인원이 있는 몇 안 되는 제품입니다."
    }
   ],
-  "주의": [
-   "**모든 시험이 '씻어낸 직후' 의 변화입니다.** '세안하고 나면 바로 이렇게 됩니다' 로 말하면 정확합니다.",
-   "숫자 대신 항목으로 말하세요. 모공 타이트닝, 피지 감소, 트리플톤 개선, 블랙헤드 세정 — 전부 인체적용시험을 마친 항목입니다."
-  ],
   "en": {
    "lead": "A cleansing oil built like your own sebum. It melts hardened blackheads, and the powder suspended in the oil lifts debris out of pores.",
    "who": "Anyone dealing with blackheads and clogged pores who hates that tight feeling after cleansing",
@@ -1457,10 +1351,6 @@
      "line": "It's been through a human trial for blackhead cleansing.",
      "why": "Few cleansers have one with a named institute and a sample size."
     }
-   ],
-   "careful": [
-    "**Every result here is what happens right after rinsing.** 'As soon as you've washed, this is what you get' is the accurate framing.",
-    "Name the measures rather than numbers: pore tightening, less sebum, clearer tone, blackhead cleansing — all of them completed human trials."
    ]
   }
  },
@@ -1517,10 +1407,6 @@
     "근거": "패키지 설계 이야기입니다."
    }
   ],
-  "주의": [
-   "**구매 전에 세 가지를 말해 주세요.** 처음 쓸 때는 내용물이 고르게 안 나올 수 있으니 충분히 돌릴 것, 10~30도에서 보관할 것, 갈아 쓰는 구조라 잔량을 다 비울 수는 없다는 것.",
-   "'모공 탄력' 은 모공 주변 피부가 탄탄해 보인다는 뜻입니다. 모공이 작아진다는 말은 쓰지 마세요."
-  ],
   "en": {
    "lead": "A cleansing balm you grind off a fresh surface each time. No spatula, and no water ever gets in.",
    "who": "Anyone who finds balm jars unhygienic, or who wants one product for both light and full makeup",
@@ -1573,10 +1459,6 @@
      "line": "Not one drop of water gets inside the package.",
      "why": "That's the packaging rationale — vitamins don't oxidise."
     }
-   ],
-   "careful": [
-    "**Three things to tell buyers up front.** The first use may not dispense evenly — keep turning. Store it between 10 and 30°C. And the grinding container can't be emptied completely.",
-    "'Pore firmness' is the brand's own wording. It doesn't mean pores physically shrink."
    ]
   }
  },
@@ -1666,9 +1548,6 @@
     "근거": "\"즉각적이고 일시적인 효과\"라는 조건을 반드시 같이 말하세요."
    }
   ],
-  "주의": [
-   "**숫자를 말할 때 '1회 사용 직후' 를 앞에 붙이세요.** 한 장 쓰고 바로 잰 값입니다. 그 한 마디면 충분합니다."
-  ],
   "en": {
    "lead": "Two kinds of pad in one jar: 70 yellow collagen gel pads (nourish, firm) and 30 green calming peel pads (exfoliate, soothe) — 100 in total.",
    "who": "Anyone tired of buying a wipe-off pad and a sheet mask separately",
@@ -1754,10 +1633,6 @@
      "line": "Right after one use, water content at the skin's 30th layer went up 147%.",
      "why": "Always say \"immediate and temporary\" alongside it."
     }
-   ],
-   "careful": [
-    "**All four figures are 'immediately after one use, temporary'.** Dropping that condition makes the claim an overstatement.",
-    "**The brand material contradicts itself on vegan certification** — 'in progress' in one place, 'completed' in another. Don't mention it until that's confirmed."
    ]
   }
  },
@@ -1766,7 +1641,6 @@
   "누구에게": "시트가 흘러내리는 게 싫은 분, 눈가·목·팔자까지 챙기고 싶은 분",
   "인증": [
    "미백·주름개선 2중 기능성",
-   "이탈리아 V-Label 비건 인증",
    "인체 피부 일차자극(저자극) 테스트 완료",
    "우려 성분 17종 불검출"
   ],
@@ -1822,11 +1696,6 @@
     "문장": "2주 썼을 때 주름 32.85%, 기미·잡티 19.82% 개선이 나왔습니다.",
     "근거": "한국피부과학연구원에서 21명을 대상으로 본 결과입니다. '2주 사용' 과 '개인차 있음' 을 붙이세요."
    }
-  ],
-  "주의": [
-   "**V-Label 비건 인증서의 만료일이 2026년 4월 10일로 지났습니다.** 비건 이야기는 빼고, '우려 성분 17종 불검출' 과 '저자극 테스트 완료' 로 가세요.",
-   "**브랜드 자료의 '만족도 100%' 는 설문 결과입니다.** 측정값이 아니라 '보통 이상 긍정' 응답 비율이라 방송에서 쓰면 안 됩니다.",
-   "'1,000개 캡슐' 은 회사가 계산한 값입니다. '1,000개 넘게' 로 말하세요."
   ],
   "근거수치": [
    {
@@ -1914,11 +1783,6 @@
      "line": "Two weeks in, wrinkles improved 32.85% and dark spots 19.82%.",
      "why": "Measured at the Korea Institute of Dermatological Sciences with 21 people. Attach 'over two weeks' and 'results vary'."
     }
-   ],
-   "careful": [
-    "**The V-Label vegan certificate expired on 10 April 2026.** Leave vegan out and lead with 'free of 17 substances of concern' and 'primary skin irritation test completed'.",
-    "**The brand's '100% satisfaction' is a survey result** — the share who answered neutral-or-better, not a measurement. Don't use it on air.",
-    "'Over 1,000 capsules' is a company estimate. Say 'more than a thousand'."
    ]
   }
  },
@@ -1986,11 +1850,6 @@
     "근거": "트러블 걱정으로 영양 크림을 피하는 시청자에게 바로 쓰는 답입니다."
    }
   ],
-  "주의": [
-   "**리뉴얼에서 판테놀 5% 와 나이아신아마이드 2% 가 더해졌습니다.** 나이아신아마이드 덕분에 주름 단일에서 미백·주름 2중 기능성이 됐습니다.",
-   "숫자 대신 항목으로 말하세요. 안티에이징(주름·리프팅·피부 치밀도), 속보습, 속탄력, 진정, 논코메도제닉 — 전부 인체적용시험을 마친 항목입니다.",
-   "'DIY' 는 비율을 조절한다는 뜻입니다. 처방을 바꾸는 것이 아닙니다."
-  ],
   "en": {
    "lead": "One jar split between an aqua serum and an intense cream. You mix your own ratio with the spatula, to suit your skin that day.",
    "who": "Anyone who finds a water cream not enough and a rich cream too heavy",
@@ -2051,11 +1910,6 @@
      "line": "It's been through a non-comedogenic trial, so it's suitable for acne-prone skin.",
      "why": "The direct answer for viewers who avoid rich creams for fear of breakouts."
     }
-   ],
-   "careful": [
-    "**The reformulation added panthenol 5% and niacinamide 2%.** The niacinamide is what took it from wrinkle care alone to a dual claim with brightening.",
-    "Several human trials are listed as completed without figures. Name the measures instead.",
-    "'DIY' here means adjusting the ratio. It doesn't mean changing the formulation."
    ]
   }
  },
@@ -2109,10 +1963,6 @@
     "문장": "크림에 한 방울 섞어 쓰셔도 됩니다.",
     "근거": "브랜드가 제안한 사용법입니다. 30ml 6만 원대를 부담스러워하는 사람에게 답이 됩니다."
    }
-  ],
-  "주의": [
-   "**24시간이 지나면 두 층이 다시 분리됩니다.** 쓸 때마다 흔들어야 7:3 비율대로 나옵니다. 이건 불량이 아니라 설계입니다.",
-   "여러 인체적용시험이 '완료' 로만 적혀 있고 수치가 없습니다. 항목으로 말하세요 — 즉각 보습, 100시간 보습 지속, 속탄력, 안티에이징, 피부결."
   ],
   "en": {
    "lead": "Serum and oil held apart at 7:3 in one bottle. They separate again over 24 hours, so you shake it every time.",
@@ -2174,10 +2024,6 @@
      "line": "100-hour moisture retention has been through a human trial.",
      "why": "Say the measure rather than a number — the brand lists it as completed."
     }
-   ],
-   "careful": [
-    "**The two layers separate again after 24 hours.** Shake before every use or you won't get the 7:3 ratio.",
-    "Several human trials are listed as completed without figures. Name the measures instead — immediate hydration, 100-hour retention, deep firmness, anti-ageing, texture."
    ]
   }
  },
@@ -2214,10 +2060,6 @@
     "문장": "향이 아쿠아 프레쉬 플로럴이라 다른 달바 제품이랑 달라요. 로즈랑 베르가못이 들어갑니다.",
     "근거": "시그니처 향이 아닌 유일한 축에 드는 제품입니다."
    }
-  ],
-  "주의": [
-   "**쿨링은 '1회 사용으로 피부 온도 감소에 도움' 표현까지입니다.** 몇 도 내려간다고 말하지 말고 '뿌리면 시원하다' 로 가세요.",
-   "빙하수 80% 는 정제수를 대체했다는 뜻입니다. 나머지 20% 에 나머지 성분이 다 들어갑니다."
   ],
   "en": {
    "lead": "A mist built on 80% Canadian glacier water. It stands in for a toner, a mist, a serum and an essence, and it cools the skin.",
@@ -2266,10 +2108,6 @@
      "line": "It covers toner, mist, serum and essence, so it cuts steps out of your routine.",
      "why": "A convenience claim, which is safe ground."
     }
-   ],
-   "careful": [
-    "**The cooling claim goes as far as 'one use helps lower skin temperature'.** Don't give a number of degrees — say it feels cool.",
-    "80% glacier water means it replaced purified water. Everything else fits into the remaining 20%."
    ]
   }
  },
@@ -2319,10 +2157,6 @@
     "문장": "크림 대신 쓰는 로션이에요. 답답하지 않고 메이크업 전에 쓰기 좋습니다.",
     "근거": "제품의 포지션 자체이고, 브랜드 자료에 메이크업 베이스 사용법이 따로 적혀 있습니다."
    }
-  ],
-  "주의": [
-   "**기능성 표시는 나이아신아마이드 때문에 붙습니다.** 미백·주름개선 기능성입니다.",
-   "수치 시험이 없는 제품입니다. 밀키한 흡수와 메이크업 전 단계라는 쓰임새로 이야기를 끌고 가세요."
   ],
   "en": {
    "lead": "A milky brightening lotion for the base step — for skin that stays dry however much ampoule and cream you put on it.",
@@ -2380,10 +2214,6 @@
      "line": "Less oil than a cream, but enough moisture — so makeup doesn't slide.",
      "why": "A texture claim, so it's safe, and it answers a real complaint."
     }
-   ],
-   "careful": [
-    "**The functional claim comes from niacinamide** — brightening and wrinkle care.",
-    "There are no test figures for this one. Lead with how it absorbs and where it fits in the routine."
    ]
   }
  },
@@ -2432,10 +2262,6 @@
     "근거": "브랜드 자료의 사용 TIP. 스틱이라 가능한 사용법입니다."
    }
   ],
-  "주의": [
-   "**이 제품은 비건 인증 제품이 아닙니다.** 브랜드 자료의 인증서는 원료에 대한 것이고 이미 만료됐습니다. 비건 이야기는 빼고, '인체 피부 일차자극 테스트 저자극 판정' 으로 가세요.",
-   "'주름개선 기능성' 은 표시를 붙일 수 있다는 뜻입니다. '주름 케어' 로 말하세요."
-  ],
   "en": {
    "lead": "A stick balm you rub over the lines that bother you. Dual functional claim: brightening and wrinkle care.",
    "who": "Anyone treating crow's feet, the neck or nasolabial folds on their own — and wanting to reapply on the go",
@@ -2480,11 +2306,6 @@
      "line": "You can layer it over makeup.",
      "why": "A usage tip from the brand. Only possible because it's a stick."
     }
-   ],
-   "careful": [
-    "**Don't claim vegan certification for this one.** The certificate is for a raw material ('vegan collagen') held by the supplier, not for the finished product — and **it expired on 28 April 2022.**",
-    "'Wrinkle care' is a label claim based on a notified active. It does not mean wrinkles disappear.",
-    "There are no test figures in the brand material. Don't quote percentages or timeframes."
    ]
   }
  },
@@ -2535,11 +2356,6 @@
     "문장": "프랑스 세더마사 보르피린을 50,000ppm 넣었습니다.",
     "근거": "원료사와 함량이 명시된 몇 안 되는 성분입니다."
    }
-  ],
-  "주의": [
-   "**17.601% 는 이 앰플 하나만 쓴 결과입니다.** '바르고 나면 바로 이만큼' 으로 말하세요.",
-   "**브랜드 자료의 2주 수치는 보르피린 3종을 다 쓴 결과입니다.** 이 앰플에 붙이지 마세요.",
-   "보르피린은 프랑스 원료사 성분입니다. '프랑스 특허 성분을 5% 넣었다' 로 말하면 됩니다."
   ],
   "en": {
    "lead": "A dense, pale-beige ampoule built around French patented Volufiline at 50,000ppm.",
@@ -2600,11 +2416,6 @@
      "line": "Good for pillow creases that stick around in the morning.",
      "why": "The brand material names it directly. It's the kind of specific complaint viewers recognise."
     }
-   ],
-   "careful": [
-    "**17.601% is what this ampoule did on its own.** 'Right after you put it on' is the accurate framing.",
-    "**The brand's two-week figures come from using all three Volufiline products.** Don't attach them to this ampoule.",
-    "Volufiline is a supplier's ingredient. 'A French patented firming ingredient at 5%' is the way to put it."
    ]
   }
  },
@@ -2652,10 +2463,6 @@
     "문장": "이 제품만 단독으로 쓴 리프팅 인체적용시험도 따로 있습니다.",
     "근거": "3종 함께 쓴 시험과 헷갈리기 쉽습니다. 단독 시험은 '1회 사용으로 즉각적인(일시적) 볼 리프팅' 하나뿐이니 이것만 말하세요."
    }
-  ],
-  "주의": [
-   "**'베개자국 완화', '피부 노화 지수 개선' 시험은 보르피린 3종(스프레이 앰플·앰플·그라인딩 크림)을 모두 사용한 결과입니다.** 이 제품 하나만 쓴 결과가 아닙니다.",
-   "보르피린은 원료사 성분입니다."
   ],
   "시험조건": "위 3개 수치는 보르피린 3종(스프레이 앰플→앰플→그라인딩 크림)을 순서대로 모두 쓴 기준입니다. 한국피부과학연구원 / 21명 / 2주 / 개인차 있음. 이 제품 단독 시험은 '1회 사용 즉각적인(일시적) 볼 리프팅' 하나뿐이고 수치는 없습니다.",
   "근거수치": [
@@ -2737,10 +2544,6 @@
      "line": "There's a trial on this product by itself for lifting, too.",
      "why": "Easy to confuse with the three-product study. The solo one covers immediate, temporary cheek lifting after a single use — that's the one to quote."
     }
-   ],
-   "careful": [
-    "**The 4.59%, 6.77% and 6.36% figures come from using all three Volufiline products together** — spray ampoule, ampoule and grinding cream. They are not what this product does alone.",
-    "Volufiline is a supplier's ingredient. 'A French patented firming ingredient at 5%' is the way to put it."
    ]
   }
  },
@@ -2798,11 +2601,6 @@
     "문장": "처음엔 서너 바퀴 돌려야 크림이 제대로 나옵니다.",
     "근거": "브랜드 자료에 적힌 안내입니다. 이걸 말 안 하면 '안 나온다'는 문의가 들어옵니다."
    }
-  ],
-  "주의": [
-   "**리프팅 11.271%는 '즉각적인(일시적)' 효과입니다.**",
-   "**3종 병행 사용 시의 시험 결과와 이 제품 단독 결과를 섞어 말하면 안 됩니다.**",
-   "12만 원대 제품입니다. 가격을 정확히 확인하고 말하세요."
   ],
   "en": {
    "lead": "A concentrated lifting cream you grind fresh from a sealed container each time, then spread with the silicone brush.",
@@ -2863,11 +2661,6 @@
      "line": "French patented firming ingredient at 5%.",
      "why": "Volufiline at 50,000ppm. A supplier ingredient with an international patent, which makes it solid ground."
     }
-   ],
-   "careful": [
-    "**The 11.271% figure is immediate and temporary.** 'Right after you use it' is the accurate framing.",
-    "**The two-week figures in the brand material come from using all three Volufiline products together.** Don't attach them to this cream alone.",
-    "It dispenses unevenly on the first few turns. Tell buyers that up front."
    ]
   }
  },
@@ -2922,10 +2715,6 @@
     "문장": "오일 30에 보습 세럼 70 비율이에요. 오일만 들어간 제품이 아닙니다.",
     "근거": "헤어 오일과 구분되는 지점입니다."
    }
-  ],
-  "주의": [
-   "**'모공보다 467배 작다' 는 숫자는 쓰지 마세요.** 헤어 제품이라 모공과 비교할 일이 아닙니다. '나노 크기로 만들어 모발 결 사이까지 들어간다' 로 충분합니다.",
-   "'복구', '재생' 대신 '윤기', '결 정돈', '손상모 케어' 를 쓰세요."
   ],
   "en": {
    "lead": "A two-layer hair mist — pink oil on top, moisturising serum below. Shake it and the two mix 3:7.",
@@ -2982,10 +2771,6 @@
      "line": "It starts fresh and citrusy, then settles into something soft and powdery.",
      "why": "Top is bergamot, lemon, orange, pear; heart is freesia, rose, jasmine, iris; base is white musk. Scent talk is safe ground."
     }
-   ],
-   "careful": [
-    "**Skip the '467× smaller than a pore' line.** This is a hair product; pores don't come into it. 'Nano-sized so it gets into the hair' does the job.",
-    "Use 'shine', 'smoother strands', 'care for damaged hair' rather than 'repair' or 'regenerate'."
    ]
   }
  },
@@ -3035,10 +2820,6 @@
     "문장": "드라이기 쓰기 전에 바르면 열 손상을 줄일 수 있습니다.",
     "근거": "브랜드 자료의 사용 팁입니다. 실사용 정보라 잘 먹힙니다."
    }
-  ],
-  "주의": [
-   "**'모공보다 467배 작다' 는 숫자는 쓰지 마세요.** 헤어 제품이라 모공과 비교할 일이 아닙니다.",
-   "'복구', '재생' 대신 '윤기', '결 정돈', '손상모 케어' 를 쓰세요. 단백질 13종과 아미노산 17종이 더 확실한 근거입니다."
   ],
   "en": {
    "lead": "Oil and serum at 4:6 in one bottle — a shine coating and a hydrating base, for hair that has gone dry and split.",
@@ -3095,10 +2876,6 @@
      "line": "Bulgarian rose oil takes 3,000 roses to make one gram.",
      "why": "A fact worth telling, and it explains where the price comes from."
     }
-   ],
-   "careful": [
-    "**Skip the '467× smaller than a pore' line.** This is a hair product; pores don't come into it.",
-    "Use 'shine', 'smoother strands', 'care for damaged hair' rather than 'repair' or 'regenerate'."
    ]
   }
  },
@@ -3146,10 +2923,6 @@
     "문장": "여러 번 덧발라도 끈적이지 않아서 메이크업 전에 쓰기 좋아요.",
     "근거": "브랜드가 메이크업 부스터로 포지셔닝한 제품입니다."
    }
-  ],
-  "주의": [
-   "**SPF·PA 표기는 실물 패키지에 적힌 것을 그대로 읽어 주세요.**",
-   "하이드로 트래핑 그림은 이해를 돕는 개념도입니다. 피부 속을 찍은 사진이 아닙니다."
   ],
   "en": {
    "lead": "A watery sunscreen that pushes essence out as you spread it. Organic filters, so it's light and leaves no white cast.",
@@ -3203,11 +2976,6 @@
      "line": "You can put makeup straight over it — it's meant to stop foundation sliding.",
      "why": "The brand positions it as a makeup booster. Easy to demonstrate on camera."
     }
-   ],
-   "careful": [
-    "**Check the actual package for the SPF and PA figures before you say them.**",
-    "The hydro-trapping diagram is labelled in the brand material as an illustration to aid understanding. Don't describe it as what literally happens inside skin.",
-    "There are no efficacy percentages in the brand material. Don't quote numbers beyond SPF and PA."
    ]
   }
  },
@@ -3259,10 +3027,6 @@
     "문장": "파운데이션 대신 이것만 발라도 톤 보정이 됩니다.",
     "근거": "브랜드가 '파데 프리 선스크린'으로 포지셔닝했습니다."
    }
-  ],
-  "주의": [
-   "**SPF·PA 표기는 실물 패키지에 적힌 것을 그대로 읽어 주세요.**",
-   "톤업 정도를 잰 수치는 없습니다. '핑크빛이 돌아 화사해 보인다' 처럼 눈으로 보이는 변화로 말하세요."
   ],
   "en": {
    "lead": "A pink watery sunscreen. Rather than covering skin to look brighter, the pink tint reads as natural colour coming back.",
@@ -3316,10 +3080,6 @@
      "line": "Face and neck needs about a finger-joint's worth, 30 minutes before you go out.",
      "why": "Straight from the brand's usage page. Practical and always welcome."
     }
-   ],
-   "careful": [
-    "**Check the actual package for the SPF and PA figures before you say them.**",
-    "There are no figures for how much it brightens or how much glow it adds. Don't quote numbers beyond SPF and PA."
    ]
   }
  },
@@ -3374,7 +3134,7 @@
     "조건": "1회 · 즉각적·일시적"
    }
   ],
-  "시험조건": "모든 수치가 **달바 화이트 트러플 더블 세럼 앤 크림을 함께 쓴 결과**입니다. 22명 / 개인차 있음. 기기만 쓴 수치는 없습니다.",
+  "시험조건": "모든 수치가 달바 화이트 트러플 더블 세럼 앤 크림을 함께 쓴 결과입니다. 22명 / 개인차 있음. 기기만 쓴 수치는 없습니다.",
   "사용법": [
    {
     "이름": "필수",
@@ -3410,12 +3170,6 @@
     "문장": "젤 타입 제품이랑 같이 쓰세요. 오일이 많거나 선크림은 효과가 떨어집니다.",
     "근거": "자료 Q&A에 있는 내용입니다. 실사용에서 가장 많이 틀리는 부분입니다."
    }
-  ],
-  "주의": [
-   "**모든 시험이 더블 세럼 앤 크림을 함께 바르고 진행한 것입니다.** '크림 바르고 이 기기로 밀었을 때' 가 정확한 표현입니다. 기기 단독 수치는 없습니다.",
-   "**이 기기는 피부 미용 기기이고 의료기기가 아닙니다.** 자료 모든 장에 이 문장이 붙어 있습니다. 시술이나 치료에 빗대지 마세요.",
-   "**반드시 화장품과 함께 쓰세요.** 얼굴이 마르면 에너지가 전달되지 않고 따끔거립니다. 이건 사용법이자 안전 문제입니다.",
-   "레벨을 올려도 도달 깊이는 같습니다. 눈가·입가·코 옆은 한 단계 낮춰 쓰세요."
   ],
   "en": {
    "lead": "A home device with three modes — RF, double ultrasound and cooling. No cartridges, so the shots don't run out.",
@@ -3466,7 +3220,7 @@
      "note": "one use · immediate, temporary"
     }
    ],
-   "testNote": "Every figure comes from using the device **together with d'Alba White Truffle Double Serum & Cream**. 22 people / individual variation. There are no device-only figures.",
+   "testNote": "Every figure comes from using the device together with d'Alba White Truffle Double Serum & Cream. 22 people / individual variation. There are no device-only figures.",
    "howto": [
     {
      "name": "Before you start",
@@ -3498,12 +3252,6 @@
      "line": "It counts 40 shots and switches itself off.",
      "why": "Removes the 'how long do I use it?' question entirely."
     }
-   ],
-   "careful": [
-    "**Every figure comes from using the device with the Double Serum & Cream.** 'With the cream on, using this device' is the accurate framing. There are no device-only numbers.",
-    "**This is a beauty device, not a medical device.** That line appears on every page of the brand material. Don't liken it to a procedure or a treatment.",
-    "**It must be used with skincare on the skin.** A dry face means no energy transfer and a stinging sensation.",
-    "Raising the level doesn't send energy deeper. Drop a level around the eyes, mouth and sides of the nose."
    ]
   }
  }

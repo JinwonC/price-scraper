@@ -4,17 +4,6 @@ import Link from "next/link";
 import { useLang, useT } from "@/components/Lang";
 import type { Brief, Product, ProductImage } from "@/lib/products";
 
-/** **굵게** 표시만 지원하는 최소 마크업. 주의 문구에서 핵심어를 강조하려고 쓴다. */
-function Bold({ text }: { text: string }) {
-  return (
-    <>
-      {text.split(/\*\*(.+?)\*\*/g).map((part, i) =>
-        i % 2 === 1 ? <b key={i}>{part}</b> : <span key={i}>{part}</span>,
-      )}
-    </>
-  );
-}
-
 const L = {
   back: ["← 제품 목록", "← All products"],
   brief: ["브리프", "Brief"],
@@ -22,7 +11,6 @@ const L = {
   ingredients: ["핵심 성분", "Key ingredients"],
   howto: ["쓰는 법", "How to use"],
   say: ["이렇게 말하면 됩니다", "What you can say"],
-  careful: ["말할 때 주의", "Careful with this"],
   images: ["이미지", "Images"],
   features: ["제품 특징", "Product features"],
   etc: ["기타", "More"],
@@ -144,18 +132,6 @@ function BriefBlock({ brief }: { brief: Brief }) {
         </div>
       )}
 
-      {!!t(brief.주의, e?.careful)?.length && (
-        <div className="pw-brief-part">
-          <h3>{t(L.careful[0], L.careful[1])}</h3>
-          <ul className="pw-careful">
-            {t(brief.주의, e?.careful)!.map((c, i) => (
-              <li key={i}>
-                <Bold text={c} />
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
     </section>
   );
 }

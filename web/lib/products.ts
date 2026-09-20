@@ -91,7 +91,6 @@ export type BriefEn = {
   certs?: string[];
   howto?: { name: string; how: string }[];
   say?: { line: string; why: string }[];
-  careful?: string[];
 };
 
 export type Brief = {
@@ -105,7 +104,6 @@ export type Brief = {
   인증?: string[];
   사용법?: { 이름: string; 방법: string }[];
   말할때?: { 문장: string; 근거: string }[];
-  주의?: string[];
   en?: BriefEn;
 };
 
