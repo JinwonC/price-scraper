@@ -62,6 +62,49 @@ def capacity_only(값):
     return " · ".join(out)
 
 
+# 브랜드가 교안을 돌려쓰면서 다른 제품 문구가 섞여 들어온 자리.
+# '모공보다 467배 작다' 는 얼굴 제품 문구인데 헤어 교안에도 그대로 복사돼 있다.
+# 그리고 이 비교 자체가 외부 논문에 실린 모공 평균값과 견준 것이지
+# 제품을 재서 나온 값이 아니라, 제품 성능처럼 읽히면 오해를 준다.
+특징고침 = {
+    "italian-white-truffle-professional-repairing-hair-perfume-serum": {
+        "drop": ["모공보다 467배"],
+    },
+    "professional-repairing-hair-oil-serum": {
+        "drop": ["모공보다 467배"],
+    },
+    "white-truffle-double-serum-cream-2-in-1": {
+        "replace": {
+            "모공보다 467배 작은 사이즈로 빠르고 강력하게 전달되는 펩타이드 엑소좀":
+            "나노 크기로 만들어 피부에 빠르게 전달되는 펩타이드 엑소좀",
+        },
+    },
+    "pro2x": {
+        "replace": {
+            "모공보다 467배 작은 듀얼 엑소좀으로 더욱 깊어진 침투력":
+            "나노 크기의 듀얼 엑소좀으로 더욱 깊어진 침투력",
+        },
+    },
+}
+
+
+def fix_features(slug, 특징):
+    """제품에 맞지 않거나 오해를 주는 줄을 빼거나 고쳐 쓴다."""
+    rule = 특징고침.get(slug)
+    if not rule:
+        return 특징
+    drop = rule.get("drop", [])
+    rep = rule.get("replace", {})
+    out = []
+    for f in 특징:
+        설명 = [rep.get(l, l) for l in f["설명"] if not any(d in l for d in drop)]
+        제목 = rep.get(f["제목"], f["제목"])
+        if any(d in 제목 for d in drop):
+            continue
+        out.append({"제목": 제목, "설명": 설명})
+    return out
+
+
 def main():
     src = json.load(open(os.path.join(HERE, "products.json"), encoding="utf-8"))
     etc = json.load(open(os.path.join(HERE, "etc.json"), encoding="utf-8"))
@@ -84,7 +127,7 @@ def main():
                 if v
             },
             "포지셔닝": p["포지셔닝"],
-            "특징": p["특징"],
+            "특징": fix_features(slug, p["특징"]),
             "기타": etc.get(slug, {}).get("항목", []),
             "en판": en.get(slug, {}),
         }
