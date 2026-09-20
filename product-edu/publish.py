@@ -35,7 +35,7 @@ CAPACITY = re.compile(
 # 내보내기 전 마지막으로 훑는 그물. 여기 걸리면 사람이 다시 봐야 한다.
 LEAK = re.compile(
     r"[\d,]{4,}\s*원"           # 39,500원
-    r"|\b\d{2,3},\d{3}\b"        # 40,000
+    r"|\b\d{2,3},\d{3}\b"        # 40,000 — 세는 단위가 붙은 것은 세는수 가 빼 준다
     r"|소비자가"
     r"|한국콜마|코스맥스|제조업자|화장품제조업자|제조원"
     r"|\d{2,4}-\d{3,4}-\d{4}"    # 02-332-7727
@@ -43,6 +43,21 @@ LEAK = re.compile(
     r"|works\.do|결과서\s*경로|drive\.google|docs\.google"  # 사내 문서 링크
     r"|이미지\s*(변경|교체)\s*예정|AI\s*생성\s*시안|광고\s*자문"  # 사내 메모
 )
+
+# 가격처럼 생겼지만 가격이 아닌 수들. 하나씩 확인하고 적어 둔 것만 통과시킨다.
+# 목록에 없는 '00,000' 꼴은 전부 그물에 걸린다.
+세는수 = {
+    "40,000": "캡슐 개수 (100ml 기준)",
+    "20,000": "캡슐 개수 (50ml 기준)",
+    "13,000": "갈바닉 아이크림의 분당 진동 횟수",
+}
+세는수찾기 = re.compile(r"\b(?:" + "|".join(세는수) + r")\b")
+
+
+def leaks_in(글):
+    """검열 그물에 걸린 자리를 사람이 읽을 수 있게 돌려준다."""
+    가린 = 세는수찾기.sub("", 글)
+    return sorted({m.group(0) for m in LEAK.finditer(가린)})
 
 
 def capacity_only(값):
@@ -86,6 +101,32 @@ def capacity_only(값):
         },
     },
 }
+
+
+def 다듬기(o):
+    """교안에서 딸려 온 띄어쓰기 찌꺼기를 턴다.
+
+    PPT 칸에서 긁어 온 글이라 두 칸 띄움, 줄바꿈, '닦아 내고 , 끌어' 처럼
+    부호 앞에 붙은 공백이 그대로 남아 있다. 화면에 그대로 보인다.
+    """
+    if isinstance(o, dict):
+        return {k: 다듬기(v) for k, v in o.items()}
+    if isinstance(o, list):
+        return [다듬기(v) for v in o]
+    if not isinstance(o, str):
+        return o
+    s = re.sub(r"\s+", " ", o)
+    s = re.sub(r"\s+([,.!?)])", r"\1", s)
+    s = re.sub(r"([(])\s+", r"\1", s)
+    # 교안에서 쉼표를 두 번 친 자리. '70%,, 쌀PDRN'
+    s = re.sub(r",\s*(?=,)", "", s)
+    # 닫는 괄호 안으로 들어간 쉼표. 다음 성분과 나누는 쉼표이니 괄호 밖으로 낸다.
+    s = re.sub(r",\s*\)", "),", s)
+    # '10,000ppm ,10종' 처럼 쉼표 뒤가 붙어 버린 자리. 숫자 자릿점은 건드리지 않는다.
+    s = re.sub(r",(?=[^\s\d])", ", ", s)
+    # 줄 끝에 남은 쉼표. '나이아신아마이드 20,000ppm,'
+    s = re.sub(r"[,\s]+$", "", s)
+    return s.strip()
 
 
 def fix_features(slug, 특징):
@@ -138,9 +179,10 @@ def main():
             i.get("title") for i in pub["기타"]
         ):
             영어없음.append(slug)
-        hits = LEAK.findall(json.dumps(pub, ensure_ascii=False))
+        pub = 다듬기(pub)
+        hits = leaks_in(json.dumps(pub, ensure_ascii=False))
         if hits:
-            leaks.append((slug, sorted(set(hits))[:6]))
+            leaks.append((slug, hits[:6]))
         out.append(pub)
 
     path = os.path.join(WEB, "products.json")

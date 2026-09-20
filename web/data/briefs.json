@@ -385,7 +385,7 @@
    }
   ],
   "en": {
-   "lead": "A brightening moisturiser with vitamin capsules set into it. The more you work it in, the more they melt and spread.",
+   "lead": "A brightening moisturizer with vitamin capsules set into it. The more you work it in, the more they melt and spread.",
    "who": "Anyone whose skin stays dry however much water they add, but who hates a sticky finish",
    "certs": [
     "Brightening + wrinkle care (dual functional claim)",
@@ -434,7 +434,7 @@
     },
     {
      "name": "Massage tip",
-     "how": "Cover the whole face, then press with warm palms or massage from the centre outwards."
+     "how": "Cover the whole face, then press with warm palms or massage from the center outwards."
     }
    ],
    "say": [
@@ -646,7 +646,7 @@
      "note": "vs. applying by hand"
     }
    ],
-   "testNote": "The 1.71× and 1.66× figures compare the same cream rubbed in by hand against the galvanic tip. A separate anti-ageing study ran at the Korea Institute of Dermatological Sciences with 21 people over two weeks, with individual variation.",
+   "testNote": "The 1.71× and 1.66× figures compare the same cream rubbed in by hand against the galvanic tip. A separate anti-aging study ran at the Korea Institute of Dermatological Sciences with 21 people over two weeks, with individual variation.",
    "howto": [
     {
      "name": "Basic",
@@ -729,7 +729,7 @@
    }
   ],
   "en": {
-   "lead": "A concentrated serum you mist on, with white truffle, collagen water and moisturising oil at 8% each.",
+   "lead": "A concentrated serum you mist on, with white truffle, collagen water and moisturizing oil at 8% each.",
    "who": "Anyone after glow and firmness at once, who'd rather not decant serum into their hands",
    "certs": [
     "Italian V-Label vegan certification",
@@ -744,7 +744,7 @@
      "role": "Replaces purified water as the brightening base."
     },
     {
-     "name": "White truffle / collagen water / moisturising oil",
+     "name": "White truffle / collagen water / moisturizing oil",
      "amount": "8% each",
      "role": "This is where the '8%' in the name comes from."
     },
@@ -783,7 +783,7 @@
      "why": "The largest of the three figures. It ran at the Korea Institute of Dermatological Sciences with 21 people over two weeks, and individual variation applies."
     },
     {
-     "line": "The 8% in the name means truffle, collagen water and moisturising oil at 8% each.",
+     "line": "The 8% in the name means truffle, collagen water and moisturizing oil at 8% each.",
      "why": "It means three ingredients at 8% each. Spell it out once and the name makes sense."
     },
     {
@@ -918,7 +918,7 @@
   ],
   "en": {
    "lead": "The calming member of the spray serum line — red plant oils with three patented soothing and hydrating ingredients.",
-   "who": "Anyone whose skin gets sensitised by sun and wind, and wants to calm it without adding a step",
+   "who": "Anyone whose skin gets sensitized by sun and wind, and wants to calm it without adding a step",
    "certs": [
     "Italian V-Label vegan certification",
     "Calming UV-induced irritation and texture improvement human trial completed",
@@ -932,7 +932,7 @@
     },
     {
      "name": "Red plant oils",
-     "role": "Gromwell root, rosehip, scented geranium and rose flower oils. The colour comes from these."
+     "role": "Gromwell root, rosehip, scented geranium and rose flower oils. The color comes from these."
     },
     {
      "name": "AQUAXYL™",
@@ -958,10 +958,10 @@
     },
     {
      "line": "It's been through a trial for calming sun-irritated skin.",
-     "why": "A specific measure, and a common enough situation that viewers recognise it."
+     "why": "A specific measure, and a common enough situation that viewers recognize it."
     },
     {
-     "line": "The red colour is from the plant oils — gromwell root, rosehip, geranium and rose.",
+     "line": "The red color is from the plant oils — gromwell root, rosehip, geranium and rose.",
      "why": "Visible in the bottle, and it explains itself."
     }
    ]
@@ -1316,7 +1316,7 @@
     },
     {
      "name": "Oil in Powder Pocket",
-     "role": "Powder stabilised inside the oil. Roll it and the powder spreads, adsorbing debris."
+     "role": "Powder stabilized inside the oil. Roll it and the powder spreads, adsorbing debris."
     },
     {
      "name": "Vita capsules",
@@ -1457,7 +1457,7 @@
     },
     {
      "line": "Not one drop of water gets inside the package.",
-     "why": "That's the packaging rationale — vitamins don't oxidise."
+     "why": "That's the packaging rationale — vitamins don't oxidize."
     }
    ]
   }
@@ -1856,7 +1856,7 @@
    "certs": [
     "Brightening + wrinkle care (dual functional claim)",
     "Italian V-Label vegan certification",
-    "Anti-ageing (wrinkles, lifting, skin density) human trial completed",
+    "Anti-aging (wrinkles, lifting, skin density) human trial completed",
     "Inner hydration and inner firmness human trial completed",
     "Soothing after physical irritation human trial completed",
     "Non-comedogenic (suitable for acne-prone skin) human trial completed",
@@ -1900,7 +1900,7 @@
    "say": [
     {
      "line": "When a water cream isn't enough and a rich cream is too much, this one lets you set the ratio yourself.",
-     "why": "Exactly the reason the brand gives for developing it. It's the line people recognise themselves in."
+     "why": "Exactly the reason the brand gives for developing it. It's the line people recognize themselves in."
     },
     {
      "line": "Put both onto your cheek with the spatula and mix them right there.",
@@ -1970,7 +1970,7 @@
    "certs": [
     "Primary skin irritation human trial completed",
     "Immediate hydration and 100-hour moisture retention trial completed",
-    "Anti-ageing (wrinkles, lifting, skin density), texture and inner-dryness trials completed",
+    "Anti-aging (wrinkles, lifting, skin density), texture and inner-dryness trials completed",
     "In-vitro antioxidant testing completed"
    ],
    "ingredients": [
@@ -2204,7 +2204,7 @@
    "say": [
     {
      "line": "This is the base step. When ampoules and creams still leave you dry, the problem is usually the layer underneath.",
-     "why": "Exactly the reason the brand gives for developing it. It's the line people recognise."
+     "why": "Exactly the reason the brand gives for developing it. It's the line people recognize."
     },
     {
      "line": "It's milky, so it goes in fast and doesn't sit on top.",
@@ -2414,7 +2414,7 @@
     },
     {
      "line": "Good for pillow creases that stick around in the morning.",
-     "why": "The brand material names it directly. It's the kind of specific complaint viewers recognise."
+     "why": "The brand material names it directly. It's the kind of specific complaint viewers recognize."
     }
    ]
   }
@@ -2717,7 +2717,7 @@
    }
   ],
   "en": {
-   "lead": "A two-layer hair mist — pink oil on top, moisturising serum below. Shake it and the two mix 3:7.",
+   "lead": "A two-layer hair mist — pink oil on top, moisturizing serum below. Shake it and the two mix 3:7.",
    "who": "Anyone with dry, flyaway hair who also wants a scent that lasts",
    "certs": [
     "Italian V-Label vegan certification",
@@ -3029,7 +3029,7 @@
    }
   ],
   "en": {
-   "lead": "A pink watery sunscreen. Rather than covering skin to look brighter, the pink tint reads as natural colour coming back.",
+   "lead": "A pink watery sunscreen. Rather than covering skin to look brighter, the pink tint reads as natural color coming back.",
    "who": "Anyone who wants to skip foundation and still look evened out",
    "certs": [
     "Italian V-Label vegan certification",
@@ -3069,7 +3069,7 @@
    ],
    "say": [
     {
-     "line": "It's pink, not white — so it doesn't look like you've painted your face, it looks like colour came back.",
+     "line": "It's pink, not white — so it doesn't look like you've painted your face, it looks like color came back.",
      "why": "The clearest difference from a white-cast tone-up. Swatch it on the back of your hand."
     },
     {
