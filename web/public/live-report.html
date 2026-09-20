@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>d'Alba · Live Session Report</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<style>
+  :root{
+    --ink:#171310; --muted:#8b8275; --line:#e8e1d4; --bg:#f3efe7;
+    --card:#ffffff; --accent:#b0894f; --accent-2:#caa96e; --accent-soft:#f4ead7;
+    --pos:#3f7a5f; --pos-soft:#e8f1ec; --head:#17130f; --gold:#d8b878;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  .wrap{max-width:1120px;margin:0 auto;padding:28px 20px 60px;}
+  .app-brand{font-family:Georgia,"Times New Roman",serif;font-size:15px;color:var(--accent);letter-spacing:.02em}
+  h1{font-size:20px;margin:2px 0 2px}
+  .sub{color:var(--muted);font-size:13px;margin-bottom:22px}
+  .layout{display:grid;grid-template-columns:320px 1fr;gap:24px;align-items:start}
+  @media(max-width:880px){.layout{grid-template-columns:1fr}}
+
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+  .panel h2{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 14px}
+  .field{margin-bottom:14px}
+  .field label{display:block;font-size:12.5px;font-weight:600;margin-bottom:6px;color:#463f35}
+  .field input,.field select{width:100%;padding:10px 11px;border:1px solid #ddd5c6;border-radius:9px;font-size:14px;background:#fff;color:var(--ink)}
+  .field input:focus,.field select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+  .hint{font-size:11.5px;color:var(--muted);margin-top:5px;line-height:1.5}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;width:100%;padding:11px 14px;border:0;border-radius:10px;
+    font-size:14px;font-weight:700;cursor:pointer;background:var(--accent);color:#fff}
+  .btn:hover{filter:brightness(1.06)}
+  .btn.sec{background:#fff;color:var(--ink);border:1px solid #ddd5c6}
+  .btn.sec:hover{background:#faf7f1}
+  .btn:disabled{opacity:.5;cursor:not-allowed}
+  .drop{border:1.5px dashed #cdc4b2;border-radius:10px;padding:16px;text-align:center;font-size:12.5px;color:var(--muted);cursor:pointer;background:#faf8f3}
+  .drop.ok{border-color:var(--pos);background:var(--pos-soft);color:#2c6349;font-weight:600}
+  .status{font-size:12px;margin-top:10px;color:var(--muted);min-height:16px}
+
+  /* ===== Report card (export target) ===== */
+  .report-scroll{overflow:auto}
+  #report{width:760px;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;
+    margin:0 auto;box-shadow:0 1px 3px rgba(23,19,16,.06)}
+  .rp-head{padding:24px 30px 22px;background:var(--head);color:#fff}
+  .rp-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+  .wordmark{font-family:Georgia,"Times New Roman",serif;font-size:22px;color:var(--gold);letter-spacing:.01em}
+  .rp-badge{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+    color:#e7d8b6;border:1px solid rgba(216,184,120,.45);padding:5px 11px;border-radius:999px}
+  .rp-handle{font-size:26px;font-weight:800;letter-spacing:-.01em;margin:0}
+  .rp-meta{margin-top:6px;font-size:13.5px;color:#a59d8f}
+  .rp-meta b{color:#efe9dc;font-weight:600}
+
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
+  .kpi{background:#fff;padding:18px 20px}
+  .kpi .k-label{font-size:11.5px;color:var(--muted);font-weight:600;letter-spacing:.02em}
+  .kpi .k-val{font-size:23px;font-weight:800;margin-top:7px;letter-spacing:-.02em}
+  .kpi.hero .k-val{color:var(--accent)}
+  .kpi.comm .k-val{color:var(--pos)}
+  .kpi .k-sub{font-size:11px;color:var(--muted);margin-top:3px}
+
+  .sec-t{font-size:13px;font-weight:700;padding:20px 30px 10px;color:#463f35}
+  table{width:100%;border-collapse:collapse}
+  thead th{font-size:11px;text-transform:uppercase;letter-spacing:.03em;color:var(--muted);text-align:left;
+    padding:8px 12px;border-bottom:1px solid var(--line);font-weight:700}
+  thead th.num{text-align:right}
+  tbody td{padding:11px 12px;border-bottom:1px solid #f4f0e8;font-size:13px;vertical-align:middle}
+  tbody td.num{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+  .prod-cell{display:flex;flex-direction:column;gap:5px}
+  .prod-name{font-weight:600;line-height:1.35}
+  .prod-sku{font-size:11px;color:var(--muted)}
+  .bar-track{height:6px;border-radius:4px;background:#f0ece2;margin-top:6px;width:100%}
+  .bar{height:6px;border-radius:4px;background:var(--accent-2)}
+  td:first-child{padding-left:30px} th:first-child{padding-left:30px}
+  td:last-child{padding-right:30px} th:last-child{padding-right:30px}
+  .totbar{display:flex;justify-content:space-between;padding:14px 30px;background:#faf8f3;border-top:1px solid var(--line);font-weight:700;font-size:14px}
+  .rp-foot{display:flex;justify-content:space-between;align-items:center;padding:16px 30px 22px;color:var(--muted);font-size:11.5px;border-top:1px solid var(--line)}
+  .empty{padding:60px 30px;text-align:center;color:var(--muted)}
+  .toolbar{display:flex;gap:9px;margin:0 0 14px}
+  .toolbar .btn{width:auto;padding:10px 16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="app-brand">d'Alba</div>
+  <h1>Live Session Performance Report</h1>
+  <div class="sub">Upload a TikTok Shop order export, enter a date and creator handle, and generate a session report to save as an image or PDF.</div>
+
+  <div class="layout">
+    <!-- Controls -->
+    <div class="panel">
+      <h2>Data &amp; Filters</h2>
+      <div class="field">
+        <label>Order file</label>
+        <div class="drop" id="drop">Click or drag &amp; drop a file<br>(.csv / .xlsx)</div>
+        <input id="file" type="file" accept=".csv,.xlsx,.xls" style="display:none">
+        <div class="hint">TikTok Shop → affiliate / order export. Columns: Creator Username, Product Name, Payment Amount, Quantity, Time Created, etc.</div>
+      </div>
+      <div class="field">
+        <label>Date</label>
+        <input id="date" type="date">
+      </div>
+      <div class="field">
+        <label>Creator handle</label>
+        <input id="handle" list="handles" placeholder="e.g. 59andflawless" autocomplete="off">
+        <datalist id="handles"></datalist>
+      </div>
+      <div class="field">
+        <label>Commission rate (%)</label>
+        <input id="rate" type="number" min="0" max="100" step="0.5" value="15">
+        <div class="hint">Estimated commission = GMV × rate.</div>
+      </div>
+      <div class="field">
+        <label style="display:flex;gap:7px;align-items:center;font-weight:500;color:#463f35">
+          <input id="excl" type="checkbox" checked style="width:auto"> Exclude refunded / returned orders
+        </label>
+      </div>
+      <button class="btn" id="gen">Generate report</button>
+      <div class="status" id="status"></div>
+    </div>
+
+    <!-- Report -->
+    <div>
+      <div class="toolbar">
+        <button class="btn sec" id="png" disabled>⬇ Image (PNG)</button>
+        <button class="btn sec" id="pdf" disabled>⬇ PDF</button>
+      </div>
+      <div class="report-scroll">
+        <div id="report">
+          <div class="empty">Upload a TikTok Shop order file on the left to begin.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/plain" id="sampleCsv"></script>
+<script>
+const $ = s => document.querySelector(s);
+let ROWS = [];
+const MONTHS=["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+function num(x){ if(x==null) return 0; const n=parseFloat(String(x).replace(/[^0-9.\-]/g,'')); return isNaN(n)?0:n; }
+function intv(x){ const n=parseInt(String(x).replace(/[^0-9\-]/g,''),10); return isNaN(n)?0:n; }
+function normHandle(h){ return String(h||'').trim().replace(/^@/,'').toLowerCase(); }
+function money(n){ return '$'+n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+function isRefunded(r){ return /^(yes|true|1|y)$/i.test(String(r['Fully returned or refunded']||'').trim()); }
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+
+function rowDateISO(r){
+  const t=String(r['Time Created']||'').trim();
+  if(!t) return '';
+  const d=t.split(/[ T]/)[0];
+  let m=d.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);       // DD/MM/YYYY (TikTok export)
+  if(m) return m[3]+'-'+m[2].padStart(2,'0')+'-'+m[1].padStart(2,'0');
+  m=d.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/);              // YYYY-MM-DD
+  if(m) return m[1]+'-'+m[2].padStart(2,'0')+'-'+m[3].padStart(2,'0');
+  const dd=new Date(t); return isNaN(dd)?'':dd.toISOString().slice(0,10);
+}
+function prettyDate(iso){
+  if(!iso) return '';
+  const [y,mo,da]=iso.split('-');
+  return MONTHS[parseInt(mo)-1]+' '+parseInt(da)+', '+y;
+}
+
+function ingest(rows){
+  ROWS = rows.filter(r=>r && (r['Creator Username']!=null));
+  const handles=[...new Set(ROWS.map(r=>normHandle(r['Creator Username'])).filter(Boolean))].sort();
+  $('#handles').innerHTML = handles.map(h=>'<option value="'+h+'">').join('');
+  $('#status').textContent = ROWS.length+' rows loaded · '+handles.length+' creators';
+}
+function loadCSVText(text){ ingest(Papa.parse(text.trim(),{header:true,skipEmptyLines:true}).data); }
+function handleFile(file){
+  const name=(file.name||'').toLowerCase(), drop=$('#drop');
+  const fr=new FileReader();
+  if(name.endsWith('.xlsx')||name.endsWith('.xls')){
+    fr.onload=e=>{ const wb=XLSX.read(e.target.result,{type:'array'}); ingest(XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]],{defval:''})); drop.classList.add('ok'); drop.textContent='✓ '+file.name; };
+    fr.readAsArrayBuffer(file);
+  }else{
+    fr.onload=e=>{ loadCSVText(e.target.result); drop.classList.add('ok'); drop.textContent='✓ '+file.name; };
+    fr.readAsText(file);
+  }
+}
+
+function generate(){
+  const date=$('#date').value, handle=normHandle($('#handle').value), rate=num($('#rate').value), excl=$('#excl').checked;
+  if(!ROWS.length){ $('#status').textContent='Please upload an order file first.'; return; }
+  if(!handle||!date){ $('#status').textContent='Please enter a date and handle.'; return; }
+
+  let rows=ROWS.filter(r=>normHandle(r['Creator Username'])===handle && rowDateISO(r)===date);
+  if(excl) rows=rows.filter(r=>!isRefunded(r));
+
+  const rep=$('#report');
+  if(!rows.length){
+    rep.innerHTML='<div class="empty">No orders found for <b>@'+esc(handle)+'</b> on this date.<br>Check the date and handle.</div>';
+    $('#png').disabled=$('#pdf').disabled=true; $('#status').textContent='0 matches'; return;
+  }
+
+  const gmv=rows.reduce((s,r)=>s+num(r['Payment Amount']),0);
+  const units=rows.reduce((s,r)=>s+intv(r['Quantity']),0);
+  const orders=new Set(rows.map(r=>r['Order ID'])).size;
+  const est=gmv*rate/100;
+  const dataEst=rows.reduce((s,r)=>s+num(r['Est. standard commission payment']),0);
+
+  const pmap={};
+  rows.forEach(r=>{
+    const k=(r['Product Name']||'(no name)').trim();
+    if(!pmap[k]) pmap[k]={name:k, sku:new Set(), qty:0, gmv:0};
+    pmap[k].qty+=intv(r['Quantity']); pmap[k].gmv+=num(r['Payment Amount']);
+    if(r['SKU ID']) pmap[k].sku.add(String(r['SKU ID']));
+  });
+  const prods=Object.values(pmap).sort((a,b)=>b.gmv-a.gmv);
+  const maxG=Math.max(...prods.map(p=>p.gmv),1);
+
+  const ct={};
+  rows.forEach(r=>{ const c=(r['Content Type']||'Other').trim(); ct[c]=(ct[c]||0)+num(r['Payment Amount']); });
+  const ctStr=Object.entries(ct).sort((a,b)=>b[1]-a[1]).map(([k,v])=>k+' '+money(v)).join('  ·  ');
+
+  const rowsHtml=prods.map((p,i)=>`
+    <tr>
+      <td>
+        <div class="prod-cell">
+          <div class="prod-name">${i+1}. ${esc(p.name)}</div>
+          ${p.sku.size?`<div class="prod-sku">SKU ${[...p.sku].slice(0,2).join(', ')}${p.sku.size>2?' +'+(p.sku.size-2):''}</div>`:''}
+          <div class="bar-track"><div class="bar" style="width:${Math.max(4,p.gmv/maxG*100)}%"></div></div>
+        </div>
+      </td>
+      <td class="num">${p.qty}</td>
+      <td class="num">${money(p.gmv)}</td>
+      <td class="num">${(p.gmv/gmv*100).toFixed(1)}%</td>
+    </tr>`).join('');
+
+  rep.innerHTML=`
+    <div class="rp-head">
+      <div class="rp-top"><span class="wordmark">d'Alba</span><span class="rp-badge">Live Session Report</span></div>
+      <p class="rp-handle">@${esc(handle)}</p>
+      <div class="rp-meta"><b>${prettyDate(date)}</b> · ${ctStr||'Session performance'}</div>
+    </div>
+    <div class="kpis">
+      <div class="kpi hero"><div class="k-label">Total Sales (GMV)</div><div class="k-val">${money(gmv)}</div><div class="k-sub">USD</div></div>
+      <div class="kpi"><div class="k-label">Orders</div><div class="k-val">${orders}</div><div class="k-sub">${units} units sold</div></div>
+      <div class="kpi"><div class="k-label">Products</div><div class="k-val">${prods.length}</div><div class="k-sub">by SKU</div></div>
+      <div class="kpi comm"><div class="k-label">Est. Commission (${rate}%)</div><div class="k-val">${money(est)}</div><div class="k-sub">${dataEst>0?'Data est. '+money(dataEst):'GMV × '+rate+'%'}</div></div>
+    </div>
+    <div class="sec-t">Product breakdown</div>
+    <table>
+      <thead><tr><th>Product</th><th class="num">Qty</th><th class="num">Sales</th><th class="num">Share</th></tr></thead>
+      <tbody>${rowsHtml}</tbody>
+    </table>
+    <div class="totbar"><span>Total</span><span>${units} units · ${money(gmv)}</span></div>
+    <div class="rp-foot">
+      <span>Generated ${new Date().toISOString().slice(0,10)} · TikTok Shop session report</span>
+      <span>${rows.length} order lines</span>
+    </div>`;
+
+  $('#png').disabled=$('#pdf').disabled=false;
+  $('#status').textContent='Done · GMV '+money(gmv)+' / est. commission '+money(est);
+  window._exp={handle,date};
+}
+
+function capture(){ return html2canvas($('#report'),{scale:2,backgroundColor:'#ffffff',useCORS:true}); }
+function fname(ext){ const e=window._exp||{}; return (e.handle||'report')+'_'+(e.date||'')+'_dalba-live-report.'+ext; }
+// Dual-path save: use the claude.ai artifact "downloads" capability when hosted,
+// otherwise fall back to a normal browser download (local HTML file).
+async function saveFile(filename, blob){
+  try{
+    const dls = (window.claude && claude.use) ? await claude.use('downloads') : null;
+    if(dls){
+      try{ await dls.save({filename, data: blob}); $('#status').textContent='Saved: '+filename; return; }
+      catch(e){ if(e&&e.code==='declined'){ $('#status').textContent='Download cancelled.'; return; } console.warn(e); }
+    }
+  }catch(e){ console.warn(e); }
+  const url=URL.createObjectURL(blob); const a=document.createElement('a');
+  a.href=url; a.download=filename; document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),1500);
+}
+$('#png').onclick=()=>capture().then(c=>c.toBlob(b=>saveFile(fname('png'),b),'image/png'));
+$('#pdf').onclick=()=>capture().then(c=>{
+  const {jsPDF}=window.jspdf, w=c.width, h=c.height;
+  const pdf=new jsPDF({orientation:h>w?'p':'l',unit:'pt',format:[w*0.5,h*0.5]});
+  pdf.addImage(c.toDataURL('image/png'),'PNG',0,0,w*0.5,h*0.5);
+  saveFile(fname('pdf'), pdf.output('blob'));
+});
+
+$('#drop').onclick=()=>$('#file').click();
+$('#file').onchange=e=>{ if(e.target.files[0]) handleFile(e.target.files[0]); };
+['dragover','dragleave','drop'].forEach(ev=>$('#drop').addEventListener(ev,e=>e.preventDefault()));
+$('#drop').addEventListener('drop',e=>{ if(e.dataTransfer.files[0]) handleFile(e.dataTransfer.files[0]); });
+$('#gen').onclick=generate;
+
+window.addEventListener('load',()=>{
+  try{
+    const txt=$('#sampleCsv').textContent;
+    if(txt && txt.trim() && !txt.includes('__SAMPLE_'+'CSV__')){
+      loadCSVText(txt);
+      $('#date').value='2026-09-19'; $('#handle').value='59andflawless';
+      generate();
+      $('#status').textContent='Sample data loaded · upload a file to replace it.';
+    }
+  }catch(e){ console.warn(e); }
+});
+</script>
+</body>
+</html>
