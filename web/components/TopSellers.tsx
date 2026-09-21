@@ -8,14 +8,18 @@ import type { TopItem } from "@/lib/products";
 /**
  * US 틱톡샵에서 많이 팔린 10개를 맨 위에 보여준다.
  *
- * 전체 매출 순서와 라이브 매출 순서를 눌러서 바꿔 본다. 둘은 여섯 개가
- * 겹치고 넷이 다르다. 라이브 전용 세트처럼 라이브에서만 도는 제품은
+ * 전체 매출 순서와 크리에이터 라이브 순서를 눌러서 바꿔 본다. 둘은 여섯
+ * 개가 겹치고 넷이 다르다. 라이브 전용 세트처럼 라이브에서만 도는 제품은
  * 전체 순서로는 아예 안 보이기 때문에 따로 볼 수 있어야 한다.
+ *
+ * '라이브' 가 아니라 '크리에이터 라이브' 인 이유: CRUVA 의 제품별 live_gmv
+ * 에는 브랜드 자체 라이브가 들어 있지 않다. 브랜드 라이브는 제품별 내역이
+ * 아예 없어 쪼갤 수가 없다. top10.json 의 _라이브 에 적어 두었다.
  *
  * 크리에이터가 방송에서 제품을 걸려면 pid 가 필요하다. 그래서 순위·이름과
  * 함께 pid 를 눌러 복사할 수 있게 둔다. 매출액은 싣지 않는다.
  */
-type 기준 = "전체" | "라이브";
+type 기준 = "전체" | "크리에이터라이브";
 
 function CopyPid({ pid }: { pid: string }) {
   const t = useT();
@@ -98,14 +102,16 @@ export default function TopSellers({
       </h1>
 
       <div className="pw-basis" role="group" aria-label={t("순위 기준", "Ranked by")}>
-        {(["전체", "라이브"] as 기준[]).map((k) => (
+        {(["전체", "크리에이터라이브"] as 기준[]).map((k) => (
           <button
             key={k}
             type="button"
             aria-pressed={기준 === k}
             onClick={() => set기준(k)}
           >
-            {k === "전체" ? t("전체", "Total") : t("라이브", "Live")}
+            {k === "전체"
+              ? t("전체", "Total")
+              : t("크리에이터 라이브", "Creator live")}
           </button>
         ))}
       </div>
@@ -117,8 +123,8 @@ export default function TopSellers({
               "Ranked by sales across every channel. Click an ID to copy it. The bundles have no single-product page, so they show the ID only.",
             )
           : t(
-              "라이브에서 팔린 것만 세운 순서입니다. 라이브는 전체 매출의 6% 남짓이라 금액이 작고 순위가 자주 바뀝니다.",
-              "Ranked by live sales only. Live is about 6% of total sales, so the numbers are small and the order moves around.",
+              "크리에이터 라이브에서 팔린 것만 세운 순서입니다. 브랜드 자체 라이브는 제품별로 나뉘지 않아 여기에 빠져 있습니다. 금액이 작아 순위가 자주 바뀝니다.",
+              "Ranked by sales on creator lives only. The brand's own lives aren't broken out by product, so they're not counted here. The numbers are small, so the order moves around.",
             )}
       </p>
 
