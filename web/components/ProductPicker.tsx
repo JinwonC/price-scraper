@@ -28,10 +28,12 @@ function matches(card: ProductCard, q: string): boolean {
 export default function ProductPicker({
   cards,
   top,
+  live,
   period,
 }: {
   cards: ProductCard[];
   top: TopItem[];
+  live: TopItem[];
   period: { ko: string; en: string };
 }) {
   const [q, setQ] = useState("");
@@ -45,10 +47,9 @@ export default function ProductPicker({
 
   return (
     <main className="pw-main">
-      <h1 className="pw-h1">{t("제품을 고르세요", "Pick a product")}</h1>
-
-      {/* 많이 팔린 10개를 맨 위에. 제목 아래에 두어야 제목 단계가 어긋나지 않는다. */}
-      <TopSellers items={top} period={period} />
+      {/* 머리말은 없앴다. 화면 맨 위 '달바 제품 가이드' 와 겹쳐 한 줄만 더 차지했다.
+          대신 많이 팔린 10개가 이 화면의 첫 제목이 된다. */}
+      <TopSellers items={top} live={live} period={period} />
 
       <p className="pw-intro">
         {t(

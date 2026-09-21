@@ -1,6 +1,7 @@
 {
  "_주": "US 틱톡샵에서 최근 30일 동안 많이 팔린 순서 1~10위. CRUVA 에서 뽑았다.",
- "_기준": "total_gmv 내림차순, 2026-08-22 ~ 2026-09-21",
+ "_기준": "전체 GMV(total_gmv) 내림차순, 2026-08-22 ~ 2026-09-21. 라이브 순위는 live_gmv 기준.",
+ "_라이브": "순서는 전체 GMV 다. 라이브에서 몇 위인지는 '라이브순위' 로 따로 붙인다. 라이브는 전체 매출의 6% 남짓이라 그것만으로 줄을 세우면 흔들린다.",
  "_매출액없음": "순위만 싣고 금액은 싣지 않는다. 이 저장소는 공개라 매출액을 커밋하면 밖으로 나간다.",
  "_세트": "10위 안의 여섯 개는 세트·기획 구성이라 교안 단품 페이지가 없다. slug 가 null 인 항목이 그것이다.",
  "_이미지": "틱톡샵 상품 페이지의 og:image(1080x1080 공식 제품컷)를 받아 440px 로 줄여 web/public/top/<pid>.jpg 에 둔다. 주소에 서명값이 붙어 시간이 지나면 막히므로 링크로 걸지 않고 내려받아 둔다.",
@@ -15,7 +16,8 @@
    "en": "Age Less, Lift More Set (3-step Volufiline)",
    "slug": null,
    "판매중": true,
-   "이미지": "/top/1732356256385635036.jpg"
+   "이미지": "/top/1732356256385635036.jpg",
+   "라이브순위": 6
   },
   {
    "순위": 2,
@@ -24,7 +26,8 @@
    "en": "White Truffle First Spray Serum",
    "slug": "white-truffle-first-spray-serum",
    "판매중": true,
-   "이미지": "/top/1732030444618027740.jpg"
+   "이미지": "/top/1732030444618027740.jpg",
+   "라이브순위": 2
   },
   {
    "순위": 3,
@@ -33,7 +36,8 @@
    "en": "White Truffle Waterfull Tone Up Sunscreen Serum",
    "slug": "white-truffle-waterfull-tone-up-sunscreen-serum",
    "판매중": true,
-   "이미지": "/top/1732057509504979676.jpg"
+   "이미지": "/top/1732057509504979676.jpg",
+   "라이브순위": null
   },
   {
    "순위": 4,
@@ -42,7 +46,8 @@
    "en": "Overnight Radiance Vita Set (5 pieces)",
    "slug": null,
    "판매중": true,
-   "이미지": "/top/1732268708636299996.jpg"
+   "이미지": "/top/1732268708636299996.jpg",
+   "라이브순위": 1
   },
   {
    "순위": 5,
@@ -51,7 +56,8 @@
    "en": "White Truffle Intensive Volufiline Grinding Cream",
    "slug": "white-truffle-intensive-volufiline-grinding-cream",
    "판매중": true,
-   "이미지": "/top/1732057536500110044.jpg"
+   "이미지": "/top/1732057536500110044.jpg",
+   "라이브순위": null
   },
   {
    "순위": 6,
@@ -60,7 +66,8 @@
    "en": "First Spray Serum Holiday Gift Set (3+2+1)",
    "slug": null,
    "판매중": true,
-   "이미지": "/top/1732090269393588956.jpg"
+   "이미지": "/top/1732090269393588956.jpg",
+   "라이브순위": 7
   },
   {
    "순위": 7,
@@ -69,7 +76,8 @@
    "en": "Glow & Lift Routine Set (spray serum, double serum, double cream, multi balm)",
    "slug": null,
    "판매중": true,
-   "이미지": "/top/1729492487438964444.jpg"
+   "이미지": "/top/1729492487438964444.jpg",
+   "라이브순위": 4
   },
   {
    "순위": 8,
@@ -78,7 +86,8 @@
    "en": "Double Quick Liposome Serum Mask Pad",
    "slug": "double-quick-liposome-serum-mask-pad",
    "판매중": true,
-   "이미지": "/top/1732397321053967068.jpg"
+   "이미지": "/top/1732397321053967068.jpg",
+   "라이브순위": null
   },
   {
    "순위": 9,
@@ -87,7 +96,8 @@
    "en": "Full Skincare Routine Set (6 pieces)",
    "slug": null,
    "판매중": true,
-   "이미지": "/top/1732389843953357532.jpg"
+   "이미지": "/top/1732389843953357532.jpg",
+   "라이브순위": 5
   },
   {
    "순위": 10,
@@ -96,7 +106,47 @@
    "en": "Volufiline Lift & Eye Full Routine Set, live exclusive (6 pieces)",
    "slug": null,
    "판매중": true,
-   "이미지": "/top/1732615108929622748.jpg"
+   "이미지": "/top/1732615108929622748.jpg",
+   "라이브순위": null
+  }
+ ],
+ "_라이브항목": "라이브 10위 안이지만 전체 GMV 10위 안에는 못 든 제품들.",
+ "라이브항목": [
+  {
+   "라이브순위": 3,
+   "pid": "1732557612203348700",
+   "ko": "[라이브 전용] 모닝 래디언스 비타 세트 (아침 5단계)",
+   "en": "[Live Exclusive] Morning Radiance Vita Set (5-step AM routine)",
+   "slug": null,
+   "판매중": true,
+   "이미지": "/top/1732557612203348700.jpg"
+  },
+  {
+   "라이브순위": 8,
+   "pid": "1732558035917181660",
+   "ko": "[라이브 전용] 나이트 리페어 트러플 세트 (저녁 5단계)",
+   "en": "[Live Exclusive] Night Repair Truffle Set (5-step PM routine)",
+   "slug": null,
+   "판매중": true,
+   "이미지": "/top/1732558035917181660.jpg"
+  },
+  {
+   "라이브순위": 9,
+   "pid": "1732057558820688604",
+   "ko": "비타 토닝 세럼 토너",
+   "en": "Vita Toning Serum Toner",
+   "slug": "vita-toning-serum-toner",
+   "판매중": true,
+   "이미지": "/top/1732057558820688604.jpg"
+  },
+  {
+   "라이브순위": 10,
+   "pid": "1732093806458802908",
+   "ko": "데일리 3스텝 래디언트 글로우 세트 (토너·세럼·크림)",
+   "en": "Daily 3 Step Radiant Glow Set (toner, serum, cream)",
+   "slug": null,
+   "판매중": true,
+   "이미지": "/top/1732093806458802908.jpg"
   }
  ]
 }
