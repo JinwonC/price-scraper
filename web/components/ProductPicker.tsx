@@ -3,7 +3,10 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { useLang, useT } from "@/components/Lang";
-import type { ProductCard } from "@/lib/products";
+import TopSellers from "@/components/TopSellers";
+// 값을 가져오면 제품 데이터 전체가 클라이언트 번들에 딸려 온다. 타입만 가져오고
+// 실제 값은 서버에서 props 로 받는다.
+import type { ProductCard, TopItem } from "@/lib/products";
 
 /** 검색어를 제품명·영문명·태그·한 줄 소개에 두루 맞춰 본다. */
 function matches(card: ProductCard, q: string): boolean {
@@ -22,7 +25,15 @@ function matches(card: ProductCard, q: string): boolean {
   return hay.includes(q) || hay.replace(/\s+/g, "").includes(q.replace(/\s+/g, ""));
 }
 
-export default function ProductPicker({ cards }: { cards: ProductCard[] }) {
+export default function ProductPicker({
+  cards,
+  top,
+  asOf,
+}: {
+  cards: ProductCard[];
+  top: TopItem[];
+  asOf: string;
+}) {
   const [q, setQ] = useState("");
   const t = useT();
   const { lang } = useLang();
@@ -35,6 +46,10 @@ export default function ProductPicker({ cards }: { cards: ProductCard[] }) {
   return (
     <main className="pw-main">
       <h1 className="pw-h1">{t("제품을 고르세요", "Pick a product")}</h1>
+
+      {/* 많이 팔린 10개를 맨 위에. 제목 아래에 두어야 제목 단계가 어긋나지 않는다. */}
+      <TopSellers items={top} asOf={asOf} />
+
       <p className="pw-intro">
         {t(
           `제품 ${cards.length}개입니다. 제품을 누르면 브리프와 이미지, 제품 특징, 그리고 성분·향·사용법 이야기를 볼 수 있습니다.`,
@@ -84,6 +99,12 @@ export default function ProductPicker({ cards }: { cards: ProductCard[] }) {
                   )}
                 </div>
                 <div className="pw-card-body">
+                  {/* 많이 팔린 10개 안에 드는 제품이면 목록에서도 알아보게 한다. */}
+                  {c.순위 && (
+                    <p className="pw-card-rank">
+                      {t(`판매 ${c.순위}위`, `#${c.순위} by sales`)}
+                    </p>
+                  )}
                   <h2>{t(c.ko, c.en)}</h2>
                   {/* 영어 화면에서는 제목이 이미 영어다. 같은 이름을 두 번 쓰지 않는다. */}
                   {lang === "ko" && c.en && <p className="pw-en">{c.en}</p>}

@@ -1,6 +1,7 @@
 import raw from "@/data/products.json";
 import images from "@/data/product-images.json";
 import briefs from "@/data/briefs.json";
+import top from "@/data/top10.json";
 
 /** 브리프에 안 들어간 나머지를 사람이 읽고 풀어 쓴 것. 교안 원문이 아니다. */
 export type Etc = { 제목: string; 본문: string[]; title?: string; body?: string[] };
@@ -52,6 +53,25 @@ export function getImages(slug: string): ProductImage[] {
 }
 
 /** 목록 화면이 쓰는 가벼운 색인. 카드에 필요한 것만 담는다. */
+/** US 틱톡샵에서 많이 팔린 순서. 금액은 싣지 않는다 — 순위와 pid 만. */
+export type TopItem = {
+  순위: number;
+  pid: string;
+  ko: string;
+  en: string;
+  /** 교안에 단품 페이지가 있으면 그 슬러그. 세트 구성이면 null. */
+  slug: string | null;
+  판매중: boolean;
+};
+
+export const top10: TopItem[] = (top as { 항목: TopItem[] }).항목;
+export const top10기준일: string = (top as { 기준일: string }).기준일;
+
+/** 10위 안에 드는 제품이면 그 순위. 목록 카드에 띠를 달 때 쓴다. */
+export function getRank(slug: string): number | undefined {
+  return top10.find((t) => t.slug === slug)?.순위;
+}
+
 export type ProductCard = {
   slug: string;
   ko: string;
@@ -65,6 +85,8 @@ export type ProductCard = {
   용량En: string;
   기능성En: string;
   한줄En: string;
+  /** US 스토어 판매 순위. 10위 안에 들 때만 값이 있다. */
+  순위?: number;
 };
 
 export const cards: ProductCard[] = all.map((p) => ({
@@ -79,6 +101,7 @@ export const cards: ProductCard[] = all.map((p) => ({
   용량En: p.en판?.스펙?.용량 ?? "",
   기능성En: p.en판?.스펙?.기능성 ?? "",
   한줄En: p.en판?.한줄 ?? "",
+  순위: getRank(p.slug),
 }));
 
 /** 사람이 직접 쓴 브리프. 교안 추출 데이터와 달리 문장으로 읽히도록 쓴 것이다. */
@@ -114,3 +137,4 @@ export function getBrief(slug: string): Brief | undefined {
     ? (b as Brief)
     : undefined;
 }
+
