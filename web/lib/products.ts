@@ -62,6 +62,8 @@ export type TopItem = {
   /** 교안에 단품 페이지가 있으면 그 슬러그. 세트 구성이면 null. */
   slug: string | null;
   판매중: boolean;
+  /** 틱톡샵 공식 제품컷을 받아 둔 자리. 못 받은 제품은 null. */
+  이미지: string | null;
 };
 
 export const top10: TopItem[] = (top as { 항목: TopItem[] }).항목;

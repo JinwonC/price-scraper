@@ -72,6 +72,13 @@ export default function TopSellers({
               <span className="pw-rank" aria-hidden="true">
                 {it.순위}
               </span>
+              {/* 제품컷은 틱톡샵 공식 이미지다. 못 받은 제품은 빈 자리로 둔다. */}
+              <span className="pw-best-thumb">
+                {it.이미지 && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={it.이미지} alt="" loading="lazy" width={44} height={44} />
+                )}
+              </span>
               <div className="pw-best-body">
                 <p className="pw-best-name">
                   {it.slug ? (
