@@ -221,6 +221,30 @@
 .pw-best-name a:hover {
   text-decoration-color: var(--pw-accent);
 }
+/* 번호와 그 옆 표시를 한 줄에 둔다. 좁은 화면에서는 아래로 접힌다. */
+.pw-best-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+/* 라이브에서도 10위 안에 드는 제품이라는 표시. 순서는 바꾸지 않는다. */
+.pw-live-tag {
+  padding: 2px 7px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--pw-accent);
+  border: 1px solid var(--pw-accent-edge);
+  border-radius: 999px;
+}
+.pw-best-sub {
+  margin: 22px 0 6px;
+  padding-top: 18px;
+  border-top: 1px solid var(--pw-accent-edge);
+  font-size: 14px;
+  letter-spacing: -0.01em;
+}
 .pw-off-tag {
   margin-left: 6px;
   padding: 1px 6px;
