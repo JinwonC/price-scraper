@@ -1,0 +1,60 @@
+name: Live GMV 집계
+
+# 이 저장소는 공개라 Actions 로그를 누구나 읽는다.
+# 그래서 매출 숫자는 로그에 남기지 않고 구글시트에만 쓴다.
+on:
+  workflow_dispatch:
+    inputs:
+      src_sheet_id:
+        description: '원본 스프레드시트 ID'
+        required: true
+        default: '1RjXg3xO1UMhG_Ykmprn4v4bx2gVntOkjW-SE3RZOzhU'
+      src_tab:
+        description: '원본 탭 이름 (비우면 이름에 «유입매출» 이 든 탭을 찾는다)'
+        required: false
+        default: '(중요,수동) 제품별 유입매출 RAW (520업데이트)'
+      date_from:
+        description: '시작일 YYYY-MM-DD (비우면 전체 기간)'
+        required: false
+        default: ''
+      date_to:
+        description: '종료일 YYYY-MM-DD (비우면 전체 기간)'
+        required: false
+        default: ''
+      top_n:
+        description: '결과에 실을 제품 수'
+        required: false
+        default: '50'
+      share_email:
+        description: '결과 시트를 공유할 주소'
+        required: false
+        default: ''
+
+jobs:
+  집계:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: live-gmv
+    steps:
+      - name: 코드 가져오기
+        uses: actions/checkout@v4
+
+      - name: 파이썬 설치
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 의존성 설치
+        run: pip install -r requirements.txt
+
+      - name: 라이브 매출 집계
+        env:
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+          SRC_SHEET_ID: ${{ inputs.src_sheet_id }}
+          SRC_TAB: ${{ inputs.src_tab }}
+          DATE_FROM: ${{ inputs.date_from }}
+          DATE_TO: ${{ inputs.date_to }}
+          TOP_N: ${{ inputs.top_n }}
+          SHARE_EMAIL: ${{ inputs.share_email }}
+        run: python live_gmv.py
