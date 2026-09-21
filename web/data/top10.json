@@ -1,13 +1,23 @@
 {
- "_주": "US 틱톡샵에서 많이 팔린 순서 1~10위. CRUVA 에서 뽑았다.",
- "_기준": "total_gmv 내림차순, 2026-01-01 ~ 2026-09-21",
+ "_주": "US 틱톡샵에서 최근 30일 동안 많이 팔린 순서 1~10위. CRUVA 에서 뽑았다.",
+ "_기준": "total_gmv 내림차순, 2026-08-22 ~ 2026-09-21",
  "_매출액없음": "순위만 싣고 금액은 싣지 않는다. 이 저장소는 공개라 매출액을 커밋하면 밖으로 나간다.",
- "_세트": "10위 안의 일곱 개는 세트·기획 구성이라 교안 단품 페이지가 없다. slug 가 null 인 항목이 그것이다.",
- "_갱신": "숫자가 움직이면 CRUVA 에서 다시 뽑아 이 파일만 갈아 끼우면 된다.",
+ "_세트": "10위 안의 여섯 개는 세트·기획 구성이라 교안 단품 페이지가 없다. slug 가 null 인 항목이 그것이다.",
+ "_갱신": "30일 창이라 순위가 자주 바뀐다. CRUVA 에서 다시 뽑아 이 파일만 갈아 끼우면 된다.",
  "기준일": "2026-09-21",
+ "기간ko": "최근 30일 · 2026-09-21 기준",
+ "기간en": "Last 30 days · as of 2026-09-21",
  "항목": [
   {
    "순위": 1,
+   "pid": "1732356256385635036",
+   "ko": "에이지리스 리프트모어 세트 (보르피린 3종)",
+   "en": "Age Less, Lift More Set (3-step Volufiline)",
+   "slug": null,
+   "판매중": true
+  },
+  {
+   "순위": 2,
    "pid": "1732030444618027740",
    "ko": "달바 화이트 트러플 퍼스트 스프레이 세럼",
    "en": "White Truffle First Spray Serum",
@@ -15,23 +25,7 @@
    "판매중": true
   },
   {
-   "순위": 2,
-   "pid": "1732268708636299996",
-   "ko": "오버나이트 래디언스 비타 세트 (5종)",
-   "en": "Overnight Radiance Vita Set (5 pieces)",
-   "slug": null,
-   "판매중": true
-  },
-  {
    "순위": 3,
-   "pid": "1732093806458802908",
-   "ko": "데일리 3스텝 래디언트 글로우 세트 (토너·세럼·크림)",
-   "en": "Daily 3 Step Radiant Glow Set (toner, serum, cream)",
-   "slug": null,
-   "판매중": true
-  },
-  {
-   "순위": 4,
    "pid": "1732057509504979676",
    "ko": "달바 비건 톤업 선스크린",
    "en": "White Truffle Waterfull Tone Up Sunscreen Serum",
@@ -39,19 +33,27 @@
    "판매중": true
   },
   {
-   "순위": 5,
-   "pid": "1732090269393588956",
-   "ko": "퍼스트 스프레이 세럼 홀리데이 기프트 세트 (3+2+1)",
-   "en": "First Spray Serum Holiday Gift Set (3+2+1)",
+   "순위": 4,
+   "pid": "1732268708636299996",
+   "ko": "오버나이트 래디언스 비타 세트 (5종)",
+   "en": "Overnight Radiance Vita Set (5 pieces)",
    "slug": null,
    "판매중": true
   },
   {
-   "순위": 6,
+   "순위": 5,
    "pid": "1732057536500110044",
    "ko": "달바 인텐시브 보르피린 그라인딩 크림",
    "en": "White Truffle Intensive Volufiline Grinding Cream",
    "slug": "white-truffle-intensive-volufiline-grinding-cream",
+   "판매중": true
+  },
+  {
+   "순위": 6,
+   "pid": "1732090269393588956",
+   "ko": "퍼스트 스프레이 세럼 홀리데이 기프트 세트 (3+2+1)",
+   "en": "First Spray Serum Holiday Gift Set (3+2+1)",
+   "slug": null,
    "판매중": true
   },
   {
@@ -64,25 +66,25 @@
   },
   {
    "순위": 8,
-   "pid": "1732356256385635036",
-   "ko": "에이지리스 리프트모어 세트 (보르피린 3종)",
-   "en": "Age Less, Lift More Set (3-step Volufiline)",
-   "slug": null,
+   "pid": "1732397321053967068",
+   "ko": "달바 더블 퀵 리포좀 세럼 마스크 패드",
+   "en": "Double Quick Liposome Serum Mask Pad",
+   "slug": "double-quick-liposome-serum-mask-pad",
    "판매중": true
   },
   {
    "순위": 9,
-   "pid": "1732088941092311772",
-   "ko": "퍼스트 스프레이 세럼 2개입 세트",
-   "en": "First Spray Serum, 2 bottles",
+   "pid": "1732389843953357532",
+   "ko": "풀 스킨케어 루틴 세트 (클렌저·세럼·클렌징밤·마스크 등 6종)",
+   "en": "Full Skincare Routine Set (6 pieces)",
    "slug": null,
-   "판매중": false
+   "판매중": true
   },
   {
    "순위": 10,
-   "pid": "1732097266547135196",
-   "ko": "글로우 SPF 듀오 (퍼스트 스프레이 세럼 + 톤업 선스크린)",
-   "en": "Glow SPF Duo (First Spray Serum + Tone Up Sunscreen)",
+   "pid": "1732615108929622748",
+   "ko": "라이브 전용 보르피린 리프트 앤 아이 세트 (6종)",
+   "en": "Volufiline Lift & Eye Full Routine Set, live exclusive (6 pieces)",
    "slug": null,
    "판매중": true
   }

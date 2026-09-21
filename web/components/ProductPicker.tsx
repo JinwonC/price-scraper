@@ -28,11 +28,11 @@ function matches(card: ProductCard, q: string): boolean {
 export default function ProductPicker({
   cards,
   top,
-  asOf,
+  period,
 }: {
   cards: ProductCard[];
   top: TopItem[];
-  asOf: string;
+  period: { ko: string; en: string };
 }) {
   const [q, setQ] = useState("");
   const t = useT();
@@ -48,7 +48,7 @@ export default function ProductPicker({
       <h1 className="pw-h1">{t("제품을 고르세요", "Pick a product")}</h1>
 
       {/* 많이 팔린 10개를 맨 위에. 제목 아래에 두어야 제목 단계가 어긋나지 않는다. */}
-      <TopSellers items={top} asOf={asOf} />
+      <TopSellers items={top} period={period} />
 
       <p className="pw-intro">
         {t(

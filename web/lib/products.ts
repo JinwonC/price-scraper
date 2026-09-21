@@ -65,7 +65,12 @@ export type TopItem = {
 };
 
 export const top10: TopItem[] = (top as { 항목: TopItem[] }).항목;
-export const top10기준일: string = (top as { 기준일: string }).기준일;
+
+/** 어느 기간을 센 순위인지. 화면에 그대로 띄운다. */
+export const top10기간 = {
+  ko: (top as { 기간ko: string }).기간ko,
+  en: (top as { 기간en: string }).기간en,
+};
 
 /** 10위 안에 드는 제품이면 그 순위. 목록 카드에 띠를 달 때 쓴다. */
 export function getRank(slug: string): number | undefined {
