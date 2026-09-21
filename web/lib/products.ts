@@ -54,8 +54,7 @@ export function getImages(slug: string): ProductImage[] {
 
 /** US 틱톡샵에서 많이 팔린 제품. 금액은 싣지 않는다 — 순위와 pid 만. */
 export type TopItem = {
-  /** 전체 GMV 순위. 라이브 목록에만 있는 제품은 이 값이 없다. */
-  순위?: number;
+  순위: number;
   pid: string;
   ko: string;
   en: string;
@@ -64,8 +63,6 @@ export type TopItem = {
   판매중: boolean;
   /** 틱톡샵 공식 제품컷을 받아 둔 자리. 못 받은 제품은 null. */
   이미지: string | null;
-  /** 라이브 매출 기준 순위. 10위 안일 때만 값이 있다. */
-  라이브순위?: number | null;
 };
 
 type TopFile = {
@@ -87,12 +84,6 @@ export const top10: TopItem[] = 펴기(topFile.전체);
 
 /** 라이브 매출만 세운 1~10위. 전체와 여섯 개가 겹치고 넷이 다르다. */
 export const top라이브: TopItem[] = 펴기(topFile.라이브);
-
-/**
- * 라이브 10위 안이지만 전체 GMV 10위 안에는 못 든 제품들.
- * 라이브를 켜는 사람에게는 이쪽이 더 쓸모 있다.
- */
-export const top라이브: TopItem[] = (top as { 라이브항목: TopItem[] }).라이브항목;
 
 /** 어느 기간을 센 순위인지. 화면에 그대로 띄운다. */
 export const top10기간 = {
