@@ -7,9 +7,13 @@
 '이미지' 칸이 그에 맞춰 갱신된다. 못 받은 제품은 null 로 둔다 —
 화면에서는 빈 자리로 나온다.
 
-가끔 퍼즐 CAPTCHA 가 뜨는 제품이 있다. 라이브 전용처럼 공개 페이지가
-없는 상품이 그렇다. 우회하지 않는다. 그런 제품은 사람이 셀러센터에서
-받아 web/public/top/<pid>.jpg 로 넣어 주고 이 스크립트를 다시 돌리면 된다.
+주소는 두 가지를 차례로 시도한다. /view/product/<pid> 는 정식 주소로
+넘겨 주는 짧은 주소인데, 제품에 따라 그 단계에서 퍼즐 CAPTCHA 를 띄운다.
+정식 주소인 /us/pdp/<슬러그>/<pid> 로 바로 가면 같은 제품이 그냥 열린다.
+슬러그는 실제로 쓰이지 않아 아무 값이나 넣어도 된다.
+
+그래도 막히는 제품이 있으면 우회하지 않는다. 사람이 셀러센터에서 받아
+web/public/top/<pid>.jpg 로 넣어 주고 이 스크립트를 다시 돌리면 된다.
 
 사용: python shop_images.py [pid ...]    (인자 없으면 top10.json 전체)
 """
@@ -53,15 +57,26 @@ def get(url, binary=False):
     return r.stdout if binary else r.stdout.decode("utf-8", "replace")
 
 
-def fetch_one(pid):
-    """제품컷을 받아 저장한다. 받으면 파일 크기를, 못 받으면 까닭을 돌려준다."""
-    html = get(f"https://shop.tiktok.com/view/product/{pid}")
-    if 막힘.search(html):
+def og_image_url(pid):
+    """상품 페이지에서 제품컷 주소를 찾는다. 정식 주소를 먼저 두드린다."""
+    막힌적 = False
+    for url in (f"https://shop.tiktok.com/us/pdp/x/{pid}",
+                f"https://shop.tiktok.com/view/product/{pid}"):
+        html = get(url)
+        if 막힘.search(html):
+            막힌적 = True
+            continue
+        m = OG_IMAGE.search(html)
+        if m:
+            return unescape(m.group(1))
+    if 막힌적:
         raise RuntimeError("봇 차단 화면 — 사람이 셀러센터에서 받아야 한다")
-    m = OG_IMAGE.search(html)
-    if not m:
-        raise RuntimeError("og:image 가 없다")
-    im = Image.open(io.BytesIO(get(unescape(m.group(1)), binary=True)))
+    raise RuntimeError("og:image 가 없다")
+
+
+def fetch_one(pid):
+    """제품컷을 받아 저장한다. 받으면 크기를, 못 받으면 까닭을 돌려준다."""
+    im = Image.open(io.BytesIO(get(og_image_url(pid), binary=True)))
     원본 = im.size
     im = im.convert("RGB")
     if max(im.size) > LONG_EDGE:
