@@ -107,6 +107,38 @@
   border: 1px solid var(--pw-accent-edge);
   border-radius: var(--radius);
 }
+/* 전체 / 라이브 를 눌러 바꾼다. 화면 위 언어 토글과 같은 모양이다. */
+.pw-basis {
+  display: inline-flex;
+  margin: 0 0 10px;
+  border: 1px solid var(--pw-accent-edge);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.pw-basis button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 4px 13px;
+  font: inherit;
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+.pw-basis button + button {
+  border-left: 1px solid var(--pw-accent-edge);
+}
+.pw-basis button[aria-pressed="true"] {
+  background: var(--pw-accent);
+  color: var(--page);
+  font-weight: 650;
+}
+.pw-basis button:hover:not([aria-pressed="true"]) {
+  color: var(--text-primary);
+}
+
 .pw-best > h1 {
   display: flex;
   flex-wrap: wrap;
@@ -188,30 +220,6 @@
 }
 .pw-best-name a:hover {
   text-decoration-color: var(--pw-accent);
-}
-/* 번호와 그 옆 표시를 한 줄에 둔다. 좁은 화면에서는 아래로 접힌다. */
-.pw-best-meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 6px;
-}
-/* 라이브에서도 10위 안에 드는 제품이라는 표시. 순서는 바꾸지 않는다. */
-.pw-live-tag {
-  padding: 2px 7px;
-  font-size: 11px;
-  font-weight: 700;
-  white-space: nowrap;
-  color: var(--pw-accent);
-  border: 1px solid var(--pw-accent-edge);
-  border-radius: 999px;
-}
-.pw-best-sub {
-  margin: 22px 0 6px;
-  padding-top: 18px;
-  border-top: 1px solid var(--pw-accent-edge);
-  font-size: 14px;
-  letter-spacing: -0.01em;
 }
 .pw-off-tag {
   margin-left: 6px;
