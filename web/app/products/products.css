@@ -134,9 +134,9 @@
 }
 .pw-best-list > li {
   display: flex;
-  align-items: baseline;
-  gap: 10px;
-  padding: 9px 0;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 10px 0;
   border-top: 1px solid var(--pw-accent-edge);
 }
 /* 판매가 멈춘 줄은 눌러 둔다. 걸면 안 되는 제품이다. */
@@ -145,12 +145,30 @@
 }
 .pw-rank {
   flex: none;
-  width: 21px;
+  width: 18px;
+  /* 제품컷과 첫 줄에 눈높이를 맞춘다. */
+  line-height: 22px;
   font-size: 13px;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
   text-align: right;
   color: var(--pw-accent);
+}
+.pw-best-thumb {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+}
+.pw-best-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .pw-best-body {
   min-width: 0;

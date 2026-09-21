@@ -3,8 +3,8 @@
  "_기준": "total_gmv 내림차순, 2026-08-22 ~ 2026-09-21",
  "_매출액없음": "순위만 싣고 금액은 싣지 않는다. 이 저장소는 공개라 매출액을 커밋하면 밖으로 나간다.",
  "_세트": "10위 안의 여섯 개는 세트·기획 구성이라 교안 단품 페이지가 없다. slug 가 null 인 항목이 그것이다.",
+ "_이미지": "틱톡샵 상품 페이지의 og:image(1080x1080 공식 제품컷)를 받아 440px 로 줄여 web/public/top/<pid>.jpg 에 둔다. 주소에 서명값이 붙어 시간이 지나면 막히므로 링크로 걸지 않고 내려받아 둔다.",
  "_갱신": "30일 창이라 순위가 자주 바뀐다. CRUVA 에서 다시 뽑아 이 파일만 갈아 끼우면 된다.",
- "기준일": "2026-09-21",
  "기간ko": "최근 30일 · 2026-09-21 기준",
  "기간en": "Last 30 days · as of 2026-09-21",
  "항목": [
@@ -14,7 +14,8 @@
    "ko": "에이지리스 리프트모어 세트 (보르피린 3종)",
    "en": "Age Less, Lift More Set (3-step Volufiline)",
    "slug": null,
-   "판매중": true
+   "판매중": true,
+   "이미지": "/top/1732356256385635036.jpg"
   },
   {
    "순위": 2,
@@ -22,7 +23,8 @@
    "ko": "달바 화이트 트러플 퍼스트 스프레이 세럼",
    "en": "White Truffle First Spray Serum",
    "slug": "white-truffle-first-spray-serum",
-   "판매중": true
+   "판매중": true,
+   "이미지": "/top/1732030444618027740.jpg"
   },
   {
    "순위": 3,
@@ -30,7 +32,8 @@
    "ko": "달바 비건 톤업 선스크린",
    "en": "White Truffle Waterfull Tone Up Sunscreen Serum",
    "slug": "white-truffle-waterfull-tone-up-sunscreen-serum",
-   "판매중": true
+   "판매중": true,
+   "이미지": "/top/1732057509504979676.jpg"
   },
   {
    "순위": 4,
@@ -38,7 +41,8 @@
    "ko": "오버나이트 래디언스 비타 세트 (5종)",
    "en": "Overnight Radiance Vita Set (5 pieces)",
    "slug": null,
-   "판매중": true
+   "판매중": true,
+   "이미지": "/top/1732268708636299996.jpg"
   },
   {
    "순위": 5,
@@ -46,7 +50,8 @@
    "ko": "달바 인텐시브 보르피린 그라인딩 크림",
    "en": "White Truffle Intensive Volufiline Grinding Cream",
    "slug": "white-truffle-intensive-volufiline-grinding-cream",
-   "판매중": true
+   "판매중": true,
+   "이미지": "/top/1732057536500110044.jpg"
   },
   {
    "순위": 6,
@@ -54,7 +59,8 @@
    "ko": "퍼스트 스프레이 세럼 홀리데이 기프트 세트 (3+2+1)",
    "en": "First Spray Serum Holiday Gift Set (3+2+1)",
    "slug": null,
-   "판매중": true
+   "판매중": true,
+   "이미지": "/top/1732090269393588956.jpg"
   },
   {
    "순위": 7,
@@ -62,7 +68,8 @@
    "ko": "글로우 앤 리프트 루틴 세트 (스프레이 세럼·더블 세럼·더블 크림·멀티밤)",
    "en": "Glow & Lift Routine Set (spray serum, double serum, double cream, multi balm)",
    "slug": null,
-   "판매중": true
+   "판매중": true,
+   "이미지": "/top/1729492487438964444.jpg"
   },
   {
    "순위": 8,
@@ -70,7 +77,8 @@
    "ko": "달바 더블 퀵 리포좀 세럼 마스크 패드",
    "en": "Double Quick Liposome Serum Mask Pad",
    "slug": "double-quick-liposome-serum-mask-pad",
-   "판매중": true
+   "판매중": true,
+   "이미지": "/top/1732397321053967068.jpg"
   },
   {
    "순위": 9,
@@ -78,7 +86,8 @@
    "ko": "풀 스킨케어 루틴 세트 (클렌저·세럼·클렌징밤·마스크 등 6종)",
    "en": "Full Skincare Routine Set (6 pieces)",
    "slug": null,
-   "판매중": true
+   "판매중": true,
+   "이미지": "/top/1732389843953357532.jpg"
   },
   {
    "순위": 10,
@@ -86,7 +95,8 @@
    "ko": "라이브 전용 보르피린 리프트 앤 아이 세트 (6종)",
    "en": "Volufiline Lift & Eye Full Routine Set, live exclusive (6 pieces)",
    "slug": null,
-   "판매중": true
+   "판매중": true,
+   "이미지": null
   }
  ]
 }
