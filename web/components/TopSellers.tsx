@@ -42,10 +42,10 @@ function CopyPid({ pid }: { pid: string }) {
 
 export default function TopSellers({
   items,
-  asOf,
+  period,
 }: {
   items: TopItem[];
-  asOf: string;
+  period: { ko: string; en: string };
 }) {
   const t = useT();
 
@@ -54,7 +54,7 @@ export default function TopSellers({
       <h2 id="top-sellers">
         {t("많이 팔린 10개", "Top 10 by sales")}
         <span className="pw-best-as-of">
-          {t(`US 스토어 · ${asOf} 기준`, `US store · as of ${asOf}`)}
+          {t(`US 스토어 · ${period.ko}`, `US store · ${period.en}`)}
         </span>
       </h2>
       <p className="pw-note">
