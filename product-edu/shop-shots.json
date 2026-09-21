@@ -1,0 +1,140 @@
+{
+ "_주": "교안 제품마다 틱톡샵 공식 제품컷(og:image)을 받아 00.jpg 로 둔다. shop_images.py --edu 로 받는다.",
+ "_뺀픽": "공식 컷이 교안의 같은 제품컷을 대신한 자리. picks.json 의 몇 번째 픽을 내보내지 않는지 적는다. 비어 있으면 교안 컷도 함께 싣는다.",
+ "제품": {
+  "d-alba-signature-allthera-double-shot": {
+   "pid": "1732316356441576156",
+   "뺀픽": []
+  },
+  "double-quick-liposome-serum-mask-pad": {
+   "pid": "1732397321053967068",
+   "뺀픽": [
+    1
+   ]
+  },
+  "first-oil-capsule-serum": {
+   "pid": "1732268097931809500",
+   "뺀픽": []
+  },
+  "intensive-vegan-volufiline-spray-ampoule": {
+   "pid": "1732302889173488348",
+   "뺀픽": [
+    1
+   ]
+  },
+  "italian-white-truffle-professional-repairing-hair-perfume-serum": {
+   "pid": "1732302964838732508",
+   "뺀픽": [
+    1
+   ]
+  },
+  "pro2x": {
+   "pid": "1729524572095485660",
+   "뺀픽": []
+  },
+  "professional-repairing-hair-oil-serum": {
+   "pid": "1732203533184766684",
+   "뺀픽": [
+    1
+   ]
+  },
+  "signature-vita-capsule-hydrogel-mask-8-shape": {
+   "pid": "1732120103439864540",
+   "뺀픽": []
+  },
+  "signature-vita-collagen-pore-tightening-deep-cleansing-balm": {
+   "pid": "1732302917792076508",
+   "뺀픽": []
+  },
+  "vita-toning-anti-aging-spray-serum-8": {
+   "pid": "1732302927802766044",
+   "뺀픽": []
+  },
+  "vita-toning-capsule-cleansing-oil": {
+   "pid": "1732302956387603164",
+   "뺀픽": []
+  },
+  "vita-toning-capsule-cream": {
+   "pid": "1732057542576935644",
+   "뺀픽": [
+    1
+   ]
+  },
+  "vita-toning-capsule-serum": {
+   "pid": "1732057574770709212",
+   "뺀픽": []
+  },
+  "vita-toning-galvanic-wrinkle-eye-cream": {
+   "pid": "1732302934578205404",
+   "뺀픽": [
+    1
+   ]
+  },
+  "vita-toning-serum-toner": {
+   "pid": "1732057558820688604",
+   "뺀픽": []
+  },
+  "waterfull-uv-essence-sunscreen": {
+   "pid": "1732074420355109596",
+   "뺀픽": [
+    1
+   ]
+  },
+  "white-truffle-double-layer-revitalizing-serum": {
+   "pid": "1732057488276886236",
+   "뺀픽": []
+  },
+  "white-truffle-double-serum-all-in-one-multi-balm": {
+   "pid": "1732130103352136412",
+   "뺀픽": []
+  },
+  "white-truffle-double-serum-cream-2-in-1": {
+   "pid": "1732057477457089244",
+   "뺀픽": [
+    1
+   ]
+  },
+  "white-truffle-first-spray-serum": {
+   "pid": "1732030444618027740",
+   "뺀픽": [
+    1
+   ]
+  },
+  "white-truffle-intensive-volufiline-ampoule": {
+   "pid": "1732268026700862172",
+   "뺀픽": [
+    1
+   ]
+  },
+  "white-truffle-intensive-volufiline-grinding-cream": {
+   "pid": "1732057536500110044",
+   "뺀픽": []
+  },
+  "white-truffle-moisturizing-serum-lotion": {
+   "pid": "1732268079806583516",
+   "뺀픽": [
+    1
+   ]
+  },
+  "white-truffle-refresh-aqua-serum": {
+   "pid": "1732302887742837468",
+   "뺀픽": []
+  },
+  "white-truffle-return-oil-cream-cleanser": {
+   "pid": "1732302982184473308",
+   "뺀픽": [
+    1
+   ]
+  },
+  "white-truffle-vital-spray-serum": {
+   "pid": "1732057454715114204",
+   "뺀픽": []
+  },
+  "white-truffle-waterfull-tone-up-sunscreen-serum": {
+   "pid": "1732057509504979676",
+   "뺀픽": [
+    1
+   ]
+  }
+ }
+}
