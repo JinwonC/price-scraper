@@ -1,6 +1,12 @@
 {
  "d-alba-signature-allthera-double-shot": [
   {
+   "src": "/products/d-alba-signature-allthera-double-shot/00.jpg",
+   "설명": "제품 컷",
+   "w": 1080,
+   "h": 1080
+  },
+  {
    "src": "/products/d-alba-signature-allthera-double-shot/01.jpg",
    "설명": "디바이스 본체",
    "w": 933,
@@ -166,6 +172,12 @@
   }
  ],
  "pro2x": [
+  {
+   "src": "/products/pro2x/00.jpg",
+   "설명": "제품 컷",
+   "w": 1010,
+   "h": 1010
+  },
   {
    "src": "/products/pro2x/01.jpg",
    "설명": "제품 컷 (120ml PRO·2X)",
@@ -677,10 +689,10 @@
  ],
  "white-truffle-intensive-volufiline-ampoule": [
   {
-   "src": "/products/white-truffle-intensive-volufiline-ampoule/01.jpg",
+   "src": "/products/white-truffle-intensive-volufiline-ampoule/00.jpg",
    "설명": "제품 컷",
-   "w": 619,
-   "h": 962
+   "w": 1080,
+   "h": 1080
   },
   {
    "src": "/products/white-truffle-intensive-volufiline-ampoule/02.jpg",
@@ -747,10 +759,10 @@
  ],
  "white-truffle-moisturizing-serum-lotion": [
   {
-   "src": "/products/white-truffle-moisturizing-serum-lotion/01.jpg",
+   "src": "/products/white-truffle-moisturizing-serum-lotion/00.jpg",
    "설명": "제품 컷",
-   "w": 529,
-   "h": 998
+   "w": 1080,
+   "h": 1080
   },
   {
    "src": "/products/white-truffle-moisturizing-serum-lotion/02.jpg",
