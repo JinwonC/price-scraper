@@ -51,12 +51,13 @@ export default function TopSellers({
 
   return (
     <section className="pw-best" aria-labelledby="top-sellers">
-      <h2 id="top-sellers">
+      {/* 이 화면의 첫 제목이다. 그래서 h2 가 아니라 h1 이다. */}
+      <h1 id="top-sellers">
         {t("많이 팔린 10개", "Top 10 by sales")}
         <span className="pw-best-as-of">
           {t(`US 스토어 · ${period.ko}`, `US store · ${period.en}`)}
         </span>
-      </h2>
+      </h1>
       <p className="pw-note">
         {t(
           "방송에서 제품을 걸 때 쓰는 번호입니다. 눌러서 복사하세요. 세트 구성은 단품 교안이 없어 번호만 있습니다.",

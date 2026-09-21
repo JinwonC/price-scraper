@@ -107,7 +107,7 @@
   border: 1px solid var(--pw-accent-edge);
   border-radius: var(--radius);
 }
-.pw-best > h2 {
+.pw-best > h1 {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
