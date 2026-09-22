@@ -2,6 +2,7 @@ import raw from "@/data/products.json";
 import images from "@/data/product-images.json";
 import briefs from "@/data/briefs.json";
 import top from "@/data/top10.json";
+import lines from "@/data/lines.json";
 
 /** 브리프에 안 들어간 나머지를 사람이 읽고 풀어 쓴 것. 교안 원문이 아니다. */
 export type Etc = { 제목: string; 본문: string[]; title?: string; body?: string[] };
@@ -111,7 +112,26 @@ export type ProductCard = {
   한줄En: string;
   /** US 스토어 판매 순위. 10위 안에 들 때만 값이 있다. */
   순위?: number;
+  /** 어느 라인에 묶이는지. lines.json 의 '키'. */
+  라인: string;
 };
+
+/** 제품을 라인으로 묶은 것. 줄 안의 차례는 lines.json 에 적힌 순서다. */
+export type Line = {
+  키: string;
+  ko: string;
+  en: string;
+  설명ko: string;
+  설명en: string;
+  제품: string[];
+};
+export const 라인들: Line[] = (lines as { 라인: Line[] }).라인;
+
+/** 한 제품이 어느 라인 몇 번째인지. 목록을 라인 차례로 세울 때 쓴다. */
+const 자리 = new Map<string, number>();
+라인들.forEach((ln, i) =>
+  ln.제품.forEach((slug, j) => 자리.set(slug, i * 1000 + j)),
+);
 
 export const cards: ProductCard[] = all.map((p) => ({
   slug: p.slug,
@@ -126,7 +146,13 @@ export const cards: ProductCard[] = all.map((p) => ({
   기능성En: p.en판?.스펙?.기능성 ?? "",
   한줄En: p.en판?.한줄 ?? "",
   순위: getRank(p.slug),
+  라인: 라인들.find((ln) => ln.제품.includes(p.slug))?.키 ?? "기타",
 }));
+
+// 목록은 라인 차례로 세운다. lines.json 을 고치면 화면 순서도 같이 바뀐다.
+cards.sort(
+  (a, b) => (자리.get(a.slug) ?? 1e9) - (자리.get(b.slug) ?? 1e9),
+);
 
 /** 사람이 직접 쓴 브리프. 교안 추출 데이터와 달리 문장으로 읽히도록 쓴 것이다. */
 export type BriefEn = {

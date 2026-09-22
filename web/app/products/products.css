@@ -271,6 +271,30 @@
   color: var(--pw-accent);
 }
 
+/* ---------- 라인별 묶음 ---------- */
+.pw-group {
+  margin-top: 30px;
+}
+.pw-group > h2 {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 0 0 4px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  font-size: 17px;
+  letter-spacing: -0.02em;
+}
+.pw-group-n {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.pw-group > .pw-note {
+  margin: 0 0 14px;
+}
+
 /* ---------- 목록 ---------- */
 .pw-grid {
   list-style: none;

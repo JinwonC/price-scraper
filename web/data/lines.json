@@ -1,0 +1,100 @@
+{
+ "_주": "제품을 라인으로 묶어 목록에 순서대로 보여준다. 줄 안의 차례는 쓰는 순서를 따랐다.",
+ "_애매": "한 제품이 두 라인에 걸치는 경우가 있다. 어디에 뒀고 왜 그랬는지는 각 제품의 '메모' 에 적는다.",
+ "_빠짐": "여기 없는 제품은 화면에서 '기타 제품' 으로 떨어진다. 새 제품이 들어오면 여기에 적으면 된다.",
+ "라인": [
+  {
+   "키": "미스트",
+   "ko": "미스트",
+   "en": "Mists",
+   "설명ko": "뿌리는 제형입니다.",
+   "설명en": "The spray-on ones.",
+   "제품": [
+    "white-truffle-first-spray-serum",
+    "pro2x",
+    "white-truffle-vital-spray-serum",
+    "white-truffle-refresh-aqua-serum"
+   ]
+  },
+  {
+   "키": "더블",
+   "ko": "더블 라인",
+   "en": "Double line",
+   "설명ko": "두 가지를 한 통에 담아 흔들어 쓰거나 한 번에 바르는 제품들입니다.",
+   "설명en": "Two things in one bottle — shake before use, or apply both in one pass.",
+   "제품": [
+    "white-truffle-double-serum-cream-2-in-1",
+    "white-truffle-double-layer-revitalizing-serum",
+    "white-truffle-double-serum-all-in-one-multi-balm"
+   ]
+  },
+  {
+   "키": "비타",
+   "ko": "비타 라인",
+   "en": "Vita line",
+   "설명ko": "비타민 캡슐과 나이아신아마이드로 톤을 다루는 라인입니다.",
+   "설명en": "Vitamin capsules and niacinamide — the tone-care line.",
+   "제품": [
+    "vita-toning-serum-toner",
+    "first-oil-capsule-serum",
+    "vita-toning-capsule-serum",
+    "vita-toning-anti-aging-spray-serum-8",
+    "vita-toning-capsule-cream",
+    "vita-toning-galvanic-wrinkle-eye-cream",
+    "signature-vita-capsule-hydrogel-mask-8-shape"
+   ]
+  },
+  {
+   "키": "헤어",
+   "ko": "헤어 라인",
+   "en": "Hair line",
+   "설명ko": "같은 로제 프리지아 향을 씁니다.",
+   "설명en": "Both carry the same Rose Freesia scent.",
+   "제품": [
+    "italian-white-truffle-professional-repairing-hair-perfume-serum",
+    "professional-repairing-hair-oil-serum"
+   ]
+  },
+  {
+   "키": "클렌징",
+   "ko": "클렌징 라인",
+   "en": "Cleansing line",
+   "설명ko": "1차 · 2차 클렌징 순서로 놓았습니다.",
+   "설명en": "In order: first cleanse, then second.",
+   "제품": [
+    "vita-toning-capsule-cleansing-oil",
+    "signature-vita-collagen-pore-tightening-deep-cleansing-balm",
+    "white-truffle-return-oil-cream-cleanser"
+   ]
+  },
+  {
+   "키": "기타",
+   "ko": "기타 제품",
+   "en": "Everything else",
+   "설명ko": "위 라인에 들어가지 않는 제품들입니다. 보르피린 3종, 선스크린 2종이 여기 있습니다.",
+   "설명en": "Products outside the lines above — including the three Volufiline items and the two sunscreens.",
+   "제품": [
+    "white-truffle-intensive-volufiline-ampoule",
+    "intensive-vegan-volufiline-spray-ampoule",
+    "white-truffle-intensive-volufiline-grinding-cream",
+    "white-truffle-waterfull-tone-up-sunscreen-serum",
+    "waterfull-uv-essence-sunscreen",
+    "white-truffle-moisturizing-serum-lotion",
+    "double-quick-liposome-serum-mask-pad",
+    "d-alba-signature-allthera-double-shot"
+   ]
+  }
+ ],
+ "메모": {
+  "vita-toning-anti-aging-spray-serum-8": "뿌리는 제형이라 미스트에도 맞지만, 이름과 성분이 비타 라인이라 비타에 뒀다.",
+  "first-oil-capsule-serum": "이름은 '퍼스트' 인데 태그가 #비타토닝 #비타캡슐 이고 비타민 캡슐 세럼이라 비타에 뒀다.",
+  "white-truffle-double-layer-revitalizing-serum": "세럼과 오일이 2층으로 나뉜 제품이라 더블에 뒀다. 다만 더블 세럼 앤 크림과는 다른 제품군이다.",
+  "double-quick-liposome-serum-mask-pad": "이름의 '더블' 은 패드가 두 종류라는 뜻이라 더블 라인과 관계가 없다. 기타에 뒀다.",
+  "d-alba-signature-allthera-double-shot": "이름에 '더블 샷' 이 있지만 초음파가 둘이라는 뜻이고, 화장품이 아니라 기기다. 기타에 뒀다.",
+  "vita-toning-capsule-cleansing-oil": "비타 라인이지만 클렌징 제품이라 클렌징에 뒀다.",
+  "signature-vita-collagen-pore-tightening-deep-cleansing-balm": "비타 성분을 쓰지만 클렌징 제품이라 클렌징에 뒀다.",
+  "white-truffle-moisturizing-serum-lotion": "태그가 #비타토닝 이라 비타 라인일 수 있지만, 이름에 비타가 없고 로션 단품이라 기타에 뒀다.",
+  "intensive-vegan-volufiline-spray-ampoule": "뿌리는 제형이라 미스트에도 맞지만, 보르피린 3종을 한자리에 두는 편이 낫다고 보아 기타에 뒀다.",
+  "pro2x": "퍼스트 스프레이 세럼의 상위 버전이라 바로 뒤에 놓았다."
+ }
+}
