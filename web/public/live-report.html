@@ -31,6 +31,9 @@
   .field input,.field select{width:100%;padding:10px 11px;border:1px solid #ddd5c6;border-radius:9px;font-size:14px;background:#fff;color:var(--ink)}
   .field input:focus,.field select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
   .hint{font-size:11.5px;color:var(--muted);margin-top:5px;line-height:1.5}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+  .chk{display:flex;gap:7px;align-items:center;font-weight:600;font-size:12.5px;color:#463f35;margin-bottom:6px;cursor:pointer}
+  .chk input{width:auto}
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;width:100%;padding:11px 14px;border:0;border-radius:10px;
     font-size:14px;font-weight:700;cursor:pointer;background:var(--accent);color:#fff}
   .btn:hover{filter:brightness(1.06)}
@@ -87,7 +90,7 @@
 <div class="wrap">
   <div class="app-brand">d'Alba</div>
   <h1>Live Session Performance Report</h1>
-  <div class="sub">Upload a TikTok Shop order export, enter a date and creator handle, and generate a session report to save as an image or PDF.</div>
+  <div class="sub">Upload a TikTok Shop order export, pick a date or date range and a creator handle, and generate a report to save as an image or PDF. Commission is optional.</div>
 
   <div class="layout">
     <!-- Controls -->
@@ -100,8 +103,12 @@
         <div class="hint">TikTok Shop → affiliate / order export. Columns: Creator Username, Product Name, Payment Amount, Quantity, Time Created, etc.</div>
       </div>
       <div class="field">
-        <label>Date</label>
-        <input id="date" type="date">
+        <label>Date range</label>
+        <div class="row2">
+          <input id="dateFrom" type="date" aria-label="Start date">
+          <input id="dateTo" type="date" aria-label="End date">
+        </div>
+        <div class="hint">Set one day (either field) for a single session, or a start–end range for a period.</div>
       </div>
       <div class="field">
         <label>Creator handle</label>
@@ -109,9 +116,9 @@
         <datalist id="handles"></datalist>
       </div>
       <div class="field">
-        <label>Commission rate (%)</label>
-        <input id="rate" type="number" min="0" max="100" step="0.5" value="15">
-        <div class="hint">Estimated commission = GMV × rate.</div>
+        <label class="chk"><input id="useComm" type="checkbox" checked> Include estimated commission</label>
+        <input id="rate" type="number" min="0" max="100" step="0.5" value="15" placeholder="Commission rate (%)">
+        <div class="hint">Optional. Estimated commission = GMV × rate.</div>
       </div>
       <div class="field">
         <label style="display:flex;gap:7px;align-items:center;font-weight:500;color:#463f35">
@@ -165,6 +172,14 @@ function prettyDate(iso){
   const [y,mo,da]=iso.split('-');
   return MONTHS[parseInt(mo)-1]+' '+parseInt(da)+', '+y;
 }
+function prettyRange(from,to){
+  if(from===to) return prettyDate(from);
+  const [y1,m1,d1]=from.split('-'), [y2,m2,d2]=to.split('-');
+  if(y1===y2 && m1===m2) return MONTHS[+m1-1]+' '+(+d1)+'–'+(+d2)+', '+y1;
+  if(y1===y2) return MONTHS[+m1-1]+' '+(+d1)+' – '+MONTHS[+m2-1]+' '+(+d2)+', '+y1;
+  return prettyDate(from)+' – '+prettyDate(to);
+}
+function daysBetween(from,to){ return Math.round((Date.parse(to)-Date.parse(from))/864e5)+1; }
 
 function ingest(rows){
   ROWS = rows.filter(r=>r && (r['Creator Username']!=null));
@@ -186,16 +201,23 @@ function handleFile(file){
 }
 
 function generate(){
-  const date=$('#date').value, handle=normHandle($('#handle').value), rate=num($('#rate').value), excl=$('#excl').checked;
+  const handle=normHandle($('#handle').value), excl=$('#excl').checked;
+  const useComm=$('#useComm').checked, rate=num($('#rate').value);
+  // date range: either field alone = single day; both = inclusive range
+  let from=$('#dateFrom').value, to=$('#dateTo').value;
+  if(!from && to) from=to;
+  if(!to && from) to=from;
+  if(from && to && from>to){ const t=from; from=to; to=t; }
   if(!ROWS.length){ $('#status').textContent='Please upload an order file first.'; return; }
-  if(!handle||!date){ $('#status').textContent='Please enter a date and handle.'; return; }
+  if(!handle||!from){ $('#status').textContent='Please enter a date (or range) and handle.'; return; }
 
-  let rows=ROWS.filter(r=>normHandle(r['Creator Username'])===handle && rowDateISO(r)===date);
+  let rows=ROWS.filter(r=>{ if(normHandle(r['Creator Username'])!==handle) return false; const d=rowDateISO(r); return d && d>=from && d<=to; });
   if(excl) rows=rows.filter(r=>!isRefunded(r));
 
+  const showComm = useComm && rate>0;
   const rep=$('#report');
   if(!rows.length){
-    rep.innerHTML='<div class="empty">No orders found for <b>@'+esc(handle)+'</b> on this date.<br>Check the date and handle.</div>';
+    rep.innerHTML='<div class="empty">No orders found for <b>@'+esc(handle)+'</b> in this period.<br>Check the dates and handle.</div>';
     $('#png').disabled=$('#pdf').disabled=true; $('#status').textContent='0 matches'; return;
   }
 
@@ -204,6 +226,7 @@ function generate(){
   const orders=new Set(rows.map(r=>r['Order ID'])).size;
   const est=gmv*rate/100;
   const dataEst=rows.reduce((s,r)=>s+num(r['Est. standard commission payment']),0);
+  const nDays=daysBetween(from,to);
 
   const pmap={};
   rows.forEach(r=>{
@@ -233,17 +256,23 @@ function generate(){
       <td class="num">${(p.gmv/gmv*100).toFixed(1)}%</td>
     </tr>`).join('');
 
+  const commKpi = showComm ? `
+      <div class="kpi comm"><div class="k-label">Est. Commission (${rate}%)</div><div class="k-val">${money(est)}</div><div class="k-sub">${dataEst>0?'Data est. '+money(dataEst):'GMV × '+rate+'%'}</div></div>` : '';
+  const nCols = showComm ? 4 : 3;
+  const badge = (from===to) ? 'Live Session Report' : 'Performance Report';
+  const metaDate = prettyRange(from,to) + (from!==to ? ' · '+nDays+' days' : '');
+
   rep.innerHTML=`
     <div class="rp-head">
-      <div class="rp-top"><span class="wordmark">d'Alba</span><span class="rp-badge">Live Session Report</span></div>
+      <div class="rp-top"><span class="wordmark">d'Alba</span><span class="rp-badge">${badge}</span></div>
       <p class="rp-handle">@${esc(handle)}</p>
-      <div class="rp-meta"><b>${prettyDate(date)}</b> · ${ctStr||'Session performance'}</div>
+      <div class="rp-meta"><b>${metaDate}</b> · ${ctStr||'Session performance'}</div>
     </div>
-    <div class="kpis">
+    <div class="kpis" style="grid-template-columns:repeat(${nCols},1fr)">
       <div class="kpi hero"><div class="k-label">Total Sales (GMV)</div><div class="k-val">${money(gmv)}</div><div class="k-sub">USD</div></div>
       <div class="kpi"><div class="k-label">Orders</div><div class="k-val">${orders}</div><div class="k-sub">${units} units sold</div></div>
       <div class="kpi"><div class="k-label">Products</div><div class="k-val">${prods.length}</div><div class="k-sub">by SKU</div></div>
-      <div class="kpi comm"><div class="k-label">Est. Commission (${rate}%)</div><div class="k-val">${money(est)}</div><div class="k-sub">${dataEst>0?'Data est. '+money(dataEst):'GMV × '+rate+'%'}</div></div>
+      ${commKpi}
     </div>
     <div class="sec-t">Product breakdown</div>
     <table>
@@ -257,12 +286,12 @@ function generate(){
     </div>`;
 
   $('#png').disabled=$('#pdf').disabled=false;
-  $('#status').textContent='Done · GMV '+money(gmv)+' / est. commission '+money(est);
-  window._exp={handle,date};
+  $('#status').textContent='Done · GMV '+money(gmv)+(showComm?' / est. commission '+money(est):'');
+  window._exp={handle,from,to};
 }
 
 function capture(){ return html2canvas($('#report'),{scale:2,backgroundColor:'#ffffff',useCORS:true}); }
-function fname(ext){ const e=window._exp||{}; return (e.handle||'report')+'_'+(e.date||'')+'_dalba-live-report.'+ext; }
+function fname(ext){ const e=window._exp||{}; const d=e.from?(e.from===e.to?e.from:e.from+'_'+e.to):''; return (e.handle||'report')+'_'+d+'_dalba-live-report.'+ext; }
 // Dual-path save: use the claude.ai artifact "downloads" capability when hosted,
 // otherwise fall back to a normal browser download (local HTML file).
 async function saveFile(filename, blob){
@@ -290,13 +319,16 @@ $('#file').onchange=e=>{ if(e.target.files[0]) handleFile(e.target.files[0]); };
 ['dragover','dragleave','drop'].forEach(ev=>$('#drop').addEventListener(ev,e=>e.preventDefault()));
 $('#drop').addEventListener('drop',e=>{ if(e.dataTransfer.files[0]) handleFile(e.dataTransfer.files[0]); });
 $('#gen').onclick=generate;
+// commission optional: dim the rate field when unchecked
+function syncComm(){ const on=$('#useComm').checked; $('#rate').disabled=!on; $('#rate').style.opacity=on?'1':'.5'; }
+$('#useComm').addEventListener('change',syncComm); syncComm();
 
 window.addEventListener('load',()=>{
   try{
     const txt=$('#sampleCsv').textContent;
     if(txt && txt.trim() && !txt.includes('__SAMPLE_'+'CSV__')){
       loadCSVText(txt);
-      $('#date').value='2026-09-19'; $('#handle').value='59andflawless';
+      $('#dateFrom').value='2026-09-19'; $('#dateTo').value='2026-09-19'; $('#handle').value='59andflawless';
       generate();
       $('#status').textContent='Sample data loaded · upload a file to replace it.';
     }
