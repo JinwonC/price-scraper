@@ -132,8 +132,8 @@ def main():
     os.makedirs(IMG_DIR, exist_ok=True)
     data = json.load(open(TOP_JSON, encoding="utf-8"),
                      object_pairs_hook=collections.OrderedDict)
-    항목 = data["항목"]
-    want = sys.argv[1:] or [it["pid"] for it in 항목]
+    제품 = data["제품"]
+    want = sys.argv[1:] or list(제품)
 
     받음, 실패 = 0, []
     for i, pid in enumerate(want, 1):
@@ -150,15 +150,15 @@ def main():
             실패.append(pid)
         time.sleep(1.6)  # 몰아치면 막힌다
 
-    for it in 항목:
-        p = os.path.join(IMG_DIR, f"{it['pid']}.jpg")
-        it["이미지"] = f"/top/{it['pid']}.jpg" if os.path.exists(p) else None
+    for pid, it in 제품.items():
+        p = os.path.join(IMG_DIR, f"{pid}.jpg")
+        it["이미지"] = f"/top/{pid}.jpg" if os.path.exists(p) else None
     with open(TOP_JSON, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=1)
         f.write("\n")
 
-    붙음 = sum(1 for it in 항목 if it["이미지"])
-    print(f"\n제품컷 {붙음}/{len(항목)} 개가 붙었다.")
+    붙음 = sum(1 for it in 제품.values() if it["이미지"])
+    print(f"\n제품컷 {붙음}/{len(제품)} 개가 붙었다.")
     for pid in 실패:
         print(f"  못 받음: {pid}")
 

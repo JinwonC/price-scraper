@@ -65,4 +65,28 @@ python publish.py          # 검열 그물을 통과시켜 ../web/data/products.
 | `export_images.py` | 고른 이미지를 web/public 으로 내보내기 |
 | `shop-shots.json` | 제품별 틱톡샵 pid + 공식 컷이 대신한 교안 픽 번호 |
 | `shop_images.py` | 틱톡샵 공식 제품컷 받기 (교안 `00.jpg`, 상위 10개 썸네일) |
+| `top_ranks.py` | CRUVA CSV → `web/data/top10.json` (많이 팔린 10개) |
 | `publish.py` | 검열 그물을 통과시켜 web/data 로 내보내기 |
+
+## 많이 팔린 10개 갱신하기
+
+제품 목록 맨 위의 순위는 **자동으로 갱신되지 않는다.** CRUVA 는 MCP 도구라
+스크립트가 바로 부를 수 없어서, 사람이(또는 클로드가) 주기적으로 돌려 줘야 한다.
+30일 창이라 2~3주만 지나도 1위가 바뀐다.
+
+```
+# 1) CRUVA 에서 최근 30일 제품 성과를 CSV 로 받는다
+#    search_brand_products(shop_id=…, timeseries=True,
+#      date_from=…, date_to=오늘, as_csv=True,
+#      columns=["product_id","product_name","total_gmv","live_gmv",
+#               "affiliate_gmv","status"])
+python top_ranks.py <받은.csv> --from 2026-09-10 --to 2026-10-10
+
+# 2) 처음 보는 제품이 있으면 한국어 이름과 slug 를 손으로 채운다
+#    (top_ranks.py 가 어느 제품인지 찍어 준다)
+
+# 3) 제품컷을 받는다. 이미 있는 것은 건드리지 않는다
+python shop_images.py
+```
+
+매출액은 싣지 않는다. 순위와 pid 만 올린다 — 이 저장소는 공개다.
