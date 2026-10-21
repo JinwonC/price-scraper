@@ -1,18 +1,36 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { LangSwitch, useT } from "@/components/Lang";
 
-/** 상단 머리글과 아래 꼬리말. 언어 전환 버튼이 여기 산다. */
+/** 상단 머리글과 아래 꼬리말. 화면 전환과 언어 전환 버튼이 여기 산다. */
 export default function Chrome({ children }: { children: React.ReactNode }) {
   const t = useT();
+  const 여기 = usePathname() ?? "";
   return (
     <div className="pw">
       <header className="pw-top">
         <Link className="pw-home" href="/products">
           {t("달바 제품 가이드", "d'Alba Product Guide")}
         </Link>
-        <LangSwitch />
+        <div className="pw-top-right">
+          <nav className="pw-nav" aria-label={t("화면", "Sections")}>
+            <Link
+              href="/products"
+              aria-current={여기.startsWith("/products") ? "page" : undefined}
+            >
+              {t("제품", "Products")}
+            </Link>
+            <Link
+              href="/live"
+              aria-current={여기.startsWith("/live") ? "page" : undefined}
+            >
+              {t("라이브 일정", "Live schedule")}
+            </Link>
+          </nav>
+          <LangSwitch />
+        </div>
       </header>
       {children}
       <footer className="pw-foot">
