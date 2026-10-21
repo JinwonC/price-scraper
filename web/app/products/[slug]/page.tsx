@@ -4,6 +4,7 @@ import {
   getBrief,
   getImages,
   getProduct,
+  getShopImages,
   getShopPid,
   products,
 } from "@/lib/products";
@@ -40,6 +41,7 @@ export default async function ProductPage({
       brief={getBrief(slug)}
       imgs={getImages(slug)}
       pid={getShopPid(slug)}
+      shop={getShopImages(slug)}
     />
   );
 }

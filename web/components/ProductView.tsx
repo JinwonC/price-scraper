@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useLang, useT } from "@/components/Lang";
 import ShopLink from "@/components/ShopLink";
+import ShopGallery, { type Shot } from "@/components/ShopGallery";
 import type { Brief, Product, ProductImage } from "@/lib/products";
 
 const L = {
@@ -15,6 +16,7 @@ const L = {
   images: ["이미지", "Images"],
   features: ["제품 특징", "Product features"],
   etc: ["기타", "More"],
+  shop: ["틱톡샵 이미지", "Shop images"],
   toc: ["목차", "Contents"],
   capacity: ["용량", "Size"],
   fn: ["기능성", "Functional claim"],
@@ -142,12 +144,15 @@ export default function ProductView({
   brief,
   imgs,
   pid,
+  shop,
 }: {
   p: Product;
   brief?: Brief;
   imgs: ProductImage[];
   /** US 틱톡샵 제품 번호. 매칭이 없는 제품은 null 이고 그때는 링크를 숨긴다. */
   pid?: string | null;
+  /** 틱톡샵 상품 페이지에서 받아 둔 제품컷과 상세페이지 컷. */
+  shop?: { 갤러리: Shot[]; 상세: Shot[] };
 }) {
   const t = useT();
   const { lang } = useLang();
@@ -215,6 +220,9 @@ export default function ProductView({
           {t(L.features[0], L.features[1])}
         </a>
         <a href="#etc">{t(L.etc[0], L.etc[1])}</a>
+        {shop && (shop.갤러리.length > 0 || shop.상세.length > 0) && (
+          <a href="#shop-images">{t(L.shop[0], L.shop[1])}</a>
+        )}
       </nav>
 
       <section className="pw-sec" id="images">
@@ -277,6 +285,8 @@ export default function ProductView({
           <p className="pw-empty">{t(L.noEtc[0], L.noEtc[1])}</p>
         )}
       </section>
+
+      {shop && <ShopGallery 갤러리={shop.갤러리} 상세={shop.상세} />}
     </main>
   );
 }
