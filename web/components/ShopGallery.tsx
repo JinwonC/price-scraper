@@ -104,8 +104,8 @@ export default function ShopGallery({
   if (!갤러리.length && !상세.length) return null;
 
   return (
-    <section className="pw-shopimgs" id="shop-images">
-      <h2>{t("틱톡샵 이미지", "TikTok Shop images")}</h2>
+    <section className="pw-shopimgs" id="product-details">
+      <h2>{t("제품 상세", "Product details")}</h2>
       <p className="pw-note">
         {t(
           "실제 판매 페이지에 걸려 있는 그림입니다. 방송 화면이나 설명에 쓰면 손님이 보는 상품과 어긋나지 않습니다.",

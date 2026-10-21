@@ -15,7 +15,7 @@ const L = {
   say: ["이렇게 말하면 됩니다", "What you can say"],
   features: ["제품 특징", "Product features"],
   etc: ["기타", "More"],
-  shop: ["틱톡샵 이미지", "Shop images"],
+  shop: ["제품 상세", "Product details"],
   toc: ["목차", "Contents"],
   capacity: ["용량", "Size"],
   fn: ["기능성", "Functional claim"],
@@ -199,6 +199,9 @@ export default function ProductView({
         </dl>
       </header>
 
+      {/* 판매 페이지 그림을 맨 위에 둔다. 크리에이터가 제품부터 눈으로 확인한다. */}
+      {shop && <ShopGallery 갤러리={shop.갤러리} 상세={shop.상세} />}
+
       {brief ? (
         <BriefBlock brief={brief} />
       ) : (
@@ -208,14 +211,14 @@ export default function ProductView({
       )}
 
       <nav className="pw-toc" aria-label={t(L.toc[0], L.toc[1])}>
+        {shop && (shop.갤러리.length > 0 || shop.상세.length > 0) && (
+          <a href="#product-details">{t(L.shop[0], L.shop[1])}</a>
+        )}
         {brief && <a href="#brief">{t(L.brief[0], L.brief[1])}</a>}
         <a href="#features" className={특징.length ? undefined : "off"}>
           {t(L.features[0], L.features[1])}
         </a>
         <a href="#etc">{t(L.etc[0], L.etc[1])}</a>
-        {shop && (shop.갤러리.length > 0 || shop.상세.length > 0) && (
-          <a href="#shop-images">{t(L.shop[0], L.shop[1])}</a>
-        )}
       </nav>
 
       <section className="pw-sec" id="features">
@@ -255,8 +258,6 @@ export default function ProductView({
           <p className="pw-empty">{t(L.noEtc[0], L.noEtc[1])}</p>
         )}
       </section>
-
-      {shop && <ShopGallery 갤러리={shop.갤러리} 상세={shop.상세} />}
     </main>
   );
 }

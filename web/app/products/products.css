@@ -1435,10 +1435,11 @@
 }
 
 /* ---------- 틱톡샵 이미지 캐러셀 ---------- */
+/* 머리말 바로 아래에 온다. 아래 브리프와는 선 하나로 나눈다. */
 .pw-shopimgs {
-  margin-top: 40px;
-  padding-top: 26px;
-  border-top: 1px solid var(--border);
+  margin: 24px 0 26px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--border);
 }
 .pw-shopimgs > h2 {
   margin: 0 0 6px;
