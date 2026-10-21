@@ -31,7 +31,9 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  순위:
+  # 작업 id 는 영문·숫자만 쓸 수 있다. 보이는 이름만 한국어로 둔다.
+  ranks:
+    name: 라이브 순위
     runs-on: ubuntu-latest
     steps:
       - name: 코드 가져오기
