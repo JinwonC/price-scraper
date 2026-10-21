@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import ProductView from "@/components/ProductView";
 import {
   getBrief,
-  getImages,
   getProduct,
   getShopImages,
   getShopPid,
@@ -39,7 +38,6 @@ export default async function ProductPage({
     <ProductView
       p={p}
       brief={getBrief(slug)}
-      imgs={getImages(slug)}
       pid={getShopPid(slug)}
       shop={getShopImages(slug)}
     />

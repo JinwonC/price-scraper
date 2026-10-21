@@ -1,5 +1,4 @@
 import raw from "@/data/products.json";
-import images from "@/data/product-images.json";
 import briefs from "@/data/briefs.json";
 import top from "@/data/top10.json";
 import liveRanks from "@/data/live-ranks.json";
@@ -32,28 +31,12 @@ export type Product = {
   en판: ProductEn;
 };
 
-export type ProductImage = {
-  src: string;
-  설명: string;
-  설명En?: string;
-  w: number;
-  h: number;
-};
-
 const all = raw as unknown as Product[];
-const imageMap = images as unknown as Record<string, ProductImage[]>;
 
 export const products: Product[] = all;
 
 export function getProduct(slug: string): Product | undefined {
   return all.find((p) => p.slug === slug);
-}
-
-export function getImages(slug: string): ProductImage[] {
-  const list = imageMap[slug] ?? [];
-  const en = all.find((p) => p.slug === slug)?.en판?.이미지 ?? [];
-  // 영어 설명은 이미지 순서대로 적는다. 아직 안 쓴 것은 비워 두면 한국어가 나온다.
-  return list.map((im, i) => ({ ...im, 설명En: en[i] ?? "" }));
 }
 
 /** US 틱톡샵에서 많이 팔린 제품. 금액은 싣지 않는다 — 순위와 pid 만. */
@@ -197,7 +180,8 @@ export const cards: ProductCard[] = all.map((p) => ({
   기능성: p.스펙.기능성 ?? "",
   한줄: p.포지셔닝?.문구 ?? "",
   태그: p.포지셔닝?.태그 ?? [],
-  대표이미지: getImages(p.slug)[0]?.src ?? null,
+  // 목록 썸네일도 틱톡샵 제품컷을 쓴다. 교안 사진은 더 이상 싣지 않는다.
+  대표이미지: getShopImages(p.slug).갤러리[0]?.src ?? null,
   용량En: p.en판?.스펙?.용량 ?? "",
   기능성En: p.en판?.스펙?.기능성 ?? "",
   한줄En: p.en판?.한줄 ?? "",
