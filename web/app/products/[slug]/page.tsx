@@ -1,6 +1,12 @@
 import { notFound } from "next/navigation";
 import ProductView from "@/components/ProductView";
-import { getBrief, getImages, getProduct, products } from "@/lib/products";
+import {
+  getBrief,
+  getImages,
+  getProduct,
+  getShopPid,
+  products,
+} from "@/lib/products";
 
 export const dynamic = "force-static";
 
@@ -28,5 +34,12 @@ export default async function ProductPage({
   if (!p) notFound();
 
   // 두 언어를 모두 정적 HTML 에 담아 보낸다. 전환은 화면에서만 일어난다.
-  return <ProductView p={p} brief={getBrief(slug)} imgs={getImages(slug)} />;
+  return (
+    <ProductView
+      p={p}
+      brief={getBrief(slug)}
+      imgs={getImages(slug)}
+      pid={getShopPid(slug)}
+    />
+  );
 }

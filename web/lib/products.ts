@@ -4,6 +4,7 @@ import briefs from "@/data/briefs.json";
 import top from "@/data/top10.json";
 import liveRanks from "@/data/live-ranks.json";
 import lines from "@/data/lines.json";
+import tiktok from "@/../product-edu/tiktok-us.json";
 
 /** 브리프에 안 들어간 나머지를 사람이 읽고 풀어 쓴 것. 교안 원문이 아니다. */
 export type Etc = { 제목: string; 본문: string[]; title?: string; body?: string[] };
@@ -125,6 +126,21 @@ export const top라이브정보 = {
 /** 10위 안에 드는 제품이면 그 순위. 목록 카드에 띠를 달 때 쓴다. */
 export function getRank(slug: string): number | undefined {
   return top10.find((t) => t.slug === slug)?.순위;
+}
+
+/**
+ * 교안 제품의 US 틱톡샵 제품 번호. 제품 화면의 '틱톡샵 링크' 가 이걸 쓴다.
+ * 매칭은 product-edu/tiktok-us.json 에 적어 두었다(사람이 확인한 표다).
+ */
+const pid표: Record<string, string> = Object.fromEntries(
+  Object.entries(tiktok as Record<string, unknown>)
+    .filter(([k, v]) => !k.startsWith("_") && typeof v === "object" && v !== null)
+    .map(([slug, v]) => [slug, String((v as { product_id?: string }).product_id ?? "")])
+    .filter(([, pid]) => pid),
+);
+
+export function getShopPid(slug: string): string | null {
+  return pid표[slug] ?? null;
 }
 
 export type ProductCard = {
