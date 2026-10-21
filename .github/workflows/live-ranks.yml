@@ -48,6 +48,14 @@ jobs:
         working-directory: live-gmv
         run: pip install -r requirements.txt
 
+      # 403 이 날 때 어느 주소를 시트에 공유해야 하는지 알아야 한다.
+      # 서비스 계정 주소는 비밀값이 아니다(열쇠는 JSON 안의 private_key 다).
+      - name: 서비스 계정 주소 확인
+        env:
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+        run: |
+          python -c "import json,os;d=json.loads(os.environ['GOOGLE_CREDENTIALS']);print('이 주소를 원본 시트에 뷰어로 공유해야 한다:', d.get('client_email'))"
+
       - name: 라이브 순위 뽑기
         working-directory: live-gmv
         env:
