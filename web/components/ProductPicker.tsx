@@ -71,12 +71,14 @@ export default function ProductPicker({
   top,
   live,
   period,
+  liveInfo,
   lines,
 }: {
   cards: ProductCard[];
   top: TopItem[];
   live: TopItem[];
   period: { ko: string; en: string };
+  liveInfo: { 합산: boolean; 기간: { ko: string; en: string } };
   lines: Line[];
 }) {
   const [q, setQ] = useState("");
@@ -91,7 +93,7 @@ export default function ProductPicker({
     <main className="pw-main">
       {/* 머리말은 없앴다. 화면 맨 위 '달바 제품 가이드' 와 겹쳐 한 줄만 더 차지했다.
           대신 많이 팔린 10개가 이 화면의 첫 제목이 된다. */}
-      <TopSellers items={top} live={live} period={period} />
+      <TopSellers items={top} live={live} period={period} liveInfo={liveInfo} />
 
       <p className="pw-intro">
         {t(

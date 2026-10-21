@@ -25,7 +25,8 @@
    "제품": [
     "white-truffle-double-serum-cream-2-in-1",
     "white-truffle-double-layer-revitalizing-serum",
-    "white-truffle-double-serum-all-in-one-multi-balm"
+    "white-truffle-double-serum-all-in-one-multi-balm",
+    "double-quick-liposome-serum-mask-pad"
    ]
   },
   {
@@ -68,19 +69,36 @@
    ]
   },
   {
-   "키": "기타",
-   "ko": "기타 제품",
-   "en": "Everything else",
-   "설명ko": "위 라인에 들어가지 않는 제품들입니다. 보르피린 3종, 선스크린 2종이 여기 있습니다.",
-   "설명en": "Products outside the lines above — including the three Volufiline items and the two sunscreens.",
+   "키": "선크림",
+   "ko": "선크림 라인",
+   "en": "Sunscreens",
+   "설명ko": "톤업 되는 세럼형과 가벼운 에센스형 두 가지입니다.",
+   "설명en": "Two of them — a tone-up serum and a lighter essence.",
+   "제품": [
+    "white-truffle-waterfull-tone-up-sunscreen-serum",
+    "waterfull-uv-essence-sunscreen"
+   ]
+  },
+  {
+   "키": "보르피린",
+   "ko": "보르피린 라인",
+   "en": "Volufiline line",
+   "설명ko": "보르피린으로 탄력과 볼륨을 다룹니다. 앰플 · 스프레이 앰플 · 크림 순입니다.",
+   "설명en": "Volufiline for firmness and volume — ampoule, spray ampoule, then cream.",
    "제품": [
     "white-truffle-intensive-volufiline-ampoule",
     "intensive-vegan-volufiline-spray-ampoule",
-    "white-truffle-intensive-volufiline-grinding-cream",
-    "white-truffle-waterfull-tone-up-sunscreen-serum",
-    "waterfull-uv-essence-sunscreen",
+    "white-truffle-intensive-volufiline-grinding-cream"
+   ]
+  },
+  {
+   "키": "기타",
+   "ko": "기타 제품",
+   "en": "Everything else",
+   "설명ko": "위 라인에 들어가지 않는 제품들입니다.",
+   "설명en": "Products outside the lines above.",
+   "제품": [
     "white-truffle-moisturizing-serum-lotion",
-    "double-quick-liposome-serum-mask-pad",
     "d-alba-signature-allthera-double-shot"
    ]
   }
@@ -89,12 +107,13 @@
   "vita-toning-anti-aging-spray-serum-8": "뿌리는 제형이라 미스트에도 맞지만, 이름과 성분이 비타 라인이라 비타에 뒀다.",
   "first-oil-capsule-serum": "이름은 '퍼스트' 인데 태그가 #비타토닝 #비타캡슐 이고 비타민 캡슐 세럼이라 비타에 뒀다.",
   "white-truffle-double-layer-revitalizing-serum": "세럼과 오일이 2층으로 나뉜 제품이라 더블에 뒀다. 다만 더블 세럼 앤 크림과는 다른 제품군이다.",
-  "double-quick-liposome-serum-mask-pad": "이름의 '더블' 은 패드가 두 종류라는 뜻이라 더블 라인과 관계가 없다. 기타에 뒀다.",
+  "double-quick-liposome-serum-mask-pad": "이름의 '더블' 은 패드가 두 종류라는 뜻이지만, 더블 라인에 함께 두기로 했다.",
   "d-alba-signature-allthera-double-shot": "이름에 '더블 샷' 이 있지만 초음파가 둘이라는 뜻이고, 화장품이 아니라 기기다. 기타에 뒀다.",
   "vita-toning-capsule-cleansing-oil": "비타 라인이지만 클렌징 제품이라 클렌징에 뒀다.",
   "signature-vita-collagen-pore-tightening-deep-cleansing-balm": "비타 성분을 쓰지만 클렌징 제품이라 클렌징에 뒀다.",
   "white-truffle-moisturizing-serum-lotion": "태그가 #비타토닝 이라 비타 라인일 수 있지만, 이름에 비타가 없고 로션 단품이라 기타에 뒀다.",
-  "intensive-vegan-volufiline-spray-ampoule": "뿌리는 제형이라 미스트에도 맞지만, 보르피린 3종을 한자리에 두는 편이 낫다고 보아 기타에 뒀다.",
+  "white-truffle-waterfull-tone-up-sunscreen-serum": "화이트 트러플 이름을 쓰지만 선크림이라 선크림 라인에 뒀다.",
+  "intensive-vegan-volufiline-spray-ampoule": "뿌리는 제형이라 미스트에도 맞지만, 보르피린 3종을 한자리에 두려고 보르피린 라인에 뒀다.",
   "pro2x": "퍼스트 스프레이 세럼의 상위 버전이라 바로 뒤에 놓았다."
  }
 }
