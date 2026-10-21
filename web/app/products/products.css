@@ -231,29 +231,51 @@
   color: var(--text-muted);
 }
 /* 방송에서 제품을 걸 때 쓰는 번호. 눌러서 복사한다. */
+/* 번호 묶음: 왼쪽은 눌러 복사, 오른쪽은 틱톡샵 판매 페이지로 간다. */
 .pw-pid {
+  display: inline-flex;
+  align-items: stretch;
+  font-size: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.pw-pid > button,
+.pw-pid > a {
+  appearance: none;
   display: inline-flex;
   align-items: center;
   gap: 7px;
   padding: 2px 7px;
+  border: 0;
+  background: transparent;
   font: inherit;
-  font-size: 12px;
   color: var(--text-secondary);
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 6px;
+  text-decoration: none;
   cursor: pointer;
+}
+.pw-pid > a {
+  border-left: 1px solid var(--border);
+  color: var(--pw-accent);
+  font-size: 11px;
+  white-space: nowrap;
 }
 .pw-pid:hover {
   border-color: var(--pw-accent-edge);
+}
+.pw-pid > button:hover,
+.pw-pid > a:hover {
+  background: var(--hover-wash);
   color: var(--text-primary);
 }
-.pw-pid:focus-visible {
+.pw-pid > button:focus-visible,
+.pw-pid > a:focus-visible {
   outline: 2px solid var(--pw-accent);
-  outline-offset: 1px;
+  outline-offset: -2px;
 }
 /* 번호는 자릿수를 세기 쉽게 고정폭으로, 라벨은 본문 글꼴 그대로. */
-.pw-pid > span {
+.pw-pid > button > span {
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-variant-numeric: tabular-nums;
 }

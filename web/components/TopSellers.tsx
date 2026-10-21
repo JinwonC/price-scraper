@@ -22,11 +22,23 @@ import type { TopItem } from "@/lib/products";
  * 채워진 날짜까지다. 그래서 기간을 탭마다 따로 적는다.
  *
  * 크리에이터가 방송에서 제품을 걸려면 pid 가 필요하다. 그래서 순위·이름과
- * 함께 pid 를 눌러 복사할 수 있게 둔다. 매출액은 싣지 않는다.
+ * 함께 pid 를 눌러 복사할 수 있게 두고, 옆에 틱톡샵 판매 페이지로 가는 '열기'
+ * 를 붙인다. 매출액은 싣지 않는다.
  */
 type 기준 = "전체" | "라이브";
 
-function CopyPid({ pid }: { pid: string }) {
+/**
+ * 제품 번호. 눌러 복사하고, 옆의 '열기' 로 실제 판매 페이지로 간다.
+ *
+ * 주소는 /us/pdp/x/<pid> 꼴을 쓴다. 슬러그 자리는 실제로 쓰이지 않아 아무
+ * 값이나 들어가도 되고, 짧은 주소(/view/product/<pid>)는 제품에 따라 퍼즐
+ * CAPTCHA 를 띄운다. 이 주소는 그냥 열린다.
+ */
+function shopUrl(pid: string) {
+  return `https://shop.tiktok.com/us/pdp/x/${pid}`;
+}
+
+function Pid({ pid }: { pid: string }) {
   const t = useT();
   const [done, setDone] = useState(false);
 
@@ -42,16 +54,29 @@ function CopyPid({ pid }: { pid: string }) {
   }
 
   return (
-    <button
-      type="button"
-      className="pw-pid"
-      onClick={copy}
-      title={t("눌러서 복사", "Click to copy")}
-      aria-label={t(`제품 번호 ${pid} 복사`, `Copy product ID ${pid}`)}
-    >
-      <span>{pid}</span>
-      <em>{done ? t("복사됨", "Copied") : t("복사", "Copy")}</em>
-    </button>
+    <span className="pw-pid">
+      <button
+        type="button"
+        onClick={copy}
+        title={t("눌러서 복사", "Click to copy")}
+        aria-label={t(`제품 번호 ${pid} 복사`, `Copy product ID ${pid}`)}
+      >
+        <span>{pid}</span>
+        <em>{done ? t("복사됨", "Copied") : t("복사", "Copy")}</em>
+      </button>
+      <a
+        href={shopUrl(pid)}
+        target="_blank"
+        rel="noreferrer"
+        title={t("틱톡샵 판매 페이지", "Open on TikTok Shop")}
+        aria-label={t(
+          `제품 번호 ${pid} 의 틱톡샵 페이지 열기`,
+          `Open product ID ${pid} on TikTok Shop`,
+        )}
+      >
+        {t("열기", "Open")}
+      </a>
+    </span>
   );
 }
 
@@ -77,7 +102,7 @@ function Row({ it }: { it: TopItem }) {
             <span className="pw-off-tag">{t("판매 중단", "Not on sale")}</span>
           )}
         </p>
-        <CopyPid pid={it.pid} />
+        <Pid pid={it.pid} />
       </div>
     </li>
   );
