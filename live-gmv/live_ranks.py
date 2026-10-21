@@ -74,15 +74,46 @@ def 슬러그표():
     return 표
 
 
+# 서비스 계정 열쇠가 든 환경변수 이름들. 시트는 사람이 손으로 공유해 주는 것이라
+# 어느 계정에 공유돼 있는지가 갈린다. 있는 것부터 차례로 열어 본다.
+열쇠이름들 = ("GOOGLE_CREDENTIALS", "GOOGLE_SERVICE_ACCOUNT", "GOOGLE_SHEETS_CREDENTIALS")
+
+
+def 시트열기(src_id):
+    """공유돼 있는 서비스 계정으로 시트를 연다. 어느 계정도 못 열면 멈춘다."""
+    본것 = []
+    for 이름 in 열쇠이름들:
+        raw = os.environ.get(이름, "").strip()
+        if not raw:
+            continue
+        try:
+            info = json.loads(raw)
+        except json.JSONDecodeError:
+            print(f"{이름} 이 JSON 이 아니다 — 건너뛴다")
+            continue
+        who = info.get("client_email", "(주소 없음)")
+        try:
+            sh = gspread.service_account_from_dict(info).open_by_key(src_id)
+        except Exception as e:
+            # 403 은 '그 계정에 시트가 공유돼 있지 않다' 는 뜻이다.
+            print(f"{이름} ({who}) 로는 못 열었다 — {type(e).__name__}")
+            본것.append((이름, who))
+            continue
+        print(f"{이름} ({who}) 로 열었다: {sh.title}")
+        return sh
+    if 본것:
+        print("\n!! 아래 주소 가운데 하나를 원본 시트에 뷰어로 공유해야 한다:")
+        for 이름, who in 본것:
+            print(f"   {who}   ({이름})")
+    sys.exit("시트를 열 수 있는 서비스 계정이 없다.")
+
+
 def main():
     src_id = env("SRC_SHEET_ID", required=True)
     days = int(env("DAYS", "30"))
     n = int(env("TOP_N", "10"))
 
-    gc = gspread.service_account_from_dict(
-        json.loads(env("GOOGLE_CREDENTIALS", required=True))
-    )
-    sh = gc.open_by_key(src_id)
+    sh = 시트열기(src_id)
     ws = pick_tab(sh, env("SRC_TAB"))
     rows = ws.get_all_values()
     print(f"'{ws.title}' 에서 {len(rows)}행을 읽었다")
