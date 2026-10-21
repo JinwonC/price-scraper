@@ -33,18 +33,31 @@ python fetch.py            # 드라이브 → pptx/ 내려받고 텍스트 추�
 python sheets.py           # 제품별 이미지 후보 시트 → sheets/  (사람이 눈으로 고른다)
                            #   고른 결과를 picks.json 에 적는다
 python build_products.py   # decks.json + image-reads.json → products.json
-python shop_images.py --edu  # 틱톡샵 공식 제품컷 → web/public/products/<슬러그>/00.jpg
-                             #   이미 받아 둔 것은 건드리지 않는다
-python export_images.py    # picks.json 대로 web/public/products/ 로 내보낸다
-                           #   00.jpg 는 지우지 않고 목록 맨 앞에 둔다
-
-cp images-manifest.json ../web/data/product-images.json
 python publish.py          # 검열 그물을 통과시켜 ../web/data/products.json 으로
+python rewrite.py          # rewrites/ 의 고쳐 쓴 한국어 문장을 덮어쓴다
 ```
 
-대표 이미지(`00.jpg`)는 교안이 아니라 **틱톡샵 공식 제품컷**이다. 교안 컷보다
-실제 판매 페이지와 같아서 크리에이터가 헷갈리지 않는다. 어느 교안 픽을 이걸로
-대신했는지는 `shop-shots.json` 의 `뺀픽` 에 적어 둔다.
+## 사진은 교안 것을 쓰지 않는다
+
+사이트에 거는 사진은 전부 **틱톡샵 상품 페이지에서 받은 것**이다. 크리에이터가
+방송에 쓸 그림은 실제 판매 페이지와 같아야 손님이 보는 것과 어긋나지 않는다.
+교안에서 골라 내보내던 사진(`picks.json`, `export_images.py`, `sheets.py`)은
+더 이상 사이트로 나가지 않는다 — 교안 작업 기록으로만 남겨 둔다.
+
+```bash
+python shop_gallery.py --out /tmp/shop-images   # 갤러리 + 상세컷, 원본 해상도
+python shop_web_images.py --src /tmp/shop-images  # 긴 변 900px WebP → web/public/shop
+```
+
+원본은 한 제품에 30MB 가까이 돼 저장소에 넣지 않는다. 줄인 것만 커밋한다.
+
+## 한국어 문장은 따로 고쳐 쓴다
+
+교안 PPT 칸에서 뽑아낸 글은 체언으로 끝나거나 한 문장이 여러 줄로 쪼개져 있어
+그대로 걸면 읽히지 않는다. `rewrites/` 에 제품별로 고쳐 쓴 문장을 두고
+`rewrite.py` 가 `web/data/products.json` 에 덮어쓴다. 수치와 성분 이름은 교안
+원문 그대로 두고 문장만 다듬는다. 영어는 이미 사람이 다시 쓴 글이라 건드리지
+않는다.
 
 `manifest.json` 은 제품별 **현행 교안 파일 1개씩**의 드라이브 ID 다.
 드라이브에는 같은 교안의 구버전이 많아서(리턴 오일 크림 클렌저만 6개) 자동으로 고르지
@@ -62,7 +75,10 @@ python publish.py          # 검열 그물을 통과시켜 ../web/data/products.
 | `picks.json` | 웹에 쓸 이미지로 고른 목록 + 제외 원칙 |
 | `image-reads.json` | 이미지에서 읽어낸 수치·문서 내용 |
 | `build_products.py` | 최종 `products.json` 생성 |
-| `export_images.py` | 고른 이미지를 web/public 으로 내보내기 |
+| `export_images.py` | (더 이상 쓰지 않음) 교안 이미지 내보내기 |
+| `shop_gallery.py` | 틱톡샵 상품 페이지의 갤러리·상세컷 원본 받기 |
+| `shop_web_images.py` | 받은 사진을 사이트 크기로 줄여 web/public/shop 으로 |
+| `rewrites/` · `rewrite.py` | 교안 문구를 고쳐 쓴 한국어 문장과 적용기 |
 | `shop-shots.json` | 제품별 틱톡샵 pid + 공식 컷이 대신한 교안 픽 번호 |
 | `shop_images.py` | 틱톡샵 공식 제품컷 받기 (교안 `00.jpg`, 상위 10개 썸네일) |
 | `top_ranks.py` | CRUVA CSV → `web/data/top10.json` (많이 팔린 10개) |

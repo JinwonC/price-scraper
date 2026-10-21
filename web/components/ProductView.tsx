@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useLang, useT } from "@/components/Lang";
 import ShopLink from "@/components/ShopLink";
 import ShopGallery, { type Shot } from "@/components/ShopGallery";
-import type { Brief, Product, ProductImage } from "@/lib/products";
+import type { Brief, Product } from "@/lib/products";
 
 const L = {
   back: ["← 제품 목록", "← All products"],
@@ -13,7 +13,6 @@ const L = {
   ingredients: ["핵심 성분", "Key ingredients"],
   howto: ["쓰는 법", "How to use"],
   say: ["이렇게 말하면 됩니다", "What you can say"],
-  images: ["이미지", "Images"],
   features: ["제품 특징", "Product features"],
   etc: ["기타", "More"],
   shop: ["틱톡샵 이미지", "Shop images"],
@@ -29,7 +28,6 @@ const L = {
     "브리프에 다 넣기엔 긴 이야기들입니다. 성분이 무엇인지, 향이 어떻게 퍼지는지, 언제 쓰는 물건인지 — 방송 중에 질문이 들어올 만한 것들을 풀어 놓았습니다.",
     "The longer answers. What the ingredients actually are, how the scent moves, when you'd reach for it — the things that come up mid-stream.",
   ],
-  noImages: ["준비 중입니다.", "Coming soon."],
   noFeat: ["준비 중입니다.", "Coming soon."],
   noEtc: ["준비 중입니다.", "Coming soon."],
   noBrief: ["준비 중입니다. 아래 내용을 참고하세요.", "Coming soon — see below."],
@@ -142,13 +140,11 @@ function BriefBlock({ brief }: { brief: Brief }) {
 export default function ProductView({
   p,
   brief,
-  imgs,
   pid,
   shop,
 }: {
   p: Product;
   brief?: Brief;
-  imgs: ProductImage[];
   /** US 틱톡샵 제품 번호. 매칭이 없는 제품은 null 이고 그때는 링크를 숨긴다. */
   pid?: string | null;
   /** 틱톡샵 상품 페이지에서 받아 둔 제품컷과 상세페이지 컷. */
@@ -213,9 +209,6 @@ export default function ProductView({
 
       <nav className="pw-toc" aria-label={t(L.toc[0], L.toc[1])}>
         {brief && <a href="#brief">{t(L.brief[0], L.brief[1])}</a>}
-        <a href="#images" className={imgs.length ? undefined : "off"}>
-          {t(L.images[0], L.images[1])}
-        </a>
         <a href="#features" className={특징.length ? undefined : "off"}>
           {t(L.features[0], L.features[1])}
         </a>
@@ -224,29 +217,6 @@ export default function ProductView({
           <a href="#shop-images">{t(L.shop[0], L.shop[1])}</a>
         )}
       </nav>
-
-      <section className="pw-sec" id="images">
-        <h2>{t(L.images[0], L.images[1])}</h2>
-        {imgs.length ? (
-          <div className="pw-gallery">
-            {imgs.map((im) => (
-              <figure key={im.src}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={im.src}
-                  alt={t(im.설명, im.설명En)}
-                  width={im.w}
-                  height={im.h}
-                  loading="lazy"
-                />
-                <figcaption>{t(im.설명, im.설명En)}</figcaption>
-              </figure>
-            ))}
-          </div>
-        ) : (
-          <p className="pw-empty">{t(L.noImages[0], L.noImages[1])}</p>
-        )}
-      </section>
 
       <section className="pw-sec" id="features">
         <h2>{t(L.features[0], L.features[1])}</h2>

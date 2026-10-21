@@ -554,35 +554,6 @@
 }
 
 /* ---------- 갤러리 ---------- */
-.pw-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-  gap: 14px;
-  /* 교안 이미지는 비율이 제각각이다. 늘어나서 아래가 비는 걸 막는다. */
-  align-items: start;
-}
-.pw-gallery figure {
-  margin: 0;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-.pw-gallery img {
-  display: block;
-  width: 100%;
-  height: auto;
-  background: var(--page);
-}
-.pw-gallery figcaption {
-  padding: 9px 11px 11px;
-  font-size: 12px;
-  line-height: 1.5;
-  color: var(--text-secondary);
-  border-top: 1px solid var(--border);
-  word-break: keep-all;
-}
-
 /* ---------- 특징 ---------- */
 .pw-feat {
   list-style: none;
