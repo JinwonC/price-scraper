@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useT } from "@/components/Lang";
+import ShopLink from "@/components/ShopLink";
 import type { TopItem } from "@/lib/products";
 
 /**
@@ -27,59 +28,6 @@ import type { TopItem } from "@/lib/products";
  */
 type 기준 = "전체" | "라이브";
 
-/**
- * 제품 번호. 눌러 복사하고, 옆의 '열기' 로 실제 판매 페이지로 간다.
- *
- * 주소는 /us/pdp/x/<pid> 꼴을 쓴다. 슬러그 자리는 실제로 쓰이지 않아 아무
- * 값이나 들어가도 되고, 짧은 주소(/view/product/<pid>)는 제품에 따라 퍼즐
- * CAPTCHA 를 띄운다. 이 주소는 그냥 열린다.
- */
-function shopUrl(pid: string) {
-  return `https://shop.tiktok.com/us/pdp/x/${pid}`;
-}
-
-function Pid({ pid }: { pid: string }) {
-  const t = useT();
-  const [done, setDone] = useState(false);
-
-  async function copy() {
-    try {
-      await navigator.clipboard.writeText(pid);
-    } catch {
-      // 클립보드를 막아 둔 브라우저. 번호는 화면에 그대로 있으니 직접 긁으면 된다.
-      return;
-    }
-    setDone(true);
-    setTimeout(() => setDone(false), 1400);
-  }
-
-  return (
-    <span className="pw-pid">
-      <button
-        type="button"
-        onClick={copy}
-        title={t("눌러서 복사", "Click to copy")}
-        aria-label={t(`제품 번호 ${pid} 복사`, `Copy product ID ${pid}`)}
-      >
-        <span>{pid}</span>
-        <em>{done ? t("복사됨", "Copied") : t("복사", "Copy")}</em>
-      </button>
-      <a
-        href={shopUrl(pid)}
-        target="_blank"
-        rel="noreferrer"
-        title={t("틱톡샵 판매 페이지", "Open on TikTok Shop")}
-        aria-label={t(
-          `제품 번호 ${pid} 의 틱톡샵 페이지 열기`,
-          `Open product ID ${pid} on TikTok Shop`,
-        )}
-      >
-        {t("열기", "Open")}
-      </a>
-    </span>
-  );
-}
-
 function Row({ it }: { it: TopItem }) {
   const t = useT();
   const name = t(it.ko, it.en);
@@ -102,7 +50,7 @@ function Row({ it }: { it: TopItem }) {
             <span className="pw-off-tag">{t("판매 중단", "Not on sale")}</span>
           )}
         </p>
-        <Pid pid={it.pid} />
+        <ShopLink pid={it.pid} />
       </div>
     </li>
   );
@@ -124,9 +72,8 @@ export default function TopSellers({
   const 전체인가 = 기준 === "전체";
   const 보는것 = 전체인가 ? items : live;
   const 이번기간 = 전체인가 ? period : liveInfo.기간;
-  const 라이브이름 = liveInfo.합산
-    ? t("라이브", "Live")
-    : t("크리에이터 라이브", "Creator live");
+  // 탭 이름은 늘 '라이브' 다. 지금 무엇을 세고 있는지는 아래 설명 줄에 적는다.
+  const 라이브이름 = t("라이브", "Live");
 
   return (
     <section className="pw-best" aria-labelledby="top-sellers">
@@ -154,8 +101,8 @@ export default function TopSellers({
       <p className="pw-note">
         {전체인가
           ? t(
-              "모든 경로를 합친 매출 순서입니다. 번호를 눌러 복사하세요. 세트 구성은 단품 교안이 없어 번호만 있습니다.",
-              "Ranked by sales across every channel. Click an ID to copy it. The bundles have no single-product page, so they show the ID only.",
+              "모든 경로를 합친 매출 순서입니다. 번호를 누르면 복사되고, 틱톡샵 링크로 판매 페이지가 열립니다. 세트 구성은 교안 단품 페이지가 없어 이름에 링크가 없습니다.",
+              "Ranked by sales across every channel. Click an ID to copy it, or open the listing with the TikTok Shop link. The bundles have no guide page, so their names aren't linked.",
             )
           : liveInfo.합산
             ? t(

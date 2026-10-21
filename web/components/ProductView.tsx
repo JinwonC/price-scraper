@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useLang, useT } from "@/components/Lang";
+import ShopLink from "@/components/ShopLink";
 import type { Brief, Product, ProductImage } from "@/lib/products";
 
 const L = {
@@ -140,10 +141,13 @@ export default function ProductView({
   p,
   brief,
   imgs,
+  pid,
 }: {
   p: Product;
   brief?: Brief;
   imgs: ProductImage[];
+  /** US 틱톡샵 제품 번호. 매칭이 없는 제품은 null 이고 그때는 링크를 숨긴다. */
+  pid?: string | null;
 }) {
   const t = useT();
   const { lang } = useLang();
@@ -179,6 +183,11 @@ export default function ProductView({
         <h1 className="pw-h1">{t(p.ko || p.en, p.en)}</h1>
         {/* 영어 화면에서는 제목이 이미 영어다. 같은 이름을 두 번 쓰지 않는다. */}
         {lang === "ko" && p.en && <p className="pw-en-big">{p.en}</p>}
+        {pid && (
+          <p className="pw-shop-row">
+            <ShopLink pid={pid} />
+          </p>
+        )}
         <dl className="pw-spec">
           {spec.map(([k, v]) => (
             <div key={k}>
