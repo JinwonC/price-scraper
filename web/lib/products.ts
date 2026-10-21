@@ -5,6 +5,7 @@ import top from "@/data/top10.json";
 import liveRanks from "@/data/live-ranks.json";
 import lines from "@/data/lines.json";
 import tiktok from "@/../product-edu/tiktok-us.json";
+import shopImages from "@/data/shop-images.json";
 
 /** 브리프에 안 들어간 나머지를 사람이 읽고 풀어 쓴 것. 교안 원문이 아니다. */
 export type Etc = { 제목: string; 본문: string[]; title?: string; body?: string[] };
@@ -141,6 +142,15 @@ const pid표: Record<string, string> = Object.fromEntries(
 
 export function getShopPid(slug: string): string | null {
   return pid표[slug] ?? null;
+}
+
+/** 틱톡샵 상품 페이지에서 받아 둔 제품컷(갤러리)과 상세페이지 컷. */
+export type Shot = { src: string; w: number; h: number };
+const shop표 = (shopImages as { 제품: Record<string, { 갤러리: Shot[]; 상세: Shot[] }> })
+  .제품;
+
+export function getShopImages(slug: string): { 갤러리: Shot[]; 상세: Shot[] } {
+  return shop표[slug] ?? { 갤러리: [], 상세: [] };
 }
 
 export type ProductCard = {

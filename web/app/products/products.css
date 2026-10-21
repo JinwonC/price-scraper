@@ -1462,3 +1462,97 @@
   border-top: 1px solid var(--border);
   padding-top: 14px;
 }
+
+/* ---------- 틱톡샵 이미지 캐러셀 ---------- */
+.pw-shopimgs {
+  margin-top: 40px;
+  padding-top: 26px;
+  border-top: 1px solid var(--border);
+}
+.pw-shopimgs > h2 {
+  margin: 0 0 6px;
+  font-size: 19px;
+  letter-spacing: -0.02em;
+}
+.pw-shopimgs > .pw-note {
+  margin: 0 0 18px;
+}
+
+.pw-carousel + .pw-carousel {
+  margin-top: 26px;
+}
+.pw-carousel-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.pw-carousel-head h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+.pw-carousel-count {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.pw-carousel-arrows {
+  margin-left: auto;
+  display: flex;
+  gap: 6px;
+}
+.pw-carousel-arrows button {
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-size: 17px;
+  line-height: 1;
+  cursor: pointer;
+}
+.pw-carousel-arrows button:hover:not(:disabled) {
+  border-color: var(--pw-accent-edge);
+  color: var(--text-primary);
+}
+.pw-carousel-arrows button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+/* 넘기기는 브라우저의 가로 스크롤에 맡긴다. 손가락·트랙패드로 그냥 넘어간다. */
+.pw-carousel-track {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 6px;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  overscroll-behavior-x: contain;
+}
+.pw-carousel-track > li {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+.pw-carousel-track img {
+  display: block;
+  height: auto;
+  width: auto;
+  max-height: 340px;
+  max-width: min(88vw, 520px);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+}
+@media (max-width: 640px) {
+  .pw-carousel-track img {
+    max-height: 260px;
+  }
+}
