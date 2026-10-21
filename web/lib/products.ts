@@ -2,6 +2,7 @@ import raw from "@/data/products.json";
 import images from "@/data/product-images.json";
 import briefs from "@/data/briefs.json";
 import top from "@/data/top10.json";
+import liveRanks from "@/data/live-ranks.json";
 import lines from "@/data/lines.json";
 
 /** 브리프에 안 들어간 나머지를 사람이 읽고 풀어 쓴 것. 교안 원문이 아니다. */
@@ -83,13 +84,42 @@ function 펴기(pids: string[]): TopItem[] {
 /** 전체 매출 기준 1~10위. */
 export const top10: TopItem[] = 펴기(topFile.전체);
 
-/** 라이브 매출만 세운 1~10위. 전체와 여섯 개가 겹치고 넷이 다르다. */
-export const top라이브: TopItem[] = 펴기(topFile.라이브);
+/** CRUVA 가 센 라이브 순위. 크리에이터(제휴) 라이브만 들어 있다. */
+const top크리에이터라이브: TopItem[] = 펴기(topFile.라이브);
 
 /** 어느 기간을 센 순위인지. 화면에 그대로 띄운다. */
 export const top10기간 = {
   ko: (top as { 기간ko: string }).기간ko,
   en: (top as { 기간en: string }).기간en,
+};
+
+type LiveFile = {
+  순위: string[];
+  제품: Record<string, Omit<TopItem, "순위" | "pid">>;
+  기간ko: string;
+  기간en: string;
+};
+const liveFile = liveRanks as LiveFile;
+
+/**
+ * 라이브 순위.
+ *
+ * 쓸 수 있으면 브랜드 라이브 + 크리에이터 라이브를 합산한 시트 쪽 순위를 쓴다.
+ * 시트가 아직 안 채워졌거나 집계가 비면 CRUVA 의 크리에이터 라이브 순위로
+ * 돌아간다. 둘은 세는 범위가 달라서 라벨도 같이 바뀐다 — '합산' 이 false 면
+ * 화면에 '크리에이터 라이브' 라고 적는다.
+ */
+const 합산있음 = liveFile.순위.length > 0;
+
+export const top라이브: TopItem[] = 합산있음
+  ? liveFile.순위.map((pid, i) => ({ 순위: i + 1, pid, ...liveFile.제품[pid] }))
+  : top크리에이터라이브;
+
+export const top라이브정보 = {
+  합산: 합산있음,
+  기간: 합산있음
+    ? { ko: liveFile.기간ko, en: liveFile.기간en }
+    : top10기간,
 };
 
 /** 10위 안에 드는 제품이면 그 순위. 목록 카드에 띠를 달 때 쓴다. */
