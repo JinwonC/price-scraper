@@ -6,6 +6,7 @@ import lines from "@/data/lines.json";
 import tiktok from "@/../product-edu/tiktok-us.json";
 import shopImages from "@/data/shop-images.json";
 import notice from "@/data/notice.json";
+import setsFile from "@/data/sets.json";
 
 /** 브리프에 안 들어간 나머지를 사람이 읽고 풀어 쓴 것. 교안 원문이 아니다. */
 export type Etc = { 제목: string; 본문: string[]; title?: string; body?: string[] };
@@ -152,6 +153,25 @@ export type NoticeItem = {
 const noticeFile = notice as { csv?: string; 공지: NoticeItem[] };
 export const 공지csv: string = noticeFile.csv ?? "";
 export const 공지들: NoticeItem[] = noticeFile.공지 ?? [];
+
+/**
+ * 세트·번들 구성. 단품 교안이 없어 샵 제품컷과 상세페이지 컷만 보여준다.
+ * 화면 주소는 /sets/<pid> 다.
+ */
+export type SetItem = {
+  pid: string;
+  ko: string;
+  en: string;
+  /** 샵에서 받아 둔 제품컷 첫 장. 못 받은 세트는 null. */
+  이미지: string | null;
+};
+
+export const 세트들: SetItem[] = (setsFile as { 세트: Omit<SetItem, "이미지">[] }).세트
+  .map((s) => ({ ...s, 이미지: getShopImages(s.pid).갤러리[0]?.src ?? null }));
+
+export function getSet(pid: string): SetItem | undefined {
+  return 세트들.find((s) => s.pid === pid);
+}
 
 export type ProductCard = {
   slug: string;

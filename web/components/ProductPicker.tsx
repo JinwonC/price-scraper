@@ -7,7 +7,7 @@ import TopSellers from "@/components/TopSellers";
 import Notice, { type NoticeItem } from "@/components/Notice";
 // 값을 가져오면 제품 데이터 전체가 클라이언트 번들에 딸려 온다. 타입만 가져오고
 // 실제 값은 서버에서 props 로 받는다.
-import type { Line, ProductCard, TopItem } from "@/lib/products";
+import type { Line, ProductCard, SetItem, TopItem } from "@/lib/products";
 
 /** 검색어를 제품명·영문명·태그·한 줄 소개에 두루 맞춰 본다. */
 function matches(card: ProductCard, q: string): boolean {
@@ -67,6 +67,40 @@ function Card({ c }: { c: ProductCard }) {
   );
 }
 
+/** 세트 카드 한 장. 교안이 없어 이름과 제품컷만 보여준다. */
+function SetCard({ s }: { s: SetItem }) {
+  const t = useT();
+  const { lang } = useLang();
+  return (
+    <li>
+      <Link className="pw-card" href={`/sets/${s.pid}`}>
+        <div className="pw-thumb">
+          {s.이미지 ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={s.이미지} alt="" loading="lazy" />
+          ) : (
+            <span className="pw-thumb-none">{t("이미지 없음", "No image")}</span>
+          )}
+        </div>
+        <div className="pw-card-body">
+          <h2>{t(s.ko, s.en)}</h2>
+          {lang === "ko" && s.en && <p className="pw-en">{s.en}</p>}
+          <p className="pw-meta">{s.pid}</p>
+        </div>
+      </Link>
+    </li>
+  );
+}
+
+/** 세트는 이름과 번호로만 찾는다. */
+function setMatches(s: SetItem, q: string) {
+  if (!q) return true;
+  const hay = `${s.ko} ${s.en} ${s.pid}`.toLowerCase();
+  return hay.includes(q) || hay.replace(/\s+/g, "").includes(q.replace(/\s+/g, ""));
+}
+
+type 묶음 = "단품" | "세트";
+
 export default function ProductPicker({
   cards,
   top,
@@ -76,6 +110,7 @@ export default function ProductPicker({
   lines,
   notice,
   noticeCsv,
+  sets,
 }: {
   cards: ProductCard[];
   top: TopItem[];
@@ -85,14 +120,22 @@ export default function ProductPicker({
   lines: Line[];
   notice: NoticeItem[];
   noticeCsv: string;
+  sets: SetItem[];
 }) {
   const [q, setQ] = useState("");
+  const [묶음, set묶음] = useState<묶음>("단품");
   const t = useT();
+  const 세트보기 = 묶음 === "세트";
 
   const shown = useMemo(() => {
     const needle = q.trim().toLowerCase();
     return cards.filter((c) => matches(c, needle));
   }, [cards, q]);
+
+  const shownSets = useMemo(() => {
+    const needle = q.trim().toLowerCase();
+    return sets.filter((s) => setMatches(s, needle));
+  }, [sets, q]);
 
   return (
     <main className="pw-main">
@@ -103,11 +146,32 @@ export default function ProductPicker({
 
       <TopSellers items={top} live={live} period={period} liveInfo={liveInfo} />
 
+      {/* 단품은 교안이 있고, 세트는 샵 그림만 있다. 그래서 목록을 나눠 둔다. */}
+      <div className="pw-basis pw-kind" role="group" aria-label={t("무엇을 볼지", "What to show")}>
+        {(["단품", "세트"] as 묶음[]).map((k) => (
+          <button
+            key={k}
+            type="button"
+            aria-pressed={묶음 === k}
+            onClick={() => set묶음(k)}
+          >
+            {k === "단품"
+              ? t(`단품 ${cards.length}`, `Products ${cards.length}`)
+              : t(`세트 ${sets.length}`, `Bundles ${sets.length}`)}
+          </button>
+        ))}
+      </div>
+
       <p className="pw-intro">
-        {t(
-          `제품 ${cards.length}개입니다. 제품을 누르면 브리프와 이미지, 제품 특징, 그리고 성분·향·사용법 이야기를 볼 수 있습니다.`,
-          `${cards.length} products. Open one for the brief, the images, the feature list, and the longer notes on ingredients, scent and how it's used.`,
-        )}
+        {세트보기
+          ? t(
+              `지금 US 틱톡샵에서 파는 세트 ${sets.length}개입니다. 세트는 단품 교안이 없어, 누르면 판매 페이지의 제품컷과 상세페이지를 그대로 보여줍니다.`,
+              `${sets.length} bundles on the US shop right now. Bundles have no product guide, so opening one shows the listing's own images.`,
+            )
+          : t(
+              `제품 ${cards.length}개입니다. 제품을 누르면 브리프와 이미지, 제품 특징, 그리고 성분·향·사용법 이야기를 볼 수 있습니다.`,
+              `${cards.length} products. Open one for the brief, the images, the feature list, and the longer notes on ingredients, scent and how it's used.`,
+            )}
       </p>
 
       <div className="pw-search">
@@ -122,13 +186,29 @@ export default function ProductPicker({
           aria-label={t("제품 검색", "Search products")}
         />
         <span className="pw-count">
-          {q.trim()
-            ? `${shown.length} / ${cards.length}`
-            : t(`${cards.length}개`, `${cards.length}`)}
+          {세트보기
+            ? q.trim()
+              ? `${shownSets.length} / ${sets.length}`
+              : t(`${sets.length}개`, `${sets.length}`)
+            : q.trim()
+              ? `${shown.length} / ${cards.length}`
+              : t(`${cards.length}개`, `${cards.length}`)}
         </span>
       </div>
 
-      {shown.length === 0 ? (
+      {세트보기 ? (
+        shownSets.length === 0 ? (
+          <p className="pw-none">
+            {t(`“${q}” 와 맞는 세트가 없습니다.`, `No bundle matches “${q}”.`)}
+          </p>
+        ) : (
+          <ul className="pw-grid">
+            {shownSets.map((s) => (
+              <SetCard key={s.pid} s={s} />
+            ))}
+          </ul>
+        )
+      ) : shown.length === 0 ? (
         <p className="pw-none">
           {t(`“${q}” 와 맞는 제품이 없습니다.`, `Nothing matches “${q}”.`)}
         </p>

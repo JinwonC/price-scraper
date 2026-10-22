@@ -6,6 +6,7 @@ import {
   top라이브,
   top라이브정보,
   공지csv,
+  세트들,
   공지들,
   라인들,
 } from "@/lib/products";
@@ -26,6 +27,7 @@ export default function ProductsIndex() {
       lines={라인들}
       notice={공지들}
       noticeCsv={공지csv}
+      sets={세트들}
     />
   );
 }

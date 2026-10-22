@@ -1,0 +1,128 @@
+{
+ "_주": "US 틱톡샵에서 지금 파는 세트·번들 구성. 단품 교안이 없는 상품이라 샵 제품컷과 상세페이지 컷으로 보여준다.",
+ "_순서": "최근 3개월 판매 수량이 많은 순이다. 수량은 싣지 않는다 — 이 저장소는 공개다.",
+ "_이름": "영어는 샵 리스팅 이름에서 대괄호 머리말을 뗀 것이고, 한국어는 사람이 짧게 고쳐 썼다.",
+ "_빼둔것": "판매가 멈춘 리스팅과 세트가 아닌 단품 리스팅(마일드 선크림, 에어핏 선스틱, 더블 모이스처 크림 등)은 넣지 않았다. 필요하면 여기에 추가하면 된다.",
+ "세트": [
+  {
+   "pid": "1729492487438964444",
+   "ko": "글로우 앤 리프트 루틴 세트 (스프레이 세럼·더블 세럼·더블 크림·멀티밤)",
+   "en": "White Truffle Glow & Lift Routine Set"
+  },
+  {
+   "pid": "1732268708636299996",
+   "ko": "오버나이트 래디언스 비타 세트 (5종)",
+   "en": "Overnight Radiance Vita Set"
+  },
+  {
+   "pid": "1732090269393588956",
+   "ko": "퍼스트 스프레이 세럼 홀리데이 기프트 세트 (3+2+1)",
+   "en": "White Truffle First Spray Serum Holiday Gift Set (3+2+1)"
+  },
+  {
+   "pid": "1732356256385635036",
+   "ko": "에이지리스 리프트모어 세트 (보르피린 3종)",
+   "en": "Age Less, Lift More Set — 3-Step Volufiline Ritual"
+  },
+  {
+   "pid": "1732097266547135196",
+   "ko": "글로우 SPF 듀오 (퍼스트 스프레이 세럼 + 톤업 선스크린)",
+   "en": "Glow SPF Duo — First Spray Serum + Tone Up Sunscreen"
+  },
+  {
+   "pid": "1732693782283260636",
+   "ko": "[라이브 전용] 퍼스트 스프레이 세럼 프로2X 3개입 (+1 증정)",
+   "en": "First Spray Serum PRO 2X — 3 Bundle (+1 free)"
+  },
+  {
+   "pid": "1732389843953357532",
+   "ko": "풀 스킨케어 루틴 세트 (클렌저·세럼·클렌징밤·마스크 등 6종)",
+   "en": "Full Skincare Routine Set"
+  },
+  {
+   "pid": "1732093806458802908",
+   "ko": "데일리 3스텝 래디언트 글로우 세트 (비타 토닝 라인)",
+   "en": "Daily 3-Step Radiant Glow Skincare Set — Vita Toning Line"
+  },
+  {
+   "pid": "1732395731801314012",
+   "ko": "헤어 에센셜 듀오 (헤어 오일 세럼 + 헤어 퍼퓸 세럼)",
+   "en": "Hair Essential Duo — Hair Oil Serum + Hair Perfume Serum"
+  },
+  {
+   "pid": "1732609890303054556",
+   "ko": "[라이브 전용] 비타 브라이트닝 풀 루틴 세트 (7종)",
+   "en": "Vita Brightening Full Routine Set — 7 pieces"
+  },
+  {
+   "pid": "1732383901381792476",
+   "ko": "얼티밋 클렌징 듀오 (딥 클렌징 밤 + 리턴 오일 크림 클렌저)",
+   "en": "Ultimate Cleansing Duo — Deep Cleansing Balm + Return Oil Cream Cleanser"
+  },
+  {
+   "pid": "1732158992964293340",
+   "ko": "퍼스트 스프레이 세럼 + 더블 세럼 올인원 멀티밤 세트",
+   "en": "First Spray Serum + Double Serum All-in-one Multi Balm"
+  },
+  {
+   "pid": "1732615108929622748",
+   "ko": "[라이브 전용] 보르피린 리프트 앤 아이 풀 루틴 세트 (6종)",
+   "en": "Volufiline Lift & Eye Full Routine Set — 6 pieces"
+  },
+  {
+   "pid": "1732090803307516636",
+   "ko": "톤업 선스크린 홀리데이 기프트 세트 (4개입)",
+   "en": "Waterfull Tone Up Sunscreen Serum Holiday Gift Set"
+  },
+  {
+   "pid": "1732557612203348700",
+   "ko": "[라이브 전용] 모닝 래디언스 비타 세트 (아침 루틴 5종)",
+   "en": "Morning Radiance Vita Set — 5-step AM routine"
+  },
+  {
+   "pid": "1732558035917181660",
+   "ko": "[라이브 전용] 나이트 리페어 트러플 세트 (저녁 루틴 5종)",
+   "en": "Night Repair Truffle Set — 5-step PM routine"
+  },
+  {
+   "pid": "1732689334754448092",
+   "ko": "[라이브 전용] 화이트 트러플 5 솔루션 기프트 박스 (미스트 52ml 5개)",
+   "en": "White Truffle 5 Solution Gift Box — mist 52ml × 5"
+  },
+  {
+   "pid": "1732466507767517916",
+   "ko": "[베가너리] 펩타이드 부스터 젤리 4~8주 번들 세트",
+   "en": "[Veganery] Peptide Booster Jelly 4–8 Week Bundle Set"
+  },
+  {
+   "pid": "1732466314729198300",
+   "ko": "[베가너리] 펩타이드 부스터 퍼스트 샷 2000mg 세트",
+   "en": "[Veganery] Peptide Booster First Shot 2000mg Set"
+  },
+  {
+   "pid": "1732466182916641500",
+   "ko": "[베가너리] 펩타이드 부스터 앰플 5000mg 세트",
+   "en": "[Veganery] Peptide Booster Ampoule 5000mg Set"
+  },
+  {
+   "pid": "1732531627594519260",
+   "ko": "[베가너리] 3인1 바디 밸런스 젤리 4~8주 번들 세트",
+   "en": "[Veganery] 3-in-1 Body Balance Jelly 4–8 Week Bundle Set"
+  },
+  {
+   "pid": "1732531957010895580",
+   "ko": "[베가너리] 이뮨 서포트 바디 밸런스 4~8주 번들 세트",
+   "en": "[Veganery] Immune Support & Body Balance 4–8 Week Bundle Set"
+  },
+  {
+   "pid": "1732536812946428636",
+   "ko": "[베가너리] 데일리 밸런스 앤 글로우 젤리 세트",
+   "en": "[Veganery] Daily Balance & Glow Jelly Set"
+  },
+  {
+   "pid": "1732521861332243164",
+   "ko": "[베가너리] 컴플리트 펩타이드 부스터 컬렉션",
+   "en": "[Veganery] Complete Peptide Booster Collection"
+  }
+ ]
+}
