@@ -1528,3 +1528,49 @@
     max-height: 260px;
   }
 }
+
+/* ---------- 첫 화면 공지 ---------- */
+.pw-notice {
+  margin: 4px 0 22px;
+  display: grid;
+  gap: 10px;
+}
+.pw-notice article {
+  padding: 14px 16px;
+  border: 1px solid var(--pw-accent-edge);
+  border-left: 3px solid var(--pw-accent);
+  border-radius: var(--radius);
+  background: var(--pw-accent-wash);
+}
+.pw-notice h2 {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  word-break: keep-all;
+}
+.pw-notice p {
+  margin: 0 0 4px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+.pw-notice p:last-of-type {
+  margin-bottom: 0;
+}
+.pw-notice a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--pw-accent);
+  text-decoration: none;
+}
+.pw-notice a:hover {
+  text-decoration: underline;
+}

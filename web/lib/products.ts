@@ -5,6 +5,7 @@ import liveRanks from "@/data/live-ranks.json";
 import lines from "@/data/lines.json";
 import tiktok from "@/../product-edu/tiktok-us.json";
 import shopImages from "@/data/shop-images.json";
+import notice from "@/data/notice.json";
 
 /** 브리프에 안 들어간 나머지를 사람이 읽고 풀어 쓴 것. 교안 원문이 아니다. */
 export type Etc = { 제목: string; 본문: string[]; title?: string; body?: string[] };
@@ -135,6 +136,22 @@ const shop표 = (shopImages as { 제품: Record<string, { 갤러리: Shot[]; 상
 export function getShopImages(slug: string): { 갤러리: Shot[]; 상세: Shot[] } {
   return shop표[slug] ?? { 갤러리: [], 상세: [] };
 }
+
+/**
+ * 첫 화면 공지. 사장님이 구글 시트에 쓰면 화면이 그걸 읽어 온다.
+ * 여기 구워 둔 것은 시트를 못 읽을 때 쓰는 대비책이다.
+ */
+export type NoticeItem = {
+  제목: string;
+  본문: string;
+  링크?: string;
+  링크문구?: string;
+  시작일?: string;
+  종료일?: string;
+};
+const noticeFile = notice as { csv?: string; 공지: NoticeItem[] };
+export const 공지csv: string = noticeFile.csv ?? "";
+export const 공지들: NoticeItem[] = noticeFile.공지 ?? [];
 
 export type ProductCard = {
   slug: string;
