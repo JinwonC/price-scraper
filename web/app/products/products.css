@@ -1574,3 +1574,11 @@
 .pw-notice a:hover {
   text-decoration: underline;
 }
+
+/* 단품 / 세트 토글. 검색창 바로 위에 둔다. */
+.pw-kind {
+  margin: 2px 0 12px;
+}
+.pw-set-note {
+  margin: 10px 0 0;
+}

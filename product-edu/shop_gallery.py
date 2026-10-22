@@ -19,6 +19,7 @@ shop_images.py 는 대표 컷 한 장(og:image)만 받는다. 이 스크립트�
 
 사용:
   python shop_gallery.py --out <폴더> [슬러그 ...]
+  python shop_gallery.py --out <폴더> --pids 1732... 1732...   (세트처럼 교안이 없는 상품)
   python shop_gallery.py --out <폴더> --max-edge 1600   # 줄여서 받기
 """
 
@@ -147,16 +148,23 @@ def 줄이기(b, 긴변):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("slugs", nargs="*")
+    ap.add_argument("--pids", nargs="*", default=None,
+                    help="교안이 없는 상품. 폴더 이름이 pid 가 된다")
     ap.add_argument("--out", required=True, help="받을 폴더 (저장소 밖에 둔다)")
     ap.add_argument("--max-edge", type=int, default=0,
                     help="긴 변을 이 크기로 줄여서 받는다. 0 이면 원본")
     a = ap.parse_args()
 
-    shots = json.load(open(SHOTS_JSON, encoding="utf-8"))["제품"]
-    want = a.slugs or list(shots)
-    모르는 = [s for s in want if s not in shots]
-    if 모르는:
-        sys.exit(f"shop-shots.json 에 없는 슬러그: {', '.join(모르는)}")
+    if a.pids:
+        # 교안이 없는 상품은 pid 를 그대로 폴더 이름으로 쓴다.
+        shots = {pid: {"pid": pid} for pid in a.pids}
+        want = list(shots)
+    else:
+        shots = json.load(open(SHOTS_JSON, encoding="utf-8"))["제품"]
+        want = a.slugs or list(shots)
+        모르는 = [s for s in want if s not in shots]
+        if 모르는:
+            sys.exit(f"shop-shots.json 에 없는 슬러그: {', '.join(모르는)}")
 
     목록, 실패, 총바이트 = collections.OrderedDict(), [], 0
     for i, slug in enumerate(want, 1):

@@ -40,7 +40,11 @@ def main():
             f for f in os.listdir(방) if f[0] in "gd" and not f.startswith(".")
         )
 
+    # 이미 넣어 둔 제품 목록에 덧붙인다. 단품과 세트를 따로 돌릴 수 있게.
     제품 = collections.OrderedDict()
+    if os.path.exists(OUT_JSON):
+        제품 = json.load(open(OUT_JSON, encoding="utf-8"),
+                        object_pairs_hook=collections.OrderedDict).get("제품", collections.OrderedDict())
     총바이트, 장수 = 0, 0
     for slug, 파일들 in 받은것.items():
         갤러리, 상세 = [], []
