@@ -5,6 +5,8 @@ import {
   top10기간,
   top라이브,
   top라이브정보,
+  공지csv,
+  공지들,
   라인들,
 } from "@/lib/products";
 
@@ -22,6 +24,8 @@ export default function ProductsIndex() {
       period={top10기간}
       liveInfo={top라이브정보}
       lines={라인들}
+      notice={공지들}
+      noticeCsv={공지csv}
     />
   );
 }

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { useLang, useT } from "@/components/Lang";
 import TopSellers from "@/components/TopSellers";
+import Notice, { type NoticeItem } from "@/components/Notice";
 // 값을 가져오면 제품 데이터 전체가 클라이언트 번들에 딸려 온다. 타입만 가져오고
 // 실제 값은 서버에서 props 로 받는다.
 import type { Line, ProductCard, TopItem } from "@/lib/products";
@@ -73,6 +74,8 @@ export default function ProductPicker({
   period,
   liveInfo,
   lines,
+  notice,
+  noticeCsv,
 }: {
   cards: ProductCard[];
   top: TopItem[];
@@ -80,6 +83,8 @@ export default function ProductPicker({
   period: { ko: string; en: string };
   liveInfo: { 합산: boolean; 기간: { ko: string; en: string } };
   lines: Line[];
+  notice: NoticeItem[];
+  noticeCsv: string;
 }) {
   const [q, setQ] = useState("");
   const t = useT();
@@ -93,6 +98,9 @@ export default function ProductPicker({
     <main className="pw-main">
       {/* 머리말은 없앴다. 화면 맨 위 '달바 제품 가이드' 와 겹쳐 한 줄만 더 차지했다.
           대신 많이 팔린 10개가 이 화면의 첫 제목이 된다. */}
+      {/* 공지는 늘 맨 위다. 사장님이 시트에 쓰면 배포 없이 바뀐다. */}
+      <Notice csv={noticeCsv} baked={notice} />
+
       <TopSellers items={top} live={live} period={period} liveInfo={liveInfo} />
 
       <p className="pw-intro">

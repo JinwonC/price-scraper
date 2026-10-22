@@ -1,0 +1,7 @@
+{
+ "_주": "첫 화면(제품 목록) 맨 위에 뜨는 공지. 사장님이 구글 시트에 쓰면 사이트가 그걸 읽어 바로 보여준다.",
+ "_시트": "https://docs.google.com/spreadsheets/d/1Ehdw8YErocgOxf6rb0zaU0kRmehplw1AGCkZFOaqPRk/edit — '공지' 탭. 칸은 표시(Y/N) · 제목 · 본문 · 링크 · 링크문구 · 시작일 · 종료일 · 비고.",
+ "_읽는법": "화면이 열릴 때 csv 주소를 받아 온다. 시트가 '링크가 있는 모든 사용자 · 뷰어' 여야 읽힌다. 못 읽으면 아래 '공지' 에 구워 둔 내용을 대신 보여준다 — 그 내용은 매일 갱신 때 시트에서 다시 채운다.",
+ "csv": "https://docs.google.com/spreadsheets/d/1Ehdw8YErocgOxf6rb0zaU0kRmehplw1AGCkZFOaqPRk/gviz/tq?tqx=out:csv&sheet=%EA%B3%B5%EC%A7%80",
+ "공지": []
+}
