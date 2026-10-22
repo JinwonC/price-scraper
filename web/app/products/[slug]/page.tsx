@@ -21,7 +21,7 @@ export async function generateMetadata({
 }) {
   const { slug } = await params;
   const p = getProduct(slug);
-  return { title: p ? `${p.en || p.ko} — d'Alba Product Guide` : "d'Alba Product Guide" };
+  return { title: p ? `${p.en || p.ko} — d'Alba TikTok Shop Live` : "d'Alba TikTok Shop Live" };
 }
 
 export default async function ProductPage({
