@@ -12,7 +12,7 @@ export default function Chrome({ children }: { children: React.ReactNode }) {
     <div className="pw">
       <header className="pw-top">
         <Link className="pw-home" href="/products">
-          {t("달바 제품 가이드", "d'Alba Product Guide")}
+          {t("달바 틱톡샵 라이브", "d'Alba TikTok Shop Live")}
         </Link>
         <div className="pw-top-right">
           <nav className="pw-nav" aria-label={t("화면", "Sections")}>

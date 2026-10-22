@@ -96,7 +96,7 @@ export default function ProductPicker({
 
   return (
     <main className="pw-main">
-      {/* 머리말은 없앴다. 화면 맨 위 '달바 제품 가이드' 와 겹쳐 한 줄만 더 차지했다.
+      {/* 머리말은 없앴다. 화면 맨 위 제목과 겹쳐 한 줄만 더 차지했다.
           대신 많이 팔린 10개가 이 화면의 첫 제목이 된다. */}
       {/* 공지는 늘 맨 위다. 사장님이 시트에 쓰면 배포 없이 바뀐다. */}
       <Notice csv={noticeCsv} baked={notice} />

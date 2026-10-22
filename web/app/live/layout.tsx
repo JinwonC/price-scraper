@@ -5,7 +5,7 @@ import Chrome from "@/components/Chrome";
 import "../products/products.css";
 
 export const metadata: Metadata = {
-  title: "d'Alba Brand Live Schedule",
+  title: "d'Alba TikTok Shop Live — 라이브 일정",
   description: "d'Alba's own live streams, so creators can schedule around them.",
   robots: { index: false, follow: false }, // 사내용 — 검색엔진 노출 방지
 };
