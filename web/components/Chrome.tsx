@@ -23,6 +23,12 @@ export default function Chrome({ children }: { children: React.ReactNode }) {
               {t("제품", "Products")}
             </Link>
             <Link
+              href="/deals"
+              aria-current={여기.startsWith("/deals") ? "page" : undefined}
+            >
+              {t("BFCM 할인율", "BFCM discounts")}
+            </Link>
+            <Link
               href="/live"
               aria-current={여기.startsWith("/live") ? "page" : undefined}
             >
