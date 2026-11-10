@@ -1,0 +1,335 @@
+/*
+ * BFCM 딜 가격표.
+ *
+ * 종이 가격표처럼 보이게 둔다 — 노란 머리판에 검은 글씨, 흰 카드. 그래서
+ * 이 화면 안쪽은 라이트/다크를 따라가지 않고 제 색을 쓴다. 머리글·꼬리말은
+ * 사이트 색을 그대로 따른다.
+ */
+.bf {
+  --bf-yellow: #ffe01b;
+  --bf-ink: #141414;
+  --bf-paper: #ffffff;
+  --bf-line: #e3e1d8;
+  --bf-muted: #6f6c62;
+  --bf-red: #e02b20;
+}
+
+/* ---------- 머리판 ---------- */
+.bf-head {
+  background: var(--bf-yellow);
+  color: var(--bf-ink);
+  border-radius: var(--radius);
+  padding: 24px 22px 20px;
+  margin: 4px 0 22px;
+}
+.bf-kicker {
+  margin: 0;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.bf-h1 {
+  margin: 8px 0 0;
+  font-size: clamp(30px, 7vw, 52px);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+  text-transform: uppercase;
+  word-break: keep-all;
+}
+.bf-sub {
+  margin: 10px 0 0;
+  max-width: 54ch;
+  font-size: 14px;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+.bf-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  margin: 18px 0 0;
+  padding: 16px 0 0;
+  border-top: 2px solid var(--bf-ink);
+}
+.bf-stats div {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.bf-stats dt {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.bf-stats dd {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+}
+.bf-asof {
+  margin: 14px 0 0;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.72;
+}
+
+/* ---------- 찾기와 묶음 ---------- */
+.bf-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  margin: 0 0 18px;
+}
+.bf-tools input {
+  flex: 1 1 240px;
+  min-width: 0;
+  padding: 10px 13px;
+  font: inherit;
+  font-size: 14.5px;
+  color: var(--text-primary);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.bf-tools input:focus-visible {
+  outline: 2px solid var(--bf-ink);
+  outline-offset: 1px;
+}
+.bf-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.bf-chips button {
+  appearance: none;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 7px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+}
+.bf-chips button em {
+  font-style: normal;
+  opacity: 0.6;
+  font-variant-numeric: tabular-nums;
+}
+.bf-chips button:hover {
+  border-color: var(--text-muted);
+}
+.bf-chips button.on {
+  background: var(--bf-ink);
+  border-color: var(--bf-ink);
+  color: #fff;
+}
+.bf-chips button.on em {
+  opacity: 0.7;
+}
+
+/* ---------- 카드 ---------- */
+.bf-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  /* 카드마다 SKU 수가 달라 키가 다르다. 줄에 맞춰 늘리지 않는다. */
+  align-items: start;
+  gap: 14px;
+}
+.bf-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bf-paper);
+  color: var(--bf-ink);
+  border: 1px solid var(--bf-line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.bf-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 12px;
+  background: var(--bf-yellow);
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.bf-card.bf-라이브 .bf-card-top {
+  background: var(--bf-ink);
+  color: var(--bf-yellow);
+}
+.bf-card.bf-틱톡 .bf-card-top {
+  background: #1f1f1f;
+  color: #fff;
+}
+.bf-card.bf-신상 .bf-card-top {
+  background: #fff3a8;
+}
+.bf-sku-n {
+  font-weight: 700;
+  opacity: 0.75;
+  font-variant-numeric: tabular-nums;
+}
+
+.bf-card-body {
+  display: flex;
+  gap: 12px;
+  padding: 12px 12px 8px;
+}
+.bf-shot {
+  position: relative;
+  flex: none;
+  width: 76px;
+  height: 76px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f4f3ee;
+}
+.bf-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.bf-noshot {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    #efeee8,
+    #efeee8 6px,
+    #e6e5de 6px,
+    #e6e5de 12px
+  );
+}
+/* 라이브 매출 차례. 몇 번째로 많이 팔리는지가 카드에서 바로 보여야 한다. */
+.bf-rank {
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-width: 20px;
+  padding: 1px 5px;
+  background: var(--bf-ink);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  border-bottom-right-radius: 7px;
+}
+.bf-name {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.bf-name h2 {
+  margin: 0;
+  font-size: 14.5px;
+  font-weight: 700;
+  line-height: 1.32;
+  letter-spacing: -0.01em;
+  word-break: keep-all;
+}
+.bf-name a {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--bf-muted);
+  text-decoration: none;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
+}
+.bf-name a:hover {
+  color: var(--bf-ink);
+  text-decoration: underline;
+}
+
+/* ---------- SKU 줄 ---------- */
+.bf-sku {
+  width: 100%;
+  margin: 0 0 2px;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.bf-sku tr {
+  border-top: 1px solid var(--bf-line);
+}
+.bf-sku th,
+.bf-sku td {
+  padding: 8px 6px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.bf-sku th {
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--bf-muted);
+  white-space: normal;
+  word-break: keep-all;
+  padding-left: 12px;
+  line-height: 1.35;
+}
+.bf-sku td:last-child {
+  padding-right: 12px;
+}
+.bf-was {
+  color: var(--bf-muted);
+  text-decoration: line-through;
+  font-size: 12px;
+}
+.bf-now {
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: -0.02em;
+}
+.bf-off {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: var(--bf-ink);
+  color: #fff;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+.bf-off.big {
+  background: var(--bf-red);
+}
+
+.bf-foot {
+  margin: 22px 0 0;
+  font-size: 12.5px;
+  color: var(--text-muted);
+  word-break: keep-all;
+}
+
+@media (max-width: 480px) {
+  .bf-head {
+    padding: 20px 16px 16px;
+  }
+  .bf-stats {
+    gap: 10px 20px;
+  }
+  .bf-stats dd {
+    font-size: 22px;
+  }
+  .bf-grid {
+    grid-template-columns: 1fr;
+  }
+}

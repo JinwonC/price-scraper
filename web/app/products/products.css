@@ -1289,8 +1289,16 @@
   .pw-top {
     flex-wrap: wrap;
   }
+  /* 화면이 좁으면 이름 · 언어 · 화면 전환이 한 줄에 다 들어가지 않는다.
+     접히게 두고, 언어 토글을 오른쪽 끝에 붙여 둔다. */
   .pw-top-right {
-    gap: 10px;
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+  }
+  .pw-nav {
+    flex: 1 1 auto;
+    flex-wrap: wrap;
   }
 }
 
