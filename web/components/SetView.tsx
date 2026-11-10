@@ -43,6 +43,13 @@ export default function SetView({
         )}
       </p>
 
+      <p className="ps-warn">
+        {t(
+          "증정품(GWP)은 수시로 바뀝니다. 그림에 있는 증정품이 지금도 그대로인지, 방송 켜기 전에 샵 상품 페이지에서 꼭 다시 확인하세요.",
+          "Free gifts (GWP) change often. Check the shop listing right before you go live to confirm the gift shown here is still the one on offer.",
+        )}
+      </p>
+
       <ShopGallery 갤러리={shop.갤러리} 상세={shop.상세} />
     </main>
   );

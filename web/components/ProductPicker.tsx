@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { useLang, useT } from "@/components/Lang";
+import Poster from "@/components/Poster";
 import TopSellers from "@/components/TopSellers";
 import Notice, { type NoticeItem } from "@/components/Notice";
 // 값을 가져오면 제품 데이터 전체가 클라이언트 번들에 딸려 온다. 타입만 가져오고
@@ -111,6 +112,7 @@ export default function ProductPicker({
   notice,
   noticeCsv,
   sets,
+  updated,
 }: {
   cards: ProductCard[];
   top: TopItem[];
@@ -121,6 +123,8 @@ export default function ProductPicker({
   notice: NoticeItem[];
   noticeCsv: string;
   sets: SetItem[];
+  /** 순위 자료를 마지막으로 구운 때. UTC ISO. */
+  updated: string;
 }) {
   const [q, setQ] = useState("");
   const [묶음, set묶음] = useState<묶음>("단품");
@@ -139,10 +143,31 @@ export default function ProductPicker({
 
   return (
     <main className="pw-main">
-      {/* 머리말은 없앴다. 화면 맨 위 제목과 겹쳐 한 줄만 더 차지했다.
-          대신 많이 팔린 10개가 이 화면의 첫 제목이 된다. */}
       {/* 공지는 늘 맨 위다. 사장님이 시트에 쓰면 배포 없이 바뀐다. */}
       <Notice csv={noticeCsv} baked={notice} />
+
+      <Poster
+        kicker={t("달바 US 틱톡샵 · 크리에이터용", "d'Alba US TikTok Shop · for creators")}
+        title={t("제품 가이드", "Product guide")}
+        sub={t(
+          "방송에 거는 단품과 세트를 한곳에 모았습니다. 제품을 누르면 브리프와 제품컷, 상세페이지가 나옵니다.",
+          "Every product and bundle you can pin on air. Open one for the brief, the shop images and the listing detail.",
+        )}
+        stats={[
+          { 라벨ko: "단품", 라벨en: "Products", 값: String(cards.length) },
+          { 라벨ko: "세트", 라벨en: "Bundles", 값: String(sets.length) },
+          { 라벨ko: "라인", 라벨en: "Lines", 값: String(lines.length) },
+        ]}
+        updated={updated}
+        source={t("틱톡샵 셀러센터 · CRUVA", "TikTok Shop Seller Center · CRUVA")}
+      />
+
+      <p className="ps-warn">
+        {t(
+          "증정품(GWP)은 수시로 바뀝니다. 방송 켜기 전에 샵 상품 페이지에서 구성과 가격을 꼭 다시 확인하세요.",
+          "Free gifts (GWP) change often. Always check the shop listing for the current gift and price right before you go live.",
+        )}
+      </p>
 
       <TopSellers items={top} live={live} period={period} liveInfo={liveInfo} />
 

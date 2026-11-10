@@ -88,6 +88,8 @@ def main():
         "_시트": "https://docs.google.com/spreadsheets/d/1p9HmIOGnc5gE8kQILFT3T_8NAuKMRc-RkY2cs_gQu0M — 'Deal Price' 탭과 'PID별 7일 매출' 탭.",
         "_이름": "짧은 이름은 deal-price/names.json 에 적어 둔 것이다. 리스팅 이름 그대로는 카드에 들어가지 않는다.",
         "기준": a.today or datetime.date.today().isoformat(),
+        # 화면에 '마지막 갱신' 으로 적는다. 가격은 하루에도 바뀌어서 날짜만으로는 모자라다.
+        "갱신": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="minutes"),
         "요약": {
             "제품수": len(줄선것),
             "sku수": len(할인들),

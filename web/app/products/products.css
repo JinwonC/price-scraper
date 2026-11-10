@@ -1,12 +1,12 @@
 /*
  * 제품 교안 화면.
  * 색 토큰은 globals.css 에 이미 정의된 것을 그대로 쓴다(라이트/다크 모두 처리됨).
- * 여기서는 교안 전용으로 강조색 하나(--pw-accent)만 더한다.
+ * 강조색은 가격표와 같은 검정·노랑이다 — 세 화면이 한 자료라 색도 하나로 둔다.
  */
 .pw {
-  --pw-accent: #a8700f;
-  --pw-accent-wash: rgba(168, 112, 15, 0.1);
-  --pw-accent-edge: rgba(168, 112, 15, 0.28);
+  --pw-accent: #141414;
+  --pw-accent-wash: rgba(255, 224, 27, 0.26);
+  --pw-accent-edge: rgba(20, 20, 20, 0.22);
   max-width: 940px;
   margin: 0 auto;
   padding: 0 16px 96px;
@@ -14,9 +14,9 @@
 
 @media (prefers-color-scheme: dark) {
   .pw:where(:not([data-theme="light"]) *) {
-    --pw-accent: #e3ae4c;
-    --pw-accent-wash: rgba(227, 174, 76, 0.14);
-    --pw-accent-edge: rgba(227, 174, 76, 0.3);
+    --pw-accent: #ffe01b;
+    --pw-accent-wash: rgba(255, 224, 27, 0.12);
+    --pw-accent-edge: rgba(255, 224, 27, 0.3);
   }
 }
 
@@ -103,15 +103,16 @@
 .pw-best {
   margin: 4px 0 30px;
   padding: 18px 18px 8px;
-  background: var(--pw-accent-wash);
-  border: 1px solid var(--pw-accent-edge);
-  border-radius: var(--radius);
+  background: var(--bf-paper);
+  color: var(--bf-ink);
+  border: 1px solid var(--bf-ink);
+  border-radius: 12px;
 }
 /* 전체 / 라이브 를 눌러 바꾼다. 화면 위 언어 토글과 같은 모양이다. */
 .pw-basis {
   display: inline-flex;
   margin: 0 0 10px;
-  border: 1px solid var(--pw-accent-edge);
+  border: 1px solid var(--bf-ink);
   border-radius: 999px;
   overflow: hidden;
 }
@@ -128,12 +129,12 @@
   white-space: nowrap;
 }
 .pw-basis button + button {
-  border-left: 1px solid var(--pw-accent-edge);
+  border-left: 1px solid var(--bf-ink);
 }
 .pw-basis button[aria-pressed="true"] {
-  background: var(--pw-accent);
-  color: var(--page);
-  font-weight: 650;
+  background: var(--bf-ink);
+  color: #fff;
+  font-weight: 700;
 }
 .pw-basis button:hover:not([aria-pressed="true"]) {
   color: var(--text-primary);
@@ -297,11 +298,15 @@
 }
 
 .pw-card-rank {
-  margin: 0 0 4px;
-  font-size: 11px;
+  display: inline-block;
+  margin: 0 0 6px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: var(--bf-ink);
+  color: #fff;
+  font-size: 10.5px;
   font-weight: 700;
-  letter-spacing: 0.01em;
-  color: var(--pw-accent);
+  letter-spacing: 0.02em;
 }
 
 /* ---------- 라인별 묶음 ---------- */
@@ -341,16 +346,15 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+  background: var(--bf-paper);
+  color: var(--bf-ink);
+  border: 1px solid var(--bf-line);
+  border-radius: 12px;
   overflow: hidden;
   text-decoration: none;
-  color: inherit;
 }
 .pw-card:hover {
-  border-color: var(--pw-accent-edge);
-  background: var(--hover-wash);
+  border-color: var(--bf-ink);
 }
 .pw-thumb {
   /* 세로 flex 아이템은 min-height 가 auto 라서, 안의 이미지가 높이를 밀어 올린다.
@@ -1335,7 +1339,7 @@
   display: flex;
   flex-wrap: wrap;
   margin: 2px 0 18px;
-  border: 1px solid var(--pw-accent-edge);
+  border: 1px solid var(--bf-ink);
   border-radius: 999px;
   overflow: hidden;
   width: fit-content;
@@ -1353,12 +1357,12 @@
   white-space: nowrap;
 }
 .pw-tz button + button {
-  border-left: 1px solid var(--pw-accent-edge);
+  border-left: 1px solid var(--bf-ink);
 }
 .pw-tz button[aria-pressed="true"] {
-  background: var(--pw-accent);
-  color: var(--page);
-  font-weight: 650;
+  background: var(--bf-ink);
+  color: #fff;
+  font-weight: 700;
 }
 .pw-tz button:hover:not([aria-pressed="true"]) {
   color: var(--text-primary);
@@ -1589,4 +1593,169 @@
 }
 .pw-set-note {
   margin: 10px 0 0;
+}
+
+
+/* ====================================================================
+ * 가격표 머리판 — 모든 화면이 같이 쓴다.
+ *
+ * 제품 목록 · BFCM 할인율 · 라이브 일정이 한 자료의 다른 면이라, 셋 다
+ * 노란 머리판으로 열고 같은 모양의 알약 단추를 쓴다. 머리판 안쪽은
+ * 라이트/다크를 따라가지 않고 제 색을 쓴다 — 종이 가격표처럼 보이게.
+ * ==================================================================== */
+.pw {
+  --bf-yellow: #ffe01b;
+  --bf-ink: #141414;
+  --bf-paper: #ffffff;
+  --bf-line: #e3e1d8;
+  --bf-muted: #6f6c62;
+  --bf-red: #e02b20;
+}
+/* ---------- 머리판 ---------- */
+.ps-head {
+  background: var(--bf-yellow);
+  color: var(--bf-ink);
+  border-radius: var(--radius);
+  padding: 24px 22px 20px;
+  margin: 4px 0 22px;
+}
+.ps-kicker {
+  margin: 0;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.ps-h1 {
+  margin: 8px 0 0;
+  font-size: clamp(30px, 7vw, 52px);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+  text-transform: uppercase;
+  word-break: keep-all;
+}
+.ps-sub {
+  margin: 10px 0 0;
+  max-width: 54ch;
+  font-size: 14px;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+.ps-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  margin: 18px 0 0;
+  padding: 16px 0 0;
+  border-top: 2px solid var(--bf-ink);
+}
+.ps-stats div {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.ps-stats dt {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.ps-stats dd {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+}
+.ps-asof {
+  margin: 14px 0 0;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.72;
+}
+
+/* ---------- 찾기와 묶음 ---------- */
+.ps-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  margin: 0 0 18px;
+}
+.ps-tools input {
+  flex: 1 1 240px;
+  min-width: 0;
+  padding: 10px 13px;
+  font: inherit;
+  font-size: 14.5px;
+  color: var(--text-primary);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.ps-tools input:focus-visible {
+  outline: 2px solid var(--bf-ink);
+  outline-offset: 1px;
+}
+.ps-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.ps-chips button {
+  appearance: none;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 7px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+}
+.ps-chips button em {
+  font-style: normal;
+  opacity: 0.6;
+  font-variant-numeric: tabular-nums;
+}
+.ps-chips button:hover {
+  border-color: var(--text-muted);
+}
+.ps-chips button.on {
+  background: var(--bf-ink);
+  border-color: var(--bf-ink);
+  color: #fff;
+}
+.ps-chips button.on em {
+  opacity: 0.7;
+}
+
+/* 무엇을 기준으로 줄을 세웠는지. 머리판 바로 밑에 한 줄로 붙는다. */
+.ps-order {
+  display: inline-block;
+  margin: 0 0 10px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--bf-ink);
+  color: #fff;
+  font-size: 12.5px;
+  font-weight: 650;
+  word-break: keep-all;
+}
+/* 방송 전에 꼭 보라는 말. 노란 띠로 묶어 눈에 걸리게 둔다. */
+.ps-warn {
+  margin: 0 0 18px;
+  padding: 11px 14px;
+  border: 1px solid var(--bf-ink);
+  border-left-width: 6px;
+  border-radius: 8px;
+  background: #fff7c2;
+  color: var(--bf-ink);
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.5;
+  word-break: keep-all;
 }

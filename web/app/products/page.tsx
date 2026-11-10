@@ -3,6 +3,7 @@ import {
   cards,
   top10,
   top10기간,
+  top갱신,
   top라이브,
   top라이브정보,
   공지csv,
@@ -28,6 +29,7 @@ export default function ProductsIndex() {
       notice={공지들}
       noticeCsv={공지csv}
       sets={세트들}
+      updated={top갱신}
     />
   );
 }

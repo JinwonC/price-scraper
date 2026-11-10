@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useLang, useT } from "@/components/Lang";
+import Poster from "@/components/Poster";
 import type { Slot } from "@/lib/schedule";
 
 /**
@@ -52,9 +53,12 @@ function 짐작() {
 export default function LiveSchedule({
   slots,
   asOf,
+  updated,
 }: {
   slots: Slot[];
   asOf: string;
+  /** 일정을 마지막으로 구운 때. UTC ISO. */
+  updated: string;
 }) {
   const t = useT();
   const { lang } = useLang();
@@ -140,20 +144,30 @@ export default function LiveSchedule({
   }, [slots, 날짜키]);
 
   const 오늘키 = now === null ? null : 날짜키.format(new Date(now));
+  const 글로벌수 = slots.filter((s) => s.계정en === "Global").length;
 
   return (
     <section className="pw-sched">
-      <h1>
-        {t("브랜드 라이브 일정", "Brand live schedule")}
-        <span className="pw-best-as-of">
-          {t(`${asOf} 기준 · 매일 갱신`, `As of ${asOf} · updated daily`)}
-        </span>
-      </h1>
+      <Poster
+        kicker={t("달바 US 틱톡샵 · 브랜드 라이브", "d'Alba US TikTok Shop · brand lives")}
+        title={t("라이브 일정", "Brand live schedule")}
+        sub={t(
+          "d'Alba 공식 계정이 직접 하는 라이브입니다. 이 시간을 피해서 잡으면 같은 상품으로 서로 부딪히지 않습니다.",
+          "These are d'Alba's own live streams. Schedule around them so you're not competing with the brand on the same products.",
+        )}
+        stats={[
+          { 라벨ko: "예정", 라벨en: "Scheduled", 값: String(slots.length) },
+          { 라벨ko: "글로벌", 라벨en: "Global", 값: String(글로벌수) },
+          { 라벨ko: "US", 라벨en: "US", 값: String(slots.length - 글로벌수) },
+        ]}
+        updated={updated}
+        source={t(`${asOf} 자료 · 사내 일정 시트`, `${asOf} data · internal schedule sheet`)}
+      />
 
-      <p className="pw-note">
+      <p className="ps-warn">
         {t(
-          "d'Alba 공식 계정이 직접 하는 라이브입니다. 이 시간대를 피해서 방송을 잡으면 같은 상품으로 서로 부딪히지 않습니다. 일정은 수시로 바뀌니 방송 전날 한 번 더 확인하세요.",
-          "These are d'Alba's own live streams. Schedule around them so you're not competing with the brand on the same products. The plan changes often, so check again the day before you go live.",
+          "일정은 수시로 바뀝니다. 증정품(GWP)도 마찬가지라, 방송 켜기 전에 샵 상품 페이지에서 구성과 가격을 꼭 다시 확인하세요.",
+          "The plan changes often, and so do the free gifts (GWP). Check the shop listing for the current gift and price right before you go live.",
         )}
       </p>
 

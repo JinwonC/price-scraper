@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { useT } from "@/components/Lang";
+import Poster from "@/components/Poster";
 import { shopUrl } from "@/components/ShopLink";
 import type { DealItem, DealSummary } from "@/lib/deals";
 
@@ -29,10 +30,12 @@ export default function DealSheet({
   items,
   summary,
   asOf,
+  updated,
 }: {
   items: DealItem[];
   summary: DealSummary;
   asOf: string;
+  updated: string;
 }) {
   const t = useT();
   const [고른띠, set고른띠] = useState<string | null>(null);
@@ -60,43 +63,39 @@ export default function DealSheet({
 
   return (
     <main className="pw-main bf">
-      <header className="bf-head">
-        <p className="bf-kicker">
-          {t("달바 US 틱톡샵 · BFCM", "d'Alba US TikTok Shop · BFCM")}
-        </p>
-        <h1 className="bf-h1">
-          {t("딜 가격표", "Live deal price sheet")}
-        </h1>
-        <p className="bf-sub">
-          {t(
-            "방송에 거는 제품의 정가와 딜가, 할인율입니다. 차례는 최근 7일 라이브 매출이 큰 순입니다.",
-            "List price, deal price and discount for everything you can pin on air. Ordered by the last 7 days of live sales.",
-          )}
-        </p>
-        <dl className="bf-stats">
-          <div>
-            <dt>{t("제품", "Products")}</dt>
-            <dd>{summary.제품수}</dd>
-          </div>
-          <div>
-            <dt>{t("SKU", "SKUs")}</dt>
-            <dd>{summary.sku수}</dd>
-          </div>
-          <div>
-            <dt>{t("평균 할인", "Avg. discount")}</dt>
-            <dd>{summary.평균할인}%</dd>
-          </div>
-          <div>
-            <dt>{t("최대 할인", "Max discount")}</dt>
-            <dd>{summary.최대할인}%</dd>
-          </div>
-        </dl>
-        <p className="bf-asof">
-          {t(`${asOf} 기준 · 틱톡샵 셀러센터`, `As of ${asOf} · TikTok Shop Seller Center`)}
-        </p>
-      </header>
+      <Poster
+        kicker={t("달바 US 틱톡샵 · BFCM", "d'Alba US TikTok Shop · BFCM")}
+        title={t("딜 가격표", "Live deal price sheet")}
+        sub={t(
+          "방송에 거는 제품의 정가와 딜가, 할인율입니다.",
+          "List price, deal price and discount for everything you can pin on air.",
+        )}
+        stats={[
+          { 라벨ko: "제품", 라벨en: "Products", 값: String(summary.제품수) },
+          { 라벨ko: "SKU", 라벨en: "SKUs", 값: String(summary.sku수) },
+          { 라벨ko: "평균 할인", 라벨en: "Avg. discount", 값: `${summary.평균할인}%` },
+          { 라벨ko: "최대 할인", 라벨en: "Max discount", 값: `${summary.최대할인}%` },
+        ]}
+        updated={updated}
+        source={t(`${asOf} 자료 · 틱톡샵 셀러센터`, `${asOf} data · TikTok Shop Seller Center`)}
+      />
 
-      <div className="bf-tools">
+      {/* 무엇을 기준으로 줄을 세웠는지가 이 화면에서 가장 먼저 물어보는 것이다. */}
+      <p className="ps-order">
+        {t(
+          "매출 순서입니다 — 최근 7일 라이브 매출이 큰 제품부터. 매일 갱신합니다.",
+          "Sorted by sales — highest live sales over the last 7 days first. Updated daily.",
+        )}
+      </p>
+
+      <p className="ps-warn">
+        {t(
+          "증정품(GWP)은 수시로 바뀝니다. 방송 켜기 전에 샵 상품 페이지에서 구성과 가격을 꼭 다시 확인하세요.",
+          "Free gifts (GWP) change often. Always check the shop listing for the current gift and price right before you go live.",
+        )}
+      </p>
+
+      <div className="ps-tools">
         <input
           type="search"
           value={찾기}
@@ -104,7 +103,7 @@ export default function DealSheet({
           placeholder={t("제품 이름이나 번호로 찾기", "Search by name or product ID")}
           aria-label={t("제품 찾기", "Search products")}
         />
-        <div className="bf-chips" role="group" aria-label={t("묶음", "Groups")}>
+        <div className="ps-chips" role="group" aria-label={t("묶음", "Groups")}>
           <button
             type="button"
             className={고른띠 === null ? "on" : ""}
@@ -188,8 +187,8 @@ export default function DealSheet({
 
       <p className="bf-foot">
         {t(
-          "가격은 셀러센터에 걸린 값을 하루에 한 번 옮겨 적습니다. 방송 직전에는 샵 화면에서 한 번 더 확인하세요.",
-          "Prices are copied from Seller Center once a day. Check the shop page again right before you go live.",
+          "가격은 셀러센터에 걸린 값을 하루에 한 번 옮겨 적습니다. 할인율이 크게 달라 보이면 샵 화면 쪽이 맞습니다.",
+          "Prices are copied from Seller Center once a day. If a discount looks far off, the shop page is the one to trust.",
         )}
       </p>
     </main>

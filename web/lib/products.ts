@@ -75,6 +75,9 @@ export const top10: TopItem[] = 펴기(topFile.전체);
 const top크리에이터라이브: TopItem[] = 펴기(topFile.라이브);
 
 /** 어느 기간을 센 순위인지. 화면에 그대로 띄운다. */
+/** 순위 자료를 마지막으로 구운 때. UTC ISO. */
+export const top갱신: string = (top as { 갱신?: string }).갱신 ?? "";
+
 export const top10기간 = {
   ko: (top as { 기간ko: string }).기간ko,
   en: (top as { 기간en: string }).기간en,
