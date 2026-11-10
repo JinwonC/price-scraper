@@ -28,9 +28,11 @@ export type DealSummary = {
   최대할인: number;
 };
 
-type File = { 기준: string; 요약: DealSummary; 상품: DealItem[] };
+type File = { 기준: string; 갱신: string; 요약: DealSummary; 상품: DealItem[] };
 const file = deals as File;
 
 export const 딜상품: DealItem[] = file.상품;
 export const 딜요약: DealSummary = file.요약;
 export const 딜기준: string = file.기준;
+/** 이 자료를 마지막으로 구운 때. UTC ISO. */
+export const 딜갱신: string = file.갱신;

@@ -17,6 +17,7 @@ CSV 를 받아 두고 이 스크립트에 넘긴다. 받는 법은 README 에 �
 import argparse
 import collections
 import csv
+import datetime as dt
 import json
 import os
 import sys
@@ -79,6 +80,8 @@ def main():
                   f"둘 다 {a.부터} ~ {a.까지}.")
     old["기간ko"] = f"최근 30일 · {a.까지} 기준"
     old["기간en"] = f"Last 30 days · as of {a.까지}"
+    # 화면에 '마지막 갱신' 으로 적는다. 날짜만으로는 오늘 치가 언제 들어왔는지 모른다.
+    old["갱신"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="minutes")
     old["전체"], old["라이브"], old["제품"] = 전체, 라이브, 제품
 
     with open(TOP_JSON, "w", encoding="utf-8") as f:

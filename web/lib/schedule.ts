@@ -13,8 +13,10 @@ export type Slot = {
   확인필요?: boolean;
 };
 
-type File = { 기준: string; 일정: Slot[] };
+type File = { 기준: string; 갱신?: string; 일정: Slot[] };
 const file = sched as File;
 
 export const 일정: Slot[] = file.일정;
 export const 일정기준: string = file.기준;
+/** 일정을 마지막으로 구운 때. UTC ISO. */
+export const 일정갱신: string = file.갱신 ?? "";
