@@ -144,7 +144,8 @@ export default function LiveSchedule({
   }, [slots, 날짜키]);
 
   const 오늘키 = now === null ? null : 날짜키.format(new Date(now));
-  const 글로벌수 = slots.filter((s) => s.계정en === "Global").length;
+  // 글로벌 라이브는 계정이 Global · Global NY · Global LA 로 나뉜다. US 만 따로 센다.
+  const 글로벌수 = slots.filter((s) => s.계정en !== "US").length;
 
   return (
     <section className="pw-sched">

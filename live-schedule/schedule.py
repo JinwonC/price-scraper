@@ -44,6 +44,9 @@ ET = ZoneInfo("America/New_York")
 # 계정 칸 표기가 들쑥날쑥하다('latam', 'LATAM', 'Global'). 화면에 쓸 이름으로 맞춘다.
 계정이름 = {
     "global": ("글로벌", "Global"),
+    # 11월 중순부터 글로벌 라이브를 뉴욕·LA 두 스튜디오로 나눠 잡는다.
+    "global-ny": ("글로벌 NY", "Global NY"),
+    "global-la": ("글로벌 LA", "Global LA"),
     "latam": ("라탐", "LATAM"),
     "us": ("US", "US"),
 }
