@@ -170,6 +170,11 @@
   .sub-row input[type=checkbox]{width:17px;height:17px;border-radius:4px;}
   .sub-row input[type=checkbox]:checked::after{width:4px;height:8px;border-width:0 2px 2px 0;}
   .sub-row .st-title{font-size:13.5px;}
+  .t-title,.st-title{cursor:text;border-radius:5px;padding:0 3px;margin:0 -3px;}
+  .t-title:hover,.st-title:hover{background:var(--yellow-soft);}
+  .title-edit{font:inherit;font-size:15px;font-weight:600;width:100%;min-width:0;padding:3px 8px;border:1.5px solid var(--ink);border-radius:8px;background:#fff;}
+  .sub-row .title-edit{font-size:13.5px;font-weight:400;padding:2px 7px;}
+  .title-edit:focus-visible{outline:3px solid var(--yellow-soft);}
   .sub-row.done .st-title{text-decoration:line-through;color:var(--ink-faint);}
   .sub-row .sub-x{margin-left:auto;background:none;border:none;color:var(--ink-faint);font-size:12px;cursor:pointer;}
   .sub-add{display:flex;gap:6px;margin-top:6px;}
@@ -874,7 +879,7 @@ function renderTasks(){
         <input type="checkbox" ${checked?'checked':''} onchange="toggleTask(${t.id})" aria-label="완료">
         <div class="t-body">
           <div class="t-title-row">
-            <span class="t-title">${esc(t.title)}</span>
+            <span class="t-title" tabindex="0" title="눌러서 수정" onclick="editTitle(this,${t.id})" onkeydown="if(event.key==='Enter')editTitle(this,${t.id})">${esc(t.title)}</span>
             <button class="t-expand" onclick="toggleSub(${t.id})">${subs.length? `${subDone}/${subs.length} ▸` : '+ 세부 ▸'}</button>
           </div>
           <div class="t-meta">
@@ -888,7 +893,7 @@ function renderTasks(){
             ${subs.map((s,i)=>`
               <div class="sub-row ${s.done?'done':''}">
                 <input type="checkbox" ${s.done?'checked':''} onchange="toggleSubtask(${t.id},${i})">
-                <span class="st-title">${esc(s.title)}</span>
+                <span class="st-title" tabindex="0" title="눌러서 수정" onclick="editTitle(this,${t.id},${i})" onkeydown="if(event.key==='Enter')editTitle(this,${t.id},${i})">${esc(s.title)}</span>
                 <button class="sub-x" onclick="deleteSubtask(${t.id},${i})">✕</button>
               </div>`).join('')}
             <div class="sub-add">
@@ -910,6 +915,32 @@ function renderTasks(){
   const rest = list.filter(x=>!(x.st==='carried'||x.st==='open'));
   el.innerHTML = (active.length ? `<div class="group-label">할 일 <em>${active.length}</em></div>` : '') + active.map(row).join('')
     + (rest.length ? `<div class="group-label">${D<T?'완료 · 이월':'완료'} <em>${rest.length}</em></div>` + rest.map(row).join('') : '');
+}
+/* 할 일·세부 할 일 제목을 눌러서 바로 고친다. Enter·바깥 클릭 = 저장, Esc = 취소 */
+function editTitle(span, taskId, subIdx){
+  const t = DATA.tasks.find(t=>t.id===taskId); if(!t) return;
+  const isSub = subIdx !== undefined;
+  const cur = isSub ? t.subtasks[subIdx].title : t.title;
+  const subOpen = document.getElementById('sub-'+taskId)?.classList.contains('open');
+  const inp = document.createElement('input');
+  inp.className = 'title-edit'; inp.value = cur; inp.maxLength = 200;
+  span.replaceWith(inp); inp.focus(); inp.select();
+  let done = false;
+  const finish = (save)=>{
+    if(done) return; done = true;
+    const v = inp.value.trim();
+    if(save && v && v !== cur){
+      if(isSub) t.subtasks[subIdx].title = v; else t.title = v;
+      persist();
+    }
+    renderTasks();
+    if(subOpen || isSub) document.getElementById('sub-'+taskId)?.classList.add('open');
+  };
+  inp.addEventListener('keydown', e=>{
+    if(e.key==='Enter'){ e.preventDefault(); finish(true); }
+    else if(e.key==='Escape'){ finish(false); }
+  });
+  inp.addEventListener('blur', ()=>finish(true));
 }
 function toggleSub(id){ document.getElementById('sub-'+id).classList.toggle('open'); }
 function addSubtask(taskId){
