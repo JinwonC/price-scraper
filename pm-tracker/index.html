@@ -320,44 +320,28 @@
 
 <script>
 /* ============= 기본값 — 저장된 데이터가 없을 때만 사용 ============= */
+// 새 계정이 처음 보는 빈 템플릿 (특정 사람의 업무 내용이 들어가지 않게 비워 둔다)
 const DEFAULT_DATA = {
-  focus: [
-    { title:"그라인딩 크림 히어로화 + TAP 에이전시 세팅", target:"$40K+$40K" },
-    { title:"영국 출장 준비 완료 (9/10–9/15)", target:"D-DAY" }
-  ],
+  focus: [],
   categories: ["캐스팅","계약","리포트","광고운영","VN팀","콤퍼트","출장","가설전략","기타"],
-  tasks: [
-    {id:1, title:"TAP 에이전시 오픈 세팅 (재고/커미션 확인)", cat:"광고운영", owner:"me", due:daysFromNow(1), postpone:0, done:false,
-      subtasks:[{title:"재고 500개 이상 확보 확인", done:true},{title:"오픈 커미션 대비 +5%p 세팅 (25%)", done:false},{title:"조건 없이 오픈", done:false}]},
-    {id:2, title:"VN 인원 1 — 마이시스터즈스킨 가이드 복제 배정", cat:"VN팀", owner:"vn", due:daysFromNow(2), postpone:0, done:false, subtasks:[]},
-    {id:3, title:"VN 인원 2 — 수빈매니저 가이드 복제 배정", cat:"VN팀", owner:"vn", due:daysFromNow(2), postpone:0, done:false, subtasks:[]},
-    {id:4, title:"영국 출장 펜딩 업무 리스트업 → 리더님 공유", cat:"출장", owner:"me", due:daysFromNow(1), postpone:0, done:false, subtasks:[]},
-    {id:5, title:"화요일 그라인딩 방향성 미팅 자료 준비", cat:"리포트", owner:"me", due:nextTuesday(), postpone:0, done:false, subtasks:[]},
-    {id:6, title:"보르피린 가격 소구 테스트안 — 영업매니저 협의", cat:"가설전략", owner:"me", due:daysFromNow(5), postpone:1, done:false, subtasks:[]},
-    {id:7, title:"진영 매니저 가격 컨펌 라인 정리·이관", cat:"기타", owner:"me", due:daysFromNow(3), postpone:0, done:false, subtasks:[]},
-  ],
-  routine: [ "아침 VN팀 리뷰 (1h)", "퇴근 전 30분 점검" ],
+  tasks: [],
+  routine: [],
   weeks: [
     {label:"1주", published:"", sold:""},{label:"2주", published:"", sold:""},
     {label:"3주", published:"", sold:""},{label:"4주", published:"", sold:""},
   ],
-  allocations: [
-    {name:"TAP 에이전시 샘플비", amount:4000},{name:"단품 히어로 소재", amount:9000},{name:"3종 번들 시딩", amount:6000},
-  ],
-  budgetPlan: { total: 30000 },
-  growth: { lastMonth: 82000, thisMonth: 0 },
+  allocations: [],
+  budgetPlan: { total: 0 },
+  growth: { lastMonth: 0, thisMonth: 0 },
   daily: {
-    booking:{ current:18, target:25, synced:false },
-    budget:{ used:12500, total:30000, synced:false },
-    videos:{ today:6, cumulative:142, synced:false },
-    revenue:{ today:2100, cumulative:41500, synced:false },
-    inventory:[ {name:"그라인딩 크림", qty:480}, {name:"보르피린 앰플", qty:220}, {name:"스프레이 앰플", qty:150} ],
+    booking:{ current:0, target:0, synced:false },
+    budget:{ used:0, total:0, synced:false },
+    videos:{ today:0, cumulative:0, synced:false },
+    revenue:{ today:0, cumulative:0, synced:false },
+    inventory:[],
     inventorySynced:false
   },
-  creators: [
-    {name:"clarahyee", videosToday:1, videosCumulative:14, revenueToday:180, revenueCumulative:3200},
-    {name:"iamsk8bordb", videosToday:0, videosCumulative:9, revenueToday:0, revenueCumulative:1850},
-  ],
+  creators: [],
 };
 function daysFromNow(n){ const d=new Date(); d.setDate(d.getDate()+n); return d.toISOString().slice(0,10); }
 function nextTuesday(){ const d=new Date(); const diff=(9-d.getDay())%7 || 7; d.setDate(d.getDate()+diff); return d.toISOString().slice(0,10); }
@@ -396,7 +380,7 @@ async function loadData(){
     if(cached){ const p = JSON.parse(cached); if(p && Array.isArray(p.tasks)) return { data:p, source:'cache' }; }
   }catch(e){}
   // 3) 기본값
-  return { data: DEFAULT_DATA, source:'default' };
+  return { data: structuredClone(DEFAULT_DATA), source:'default' };
 }
 
 function persist(){
@@ -812,7 +796,7 @@ async function boot(){
 
 async function startApp(user){
   STORAGE_KEY = 'pmTrackerData:' + user.id;
-  DATA = DEFAULT_DATA;
+  DATA = structuredClone(DEFAULT_DATA);
   document.getElementById('whoName').textContent = user.name + ' 님';
   document.title = '오늘 — ' + user.name;
   document.getElementById('authScreen').style.display = 'none';
@@ -841,7 +825,7 @@ async function startApp(user){
     return;
   }
 
-  DATA = data || DEFAULT_DATA;
+  DATA = data || structuredClone(DEFAULT_DATA);
   renderAll();               // renderGrowth/renderBudget 가 persist() 를 부르지만 booting 중이라 서버로 안 올라감
   booting = false;
   try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(DATA)); }catch(e){}
