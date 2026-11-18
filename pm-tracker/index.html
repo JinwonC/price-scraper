@@ -188,82 +188,6 @@
   .routine-chip.checked{opacity:.5;}
   .routine-chip.checked span{text-decoration:line-through;}
 
-  /* ---------- 현황판 ---------- */
-  .stat-head,.af-head{display:flex;align-items:baseline;gap:8px;margin:4px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--border);}
-  .stat-head h2,.af-head h2{font-size:17px;font-weight:700;margin:0;letter-spacing:-.02em;}
-  .af-head{margin-top:28px;}
-  .stat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:8px;}
-  .stat-tile{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;cursor:pointer;position:relative;}
-  .stat-tile:hover,.stat-tile.editing{border-color:var(--ink);}
-  .stat-tile .sync-dot{position:absolute;top:9px;right:9px;width:6px;height:6px;border-radius:50%;background:var(--green);display:none;}
-  .stat-tile.synced .sync-dot{display:block;}
-  .stat-tile .sl{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--ink-faint);}
-  .stat-tile .sv{font-size:22px;font-weight:800;letter-spacing:-.03em;margin-top:4px;font-variant-numeric:tabular-nums;}
-  .stat-tile .sv small{font-size:11.5px;color:var(--ink-faint);font-weight:500;letter-spacing:0;}
-  .stat-bar{height:5px;border-radius:999px;background:var(--paper-deep);margin-top:8px;overflow:hidden;}
-  .stat-bar-fill{height:100%;background:var(--ink);border-radius:999px;}
-  .stat-edit{display:none;margin-top:8px;gap:4px;flex-direction:column;}
-  .stat-tile.editing .stat-edit{display:flex;}
-  .stat-tile.editing .sv{display:none;}
-  .stat-edit input{width:100%;font-size:13px;padding:6px 8px;border:1px solid var(--border);border-radius:8px;}
-  .stat-edit-row{display:flex;gap:4px;}
-  .inv-list{display:none;margin-top:8px;border-top:1px solid var(--line);padding-top:8px;}
-  .stat-tile.editing .inv-list{display:flex;flex-direction:column;gap:4px;}
-  .inv-row{display:flex;gap:4px;align-items:center;}
-  .inv-row input[type=text]{flex:1;min-width:0;font-size:12px;padding:4px 6px;border:1px solid var(--border);border-radius:6px;}
-  .inv-row input[type=number]{width:60px;font-size:12px;padding:4px 6px;border:1px solid var(--border);border-radius:6px;}
-  .stat-note{font-size:12.5px;color:var(--ink-faint);margin:0 0 8px;}
-
-  .af-table-wrap{background:var(--card);border:1px solid var(--ink);border-radius:12px;overflow:hidden;margin-bottom:20px;overflow-x:auto;}
-  .af-table{width:100%;border-collapse:collapse;font-size:13.5px;}
-  .af-table th{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--ink-faint);text-align:left;padding:10px;white-space:nowrap;border-bottom:1px solid var(--ink);}
-  .af-table td{padding:8px 10px;border-top:1px solid var(--line);}
-  .af-table td.num{text-align:right;}
-  .af-table tr:hover td{background:var(--hover);}
-  .af-empty{padding:18px;text-align:center;font-size:13px;color:var(--ink-faint);}
-  .af-name{font-weight:600;}
-  .af-rev input{font-weight:800 !important;}
-  .af-table input[type=number]{width:70px;border:none;background:none;font-size:13.5px;text-align:right;font-variant-numeric:tabular-nums;}
-  .af-table input:focus{outline:1px solid var(--ink);border-radius:4px;}
-  .af-add-row{display:flex;gap:6px;padding:10px;border-top:1px solid var(--line);}
-  .af-add-row input{flex:1;min-width:0;font-size:13px;padding:7px 11px;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);}
-  .af-add-row button{font-size:12.5px;font-weight:700;border:1px solid var(--ink);background:var(--yellow-soft);border-radius:999px;padding:6px 14px;cursor:pointer;}
-
-  .acc{margin-top:6px;border-top:1px solid var(--border);}
-  .acc-item{border-bottom:1px solid var(--border);}
-  .acc-btn{width:100%;background:none;border:none;text-align:left;padding:15px 2px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:16px;font-weight:700;letter-spacing:-.01em;}
-  .acc-btn .arrow{font-size:12px;color:var(--ink-faint);transition:transform .15s;}
-  .acc-item.open .arrow{transform:rotate(90deg);}
-  .acc-body{display:none;padding:0 2px 18px;}
-  .acc-item.open .acc-body{display:block;}
-
-  .tile-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;}
-  .tile{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;}
-  .tile .tn{font-size:12.5px;font-weight:600;color:var(--ink-soft);}
-  .tile .tc{font-size:22px;font-weight:800;margin-top:2px;letter-spacing:-.03em;}
-  .deleg-bar{height:4px;border-radius:999px;background:var(--paper-deep);overflow:hidden;margin-top:6px;display:flex;}
-  .deleg-bar .me{background:var(--ink);}
-  .deleg-bar .other{background:var(--yellow);}
-
-  .week-table{width:100%;border-collapse:collapse;font-size:13.5px;}
-  .week-table th{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--ink-faint);text-align:left;padding:6px 4px;border-bottom:1px solid var(--ink);}
-  .week-table td{padding:6px 4px;border-bottom:1px solid var(--line);}
-  .week-table input{width:70px;padding:5px 8px;font-size:13px;border:1px solid var(--border);border-radius:8px;}
-  .ratio-cell{font-weight:800;}
-  .growth-line{display:flex;align-items:center;gap:8px;margin-top:14px;font-size:13px;color:var(--ink-soft);flex-wrap:wrap;}
-  .growth-line input{width:96px;border:1px solid var(--border);padding:5px 8px;border-radius:8px;font-size:13px;}
-  .growth-line .gnum{font-size:22px;font-weight:800;}
-
-  .budget-total{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--ink-soft);margin-bottom:8px;}
-  .budget-total input{font-size:20px;font-weight:800;border:none;border-bottom:2px solid var(--ink);background:transparent;width:130px;text-align:right;}
-  .budget-bar{height:8px;background:var(--paper-deep);border-radius:999px;overflow:hidden;margin-bottom:6px;}
-  .budget-bar-fill{height:100%;background:var(--ink);border-radius:999px;}
-  .budget-remain{font-size:12.5px;color:var(--ink-soft);margin-bottom:10px;font-variant-numeric:tabular-nums;}
-  .alloc-row{display:flex;gap:6px;align-items:center;padding:4px 0;}
-  .alloc-row input[type=text]{flex:1;min-width:0;border:1px solid var(--border);padding:7px 9px;border-radius:8px;font-size:13px;}
-  .alloc-row input[type=number]{width:96px;border:1px solid var(--border);padding:7px 9px;border-radius:8px;font-size:13px;}
-  .alloc-add{margin-top:6px;background:none;border:1px dashed var(--ink-faint);width:100%;padding:8px;border-radius:999px;color:var(--ink-soft);cursor:pointer;font-size:12.5px;}
-
   footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--border);font-size:12px;color:var(--ink-faint);line-height:1.6;}
 
   @media (max-width:640px){
@@ -311,10 +235,6 @@
   <nav class="topnav">
     <div class="brand-home">d'Alba PM Tracker</div>
     <div class="nav-right">
-      <div class="seg">
-        <button class="active" id="tabBtnToday" onclick="switchTab('today')">할 일</button>
-        <button id="tabBtnOverview" onclick="switchTab('overview')">현황판</button>
-      </div>
       <button class="icon-btn" onclick="reloadFromServer()" title="다른 기기에서 고친 내용 불러오기">↻</button>
       <button class="text-btn" onclick="logout()">로그아웃</button>
     </div>
@@ -375,57 +295,6 @@
     <div class="routine-mini" id="routineMini"></div>
 
     <div id="taskList"></div>
-
-  </div>
-
-  <!-- ============ TAB: 현황판 ============ -->
-  <div id="tabOverview" class="tab-panel" style="display:none;">
-
-    <!-- DAILY STATS -->
-    <div class="stat-head">
-      <h2>오늘의 지표</h2>
-    </div>
-    <div class="stat-grid" id="statGrid"></div>
-    <div class="stat-note">탭해서 숫자 직접 수정 — 매일 아침 30초 정도면 채울 수 있어요.</div>
-
-    <!-- AF TABLE -->
-    <div class="af-head">
-      <h2>담당 AF 현황</h2>
-    </div>
-    <div class="af-table-wrap">
-      <table class="af-table">
-        <thead><tr><th>크리에이터</th><th style="text-align:right;">오늘 발행</th><th style="text-align:right;">누적 발행</th><th style="text-align:right;">오늘 매출</th><th style="text-align:right;">누적 매출</th><th></th></tr></thead>
-        <tbody id="afBody"></tbody>
-      </table>
-      <div class="af-add-row">
-        <input type="text" id="newAfName" placeholder="크리에이터 이름">
-        <button onclick="addCreator()">+ AF 추가</button>
-      </div>
-    </div>
-
-    <div class="acc" style="margin-top:6px;">
-      <div class="acc-item" id="accTiles">
-        <button class="acc-btn" onclick="toggleAcc('accTiles')">큰 그림 (카테고리별 현황) <span class="arrow">▸</span></button>
-        <div class="acc-body"><div class="tile-grid" id="tileGrid"></div></div>
-      </div>
-      <div class="acc-item" id="accWeek">
-        <button class="acc-btn" onclick="toggleAcc('accWeek')">주간 지표 <span class="arrow">▸</span></button>
-        <div class="acc-body">
-          <table class="week-table"><thead><tr><th>주차</th><th>발행</th><th>매출영상</th><th>비율</th></tr></thead><tbody id="weekBody"></tbody></table>
-          <div class="growth-line">전월 <input type="number" id="lastMonthRev" value="82000"> → 이번달 <input type="number" id="thisMonthRev" value="0"> <span class="gnum" id="growthNum">—</span></div>
-        </div>
-      </div>
-      <div class="acc-item" id="accBudget">
-        <button class="acc-btn" onclick="toggleAcc('accBudget')">9월 예산 세부 배분 <span class="arrow">▸</span></button>
-        <div class="acc-body">
-          <div class="budget-total">총 예산 ($)<input type="number" id="budgetTotal" value="30000"></div>
-          <div class="budget-bar"><div class="budget-bar-fill" id="budgetFill"></div></div>
-          <div class="budget-remain" id="budgetRemain"></div>
-          <div id="allocList"></div>
-          <button class="alloc-add" onclick="addAlloc()">+ 배분 항목 추가</button>
-        </div>
-      </div>
-    </div>
 
   </div>
 
@@ -651,7 +520,6 @@ function selectDate(D){
   weekAnchor = D;
   const d = parseYmd(D);
   calMonth = new Date(d.getFullYear(), d.getMonth(), 1);
-  switchTab('today');
   renderCalendar(); renderTasks(); renderRoutine();
 }
 function goToday(){ selectDate(todayStr()); }
@@ -688,113 +556,6 @@ function renderFocus(){
 }
 function updateFocus(i, key, val){ DATA.focus[i][key] = val; persist(); }
 
-/* ---------- 담당 AF 현황 (수동 입력) ---------- */
-function num(v){ const n = Number(String(v).replace(/[^0-9.\-]/g,'')); return isNaN(n)?0:n; }
-
-function renderAF(){
-  const tbody = document.getElementById('afBody');
-  if(!DATA.creators.length){ tbody.innerHTML = `<tr><td colspan="5" class="af-empty">아직 등록된 AF가 없어요. 아래에서 추가해보세요.</td></tr>`; return; }
-  const sorted = [...DATA.creators].sort((a,b)=>b.revenueCumulative-a.revenueCumulative);
-  tbody.innerHTML = sorted.map((c,i)=>`
-    <tr>
-      <td class="af-name"><input type="text" value="${c.name}" onchange="updateCreator('${c.name}','name',this.value)" style="border:none;background:none;font-weight:600;width:100%;font-family:inherit;font-size:inherit;"></td>
-      <td class="num"><input type="number" value="${c.videosToday}" onchange="updateCreator('${c.name}','videosToday',this.value)"></td>
-      <td class="num"><input type="number" value="${c.videosCumulative}" onchange="updateCreator('${c.name}','videosCumulative',this.value)"></td>
-      <td class="num"><input type="number" value="${c.revenueToday}" onchange="updateCreator('${c.name}','revenueToday',this.value)"></td>
-      <td class="num af-rev"><input type="number" value="${c.revenueCumulative}" onchange="updateCreator('${c.name}','revenueCumulative',this.value)"></td>
-      <td><button onclick="removeCreator('${c.name}')" style="border:none;background:none;color:var(--ink-soft);cursor:pointer;">✕</button></td>
-    </tr>`).join('');
-}
-function updateCreator(name, key, val){
-  const c = DATA.creators.find(c=>c.name===name);
-  if(!c) return;
-  c[key] = (key==='name') ? val : num(val);
-  persist();
-  renderAF();
-}
-function addCreator(){
-  const input = document.getElementById('newAfName');
-  const name = input.value.trim();
-  if(!name) return;
-  DATA.creators.push({name, videosToday:0, videosCumulative:0, revenueToday:0, revenueCumulative:0});
-  input.value='';
-  persist();
-  renderAF();
-}
-function removeCreator(name){
-  DATA.creators = DATA.creators.filter(c=>c.name!==name);
-  persist();
-  renderAF();
-}
-
-/* ---------- DAILY STATS ---------- */
-function renderStats(){
-  const d = DATA.daily;
-  const bookPct = Math.round((d.booking.current/d.booking.target)*100);
-  const budgetPct = Math.round((d.budget.used/d.budget.total)*100);
-  document.getElementById('statGrid').innerHTML = `
-    <div class="stat-tile ${d.booking.synced?'synced':''}" id="stat-booking" onclick="toggleStatEdit('stat-booking',event)">
-      <div class="sync-dot"></div><div class="sl">부킹 현황</div>
-      <div class="sv">${d.booking.current}<small> / ${d.booking.target}</small></div>
-      <div class="stat-bar"><div class="stat-bar-fill" style="width:${Math.min(100,bookPct)}%"></div></div>
-      <div class="stat-edit" onclick="event.stopPropagation()">
-        <div class="stat-edit-row"><input type="number" value="${d.booking.current}" onchange="updateStat('booking','current',this.value)" placeholder="현재"></div>
-        <div class="stat-edit-row"><input type="number" value="${d.booking.target}" onchange="updateStat('booking','target',this.value)" placeholder="목표"></div>
-      </div>
-    </div>
-    <div class="stat-tile ${d.budget.synced?'synced':''}" id="stat-budget" onclick="toggleStatEdit('stat-budget',event)">
-      <div class="sync-dot"></div><div class="sl">예산 소진</div>
-      <div class="sv">$${(d.budget.used/1000).toFixed(1)}k<small> / $${(d.budget.total/1000).toFixed(0)}k</small></div>
-      <div class="stat-bar"><div class="stat-bar-fill" style="width:${Math.min(100,budgetPct)}%"></div></div>
-      <div class="stat-edit" onclick="event.stopPropagation()">
-        <div class="stat-edit-row"><input type="number" value="${d.budget.used}" onchange="updateStat('budget','used',this.value)" placeholder="사용액"></div>
-        <div class="stat-edit-row"><input type="number" value="${d.budget.total}" onchange="updateStat('budget','total',this.value)" placeholder="총예산"></div>
-      </div>
-    </div>
-    <div class="stat-tile ${d.videos.synced?'synced':''}" id="stat-videos" onclick="toggleStatEdit('stat-videos',event)">
-      <div class="sync-dot"></div><div class="sl">영상 발행량</div>
-      <div class="sv">${d.videos.today}<small> 오늘 · 누적 ${d.videos.cumulative}</small></div>
-      <div class="stat-edit" onclick="event.stopPropagation()">
-        <div class="stat-edit-row"><input type="number" value="${d.videos.today}" onchange="updateStat('videos','today',this.value)" placeholder="오늘"></div>
-        <div class="stat-edit-row"><input type="number" value="${d.videos.cumulative}" onchange="updateStat('videos','cumulative',this.value)" placeholder="누적"></div>
-      </div>
-    </div>
-    <div class="stat-tile ${d.revenue.synced?'synced':''}" id="stat-revenue" onclick="toggleStatEdit('stat-revenue',event)">
-      <div class="sync-dot"></div><div class="sl">매출</div>
-      <div class="sv">$${d.revenue.today.toLocaleString()}<small> 오늘 · 누적 $${(d.revenue.cumulative/1000).toFixed(1)}k</small></div>
-      <div class="stat-edit" onclick="event.stopPropagation()">
-        <div class="stat-edit-row"><input type="number" value="${d.revenue.today}" onchange="updateStat('revenue','today',this.value)" placeholder="오늘"></div>
-        <div class="stat-edit-row"><input type="number" value="${d.revenue.cumulative}" onchange="updateStat('revenue','cumulative',this.value)" placeholder="누적"></div>
-      </div>
-    </div>
-    <div class="stat-tile ${d.inventorySynced?'synced':''}" id="stat-inventory" onclick="toggleStatEdit('stat-inventory',event)">
-      <div class="sync-dot"></div><div class="sl">재고 수량</div>
-      <div class="sv">${d.inventory.length}<small> SKU</small></div>
-      <div class="inv-list" onclick="event.stopPropagation()">
-        ${d.inventory.map((it,i)=>`
-          <div class="inv-row">
-            <input type="text" value="${it.name}" onchange="updateInv(${i},'name',this.value)">
-            <input type="number" value="${it.qty}" onchange="updateInv(${i},'qty',this.value)">
-            <button onclick="removeInv(${i})" style="border:none;background:none;color:var(--ink-soft);cursor:pointer;">✕</button>
-          </div>`).join('')}
-        <button class="alloc-add" style="margin-top:2px;" onclick="addInv(event)">+ SKU 추가</button>
-      </div>
-    </div>
-  `;
-}
-function toggleStatEdit(id,e){
-  document.querySelectorAll('.stat-tile').forEach(t=>{ if(t.id!==id) t.classList.remove('editing'); });
-  document.getElementById(id).classList.toggle('editing');
-}
-function updateStat(group,key,val){ DATA.daily[group][key]= key==='synced'?val:Number(val); DATA.daily[group].synced=false; persist(); renderStats(); reopenEditing(group); }
-function updateInv(i,key,val){ DATA.daily.inventory[i][key]= key==='qty'?Number(val):val; DATA.daily.inventorySynced=false; persist(); renderStats(); reopenEditing('inventory'); }
-function addInv(e){ e.stopPropagation(); DATA.daily.inventory.push({name:"새 SKU",qty:0}); DATA.daily.inventorySynced=false; persist(); renderStats(); reopenEditing('inventory'); }
-function removeInv(i){ DATA.daily.inventory.splice(i,1); persist(); renderStats(); reopenEditing('inventory'); }
-function reopenEditing(group){
-  const map={booking:'stat-booking',budget:'stat-budget',videos:'stat-videos',revenue:'stat-revenue',inventory:'stat-inventory'};
-  const id = map[group]; if(id) document.getElementById(id).classList.add('editing');
-}
-
 /* ---------- TASKS ---------- */
 /* ---------- 카테고리: 칩으로 고르고, 직접 추가·삭제 ---------- */
 let selectedCat = null, selectedOwner = 'me', catEditing = false, catAdding = false;
@@ -819,7 +580,7 @@ function addCategory(fromBlur){
   if(!inp || !catAdding) return;
   const name = inp.value.trim().slice(0,20);
   catAdding = false;
-  if(name && !DATA.categories.includes(name)){ DATA.categories.push(name); persist(); renderTiles(); }
+  if(name && !DATA.categories.includes(name)){ DATA.categories.push(name); persist(); }
   if(name) selectedCat = name;
   renderCatOptions();
 }
@@ -829,7 +590,7 @@ function removeCategory(i){
   const used = DATA.tasks.filter(t=>t.cat===name).length;
   if(!confirm(`'${name}' 카테고리를 목록에서 뺄까요?` + (used?`\n(이 카테고리로 만든 할 일 ${used}건은 그대로 남아요)`:''))) return;
   DATA.categories.splice(i,1);
-  persist(); renderCatOptions(); renderTiles();
+  persist(); renderCatOptions();
 }
 function setOwner(o){
   selectedOwner = o;
@@ -979,61 +740,6 @@ function toggleRoutine(i){
   persist(); renderRoutine();
 }
 
-function renderTiles(){
-  document.getElementById('tileGrid').innerHTML = DATA.categories.map(cat=>{
-    const items = DATA.tasks.filter(t=>t.cat===cat && !t.done);
-    const meCount = items.filter(t=>t.owner==='me').length;
-    const total = items.length || 1;
-    const mePct = Math.round((meCount/total)*100);
-    return `<div class="tile"><div class="tn">${cat}</div><div class="tc">${items.length}</div>
-      <div class="deleg-bar"><div class="me" style="width:${mePct}%"></div><div class="other" style="width:${100-mePct}%"></div></div></div>`;
-  }).join('');
-}
-
-function renderWeeks(){
-  document.getElementById('weekBody').innerHTML = DATA.weeks.map((w,i)=>`
-    <tr><td>${w.label}</td>
-      <td><input type="number" value="${w.published}" onchange="updateWeek(${i},'published',this.value)"></td>
-      <td><input type="number" value="${w.sold}" onchange="updateWeek(${i},'sold',this.value)"></td>
-      <td class="ratio-cell">${ratio(w)}</td></tr>`).join('');
-}
-function ratio(w){ if(!w.published) return '—'; return Math.round((Number(w.sold)/Number(w.published))*100)+'%'; }
-function updateWeek(i,key,val){ DATA.weeks[i][key]=val; persist(); renderWeeks(); }
-
-function renderGrowth(){
-  DATA.growth.lastMonth = Number(document.getElementById('lastMonthRev').value)||0;
-  DATA.growth.thisMonth = Number(document.getElementById('thisMonthRev').value)||0;
-  persist();
-  const last = DATA.growth.lastMonth;
-  const cur = DATA.growth.thisMonth;
-  const el = document.getElementById('growthNum');
-  if(!last){ el.textContent='—'; return; }
-  const pct = Math.round(((cur-last)/last)*100);
-  el.textContent = (pct>=0?'+':'')+pct+'%'; el.style.color = pct>=0 ? 'var(--sage)' : 'var(--berry)';
-}
-document.getElementById('lastMonthRev').addEventListener('input', renderGrowth);
-document.getElementById('thisMonthRev').addEventListener('input', renderGrowth);
-
-function renderBudget(){
-  DATA.budgetPlan.total = Number(document.getElementById('budgetTotal').value)||0;
-  persist();
-  const total = DATA.budgetPlan.total;
-  const used = DATA.allocations.reduce((s,a)=>s+Number(a.amount||0),0);
-  const pct = total? Math.min(100, Math.round((used/total)*100)) : 0;
-  document.getElementById('budgetFill').style.width = pct+'%';
-  document.getElementById('budgetRemain').textContent = `배정 $${used.toLocaleString()} / 총 $${total.toLocaleString()} · 잔여 $${(total-used).toLocaleString()}`;
-  document.getElementById('allocList').innerHTML = DATA.allocations.map((a,i)=>`
-    <div class="alloc-row">
-      <input type="text" value="${a.name}" onchange="updateAlloc(${i},'name',this.value)">
-      <input type="number" value="${a.amount}" onchange="updateAlloc(${i},'amount',this.value)">
-      <button onclick="removeAlloc(${i})" style="border:none;background:none;color:var(--ink-soft);cursor:pointer;">✕</button>
-    </div>`).join('');
-}
-function updateAlloc(i,key,val){ DATA.allocations[i][key]=val; persist(); renderBudget(); }
-function addAlloc(){ DATA.allocations.push({name:"새 항목", amount:0}); persist(); renderBudget(); }
-function removeAlloc(i){ DATA.allocations.splice(i,1); persist(); renderBudget(); }
-document.getElementById('budgetTotal').addEventListener('input', renderBudget);
-
 function toggleTask(id){
   const t = DATA.tasks.find(t=>t.id===id);
   const T = todayStr();
@@ -1041,12 +747,12 @@ function toggleTask(id){
   // 체크한 날 = 보고 있는 날(미래 날짜에서 미리 끝낸 경우는 오늘)
   if(t.done) t.doneAt = selectedDate > T ? T : selectedDate;
   else delete t.doneAt;
-  persist(); renderTasks(); renderTiles(); renderCalendar();
+  persist(); renderTasks(); renderCalendar();
 }
 function deleteTask(id){
   const t = DATA.tasks.find(t=>t.id===id);
   if(t && !confirm(`'${t.title}' 을(를) 삭제할까요?`)) return;
-  DATA.tasks = DATA.tasks.filter(t=>t.id!==id); persist(); renderTasks(); renderTiles(); renderCalendar();
+  DATA.tasks = DATA.tasks.filter(t=>t.id!==id); persist(); renderTasks(); renderCalendar();
 }
 function addTask(){
   const title = document.getElementById('newTaskTitle').value.trim(); if(!title) return;
@@ -1056,29 +762,16 @@ function addTask(){
   DATA.tasks.push({id: nextId++, title, cat, owner, date: selectedDate, due, postpone:0, done:false, subtasks:[]});
   document.getElementById('newTaskTitle').value=''; document.getElementById('newTaskDue').value='';
   persist();
-  renderTasks(); renderTiles(); renderCalendar();
+  renderTasks(); renderCalendar();
 }
 document.getElementById('newTaskTitle').addEventListener('keydown', e=>{ if(e.key==='Enter') addTask(); });
-
-function toggleAcc(id){ document.getElementById(id).classList.toggle('open'); }
-
-function switchTab(name){
-  const isToday = name==='today';
-  document.getElementById('tabToday').style.display = isToday ? '' : 'none';
-  document.getElementById('tabOverview').style.display = isToday ? 'none' : '';
-  document.getElementById('tabBtnToday').classList.toggle('active', isToday);
-  document.getElementById('tabBtnOverview').classList.toggle('active', !isToday);
-}
 
 /* ---------- 전체 렌더 + 초기 부팅 ---------- */
 function renderAll(){
   normalizeTasks();
   nextId = Math.max(...DATA.tasks.map(t=>t.id), 0) + 1;
-  document.getElementById('lastMonthRev').value = DATA.growth.lastMonth;
-  document.getElementById('thisMonthRev').value = DATA.growth.thisMonth;
-  document.getElementById('budgetTotal').value = DATA.budgetPlan.total;
-  renderHeader(); updateClockout(); renderFocus(); renderStats(); renderAF(); renderCatOptions();
-  renderCalendar(); renderTasks(); renderRoutine(); renderTiles(); renderWeeks(); renderGrowth(); renderBudget();
+  renderHeader(); updateClockout(); renderFocus(); renderCatOptions();
+  renderCalendar(); renderTasks(); renderRoutine();
 }
 
 /* ---------- 로그인 / 가입 ---------- */
@@ -1174,7 +867,7 @@ async function startApp(user){
   }
 
   DATA = data || structuredClone(DEFAULT_DATA);
-  renderAll();               // renderGrowth/renderBudget 가 persist() 를 부르지만 booting 중이라 서버로 안 올라감
+  renderAll();
   booting = false;
   try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(DATA)); }catch(e){}
 
