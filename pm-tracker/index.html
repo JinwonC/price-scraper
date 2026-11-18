@@ -415,12 +415,14 @@ async function saveToServer(){
       headers:{ 'Content-Type':'application/json' },
       body: JSON.stringify(DATA)
     });
-    if(res.status===401){ showAuth(); return; }
+    if(res.status===401){ showAuth(); return false; }
     if(!res.ok) throw new Error('HTTP '+res.status);
     setSaveStatus('저장됨 · 클라우드', 'var(--sage)');
+    return true;
   }catch(e){
     console.warn('클라우드 저장 실패', e);
     setSaveStatus('오프라인 — 이 기기에만 저장됨', 'var(--gold)');
+    return false;
   }
 }
 
@@ -798,7 +800,6 @@ async function logout(){
 }
 
 async function boot(){
-  try{ localStorage.removeItem('pmTrackerData'); }catch(e){}   // 계정 도입 전 공용 캐시는 지운다(정본은 서버에 있음)
   setAuthMode('login');
   let user = null;
   try{
@@ -819,6 +820,27 @@ async function startApp(user){
   setSaveStatus('불러오는 중…', 'var(--ink-soft)');
   const { data, source } = await loadData();
   if(source==='auth'){ showAuth('로그인이 풀렸어요. 다시 로그인해주세요.'); return; }
+
+  // 계정 도입 전에 이 기기에만 저장돼 있던 데이터(옛 공용 캐시)가 있고, 내 계정이 아직 비어 있으면
+  // 그걸 내 계정으로 올린다. 서버 저장이 성공한 뒤에만 옛 캐시를 지운다.
+  let legacyLocal = null;
+  try{
+    const p = JSON.parse(localStorage.getItem('pmTrackerData') || 'null');
+    if(p && Array.isArray(p.tasks)) legacyLocal = p;
+  }catch(e){}
+  if(source==='server-empty' && legacyLocal){
+    DATA = legacyLocal;
+    renderAll();
+    booting = false;
+    try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(DATA)); }catch(e){}
+    setSaveStatus('이 기기의 기존 데이터를 계정으로 옮기는 중…', 'var(--ink-soft)');
+    if(await saveToServer()){
+      try{ localStorage.removeItem('pmTrackerData'); }catch(e){}
+      setSaveStatus('기존 데이터를 계정으로 옮겼어요', 'var(--sage)');
+    }
+    return;
+  }
+
   DATA = data || DEFAULT_DATA;
   renderAll();               // renderGrowth/renderBudget 가 persist() 를 부르지만 booting 중이라 서버로 안 올라감
   booting = false;
