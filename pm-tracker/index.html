@@ -138,7 +138,9 @@
   .task-row{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 14px;margin-bottom:8px;transition:border-color .12s;}
   .task-row:hover{border-color:var(--ink);}
   .task-row.done{opacity:.55;}
-  .task-row.carried{border-color:var(--ink);box-shadow:inset 6px 0 0 var(--yellow);padding-left:20px;}
+  .task-row{border-left:5px solid var(--cat,var(--line));}
+  .task-row:hover{border-left-color:var(--cat,var(--ink));}
+  .task-row.carried{border-top-color:var(--ink);border-right-color:var(--ink);border-bottom-color:var(--ink);background:linear-gradient(90deg,var(--yellow-wash),#fff 40%);}
   .task-row.moved{opacity:.6;background:var(--surface);}
   .task-main{display:flex;align-items:flex-start;gap:12px;}
   .task-row input[type=checkbox]{appearance:none;-webkit-appearance:none;width:22px;height:22px;border:1.5px solid var(--ink);border-radius:6px;margin:0;flex-shrink:0;cursor:pointer;display:grid;place-items:center;background:#fff;}
@@ -153,6 +155,10 @@
   .t-meta{display:flex;gap:5px;margin-top:7px;flex-wrap:wrap;}
   .badge{font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:999px;line-height:1.35;border:1px solid var(--border);color:var(--ink-soft);background:var(--card);white-space:nowrap;}
   .badge.cat{background:var(--surface);}
+  .badge.cat[style]{font-weight:700;}
+  .cat-dot{display:inline-block;width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+  .group-label.cat-group{font-size:14px;margin-top:20px;align-items:center;}
+  .group-label.cat-group:first-child{margin-top:4px;}
   .badge.owner-me{border-color:var(--ink);color:var(--ink);}
   .badge.owner-vn,.badge.owner-agency{border-color:var(--ink-faint);}
   .badge.due{}
@@ -435,6 +441,34 @@ function renderHeader(){
  * task.due    : (선택) 마감일
  * 체크 안 된 일은 날짜가 지나면 자동으로 오늘로 '이월'되어 보인다. 원래 날에는 '이월됨'으로 남는다.
  */
+/* ---------- 카테고리 색 ----------
+ * 카테고리마다 팔레트 번호를 하나 붙여 DATA.catColors 에 저장한다.
+ * (목록 순서로 정하면 하나를 지울 때 나머지 색이 다 바뀌니까, 한 번 정한 색은 고정)
+ */
+const CAT_PALETTE = ['#2563eb','#db2777','#16a34a','#ea580c','#7c3aed','#0891b2','#b45309','#dc2626','#4f46e5','#0d9488','#9333ea','#65a30d'];
+function ensureCatColors(){
+  if(!DATA.catColors) DATA.catColors = {};
+  const used = new Set(Object.values(DATA.catColors));
+  const names = [...(DATA.categories||[]), ...DATA.tasks.map(t=>t.cat).filter(Boolean)];
+  names.forEach(n=>{
+    if(DATA.catColors[n] !== undefined) return;
+    let i = 0; while(used.has(i) && i < CAT_PALETTE.length) i++;
+    if(i >= CAT_PALETTE.length) i = Object.keys(DATA.catColors).length % CAT_PALETTE.length;
+    DATA.catColors[n] = i; used.add(i);
+  });
+}
+function catColor(name){
+  const i = (DATA.catColors||{})[name];
+  return i === undefined ? '#898781' : CAT_PALETTE[i % CAT_PALETTE.length];
+}
+function catBadgeStyle(name){
+  const c = catColor(name);
+  return `color:${c};border-color:${c}55;background:${c}14`;
+}
+function catRank(name){
+  const i = (DATA.categories||[]).indexOf(name);
+  return i < 0 ? 999 : i;
+}
 function normalizeTasks(){
   const T = todayStr();
   (DATA.tasks||[]).forEach(t=>{
@@ -442,6 +476,7 @@ function normalizeTasks(){
     if(t.done && !t.doneAt) t.doneAt = t.date;
   });
   if(!DATA.routineLog) DATA.routineLog = {};
+  ensureCatColors();
 }
 function tasksForDay(D){
   const T = todayStr();
@@ -566,7 +601,7 @@ function renderCatOptions(){
   el.classList.toggle('editing', catEditing);
   el.innerHTML = cats.map((c,i)=> catEditing
       ? `<button class="cat-chip" onclick="removeCategory(${i})" title="삭제">${esc(c)} <span class="x">✕</span></button>`
-      : `<button class="cat-chip ${c===selectedCat?'on':''}" onclick="pickCat(${i})">${esc(c)}</button>`).join('')
+      : `<button class="cat-chip ${c===selectedCat?'on':''}" onclick="pickCat(${i})"><span class="cat-dot" style="background:${catColor(c)}"></span>${esc(c)}</button>`).join('')
     + (catAdding
       ? `<input id="newCatInput" placeholder="새 카테고리" maxlength="20" onkeydown="if(event.key==='Enter')addCategory(); if(event.key==='Escape'){catAdding=false;renderCatOptions();}" onblur="addCategory(true)">`
       : (catEditing ? '' : `<button class="add" onclick="startAddCategory()">+ 추가</button>`))
@@ -580,7 +615,7 @@ function addCategory(fromBlur){
   if(!inp || !catAdding) return;
   const name = inp.value.trim().slice(0,20);
   catAdding = false;
-  if(name && !DATA.categories.includes(name)){ DATA.categories.push(name); persist(); }
+  if(name && !DATA.categories.includes(name)){ DATA.categories.push(name); ensureCatColors(); persist(); }
   if(name) selectedCat = name;
   renderCatOptions();
 }
@@ -613,7 +648,9 @@ function renderTasks(){
 
   const list = tasksForDay(D).map(t=>({t, st:taskState(t,D)}));
   const order = {carried:0, open:1, moved:2, done:3, 'moved-done':4};
-  list.sort((a,b)=> (order[a.st]-order[b.st]) || (a.t.due||'9').localeCompare(b.t.due||'9') || a.t.id-b.t.id);
+  const isActive = x => x.st==='carried' || x.st==='open';
+  list.sort((a,b)=> (isActive(b)-isActive(a)) || (catRank(a.t.cat)-catRank(b.t.cat)) || String(a.t.cat).localeCompare(String(b.t.cat))
+                    || (order[a.st]-order[b.st]) || (a.t.due||'9').localeCompare(b.t.due||'9') || a.t.id-b.t.id);
 
   const remain = list.filter(x=>x.st==='open'||x.st==='carried').length;
   const carried = list.filter(x=>x.st==='carried').length;
@@ -635,7 +672,7 @@ function renderTasks(){
     if(st==='moved-done') stateBadge = `<span class="badge moved">→ ${fmtDate(t.doneAt)}에 완료</span>`;
     const checked = st==='done' || st==='moved-done';
     return `
-    <div class="task-row ${checked?'done':''} ${st==='carried'?'carried':''} ${st==='moved'||st==='moved-done'?'moved':''}">
+    <div class="task-row ${checked?'done':''} ${st==='carried'?'carried':''} ${st==='moved'||st==='moved-done'?'moved':''}" style="--cat:${catColor(t.cat)}">
       <div class="task-main">
         <input type="checkbox" ${checked?'checked':''} onchange="toggleTask(${t.id})" aria-label="완료">
         <div class="t-body">
@@ -645,7 +682,7 @@ function renderTasks(){
           </div>
           <div class="t-meta">
             ${stateBadge}
-            <span class="badge cat">${esc(t.cat)}</span>
+            <span class="badge cat" style="${catBadgeStyle(t.cat)}">${esc(t.cat)}</span>
             ${ownerBadge(t.owner)}
             ${t.due?`<span class="badge due ${overdue?'overdue':''}">${overdue?'마감 지남 · ':'마감 '}${fmtDate(t.due)}</span>`:''}
             ${t.postpone>0?`<span class="badge postpone">${t.postpone}회 연기</span>`:''}
@@ -674,7 +711,16 @@ function renderTasks(){
   }
   const active = list.filter(x=>x.st==='carried'||x.st==='open');
   const rest = list.filter(x=>!(x.st==='carried'||x.st==='open'));
-  el.innerHTML = (active.length ? `<div class="group-label">할 일 <em>${active.length}</em></div>` : '') + active.map(row).join('')
+  let html = '', lastCat = null;
+  active.forEach(x=>{
+    if(x.t.cat !== lastCat){
+      lastCat = x.t.cat;
+      const n = active.filter(y=>y.t.cat===lastCat).length;
+      html += `<div class="group-label cat-group"><span class="cat-dot" style="background:${catColor(lastCat)}"></span>${esc(lastCat||'기타')} <em>${n}</em></div>`;
+    }
+    html += row(x);
+  });
+  el.innerHTML = html
     + (rest.length ? `<div class="group-label">${D<T?'완료 · 이월':'완료'} <em>${rest.length}</em></div>` + rest.map(row).join('') : '');
 }
 /* 할 일·세부 할 일 제목을 눌러서 바로 고친다. Enter·바깥 클릭 = 저장, Esc = 취소 */
