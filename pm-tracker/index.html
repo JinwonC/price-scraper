@@ -840,6 +840,33 @@ async function startApp(user){
     // 서버 연결 실패 + 캐시도 없음 → 기본값 표시. 서버로 덮어쓰지 않는다.
     setSaveStatus('서버에 연결 못함 — 이 기기에만 저장돼요', 'var(--gold)');
   }
+
+  // 계정에 이미 데이터가 있는데 이 기기에 계정 도입 전 데이터도 남아 있으면 → 복원 버튼을 보여준다
+  if(legacyLocal && source==='server') showRestoreBar(legacyLocal);
+}
+
+function showRestoreBar(legacy){
+  if(document.getElementById('restoreBar')) return;
+  const bar = document.createElement('div');
+  bar.id = 'restoreBar';
+  bar.style.cssText = 'background:var(--gold-soft);border:1px solid var(--gold);border-radius:10px;padding:10px 12px;margin-bottom:14px;font-size:12.5px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;';
+  bar.innerHTML = '<span style="flex:1;min-width:200px">이 기기에 <b>로그인 도입 전 데이터</b>가 남아 있어요. 지금 화면 대신 그 데이터로 바꿀 수 있어요.</span>'
+    + '<button class="save-btn" id="restoreYes">이 기기 데이터로 복원</button>'
+    + '<button class="save-btn" id="restoreNo" style="background:var(--ink-soft)">닫기</button>';
+  document.querySelector('.save-bar').after(bar);
+  document.getElementById('restoreNo').onclick = ()=> bar.remove();
+  document.getElementById('restoreYes').onclick = async ()=>{
+    if(!confirm('지금 계정에 있는 내용을 이 기기의 이전 데이터로 바꿉니다. 진행할까요?\n(지금 내용은 이 기기에 백업해 둡니다)')) return;
+    try{ localStorage.setItem(STORAGE_KEY + ':backup', JSON.stringify(DATA)); }catch(e){}
+    DATA = legacy;
+    renderAll();
+    try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(DATA)); }catch(e){}
+    if(await saveToServer()){
+      try{ localStorage.removeItem('pmTrackerData'); }catch(e){}
+      setSaveStatus('이 기기의 이전 데이터로 복원했어요', 'var(--sage)');
+      bar.remove();
+    }
+  };
 }
 boot();
 
