@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
-<title>오늘 — 도현 PM 대장</title>
+<title>오늘 — PM 트래커</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -32,6 +32,20 @@
   .save-btn{background:var(--sage);color:#fff;border:none;border-radius:8px;padding:9px 14px;font-size:12.5px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;}
   .save-btn:hover{opacity:.92;}
   .save-status{font-size:11.5px;color:var(--sage);font-weight:600;flex:1;}
+  .who{font-size:11.5px;color:var(--ink-soft);font-weight:600;}
+  .who button{background:none;border:none;color:var(--ink-soft);text-decoration:underline;cursor:pointer;font-size:11.5px;padding:0 0 0 4px;font-family:'Inter',sans-serif;}
+  /* 로그인 / 가입 */
+  #authScreen{display:none;max-width:360px;margin:12vh auto 0;padding:0 16px;}
+  #authScreen .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;}
+  #authScreen h1{font-family:'Fraunces',serif;font-size:22px;margin:4px 0 16px;}
+  #authScreen label{display:block;font-size:12px;font-weight:600;color:var(--ink-soft);margin:10px 0 4px;}
+  #authScreen input{width:100%;box-sizing:border-box;border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:14px;background:#fff;color:var(--ink);font-family:'Inter',sans-serif;}
+  #authScreen .save-btn{width:100%;margin-top:16px;padding:11px;font-size:14px;}
+  #authScreen .switch{margin-top:14px;font-size:12.5px;color:var(--ink-soft);text-align:center;}
+  #authScreen .switch a{color:var(--berry);font-weight:700;cursor:pointer;}
+  #authMsg{color:var(--berry);font-size:12.5px;font-weight:600;min-height:16px;margin-top:10px;}
+  .signup-only{display:none;}
+  #authScreen.signup .signup-only{display:block;}
 
   .focus-strip{display:flex;flex-direction:column;gap:6px;margin-bottom:18px;}
   .focus-row{display:flex;align-items:center;gap:10px;background:var(--ink);color:var(--paper);padding:11px 14px;border-radius:8px;}
@@ -183,7 +197,26 @@
 </style>
 </head>
 <body>
-<div class="wrap">
+<div id="authScreen">
+  <div class="brand">d'Alba · TikTok Shop PM</div>
+  <h1 id="authTitle">로그인</h1>
+  <form class="card" id="authForm" autocomplete="on">
+    <label for="authId">아이디</label>
+    <input id="authId" name="username" autocomplete="username" autocapitalize="none" required>
+    <label for="authPw">비밀번호</label>
+    <input id="authPw" name="password" type="password" autocomplete="current-password" required>
+    <div class="signup-only">
+      <label for="authName">이름 (화면에 표시)</label>
+      <input id="authName" name="name" placeholder="예: 도현">
+      <label for="authCode">초대코드</label>
+      <input id="authCode" name="code" autocomplete="off">
+    </div>
+    <div id="authMsg"></div>
+    <button class="save-btn" type="submit" id="authSubmit">로그인</button>
+    <div class="switch" id="authSwitch"></div>
+  </form>
+</div>
+<div class="wrap" id="appWrap" style="display:none">
 
   <header>
     <div>
@@ -196,6 +229,7 @@
 
   <div class="save-bar">
     <span class="save-status" id="saveStatus">불러오는 중…</span>
+    <span class="who"><span id="whoName"></span><button onclick="logout()">로그아웃</button></span>
     <button class="save-btn" onclick="reloadFromServer()">☁ 새로고침</button>
   </div>
 
@@ -333,7 +367,7 @@ function nextTuesday(){ const d=new Date(); const diff=(9-d.getDay())%7 || 7; d.
  * - 저장은 값이 바뀔 때마다 자동. 잦은 입력을 묶어서 0.8초 뒤 한 번에 올린다(디바운스).
  * - 이 기기 localStorage 에도 즉시 캐시해서, 오프라인이거나 서버가 잠깐 죽어도 화면이 유지된다.
  */
-const STORAGE_KEY = 'pmTrackerData';
+let STORAGE_KEY = 'pmTrackerData';   // 로그인 후 'pmTrackerData:<아이디>' 로 바뀐다(기기 캐시도 사람별로)
 let DATA = DEFAULT_DATA;
 let booting = true;       // 초기 로드 중에는 서버로 되쓰지 않는다(기본값 덮어쓰기 방지)
 let saveTimer = null;
@@ -349,6 +383,7 @@ async function loadData(){
   // 1) 서버(정본)
   try{
     const res = await fetch('/api/data', { cache:'no-store' });
+    if(res.status===401) return { data:null, source:'auth' };
     if(res.ok){
       const json = await res.json();
       if(json && json.data && Array.isArray(json.data.tasks)) return { data: json.data, source:'server' };
@@ -380,6 +415,7 @@ async function saveToServer(){
       headers:{ 'Content-Type':'application/json' },
       body: JSON.stringify(DATA)
     });
+    if(res.status===401){ showAuth(); return; }
     if(!res.ok) throw new Error('HTTP '+res.status);
     setSaveStatus('저장됨 · 클라우드', 'var(--sage)');
   }catch(e){
@@ -396,6 +432,8 @@ async function reloadFromServer(){
     try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(DATA)); }catch(e){}
     renderAll();
     setSaveStatus('최신 내용 불러옴', 'var(--sage)');
+  }else if(source==='auth'){
+    showAuth();
   }else if(source==='server-empty'){
     setSaveStatus('서버에 저장된 내용이 아직 없어요', 'var(--gold)');
   }else{
@@ -709,8 +747,78 @@ function renderAll(){
   renderTasks(); renderRoutine(); renderTiles(); renderWeeks(); renderGrowth(); renderBudget();
 }
 
+/* ---------- 로그인 / 가입 ---------- */
+let authMode = 'login';
+function setAuthMode(mode){
+  authMode = mode;
+  const signup = mode==='signup';
+  document.getElementById('authScreen').classList.toggle('signup', signup);
+  document.getElementById('authTitle').textContent = signup ? '가입하기' : '로그인';
+  document.getElementById('authSubmit').textContent = signup ? '가입하고 시작' : '로그인';
+  document.getElementById('authPw').autocomplete = signup ? 'new-password' : 'current-password';
+  document.getElementById('authSwitch').innerHTML = signup
+    ? '이미 계정이 있나요? <a onclick="setAuthMode(&quot;login&quot;)">로그인</a>'
+    : '처음이신가요? <a onclick="setAuthMode(&quot;signup&quot;)">가입하기</a>';
+  document.getElementById('authMsg').textContent = '';
+}
+function showAuth(message){
+  clearTimeout(saveTimer);
+  booting = true;   // 로그인 화면에선 아무것도 서버로 올리지 않는다
+  document.getElementById('appWrap').style.display = 'none';
+  document.getElementById('authScreen').style.display = 'block';
+  if(message) document.getElementById('authMsg').textContent = message;
+}
+document.getElementById('authForm').addEventListener('submit', async (ev)=>{
+  ev.preventDefault();
+  const msg = document.getElementById('authMsg');
+  const btn = document.getElementById('authSubmit');
+  msg.textContent = ''; btn.disabled = true;
+  try{
+    const res = await fetch('/api/auth', {
+      method:'POST', headers:{ 'Content-Type':'application/json' },
+      body: JSON.stringify({
+        action: authMode,
+        id: document.getElementById('authId').value,
+        password: document.getElementById('authPw').value,
+        name: document.getElementById('authName').value,
+        code: document.getElementById('authCode').value,
+      })
+    });
+    const json = await res.json().catch(()=>({}));
+    if(!res.ok){ msg.textContent = json.message || '잠시 후 다시 시도해주세요.'; return; }
+    document.getElementById('authPw').value = '';
+    await startApp(json.user);
+  }catch(e){
+    msg.textContent = '서버에 연결하지 못했어요.';
+  }finally{ btn.disabled = false; }
+});
+async function logout(){
+  try{ await fetch('/api/auth', { method:'POST', headers:{ 'Content-Type':'application/json' }, body: JSON.stringify({ action:'logout' }) }); }catch(e){}
+  location.reload();
+}
+
 async function boot(){
+  try{ localStorage.removeItem('pmTrackerData'); }catch(e){}   // 계정 도입 전 공용 캐시는 지운다(정본은 서버에 있음)
+  setAuthMode('login');
+  let user = null;
+  try{
+    const res = await fetch('/api/auth', { cache:'no-store' });
+    if(res.ok) user = (await res.json()).user;
+  }catch(e){}
+  if(!user){ showAuth(); return; }
+  await startApp(user);
+}
+
+async function startApp(user){
+  STORAGE_KEY = 'pmTrackerData:' + user.id;
+  DATA = DEFAULT_DATA;
+  document.getElementById('whoName').textContent = user.name + ' 님';
+  document.title = '오늘 — ' + user.name;
+  document.getElementById('authScreen').style.display = 'none';
+  document.getElementById('appWrap').style.display = '';
+  setSaveStatus('불러오는 중…', 'var(--ink-soft)');
   const { data, source } = await loadData();
+  if(source==='auth'){ showAuth('로그인이 풀렸어요. 다시 로그인해주세요.'); return; }
   DATA = data || DEFAULT_DATA;
   renderAll();               // renderGrowth/renderBudget 가 persist() 를 부르지만 booting 중이라 서버로 안 올라감
   booting = false;
