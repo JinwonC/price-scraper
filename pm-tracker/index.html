@@ -140,7 +140,34 @@
   .task-row.done{opacity:.55;}
   .task-row{border-left:5px solid var(--cat,var(--line));}
   .task-row:hover{border-left-color:var(--cat,var(--ink));}
-  .task-row.carried{border-top-color:var(--ink);border-right-color:var(--ink);border-bottom-color:var(--ink);background:linear-gradient(90deg,var(--yellow-wash),#fff 40%);}
+  /* 이월 게이지: 하루 지날 때마다 빨간 칸이 20%씩 찬다(5일째 꽉 참) */
+  .task-row.carried{border-color:var(--red);border-left-color:var(--red);background:linear-gradient(90deg,rgba(224,43,32,.16) 0 var(--carry-pct,20%),#fff var(--carry-pct,20%));}
+  .task-row.carried:hover{border-left-color:var(--red);}
+  .badge.dplus{background:var(--red);border-color:var(--red);color:#fff;font-weight:800;font-variant-numeric:tabular-nums;}
+  .badge.carry{background:#fff;border-color:var(--red);color:var(--red);font-weight:700;}
+  .badge.urgent{background:var(--red);border-color:var(--red);color:#fff;font-weight:800;cursor:pointer;}
+  .badge.normal{cursor:pointer;}
+  .badge.urgent:hover,.badge.normal:hover{outline:2px solid var(--yellow-soft);}
+  #prioSeg button.active[data-prio="urgent"]{background:var(--red);}
+  #prioSeg{border-color:var(--ink);}
+
+  /* 드래그로 순서 바꾸기 */
+  .cat-block{margin-bottom:2px;}
+  .cat-block .group-label.cat-group{cursor:grab;user-select:none;}
+  .cat-block .group-label .grip,.task-row .grip{color:var(--ink-faint);font-size:13px;letter-spacing:-2px;cursor:grab;user-select:none;touch-action:none;}
+  .task-row .grip{padding:2px 2px 0 0;margin-left:-4px;flex-shrink:0;line-height:1.4;}
+  .task-row .grip:hover,.cat-block .group-label:hover .grip{color:var(--ink);}
+  .cat-tasks{min-height:6px;}
+  .drag-ghost{opacity:.35;}
+  .drag-chosen{box-shadow:0 6px 18px rgba(0,0,0,.12);}
+
+  /* 완료 기록 탭 */
+  .hist-day{margin-bottom:6px;}
+  .hist-row{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-left:5px solid var(--cat,var(--line));border-radius:10px;padding:9px 12px;margin-bottom:6px;}
+  .hist-row .h-title{flex:1;min-width:0;font-size:14.5px;font-weight:600;word-break:break-word;}
+  .hist-row .h-meta{display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end;}
+  .hist-row input[type=checkbox]{width:18px;height:18px;accent-color:var(--ink);flex-shrink:0;cursor:pointer;}
+  .hist-more{display:block;margin:14px auto 0;border:1px solid var(--ink);background:var(--card);border-radius:999px;padding:6px 16px;font-size:13px;font-weight:700;cursor:pointer;}
   .task-row.moved{opacity:.6;background:var(--surface);}
   .task-main{display:flex;align-items:flex-start;gap:12px;}
   .task-row input[type=checkbox]{appearance:none;-webkit-appearance:none;width:22px;height:22px;border:1.5px solid var(--ink);border-radius:6px;margin:0;flex-shrink:0;cursor:pointer;display:grid;place-items:center;background:#fff;}
@@ -163,7 +190,7 @@
   .badge.owner-vn,.badge.owner-agency{border-color:var(--ink-faint);}
   .badge.due{}
   .badge.overdue{background:var(--red);border-color:var(--red);color:#fff;}
-  .badge.carry,.badge.postpone{background:var(--yellow-soft);border-color:var(--ink);color:var(--ink);font-weight:700;}
+  .badge.postpone{background:var(--yellow-soft);border-color:var(--ink);color:var(--ink);font-weight:700;}
   .badge.moved{border-style:dashed;}
   .t-body{flex:1;min-width:0;}
   .t-x{background:none;border:none;color:var(--ink-faint);font-size:14px;cursor:pointer;padding:2px 5px;flex-shrink:0;border-radius:6px;}
@@ -212,6 +239,10 @@
     .opt-lbl{width:100%;margin-bottom:-2px;}   /* 휴대폰: 라벨은 한 줄 위에 */
     .opt-gap{display:none;}
   }
+  @media (max-width:430px){
+    .brand-home{display:none;}   /* 좁은 휴대폰: 탭·버튼 자리 확보 */
+    .topnav{justify-content:flex-end;}
+  }
 </style>
 </head>
 <body>
@@ -241,6 +272,10 @@
   <nav class="topnav">
     <div class="brand-home">d'Alba PM Tracker</div>
     <div class="nav-right">
+      <div class="seg" id="viewSeg">
+        <button class="active" data-view="today" onclick="setView('today')">할 일</button>
+        <button data-view="history" onclick="setView('history')">완료 기록</button>
+      </div>
       <button class="icon-btn" onclick="reloadFromServer()" title="다른 기기에서 고친 내용 불러오기">↻</button>
       <button class="text-btn" onclick="logout()">로그아웃</button>
     </div>
@@ -295,7 +330,11 @@
           <button data-owner="agency" onclick="setOwner('agency')">에이전시</button>
         </div>
         <span class="opt-gap"></span>
-        <span class="opt-lbl">마감</span><input type="date" id="newTaskDue">
+        <span class="opt-lbl">중요도</span>
+        <div class="seg" id="prioSeg">
+          <button data-prio="urgent" onclick="setPrio('urgent')">급건</button>
+          <button class="active" data-prio="normal" onclick="setPrio('normal')">일반</button>
+        </div>
       </div>
     </div>
     <div class="routine-mini" id="routineMini"></div>
@@ -304,10 +343,17 @@
 
   </div>
 
+  <!-- ============ TAB: 완료 기록 ============ -->
+  <div id="tabHistory" class="tab-panel" style="display:none">
+    <div id="historyList"></div>
+  </div>
+
   <footer>입력한 값은 자동으로 저장돼요. 다른 기기에서 방금 고쳤다면 위 ↻ 를 눌러 최신 내용을 불러오세요.<br>체크하지 못한 일은 다음 날 자동으로 이월돼요.</footer>
 
 </div>
 
+<!-- 드래그로 순서 바꾸기 (휴대폰 터치도 지원) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.2/Sortable.min.js"></script>
 <script>
 /* ============= 기본값 — 저장된 데이터가 없을 때만 사용 ============= */
 // 새 계정이 처음 보는 빈 템플릿 (특정 사람의 업무 내용이 들어가지 않게 비워 둔다)
@@ -474,6 +520,8 @@ function normalizeTasks(){
   (DATA.tasks||[]).forEach(t=>{
     if(!t.date) t.date = t.done ? (t.doneAt || T) : T;   // 날짜 기능 이전에 만든 일은 오늘 것으로
     if(t.done && !t.doneAt) t.doneAt = t.date;
+    if(typeof t.order !== 'number') t.order = t.id;       // 드래그 순서. 처음엔 만든 순서 그대로
+    if(!t.priority) t.priority = 'normal';
   });
   if(!DATA.routineLog) DATA.routineLog = {};
   ensureCatColors();
@@ -631,12 +679,29 @@ function setOwner(o){
   selectedOwner = o;
   document.querySelectorAll('#ownerSeg button').forEach(b=>b.classList.toggle('active', b.dataset.owner===o));
 }
+let selectedPrio = 'normal';
+function setPrio(p){
+  selectedPrio = p;
+  document.querySelectorAll('#prioSeg button').forEach(b=>b.classList.toggle('active', b.dataset.prio===p));
+}
+function prioBadge(t){
+  return t.priority==='urgent'
+    ? `<span class="badge urgent" onclick="togglePrio(${t.id})" title="눌러서 일반으로">급건</span>`
+    : `<span class="badge normal" onclick="togglePrio(${t.id})" title="눌러서 급건으로">일반</span>`;
+}
+function togglePrio(id){
+  const t = DATA.tasks.find(t=>t.id===id); if(!t) return;
+  t.priority = t.priority==='urgent' ? 'normal' : 'urgent';
+  persist(); renderTasks();
+}
 function ownerBadge(o){
   if(o==='me') return `<span class="badge owner-me">직접</span>`;
   if(o==='vn') return `<span class="badge owner-vn">VN팀</span>`;
   return `<span class="badge owner-agency">에이전시</span>`;
 }
 function renderTasks(){
+  if(view==='history'){ renderHistory(); return; }
+  resetStatLabels();
   const el = document.getElementById('taskList');
   const D = selectedDate, T = todayStr();
   const d = parseYmd(D);
@@ -650,7 +715,8 @@ function renderTasks(){
   const order = {carried:0, open:1, moved:2, done:3, 'moved-done':4};
   const isActive = x => x.st==='carried' || x.st==='open';
   list.sort((a,b)=> (isActive(b)-isActive(a)) || (catRank(a.t.cat)-catRank(b.t.cat)) || String(a.t.cat).localeCompare(String(b.t.cat))
-                    || (order[a.st]-order[b.st]) || (a.t.due||'9').localeCompare(b.t.due||'9') || a.t.id-b.t.id);
+                    || (isActive(a) ? 0 : order[a.st]-order[b.st])   // 남은 일은 드래그한 순서 그대로
+                    || ((a.t.order??a.t.id)-(b.t.order??b.t.id)) || a.t.id-b.t.id);
 
   const remain = list.filter(x=>x.st==='open'||x.st==='carried').length;
   const carried = list.filter(x=>x.st==='carried').length;
@@ -667,13 +733,16 @@ function renderTasks(){
     const subDone = subs.filter(s=>s.done).length;
     const carryDays = st==='carried' ? daysBetween(t.date, T) : 0;
     let stateBadge = '';
-    if(st==='carried') stateBadge = `<span class="badge carry">↪ ${fmtDate(t.date)}에서 이월${carryDays>1?` · ${carryDays}일째`:''}</span>`;
+    if(st==='carried') stateBadge = `<span class="badge dplus">D+${carryDays}</span><span class="badge carry">↪ ${fmtDate(t.date)}에서 이월</span>`;
     if(st==='moved') stateBadge = `<span class="badge moved">→ 오늘로 이월됨</span>`;
     if(st==='moved-done') stateBadge = `<span class="badge moved">→ ${fmtDate(t.doneAt)}에 완료</span>`;
     const checked = st==='done' || st==='moved-done';
+    const active = st==='open' || st==='carried';
+    const gauge = st==='carried' ? `;--carry-pct:${Math.min(carryDays,5)*20}%` : '';
     return `
-    <div class="task-row ${checked?'done':''} ${st==='carried'?'carried':''} ${st==='moved'||st==='moved-done'?'moved':''}" style="--cat:${catColor(t.cat)}">
+    <div class="task-row ${checked?'done':''} ${st==='carried'?'carried':''} ${st==='moved'||st==='moved-done'?'moved':''}" style="--cat:${catColor(t.cat)}${gauge}" data-id="${t.id}">
       <div class="task-main">
+        ${active?'<span class="grip" title="끌어서 순서 바꾸기">⋮⋮</span>':''}
         <input type="checkbox" ${checked?'checked':''} onchange="toggleTask(${t.id})" aria-label="완료">
         <div class="t-body">
           <div class="t-title-row">
@@ -682,6 +751,7 @@ function renderTasks(){
           </div>
           <div class="t-meta">
             ${stateBadge}
+            ${active || t.priority==='urgent' ? prioBadge(t) : ''}
             <span class="badge cat" style="${catBadgeStyle(t.cat)}">${esc(t.cat)}</span>
             ${ownerBadge(t.owner)}
             ${t.due?`<span class="badge due ${overdue?'overdue':''}">${overdue?'마감 지남 · ':'마감 '}${fmtDate(t.due)}</span>`:''}
@@ -711,17 +781,118 @@ function renderTasks(){
   }
   const active = list.filter(x=>x.st==='carried'||x.st==='open');
   const rest = list.filter(x=>!(x.st==='carried'||x.st==='open'));
-  let html = '', lastCat = null;
-  active.forEach(x=>{
-    if(x.t.cat !== lastCat){
-      lastCat = x.t.cat;
-      const n = active.filter(y=>y.t.cat===lastCat).length;
-      html += `<div class="group-label cat-group"><span class="cat-dot" style="background:${catColor(lastCat)}"></span>${esc(lastCat||'기타')} <em>${n}</em></div>`;
-    }
-    html += row(x);
-  });
-  el.innerHTML = html
+  // 카테고리마다 한 덩어리(cat-block). 카테고리 머리를 끌면 카테고리 순서, ⋮⋮ 를 끌면 할 일 순서가 바뀐다.
+  const cats = [];
+  active.forEach(x=>{ if(!cats.includes(x.t.cat)) cats.push(x.t.cat); });
+  const html = cats.map(c=>{
+    const items = active.filter(x=>x.t.cat===c);
+    return `<div class="cat-block" data-cat="${esc(c??'')}">
+      <div class="group-label cat-group" title="끌어서 카테고리 순서 바꾸기"><span class="grip">⋮⋮</span><span class="cat-dot" style="background:${catColor(c)}"></span>${esc(c||'기타')} <em>${items.length}</em></div>
+      <div class="cat-tasks" data-cat="${esc(c??'')}">${items.map(row).join('')}</div>
+    </div>`;
+  }).join('');
+  el.innerHTML = `<div id="activeList">${html}</div>`
     + (rest.length ? `<div class="group-label">${D<T?'완료 · 이월':'완료'} <em>${rest.length}</em></div>` + rest.map(row).join('') : '');
+  initDrag();
+}
+
+/* ---------- 드래그로 순서 바꾸기 ---------- */
+let sortables = [];
+function initDrag(){
+  sortables.forEach(s=>s.destroy()); sortables = [];
+  if(typeof Sortable === 'undefined') return;          // 라이브러리를 못 불러오면 드래그만 빠진다
+  const list = document.getElementById('activeList'); if(!list) return;
+  const common = { animation:150, ghostClass:'drag-ghost', chosenClass:'drag-chosen', delayOnTouchOnly:true, delay:150 };
+  // 카테고리 순서
+  sortables.push(Sortable.create(list, { ...common, handle:'.cat-group', draggable:'.cat-block', onEnd: saveCatOrder }));
+  // 할 일 순서 (다른 카테고리로 옮기면 카테고리도 바뀐다)
+  list.querySelectorAll('.cat-tasks').forEach(box=>{
+    sortables.push(Sortable.create(box, { ...common, group:'tasks', handle:'.grip', draggable:'.task-row', onEnd: saveTaskOrder }));
+  });
+}
+function saveCatOrder(){
+  const shown = [...document.querySelectorAll('#activeList .cat-block')].map(b=>b.dataset.cat);
+  const cats = DATA.categories || [];
+  // 화면에 보이는 카테고리끼리만 자리를 바꾸고, 안 보이는 카테고리는 원래 자리에 둔다
+  const slots = cats.map((c,i)=> shown.includes(c) ? i : -1).filter(i=>i>=0);
+  const reordered = shown.filter(c=>cats.includes(c));
+  slots.forEach((slot,k)=>{ cats[slot] = reordered[k]; });
+  persist(); renderCatOptions(); renderTasks();
+}
+function saveTaskOrder(){
+  document.querySelectorAll('#activeList .cat-tasks').forEach(box=>{
+    const cat = box.dataset.cat;
+    [...box.querySelectorAll('.task-row')].forEach((r,i)=>{
+      const t = DATA.tasks.find(t=>t.id===Number(r.dataset.id)); if(!t) return;
+      if((t.cat??'') !== cat) t.cat = cat || t.cat;
+      t.order = i;
+    });
+  });
+  persist(); renderTasks(); renderCalendar();
+}
+
+/* ---------- 완료 기록 탭: 날짜별로 끝낸 일 ---------- */
+let view = 'today', histLimit = 14;
+function setView(v){
+  view = v;
+  document.querySelectorAll('#viewSeg button').forEach(b=>b.classList.toggle('active', b.dataset.view===v));
+  const hist = v==='history';
+  document.getElementById('tabToday').style.display = hist ? 'none' : '';
+  document.getElementById('tabHistory').style.display = hist ? '' : 'none';
+  document.querySelector('.cal').style.display = hist ? 'none' : '';
+  if(hist){ histLimit = 14; renderHistory(); } else renderTasks();
+}
+function renderHistory(){
+  const done = DATA.tasks.filter(t=>t.done && t.doneAt);
+  const byDay = {};
+  done.forEach(t=>{ (byDay[t.doneAt] ||= []).push(t); });
+  const days = Object.keys(byDay).sort().reverse();
+  const T = todayStr();
+  // 머리판은 완료 기록 요약으로
+  const weekAgo = ymd(new Date(Date.now() - 6*86400000));
+  document.getElementById('dayTitle').textContent = '완료 기록';
+  document.getElementById('daySub').textContent = `일한 날 ${days.length}일`;
+  document.getElementById('stRemain').textContent = byDay[T]?.length || 0;
+  document.getElementById('stDone').textContent = done.filter(t=>t.doneAt>=weekAgo).length;
+  document.getElementById('stCarry').textContent = done.filter(t=>t.doneAt>t.date).length;
+  document.getElementById('stPct').textContent = done.length;
+  const labels = document.querySelectorAll('.ps-stats dt');
+  ['오늘 완료','최근 7일','이월 후 완료','전체 완료'].forEach((s,i)=> labels[i].textContent = s);
+
+  const el = document.getElementById('historyList');
+  if(!days.length){ el.innerHTML = `<div class="empty">아직 완료한 일이 없어요.</div>`; return; }
+  el.innerHTML = days.slice(0, histLimit).map(D=>{
+    const d = parseYmd(D), diff = daysBetween(D, T);
+    const when = diff===0 ? '오늘' : diff===1 ? '어제' : `${diff}일 전`;
+    const items = byDay[D].sort((a,b)=> catRank(a.cat)-catRank(b.cat) || a.id-b.id);
+    return `<div class="hist-day">
+      <div class="group-label">${d.getMonth()+1}월 ${d.getDate()}일 ${DOW[d.getDay()]}요일 <em>${when} · ${items.length}건</em></div>
+      ${items.map(t=>{
+        const late = daysBetween(t.date, D);
+        return `<div class="hist-row" style="--cat:${catColor(t.cat)}">
+          <input type="checkbox" checked onchange="undoDone(${t.id})" title="체크 풀기(다시 할 일로)" aria-label="완료 취소">
+          <span class="h-title">${esc(t.title)}</span>
+          <span class="h-meta">
+            ${t.priority==='urgent'?'<span class="badge urgent" style="cursor:default">급건</span>':''}
+            ${late>0?`<span class="badge carry">D+${late} 완료</span>`:''}
+            <span class="badge cat" style="${catBadgeStyle(t.cat)}">${esc(t.cat)}</span>
+            ${ownerBadge(t.owner)}
+          </span>
+        </div>`;
+      }).join('')}
+    </div>`;
+  }).join('')
+  + (days.length > histLimit ? `<button class="hist-more" onclick="histLimit+=14;renderHistory()">이전 기록 더 보기 (${days.length-histLimit}일)</button>` : '');
+}
+function undoDone(id){
+  const t = DATA.tasks.find(t=>t.id===id); if(!t) return;
+  if(!confirm(`'${t.title}' 완료를 취소하고 다시 할 일로 돌릴까요?`)){ renderHistory(); return; }
+  t.done = false; delete t.doneAt;
+  persist(); renderHistory(); renderCalendar();
+}
+function resetStatLabels(){
+  const labels = document.querySelectorAll('.ps-stats dt');
+  ['남은 일','완료','이월','진행률'].forEach((s,i)=> labels[i].textContent = s);
 }
 /* 할 일·세부 할 일 제목을 눌러서 바로 고친다. Enter·바깥 클릭 = 저장, Esc = 취소 */
 function editTitle(span, taskId, subIdx){
@@ -804,9 +975,13 @@ function addTask(){
   const title = document.getElementById('newTaskTitle').value.trim(); if(!title) return;
   const cat = selectedCat || '기타';
   const owner = selectedOwner;
-  const due = document.getElementById('newTaskDue').value || null;
-  DATA.tasks.push({id: nextId++, title, cat, owner, date: selectedDate, due, postpone:0, done:false, subtasks:[]});
-  document.getElementById('newTaskTitle').value=''; document.getElementById('newTaskDue').value='';
+  const priority = selectedPrio;
+  // 급건은 카테고리 맨 위, 일반은 맨 아래에 들어간다(그 뒤엔 드래그로 자유롭게)
+  const orders = DATA.tasks.filter(t=>t.cat===cat).map(t=>t.order ?? t.id);
+  const order = priority==='urgent' ? Math.min(0, ...orders) - 1 : Math.max(0, ...orders, nextId) + 1;
+  DATA.tasks.push({id: nextId++, title, cat, owner, date: selectedDate, priority, order, postpone:0, done:false, subtasks:[]});
+  document.getElementById('newTaskTitle').value='';
+  setPrio('normal');
   persist();
   renderTasks(); renderCalendar();
 }
