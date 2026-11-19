@@ -142,14 +142,12 @@
   .task-row:hover{border-left-color:var(--cat,var(--ink));}
   /* 이월 게이지: 카드 아래쪽 막대. 하루 지날 때마다 20%씩 찬다(5일째 꽉 참). 글자 뒤는 흰색 그대로 */
   /* 이월은 노란색(빨강은 급건 전용) */
-  .task-row.carried{border-color:#e6c200;border-left-color:#e6c200;padding-bottom:17px;
+  .task-row.carried{padding-bottom:17px;
     background:
       linear-gradient(var(--yellow),var(--yellow)) left bottom / var(--carry-pct,20%) 6px no-repeat,
       linear-gradient(rgba(255,224,27,.28),rgba(255,224,27,.28)) left bottom / 100% 6px no-repeat,
       #fff;}
-  .task-row.carried:hover{border-left-color:#e6c200;}
   .badge.dplus{background:var(--yellow);border-color:var(--ink);color:var(--ink);font-weight:800;font-variant-numeric:tabular-nums;}
-  .badge.carry{background:var(--yellow-wash);border-color:#e6c200;color:var(--ink);font-weight:700;}
   .badge.urgent{background:var(--red);border-color:var(--red);color:#fff;font-weight:800;cursor:pointer;}
   .badge.normal{cursor:pointer;}
   .badge.urgent:hover,.badge.normal:hover{outline:2px solid var(--yellow-soft);}
