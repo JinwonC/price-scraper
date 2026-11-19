@@ -148,6 +148,14 @@
   .badge.urgent{background:var(--red);border-color:var(--red);color:#fff;font-weight:800;cursor:pointer;}
   .badge.normal{cursor:pointer;}
   .badge.urgent:hover,.badge.normal:hover{outline:2px solid var(--yellow-soft);}
+  /* 진행중 표시 (체크박스는 그대로, 제목 옆 단추로 켜고 끈다) */
+  .t-prog{background:none;border:1px dashed var(--border);border-radius:999px;padding:1px 9px;font-size:11.5px;color:var(--ink-faint);cursor:pointer;white-space:nowrap;}
+  .t-prog:hover{border-color:var(--ink);color:var(--ink);}
+  .t-prog.on{background:var(--yellow);border:1px solid var(--ink);color:var(--ink);font-weight:800;}
+  .t-prog.on::before{content:'';display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--ink);margin-right:5px;vertical-align:1px;animation:prog-blink 1.6s ease-in-out infinite;}
+  @keyframes prog-blink{50%{opacity:.25;}}
+  @media (prefers-reduced-motion:reduce){.t-prog.on::before{animation:none;}}
+  .task-row.inprog{box-shadow:inset 0 0 0 1.5px var(--ink);}
   #prioSeg button.active[data-prio="urgent"]{background:var(--red);}
   #prioSeg{border-color:var(--ink);}
 
@@ -689,6 +697,11 @@ function prioBadge(t){
     ? `<span class="badge urgent" onclick="togglePrio(${t.id})" title="눌러서 일반으로">급건</span>`
     : `<span class="badge normal" onclick="togglePrio(${t.id})" title="눌러서 급건으로">일반</span>`;
 }
+function toggleProgress(id){
+  const t = DATA.tasks.find(t=>t.id===id); if(!t) return;
+  if(t.inProgress) delete t.inProgress; else t.inProgress = true;
+  persist(); renderTasks();
+}
 function togglePrio(id){
   const t = DATA.tasks.find(t=>t.id===id); if(!t) return;
   t.priority = t.priority==='urgent' ? 'normal' : 'urgent';
@@ -740,7 +753,7 @@ function renderTasks(){
     const active = st==='open' || st==='carried';
     const gauge = st==='carried' ? `;--carry-pct:${Math.min(carryDays,5)*20}%` : '';
     return `
-    <div class="task-row ${checked?'done':''} ${st==='carried'?'carried':''} ${st==='moved'||st==='moved-done'?'moved':''}" style="--cat:${catColor(t.cat)}${gauge}" data-id="${t.id}">
+    <div class="task-row ${checked?'done':''} ${active&&t.inProgress?'inprog':''} ${st==='carried'?'carried':''} ${st==='moved'||st==='moved-done'?'moved':''}" style="--cat:${catColor(t.cat)}${gauge}" data-id="${t.id}">
       <div class="task-main">
         ${active?'<span class="grip" title="끌어서 순서 바꾸기">⋮⋮</span>':''}
         <input type="checkbox" ${checked?'checked':''} onchange="toggleTask(${t.id})" aria-label="완료">
@@ -748,6 +761,7 @@ function renderTasks(){
           <div class="t-title-row">
             <span class="t-title" tabindex="0" title="눌러서 수정" onclick="editTitle(this,${t.id})" onkeydown="if(event.key==='Enter')editTitle(this,${t.id})">${esc(t.title)}</span>
             <button class="t-expand" onclick="toggleSub(${t.id})">${subs.length? `${subDone}/${subs.length} ▸` : '+ 세부 ▸'}</button>
+            ${active ? `<button class="t-prog ${t.inProgress?'on':''}" onclick="toggleProgress(${t.id})" title="${t.inProgress?'눌러서 진행중 해제':'눌러서 진행중으로 표시'}">${t.inProgress?'진행중':'▶ 시작'}</button>` : ''}
           </div>
           <div class="t-meta">
             ${stateBadge}
@@ -961,6 +975,7 @@ function toggleTask(id){
   const t = DATA.tasks.find(t=>t.id===id);
   const T = todayStr();
   t.done = !t.done;
+  if(t.done) delete t.inProgress;   // 끝나면 진행중 표시는 내린다
   // 체크한 날 = 보고 있는 날(미래 날짜에서 미리 끝낸 경우는 오늘)
   if(t.done) t.doneAt = selectedDate > T ? T : selectedDate;
   else delete t.doneAt;
