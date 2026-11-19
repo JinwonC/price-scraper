@@ -160,6 +160,15 @@
   @keyframes prog-blink{50%{opacity:.25;}}
   @media (prefers-reduced-motion:reduce){.t-prog.on::before{animation:none;}}
   .task-row.inprog{box-shadow:inset 0 0 0 1.5px var(--ink);}
+  /* 진행중 칸: 맨 위 노란 판 */
+  .prog-block{background:var(--yellow-wash);border:1.5px solid var(--ink);border-radius:14px;padding:4px 12px 6px;margin:6px 0 14px;}
+  .prog-block .group-label.prog-group{margin:8px 0 10px;border-bottom-color:rgba(20,20,20,.18);font-size:15px;align-items:center;}
+  .prog-dot{width:9px;height:9px;border-radius:50%;background:var(--ink);display:inline-block;animation:prog-blink 1.6s ease-in-out infinite;}
+  @media (prefers-reduced-motion:reduce){.prog-dot{animation:none;}}
+  .prog-hint{font-size:12px;font-weight:400;color:var(--ink-faint);margin-left:auto;}
+  .prog-block.empty-prog{background:var(--surface);border-style:dashed;border-color:var(--ink-faint);}
+  .prog-block.empty-prog .prog-dot{background:var(--ink-faint);animation:none;}
+  .prog-tasks{min-height:28px;}
   #prioSeg button.active[data-prio="urgent"]{background:var(--red);}
   #prioSeg{border-color:var(--ink);}
 
@@ -335,13 +344,6 @@
         <div class="ps-chips" id="catChips"></div>
       </div>
       <div class="opt-row">
-        <span class="opt-lbl">담당</span>
-        <div class="seg" id="ownerSeg">
-          <button class="active" data-owner="me" onclick="setOwner('me')">직접</button>
-          <button data-owner="vn" onclick="setOwner('vn')">VN팀</button>
-          <button data-owner="agency" onclick="setOwner('agency')">에이전시</button>
-        </div>
-        <span class="opt-gap"></span>
         <span class="opt-lbl">중요도</span>
         <div class="seg" id="prioSeg">
           <button data-prio="urgent" onclick="setPrio('urgent')">급건</button>
@@ -703,7 +705,8 @@ function prioBadge(t){
 }
 function toggleProgress(id){
   const t = DATA.tasks.find(t=>t.id===id); if(!t) return;
-  if(t.inProgress) delete t.inProgress; else t.inProgress = true;
+  if(t.inProgress) delete t.inProgress;
+  else { t.inProgress = true; t.progOrder = Math.max(0, ...DATA.tasks.filter(x=>x.inProgress&&x!==t).map(x=>x.progOrder??0)) + 1; }
   persist(); renderTasks();
 }
 function togglePrio(id){
@@ -771,7 +774,6 @@ function renderTasks(){
             ${stateBadge}
             ${active || t.priority==='urgent' ? prioBadge(t) : ''}
             <span class="badge cat" style="${catBadgeStyle(t.cat)}">${esc(t.cat)}</span>
-            ${ownerBadge(t.owner)}
             ${t.due?`<span class="badge due ${overdue?'overdue':''}">${overdue?'마감 지남 · ':'마감 '}${fmtDate(t.due)}</span>`:''}
             ${t.postpone>0?`<span class="badge postpone">${t.postpone}회 연기</span>`:''}
           </div>
@@ -800,16 +802,24 @@ function renderTasks(){
   const active = list.filter(x=>x.st==='carried'||x.st==='open');
   const rest = list.filter(x=>!(x.st==='carried'||x.st==='open'));
   // 카테고리마다 한 덩어리(cat-block). 카테고리 머리를 끌면 카테고리 순서, ⋮⋮ 를 끌면 할 일 순서가 바뀐다.
+  // 진행중인 일은 카테고리와 따로, 맨 위 '진행중' 칸에 모은다 (끌어서 넣고 빼기도 된다)
+  const prog = active.filter(x=>x.t.inProgress)
+    .sort((a,b)=> ((a.t.progOrder??a.t.id)-(b.t.progOrder??b.t.id)) || a.t.id-b.t.id);
+  const rows = active.filter(x=>!x.t.inProgress);
+  const progHtml = `<div class="prog-block ${prog.length?'':'empty-prog'}">
+      <div class="group-label prog-group"><span class="prog-dot"></span>진행중 <em>${prog.length}</em><span class="prog-hint">${prog.length?'':'▶ 시작을 누르거나 여기로 끌어오세요'}</span></div>
+      <div class="cat-tasks prog-tasks" data-prog="1">${prog.map(row).join('')}</div>
+    </div>`;
   const cats = [];
-  active.forEach(x=>{ if(!cats.includes(x.t.cat)) cats.push(x.t.cat); });
+  rows.forEach(x=>{ if(!cats.includes(x.t.cat)) cats.push(x.t.cat); });
   const html = cats.map(c=>{
-    const items = active.filter(x=>x.t.cat===c);
+    const items = rows.filter(x=>x.t.cat===c);
     return `<div class="cat-block" data-cat="${esc(c??'')}">
       <div class="group-label cat-group" title="끌어서 카테고리 순서 바꾸기"><span class="grip">⋮⋮</span><span class="cat-dot" style="background:${catColor(c)}"></span>${esc(c||'기타')} <em>${items.length}</em></div>
       <div class="cat-tasks" data-cat="${esc(c??'')}">${items.map(row).join('')}</div>
     </div>`;
   }).join('');
-  el.innerHTML = `<div id="activeList">${html}</div>`
+  el.innerHTML = `<div id="taskBoard">${active.length ? progHtml : ''}<div id="activeList">${html}</div></div>`
     + (rest.length ? `<div class="group-label">${D<T?'완료 · 이월':'완료'} <em>${rest.length}</em></div>` + rest.map(row).join('') : '');
   initDrag();
 }
@@ -824,7 +834,8 @@ function initDrag(){
   // 카테고리 순서
   sortables.push(Sortable.create(list, { ...common, handle:'.cat-group', draggable:'.cat-block', onEnd: saveCatOrder }));
   // 할 일 순서 (다른 카테고리로 옮기면 카테고리도 바뀐다)
-  list.querySelectorAll('.cat-tasks').forEach(box=>{
+  // 진행중 칸과 카테고리 칸 사이를 오가면 진행중 표시가 켜지고 꺼진다
+  document.querySelectorAll('#taskBoard .cat-tasks').forEach(box=>{
     sortables.push(Sortable.create(box, { ...common, group:'tasks', handle:'.grip', draggable:'.task-row', onEnd: saveTaskOrder }));
   });
 }
@@ -838,10 +849,13 @@ function saveCatOrder(){
   persist(); renderCatOptions(); renderTasks();
 }
 function saveTaskOrder(){
-  document.querySelectorAll('#activeList .cat-tasks').forEach(box=>{
+  document.querySelectorAll('#taskBoard .cat-tasks').forEach(box=>{
+    const isProg = box.dataset.prog === '1';
     const cat = box.dataset.cat;
     [...box.querySelectorAll('.task-row')].forEach((r,i)=>{
       const t = DATA.tasks.find(t=>t.id===Number(r.dataset.id)); if(!t) return;
+      if(isProg){ t.inProgress = true; t.progOrder = i; return; }   // 진행중 칸: 카테고리는 그대로
+      delete t.inProgress;
       if((t.cat??'') !== cat) t.cat = cat || t.cat;
       t.order = i;
     });
@@ -894,7 +908,6 @@ function renderHistory(){
             ${t.priority==='urgent'?'<span class="badge urgent" style="cursor:default">급건</span>':''}
             ${late>0?`<span class="badge carry">D+${late} 완료</span>`:''}
             <span class="badge cat" style="${catBadgeStyle(t.cat)}">${esc(t.cat)}</span>
-            ${ownerBadge(t.owner)}
           </span>
         </div>`;
       }).join('')}
@@ -993,12 +1006,12 @@ function deleteTask(id){
 function addTask(){
   const title = document.getElementById('newTaskTitle').value.trim(); if(!title) return;
   const cat = selectedCat || '기타';
-  const owner = selectedOwner;
+
   const priority = selectedPrio;
   // 급건은 카테고리 맨 위, 일반은 맨 아래에 들어간다(그 뒤엔 드래그로 자유롭게)
   const orders = DATA.tasks.filter(t=>t.cat===cat).map(t=>t.order ?? t.id);
   const order = priority==='urgent' ? Math.min(0, ...orders) - 1 : Math.max(0, ...orders, nextId) + 1;
-  DATA.tasks.push({id: nextId++, title, cat, owner, date: selectedDate, priority, order, postpone:0, done:false, subtasks:[]});
+  DATA.tasks.push({id: nextId++, title, cat, date: selectedDate, priority, order, postpone:0, done:false, subtasks:[]});
   document.getElementById('newTaskTitle').value='';
   setPrio('normal');
   persist();
