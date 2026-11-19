@@ -140,8 +140,12 @@
   .task-row.done{opacity:.55;}
   .task-row{border-left:5px solid var(--cat,var(--line));}
   .task-row:hover{border-left-color:var(--cat,var(--ink));}
-  /* 이월 게이지: 하루 지날 때마다 빨간 칸이 20%씩 찬다(5일째 꽉 참) */
-  .task-row.carried{border-color:var(--red);border-left-color:var(--red);background:linear-gradient(90deg,rgba(224,43,32,.16) 0 var(--carry-pct,20%),#fff var(--carry-pct,20%));}
+  /* 이월 게이지: 카드 아래쪽 막대. 하루 지날 때마다 20%씩 찬다(5일째 꽉 참). 글자 뒤는 흰색 그대로 */
+  .task-row.carried{border-color:var(--red);border-left-color:var(--red);padding-bottom:17px;
+    background:
+      linear-gradient(var(--red),var(--red)) left bottom / var(--carry-pct,20%) 5px no-repeat,
+      linear-gradient(rgba(224,43,32,.14),rgba(224,43,32,.14)) left bottom / 100% 5px no-repeat,
+      #fff;}
   .task-row.carried:hover{border-left-color:var(--red);}
   .badge.dplus{background:var(--red);border-color:var(--red);color:#fff;font-weight:800;font-variant-numeric:tabular-nums;}
   .badge.carry{background:#fff;border-color:var(--red);color:var(--red);font-weight:700;}
