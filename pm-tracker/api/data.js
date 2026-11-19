@@ -1,49 +1,44 @@
-import { Redis } from "@upstash/redis";
+import { getRedis, dataKey, LEGACY_KEY, getSessionId, readBody, storageMissing } from "./_lib.js";
 
 /**
- * PM 트래커 데이터 저장 API (서버리스 함수, Vercel).
+ * PM 트래커 데이터 저장 API (서버리스 함수, Vercel). 로그인한 사람 본인 것만 읽고 쓴다.
  *
- *   GET  /api/data  → 저장된 데이터를 돌려준다. 없으면 { data: null }.
- *   PUT  /api/data  → 본문(JSON)을 통째로 저장한다. (마지막 저장이 이김)
+ *   GET  /api/data  → 내 데이터. 없으면 { data: null }.
+ *   PUT  /api/data  → 내 데이터를 통째로 저장한다. (마지막 저장이 이김)
  *
- * 저장소는 Upstash Redis(= Vercel 스토리지 "KV")에 키 하나로 보관한다.
- * DB 테이블 설계 없이 JSON 문서 한 덩어리만 넣고 뺀다 — 단일 사용자용이라 이걸로 충분.
+ * 이관: 계정 도입 전 데이터(pm-tracker:data)는 환경변수 LEGACY_OWNER 에 적힌 아이디가
+ * 처음 불러올 때 그 사람 것으로 복사된다. 원본 키는 백업으로 그대로 남긴다.
  */
-
-const KEY = "pm-tracker:data";
-
-// Vercel 마켓플레이스 Upstash 연동은 KV_* 이름을, 직접 붙이면 UPSTASH_* 이름을 준다.
-// 어느 쪽이 오든 되도록 둘 다 본다.
-const url = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
-const token = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
-
-const redis = url && token ? new Redis({ url, token }) : null;
 
 export default async function handler(req, res) {
   // 브라우저·CDN 이 응답을 캐시해서 옛 데이터를 보여주지 않게 한다.
   res.setHeader("Cache-Control", "no-store, max-age=0");
+  const redis = getRedis();
+  if (!redis) return storageMissing(res);
 
-  if (!redis) {
-    // 스토리지를 아직 안 붙였을 때: 화면이 죽지 않도록 친절히 알려준다.
-    return res.status(503).json({
-      error: "storage_not_configured",
-      message:
-        "저장소가 아직 연결되지 않았습니다. Vercel 프로젝트에 Upstash(KV) 스토리지를 붙이고 다시 배포해주세요.",
-    });
-  }
+  const id = getSessionId(req);
+  if (!id) return res.status(401).json({ error: "not_logged_in" });
 
   try {
     if (req.method === "GET") {
-      const data = await redis.get(KEY); // 객체로 되돌아온다(자동 역직렬화)
+      let data = await redis.get(dataKey(id)); // 객체로 되돌아온다(자동 역직렬화)
+      const owner = (process.env.LEGACY_OWNER || "").trim().toLowerCase();
+      if (!data && owner && id === owner) {
+        const legacy = await redis.get(LEGACY_KEY);
+        if (legacy) {
+          await redis.set(dataKey(id), legacy, { nx: true });
+          data = await redis.get(dataKey(id));
+        }
+      }
       return res.status(200).json({ data: data ?? null });
     }
 
     if (req.method === "PUT" || req.method === "POST") {
-      const body = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
+      const body = readBody(req);
       if (!body || !Array.isArray(body.tasks)) {
         return res.status(400).json({ error: "bad_payload" });
       }
-      await redis.set(KEY, body);
+      await redis.set(dataKey(id), body);
       return res.status(200).json({ ok: true });
     }
 
