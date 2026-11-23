@@ -6,12 +6,12 @@ import {
 /**
  * 계정 API
  *   GET  /api/auth                                → 로그인 상태 { user: {id,name} } 또는 401
- *   POST /api/auth {action:"signup", id, password, name, code}
+ *   POST /api/auth {action:"signup", id, password, name}
  *   POST /api/auth {action:"login",  id, password}
  *   POST /api/auth {action:"logout"}
  *
- * 가입은 각자 하되, 아무나 가입하지 못하게 초대코드(환경변수 SIGNUP_CODE)가 맞아야 한다.
- * SIGNUP_CODE 를 정하지 않았으면 가입이 막힌다(안전한 쪽).
+ * 가입은 각자 한다. 초대코드는 없다 — 주소를 아는 사람은 누구나 가입할 수 있고,
+ * 가입한 사람은 자기 데이터만 본다.
  */
 
 const ID_RE = /^[a-z0-9._-]{3,20}$/;
@@ -44,9 +44,6 @@ export default async function handler(req, res) {
     }
 
     if (body.action === "signup") {
-      const expected = process.env.SIGNUP_CODE;
-      if (!expected) return res.status(403).json({ error: "signup_closed", message: "가입이 아직 열려있지 않아요. 관리자에게 문의하세요." });
-      if (String(body.code || "").trim() !== expected) return res.status(403).json({ error: "bad_code", message: "초대코드가 맞지 않아요." });
       if (!ID_RE.test(id)) return res.status(400).json({ error: "bad_id", message: "아이디는 영문 소문자·숫자·._- 로 3~20자예요." });
       if (password.length < 6) return res.status(400).json({ error: "bad_password", message: "비밀번호는 6자 이상이에요." });
       const name = String(body.name || "").trim().slice(0, 20) || id;
