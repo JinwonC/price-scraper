@@ -46,7 +46,6 @@ Vercel → Settings → **Environment Variables** 에 아래를 넣고 Redeploy 
 
 | 이름 | 값 | 설명 |
 | --- | --- | --- |
-| `SIGNUP_CODE` | 정한 초대코드 | 가입할 때 이 코드를 넣어야 함. **없으면 가입이 막힘** |
 | `LEGACY_OWNER` | 도현 매니저님 아이디 (예: `dohyun`) | 계정 도입 전 데이터를 이 아이디로 옮김 |
 | `SESSION_SECRET` | (선택) 아무 긴 문자열 | 안 넣으면 KV 토큰으로 대신 서명 |
 

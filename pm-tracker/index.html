@@ -279,8 +279,6 @@
     <div class="signup-only">
       <label for="authName">이름 (화면에 표시)</label>
       <input id="authName" name="name" placeholder="예: 도현">
-      <label for="authCode">초대코드</label>
-      <input id="authCode" name="code" autocomplete="off">
     </div>
     <div id="authMsg"></div>
     <button class="save-btn" type="submit" id="authSubmit">로그인</button>
@@ -1060,7 +1058,6 @@ document.getElementById('authForm').addEventListener('submit', async (ev)=>{
         id: document.getElementById('authId').value,
         password: document.getElementById('authPw').value,
         name: document.getElementById('authName').value,
-        code: document.getElementById('authCode').value,
       })
     });
     const json = await res.json().catch(()=>({}));
